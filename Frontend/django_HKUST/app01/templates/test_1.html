@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Force-Directed Graph with Collapsible Legend</title>
+    <style>
+        .legend-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 220px;
+            font-family: 'Arial', sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .legend-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .legend-content {
+            display: none;
+        }
+
+        .legend-container:hover .legend-content {
+            display: block;
+        }
+
+        .legend-divider {
+            border-top: 1px solid #ddd;
+            margin: 10px 0;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-right: 8px;
+            border-radius: 3px;
+        }
+
+        .legend-gradient {
+            width: 120px;
+            height: 12px;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 2px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .department {
+            background: #71b7ed;
+        }
+
+        .author {
+            background: linear-gradient(to right, #e0f3e5, #007f5f);
+        }
+
+        .paper {
+            background: linear-gradient(to right, #ffebf4, #d0578a);
+        }
+
+        .legend-label {
+            font-size: 12px;
+            margin-top: 3px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div id="graph">
+    <div class="legend-container">
+        <div class="legend-title">Legend ▼</div>
+        <div class="legend-content">
+            <div class="legend-divider"></div>
+            <div class="legend-item">
+                <div class="legend-gradient department"></div>
+                <div class="legend-label">Department</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-gradient author"></div>
+                <div class="legend-label">Author (number of papers)</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-gradient paper"></div>
+                <div class="legend-label">Paper (number of citations)</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script>
+    const width = 960;
+    const height = 600;
+
+    const svg = d3.select("#graph").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    const g = svg.append("g");
+
+    // 在这里加载数据并初始化图表
+    function InitGraph(data) {
+        // ... 之前的代码 ...
+
+        // 图例折叠功能
+        d3.select(".legend-title").on("click", function () {
+            const content = d3.select(".legend-content");
+            if (content.style("display") === "none") {
+                content.style("display", "block");
+                d3.select(this).text("Legend ▲");
+            } else {
+                content.style("display", "none");
+                d3.select(this).text("Legend ▼");
+            }
+        });
+
+        // ... 其余代码 ...
+    }
+
+    // 示例数据
+    const data = {
+        nodes: [
+            {name: "Dept A", group: 1},
+            {name: "Author 1", group: 4},
+            {name: "Paper 1", group: 0, citation: 15, released: 2020},
+            // 更多节点...
+        ],
+        links: [
+            {source: "Dept A", target: "Author 1", relationship: "BELONGS_TO"},
+            {source: "Author 1", target: "Paper 1", relationship: "AUTHORED"},
+            // 更多链接...
+        ]
+    };
+
+    InitGraph(data);
+</script>
+</body>
+</html>
