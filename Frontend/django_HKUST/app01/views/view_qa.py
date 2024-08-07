@@ -1,5 +1,7 @@
 import json
-from Backend import graph_rag
+import graph_rag
+from graph_rag import graph,session,_search_query,retriever
+from langchain_community.embeddings import HuggingFaceEmbeddings
 import requests
 from django.shortcuts import HttpResponse, render
 from django.views.decorators.csrf import csrf_exempt
@@ -17,8 +19,36 @@ def chat(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         user_input = data['message']
+        
+        # QA提示模版
+        answer_template = """Answer the question based only on the following context:
+                            {context}
+                            Question: {question}
+                            Use natural language and be concise.
+                            Answer:"""
+        answer_prompt = graph_rag.ChatPromptTemplate.from_template(answer_template)
 
-        output = graph_rag.return_response(user_input)
+        # QA链
+        chain = (
+            graph_rag.RunnableParallel({
+                "context": _search_query | retriever,
+                "question": graph_rag.RunnablePassthrough(),
+            })
+            | answer_prompt
+            | graph_rag.ChatOpenAI(temperature=0)
+            | graph_rag.StrOutputParser()
+        )
+
+        # 运行QA链
+        output = chain.invoke({"question": user_input.lower()})
+
+        # ans = chain.invoke(
+        #     {
+        #         "question": "Please give me the relavant paper names ",
+        #         "chat_history": [(user_input.lower(), output)],
+        #     }
+        # )
+        # print(ans)
         # # 调用 OpenAI API 生成响应
         # headers = {
         #     "Authorization": f"Bearer {OPENAI_API_KEY}",
