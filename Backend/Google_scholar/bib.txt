@@ -1,0 +1,1567 @@
+@article{xiao2024traceable,
+  title={Traceable group-wise self-optimizing feature transformation learning: A dual optimization perspective},
+  author={Xiao, Meng and Wang, Dongjie and Wu, Min and Liu, Kunpeng and Xiong, Hui and Zhou, Yuanchun and Fu, Yanjie},
+  journal={ACM Transactions on Knowledge Discovery from Data},
+  volume={18},
+  number={4},
+  pages={1--22},
+  year={2024},
+  publisher={ACM New York, NY}
+}
+@article{ye2023cross,
+  title={Cross-modality data augmentation for end-to-end sign language translation},
+  author={Ye, Jinhui and Jiao, Wenxiang and Wang, Xing and Tu, Zhaopeng and Xiong, Hui},
+  journal={arXiv preprint arXiv:2305.11096},
+  year={2023}
+}
+@article{xiao2023hierarchical,
+  title={Hierarchical interdisciplinary topic detection model for research proposal classification},
+  author={Xiao, Meng and Qiao, Ziyue and Fu, Yanjie and Dong, Hao and Du, Yi and Wang, Pengyang and Xiong, Hui and Zhou, Yuanchun},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={9},
+  pages={9685--9699},
+  year={2023},
+  publisher={IEEE}
+}
+@article{meng2022fine,
+  title={Fine-grained job salary benchmarking with a nonparametric dirichlet process--based latent factor model},
+  author={Meng, Qingxin and Xiao, Keli and Shen, Dazhong and Zhu, Hengshu and Xiong, Hui},
+  journal={INFORMS Journal on Computing},
+  volume={34},
+  number={5},
+  pages={2443--2463},
+  year={2022},
+  publisher={INFORMS}
+}
+@article{li2022modeling,
+  title={Modeling multiple views via implicitly preserving global consistency and local complementarity},
+  author={Li, Jiangmeng and Qiang, Wenwen and Zheng, Changwen and Su, Bing and Razzak, Farid and Wen, Ji-Rong and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={7},
+  pages={7220--7238},
+  year={2022},
+  publisher={IEEE}
+}
+@article{zhang2022human,
+  title={From human-AI confrontation to human-AI symbiosis in society 5.0: Transformation challenges and mechanisms},
+  author={Zhang, Xi and Wei, Xin and Ou, Carol XJ and Caron, Emiel and Zhu, Hengshu and Xiong, Hui},
+  journal={IT Professional},
+  volume={24},
+  number={3},
+  pages={43--51},
+  year={2022},
+  publisher={IEEE}
+}
+@article{zhang2021towards,
+  title={Towards robust knowledge graph embedding via multi-task reinforcement learning},
+  author={Zhang, Zhao and Zhuang, Fuzhen and Zhu, Hengshu and Li, Chao and Xiong, Hui and He, Qing and Xu, Yongjun},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={4},
+  pages={4321--4334},
+  year={2021},
+  publisher={IEEE}
+}
+@article{xu2021roadside,
+  title={Roadside pedestrian motion prediction using Bayesian methods and particle filter},
+  author={Xu, Qing and Wu, Haoran and Wang, Jianqiang and Xiong, Hui and Liu, Jinxin and Li, Keqiang},
+  journal={IET Intelligent Transport Systems},
+  volume={15},
+  number={9},
+  pages={1167--1182},
+  year={2021},
+  publisher={Wiley Online Library}
+}
+@article{hu2020mathsf,
+  title={$$\backslash$mathsf $\{$NCF$\}$ $ NCF: A Neural Context Fusion Approach to Raw Mobility Annotation},
+  author={Hu, Renjun and Zhou, Jingbo and Lu, Xinjiang and Zhu, Hengshu and Ma, Shuai and Xiong, Hui},
+  journal={IEEE Transactions on Mobile Computing},
+  volume={21},
+  number={1},
+  pages={226--238},
+  year={2020},
+  publisher={IEEE}
+}
+@inproceedings{wang2024dynamic,
+  title={Dynamic Sparse Learning: A Novel Paradigm for Efficient Recommendation},
+  author={Wang, Shuyao and Sui, Yongduo and Wu, Jiancan and Zheng, Zhi and Xiong, Hui},
+  booktitle={Proceedings of the 17th ACM International Conference on Web Search and Data Mining},
+  pages={740--749},
+  year={2024}
+}
+@inproceedings{liu2023qtiah,
+  title={QTIAH-GNN: Quantity and topology imbalance-aware heterogeneous graph neural network for bankruptcy prediction},
+  author={Liu, Yucheng and Gao, Zipeng and Liu, Xiangyang and Luo, Pengfei and Yang, Yang and Xiong, Hui},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={1572--1582},
+  year={2023}
+}
+@inproceedings{zhou2023hyperbolic,
+  title={Hyperbolic graph neural networks: A tutorial on methods and applications},
+  author={Zhou, Min and Yang, Menglin and Xiong, Bo and Xiong, Hui and King, Irwin},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={5843--5844},
+  year={2023}
+}
+@inproceedings{li2023graphsha,
+  title={Graphsha: Synthesizing harder samples for class-imbalanced node classification},
+  author={Li, Wen-Zhi and Wang, Chang-Dong and Xiong, Hui and Lai, Jian-Huang},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={1328--1340},
+  year={2023}
+}
+@article{liu2022polestar++,
+  title={Polestar++: An intelligent routing engine for national-wide public transportation},
+  author={Liu, Hao and Li, Ying and Fu, Yanjie and Mei, Huaibo and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={6},
+  pages={6194--6208},
+  year={2022},
+  publisher={IEEE}
+}
+@article{yuan2022adaptive,
+  title={Adaptive model scheduling for resource-efficient data labeling},
+  author={Yuan, Mu and Zhang, Lan and Li, Xiang-Yang and Yang, Lin-Zhuo and Xiong, Hui},
+  journal={ACM Transactions on Knowledge Discovery from Data (TKDD)},
+  volume={16},
+  number={4},
+  pages={1--22},
+  year={2022},
+  publisher={ACM New York, NY}
+}
+@article{zhang2021knowledge,
+  title={Knowledge graph embedding with shared latent semantic units},
+  author={Zhang, Zhao and Zhuang, Fuzhen and Qu, Meng and Niu, Zheng-Yu and Xiong, Hui and He, Qing},
+  journal={Neural Networks},
+  volume={139},
+  pages={140--148},
+  year={2021},
+  publisher={Elsevier}
+}
+@inproceedings{zhou2021description,
+  title={Description generation for points of interest},
+  author={Zhou, Meng and Zhou, Jingbo and Fu, Yanjie and Ren, Zhaochun and Wang, Xiaoli and Xiong, Hui},
+  booktitle={2021 IEEE 37th International Conference on Data Engineering (ICDE)},
+  pages={2213--2218},
+  year={2021},
+  organization={IEEE}
+}
+@article{zhu2020rapid,
+  title={Rapid Learning of earthquake felt Area and intensity Distribution with Real-time Search engine Queries},
+  author={Zhu, Hengshu and Sun, Ying and Zhao, Wenjia and Zhuang, Fuzhen and Wang, Baoshan and Xiong, Hui},
+  journal={Scientific reports},
+  volume={10},
+  number={1},
+  pages={5437},
+  year={2020},
+  publisher={Nature Publishing Group UK London}
+}
+@article{yin2020matching,
+  title={Matching of social events and users: a two-way selection perspective},
+  author={Yin, Zikai and Xu, Tong and Zhu, Hengshu and Zhu, Chen and Chen, Enhong and Xiong, Hui},
+  journal={World Wide Web},
+  volume={23},
+  pages={853--871},
+  year={2020},
+  publisher={Springer}
+}
+@inproceedings{zheng2024harnessing,
+  title={Harnessing large language models for text-rich sequential recommendation},
+  author={Zheng, Zhi and Chao, Wenshuo and Qiu, Zhaopeng and Zhu, Hengshu and Xiong, Hui},
+  booktitle={Proceedings of the ACM on Web Conference 2024},
+  pages={3207--3216},
+  year={2024}
+}
+@article{wang2023setrank,
+  title={Setrank: A setwise bayesian approach for collaborative ranking in recommender system},
+  author={Wang, Chao and Zhu, Hengshu and Zhu, Chen and Qin, Chuan and Chen, Enhong and Xiong, Hui},
+  journal={ACM Transactions on Information Systems},
+  volume={42},
+  number={2},
+  pages={1--32},
+  year={2023},
+  publisher={ACM New York, NY, USA}
+}
+@inproceedings{zheng2023generative,
+  title={Generative Learning Plan Recommendation for Employees: A Performance-aware Reinforcement Learning Approach},
+  author={Zheng, Zhi and Sun, Ying and Song, Xin and Zhu, Hengshu and Xiong, Hui},
+  booktitle={Proceedings of the 17th ACM Conference on Recommender Systems},
+  pages={443--454},
+  year={2023}
+}
+@inproceedings{xiao2023spatial,
+  title={Spatial heterophily aware graph neural networks},
+  author={Xiao, Congxi and Zhou, Jingbo and Huang, Jizhou and Xu, Tong and Xiong, Hui},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={2752--2763},
+  year={2023}
+}
+@article{lin2023towards,
+  title={Towards language-guided interactive 3d generation: Llms as layout interpreter with generative feedback},
+  author={Lin, Yiqi and Wu, Hao and Wang, Ruichen and Lu, Haonan and Lin, Xiaodong and Xiong, Hui and Wang, Lin},
+  journal={arXiv preprint arXiv:2305.15808},
+  year={2023}
+}
+@inproceedings{yao2023resuformer,
+  title={Resuformer: Semantic structure understanding for resumes via multi-modal pre-training},
+  author={Yao, Kaichun and Zhang, Jingshuai and Qin, Chuan and Song, Xin and Wang, Peng and Zhu, Hengshu and Xiong, Hui},
+  booktitle={2023 IEEE 39th International Conference on Data Engineering (ICDE)},
+  pages={3154--3167},
+  year={2023},
+  organization={IEEE}
+}
+@article{yuan2022semantic,
+  title={Semantic and structural view fusion modeling for social recommendation},
+  author={Yuan, Kun and Liu, Guannan and Wu, Junjie and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={11},
+  pages={11872--11884},
+  year={2022},
+  publisher={IEEE}
+}
+@inproceedings{yuan2021self,
+  title={Self-supervised prototype representation learning for event-based corporate profiling},
+  author={Yuan, Zixuan and Liu, Hao and Hu, Renjun and Zhang, Denghui and Xiong, Hui},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={35},
+  number={5},
+  pages={4644--4652},
+  year={2021}
+}
+@inproceedings{hu2021we,
+  title={Why we go where we go: Profiling user decisions on choosing POIs},
+  author={Hu, Renjun and Lu, Xinjiang and Liu, Chuanren and Li, Yanyan and Liu, Hao and Gu, Jingjing and Ma, Shuai and Xiong, Hui},
+  booktitle={Proceedings of the Twenty-Ninth International Conference on International Joint Conferences on Artificial Intelligence},
+  pages={3459--3465},
+  year={2021}
+}
+@article{xiong2020fast,
+  title={Fast and robust approaches for lane detection using multi-camera fusion in complex scenes},
+  author={Xiong, Hui and Yu, Dameng and Liu, Jinxin and Huang, Heye and Xu, Qing and Wang, Jianqiang and Li, Keqiang},
+  journal={IET Intelligent Transport Systems},
+  volume={14},
+  number={12},
+  pages={1582--1593},
+  year={2020},
+  publisher={Wiley Online Library}
+}
+@article{wang2020km,
+  title={KM 3.0: Knowledge management computing under digital economy},
+  author={Wang, Xuyan and Zhang, Xi and Xiong, Hui and de Pablos, Patricia Ord{\'o}{\~n}ez},
+  journal={Knowledge, People, and Digital Transformation: Approaches for a Sustainable Future},
+  pages={207--217},
+  year={2020},
+  publisher={Springer}
+}
+@article{ma2023large,
+  title={Large language models are not stable recommender systems},
+  author={Ma, Tianhui and Cheng, Yuan and Zhu, Hengshu and Xiong, Hui},
+  journal={arXiv preprint arXiv:2312.15746},
+  year={2023}
+}
+@inproceedings{wang2023theoretical,
+  title={Theoretical convergence guaranteed resource-adaptive federated learning with mixed heterogeneity},
+  author={Wang, Yangyang and Zhang, Xiao and Li, Mingyi and Lan, Tian and Chen, Huashan and Xiong, Hui and Cheng, Xiuzhen and Yu, Dongxiao},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={2444--2455},
+  year={2023}
+}
+@article{guo2023multi,
+  title={Multi-attention feature fusion network for accurate estimation of finger kinematics from surface electromyographic signals},
+  author={Guo, Weiyu and Jiang, Ning and Farina, Dario and Su, Jingyong and Wang, Zheng and Lin, Chuang and Xiong, Hui},
+  journal={IEEE Transactions on Human-Machine Systems},
+  volume={53},
+  number={3},
+  pages={512--519},
+  year={2023},
+  publisher={IEEE}
+}
+@article{li2022autost,
+  title={Autost: Towards the universal modeling of spatio-temporal sequences},
+  author={Li, Jianxin and Zhang, Shuai and Xiong, Hui and Zhou, Haoyi},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={20498--20510},
+  year={2022}
+}
+@inproceedings{ming2022multi,
+  title={Multi-graph convolutional recurrent network for fine-grained lane-level traffic flow imputation},
+  author={Ming, Jingci and Zhang, Le and Fan, Wei and Zhang, Weijia and Mei, Yu and Ling, Weicen and Xiong, Hui},
+  booktitle={2022 IEEE International Conference on Data Mining (ICDM)},
+  pages={348--357},
+  year={2022},
+  organization={IEEE}
+}
+@inproceedings{li2022customized,
+  title={Customized Conversational Recommender Systems},
+  author={Li, Shuokai and Zhu, Yongchun and Xie, Ruobing and Tang, Zhenwei and Zhang, Zhao and Zhuang, Fuzhen and He, Qing and Xiong, Hui},
+  booktitle={Joint European Conference on Machine Learning and Knowledge Discovery in Databases},
+  pages={740--756},
+  year={2022},
+  organization={Springer}
+}
+@article{zhang2022complex,
+  title={Complex attributed network embedding for medical complication prediction},
+  author={Zhang, Zhe and Xiong, Hui and Xu, Tong and Qin, Chuan and Zhang, Le and Chen, Enhong},
+  journal={Knowledge and Information Systems},
+  volume={64},
+  number={9},
+  pages={2435--2456},
+  year={2022},
+  publisher={Springer}
+}
+@article{ye2022mane,
+  title={MANE: Organizational network embedding with multiplex attentive neural networks},
+  author={Ye, Yuyang and Dong, Zheng and Zhu, Hengshu and Xu, Tong and Song, Xin and Yu, Runlong and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={4},
+  pages={4047--4061},
+  year={2022},
+  publisher={IEEE}
+}
+@article{jiang2021adversarial,
+  title={Adversarial neural trip recommendation},
+  author={Jiang, Linlang and Zhou, Jingbo and Xu, Tong and Li, Yanyan and Chen, Hao and Huang, Jizhou and Xiong, Hui},
+  journal={arXiv preprint arXiv:2109.11731},
+  year={2021}
+}
+@inproceedings{zhou2021transportation,
+  title={Transportation recommendation with fairness consideration},
+  author={Zhou, Ding and Liu, Hao and Xu, Tong and Zhang, Le and Zha, Rui and Xiong, Hui},
+  booktitle={Database Systems for Advanced Applications: 26th International Conference, DASFAA 2021, Taipei, Taiwan, April 11--14, 2021, Proceedings, Part III 26},
+  pages={566--578},
+  year={2021},
+  organization={Springer}
+}
+@article{idassociation,
+  title={Association Analysis: Basic Concepts and Algorithms},
+  author={id Items, T},
+  publisher={Citeseer}
+}
+@article{jiang2024enhancing,
+  title={Enhancing question answering for enterprise knowledge bases using large language models},
+  author={Jiang, Feihu and Qin, Chuan and Yao, Kaichun and Fang, Chuyu and Zhuang, Fuzhen and Zhu, Hengshu and Xiong, Hui},
+  journal={arXiv preprint arXiv:2404.08695},
+  year={2024}
+}
+@article{li2024diffcharge,
+  title={Diffcharge: Generating ev charging scenarios via a denoising diffusion model},
+  author={Li, Siyang and Xiong, Hui and Chen, Yize},
+  journal={IEEE Transactions on Smart Grid},
+  year={2024},
+  publisher={IEEE}
+}
+@article{yu2024rdgt,
+  title={Rdgt: enhancing group cognitive diagnosis with relation-guided dual-side graph transformer},
+  author={Yu, Xiaoshan and Qin, Chuan and Shen, Dazhong and Ma, Haiping and Zhang, Le and Zhang, Xingyi and Zhu, Hengshu and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2024},
+  publisher={IEEE}
+}
+@article{qiao2024dual,
+  title={A dual-channel semi-supervised learning framework on graphs via knowledge transfer and meta-learning},
+  author={Qiao, Ziyue and Wang, Pengyang and Wang, Pengfei and Ning, Zhiyuan and Fu, Yanjie and Du, Yi and Zhou, Yuanchun and Huang, Jianqiang and Hua, Xian-Sheng and Xiong, Hui},
+  journal={ACM Transactions on the Web},
+  volume={18},
+  number={2},
+  pages={1--26},
+  year={2024},
+  publisher={ACM New York, NY}
+}
+@article{han2023machine,
+  title={Machine learning for urban air quality analytics: A survey},
+  author={Han, Jindong and Zhang, Weijia and Liu, Hao and Xiong, Hui},
+  journal={arXiv preprint arXiv:2310.09620},
+  year={2023}
+}
+@article{li2023giant,
+  title={Giant: Protein-ligand binding affinity prediction via geometry-aware interactive graph neural network},
+  author={Li, Shuangli and Zhou, Jingbo and Xu, Tong and Huang, Liang and Wang, Fan and Xiong, Haoyi and Huang, Weili and Dou, Dejing and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2023},
+  publisher={IEEE}
+}
+@article{ye2023adaptive,
+  title={Adaptive clustering based personalized federated learning framework for next poi recommendation with location noise},
+  author={Ye, Ziming and Zhang, Xiao and Chen, Xu and Xiong, Hui and Yu, Dongxiao},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2023},
+  publisher={IEEE}
+}
+@article{zhang2023irregular,
+  title={Irregular traffic time series forecasting based on asynchronous spatio-temporal graph convolutional network},
+  author={Zhang, Weijia and Zhang, Le and Han, Jindong and Liu, Hao and Zhou, Jingbo and Mei, Yu and Xiong, Hui},
+  journal={arXiv preprint arXiv:2308.16818},
+  year={2023}
+}
+@inproceedings{gong2023beyond,
+  title={Beyond Homophily: Robust Graph Anomaly Detection via Neural Sparsification.},
+  author={Gong, Zheng and Wang, Guifeng and Sun, Ying and Liu, Qi and Ning, Yuting and Xiong, Hui and Peng, Jingyu},
+  booktitle={IJCAI},
+  pages={2104--2113},
+  year={2023}
+}
+@inproceedings{han2023ieta,
+  title={iETA: A Robust and Scalable Incremental Learning Framework for Time-of-Arrival Estimation},
+  author={Han, Jindong and Liu, Hao and Liu, Shui and Chen, Xi and Tan, Naiqiang and Chai, Hua and Xiong, Hui},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={4100--4111},
+  year={2023}
+}
+@article{gao2023topic,
+  title={Topic-sensitive expert finding based solely on heterogeneous academic networks},
+  author={Gao, Xiaonan and Wu, Sen and Xia, Dawen and Xiong, Hui},
+  journal={Expert Systems with Applications},
+  volume={213},
+  pages={119241},
+  year={2023},
+  publisher={Elsevier}
+}
+@article{huang2022hmcnet,
+  title={HmcNet: A General Approach for Hierarchical Multi-Label Classification},
+  author={Huang, Wei and Chen, Enhong and Liu, Qi and Xiong, Hui and Huang, Zhenya and Tong, Shiwei and Zhang, Dan},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={9},
+  pages={8713--8728},
+  year={2022},
+  publisher={IEEE}
+}
+@article{yao2022multi,
+  title={Multi-view multi-task campaign embedding for cold-start conversion rate forecasting},
+  author={Yao, Zijun and Kong, Deguang and Lu, Miao and Bai, Xiao and Yang, Jian and Xiong, Hui},
+  journal={IEEE Transactions on Big Data},
+  volume={9},
+  number={1},
+  pages={280--293},
+  year={2022},
+  publisher={IEEE}
+}
+@inproceedings{xia2021medical,
+  title={Medical entity relation verification with large-scale machine reading comprehension},
+  author={Xia, Yuan and Wang, Chunyu and Shi, Zhenhui and Zhou, Jingbo and Lu, Chao and Huang, Haifeng and Xiong, Hui},
+  booktitle={Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery \& Data Mining},
+  pages={3765--3774},
+  year={2021}
+}
+@article{qu2021diagnostic,
+  title={Diagnostic sparse connectivity networks with regularization template},
+  author={Qu, Yue and Liu, Chuanren and Zhang, Kai and Xiao, Keli and Jin, Bo and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={1},
+  pages={307--320},
+  year={2021},
+  publisher={IEEE}
+}
+@misc{liu2021method,
+  title={Method and apparatus for determining hybrid travel route, device and storage medium},
+  author={Liu, Hao and Duan, Jianguo and Xiong, Hui},
+  year={2021},
+  month=apr # "~15",
+  publisher={Google Patents},
+  note={US Patent App. 16/880,156}
+}
+@inproceedings{zhang2020joint,
+  title={Joint intent detection and entity linking on spatial domain queries},
+  author={Zhang, Lei and Wang, Runze and Zhou, Jingbo and Yu, Jingsong and Ling, Zhenhua and Xiong, Hui},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2020},
+  pages={4937--4947},
+  year={2020}
+}
+@article{hu2020exploiting,
+  title={Exploiting user preference and mobile peer influence for human mobility annotation},
+  author={Hu, Renjun and Liu, Yanchi and Li, Yanyan and Zhou, Jingbo and Ma, Shuai and Xiong, Hui},
+  journal={ACM Transactions on Knowledge Discovery from Data (TKDD)},
+  volume={14},
+  number={6},
+  pages={1--18},
+  year={2020},
+  publisher={ACM New York, NY, USA}
+}
+@inproceedings{chen2024collaboration,
+  title={Collaboration-Aware Hybrid Learning for Knowledge Development Prediction},
+  author={Chen, Liyi and Qin, Chuan and Sun, Ying and Song, Xin and Xu, Tong and Zhu, Hengshu and Xiong, Hui},
+  booktitle={Proceedings of the ACM on Web Conference 2024},
+  pages={3976--3985},
+  year={2024}
+}
+@article{jiang2024towards,
+  title={Towards Efficient Resume Understanding: A Multi-Granularity Multi-Modal Pre-Training Approach},
+  author={Jiang, Feihu and Qin, Chuan and Zhang, Jingshuai and Yao, Kaichun and Chen, Xi and Shen, Dazhong and Zhu, Chen and Zhu, Hengshu and Xiong, Hui},
+  journal={arXiv preprint arXiv:2404.13067},
+  year={2024}
+}
+@article{wan2024token,
+  title={Token-event-role structure-based multi-channel document-level event extraction},
+  author={Wan, Qizhi and Wan, Changxuan and Xiao, Keli and Xiong, Hui and Liu, Dexi and Liu, Xiping and Hu, Rong},
+  journal={ACM Transactions on Information Systems},
+  volume={42},
+  number={4},
+  pages={1--27},
+  year={2024},
+  publisher={ACM New York, NY}
+}
+@article{zhang2024towards,
+  title={Towards Urban General Intelligence: A Review and Outlook of Urban Foundation Models},
+  author={Zhang, Weijia and Han, Jindong and Xu, Zhao and Ni, Hang and Liu, Hao and Xiong, Hui},
+  journal={arXiv preprint arXiv:2402.01749},
+  year={2024}
+}
+@article{fan2024dewp,
+  title={Dewp: Deep expansion learning for wind power forecasting},
+  author={Fan, Wei and Fu, Yanjie and Zheng, Shun and Bian, Jiang and Zhou, Yuanchun and Xiong, Hui},
+  journal={ACM Transactions on Knowledge Discovery from Data},
+  volume={18},
+  number={3},
+  pages={1--21},
+  year={2024},
+  publisher={ACM New York, NY}
+}
+@article{han2024bigst,
+  title={BigST: Linear Complexity Spatio-Temporal Graph Neural Network for Traffic Forecasting on Large-Scale Road Networks},
+  author={Han, Jindong and Zhang, Weijia and Liu, Hao and Tao, Tao and Tan, Naiqiang and Xiong, Hui},
+  journal={Proceedings of the VLDB Endowment},
+  volume={17},
+  number={5},
+  pages={1081--1090},
+  year={2024},
+  publisher={VLDB Endowment}
+}
+@inproceedings{zhang2023interactive,
+  title={Interactive interior design recommendation via coarse-to-fine multimodal reinforcement learning},
+  author={Zhang, He and Sun, Ying and Guo, Weiyu and Liu, Yafei and Lu, Haonan and Lin, Xiaodong and Xiong, Hui},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  pages={6472--6480},
+  year={2023}
+}
+@article{shen2023exploiting,
+  title={Exploiting connections among personality, job position, and work behavior: Evidence from joint Bayesian learning},
+  author={Shen, Dazhong and Zhu, Hengshu and Xiao, Keli and Zhang, Xi and Xiong, Hui},
+  journal={ACM Transactions on Management Information Systems},
+  volume={14},
+  number={3},
+  pages={1--20},
+  year={2023},
+  publisher={ACM New York, NY}
+}
+@inproceedings{ji2023community,
+  title={Community-based dynamic graph learning for popularity prediction},
+  author={Ji, Shuo and Lu, Xiaodong and Liu, Mingzhe and Sun, Leilei and Liu, Chuanren and Du, Bowen and Xiong, Hui},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={930--940},
+  year={2023}
+}
+@inproceedings{du2023seq,
+  title={Seq-HGNN: learning sequential node representation on heterogeneous graph},
+  author={Du, Chenguang and Yao, Kaichun and Zhu, Hengshu and Wang, Deqing and Zhuang, Fuzhen and Xiong, Hui},
+  booktitle={Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={1721--1730},
+  year={2023}
+}
+@article{liu2023characterizing,
+  title={Characterizing and forecasting urban vibrancy evolution: A multi-view graph mining perspective},
+  author={Liu, Hao and Guo, Qingyu and Zhu, Hengshu and Fu, Yanjie and Zhuang, Fuzhen and Ma, Xiaojuan and Xiong, Hui},
+  journal={ACM Transactions on Knowledge Discovery from Data},
+  volume={17},
+  number={5},
+  pages={1--24},
+  year={2023},
+  publisher={ACM New York, NY}
+}
+@article{xiao2022self,
+  title={Self-optimizing feature transformation},
+  author={Xiao, Meng and Wang, Dongjie and Wu, Min and Liu, Kunpeng and Xiong, Hui and Zhou, Yuanchun and Fu, Yanjie},
+  journal={arXiv preprint arXiv:2209.08044},
+  year={2022}
+}
+@article{zhang2022multi,
+  title={Multi-faceted knowledge-driven pre-training for product representation learning},
+  author={Zhang, Denghui and Liu, Yanchi and Yuan, Zixuan and Fu, Yanjie and Chen, Haifeng and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={7},
+  pages={7239--7250},
+  year={2022},
+  publisher={IEEE}
+}
+@article{zhu2022predicting,
+  title={Predicting a person¡¯s next activity region with a dynamic region-relation-aware graph neural network},
+  author={Zhu, Nengjun and Cao, Jian and Lu, Xinjiang and Liu, Chuanren and Liu, Hao and Li, Yanyan and Luo, Xiangfeng and Xiong, Hui},
+  journal={ACM Transactions on Knowledge Discovery from Data (TKDD)},
+  volume={16},
+  number={6},
+  pages={1--23},
+  year={2022},
+  publisher={ACM New York, NY}
+}
+@misc{qin2022method,
+  title={Method and apparatus for talent-post matching and computer readable storage medium},
+  author={Qin, Chuan and Zhu, Chen and Xu, Tong and Zhu, Hengshu and Xiong, Hui},
+  year={2022},
+  month=feb # "~1",
+  publisher={Google Patents},
+  note={US Patent 11,238,381}
+}
+@article{sun2021automatic,
+  title={Automatic treatment regimen design},
+  author={Sun, Leilei and Liu, Chuanren and Chen, Guoqing and Guo, Chonghui and Xiong, Hui and Xie, Yanming},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={33},
+  number={11},
+  pages={3494--3506},
+  year={2021},
+  publisher={IEEE}
+}
+@inproceedings{zhang2021domain,
+  title={Domain-oriented language modeling with adaptive hybrid masking and optimal transport alignment},
+  author={Zhang, Denghui and Yuan, Zixuan and Liu, Yanchi and Liu, Hao and Zhuang, Fuzhen and Xiong, Hui and Chen, Haifeng},
+  booktitle={Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery \& Data Mining},
+  pages={2145--2153},
+  year={2021}
+}
+@article{zhang2021exploiting,
+  title={Exploiting Real-time Search Engine Queries for Earthquake Detection: A Summary of Results},
+  author={Zhang, Qi and Zhu, Hengshu and Liu, Qi and Chen, Enhong and Xiong, Hui},
+  journal={ACM Transactions on Information Systems (TOIS)},
+  volume={39},
+  number={3},
+  pages={1--32},
+  year={2021},
+  publisher={ACM New York, NY}
+}
+@article{blum2021coordiq,
+  title={CoordiQ: Coordinated Q-learning for electric vehicle charging recommendation},
+  author={Blum, Carter and Liu, Hao and Xiong, Hui},
+  journal={arXiv preprint arXiv:2102.00847},
+  year={2021}
+}
+@article{zheng2024bilateral,
+  title={Bilateral Multi-Behavior Modeling for Reciprocal Recommendation in Online Recruitment},
+  author={Zheng, Zhi and Hu, Xiao and Qiu, Zhaopeng and Cheng, Yuan and Gao, Shanshan and Song, Yang and Zhu, Hengshu and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2024},
+  publisher={IEEE}
+}
+@inproceedings{zhang2024temporal,
+  title={Temporal Graph Contrastive Learning for Sequential Recommendation},
+  author={Zhang, Shengzhe and Chen, Liyi and Wang, Chao and Li, Shuangli and Xiong, Hui},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={8},
+  pages={9359--9367},
+  year={2024}
+}
+@inproceedings{jiang2016decoding,
+  title={Decoding speech using the timing of neural signal modulation},
+  author={Jiang, Werner and Pailla, Tejaswy and Dichter, Benjamin and Chang, Edward F and Gilja, Vikash},
+  booktitle={2016 38th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
+  pages={1532--1535},
+  year={2016},
+  organization={IEEE}
+}
+@article{deng2024bigger,
+  title={The bigger the better? rethinking the effective model scale in long-term time series forecasting},
+  author={Deng, Jinliang and Song, Xuan and Tsang, Ivor W and Xiong, Hui},
+  journal={arXiv preprint arXiv:2401.11929},
+  year={2024}
+}
+@article{jiang2023survey,
+  title={Survey on Trustworthy Graph Neural Networks: From A Causal Perspective},
+  author={Jiang, Wenzhao and Liu, Hao and Xiong, Hui},
+  journal={arXiv preprint arXiv:2312.12477},
+  year={2023}
+}
+@article{hu2023many,
+  title={How many validation labels do you need? exploring the design space of label-efficient model ranking},
+  author={Hu, Zhengyu and Zhang, Jieyu and Yu, Yue and Zhuang, Yuchen and Xiong, Hui},
+  journal={arXiv preprint arXiv:2312.01619},
+  year={2023}
+}
+@article{zhu2023towards,
+  title={Towards graph-aware diffusion modeling for collaborative filtering},
+  author={Zhu, Yunqin and Wang, Chao and Xiong, Hui},
+  journal={arXiv preprint arXiv:2311.08744},
+  year={2023}
+}
+@article{li2023information,
+  title={Information theory-guided heuristic progressive multi-view coding},
+  author={Li, Jiangmeng and Gao, Hang and Qiang, Wenwen and Zheng, Changwen},
+  journal={Neural Networks},
+  volume={167},
+  pages={415--432},
+  year={2023},
+  publisher={Elsevier}
+}
+@article{wu2023multi,
+  title={A multi-aspect neural tensor factorization framework for patent litigation prediction},
+  author={Wu, Han and Zhu, Guanqi and Liu, Qi and Zhu, Hengshu and Wang, Hao and Zhao, Hongke and Liu, Chuanren and Chen, Enhong and Xiong, Hui},
+  journal={IEEE Transactions on Big Data},
+  year={2023},
+  publisher={IEEE}
+}
+@article{liu2023cost,
+  title={A cost-effective sequential route recommender system for taxi drivers},
+  author={Liu, Junming and Teng, Mingfei and Chen, Weiwei and Xiong, Hui},
+  journal={INFORMS Journal on Computing},
+  volume={35},
+  number={5},
+  pages={1098--1119},
+  year={2023},
+  publisher={INFORMS}
+}
+@inproceedings{li2023multi,
+  title={Multi-Temporal Relationship Inference in Urban Areas},
+  author={Li, Shuangli and Zhou, Jingbo and Liu, Ji and Xu, Tong and Chen, Enhong and Xiong, Hui},
+  booktitle={Proceedings of the 29th ACM SIGKDD conference on knowledge discovery and data mining},
+  pages={1316--1327},
+  year={2023}
+}
+@misc{li2023method,
+  title={Method, apparatus, computer device and storage medium for determining POI alias},
+  author={Li, YanYan and Duan, Jianguo and Xiong, Hui},
+  year={2023},
+  month=jul # "~11",
+  publisher={Google Patents},
+  note={US Patent 11,698,261}
+}
+@inproceedings{dai2023cloth2body,
+  title={Cloth2Body: Generating 3D Human Body Mesh from 2D Clothing},
+  author={Dai, Lu and Ma, Liqian and Qian, Shenhan and Liu, Hao and Liu, Ziwei and Xiong, Hui},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={15007--15017},
+  year={2023}
+}
+@inproceedings{dai2022decomposing,
+  title={Decomposing Complementary and Substitutable Relations for Intercorporate Investment Recommendation},
+  author={Dai, Le and Yin, Yu and Qin, Chuan and Chen, Enhong and Xiong, Hui},
+  booktitle={2022 IEEE International Conference on Data Mining (ICDM)},
+  pages={909--914},
+  year={2022},
+  organization={IEEE}
+}
+@inproceedings{xin2022captor,
+  title={Captor: A crowd-aware pre-travel recommender system for out-of-town users},
+  author={Xin, Haoran and Lu, Xinjiang and Zhu, Nengjun and Xu, Tong and Dou, Dejing and Xiong, Hui},
+  booktitle={Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={1174--1184},
+  year={2022}
+}
+@article{sun2021discerning,
+  title={Discerning decision-making process of deep neural networks with hierarchical voting transformation},
+  author={Sun, Ying and Zhu, Hengshu and Qin, Chuan and Zhuang, Fuzhen and He, Qing and Xiong, Hui},
+  journal={Advances in Neural Information Processing Systems},
+  volume={34},
+  pages={17221--17234},
+  year={2021}
+}
+@article{guo2021predictive,
+  title={A predictive indicator using lender composition for loan evaluation in P2P lending},
+  author={Guo, Yanhong and Jiang, Shuai and Zhou, Wenjun and Luo, Chunyu and Xiong, Hui},
+  journal={Financial Innovation},
+  volume={7},
+  pages={1--24},
+  year={2021},
+  publisher={Springer}
+}
+@misc{zhang2021parking,
+  title={Parking lot free parking space predicting method, apparatus, electronic device and storage medium},
+  author={Zhang, Weijia and Liu, Hao and Xiong, Hui},
+  year={2021},
+  month=jul # "~29",
+  publisher={Google Patents},
+  note={US Patent App. 17/024,421}
+}
+@inproceedings{hu2021detecting,
+  title={Detecting highlighted video clips through emotion-enhanced audio-visual cues},
+  author={Hu, Linkang and He, Weidong and Zhang, Le and Xu, Tong and Xiong, Hui and Chen, Enhong},
+  booktitle={2021 IEEE International Conference on Multimedia and Expo (ICME)},
+  pages={1--6},
+  year={2021},
+  organization={IEEE}
+}
+@inproceedings{liu2020probabilistic,
+  title={Probabilistic long-term vehicle trajectory prediction via driver awareness model},
+  author={Liu, Jinxin and Xiong, Hui and Huang, Heye and Luo, Yugong and Zhong, Zhihua and Li, Keqiang},
+  booktitle={2020 IEEE Intelligent Vehicles Symposium (IV)},
+  pages={992--998},
+  year={2020},
+  organization={IEEE}
+}
+@misc{xiong2020introduction,
+  title={Introduction to the Special Issue on the Best Papers from KDD 2018},
+  author={Xiong, Hui and Lin, Chih-Jen},
+  journal={ACM Transactions on Knowledge Discovery from Data (TKDD)},
+  volume={14},
+  number={5},
+  pages={1--2},
+  year={2020},
+  publisher={ACM New York, NY, USA}
+}
+@article{li2020you,
+  title={You are how you behave--spatiotemporal representation learning for college student academic achievement},
+  author={Li, Xiao-Lin and Ma, Li and He, Xiang-Dong and Xiong, Hui},
+  journal={Journal of Computer Science and Technology},
+  volume={35},
+  pages={353--367},
+  year={2020},
+  publisher={Springer}
+}
+@article{qiao2024information,
+  title={Information filtering and interpolating for semi-supervised graph domain adaptation},
+  author={Qiao, Ziyue and Xiao, Meng and Guo, Weiyu and Luo, Xiao and Xiong, Hui},
+  journal={Pattern Recognition},
+  volume={153},
+  pages={110498},
+  year={2024},
+  publisher={Elsevier}
+}
+@inproceedings{zheng2024mirror,
+  title={MIRROR: A Multi-View Reciprocal Recommender System for Online Recruitment},
+  author={Zheng, Zhi and Hu, Xiao and Gao, Shanshan and Zhu, Hengshu and Xiong, Hui},
+  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={543--552},
+  year={2024}
+}
+@misc{jingbo2024method,
+  title={Method and apparatus for optimizing tag of point of interest, electronic device and computer readable medium},
+  author={Jingbo, ZHOU and Renjun, HU and Jiang, Airong and Duan, Jianguo and Xiong, Hui},
+  year={2024},
+  month=jun # "~25",
+  publisher={Google Patents},
+  note={US Patent 12,020,467}
+}
+@article{ye2024university,
+  title={University Evaluation through Graduate Employment Prediction: An Influence based Graph Autoencoder Approach},
+  author={Ye, Yuyang and Zhu, Hengshu and Cui, Tianyi and Yu, Runlong and Zhang, Le and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2024},
+  publisher={IEEE}
+}
+@article{wang2024flagvne,
+  title={FlagVNE: A Flexible and Generalizable Reinforcement Learning Framework for Network Resource Allocation},
+  author={Wang, Tianfu and Fan, Qilin and Wang, Chao and Yang, Long and Ding, Leilei and Yuan, Nicholas Jing and Xiong, Hui},
+  journal={arXiv preprint arXiv:2404.12633},
+  year={2024}
+}
+@article{guan2024jobformer,
+  title={JobFormer: Skill-Aware Job Recommendation with Semantic-Enhanced Transformer},
+  author={Guan, Zhihao and Yang, Jia-Qi and Yang, Yang and Zhu, Hengshu and Li, Wenjie and Xiong, Hui},
+  journal={arXiv preprint arXiv:2404.04313},
+  year={2024}
+}
+@article{li2024diffplf,
+  title={Diffplf: A conditional diffusion model for probabilistic forecasting of ev charging load},
+  author={Li, Siyang and Xiong, Hui and Chen, Yize},
+  journal={arXiv preprint arXiv:2402.13548},
+  year={2024}
+}
+@article{zhang2023impact,
+  title={The Impact of Generative Artificial Intelligence},
+  author={Zhang, Kaichen and Kwon, Ohchan and Xiong, Hui},
+  journal={arXiv preprint arXiv:2311.07071},
+  year={2023}
+}
+@article{wang2023joint,
+  title={Joint admission control and resource allocation of virtual network embedding via hierarchical deep reinforcement learning},
+  author={Wang, Tianfu and Shen, Li and Fan, Qilin and Xu, Tong and Liu, Tongliang and Xiong, Hui},
+  journal={IEEE Transactions on Services Computing},
+  year={2023},
+  publisher={IEEE}
+}
+@inproceedings{hao2023hybrid,
+  title={Hybrid Heterogeneous Graph Neural Networks for Fund Performance Prediction},
+  author={Hao, Siyuan and Dai, Le and Zhang, Le and Zhang, Shengming and Wang, Chao and Qin, Chuan and Xiong, Hui},
+  booktitle={International Conference on Knowledge Science, Engineering and Management},
+  pages={301--317},
+  year={2023},
+  organization={Springer}
+}
+@article{zhang2023hierarchical,
+  title={Hierarchical Wi-Fi Trajectory Embedding for Indoor User Mobility Pattern Analysis},
+  author={Zhang, Qi and Zhu, Hengshu and Wang, Peng and Chen, Enhong and Xiong, Hui},
+  journal={Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies},
+  volume={7},
+  number={2},
+  pages={1--21},
+  year={2023},
+  publisher={ACM New York, NY, USA}
+}
+@article{niu2023exploring,
+  title={Exploring the tidal effect of urban business district with large-scale human mobility data},
+  author={Niu, Hongting and Sun, Ying and Zhu, Hengshu and Geng, Cong and Yang, Jiuchun and Xiong, Hui and Lang, Bo},
+  journal={Frontiers of Computer Science},
+  volume={17},
+  number={3},
+  pages={173319},
+  year={2023},
+  publisher={Springer}
+}
+@article{jiang2023trimlp,
+  title={TriMLP: Revenge of a MLP-like Architecture in Sequential Recommendation},
+  author={Jiang, Yiheng and Xu, Yuanbo and Yang, Yongjian and Yang, Funing and Wang, Pengyang and Xiong, Hui},
+  journal={arXiv preprint arXiv:2305.14675},
+  year={2023}
+}
+@article{wang2023preference,
+  title={Preference or Intent? Double Disentangled Collaborative Filtering},
+  author={Wang, Chao and Zhu, Hengshu and Shen, Dazhong and Xiong, Hui and others},
+  journal={arXiv preprint arXiv:2305.11084},
+  year={2023}
+}
+@misc{li2023method,
+  title={Method and apparatus for evaluating user intention understanding satisfaction, electronic device and storage medium},
+  author={Li, YanYan and Duan, Jianguo and Xiong, Hui},
+  year={2023},
+  month=feb # "~14",
+  publisher={Google Patents},
+  note={US Patent 11,580,980}
+}
+@misc{jingbo2023method,
+  title={Method and apparatus for mining competition relationship POIs},
+  author={Jingbo, ZHOU and Xiong, Hui},
+  year={2023},
+  month=feb # "~14",
+  publisher={Google Patents},
+  note={US Patent 11,580,124}
+}
+@article{mcgreevy2004system,
+  title={System, method and apparatus for generating phrases from a database},
+  author={McGreevy, Michael W},
+  year={2004}
+}
+@misc{li2022method,
+  title={Method, apparatus, computer device and storage medium for stay point recognition},
+  author={Li, YanYan and Duan, Jianguo and Xiong, Hui},
+  year={2022},
+  month=aug # "~16",
+  publisher={Google Patents},
+  note={US Patent 11,418,918}
+}
+@article{fan2022feature,
+  title={Feature and instance joint selection: A reinforcement learning perspective},
+  author={Fan, Wei and Liu, Kunpeng and Liu, Hao and Zhu, Hengshu and Xiong, Hui and Fu, Yanjie},
+  journal={arXiv preprint arXiv:2205.07867},
+  year={2022}
+}
+@inproceedings{ye2011exploiting,
+  title={Exploiting geographical influence for collaborative point-of-interest recommendation},
+  author={Ye, Mao and Yin, Peifeng and Lee, Wang-Chien and Lee, Dik-Lun},
+  booktitle={Proceedings of the 34th international ACM SIGIR conference on Research and development in Information Retrieval},
+  pages={325--334},
+  year={2011}
+}
+@misc{jingbo2022method,
+  title={Method, computer device and storage medium for mining point of interest competitive relationship},
+  author={Jingbo, ZHOU and Duan, Jianguo and Jiang, Airong and Xiong, Hui},
+  year={2022},
+  month=jan # "~25",
+  publisher={Google Patents},
+  note={US Patent 11,232,116}
+}
+@article{niu2021exploring,
+  title={Exploring the risky travel area and behavior of car-hailing service},
+  author={Niu, Hongting and Zhu, Hengshu and Sun, Ying and Lu, Xinjiang and Sun, Jing and Zhao, Zhiyuan and Xiong, Hui and Lang, Bo},
+  journal={ACM Transactions on Intelligent Systems and Technology (TIST)},
+  volume={13},
+  number={1},
+  pages={1--22},
+  year={2021},
+  publisher={ACM New York, NY}
+}
+@article{sun2021platform,
+  title={Platform-oriented event time allocation},
+  author={Sun, Heli and Wang, Ning and Jia, Jingyu and Huang, Jianbin and Xiong, Hui and He, Liang and Liu, Xinwang and Zhang, Shan and Qiao, Shaojie and Zhao, Jizhong},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={35},
+  number={3},
+  pages={2930--2942},
+  year={2021},
+  publisher={IEEE}
+}
+@inproceedings{xiong2021tmc,
+  title={TMC 2021: 2021 International Workshop on Talent and Management Computing},
+  author={Xiong, Hui and Zhu, Hengshu and Xu, Tong and Zhang, Xi},
+  booktitle={Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery \& Data Mining},
+  pages={4169--4170},
+  year={2021}
+}
+@misc{xinjiang2021land,
+  title={Land usage property identification method, apparatus, electronic device and storage medium},
+  author={Xinjiang, LU and Huang, Shangfo and Xiong, Hui},
+  year={2021},
+  month=jul # "~22",
+  publisher={Google Patents},
+  note={US Patent App. 17/208,671}
+}
+@inproceedings{zhang2021knowledge,
+  title={Knowledge powered cooperative semantic fusion for patent classification},
+  author={Zhang, Zhe and Xu, Tong and Zhang, Le and Du, Yichao and Xiong, Hui and Chen, Enhong},
+  booktitle={Artificial Intelligence: First CAAI International Conference, CICAI 2021, Hangzhou, China, June 5--6, 2021, Proceedings, Part I 1},
+  pages={111--122},
+  year={2021},
+  organization={Springer}
+}
+@inproceedings{zhang2020t,
+  title={T\^{} 2-Net: A Semi-Supervised Deep Model for Turbulence Forecasting},
+  author={Zhang, Denghui and Liu, Yanchi and Cheng, Wei and Zong, Bo and Ni, Jingchao and Chen, Zhengzhang and Chen, Haifeng and Xiong, Hui},
+  booktitle={2020 IEEE International Conference on Data Mining (ICDM)},
+  pages={1388--1393},
+  year={2020},
+  organization={IEEE}
+}
+@misc{li2020method,
+  title={Method for Building User Visit Inference Model, Apparatus and Storage Medium},
+  author={Li, YanYan and Renjun, HU and Duan, Jianguo and Jiang, Airong and Xiong, Hui},
+  year={2020},
+  month=feb # "~6",
+  publisher={Google Patents},
+  note={US Patent App. 16/654,343}
+}
+@article{ye2024pail,
+  title={PAIL: Performance based Adversarial Imitation Learning Engine for Carbon Neutral Optimization},
+  author={Ye, Yuyang and Tang, Lu-An and Wang, Haoyu and Yu, Runlong and Yu, Wenchao and He, Erhu and Chen, Haifeng and Xiong, Hui},
+  journal={arXiv preprint arXiv:2407.08910},
+  year={2024}
+}
+@inproceedings{zhu2024graph,
+  title={Graph Signal Diffusion Model for Collaborative Filtering},
+  author={Zhu, Yunqin and Wang, Chao and Zhang, Qi and Xiong, Hui},
+  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={1380--1390},
+  year={2024}
+}
+@inproceedings{dai2024unifying,
+  title={Unifying Graph Retrieval and Prompt Tuning for Graph-Grounded Text Classification},
+  author={Dai, Le and Yin, Yu and Chen, Enhong and Xiong, Hui},
+  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={2682--2686},
+  year={2024}
+}
+@inproceedings{wu2024afdgcf,
+  title={AFDGCF: Adaptive Feature De-correlation Graph Collaborative Filtering for Recommendations},
+  author={Wu, Wei and Wang, Chao and Shen, Dazhong and Qin, Chuan and Chen, Liyi and Xiong, Hui},
+  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={1242--1252},
+  year={2024}
+}
+@article{hu2024rethinking,
+  title={Rethinking LLM-based Preference Evaluation},
+  author={Hu, Zhengyu and Song, Linxin and Zhang, Jieyu and Xiao, Zheyuan and Wang, Jingang and Chen, Zhenyu and Zhao, Jieyu and Xiong, Hui},
+  journal={arXiv preprint arXiv:2407.01085},
+  year={2024}
+}
+@article{li2024refiner,
+  title={Refiner: Restructure Retrieval Content Efficiently to Advance Question-Answering Capabilities},
+  author={Li, Zhonghao and Hu, Xuming and Liu, Aiwei and Zheng, Kening and Huang, Sirui and Xiong, Hui},
+  journal={arXiv preprint arXiv:2406.11357},
+  year={2024}
+}
+@article{chen2024job,
+  title={Job-SDF: A Multi-Granularity Dataset for Job Skill Demand Forecasting and Benchmarking},
+  author={Chen, Xi and Qin, Chuan and Fang, Chuyu and Wang, Chao and Zhu, Chen and Zhuang, Fuzhen and Zhu, Hengshu and Xiong, Hui},
+  journal={arXiv preprint arXiv:2406.11920},
+  year={2024}
+}
+@article{jiang2024interpretable,
+  title={Interpretable Cascading Mixture-of-Experts for Urban Traffic Congestion Prediction},
+  author={Jiang, Wenzhao and Han, Jindong and Liu, Hao and Tao, Tao and Tan, Naiqiang and Xiong, Hui},
+  journal={arXiv preprint arXiv:2406.12923},
+  year={2024}
+}
+@article{qiao2024holistic,
+  title={Holistic Memory Diversification for Incremental Learning in Growing Graphs},
+  author={Qiao, Ziyue and Xiao, Junren and Sun, Qingqiang and Xiao, Meng and Xiong, Hui},
+  journal={arXiv preprint arXiv:2406.07413},
+  year={2024}
+}
+@article{zhao2024bi,
+  title={Bi-Discriminator Domain Adversarial Neural Networks With Class-Level Gradient Alignment},
+  author={Zhao, Chuang and Zhao, Hongke and Zhu, Hengshu and Huang, Zhenya and Feng, Nan and Chen, Enhong and Xiong, Hui},
+  journal={IEEE Transactions on Systems, Man, and Cybernetics: Systems},
+  year={2024},
+  publisher={IEEE}
+}
+@article{yang2024mad,
+  title={MAD: Multi-Alignment MEG-to-Text Decoding},
+  author={Yang, Yiqian and Jo, Hyejeong and Duan, Yiqun and Zhang, Qiang and Zhou, Jinni and Lee, Won Hee and Xu, Renjing and Xiong, Hui},
+  journal={arXiv preprint arXiv:2406.01512},
+  year={2024}
+}
+@article{guo2024spgesture,
+  title={SpGesture: Source-Free Domain-adaptive sEMG-based Gesture Recognition with Jaccard Attentive Spiking Neural Network},
+  author={Guo, Weiyu and Sun, Ying and Xu, Yijie and Qiao, Ziyue and Yang, Yongkui and Xiong, Hui},
+  journal={arXiv preprint arXiv:2405.14398},
+  year={2024}
+}
+@article{zhang2024optimized,
+  title={Optimized Cost Per Click in Online Advertising: A Theoretical Analysis},
+  author={Zhang, Kaichen and Yuan, Zixuan and Xiong, Hui},
+  journal={arXiv preprint arXiv:2405.14279},
+  year={2024}
+}
+@article{wang2024comet,
+  title={COMET: NFT Price Prediction with Wallet Profiling},
+  author={Wang, Tianfu and Deng, Liwei and Wang, Chao and Lian, Jianxun and Yan, Yue and Yuan, Nicholas Jing and Zhang, Qi and Xiong, Hui},
+  journal={arXiv preprint arXiv:2405.10640},
+  year={2024}
+}
+@inproceedings{zha2024scaling,
+  title={Scaling Up Multivariate Time Series Pre-Training with Decoupled Spatial-Temporal Representations},
+  author={Zha, Rui and Zhang, Le and Li, Shuangli and Zhou, Jingbo and Xu, Tong and Xiong, Hui and Chen, Enhong},
+  booktitle={2024 IEEE 40th International Conference on Data Engineering (ICDE)},
+  pages={667--678},
+  year={2024},
+  organization={IEEE}
+}
+@inproceedings{wang2024unleashing,
+  title={Unleashing the Power of Knowledge Graph for Recommendation via Invariant Learning},
+  author={Wang, Shuyao and Sui, Yongduo and Wang, Chao and Xiong, Hui},
+  booktitle={Proceedings of the ACM on Web Conference 2024},
+  pages={3745--3755},
+  year={2024}
+}
+@article{jo2024eeg,
+  title={Are EEG-to-Text Models Working?},
+  author={Jo, Hyejeong and Yang, Yiqian and Han, Juhyeok and Duan, Yiqun and Xiong, Hui and Lee, Won Hee},
+  journal={arXiv preprint arXiv:2405.06459},
+  year={2024}
+}
+@article{li2024beyond,
+  title={Beyond Relevance: Factor-level Causal Explanation for User Travel Decisions with Counterfactual Data Augmentation},
+  author={Li, Hanzhe and Gu, Jingjing and Lu, Xinjiang and Shen, Dazhong and Liu, Yuting and Deng, YaNan and Shi, Guoliang and Xiong, Hui},
+  journal={ACM Transactions on Information Systems},
+  volume={42},
+  number={5},
+  pages={1--31},
+  year={2024},
+  publisher={ACM New York, NY}
+}
+@article{chen2024uncertainty,
+  title={Uncertainty Quantification on Graph Learning: A Survey},
+  author={Chen, Chao and Guo, Chenghua and Xu, Rui and Liao, Xiangwen and Zhang, Xi and Xie, Sihong and Xiong, Hui and Yu, Philip},
+  journal={arXiv preprint arXiv:2404.14642},
+  year={2024}
+}
+@article{guo2024revisiting,
+  title={Revisiting Noise Resilience Strategies in Gesture Recognition: Short-Term Enhancement in Surface Electromyographic Signal Analysis},
+  author={Guo, Weiyu and Qiao, Ziyue and Sun, Ying and Xiong, Hui},
+  journal={arXiv preprint arXiv:2404.11213},
+  year={2024}
+}
+@article{xu2024bootstrapping,
+  title={Bootstrapping on Continuous-Time Dynamic Graphs for Crowd Flow Modeling},
+  author={Xu, Yi and Han, Liangzhe and Sun, Leilei and Du, Bowen and Liu, Chuanren and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2024},
+  publisher={IEEE}
+}
+@inproceedings{yuan2024self,
+  title={Self-Paced Unified Representation Learning for Hierarchical Multi-Label Classification},
+  author={Yuan, Zixuan and Liu, Hao and Zhou, Haoyi and Zhang, Denghui and Zhang, Xiao and Wang, Hao and Xiong, Hui},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={15},
+  pages={16623--16632},
+  year={2024}
+}
+@article{ding2024dgr,
+  title={DGR: A General Graph Desmoothing Framework for Recommendation via Global and Local Perspectives},
+  author={Ding, Leilei and Shen, Dazhong and Wang, Chao and Wang, Tianfu and Zhang, Le and Xiong, Hui and Zhang, Yanyong},
+  journal={arXiv preprint arXiv:2403.04287},
+  year={2024}
+}
+@article{chang2024recommendation,
+  title={How recommendation letters affect career Mobility: Evidence from a social networking sites LinkedIn},
+  author={Chang, Rui and Wei, Xin and Zhang, Xi and Xiong, Hui and Zhu, Hengshu},
+  journal={Computers in Human Behavior},
+  volume={152},
+  pages={108084},
+  year={2024},
+  publisher={Elsevier}
+}
+@misc{sun2024method,
+  title={Method and apparatus for controlling traffic light, method and apparatus for navigating unmanned vehicle, and method and apparatus for training model},
+  author={Sun, Qian and Zhang, Le and Jingbo, ZHOU and Xiong, Hui and Zhang, Weijia and Yu, Huan and Mei, Yu and Weicen, LING},
+  year={2024},
+  month=feb # "~29",
+  publisher={Google Patents},
+  note={US Patent App. 18/503,538}
+}
+@article{sun2024large,
+  title={Large-scale online job search behaviors reveal labor market shifts amid COVID-19},
+  author={Sun, Ying and Zhu, Hengshu and Wang, Lu and Zhang, Le and Xiong, Hui},
+  journal={Nature Cities},
+  volume={1},
+  number={2},
+  pages={150--163},
+  year={2024},
+  publisher={Nature Publishing Group US New York}
+}
+@article{du2024mining,
+  title={Mining technology trends in scientific publications: a graph propagated neural topic modeling approach},
+  author={Du, Chenguang and Yao, Kaichun and Zhu, Hengshu and Wang, Deqing and Zhuang, Fuzhen and Xiong, Hui},
+  journal={Knowledge and Information Systems},
+  pages={1--30},
+  year={2024},
+  publisher={Springer}
+}
+@article{ju2024gps,
+  title={GPS: Graph Contrastive Learning via Multi-scale Augmented Views from Adversarial Pooling},
+  author={Ju, Wei and Gu, Yiyang and Mao, Zhengyang and Qiao, Ziyue and Qin, Yifang and Luo, Xiao and Xiong, Hui and Zhang, Ming},
+  journal={arXiv preprint arXiv:2401.16011},
+  year={2024}
+}
+@article{li2024bayesprompt,
+  title={BayesPrompt: Prompting Large-Scale Pre-Trained Language Models on Few-shot Inference via Debiased Domain Abstraction},
+  author={Li, Jiangmeng and Song, Fei and Jin, Yifan and Qiang, Wenwen and Zheng, Changwen and Sun, Fuchun and Xiong, Hui},
+  journal={arXiv preprint arXiv:2401.14166},
+  year={2024}
+}
+@article{zhang2024urban,
+  title={Urban Foundation Models: A Survey},
+  author={Zhang, Weijia and Han, Jindong and Xu, Zhao and Ni, Hang and Liu, Hao and Xiong, Hui},
+  year={2024}
+}
+@inproceedings{lu2024event,
+  title={Event Camera Demosaicing via Swin Transformer and Pixel-focus Loss},
+  author={Lu, Yunfan and Xu, Yijie and Ma, Wenzong and Guo, Weiyu and Xiong, Hui},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={1095--1105},
+  year={2024}
+}
+@article{yuan2023lever,
+  title={LEVER: Online Adaptive Sequence Learning Framework for High-Frequency Trading},
+  author={Yuan, Zixuan and Liu, Junming and Zhou, Haoyi and Zhang, Denghui and Liu, Hao and Zhu, Nengjun and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2023},
+  publisher={IEEE}
+}
+@inproceedings{zhu2023mtirec,
+  title={MtiRec: A Medical Test Recommender System based on the Analysis of Treatment Programs},
+  author={Zhu, Nengjun and Huang, Jieyun and Cao, Jian and Lu, Xinjiang and Liu, Hao and Xiong, Hui},
+  booktitle={2023 IEEE International Conference on Data Mining (ICDM)},
+  pages={898--907},
+  year={2023},
+  organization={IEEE}
+}
+@inproceedings{chen2023table,
+  title={A Table-to-Text Framework with Heterogeneous Multidominance Attention and Self-Evaluated Multi-Pass Deliberation},
+  author={Chen, Xi and Lu, Xinjiang and Xin, Haoran and Peng, Wenjun and Duan, Haoyang and Jiang, Feihu and Zhou, Jingbo and Xiong, Hui},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2023},
+  pages={607--620},
+  year={2023}
+}
+@article{ye2023geodeformer,
+  title={GeoDeformer: Geometric Deformable Transformer for Action Recognition},
+  author={Ye, Jinhui and Zhou, Jiaming and Xiong, Hui and Liang, Junwei},
+  journal={arXiv preprint arXiv:2311.17975},
+  year={2023}
+}
+@misc{xinjiang2023resident,
+  title={Resident area prediction method, apparatus, device, and storage medium},
+  author={Xinjiang, LU and Nengjun, ZHU and Xiong, Hui},
+  year={2023},
+  month=nov # "~28",
+  publisher={Google Patents},
+  note={US Patent 11,829,447}
+}
+@inproceedings{yuan2023earnings,
+  title={Earnings Call Analysis Using a Sparse Attention Based Encoder and Multi-Source Counterfactual Augmentation},
+  author={Yuan, Zixuan and Zhu, Yada and Zhang, Wei and Xiong, Hui},
+  booktitle={Proceedings of the Fourth ACM International Conference on AI in Finance},
+  pages={331--339},
+  year={2023}
+}
+@article{sun2023your,
+  title={What Your Next Check-in Might Look Like: Next Check-in Behavior Prediction},
+  author={Sun, Heli and Cao, Chen and Chu, Xuguang and Hu, Tingting and Lu, Junzhi and He, Liang and Wang, Zhi and He, Hui and Xiong, Hui},
+  journal={ACM Transactions on Intelligent Systems and Technology},
+  volume={14},
+  number={6},
+  pages={1--21},
+  year={2023},
+  publisher={ACM New York, NY}
+}
+@article{xu2023dpr,
+  title={DPR: An Algorithm Mitigate Bias Accumulation in Recommendation feedback loops},
+  author={Xu, Hangtong and Xu, Yuanbo and Yang, Yongjian and Zhuang, Fuzhen and Xiong, Hui},
+  journal={arXiv preprint arXiv:2311.05864},
+  year={2023}
+}
+@article{han2023hyobscure,
+  title={HyObscure: Hybrid Obscuring for Privacy-Preserving Data Publishing},
+  author={Han, Xiao and Yang, Yuncong and Wu, Junjie and Xiong, Hui},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2023},
+  publisher={IEEE}
+}
+@misc{liu2023cross,
+  title={Cross-regional travel recommendation method and apparatus, electronic device and storage medium},
+  author={Liu, Hao and Zhang, Panpan and Duan, Jianguo and Xiong, Hui},
+  year={2023},
+  month=oct # "~31",
+  publisher={Google Patents},
+  note={US Patent 11,802,776}
+}
+@misc{shuangli2023method,
+  title={Method for determining competitive relation of points of interest, device},
+  author={Shuangli, LI and Jingbo, ZHOU and Xu, Tong and Xiong, Hui},
+  year={2023},
+  month=oct # "~17",
+  publisher={Google Patents},
+  note={US Patent 11,789,985}
+}
+@article{sun2023towards,
+  title={Towards Faithful Neural Network Intrinsic Interpretation with Shapley Additive Self-Attribution},
+  author={Sun, Ying and Zhu, Hengshu and Xiong, Hui},
+  journal={arXiv preprint arXiv:2309.15559},
+  year={2023}
+}
+@misc{xinjiang2023method,
+  title={Method, apparatus, device and storage medium for determining point of interest area},
+  author={Xinjiang, LU and Li, YanYan and Duan, Jianguo and Xiong, Hui and Du, Guanglei},
+  year={2023},
+  month=aug # "~29",
+  publisher={Google Patents},
+  note={US Patent 11,740,102}
+}
+@inproceedings{zhu20234th,
+  title={The 4th International Workshop on Talent and Management Computing (TMC'2023)},
+  author={Zhu, Hengshu and Xiong, Hui and Ge, Yong and Lim, Ee-Peng},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={5909--5910},
+  year={2023}
+}
+@inproceedings{manting2023graph,
+  title={Graph Learning of Multifaceted Motivations for Online Political Engagement Prediction in Counter-party Social Networks},
+  author={Manting, HU and Qingyuan, LIN and Zhang, Denghui and Angela, LU and Junming, LIU and Xiong, Hui},
+  booktitle={44th International Conference on Information Systems (ICIS 2023)},
+  year={2023}
+}
+@misc{sun2023cross,
+  title={Cross-regional talent flow intention analysis method, electronic device, and storage medium},
+  author={Sun, Ying and Zhu, Hengshu and Qin, Chuan and Wang, Peng and Xiong, Hui},
+  year={2023},
+  month=jul # "~20",
+  publisher={Google Patents},
+  note={US Patent App. 17/945,168}
+}
+@misc{zhang2023method,
+  title={Method and Apparatus for Training Information Adjustment Model of Charging Station, and Storage Medium},
+  author={Zhang, Weijia and Zhang, Le and Liu, Hao and Han, Jindong and Qin, Chuan and Zhu, Hengshu and Xiong, Hui},
+  year={2023},
+  month=jul # "~20",
+  publisher={Google Patents},
+  note={US Patent App. 18/125,327}
+}
+@article{liu2023multi,
+  title={Multi-Dimensional Ability Diagnosis for Machine Learning Algorithms},
+  author={Liu, Qi and Gong, Zheng and Huang, Zhenya and Liu, Chuanren and Zhu, Hengshu and Li, Zhi and Chen, Enhong and Xiong, Hui},
+  journal={arXiv preprint arXiv:2307.07134},
+  year={2023}
+}
+@article{sun2023large,
+  title={Large-Scale Assessment of Labour Market Dynamics in China during the COVID-19 Pandemic},
+  author={Sun, Ying and Zhu, Hengshu and Xiong, Hui},
+  journal={arXiv preprint arXiv:2305.00199},
+  year={2023}
+}
+@misc{liu2023method,
+  title={Method of training model and method of determining asset valuation},
+  author={Liu, Ji and Sunjie, YU and Zhang, Weijia and Liu, Hao and Zhu, Hengshu and Dou, Dejing and Xiong, Hui},
+  year={2023},
+  month=apr # "~27",
+  publisher={Google Patents},
+  note={US Patent App. 18/088,872}
+}
+@misc{shen2023method,
+  title={Method for determining text topic, and electronic device},
+  author={Shen, Dazhong and Qin, Chuan and Wang, Chao and Dong, Zheng and Zhu, Hengshu and Xiong, Hui},
+  year={2023},
+  month=apr # "~20",
+  publisher={Google Patents},
+  note={US Patent App. 17/992,041}
+}
+@misc{liu2023conversational,
+  title={Conversational recommendation method, method of training model, device and medium},
+  author={Liu, Zeming and Liu, Hao and Zhengyu, NIU and Wu, Hua and Wang, Haifeng and Xiong, Hui},
+  year={2023},
+  month=mar # "~23",
+  publisher={Google Patents},
+  note={US Patent App. 18/059,386}
+}
+@misc{sun2023interpretation,
+  title={Interpretation method for neural network model, electronic device and storage medium},
+  author={Sun, Ying and Zhu, Hengshu and Qin, Chuan and Zhuang, Fuzhen and Xiong, Hui},
+  year={2023},
+  month=mar # "~23",
+  publisher={Google Patents},
+  note={US Patent App. 18/070,775}
+}
+@misc{zhang2021parking,
+  title={Parking lot free parking space predicting method, apparatus, electronic device and storage medium},
+  author={Zhang, Weijia and Liu, Hao and Xiong, Hui},
+  year={2021},
+  month=jul # "~29",
+  publisher={Google Patents},
+  note={US Patent App. 17/024,421}
+}
+@misc{liu2023travel,
+  title={Travel plan recommendation method, apparatus, device and computer readable storage medium},
+  author={Liu, Hao and Zhang, Panpan and Duan, Jianguo and Xiong, Hui},
+  year={2023},
+  month=feb # "~21",
+  publisher={Google Patents},
+  note={US Patent 11,586,992}
+}
+@misc{zhang2021parking,
+  title={Parking lot free parking space predicting method, apparatus, electronic device and storage medium},
+  author={Zhang, Weijia and Liu, Hao and Xiong, Hui},
+  year={2021},
+  month=jul # "~29",
+  publisher={Google Patents},
+  note={US Patent App. 17/024,421}
+}
+@article{hu2023graph,
+  title={Graph Learning of Multifaceted Motivations for Online Engagement Prediction in Counter-party Social Networks},
+  author={Hu, Manting and LIN, Qingyuan and Zhang, Denghui and Lu, Angela and Junming, Liu and Xiong, Hui},
+  year={2023}
+}
+@article{zhong2023bring,
+  title={Bring Me a Good One: Seeking High-potential Startups using Heterogeneous Venture Information Networks},
+  author={Zhong, Hao and Ge, Yong and Xiong, Hui and others},
+  year={2023}
+}
+@article{yuan2023summarizing,
+  title={Summarizing vehicle driving decision-making methods on vulnerable road user collision avoidance},
+  author={Yuan, Quan and Gao, Yiwei and Zhu, Jiangqi and Xiong, Hui and Xu, Qing and Wang, Jianqiang},
+  journal={Digital Transportation and Safety},
+  volume={2},
+  number={1},
+  pages={23--35},
+  year={2023}
+}
+@misc{zhang2022method,
+  title={Method and apparatus for training path representation model},
+  author={Zhang, Qi and Zhu, Hengshu and Wang, Peng and Liu, Hao and Xiong, Hui},
+  year={2022},
+  month=dec # "~29",
+  publisher={Google Patents},
+  note={US Patent App. 17/900,649}
+}
+@inproceedings{li2022visual,
+  title={Visual Communication and Fashion Popularity Contagion in Social Networks},
+  author={Li, Xiang and Wang, Yunhui and Liu, Junming and Hui, Xiong},
+  booktitle={43rd International Conference on Information Systems (ICIS 2022):¡°Digitization for the next generation¡±},
+  pages={15},
+  year={2022}
+}
+@article{burke2017characterizing,
+  title={Characterizing information processing with a mobile device: measurement of simple and choice reaction time},
+  author={Burke, Daniel and Linder, Susan and Hirsch, Joshua and Dey, Tanujit and Kana, Daniel and Ringenbach, Shannon and Schindler, David and Alberts, Jay},
+  journal={Assessment},
+  volume={24},
+  number={7},
+  pages={885--895},
+  year={2017},
+  publisher={SAGE Publications Sage CA: Los Angeles, CA}
+}
+@misc{zhang2022method,
+  title={Method and apparatus for detecting regional event based on search engine, and storage medium},
+  author={Zhang, Qi and Zhu, Hengshu and Xiong, Hui},
+  year={2022},
+  month=sep # "~20",
+  publisher={Google Patents},
+  note={US Patent 11,449,567}
+}
+@misc{li2022method,
+  title={Method, apparatus, device and storage medium for data aggregation},
+  author={Li, YanYan and Duan, Jianguo and Xiong, Hui},
+  year={2022},
+  month=sep # "~13",
+  publisher={Google Patents},
+  note={US Patent 11,442,930}
+}
+@misc{li2022method,
+  title={Method, apparatus and storage medium for stay point recognition and prediction model training},
+  author={Li, YanYan and Duan, Jianguo and Xiong, Hui},
+  year={2022},
+  month=jul # "~5",
+  publisher={Google Patents},
+  note={US Patent 11,379,741}
+}
+@misc{shuangli2022method,
+  title={Method of training prediction model for determining molecular binding force},
+  author={Shuangli, LI and Jingbo, ZHOU and Xu, Tong and Huang, Liang and Wang, Fan and Xiong, Haoyi and Huang, Weili and Xiong, Hui and Dou, Dejing},
+  year={2022},
+  month=apr # "~28",
+  publisher={Google Patents},
+  note={US Patent App. 17/570,416}
+}
+@misc{shuangli2022method,
+  title={Method and Device for Determining Correlation Between Drug and Target, and Electronic Device},
+  author={Shuangli, LI and Jingbo, ZHOU and Huang, Liang and Xiong, Haoyi and Wang, Fan and Xu, Tong and Xiong, Hui and Dou, Dejing},
+  year={2022},
+  month=apr # "~28",
+  publisher={Google Patents},
+  note={US Patent App. 17/570,505}
+}
+@misc{renjun2022method,
+  title={Method and apparatus for recommending travel way},
+  author={Renjun, HU and Liu, Hao and Xiong, Hui and Li, Ting and Fu, Yanjie},
+  year={2022},
+  month=apr # "~26",
+  publisher={Google Patents},
+  note={US Patent 11,313,694}
+}
+@article{liu2022will,
+  title={Who will Win the Data Science Competition? Insights from KDD Cup 2019 and Beyond},
+  author={Liu, Hao and Guo, Qingyu and Zhu, Hengshu and Zhuang, Fuzhen and Yang, Shenwen and Dou, Dejing and Xiong, Hui},
+  journal={ACM Transactions on Knowledge Discovery from Data (TKDD)},
+  volume={16},
+  number={5},
+  pages={1--24},
+  year={2022},
+  publisher={ACM New York, NY}
+}
+@misc{liu2022travel,
+  title={Travel recommendation method, electronic device, and storage medium},
+  author={Liu, Hao and Zhou, Ding and Xu, Tong and Xiong, Hui},
+  year={2022},
+  month=mar # "~17",
+  publisher={Google Patents},
+  note={US Patent App. 17/533,441}
+}
+@article{tian2016real,
+  title={Real-time charging station recommendation system for electric-vehicle taxis},
+  author={Tian, Zhiyong and Jung, Taeho and Wang, Yi and Zhang, Fan and Tu, Lai and Xu, Chengzhong and Tian, Chen and Li, Xiang-Yang},
+  journal={IEEE Transactions on Intelligent Transportation Systems},
+  volume={17},
+  number={11},
+  pages={3098--3109},
+  year={2016},
+  publisher={IEEE}
+}
+@article{zhang2019effectiveness,
+  title={An effectiveness analysis of altmetrics indices for different levels of artificial intelligence publications},
+  author={Zhang, Xi and Wang, Xianhai and Zhao, Hongke and Ord{\'o}{\~n}ez de Pablos, Patricia and Sun, Yongqiang and Xiong, Hui},
+  journal={Scientometrics},
+  volume={119},
+  pages={1311--1344},
+  year={2019},
+  publisher={Springer}
+}
+@misc{wang2021method,
+  title={Method and apparatus for generating recommendation model, content recommendation method and apparatus, device and medium},
+  author={Wang, Yaqing and Xiong, Hui},
+  year={2021},
+  month=dec # "~16",
+  publisher={Google Patents},
+  note={US Patent App. 17/171,507}
+}
