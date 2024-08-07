@@ -1,5 +1,5 @@
 import json
-
+from Backend import graph_rag
 import requests
 from django.shortcuts import HttpResponse, render
 from django.views.decorators.csrf import csrf_exempt
@@ -18,16 +18,17 @@ def chat(request):
         data = json.loads(request.body)
         user_input = data['message']
 
-        # 调用 OpenAI API 生成响应
-        headers = {
-            "Authorization": f"Bearer {OPENAI_API_KEY}",
-            "Content-Type": "application/json"
-        }
+        output = graph_rag.return_response(user_input)
+        # # 调用 OpenAI API 生成响应
+        # headers = {
+        #     "Authorization": f"Bearer {OPENAI_API_KEY}",
+        #     "Content-Type": "application/json"
+        # }
 
-        data = {'model': 'gpt-3.5-turbo-0125', 'messages': [{'role': 'user', 'content': user_input}],
-                'stream': False}
-        response = requests.post('https://api.chsdw.top/v1/chat/completions', headers=headers, data=json.dumps(data),
-                                 stream=True)
+        # data = {'model': 'gpt-3.5-turbo-0125', 'messages': [{'role': 'user', 'content': user_input}],
+        #         'stream': False}
+        # response = requests.post('https://api.chsdw.top/v1/chat/completions', headers=headers, data=json.dumps(data),
+        #                          stream=True)
 
-        res = response.json()['choices'][0]['message']['content']
-        return HttpResponse(json.dumps({'response': res}))
+        # res = response.json()['choices'][0]['message']['content']
+        return HttpResponse(json.dumps({'response': output}))
