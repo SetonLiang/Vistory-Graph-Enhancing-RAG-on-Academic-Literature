@@ -848,7 +848,7 @@
 
         simulation = d3.forceSimulation(nodes)
             .force("link", d3.forceLink(links).id(d => d.name).distance(function (d) {
-                return 150
+                return d.distance
             }))
 
             .force('collision', d3.forceCollide().radius(35))

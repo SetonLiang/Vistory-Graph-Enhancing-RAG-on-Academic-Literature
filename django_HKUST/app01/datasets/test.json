@@ -1,0 +1,423 @@
+{
+    "nodes": [
+        {
+            "count": 0,
+            "group": 0,
+            "name": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
+            "released": "2024",
+            "citation": 0,
+            "id": "shen2024neural"
+        },
+        {
+            "group": 2,
+            "name": "user-defined gestures"
+        },
+        {
+            "group": 2,
+            "name": "Writing Assistants"
+        },
+        {
+            "group": 2,
+            "name": "Olfactory Device"
+        },
+        {
+            "group": 2,
+            "name": "User experience"
+        },
+        {
+            "name": "scenic design",
+            "group": 2
+        },
+        {
+            "count": 0,
+            "group": 0,
+            "released": "2024",
+            "id": "fu2024aromablendz",
+            "citation": 0,
+            "name": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
+        },
+        {
+            "group": 2,
+            "name": "prototyping"
+        },
+        {
+            "group": 2,
+            "name": "Haptic Data Visualization"
+        },
+        {
+            "name": "Usability testing",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "Accessibility"
+        },
+        {
+            "name": "CharacterMeet: Supporting Creative Writers' Entire Story Character Construction Processes Through Conversation with LLM-Powered Chatbot Avatars",
+            "count": 0,
+            "group": 0,
+            "id": "qin2024charactermeet",
+            "released": "2024",
+            "citation": 0
+        },
+        {
+            "group": 2,
+            "name": "Olfactory experiences"
+        },
+        {
+            "group": 2,
+            "name": "Human- AI Collaboration"
+        },
+        {
+            "group": 2,
+            "name": "3D sketching"
+        },
+        {
+            "name": "Creativity Support",
+            "group": 2
+        },
+        {
+            "name": "Odour interfaces",
+            "group": 2
+        },
+        {
+            "name": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
+            "count": 0,
+            "group": 0,
+            "id": "fu2024bridging",
+            "released": "2024",
+            "citation": 0
+        },
+        {
+            "id": "tian2024designing",
+            "count": 0,
+            "group": 0,
+            "released": "2024",
+            "citation": 0,
+            "name": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR"
+        },
+        {
+            "group": 2,
+            "name": "people with spinal muscular atrophy"
+        },
+        {
+            "group": 2,
+            "name": "Virtual Reality"
+        },
+        {
+            "group": 2,
+            "name": "Digital smell technology"
+        },
+        {
+            "id": "jiang2024designing",
+            "count": 0,
+            "group": 0,
+            "name": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
+            "released": "2024",
+            "citation": 0
+        },
+        {
+            "name": "Human-AI collaboration",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "adult literacy"
+        },
+        {
+            "group": 2,
+            "name": "upper-body gestures"
+        },
+        {
+            "id": "kuang2024enhancing",
+            "count": 0,
+            "group": 0,
+            "citation": 1,
+            "released": "2024",
+            "name": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing"
+        },
+        {
+            "group": 2,
+            "name": "Hardware"
+        },
+        {
+            "group": 2,
+            "name": "Creative Writing"
+        },
+        {
+            "group": 2,
+            "name": "education"
+        },
+        {
+            "count": 0,
+            "id": "tan2024wieldingcanvas",
+            "group": 0,
+            "released": "2024",
+            "name": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR",
+            "citation": 0
+        },
+        {
+            "group": 2,
+            "name": "Large Language Models"
+        },
+        {
+            "group": 2,
+            "name": "virtual reality"
+        },
+        {
+            "group": 2,
+            "name": "Accessible Data Visualization"
+        },
+        {
+            "group": 2,
+            "name": "Electrotactile"
+        },
+        {
+            "name": "generative AI",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "livestreaming"
+        },
+        {
+            "group": 2,
+            "name": "Proactive conversational assistants"
+        },
+        {
+            "name": "Splattingavatar: Realistic real-time human avatars with mesh-embedded gaussian splatting",
+            "count": 0,
+            "group": 0,
+            "id": "shao2024splattingavatar",
+            "released": "2024",
+            "citation": 6
+        },
+        {
+            "name": "HeadEvolver: Text to Head Avatars via Locally Learnable Mesh Deformation",
+            "id": "wang2024headevolver",
+            "group": 0,
+            "count": 0,
+            "citation": 1,
+            "released": "2024"
+        },
+        {
+            "name": "Mingming Fan",
+            "type": "Author",
+            "count": 70,
+            "group": 4
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 249,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "target": "scenic design",
+            "relationship": "HAS_KEYWORD",
+            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI"
+        },
+        {
+            "target": "Accessible Data Visualization",
+            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents",
+            "relationship": "HAS_KEYWORD",
+            "target": "Digital smell technology"
+        },
+        {
+            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
+            "target": "Haptic Data Visualization",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY",
+            "target": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR"
+        },
+        {
+            "target": "upper-body gestures",
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY",
+            "target": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "3D sketching",
+            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI"
+        },
+        {
+            "source": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
+            "relationship": "HAS_KEYWORD",
+            "target": "adult literacy"
+        },
+        {
+            "target": "Odour interfaces",
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Large Language Models",
+            "relationship": "HAS_KEYWORD",
+            "source": "CharacterMeet: Supporting Creative Writers' Entire Story Character Construction Processes Through Conversation with LLM-Powered Chatbot Avatars"
+        },
+        {
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents",
+            "target": "Hardware",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "HeadEvolver: Text to Head Avatars via Locally Learnable Mesh Deformation",
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY",
+            "target": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing"
+        },
+        {
+            "target": "Proactive conversational assistants",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing"
+        },
+        {
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents",
+            "relationship": "HAS_KEYWORD",
+            "target": "Olfactory Device"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "prototyping",
+            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI"
+        },
+        {
+            "target": "Creativity Support",
+            "relationship": "HAS_KEYWORD",
+            "source": "CharacterMeet: Supporting Creative Writers' Entire Story Character Construction Processes Through Conversation with LLM-Powered Chatbot Avatars"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR",
+            "target": "Virtual Reality"
+        },
+        {
+            "target": "Creative Writing",
+            "relationship": "HAS_KEYWORD",
+            "source": "CharacterMeet: Supporting Creative Writers' Entire Story Character Construction Processes Through Conversation with LLM-Powered Chatbot Avatars"
+        },
+        {
+            "target": "Writing Assistants",
+            "relationship": "HAS_KEYWORD",
+            "source": "CharacterMeet: Supporting Creative Writers' Entire Story Character Construction Processes Through Conversation with LLM-Powered Chatbot Avatars"
+        },
+        {
+            "target": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents",
+            "target": "Olfactory experiences",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "CharacterMeet: Supporting Creative Writers' Entire Story Character Construction Processes Through Conversation with LLM-Powered Chatbot Avatars"
+        },
+        {
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "HAS_KEYWORD",
+            "target": "virtual reality"
+        },
+        {
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "HAS_KEYWORD",
+            "target": "people with spinal muscular atrophy"
+        },
+        {
+            "target": "user-defined gestures",
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Human-AI collaboration",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
+            "target": "education"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
+            "target": "Accessibility"
+        },
+        {
+            "target": "Splattingavatar: Realistic real-time human avatars with mesh-embedded gaussian splatting",
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
+            "relationship": "HAS_KEYWORD",
+            "target": "Electrotactile"
+        },
+        {
+            "target": "Human- AI Collaboration",
+            "relationship": "HAS_KEYWORD",
+            "source": "CharacterMeet: Supporting Creative Writers' Entire Story Character Construction Processes Through Conversation with LLM-Powered Chatbot Avatars"
+        },
+        {
+            "source": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
+            "relationship": "HAS_KEYWORD",
+            "target": "livestreaming"
+        },
+        {
+            "target": "generative AI",
+            "relationship": "HAS_KEYWORD",
+            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI"
+        },
+        {
+            "target": "Usability testing",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing"
+        },
+        {
+            "source": "Mingming Fan",
+            "target": "CharacterMeet: Supporting Creative Writers' Entire Story Character Construction Processes Through Conversation with LLM-Powered Chatbot Avatars",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "User experience",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing"
+        }
+    ]
+}
