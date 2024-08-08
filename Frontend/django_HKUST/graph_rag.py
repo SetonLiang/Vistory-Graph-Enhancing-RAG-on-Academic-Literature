@@ -373,7 +373,46 @@ def structured_retriever(question: str) -> dict:
     print(len(result))
     return {"results": result, "length": len(result), "is_year": year_entity}
 
-
+def make_entity_json(relevant_paper,session):
+    results = []
+    for item in relevant_paper:
+        cypher_query = """
+            MATCH (p:Papers {name: $paper_name})
+            OPTIONAL MATCH (p)-[:OWNED_BY]->(author:Author)
+            OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(keyword:Keyword)
+            RETURN p AS p, author AS a, keyword AS k
+        """         
+        
+        temp = session.execute_read(lambda tx: tx.run(cypher_query, paper_name=item).data())    
+        results.append(temp)
+    
+    nodes = []
+    links = []
+    for lst in results:
+        for item in lst:
+            temp_paper = {
+                'id': item['p']['id'],
+                'name': item['p']['name'],
+                'released': item['p']['year'],
+                'citation': int(item['p']['citation']),
+                'group': 0,
+                'count': 0,
+            }
+            temp_author = {
+                'name': item['a']['name'],
+                'group': 1
+            }
+            temp_keyword = {
+                'name': item['k']['name'],
+                'group': 2
+            }
+            nodes.append(temp_keyword)
+            nodes.append(temp_author)
+            nodes.append(temp_paper)
+    print(nodes)
+    nodes = list(map(dict, set(frozenset(item.items()) for item in nodes)))
+    # links = list(map(dict, set(frozenset(item.items()) for item in links)))
+    print(nodes)
 model_name = "BAAI/bge-m3"
 embedding_model = HuggingFaceEmbeddings(
     model_name=model_name,
