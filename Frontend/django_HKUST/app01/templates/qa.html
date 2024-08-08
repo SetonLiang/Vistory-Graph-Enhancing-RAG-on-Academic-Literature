@@ -70,7 +70,7 @@
             data: JSON.stringify({'message': userInput}),
             success: function (res) {
                 let request = JSON.parse(res)
-                botRes = request['response']
+                botRes = request['response']             
                 console.log(botRes)
                 streamBotResponse(botRes)
             }

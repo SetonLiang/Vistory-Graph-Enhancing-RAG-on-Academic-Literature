@@ -5,6 +5,7 @@ from langchain_core.runnables import (
     RunnableLambda,
     RunnableParallel,
     RunnablePassthrough,
+    Runnable
 )
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.prompts.prompt import PromptTemplate
@@ -144,16 +145,6 @@ def parse_entities(entities: Union[Entities, dict]) -> List[str]:
     else:
         raise ValueError("Invalid entities format")
 
-# 提取unstructured_data的relevant paper name
-def extract_paper_names(unstructured_data):
-    pattern = re.compile(r'name:\s*([^#\n]+)')
-    
-    paper_names = []
-    for entry in unstructured_data:
-        matches = pattern.findall(entry)
-        paper_names.extend(match.strip() for match in matches)
-    
-    return paper_names
 
 examples = [
     HumanMessage("How many authors does CMA have?", name="example_user"),
@@ -373,14 +364,38 @@ def structured_retriever(question: str) -> dict:
     print(len(result))
     return {"results": result, "length": len(result), "is_year": year_entity}
 
+# 提取unstructured_data的relevant paper name
+def extract_paper_names(unstructured_data):
+    pattern = re.compile(r'name:\s*([^#\n]+)')
+    
+    paper_names = []
+    for entry in unstructured_data:
+        matches = pattern.findall(entry)
+        paper_names.extend(match.strip() for match in matches)
+    
+    return paper_names
+
+def unique_dict_list(dict_list):
+    seen = set()
+    unique_list = []
+    for d in dict_list:
+        # 将字典转换为 frozenset
+        dict_frozenset = frozenset(d.items())
+        if dict_frozenset not in seen:
+            seen.add(dict_frozenset)
+            unique_list.append(d)
+    
+    return unique_list
+
 def make_entity_json(relevant_paper,session):
     results = []
+    results2 = []
     for item in relevant_paper:
         cypher_query = """
             MATCH (p:Papers {name: $paper_name})
-            OPTIONAL MATCH (p)-[:OWNED_BY]->(author:Author)
-            OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(keyword:Keyword)
-            RETURN p AS p, author AS a, keyword AS k
+            OPTIONAL MATCH (p)-[r1]->(author:Author)
+            OPTIONAL MATCH (p)-[r2]->(keyword:Keyword)
+            RETURN p, author AS a, keyword AS k, r1, r2
         """         
         
         temp = session.execute_read(lambda tx: tx.run(cypher_query, paper_name=item).data())    
@@ -398,26 +413,70 @@ def make_entity_json(relevant_paper,session):
                 'group': 0,
                 'count': 0,
             }
-            temp_author = {
-                'name': item['a']['name'],
-                'group': 1
+            # temp_author = {
+            #     'name': item['a']['name'],
+            #     'group': 1,
+            # }
+            if 'k' in item and item['k'] is not None:
+                temp_keyword = {
+                    'name': item['k']['name'],
+                    'group': 2
+                }
+                temp_link_r2 = {
+                    'source': item['r2'][0]['name'],
+                    'target': item['r2'][2]['name'],
+                    'relationship': item['r2'][1],
+                }
+                nodes.append(temp_keyword)
+                links.append(temp_link_r2)
+
+            temp_link_r1 = {
+                'source': item['r1'][2]['name'],
+                'target': item['r1'][0]['name'],
+                'relationship': item['r1'][1],
             }
-            temp_keyword = {
-                'name': item['k']['name'],
-                'group': 2
-            }
-            nodes.append(temp_keyword)
-            nodes.append(temp_author)
+                     
+            # nodes.append(temp_author)
             nodes.append(temp_paper)
-    print(nodes)
+            links.append(temp_link_r1)
+            
     nodes = list(map(dict, set(frozenset(item.items()) for item in nodes)))
-    # links = list(map(dict, set(frozenset(item.items()) for item in links)))
-    print(nodes)
+    links = list(map(dict, set(frozenset(item.items()) for item in links)))
+
+    for item in relevant_paper:
+        cypher_query2 = """
+            MATCH (p:Papers {name: $paper_name})
+            OPTIONAL MATCH (p)-[r1]->(a:Author)
+            RETURN  a
+        """
+        temp2 = session.execute_read(lambda tx: tx.run(cypher_query2, paper_name=item).data())
+        results2.append(temp2)    
+
+    author_list = [[author['a'] for author in lst] for lst in results2]
+    # author_list = [list({author['name']: author for author in lst}.values()) for lst in author_list]
+    author_list = unique_dict_list([item[0] for item in author_list])
+    
+    for item in author_list:
+        cypher_count_query = '''MATCH (n:Author {name:'%s'})-[:OWNED_BY]-(p) RETURN count(p)''' % item['name']
+        with driver.session(database="neo4j") as session:
+            count = session.execute_read(lambda tx: tx.run(cypher_count_query, iata="DEN").data())
+        item['count'] = count[0]['count(p)']
+        item['group'] = 4
+
+    nodes.extend(author_list)
+
+    entity = {
+        'nodes': nodes,
+        'links': links
+    }
+    return entity
+
 model_name = "BAAI/bge-m3"
 embedding_model = HuggingFaceEmbeddings(
     model_name=model_name,
 )
 
+    
 def retriever(question: str):
     # 向量索引创建: https://python.langchain.com/v0.2/docs/integrations/vectorstores/neo4jvector/
     session.run("""
@@ -452,15 +511,18 @@ def retriever(question: str):
         relevant_paper = [record.get('paper') for record in structured_results]
     else:
         relevant_paper = extract_paper_names(unstructured_data)
-    
+    print(relevant_paper)
+    paper_entity = make_entity_json(relevant_paper,session)
+    with open('D:\lzw\Vistory-Graph-Enhancing-RAG-on-Academic-Literature\Frontend\django_HKUST\\app01\datasets\\test.json', 'w') as f:
+        json.dump(paper_entity, f, indent=4)
     final_data = f"""Structured data: 
                     {structured_data}
                     Unstructured data:
                     {"#Document ".join(unstructured_data)}
                 """
-    print(relevant_paper)
-    print(final_data)
+
     return final_data
+
 
 CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template("""Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question, in its original language.
     Chat History:
