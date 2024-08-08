@@ -90,18 +90,7 @@
         InitGraphByQA(entityRes)
     }
 
-    function disableComponent() {
-        d3.select('#min_citation').style('color', '#6e6e6e')
-        const button = document.getElementById('dropdownButton');
-        const links = document.querySelectorAll('.dropdown-menu a');
 
-        button.classList.add('disabled');
-        button.disabled = true;
-
-        links.forEach(link => {
-            link.classList.add('disabled');
-        });
-    }
 
     function streamBotResponse(message) {
         const messageContainer = document.getElementById('messages');

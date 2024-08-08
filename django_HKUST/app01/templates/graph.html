@@ -547,8 +547,8 @@
 
         // 给每个节点一个初始位置，避免重叠
         departmentNodes.forEach((node, index) => {
-            node.x = width / 2 + 400 * Math.cos(index * 2 * Math.PI / departmentNodes.length);
-            node.y = height / 2 + 400 * Math.sin(index * 2 * Math.PI / departmentNodes.length);
+            node.x = width / 2 + 800 * Math.cos(index * 2 * Math.PI / departmentNodes.length);
+            node.y = height / 2 + 800 * Math.sin(index * 2 * Math.PI / departmentNodes.length);
         });
 
         departmentNodes.forEach((department) => {

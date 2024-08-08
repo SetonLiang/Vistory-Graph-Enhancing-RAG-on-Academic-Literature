@@ -70,10 +70,10 @@
 
 .dropdown-menu a.disabled {
     pointer-events: none;
-    color: #d3d3d3;
+    color: #535353;
 }
 
 .dropdown-button.disabled {
-    background-color: #d3d3d3;
+    background-color: #535353;
     cursor: not-allowed;
 }

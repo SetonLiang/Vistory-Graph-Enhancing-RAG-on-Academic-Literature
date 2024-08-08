@@ -58,25 +58,53 @@
                         <span id="min_citation" style="font-size: 16px; margin-bottom: 5px">min_citation:</span>
                         <button id="dropdownButton" class="dropdown-button">20</button>
                         <div id="dropdownMenu" class="dropdown-menu">
-                            <a href="#" onclick="selectOption(0)">0</a>
-                            <a href="#" onclick="selectOption(10)">10</a>
-                            <a href="#" onclick="selectOption(20)">20</a>
-                            <a href="#" onclick="selectOption(50)">50</a>
-                            <a href="#" onclick="selectOption(100)">100</a>
+                            <a href="#" onclick="selectOption(0)" class="">0</a>
+                            <a href="#" onclick="selectOption(10)" class="">10</a>
+                            <a href="#" onclick="selectOption(20)" class="">20</a>
+                            <a href="#" onclick="selectOption(50)" class="">50</a>
+                            <a href="#" onclick="selectOption(100)" class="">100</a>
                             <script>
-                                let min_citation = 20
+                                let min_citation = 20;
                                 const dropdownButton = document.getElementById('dropdownButton');
                                 const dropdownMenu = document.getElementById('dropdownMenu');
 
-                                dropdownButton.addEventListener('click', () => {
+                                dropdownButton.addEventListener('click', toggleDropdown);
+
+                                function toggleDropdown() {
                                     dropdownMenu.classList.toggle('show');
-                                });
+                                }
 
                                 function selectOption(option) {
-                                    min_citation = option
-                                    filterNode(entity_data)
+                                    min_citation = option;
+                                    filterNode(entity_data);
                                     dropdownButton.textContent = option;
                                     dropdownMenu.classList.remove('show');
+                                }
+
+                                function disableComponent() {
+                                    dropdownButton.classList.add('disabled');
+                                    dropdownButton.disabled = true;
+
+                                    const links = dropdownMenu.querySelectorAll('a');
+                                    links.forEach(link => {
+                                        link.classList.add('disabled');
+                                    });
+
+                                    // Remove event listeners to prevent interaction
+                                    dropdownButton.removeEventListener('click', toggleDropdown);
+                                }
+
+                                function enableComponent() {
+                                    dropdownButton.classList.remove('disabled');
+                                    dropdownButton.disabled = false;
+
+                                    const links = dropdownMenu.querySelectorAll('a');
+                                    links.forEach(link => {
+                                        link.classList.remove('disabled');
+                                    });
+
+                                    // Re-add event listeners
+                                    dropdownButton.addEventListener('click', toggleDropdown);
                                 }
 
                                 // Close dropdown if clicked outside
@@ -336,18 +364,6 @@
         }
     }
 
-    function enableComponent() {
-        d3.select('#min_citation').style('color', '#000000')
-        const button = document.getElementById('dropdownButton');
-        const links = document.querySelectorAll('.dropdown-menu a');
-
-        button.classList.remove('disabled');
-        button.disabled = true;
-
-        links.forEach(link => {
-            link.classList.remove('disabled');
-        });
-    }
 </script>
 
 </body>
