@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.Self_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub_container {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    background-color: #ffffff; /* 确保背景色 */
+    overflow: hidden;
+}
+
+.title-box {
+    height: 30px;
+    font-size: 1.2em;
+    background-color: #cacaca;
+    color: #000000;
+    padding-left: 5px;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    font-family: 'Arial', 'Helvetica', sans-serif; /* 设置本地字体 */
+    justify-content: space-between; /* 使 title 和 btn-group 在水平方向上两端对齐 */
+}
+
+
+.content-box {
+    flex: 1;
+    border-radius: 5px;
+
+    height: 100%;
+    width: 100%;
+    /*border: 1px solid #ccc;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    background-color: #ffffff; /* 确保背景色 */
+}
+
+.header {
+    border-bottom: 2px solid #ddd; /* 添加底部边框 */
+    background-color: #f8f8f8; /* 设置背景色 */
+    padding-bottom: 5px; /* 上下内边距 */
+    margin-bottom: 2px;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    background-color: #ffffff; /* 确保背景色 */
+}
+
+/* 美化 .left 和 .right 部分 */
+.left, .right {
+    /*flex: 1;*/
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.left {
+    margin-right: 1px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.right {
+    margin-left: 1px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.left .top, .left .bottom,
+.right .top, .right .bottom {
+    flex: 1;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    background-color: #ffffff; /* 确保背景色 */
+}
+
+.left .top {
+    flex: 2.5; /* 20% 高度 */
+    margin-bottom: 1px;
+}
+
+.left .bottom {
+    margin-top: 1px;
+    flex: 7.5; /* 80% 高度 */
+}
+
+.right .top {
+    margin-bottom: 1px;
+    flex: 5; /* 60% 高度 */
+}
+
+.right .bottom {
+    margin-top: 1px;
+    flex: 5; /* 40% 高度 */
+}
+
+
+#title {
+    border-bottom: 1px solid black;
+}
+
+#title h1 {
+    float: left;
+    margin: 0px 0;
+}
+
+#selector {
+    margin-top: 8px;
+}
+
+.local-label {
+    display: inline-block;
+    font-size: 12pt;
+    float: left;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+
+.selector {
+    background-color: #1a8e6a;
+    border-radius: 7px;
+    float: left;
+    color: white;
+    margin: 2px 0px;
+    margin-right: 8px;
+    min-width: 32px;
+    min-height: 32px;
+    border: 2px solid white;
+    box-shadow: 1px 1px 5px #AAAAAA;
+}
+
+#selector_button {
+    margin-top: 7px;
+    float: left;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    background-color: #ffffff; /* 白色背景 */
+    color: black; /* 黑色字体 */
+    border: 1px solid #ccc; /* 边框 */
+    padding: 2px 5px; /* 内边距 */
+    border-radius: 5px; /* 圆角边框 */
+    cursor: pointer; /* 鼠标指针样式 */
+    font-size: 14px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    text-align: center; /* 文字居中 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* 过渡效果 */
+}
+
+.button:hover {
+    background-color: #f0f0f0; /* 悬停时背景颜色 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 悬停时阴影 */
+    transform: scale(1.05); /* 悬停时放大 */
+}
+
+.button:active {
+    background-color: #e0e0e0; /* 点击时背景颜色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 点击时阴影 */
+    transform: scale(0.95); /* 点击时缩小 */
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.auto {
+    overflow: auto;
+}
+
+.publication-card {
+    margin-bottom: 5px;
+    background-color: #EEEEEE;
+    counter-increment: problem;
+    border: 1px solid black;
+    border-left: 5px solid black;
+    padding: 10px;
+    padding-bottom: 0px;
+    overflow: auto;
+}
+
+.publication-card .entry_img {
+    width: 100px;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.publication-card .thumb {
+    border: 1px solid silver;
+    max-width: 100px;
+}
+
+.entry_main {
+    overflow: auto;
+}
+
+.publication-card .links {
+    font-size: 8pt;
+    float: right;
+}
+
+.publication-card .links a:before {
+    content: "|";
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.publication-card .vis {
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+}
+
+.publication-card .id {
+    font-size: 10pt;
+    padding: 0;
+    margin: 0;
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.publication-card .series, .publication-card .year {
+    font-size: 10pt;
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    color: #999999;
+    display: inline-block;
+    cursor: hand;
+}
+
+.publication-card .title {
+    font-weight: bold;
+    display: block;
+}
+
+a {
+    color: #223388;
+    text-decoration: none;
+}
+
+.publication-card .authors {
+    font-size: 11pt;
+    overflow: auto;
+    cursor: pointer;
+}
+
+.publication-card .author {
+    font-size: 11pt;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.publication-card .author .first_name {
+    font-size: 8pt;
+}
+
+.publication-card .abstract {
+    font-size: 11pt;
+    font-style: italic;
+    margin: 5px 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.publication-card .label {
+    font-weight: bold;
+    color: black;
+}
+
+.publication-card .abstract:hover {
+    color: #818181;
+}
+
+.publication-card .expand {
+    margin: 0 2px;
+    font-size: 16pt;
+    position: absolute;
+    font-style: normal;
+    bottom: -4px;
+}
+
+.publication-card .text-collapse {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.publication-card .tags {
+    font-size: 11pt;
+}
+
+.publication-card .tags .tag {
+    color: #000000;
+}
+
+.publication-card .tags .tag_category {
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.publication-card .select_similar {
+    float: left;
+}
+
+.publication-card .button {
+    margin: 0;
+    margin-right: 10px;
+    border: none;
+    border-radius: 0;
+}
+
+.tag {
+    color: #888888;
+    display: inline-block;
+    padding: 0;
+    padding-right: 12px;
+    margin: 1px;
+    cursor: pointer;
+}
+
+.publication-card .tags .tag:hover {
+    background: #DDDDDD;
+}
+
+.text {
+    display: inline-block;
+    background: white;
+    opacity: 0.8;
+    color: black;
+    margin: 4px;
+    height: 20px;
+}
+
+.selector .glyphicon:hover {
+    color: silver;
+}
+
+.cross-icon {
+    width: 13px;
+    height: 13px;
+    position: relative;
+    display: inline-block;
+}
+
+.cross-icon::before,
+.cross-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: center;
+}
+
+.cross-icon::after {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+
+
+.refresh-btn {
+    background-color: #ffffff; /* 白色背景 */
+    color: black; /* 黑色字体 */
+    border: 1px solid #ccc; /* 添加边框 */
+    padding: 2.4px 1px 2px 2px;
+    margin: 2px 8px 2px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    display: flex;
+    align-items: center;
+}
+
+.refresh-btn.active {
+    background-color: #f0f0f0; /* 活动状态下背景颜色 */
+}
+
+.refresh-btn:hover {
+    background-color: #f0f0f0; /* 悬停时背景颜色 */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 悬停时阴影 */
+}

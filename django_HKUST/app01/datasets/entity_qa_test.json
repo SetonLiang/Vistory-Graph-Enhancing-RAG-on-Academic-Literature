@@ -1,0 +1,142 @@
+{
+    "nodes": [
+        {
+            "group": 2,
+            "name": "model training"
+        },
+        {
+            "group": 2,
+            "name": "Federated learning"
+        },
+        {
+            "name": "privacy preservation",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "edge computing"
+        },
+        {
+            "name": "gradient compression",
+            "group": 2
+        },
+        {
+            "count": 0,
+            "group": 0,
+            "citation": 124,
+            "released": "2021",
+            "id": "xu2021edge",
+            "name": "Edge intelligence: Empowering intelligence to the edge of network"
+        },
+        {
+            "name": "inference",
+            "group": 2
+        },
+        {
+            "name": "offloading.",
+            "group": 2
+        },
+        {
+            "name": "network",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "asynchronous distributed"
+        },
+        {
+            "name": "Artificial intelligence (AI)",
+            "group": 2
+        },
+        {
+            "count": 0,
+            "name": "Privacy-preserving asynchronous federated learning mechanism for edge network computing",
+            "released": "2020",
+            "id": "lu2020privacy",
+            "group": 0,
+            "citation": 134
+        },
+        {
+            "group": 2,
+            "name": "edge caching"
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 249,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Privacy-preserving asynchronous federated learning mechanism for edge network computing",
+            "target": "network"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "model training",
+            "source": "Edge intelligence: Empowering intelligence to the edge of network"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "edge caching",
+            "source": "Edge intelligence: Empowering intelligence to the edge of network"
+        },
+        {
+            "source": "Pan Hui",
+            "target": "Privacy-preserving asynchronous federated learning mechanism for edge network computing",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Edge intelligence: Empowering intelligence to the edge of network"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "Federated learning",
+            "source": "Privacy-preserving asynchronous federated learning mechanism for edge network computing"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "inference",
+            "source": "Edge intelligence: Empowering intelligence to the edge of network"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "edge computing",
+            "source": "Edge intelligence: Empowering intelligence to the edge of network"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Privacy-preserving asynchronous federated learning mechanism for edge network computing",
+            "target": "edge computing"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "privacy preservation",
+            "source": "Privacy-preserving asynchronous federated learning mechanism for edge network computing"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "asynchronous distributed",
+            "source": "Privacy-preserving asynchronous federated learning mechanism for edge network computing"
+        },
+        {
+            "target": "Artificial intelligence (AI)",
+            "relationship": "HAS_KEYWORD",
+            "source": "Edge intelligence: Empowering intelligence to the edge of network"
+        },
+        {
+            "target": "offloading.",
+            "relationship": "HAS_KEYWORD",
+            "source": "Edge intelligence: Empowering intelligence to the edge of network"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Privacy-preserving asynchronous federated learning mechanism for edge network computing",
+            "target": "gradient compression"
+        }
+    ]
+}

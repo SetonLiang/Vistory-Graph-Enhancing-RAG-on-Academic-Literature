@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q&A Dialog</title>
+    <link rel="stylesheet" href="{% static 'css/for_qa.css' %}">
+</head>
+<body>
+<div style="height: 100%; width: 100%;overflow: hidden">
+    <div id="chat-container">
+        <div id="chat-box">
+            <div id="messages"></div>
+        </div>
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Type your question here...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // script.js
+    document.getElementById('send-button').addEventListener('click', function () {
+        const userInput = document.getElementById('user-input').value;
+        if (userInput.trim() !== "") {
+            addMessage(userInput, 'user');
+            document.getElementById('user-input').value = '';
+
+            generateBotResponse(userInput)
+
+            // Simulate bot response
+            {#setTimeout(function () {#}
+            {#    const botResponse = generateBotResponse(userInput);#}
+            {#    streamBotResponse(botResponse);#}
+            //}, 500);
+
+            // openAI回应
+            {#$.ajax({#}
+            {#    url: 'http://127.0.0.1:8000/qa/chat',#}
+            {#    type: 'POST',#}
+            {#    contentType: 'application/json', // 发送信息至服务器时内容编码类型#}
+            {#    data: JSON.stringify({'message': userInput}),#}
+            {#    success: function (res) {#}
+            {#        let request = JSON.parse(res)#}
+            {#        console.log(request)#}
+            {#    }#}
+            //})
+        }
+    });
+
+    function addMessage(message, sender) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', sender + '-message');
+        messageElement.textContent = message;
+        document.getElementById('messages').appendChild(messageElement);
+        messageElement.scrollIntoView({behavior: 'smooth'});
+    }
+
+    function generateBotResponse(userInput) {
+        // This is a placeholder response.
+        // In a real application, you would replace this with an API call to your backend or AI model.
+        let botRes
+        let entityRes
+        $.ajax({
+            url: 'http://127.0.0.1:8000/qa/chat',
+            type: 'POST',
+            contentType: 'application/json', // 发送信息至服务器时内容编码类型
+            data: JSON.stringify({'message': userInput}),
+            success: function (res) {
+                let request = JSON.parse(res)
+                botRes = request['response']
+                entityRes = request['entity']
+                controlGraph(botRes, entityRes)
+            }
+        })
+        return botRes;
+    }
+
+    function controlGraph(botRes, entityRes) {
+        console.log(entityRes)
+        disableComponent()
+        streamBotResponse(botRes)
+        let clear = {
+            'nodes': [],
+            'links': [],
+        }
+        updateGraph(clear)
+        InitGraphByQA(entityRes)
+    }
+
+    function disableComponent() {
+        d3.select('#min_citation').style('color', '#6e6e6e')
+        const button = document.getElementById('dropdownButton');
+        const links = document.querySelectorAll('.dropdown-menu a');
+
+        button.classList.add('disabled');
+        button.disabled = true;
+
+        links.forEach(link => {
+            link.classList.add('disabled');
+        });
+    }
+
+    function streamBotResponse(message) {
+        const messageContainer = document.getElementById('messages');
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', 'bot-message');
+        messageContainer.appendChild(messageElement);
+        messageElement.scrollIntoView({behavior: 'smooth'});
+
+        let index = 0;
+        const interval = setInterval(() => {
+            if (index < message.length) {
+                messageElement.textContent += message[index];
+                index++;
+            } else {
+                clearInterval(interval);
+            }
+            messageElement.scrollIntoView({behavior: 'smooth'});
+        }, 5); // Adjust the interval time to control the speed of the typing effect
+    }
+
+    // Allow pressing Enter to send the message
+    document.getElementById('user-input').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            document.getElementById('send-button').click();
+        }
+    });
+
+</script>
+</body>
+</html>

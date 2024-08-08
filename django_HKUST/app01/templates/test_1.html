@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刷新页面按钮</title>
+    <style>
+        /* .refresh-btn-container 类定义 */
+        .refresh-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* 右对齐 */
+        }
+
+        .refresh-btn {
+            background-color: #ffffff; /* 白色背景 */
+            color: black; /* 黑色字体 */
+            border: 1px solid #ccc; /* 添加边框 */
+            padding: 2px 6px;
+            margin: 2px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            display: flex;
+            align-items: center;
+        }
+
+        .refresh-btn.active {
+            background-color: #f0f0f0; /* 活动状态下背景颜色 */
+        }
+
+        .refresh-btn:hover {
+            background-color: #f0f0f0; /* 悬停时背景颜色 */
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 悬停时阴影 */
+        }
+
+        .refresh-btn svg {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建一个按钮组，包含刷新按钮 -->
+    <div class="refresh-btn-container">
+        <button class="refresh-btn" onclick="refreshPage()">
+            <!-- 嵌入SVG图标 -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 4V1L8 5l4 4V6c3.3 0 6 2.7 6 6 0 3.3-2.7 6-6 6s-6-2.7-6-6H4c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        // 定义刷新页面的函数
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>

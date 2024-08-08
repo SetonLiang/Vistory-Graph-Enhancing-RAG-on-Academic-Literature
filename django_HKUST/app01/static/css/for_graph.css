@@ -1,0 +1,163 @@
+.kg_container {
+    width: 100%;
+    height: 100%;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    padding: 8px;
+    font: 16px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: black;
+}
+
+.circle {
+}
+
+.circle:hover {
+    stroke-width: 8px;
+}
+
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.dropdown-button {
+    width: 100%;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    margin: 2px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown-button.active {
+    background-color: #f0f0f0;
+}
+
+.dropdown-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu {
+    display: none;
+    font-size: 16px;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.legend-container {
+    position: absolute;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 10px 10px 10px;
+    width: 150px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.legend-title {
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.legend-content {
+    display: none;
+}
+
+
+.legend-divider {
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.legend-gradient {
+    margin-left: 5px;
+    width: 120px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.department {
+    background: #71b7ed;
+}
+
+.authorForLegend {
+    background: linear-gradient(to right, #e0f3e5, #007f5f);
+}
+
+.paperForLegend {
+    background: linear-gradient(to right, #ffebf4, #d0578a);
+}
+
+.legend-label {
+    font-size: 12px;
+    margin-bottom: -2px;
+    text-align: left;
+}
+
+.legend-item {
+    margin-bottom: 5px;
+}
+
+.legend-scale {
+    margin-top: -5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #666;
+}

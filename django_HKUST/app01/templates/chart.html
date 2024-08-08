@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+{% load static %}
+{% load my_filter %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart</title>
+    <link rel="stylesheet" href="{% static 'css/for_chart.css' %}">
+    <style>
+    </style>
+</head>
+<body>
+
+<!-- Create a div where the graph will take place -->
+<div id="dataVis" class="chart_container">
+    <!-- Add buttons with a container -->
+</div>
+
+<script>
+
+    function createChart() {
+        Init_width = d3.select('.chart_container').node().getBoundingClientRect().width;
+
+        Init_height = d3.select('.chart_container').node().getBoundingClientRect().height;
+        console.log(Init_width, Init_height)
+
+        // set the dimensions and margins of the graph
+        margin = {top: 10, right: 30, bottom: 50, left: 40};
+        width_chart = Init_width - margin.left - margin.right;
+        height_chart = Init_height - margin.top - margin.bottom;
+
+        // append the svg object to the body of the page
+        svg_chart = d3.select("#dataVis")
+            .append("svg")
+            .attr('viewBox', `0 0 ${width_chart + margin.left + margin.right} ${height_chart + margin.top + margin.bottom}`)
+            .attr("width", width_chart + margin.left + margin.right)
+            .attr("height", height_chart + margin.top + margin.bottom)
+            .style('display', 'block')
+            .style('background-color', 'white')
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Initialize the X axis
+        x = d3.scaleBand()
+            .range([0, width_chart])
+            .padding(0.2);
+        xAxis = svg_chart.append("g")
+            .attr("transform", `translate(0,${height_chart})`);
+
+        // Initialize the Y axis
+        y = d3.scaleLinear()
+            .range([height_chart, 0]);
+        yAxis = svg_chart.append("g")
+            .attr("class", "myYaxis");
+    }
+
+    // A function that create / update the plot for a given variable:
+    function update(data, type) {
+        // Update the X axis
+        x.domain(data.map(d => d.group));
+        xAxis.call(d3.axisBottom(x));
+
+        // Update the Y axis
+        y.domain([0, d3.max(data, d => d.value)]);
+        yAxis.transition().duration(1000).call(d3.axisLeft(y).ticks(5).tickValues([...y.ticks(4), y.domain()[1]]))
+
+        // Create the u variable
+        let u = svg_chart.selectAll("rect")
+            .data(data);
+
+        u
+            .join("rect") // Add a new rect for each new elements
+            .attr('value', d => d.group)
+            .attr('type', type)
+            .on('click', function () {
+                if (d3.select(this).attr('type') === 'year') {
+                    query_list.push(d3.select(this).attr('value'));
+                    query_year_list.push(d3.select(this).attr('value'));
+                    QueryResults();
+                    fixSelectors(d3.select(this).attr('value'));
+                } else if (d3.select(this).attr('type') === 'author') {
+                    query_list.push(d3.select(this).attr('value'));
+                    query_author_list.push(d3.select(this).attr('value'));
+                    QueryResults();
+                    fixSelectors(d3.select(this).attr('value'));
+                }
+            })
+            .on('mouseover', function (event, d) {
+                tooltip.transition().duration(200).style("opacity", 1);
+                tooltip.html(`${d.value}`)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 15) + "px");
+            })
+            .on('mouseout', function () {
+                tooltip.transition().duration(200).style("opacity", 0);
+            })
+            .transition()
+            .duration(1000)
+            .attr("x", d => x(d.group))
+            .attr("y", d => y(d.value))
+            .attr("width", x.bandwidth())
+            .attr("height", d => height_chart - y(d.value))
+            .attr("fill", "#dc5037");
+
+        // Update button active states
+        document.querySelectorAll('.btn-group button').forEach(button => {
+            button.classList.remove('active');
+        });
+        if (type === 'year') {
+            document.getElementById('yearButton').classList.add('active');
+        } else if (type === 'author') {
+            document.getElementById('authorButton').classList.add('active');
+        }
+    }
+
+    // Initialize the plot with the first dataset
+</script>
+
+<script>
+    $(document).ready(function () {
+        {#setTimeout(createChart,50)#}
+        {#setTimeout(LoadYearData,50)#}
+        {#setTimeout(LoadAuthorsData,50)#}
+        createChart();
+        LoadYearData();
+        LoadAuthorsData();
+    });
+
+    function LoadYearData() {
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data_neo4j/years',
+            type: 'get',
+            data: {},
+            success: function (res) {
+                year_data = JSON.parse(res);
+                update(year_data, 'year');
+            }
+        });
+    }
+
+    function LoadAuthorsData() {
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data_neo4j/authors',
+            type: 'get',
+            data: {},
+            success: function (res) {
+                author_data = JSON.parse(res);
+            }
+        });
+    }
+
+    function LoadYearData_csv_dataset() {
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data/years',
+            type: 'get',
+            data: {},
+            success: function (res) {
+                year_data = JSON.parse(res);
+                update(year_data, 'year');
+            }
+        });
+    }
+
+    function LoadAuthorsData_csv_dataset() {
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data/authors',
+            type: 'get',
+            data: {},
+            success: function (res) {
+                author_data = JSON.parse(res);
+            }
+        });
+    }
+</script>
+</body>
+</html>
