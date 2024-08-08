@@ -117,6 +117,17 @@ def query_authors_chart():
     return result
 
 
+def query_departments_chart():
+    cypher_query = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)
+    RETURN d.name AS group, COUNT(a) AS value
+    '''
+
+    with driver.session(database="neo4j") as session:
+        result = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())
+
+    return result
+
+
 def flite_authors(authors):
     if len(authors) == 0:
         return []

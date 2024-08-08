@@ -6,7 +6,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 from app01.models import PublicationDatasets
 # from view_knowledge_graph import query_author
-from app01.views.view_knowledge_graph import query_author, query_year, query_authors_chart, flite_authors, flite_years
+from app01.views.view_knowledge_graph import query_author, query_year, query_authors_chart, flite_authors, flite_years, \
+    query_departments_chart
 
 
 # Create your views here.
@@ -30,6 +31,12 @@ def get_authors_from_neo4j(request):
     print('Get authors from neo4j')
     authors_publications = query_authors_chart()
     return HttpResponse(json.dumps(authors_publications))
+
+
+def get_departments_from_neo4j(request):
+    print('Get departments from neo4j')
+    departments_authors = query_departments_chart()
+    return HttpResponse(json.dumps(departments_authors))
 
 
 def get_years(request):

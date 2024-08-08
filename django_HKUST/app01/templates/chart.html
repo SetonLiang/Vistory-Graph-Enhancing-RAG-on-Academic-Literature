@@ -110,6 +110,8 @@
             document.getElementById('yearButton').classList.add('active');
         } else if (type === 'author') {
             document.getElementById('authorButton').classList.add('active');
+        } else if (type === 'author') {
+            document.getElementById('departmentButton').classList.add('active');
         }
     }
 
@@ -124,6 +126,7 @@
         createChart();
         LoadYearData();
         LoadAuthorsData();
+        LoadDepartmentData();
     });
 
     function LoadYearData() {
@@ -145,6 +148,17 @@
             data: {},
             success: function (res) {
                 author_data = JSON.parse(res);
+            }
+        });
+    }
+
+    function LoadDepartmentData() {
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data_neo4j/departments',
+            type: 'get',
+            data: {},
+            success: function (res) {
+                department_data = JSON.parse(res);
             }
         });
     }
