@@ -812,16 +812,16 @@
 
         // 给每个节点一个初始位置，避免重叠
         authorNodes.forEach((node, index) => {
-            node.x = width / 2 + 200 * Math.cos(index * 2 * Math.PI / authorNodes.length);
-            node.y = height / 2 + 200 * Math.sin(index * 2 * Math.PI / authorNodes.length);
+            node.x = width / 2 + 300 * Math.cos(index * 2 * Math.PI / authorNodes.length);
+            node.y = height / 2 + 300 * Math.sin(index * 2 * Math.PI / authorNodes.length);
         });
 
         authorNodes.forEach((author) => {
             const papers = paperNodes.filter(
                 paper => links.some(link => link.source === author.name && link.target === paper.name));
             papers.forEach((node, index) => {
-                node.x = author.x + 200 * Math.cos(index * 2 * Math.PI / papers.length);
-                node.y = author.y + 200 * Math.sin(index * 2 * Math.PI / papers.length);
+                node.x = author.x + 250 * Math.cos(index * 2 * Math.PI / papers.length);
+                node.y = author.y + 250 * Math.sin(index * 2 * Math.PI / papers.length);
             });
         });
 
@@ -829,8 +829,8 @@
             const keywords = keywordNodes.filter(
                 keyword => links.some(link => link.source === paper.name && link.target === keyword.name));
             keywords.forEach((node, index) => {
-                node.x = paper.x + 200 * Math.cos(index * 2 * Math.PI / keywords.length);
-                node.y = paper.y + 200 * Math.sin(index * 2 * Math.PI / keywords.length);
+                node.x = paper.x + 100 * Math.cos(index * 2 * Math.PI / keywords.length);
+                node.y = paper.y + 100 * Math.sin(index * 2 * Math.PI / keywords.length);
             });
         });
 
@@ -864,14 +864,14 @@
             .data(links)
             .join("path")
             .attr("stroke-opacity", (d) => {
-                if (d.relationship === 'BELONGS_TO') {
+                if (d.relationship === 'OWNED_BY') {
                     return 1
                 } else {
                     return 0.6
                 }
             })
             .attr('stroke-width', (d) => {
-                if (d.relationship === 'BELONGS_TO') {
+                if (d.relationship === 'OWNED_BY') {
                     return 5
                 } else {
                     return 3
@@ -930,7 +930,7 @@
             {#tooltip.html(function(d) {return d.name})#}
             tooltip.html(
                 () => {
-                    if (d.group === 4 || d.group === 1) {
+                    if (d.group === 4 || d.group === 1 || d.group === 2) {
                         return d.name
                     } else {
                         return 'Title: ' + d.name +
