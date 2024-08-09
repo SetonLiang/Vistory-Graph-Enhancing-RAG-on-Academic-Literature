@@ -168,8 +168,9 @@
                                         {% if author == None %}
                                         {% else %}
                                             <div class="author" value="{{ author }}">
-                                                <span class="last_name">{{ author|spilt_author_last }}</span>
-                                                <span class="first_name">{{ author|spilt_author_first }}</span>
+                                                <span class="last_name">{{ author }}</span>
+                                                {% comment %} <span class="last_name">{{ author|spilt_author_last }}</span> {% endcomment %}
+                                                {% comment %} <span class="first_name">{{ author|spilt_author_first }}</span> {% endcomment %}
                                             </div>
                                         {% endif %}
                                     {% endfor %}
@@ -269,6 +270,7 @@
             success: function (res) {
                 let request = JSON.parse(res)
                 allId = request['all_IdName']
+                console.log(request['result_IdName'])
                 if (query_id_list.length !== 0) {
                     if (request['result_IdName'].length === 0) {
                         request['result_IdName'] = query_id_list

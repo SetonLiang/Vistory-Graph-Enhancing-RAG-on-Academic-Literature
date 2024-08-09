@@ -506,7 +506,7 @@ def retriever(question: str):
     structured_results = structured_data.get('results', [])
 
     unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
-    
+    print(unstructured_data)
     if is_year:
         relevant_paper = [record.get('paper') for record in structured_results]
     else:

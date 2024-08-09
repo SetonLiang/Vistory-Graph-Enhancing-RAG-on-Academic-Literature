@@ -16,5 +16,5 @@ for paper in result:
     All_id.append(paper['id'])
 
 with open('datasets/All_id.json', 'w') as f:
-    json.dump(All_id, f)
+    json.dump(All_id, f, indent=4)
 print('Debugger')
