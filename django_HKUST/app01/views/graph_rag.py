@@ -214,7 +214,7 @@ entity_prompt = ChatPromptTemplate.from_messages([
 ])
 
 # 实体链
-entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-3.5-turbo').with_structured_output(Entities)
+entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-4').with_structured_output(Entities)
 # print(entity_chain)
 # print(entity_chain.invoke({"question":"How many authors does CMA have?","examples":examples}).names)
 # print(structured_retriever("What are the key contributions of Kang Zhang's papers?"))
@@ -506,7 +506,6 @@ def retriever(question: str):
     structured_results = structured_data.get('results', [])
 
     unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
-    print(unstructured_data)
     if is_year:
         relevant_paper = [record.get('paper') for record in structured_results]
     else:
