@@ -8,7 +8,7 @@ register = template.Library()
 @register.filter
 def spilt_author_last(obj):
     # _, res = obj.split(' ', 1)
-    print(obj)
+    # print(obj)
     return obj
 
 
@@ -16,7 +16,7 @@ def spilt_author_last(obj):
 def spilt_author_first(obj):
     # res, _ = obj.split(' ', 1)
     # res = ',' + res
-    print(obj)
+    # print(obj)
     return 'res'
 
 

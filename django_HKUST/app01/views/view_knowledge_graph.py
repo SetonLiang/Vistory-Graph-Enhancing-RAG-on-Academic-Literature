@@ -118,14 +118,54 @@ def query_authors_chart():
 
 
 def query_departments_chart():
-    cypher_query = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)
-    RETURN d.name AS group, COUNT(a) AS value
+    cypher_query_year = '''
+    MATCH (p:Papers)
+    WITH DISTINCT p.year AS year
+    ORDER BY year
+    RETURN COLLECT(year) AS years
+    '''
+
+    cypher_query_department = '''MATCH (d:Department)
+    WITH d.name AS department
+    ORDER BY department
+    RETURN COLLECT(department) AS departments
+        '''
+
+    # cypher_query = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
+    # WITH d.name AS department, p.year AS year, COUNT(p) AS paper_count
+    # RETURN department, year, paper_count
+    # ORDER BY department, year
+    # '''
+
+    result = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
+    WITH d.name AS department, p.year AS year, COUNT(p) AS paper_count
+    ORDER BY department, year
+    WITH year, COLLECT(paper_count) AS counts
+    RETURN COLLECT(counts) AS yearly_counts
     '''
 
     with driver.session(database="neo4j") as session:
-        result = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())
+        year_list = session.execute_read(lambda tx: tx.run(cypher_query_year, iata="DEN").data())[0]['years']
+        department_list = session.execute_read(lambda tx: tx.run(cypher_query_department, iata="DEN").data())[0][
+            'departments']
+        results = session.execute_read(lambda tx: tx.run(result, iata="DEN").data())[0]['yearly_counts']
 
-    return result
+    return {'x0Name': year_list, 'x1Name': department_list, 'initData': results}
+
+
+def query_departments_min_chart(min):
+    result = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
+        WHERE p.citation > '%s'
+        WITH d.name AS department, p.year AS year, COUNT(p) AS paper_count
+        ORDER BY department, year
+        WITH year, COLLECT(paper_count) AS counts
+        RETURN COLLECT(counts) AS yearly_counts
+        ''' % min
+
+    with driver.session(database="neo4j") as session:
+        results = session.execute_read(lambda tx: tx.run(result, iata="DEN").data())[0]['yearly_counts']
+
+    return {'newData': results}
 
 
 def flite_authors(authors):

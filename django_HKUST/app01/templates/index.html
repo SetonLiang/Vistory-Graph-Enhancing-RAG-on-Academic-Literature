@@ -48,8 +48,10 @@
                     <script>
                         let Init_width, Init_height, margin, width_chart, height_chart,
                             svg_chart, g_chart,
+                            x0Name, x1Name,
                             x0, x1, y, z,
-                            initialData, bars;
+                            initialData, newData,
+                        bars;
                     </script>
                 </div>
 
@@ -235,6 +237,11 @@
 </script>
 
 <script>
+
+    const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
     function text_collapse(obj) {
         if (obj.attr('class').includes('text-collapse') === true) {
             obj.attr('class', 'abstract')

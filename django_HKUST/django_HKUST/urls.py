@@ -43,6 +43,7 @@ urlpatterns = [
     path('data_neo4j/years', views.get_years_from_neo4j),
     path('data_neo4j/authors', views.get_authors_from_neo4j),
     path('data_neo4j/departments', views.get_departments_from_neo4j),
+    path('data_neo4j/departmentsMin', views.get_departments_min_from_neo4j),
 
     # 获取数据_graph
     path('graph/query/', view_knowledge_graph.query_base),

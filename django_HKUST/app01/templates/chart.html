@@ -17,23 +17,22 @@
 </div>
 
 <script>
-    const x0Name = ['a', 'b', 'c', 'd', 'e'];
-    const x1Name = [2000, 2001, 2002, 2003];
-    let data = [];
+    x0Name = ['a', 'b', 'c', 'd', 'e'];
+    x1Name = [2000, 2001, 2002, 2003];
 
     function generateInitialData() {
-        data = [];
+        initialData = [];
         x0Name.forEach(_x0n => {
             const _data = [];
             x1Name.forEach(_x1n => {
                 _data.push(Math.floor(Math.random() * 100));
             });
-            data.push(_data);
+            initialData.push(_data);
         });
     }
 
     function createChart() {
-        generateInitialData();
+
         Init_width = d3.select('.chart_container').node().getBoundingClientRect().width;
         Init_height = d3.select('.chart_container').node().getBoundingClientRect().height;
 
@@ -55,15 +54,15 @@
 
         x0 = d3.scaleBand().domain(x0Name).range([0, width_chart]).paddingInner(0.1);
         x1 = d3.scaleBand().domain(x1Name).rangeRound([0, x0.bandwidth()]).padding(0.05);
-        y = d3.scaleLinear().domain([0, 100]).range([height_chart, 0]);
+        y = d3.scaleLinear().domain([0, Math.max(...initialData.flat())]).range([height_chart, 0]).nice();
         z = d3.scaleOrdinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b"]);
 
         g_chart.append('g').attr('transform', `translate(0,${height_chart})`).call(d3.axisBottom(x0));
         g_chart.append('g').attr('transform', `translate(0,0)`).call(d3.axisLeft(y));
 
         // Draw initial bars
-        drawBars(data, "original");
-        drawLegend();
+        drawBars(initialData, "original");
+        // drawLegend();
     }
 
     function drawBars(data, className) {
@@ -74,18 +73,32 @@
             .attr('class', `bars ${className}`)
             .attr('transform', (d, i) => `translate(${x0(x0Name[i])},0)`)
             .selectAll('rect')
-            .data(d => d)
+            .data((d, j) => d.map((value, i) => ({value, i, j})))
             .join('rect')
-            .attr('x', (d, i) => x1(x1Name[i]))
-            .attr('y', d => y(d))
+            .attr('x', (d, i) => x1(x1Name[d.i]))
+            .attr('y', d => y(d.value))
             .attr('width', x1.bandwidth())
-            .attr('height', d => height_chart - y(d))
+            .attr('height', d => height_chart - y(d.value))
             .attr('fill', (d, i) => {
                 if (className === "new" || className === "original") {
-                    return z(i); // Color for new data
+                    return z(d.i); // Color for new data
                 } else {
-                    return d3.rgb(z(i)).brighter(1); // Lighter color for old data
+                    return d3.rgb(z(d.i)).brighter(1); // Lighter color for old data
                 }
+            })
+            .on('mouseover', function (event, d, i) {
+                tooltip.transition().duration(200).style("opacity", .9);
+                tooltip.html(
+                    () => {
+                        return x1Name[d.i] +
+                            '<br>' + d.value
+
+                    })
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on('mouseout', function (d) {
+                tooltip.transition().duration(500).style("opacity", 0);
             });
     }
 
@@ -111,19 +124,6 @@
     }
 
     function updateData() {
-        // Generate new data
-        const newData = [];
-        x0Name.forEach((_, i) => {
-            const _data = [];
-            x1Name.forEach((_, j) => {
-                // Ensure new data is less than old data
-                _data.push(Math.floor(Math.random() * Math.min(100, data[i][j])));
-            });
-            newData.push(_data);
-        });
-
-        // Update the data variable
-        data = newData;
 
         // Make old data bars lighter
         g_chart.selectAll('g_chart.bars.original rect')
@@ -138,7 +138,7 @@
 
 <script>
     $(document).ready(function () {
-        createChart();
+        // createChart();
         LoadDepartmentData()
     });
 
@@ -149,33 +149,32 @@
             type: 'get',
             data: {},
             success: function (res) {
-                department_data = JSON.parse(res);
+                let request = JSON.parse(res)
+                x0Name = request['x0Name']
+                x1Name = request['x1Name']
+                initialData = request['initData']
+                createChart()
+                LoadDepartmentData_with_min()
             }
         });
     }
 
-    function LoadYearData_csv_dataset() {
+    function LoadDepartmentData_with_min() {
+    let data = {'min': min_citation}
         $.ajax({
-            url: 'http://127.0.0.1:8000/data/years',
-            type: 'get',
-            data: {},
+            url: 'http://127.0.0.1:8000/data_neo4j/departmentsMin',
+            type: 'POST',
+            contentType: 'application/json', // 发送信息至服务器时内容编码类型
+            data: JSON.stringify(data),
             success: function (res) {
-                year_data = JSON.parse(res);
-                update(year_data, 'year');
+                let request = JSON.parse(res)
+                newData = request['newData']
+                console.log(newData)
+                updateData()
             }
         });
     }
 
-    function LoadAuthorsData_csv_dataset() {
-        $.ajax({
-            url: 'http://127.0.0.1:8000/data/authors',
-            type: 'get',
-            data: {},
-            success: function (res) {
-                author_data = JSON.parse(res);
-            }
-        });
-    }
 </script>
 </body>
 </html>
