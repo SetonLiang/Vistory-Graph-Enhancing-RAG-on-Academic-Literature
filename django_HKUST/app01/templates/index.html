@@ -82,6 +82,7 @@
                                 function selectOption(option) {
                                     min_citation = option;
                                     filterNode(entity_data);
+                                    LoadDepartmentData_with_min()
                                     dropdownButton.textContent = option;
                                     dropdownMenu.classList.remove('show');
                                 }

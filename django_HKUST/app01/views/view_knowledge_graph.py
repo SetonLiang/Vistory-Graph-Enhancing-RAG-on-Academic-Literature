@@ -155,17 +155,19 @@ def query_departments_chart():
 
 def query_departments_min_chart(min):
     result = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
-        WHERE p.citation > '%s'
+        WHERE toInteger(p.citation) > %s
         WITH d.name AS department, p.year AS year, COUNT(p) AS paper_count
         ORDER BY department, year
         WITH year, COLLECT(paper_count) AS counts
         RETURN COLLECT(counts) AS yearly_counts
-        ''' % min
+        ''' % int(min - 1)
 
     with driver.session(database="neo4j") as session:
         results = session.execute_read(lambda tx: tx.run(result, iata="DEN").data())[0]['yearly_counts']
 
     return {'newData': results}
+
+
 
 
 def flite_authors(authors):

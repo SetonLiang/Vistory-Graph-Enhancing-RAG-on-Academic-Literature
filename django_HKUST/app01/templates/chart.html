@@ -67,7 +67,7 @@
 
     function drawBars(data, className) {
         // Draw bars with a specific class name
-        g_chart.selectAll(`g_chart.bars.${className}`)
+        g_chart.selectAll(`g.bars.${className}`)
             .data(data)
             .join('g')
             .attr('class', `bars ${className}`)
@@ -124,9 +124,10 @@
     }
 
     function updateData() {
+        console.log(newData)
 
         // Make old data bars lighter
-        g_chart.selectAll('g_chart.bars.original rect')
+        g_chart.selectAll('g.bars.original rect')
             .transition().duration(500)
             .attr('fill', '#c6c6c6');
 
@@ -160,7 +161,7 @@
     }
 
     function LoadDepartmentData_with_min() {
-    let data = {'min': min_citation}
+        let data = {'min': min_citation}
         $.ajax({
             url: 'http://127.0.0.1:8000/data_neo4j/departmentsMin',
             type: 'POST',
@@ -168,8 +169,8 @@
             data: JSON.stringify(data),
             success: function (res) {
                 let request = JSON.parse(res)
+                console.log(data)
                 newData = request['newData']
-                console.log(newData)
                 updateData()
             }
         });
