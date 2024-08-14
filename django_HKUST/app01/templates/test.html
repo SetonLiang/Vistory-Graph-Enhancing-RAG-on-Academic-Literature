@@ -1,361 +1,86 @@
 <!DOCTYPE html>
-{% load static %}
-{% load my_filter %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8" content="no-cache">
-    <title>Index</title>
-    <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <meta charset="UTF-8">
+    <title>Chart</title>
     <style>
-        .logo_temp {
-            width: 74px;
-            height: 34px;
-            border: 1px solid red;
-        }
-
     </style>
 </head>
-
 <body>
-<script src="{% static 'js/jquery-3.7.1.js' %}"></script>
-<script src="{% static 'plugins/bootstrap/js/bootstrap.js' %}"></script>
-<script src="{% static 'plugins/d3/d3.v7.js' %}"></script>
 
+<script src="../static/js/jquery-3.7.1.js"></script>
+<script src="../static/plugins/d3/d3.v7.js"></script>
 
-<div class="Self_container" class="glyphicon-remove">
-    <div id="header" class="" style="">
-        <div id="title" class="clearfix" style="">
-            <h1>LLM for Publication Data</h1>
-            <div id="sub-title">。。。。。</div>
-            <div id="logo" class="logo_temp"></div>
-        </div>
-
-        <div id="selector" class="clearfix">
-            <div class="local-label">Selectors</div>
-            <div class="selector" id="selector0" value=" "></div>
-            <div class="selector" id="selector1" value=" "></div>
-            <div class="selector" id="selector2" value=" "></div>
-            <div class="selector" id="selector3" value=" "></div>
-            <div class="selector" id="selector4" value=" "></div>
-            <div class="selector" id="selector5" value=" "></div>
-            <div class="btn btn-default btn-xs" id="selector_button" onclick="clearSelector()">clear</div>
-        </div>
-
-    </div>
-    <div class="main">
-        <div class="left">
-
-            <div class="top">
-                <div class="panel panel-default ">
-                    <div class="panel-heading">Chart</div>
-                    <div class="panel-body" id="chart" style="padding: 0; height: 225px">
-                        <script>
-                            let data1, data2, Init_width, margin, width_chart, height_chart, svg_chart, x, y, xAxis,
-                                yAxis,
-                                year_data, author_data
-                        </script>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bottom">
-                <div class="bottom panel panel-default ">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Knowledge Graph</h3>
-                    </div>
-                    <div class="panel-body" id="knowledgeGraph" style="padding: 0">
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                // Function to fetch and execute scripts for a given URL and container ID
-                function fetchAndExecute(url, containerId) {
-                    fetch(url)
-                        .then(response => response.text())
-                        .then(data => {
-                            document.getElementById(containerId).innerHTML = data;
-
-                            // Re-evaluate the scripts in the loaded content
-                            const container = document.getElementById(containerId);
-                            const scripts = container.querySelectorAll('script');
-                            scripts.forEach(script => {
-                                const newScript = document.createElement('script');
-                                if (script.src) {
-                                    newScript.src = script.src;
-                                } else {
-                                    newScript.textContent = script.textContent;
-                                }
-                                document.body.appendChild(newScript);
-                            });
-                        })
-                        .catch(error => console.error('Error fetching data:', error));
-                }
-
-                // Fetch and execute scripts for both chart and knowledgeGraph
-                {#fetchAndExecute('chart/', 'chart');#}
-                {#fetchAndExecute('KG/', 'knowledgeGraph');#}
-                {#fetchAndExecute('qa/', 'qa');#}
-            </script>
-
-        </div>
-        <div class="right">
-            <div class="top">
-                <div id="result_title">
-                    <span class="publication" id="publication">
-                        <text>{{ publication_list|length }} publications</text>
-                    </span>
-                </div>
-                <div id="result_content">
-                    {% for publication in publication_list %}
-                        <div id="{{ publication.IdName }}" class="publication-card"
-                             style="border-color: rgb(200, 200, 200)">
-                            <div class="entry_img">
-                                {% with final_path='img/'|add:publication.IdName|add:'.png' %}
-                                    {% if final_path|file_exists %}
-                                        <img class="thumb" src="{% static final_path %}" alt="">
-                                    {% else %}
-                                        <!-- 文件不存在时显示的内容 -->
-                                        <img class="thumb" src="{% static 'img/default.png' %}" alt="">
-                                    {% endif %}
-                                {% endwith %}
-                            </div>
-                            <div class="entry_main">
-                                <div class="links">
-                                    <a href="{{ publication.Doi }}" target="_blank">DOI</a>
-                                    <a href="http://scholar.google.de/scholar?hl=en&amp;q={{ publication.Name }}"
-                                       target="_blank">Google Scholar</a>
-                                    <a href="https://www.google.de/search?q={{ publication.Name }}"
-                                       target="_blank">Google</a>
-                                </div>
-                                <div class="entry_header">
-                                    <div class="vis  tooltipstered"></div>
-                                    <div class="id">{{ publication.IdName }}</div>
-                                    <div class="series">{{ publication.Sources }}</div>
-                                    <div class="year">{{ publication.PublishedYears }}</div>
-                                </div>
-                                <a class="title" target="_blank" href="{{ publication.Doi }}">{{ publication.Name }}</a>
-                                <div class="authors">
-                                    {% for author in publication.Authors %}
-                                        {% if author == None %}
-                                        {% else %}
-                                            <div class="author" value="{{ author }}">
-                                                <span class="last_name">{{ author|spilt_author_last }}</span>
-                                                <span class="first_name">{{ author|spilt_author_first }}</span>
-                                            </div>
-                                        {% endif %}
-                                    {% endfor %}
-                                </div>
-                                <div class="abstract text-collapse"
-                                     value="{{ publication.Abstracts }}"
-                                     onclick="text_collapse(d3.select(this))">
-                                    <span class="label">Abstract: </span>
-                                    {{ publication.Abstracts }}
-                                </div>
-                                <div class="tags">
-                                    <div class="tag">
-                                        {{ publication.Keywords }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="bottom">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Q&A</h3>
-                    </div>
-                    <div class="panel-body" id="qa" style="padding: 0">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<!-- Create a div where the graph will take place -->
+<div id="dataVis" class="chart_container">
+    <!-- Add buttons with a container -->
 </div>
 
-<script src="{% static 'js/jquery-3.7.1.js' %}"></script>
-<script src="{% static 'plugins/bootstrap/js/bootstrap.js' %}"></script>
-<script src="{% static 'plugins/d3/d3.v7.js' %}"></script>
 <script>
-    function test(obj) {
-        d3.select("#selector2").attr('value', ' ')
-        d3.select("#selector1").attr('value', ' ')
-    }
-
-    {#  文本折叠  #}
-
-    function text_collapse(obj) {
-        if (obj.attr('class').includes('text-collapse') === true) {
-            obj.attr('class', 'abstract')
-        } else {
-            obj.attr('class', 'abstract text-collapse')
-        }
-    }
-
-
-    {#  默认使用函数  #}
-    window.onload = function () {
-        {#default_data()#}
-        {#LoadKeywordData()#}
-        {#LoadSeriesData()#}
-    }
-
-    window.addEventListener('resize', function (event) {
-        console.log('窗口大小改变了！');
-        d3.select('#chart').selectAll('svg').remove()
-        fetchAndExecute('chart/', 'chart');
+    const x0Name = ['a', 'b', 'c', 'd', 'e'];
+    const x1Name = [2000, 2001, 2002, 2003];
+    const data = []
+    x0Name.forEach(_x0n => {
+        const _data = [];
+        x1Name.forEach(_x1n => {
+            _data.push(Math.floor(Math.random() * 100));
+        });
+        data.push(_data);
     });
 
-    {#  加载数据  #}
-    let keywords = {}
-    let series = {}
+    const width = 960;
+    const height = 600;
+    const margin = {top: 20, right: 40, bottom: 40, left: 50};
 
+    const svg = d3.select('#dataVis').append('svg')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom);
+    const g = svg.append('g')
+        .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    function default_data() {
-        d3.select('#keywordMin').text(keyword_min)
-        d3.select('#authorMin').text(author_min)
-        d3.select('#citationMin').text(citation_min)
-        d3.select("#seriesMin").text(series_min)
-    }
+    const x0 = d3.scaleBand().domain(x0Name).range([0, width]).paddingInner(0.1);
+    const x1 = d3.scaleBand().domain(x1Name).rangeRound([0, x0.bandwidth()]).padding(0.05);
+    const y = d3.scaleLinear().domain([0, 100]).range([height, 0]);
+    const z = d3.scaleOrdinal()
+        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b"]);
 
+    g.append('g').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x0));
+    g.append('g').attr('transform', `translate(0,0)`).call(d3.axisLeft(y));
 
-    {#  查询 结果  #}
-    let query_list = []
-    let query_author_list = []
-    let query_year_list = []
-    let query_keyword_list = []
-    let query_series_list = []
-    let query_id_list = []
-    let allId = []
+    g.append('g')
+        .selectAll('g')
+        .data(data)
+        .enter().append('g')
+        .attr('transform', (d, i) => `translate(${x0(x0Name[i])},0)`)
+        .selectAll('rect')
+        .data(d => d)
+        .enter().append('rect')
+        .attr('x', (d, i) => x1(x1Name[i]))
+        .attr('y', d => y(d))
+        .attr('width', x1.bandwidth())
+        .attr('height', d => height - y(d))
+        .attr('fill', (d, i) => z(i));
 
-    function QueryResults(check) {
-        let data = {
-            "author": query_author_list,
-            "year": query_year_list,
-            "keyword": query_keyword_list,
-            "series": query_series_list,
-        }
-        $.ajax({
-            url: 'http://127.0.0.1:8000/query/result',
-            type: 'POST',
-            contentType: 'application/json', // 发送信息至服务器时内容编码类型
-            data: JSON.stringify(data),
-            success: function (res) {
-                let request = JSON.parse(res)
-                allId = request['all_IdName']
-                if (query_id_list.length !== 0) {
-                    if (request['result_IdName'].length === 0) {
-                        request['result_IdName'] = query_id_list
-                    }
-                    if (query_id_list.length > 1) {
-                        request['result_IdName'] = []
-                    }
+    const legend = g.append('g')
+        .attr('font-family', 'sanf-serif')
+        .attr('font-size', 10)
+        .attr('text-anchor', 'end')
+        .selectAll('g')
+        .data(x1Name)
+        .enter().append('g')
+        .attr('transform', (d, i) => `translate(0,${i * 20})`);
+    legend.append('rect')
+        .attr('x', width - 19)
+        .attr('width', 19)
+        .attr('height', 19)
+        .attr('fill', z);
+    legend.append('text')
+        .attr('x', width - 24)
+        .attr('y', 9.5)
+        .attr('dy', '0.32em')
+        .text(d => d);
 
-                    // 获取两个列表中相同的元素
-                    request['result_IdName'] = request['result_IdName'].filter(element => query_id_list.includes(element));
-                }
-                if (check === undefined) {
-                    fixResults(request['all_IdName'], request['result_IdName'])
-                } else if (request['result_IdName'].length === 0 && query_list.length === 0) {
-                    clearSelector()
-                } else {
-                    for (let i of request['all_IdName']) {
-                        d3.select('#' + i).style('display', 'block').style('border-color', 'rgb(200,200,200)')
-                        fixResults(request['all_IdName'], request['result_IdName'])
-                    }
-                }
-
-            },
-        })
-    }
-
-
-    function fixResults(all, obj) {
-        for (let each in all) {
-            if (obj.includes(all[each])) {
-                d3.select('#' + all[each]).style('border-color', 'black')
-            } else {
-                d3.select('#' + all[each]).style('display', 'none')
-            }
-        }
-
-    }
-
-    {#  selector  #}
-    let selectors = ['selector0', 'selector1', 'selector2', 'selector3', 'selector4', 'selector5']
-
-    function clearSelector() {
-        query_author_list = []
-        query_year_list = []
-        query_keyword_list = []
-        query_list = []
-        query_id_list = []
-        for (let i in allId) {
-            d3.select('#' + allId[i]).style('display', 'block').style('border-color', 'rgb(200,200,200)')
-        }
-        fixSelectors('clear')
-    }
-
-    function fixSelectors(obj) {
-        if (obj === 'clear') {
-            for (let j of selectors) {
-                let clear = d3.select('#' + j).attr('value', " ").style("border", '2px solid white')
-                clear.selectAll("*").remove()
-            }
-        } else {
-            for (let j of selectors) {
-                if (d3.select('#' + j).attr('value') === ' ') {
-                    let temp = d3.select('#' + j).attr('value', obj).style("border", '2px solid black')
-                    temp.append("div").attr('class', 'text').text(obj)
-                    temp.append('span').attr('class', 'glyphicon glyphicon-remove')
-                        .style('margin', '4px')
-                        .on("click", function () {
-                            let value = d3.select('#' + j).attr('value')
-                            let clear = d3.select('#' + j).attr('value', ' ').style("border", '2px solid white')
-                            clear.selectAll("*").remove()
-                            query_list.splice(query_list.indexOf(value), 1)
-
-                            if (query_author_list.indexOf(value) !== -1) {
-                                query_author_list.splice(query_author_list.indexOf(value), 1)
-                            }
-                            if (query_keyword_list.indexOf(value) !== -1) {
-                                query_keyword_list.splice(query_keyword_list.indexOf(value), 1)
-                            }
-                            if (query_year_list.indexOf(value) !== -1) {
-                                query_year_list.splice(query_year_list.indexOf(value), 1)
-                            }
-                            if (query_series_list.indexOf(value) !== -1) {
-                                query_series_list.splice(query_series_list.indexOf(value), 1)
-                            }
-                            if (query_id_list.indexOf(value) !== -1) {
-                                query_id_list.splice(query_id_list.indexOf(value), 1)
-                            }
-
-                            QueryResults(1)
-                        })
-                    break
-                }
-            }
-        }
-    }
-
-    {#  解决父子onclick问题  #}
-
-    function stopBubbling() {
-        let ev = window.event || arguments.callee.caller.arguments[0];
-        if (window.event) ev.cancelBubble = true;
-        else {
-            ev.stopPropagation();
-        }
-    }
 </script>
 
-
 </body>
-
 </html>

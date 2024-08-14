@@ -2,62 +2,152 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>刷新页面按钮</title>
+    <title>Chart</title>
     <style>
-        /* .refresh-btn-container 类定义 */
-        .refresh-btn-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end; /* 右对齐 */
-        }
-
-        .refresh-btn {
-            background-color: #ffffff; /* 白色背景 */
-            color: black; /* 黑色字体 */
-            border: 1px solid #ccc; /* 添加边框 */
-            padding: 2px 6px;
-            margin: 2px 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-            display: flex;
-            align-items: center;
-        }
-
-        .refresh-btn.active {
-            background-color: #f0f0f0; /* 活动状态下背景颜色 */
-        }
-
-        .refresh-btn:hover {
-            background-color: #f0f0f0; /* 悬停时背景颜色 */
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 悬停时阴影 */
-        }
-
-        .refresh-btn svg {
-            margin-right: 5px;
-        }
     </style>
 </head>
 <body>
-    <!-- 创建一个按钮组，包含刷新按钮 -->
-    <div class="refresh-btn-container">
-        <button class="refresh-btn" onclick="refreshPage()">
-            <!-- 嵌入SVG图标 -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M12 4V1L8 5l4 4V6c3.3 0 6 2.7 6 6 0 3.3-2.7 6-6 6s-6-2.7-6-6H4c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8z"/>
-            </svg>
-        </button>
-    </div>
 
-    <script>
-        // 定义刷新页面的函数
-        function refreshPage() {
-            location.reload();
-        }
-    </script>
+<script src="../static/js/jquery-3.7.1.js"></script>
+<script src="../static/plugins/d3/d3.v7.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="dataVis" class="chart_container" style="height: 600px;width: 960px">
+    <!-- Add a button to generate new data -->
+    <button id="updateButton">Generate New Data</button>
+</div>
+
+<script>
+    let Init_width, Init_height, margin, width_chart, height_chart,
+        svg_chart, g,
+        x0, x1, y, z,
+        initialData, bars;
+
+    const x0Name = ['a', 'b', 'c', 'd', 'e'];
+    const x1Name = [2000, 2001, 2002, 2003];
+    let data = [];
+
+    function generateInitialData() {
+        data = [];
+        x0Name.forEach(_x0n => {
+            const _data = [];
+            x1Name.forEach(_x1n => {
+                _data.push(Math.floor(Math.random() * 100));
+            });
+            data.push(_data);
+        });
+    }
+
+    function createChart() {
+        generateInitialData();
+        Init_width = d3.select('.chart_container').node().getBoundingClientRect().width;
+        Init_height = d3.select('.chart_container').node().getBoundingClientRect().height;
+
+        // set the dimensions and margins of the graph
+        margin = {top: 10, right: 30, bottom: 50, left: 40};
+        width_chart = Init_width - margin.left - margin.right;
+        height_chart = Init_height - margin.top - margin.bottom;
+
+        // append the svg object to the body of the page
+        svg_chart = d3.select("#dataVis")
+            .append("svg")
+            .attr("width", width_chart + margin.left + margin.right)
+            .attr("height", height_chart + margin.top + margin.bottom)
+            .style('display', 'block')
+            .style('background-color', 'white');
+
+        g = svg_chart.append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        x0 = d3.scaleBand().domain(x0Name).range([0, width_chart]).paddingInner(0.1);
+        x1 = d3.scaleBand().domain(x1Name).rangeRound([0, x0.bandwidth()]).padding(0.05);
+        y = d3.scaleLinear().domain([0, 100]).range([height_chart, 0]);
+        z = d3.scaleOrdinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b"]);
+
+        g.append('g').attr('transform', `translate(0,${height_chart})`).call(d3.axisBottom(x0));
+        g.append('g').attr('transform', `translate(0,0)`).call(d3.axisLeft(y));
+
+        // Draw initial bars
+        drawBars(data, "original");
+        drawLegend();
+    }
+
+    function drawBars(data, className) {
+        // Draw bars with a specific class name
+        g.selectAll(`g.bars.${className}`)
+            .data(data)
+            .join('g')
+            .attr('class', `bars ${className}`)
+            .attr('transform', (d, i) => `translate(${x0(x0Name[i])},0)`)
+            .selectAll('rect')
+            .data(d => d)
+            .join('rect')
+            .attr('x', (d, i) => x1(x1Name[i]))
+            .attr('y', d => y(d))
+            .attr('width', x1.bandwidth())
+            .attr('height', d => height_chart - y(d))
+            .attr('fill', (d, i) => {
+                if (className === "new" || className === "original") {
+                    return z(i); // Color for new data
+                } else {
+                    return d3.rgb(z(i)).brighter(1); // Lighter color for old data
+                }
+            });
+    }
+
+    function drawLegend() {
+        // Draw legend
+        const legend = g.selectAll('g.legend')
+            .data(x1Name)
+            .join('g')
+            .attr('class', 'legend')
+            .attr('transform', (d, i) => `translate(0,${i * 20})`);
+
+        legend.append('rect')
+            .attr('x', width_chart - 19)
+            .attr('width', 19)
+            .attr('height', 19)
+            .attr('fill', (d, i) => z(i));
+
+        legend.append('text')
+            .attr('x', width_chart - 60)
+            .attr('y', 9.5)
+            .attr('dy', '0.32em')
+            .text(d => d);
+    }
+
+    function updateData() {
+        // Generate new data
+        const newData = [];
+        x0Name.forEach((_, i) => {
+            const _data = [];
+            x1Name.forEach((_, j) => {
+                // Ensure new data is less than old data
+                _data.push(Math.floor(Math.random() * Math.min(100, data[i][j])));
+            });
+            newData.push(_data);
+        });
+
+        // Update the data variable
+        data = newData;
+
+        // Make old data bars lighter
+        g.selectAll('g.bars.original rect')
+            .transition().duration(500)
+            .attr('fill', '#c6c6c6');
+
+        // Draw new bars on top
+        drawBars(newData, "new");
+    }
+
+    $(document).ready(function () {
+        createChart();
+
+        $('#updateButton').click(function () {
+            updateData();
+        });
+    });
+</script>
+
 </body>
 </html>
