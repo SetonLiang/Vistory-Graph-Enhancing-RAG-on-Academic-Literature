@@ -168,8 +168,6 @@ def query_departments_min_chart(min):
     return {'newData': results}
 
 
-
-
 def flite_authors(authors):
     if len(authors) == 0:
         return []
