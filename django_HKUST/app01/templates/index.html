@@ -15,6 +15,7 @@
 <script src="{% static 'js/jquery-3.7.1.js' %}"></script>
 <script src="{% static 'plugins/d3/d3.v7.js' %}"></script>
 
+
 <div class="Self_container">
     <div class="header">
         <div id="title" class="clearfix">
@@ -252,7 +253,6 @@
     }
 
     window.addEventListener('resize', function (event) {
-        console.log('窗口大小改变了！');
         d3.select('#chart').selectAll('svg').remove()
         fetchAndExecute('chart/', 'chart');
     });

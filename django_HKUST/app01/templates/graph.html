@@ -9,32 +9,32 @@
 <body>
 
 <div id="container_kg" class="kg_container" style="height: 100%;width: 100%">
-    <div class="legend-container">
-        <div class="legend-title">Legend ▼</div>
-        <div class="legend-content">
-            <div class="legend-divider"></div>
-            <div class="legend-item">
-                <div class="legend-label">Dept.</div>
-                <div class="legend-gradient department"></div>
-            </div>
-            <div class="legend-item">
-                <div class="legend-label">Author’s works</div>
-                <div class="legend-gradient authorForLegend"></div>
-                <div class="legend-scale">
-                    <span>Less</span>
-                    <span>More</span>
-                </div>
-            </div>
-            <div class="legend-item">
-                <div class="legend-label">Paper citations</div>
-                <div class="legend-gradient paperForLegend"></div>
-                <div class="legend-scale">
-                    <span>Less</span>
-                    <span>More</span>
-                </div>
-            </div>
-        </div>
-    </div>
+{#    <div class="legend-container">#}
+{#        <div class="legend-title">Legend ▼</div>#}
+{#        <div class="legend-content">#}
+{#            <div class="legend-divider"></div>#}
+{#            <div class="legend-item">#}
+{#                <div class="legend-label">Dept.</div>#}
+{#                <div class="legend-gradient department"></div>#}
+{#            </div>#}
+{#            <div class="legend-item">#}
+{#                <div class="legend-label">Author’s works</div>#}
+{#                <div class="legend-gradient authorForLegend"></div>#}
+{#                <div class="legend-scale">#}
+{#                    <span>Less</span>#}
+{#                    <span>More</span>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="legend-item">#}
+{#                <div class="legend-label">Paper citations</div>#}
+{#                <div class="legend-gradient paperForLegend"></div>#}
+{#                <div class="legend-scale">#}
+{#                    <span>Less</span>#}
+{#                    <span>More</span>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 </div>
 
 <script src="{% static 'js/jquery-3.7.1.js' %}"></script>
@@ -52,8 +52,8 @@
     let color_key = '#f8dc4c'
     // 定义颜色比例尺，根据citation的范围调整颜色的深浅
     const colorScale = d3.scaleLinear()
-        .domain([0, 170])
-        .range(["#ffebf4", "#d0578a"]);
+        .domain([2020, 2024])
+        .range(["#ffebf4", "#d32465"]);
 
     const colorScale_auther = d3.scaleLinear()
         .domain([18, 249])
@@ -216,17 +216,6 @@
             data: {'name': ''},
             success: function (res) {
                 entity_data = JSON.parse(res)
-                console.log(entity_data)
-                {#let departmentNode = entity_data.nodes.filter(node => node.group === 1)#}
-                {#let authorNode = entity_data.nodes.filter(node => node.group === 4)#}
-                {#departmentNode.forEach(depart => {#}
-                {#    entity_data.links = entity_data.links.filter(link =>#}
-                {#        authorNode.some(author => depart.name === link.source && author.name === link.target))#}
-                {##}
-                // })
-                {#entity_data.nodes = entity_data.nodes.filter(node => node.group !== 0)#}
-                {#console.log(entity_data)#}
-                {#InitGraph(entity_data)#}
                 removeNode(entity_data)
             }
         })
@@ -446,14 +435,14 @@
             .attr("fill", (d) => {
                 if (d.group === 0) {
                     // 使用颜色比例尺来设置颜色
-                    let r = 0
-                    if (d.citation > 170) {
-                        console.log(11111)
-                        r = 170
-                    } else {
-                        r = d.citation
-                    }
-                    return colorScale(r);
+                    //let r = 0
+                    //if (d.citation > 170) {
+                    //    console.log(11111)
+                    //    r = 170
+                    //} else {
+                     //   r = d.citation
+                    //}
+                    return colorScale(parseInt(d.released));
                 } else {
                     return color[d.group]; // 其他节点保持原来的颜色
                 }
@@ -693,14 +682,7 @@
             })
             .attr("fill", (d) => {
                 if (d.group === 0) {
-                    // 使用颜色比例尺来设置颜色
-                    let r
-                    if (d.citation > 170) {
-                        r = 170
-                    } else {
-                        r = d.citation
-                    }
-                    return colorScale(r);
+                    return colorScale(parseInt(d.released));
                 } else if (d.group === 4) {
                     return colorScale_auther(d.count)
                 } else {
@@ -887,14 +869,8 @@
             })
             .attr("fill", (d) => {
                 if (d.group === 0) {
-                    // 使用颜色比例尺来设置颜色
-                    let r
-                    if (d.citation > 170) {
-                        r = 170
-                    } else {
-                        r = d.citation
-                    }
-                    return colorScale(r);
+
+                    return colorScale(parseInt(d.released))
                 } else if (d.group === 4) {
                     return colorScale_auther(d.count)
                 } else {

@@ -17,20 +17,6 @@
 </div>
 
 <script>
-    x0Name = ['a', 'b', 'c', 'd', 'e'];
-    x1Name = [2000, 2001, 2002, 2003];
-
-    function generateInitialData() {
-        initialData = [];
-        x0Name.forEach(_x0n => {
-            const _data = [];
-            x1Name.forEach(_x1n => {
-                _data.push(Math.floor(Math.random() * 100));
-            });
-            initialData.push(_data);
-        });
-    }
-
     function createChart() {
 
         Init_width = d3.select('.chart_container').node().getBoundingClientRect().width;
@@ -57,7 +43,19 @@
         y = d3.scaleLinear().domain([0, Math.max(...initialData.flat())]).range([height_chart, 0]).nice();
         z = d3.scaleOrdinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b"]);
 
-        g_chart.append('g').attr('transform', `translate(0,${height_chart})`).call(d3.axisBottom(x0));
+        g_chart.append('g')
+            .attr('transform', `translate(0,${height_chart})`)
+            .call(d3.axisBottom(x0))
+            .selectAll("text")  // 选择所有x轴的刻度标签
+            .style("cursor", "pointer")  // 添加鼠标指针样式，表示可点击
+            .on("click", function (event, d) {
+                query_list.push(d);
+                query_year_list.push(d);
+                QueryResults();
+                fixSelectors(d);
+            });
+
+        {#g_chart.append('g').attr('transform', `translate(0,${height_chart})`).call(d3.axisBottom(x0));#}
         g_chart.append('g').attr('transform', `translate(0,0)`).call(d3.axisLeft(y));
 
         // Draw initial bars
@@ -124,8 +122,6 @@
     }
 
     function updateData() {
-        console.log(newData)
-
         // Make old data bars lighter
         g_chart.selectAll('g.bars.original rect')
             .transition().duration(500)
@@ -139,7 +135,6 @@
 
 <script>
     $(document).ready(function () {
-        // createChart();
         LoadDepartmentData()
     });
 
@@ -169,7 +164,6 @@
             data: JSON.stringify(data),
             success: function (res) {
                 let request = JSON.parse(res)
-                console.log(data)
                 newData = request['newData']
                 updateData()
             }
