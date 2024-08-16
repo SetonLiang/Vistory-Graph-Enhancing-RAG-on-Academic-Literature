@@ -64,41 +64,59 @@
     }
 
     function drawBars(data, className) {
+        // Define transition settings
+        const transitionDuration = 750; // Duration of the transition
+
         // Draw bars with a specific class name
-        g_chart.selectAll(`g.bars.${className}`)
+        const bars = g_chart.selectAll(`g.bars.${className}`)
             .data(data)
             .join('g')
             .attr('class', `bars ${className}`)
-            .attr('transform', (d, i) => `translate(${x0(x0Name[i])},0)`)
-            .selectAll('rect')
+            .attr('transform', (d, i) => `translate(${x0(x0Name[i])},0)`);
+
+        const rects = bars.selectAll('rect')
             .data((d, j) => d.map((value, i) => ({value, i, j})))
             .join('rect')
             .attr('x', (d, i) => x1(x1Name[d.i]))
-            .attr('y', d => y(d.value))
+            .attr('y', height_chart) // Start from the bottom
             .attr('width', x1.bandwidth())
-            .attr('height', d => height_chart - y(d.value))
+            .attr('height', 0) // Initial height 0
             .attr('fill', (d, i) => {
                 if (className === "new" || className === "original") {
                     return z(d.i); // Color for new data
                 } else {
                     return d3.rgb(z(d.i)).brighter(1); // Lighter color for old data
                 }
-            })
-            .on('mouseover', function (event, d, i) {
-                tooltip.transition().duration(200).style("opacity", .9);
-                tooltip.html(
-                    () => {
-                        return x1Name[d.i] +
-                            '<br>' + d.value
+            });
 
-                    })
-                    .style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 28) + "px");
-            })
+        // Conditionally apply transition only if className is "new"
+        if (className === 'new') {
+            rects.transition() // Start the transition
+                .duration(transitionDuration) // Set the duration of the transition
+                .attr('y', d => y(d.value)) // Animate y position
+                .attr('height', d => height_chart - y(d.value)); // Animate height
+        } else {
+            // If not "new", directly set final positions without animation
+            rects.attr('y', d => y(d.value))
+                .attr('height', d => height_chart - y(d.value));
+        }
+
+        // Add mouseover and mouseout events
+        rects.on('mouseover', function (event, d, i) {
+            tooltip.transition().duration(200).style("opacity", .9);
+            tooltip.html(
+                () => {
+                    return x1Name[d.i] +
+                        '<br>' + d.value
+                })
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 28) + "px");
+        })
             .on('mouseout', function (d) {
                 tooltip.transition().duration(500).style("opacity", 0);
             });
     }
+
 
     function drawLegend() {
         // Draw legend
