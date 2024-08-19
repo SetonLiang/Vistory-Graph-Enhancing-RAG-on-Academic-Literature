@@ -41,7 +41,7 @@
         x0 = d3.scaleBand().domain(x0Name).range([0, width_chart]).paddingInner(0.1);
         x1 = d3.scaleBand().domain(x1Name).rangeRound([0, x0.bandwidth()]).padding(0.05);
         y = d3.scaleLinear().domain([0, Math.max(...initialData.flat())]).range([height_chart, 0]).nice();
-        z = d3.scaleOrdinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b"]);
+        z = d3.scaleOrdinal().range(["#e3716e", "#7ac7e2", "#f7df87", "#6b486b"]);
 
         g_chart.append('g')
             .attr('transform', `translate(0,${height_chart})`)
