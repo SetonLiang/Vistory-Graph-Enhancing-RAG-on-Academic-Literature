@@ -9,32 +9,32 @@
 <body>
 
 <div id="container_kg" class="kg_container" style="height: 100%;width: 100%">
-{#    <div class="legend-container">#}
-{#        <div class="legend-title">Legend ▼</div>#}
-{#        <div class="legend-content">#}
-{#            <div class="legend-divider"></div>#}
-{#            <div class="legend-item">#}
-{#                <div class="legend-label">Dept.</div>#}
-{#                <div class="legend-gradient department"></div>#}
-{#            </div>#}
-{#            <div class="legend-item">#}
-{#                <div class="legend-label">Author’s works</div>#}
-{#                <div class="legend-gradient authorForLegend"></div>#}
-{#                <div class="legend-scale">#}
-{#                    <span>Less</span>#}
-{#                    <span>More</span>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="legend-item">#}
-{#                <div class="legend-label">Paper citations</div>#}
-{#                <div class="legend-gradient paperForLegend"></div>#}
-{#                <div class="legend-scale">#}
-{#                    <span>Less</span>#}
-{#                    <span>More</span>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
+    {#    <div class="legend-container">#}
+    {#        <div class="legend-title">Legend ▼</div>#}
+    {#        <div class="legend-content">#}
+    {#            <div class="legend-divider"></div>#}
+    {#            <div class="legend-item">#}
+    {#                <div class="legend-label">Dept.</div>#}
+    {#                <div class="legend-gradient department"></div>#}
+    {#            </div>#}
+    {#            <div class="legend-item">#}
+    {#                <div class="legend-label">Author’s works</div>#}
+    {#                <div class="legend-gradient authorForLegend"></div>#}
+    {#                <div class="legend-scale">#}
+    {#                    <span>Less</span>#}
+    {#                    <span>More</span>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#            <div class="legend-item">#}
+    {#                <div class="legend-label">Paper citations</div>#}
+    {#                <div class="legend-gradient paperForLegend"></div>#}
+    {#                <div class="legend-scale">#}
+    {#                    <span>Less</span>#}
+    {#                    <span>More</span>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
 </div>
 
 <script src="{% static 'js/jquery-3.7.1.js' %}"></script>
@@ -440,7 +440,7 @@
                     //    console.log(11111)
                     //    r = 170
                     //} else {
-                     //   r = d.citation
+                    //   r = d.citation
                     //}
                     return colorScale(parseInt(d.released));
                 } else {
@@ -470,19 +470,35 @@
 
         node.on('mouseover', function (event, d) {
             tooltip.transition().duration(200).style("opacity", .9);
-            {#tooltip.html(function(d) {return d.name})#}
             tooltip.html(
                 () => {
-                    if (d.group === 4 || d.group === 1) {
+                    if (d.group === 4) {
+                        return '<div class="publication-card" style="text-align: left">' +
+                            '<h4>' + d.name + '</h4>' +
+                            '<p>' + d.count + ' papers</p>' +
+                            '<br>' +
+                            '</div>'
+                    } else if (d.group === 1) {
                         return d.name
                     } else {
-                        return 'Title: ' + d.name +
-                            '<br>Citation: ' + d.citation +
-                            '<br>Year:' + d.released
+                        let temp_path = '/static/img/' + d.id + '.png'
+                        return '<div class="publication-card" style="width: 600px; text-align: left">' +
+                            '<div class="entry_img">' +
+                            '<img class="thumb" src="' + temp_path + '" alt="">' +
+                            '</div>' +
+                            '<div class="entry_main">' +
+                            '<h4>' + d.name + '</h4>' +
+                            '<p>' + d.authors + '</p>' +
+                            '<br>' +
+                            '<p>Published:' + d.released + '</p>' +
+                            '<p>Venue:' + d.venue + '</p>' +
+                            '</div>' +
+                            '</div>'
                     }
                 })
                 .style("left", (event.pageX + 10) + "px")
-                .style("top", (event.pageY - 28) + "px");
+                .style("top", (event.pageY - 28) + "px")
+            ;
         })
             .on('mouseout', function (d) {
                 tooltip.transition().duration(500).style("opacity", 0);
@@ -709,21 +725,38 @@
                 }
             })
 
+
         node.on('mouseover', function (event, d) {
             tooltip.transition().duration(200).style("opacity", .9);
-            {#tooltip.html(function(d) {return d.name})#}
             tooltip.html(
                 () => {
-                    if (d.group === 4 || d.group === 1) {
+                    if (d.group === 4) {
+                        return '<div class="publication-card" style="text-align: left">' +
+                            '<h4>' + d.name + '</h4>' +
+                            '<p>' + d.count + ' papers</p>' +
+                            '<br>' +
+                            '</div>'
+                    } else if (d.group === 1) {
                         return d.name
                     } else {
-                        return 'Title: ' + d.name +
-                            '<br>Citation: ' + d.citation +
-                            '<br>Year:' + d.released
+                        let temp_path = '/static/img/' + d.id + '.png'
+                        return '<div class="publication-card" style="width: 600px; text-align: left">' +
+                            '<div class="entry_img">' +
+                            '<img class="thumb" src="' + temp_path + '" alt="">' +
+                            '</div>' +
+                            '<div class="entry_main">' +
+                            '<h4>' + d.name + '</h4>' +
+                            '<p>' + d.authors + '</p>' +
+                            '<br>' +
+                            '<p>Published:' + d.released + '</p>' +
+                            '<p>Venue:' + d.venue + '</p>' +
+                            '</div>' +
+                            '</div>'
                     }
                 })
-                .style("left", (event.pageX + 10) + "px")
-                .style("top", (event.pageY - 28) + "px");
+                .style("left", (event.pageX + 100) + "px")
+                .style("top", (event.pageY - 280) + "px")
+            ;
         })
             .on('mouseout', function (d) {
                 tooltip.transition().duration(500).style("opacity", 0);

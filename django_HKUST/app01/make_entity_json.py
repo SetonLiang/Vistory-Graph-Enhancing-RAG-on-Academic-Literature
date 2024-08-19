@@ -33,6 +33,8 @@ for item in results_temp:
         'name': item['p']['name'],
         'released': item['p']['year'],
         'citation': int(item['p']['citation']),
+        'authors': item['p']['authors'],
+        'venue': item['p']['source'],
         'group': 0,
         'count': 0,
     }

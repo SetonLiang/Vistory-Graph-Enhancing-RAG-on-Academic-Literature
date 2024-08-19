@@ -31,19 +31,85 @@
             <div class="selector" id="selector4" value=" "></div>
             <div class="selector" id="selector5" value=" "></div>
             <div class="button" id="selector_button" onclick="clearSelector()">clear</div>
+
+            <div class="dropdown-container">
+                <span id="min_citation" class="local-label">Min_citation:</span>
+                <button id="dropdownButton" class="dropdown-button">40</button>
+                <div id="dropdownMenu" class="dropdown-menu">
+                    <a href="#" onclick="selectOption(0)" class="">0</a>
+                    <a href="#" onclick="selectOption(20)" class="">20</a>
+                    <a href="#" onclick="selectOption(40)" class="">40</a>
+                    <a href="#" onclick="selectOption(60)" class="">60</a>
+                    <a href="#" onclick="selectOption(80)" class="">80</a>
+                    <a href="#" onclick="selectOption(100)" class="">100</a>
+                    <script>
+                        let min_citation = 40;
+                        const dropdownButton = document.getElementById('dropdownButton');
+                        const dropdownMenu = document.getElementById('dropdownMenu');
+
+                        dropdownButton.addEventListener('click', toggleDropdown);
+
+                        function toggleDropdown() {
+                            dropdownMenu.classList.toggle('show');
+                        }
+
+                        function selectOption(option) {
+                            min_citation = option;
+                            filterNode(entity_data);
+                            LoadDepartmentData_with_min()
+                            dropdownButton.textContent = option;
+                            dropdownMenu.classList.remove('show');
+                        }
+
+                        function disableComponent() {
+                            dropdownButton.classList.add('disabled');
+                            dropdownButton.disabled = true;
+
+                            const links = dropdownMenu.querySelectorAll('a');
+                            links.forEach(link => {
+                                link.classList.add('disabled');
+                            });
+
+                            // Remove event listeners to prevent interaction
+                            dropdownButton.removeEventListener('click', toggleDropdown);
+                        }
+
+                        function enableComponent() {
+                            dropdownButton.classList.remove('disabled');
+                            dropdownButton.disabled = false;
+
+                            const links = dropdownMenu.querySelectorAll('a');
+                            links.forEach(link => {
+                                link.classList.remove('disabled');
+                            });
+
+                            // Re-add event listeners
+                            dropdownButton.addEventListener('click', toggleDropdown);
+                        }
+
+                        // Close dropdown if clicked outside
+                        window.addEventListener('click', (event) => {
+                            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                                dropdownMenu.classList.remove('show');
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
         </div>
+
 
     </div>
     <div class="main">
         <div class="left">
             <div class="top">
                 <div class="title-box">Chart
-{#                    <div class="btn-group">#}
-{#                        <button id="yearButton" onclick="update(year_data, 'year')">Year</button>#}
-{#                        <button id="authorButton" onclick="update(author_data, 'author')">Author</button>#}
-{#                        <button id="departmentButton" onclick="update(department_data, 'department')">department#}
-{#                        </button>#}
-{#                    </div>#}
+                    {#                    <div class="btn-group">#}
+                    {#                        <button id="yearButton" onclick="update(year_data, 'year')">Year</button>#}
+                    {#                        <button id="authorButton" onclick="update(author_data, 'author')">Author</button>#}
+                    {#                        <button id="departmentButton" onclick="update(department_data, 'department')">department#}
+                    {#                        </button>#}
+                    {#                    </div>#}
                 </div>
                 <div class="content-box hidden" id="chart">
                     <script>
@@ -52,7 +118,7 @@
                             x0Name, x1Name,
                             x0, x1, y, z,
                             initialData, newData,
-                        bars;
+                            bars;
                     </script>
                 </div>
 
@@ -60,68 +126,6 @@
             <div class="bottom">
                 <div class="title-box">Knowledge Graph
                     <div class="dropdown-container">
-                        <span id="min_citation" style="font-size: 16px; margin-bottom: 5px">min_citation:</span>
-                        <button id="dropdownButton" class="dropdown-button">40</button>
-                        <div id="dropdownMenu" class="dropdown-menu">
-                            <a href="#" onclick="selectOption(0)" class="">0</a>
-                            <a href="#" onclick="selectOption(20)" class="">20</a>
-                            <a href="#" onclick="selectOption(40)" class="">40</a>
-                            <a href="#" onclick="selectOption(60)" class="">60</a>
-                            <a href="#" onclick="selectOption(80)" class="">80</a>
-                            <a href="#" onclick="selectOption(100)" class="">100</a>
-                            <script>
-                                let min_citation = 40;
-                                const dropdownButton = document.getElementById('dropdownButton');
-                                const dropdownMenu = document.getElementById('dropdownMenu');
-
-                                dropdownButton.addEventListener('click', toggleDropdown);
-
-                                function toggleDropdown() {
-                                    dropdownMenu.classList.toggle('show');
-                                }
-
-                                function selectOption(option) {
-                                    min_citation = option;
-                                    filterNode(entity_data);
-                                    LoadDepartmentData_with_min()
-                                    dropdownButton.textContent = option;
-                                    dropdownMenu.classList.remove('show');
-                                }
-
-                                function disableComponent() {
-                                    dropdownButton.classList.add('disabled');
-                                    dropdownButton.disabled = true;
-
-                                    const links = dropdownMenu.querySelectorAll('a');
-                                    links.forEach(link => {
-                                        link.classList.add('disabled');
-                                    });
-
-                                    // Remove event listeners to prevent interaction
-                                    dropdownButton.removeEventListener('click', toggleDropdown);
-                                }
-
-                                function enableComponent() {
-                                    dropdownButton.classList.remove('disabled');
-                                    dropdownButton.disabled = false;
-
-                                    const links = dropdownMenu.querySelectorAll('a');
-                                    links.forEach(link => {
-                                        link.classList.remove('disabled');
-                                    });
-
-                                    // Re-add event listeners
-                                    dropdownButton.addEventListener('click', toggleDropdown);
-                                }
-
-                                // Close dropdown if clicked outside
-                                window.addEventListener('click', (event) => {
-                                    if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                                        dropdownMenu.classList.remove('show');
-                                    }
-                                });
-                            </script>
-                        </div>
                         <!-- 创建一个按钮组，包含刷新按钮 -->
                         <button class="refresh-btn" onclick="removeGraphNode()">
                             <!-- 嵌入SVG图标 -->
@@ -131,7 +135,6 @@
                             </svg>
                         </button>
                     </div>
-
                 </div>
                 <div class="content-box hidden" id="knowledgeGraph" style="height: calc(100% - 30px)">
                 </div>
@@ -142,59 +145,59 @@
                 <div class="title-box" id="publicationTitle">Publication</div>
                 <div class="content-box auto" id="publication" style="height: calc(100% - 30px)">
                     {% for publication in publication_list %}
-                    <div id="{{ publication.IdName }}" class="publication-card"
-                         style="border-color: rgb(200, 200, 200)">
-                        <div class="entry_img">
-                            {% with final_path='img/'|add:publication.IdName|add:'.png' %}
-                            {% if final_path|file_exists %}
-                            <img class="thumb" src="{% static final_path %}" alt="">
-                            {% else %}
-                            <!-- 文件不存在时显示的内容 -->
-                            <img class="thumb" src="{% static 'img/default.png' %}" alt="">
-                            {% endif %}
-                            {% endwith %}
-                        </div>
-                        <div class="entry_main">
-                            <div class="links">
-                                <a href="{{ publication.Doi }}" target="_blank">DOI</a>
-                                <a href="http://scholar.google.de/scholar?hl=en&amp;q={{ publication.Name }}"
-                                   target="_blank">Google Scholar</a>
-                                <a href="https://www.google.de/search?q={{ publication.Name }}"
-                                   target="_blank">Google</a>
+                        <div id="{{ publication.IdName }}" class="publication-card"
+                             style="border-color: rgb(200, 200, 200)">
+                            <div class="entry_img">
+                                {% with final_path='img/'|add:publication.IdName|add:'.png' %}
+                                    {% if final_path|file_exists %}
+                                        <img class="thumb" src="{% static final_path %}" alt="">
+                                    {% else %}
+                                        <!-- 文件不存在时显示的内容 -->
+                                        <img class="thumb" src="{% static 'img/default.png' %}" alt="">
+                                    {% endif %}
+                                {% endwith %}
                             </div>
-                            <div class="entry_header">
-                                <div class="vis  tooltipstered"></div>
-                                <div class="id">{{ publication.IdName }}</div>
-                                <div class="series">{{ publication.Sources }}</div>
-                                <div class="year">{{ publication.PublishedYears }}</div>
-                            </div>
-                            <a class="title" target="_blank" href="{{ publication.Doi }}">{{ publication.Name }}</a>
-                            <div class="authors">
-                                {% for author in publication.Authors %}
-                                {% if author == None %}
-                                {% else %}
-                                <div class="author" value="{{ author }}">
-                                    <span class="last_name">{{ author }}</span>
+                            <div class="entry_main">
+                                <div class="links">
+                                    <a href="{{ publication.Doi }}" target="_blank">DOI</a>
+                                    <a href="http://scholar.google.de/scholar?hl=en&amp;q={{ publication.Name }}"
+                                       target="_blank">Google Scholar</a>
+                                    <a href="https://www.google.de/search?q={{ publication.Name }}"
+                                       target="_blank">Google</a>
+                                </div>
+                                <div class="entry_header">
+                                    <div class="vis  tooltipstered"></div>
+                                    <div class="id">{{ publication.IdName }}</div>
+                                    <div class="series">{{ publication.Sources }}</div>
+                                    <div class="year">{{ publication.PublishedYears }}</div>
+                                </div>
+                                <a class="title" target="_blank" href="{{ publication.Doi }}">{{ publication.Name }}</a>
+                                <div class="authors">
+                                    {% for author in publication.Authors %}
+                                        {% if author == None %}
+                                        {% else %}
+                                            <div class="author" value="{{ author }}">
+                                                <span class="last_name">{{ author }}</span>
 
-<!--                                    <span class="last_name">{{ author|spilt_author_last }}</span>-->
-<!--                                    <span class="first_name">{{ author|spilt_author_first }}</span>-->
+                                                <!--                                    <span class="last_name">{{ author|spilt_author_last }}</span>-->
+                                                <!--                                    <span class="first_name">{{ author|spilt_author_first }}</span>-->
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
                                 </div>
-                                {% endif %}
-                                {% endfor %}
-                            </div>
-                            <div class="abstract text-collapse"
-                                 value="{{ publication.Abstracts }}"
-                                 onclick="text_collapse(d3.select(this))">
-                                <span class="label">Abstract: </span>
-                                {{ publication.Abstracts }}
-                            </div>
-                            <div class="tags">
-                                <div class="tag">
-                                    {{ publication.Keywords }}
+                                <div class="abstract text-collapse"
+                                     value="{{ publication.Abstracts }}"
+                                     onclick="text_collapse(d3.select(this))">
+                                    <span class="label">Abstract: </span>
+                                    {{ publication.Abstracts }}
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">
+                                        {{ publication.Keywords }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     {% endfor %}
                 </div>
             </div>
