@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from app01.models import PublicationDatasets
 # from view_knowledge_graph import query_author
 from app01.views.view_knowledge_graph import query_author, query_year, query_authors_chart, flite_authors, flite_years, \
-    query_departments_chart, query_departments_min_chart
+    query_departments_chart, query_departments_min_chart, flite_dept
 
 
 # Create your views here.
@@ -106,6 +106,7 @@ def query(request):
     # 检索选中的作者
     author_results = flite_authors(data['author'])
     year_results = flite_years(data['year'])
+    dept_results = flite_dept(data['dept'])
 
     # 检索选中的作者
     # for i in range(len(data['author'])):
@@ -145,7 +146,7 @@ def query(request):
     #     else:
     #         year_results = list(set(year_results) & set(d_result))
 
-    results = common_elements(author_results, keywords_results, series_results, year_results)
+    results = common_elements(author_results, keywords_results, series_results, year_results, dept_results)
     print('Finished getting query')
     return HttpResponse(json.dumps({'all_IdName': all_IdName, 'result_IdName': results}))
 

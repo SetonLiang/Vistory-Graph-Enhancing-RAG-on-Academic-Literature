@@ -7,13 +7,11 @@ driver = GraphDatabase.driver(URI, auth=AUTH)
 
 min = 0
 
-result = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
-WHERE COALESCE(p.citation, '0') > '0'
-WITH d.name AS department, p.year AS year, COUNT(p) AS paper_count
-ORDER BY department, year
-WITH year, COLLECT(paper_count) AS counts
-RETURN COLLECT(counts) AS yearly_counts
-
+result = '''
+MATCH (a:Author)-[:BELONGS_TO]->(d1:Department {name: "DSA"}),
+      (a)-[:BELONGS_TO]->(d2:Department {name: "CMA"}),
+      (a)<-[:OWNED_BY]-(p:Papers)
+RETURN COLLECT(DISTINCT p.id) AS paper_ids
         '''
 
 with driver.session(database="neo4j") as session:

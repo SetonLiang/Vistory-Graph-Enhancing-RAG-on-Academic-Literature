@@ -236,3 +236,31 @@ def flite_years(years):
         return results_list
     else:
         return []
+
+
+def flite_dept(departments):
+    print(departments)
+    if len(departments) == 0:
+        return 0
+    elif len(departments) == 1:
+        cypher_query = '''MATCH (d:Department {name: "%s"})<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
+                        RETURN COLLECT(DISTINCT p.id) AS paper_ids''' % departments[0]
+    elif len(departments) == 2:
+        cypher_query = '''MATCH (a:Author)-[:BELONGS_TO]->(d1:Department {{name: "{}"}}),
+      (a)-[:BELONGS_TO]->(d2:Department {{name: "{}"}}),
+      (a)<-[:OWNED_BY]-(p:Papers)
+        RETURN COLLECT(DISTINCT p.id) AS paper_ids'''.format(departments[0], departments[1])
+        print(cypher_query)
+    elif len(departments) == 3:
+        cypher_query = '''MATCH (a:Author)-[:BELONGS_TO]->(d1:Department {{name: "{}"}}),
+        (a)-[:BELONGS_TO]->(d2:Department {{name: "{}"}}),
+        (a)-[:BELONGS_TO]->(d3:Department {{name: "{}"}}),
+        (a)<-[:OWNED_BY]-(p:Papers)
+          RETURN COLLECT(DISTINCT p.id) AS paper_ids'''.format(departments[0], departments[1], departments[2])
+    else:
+        return 0
+
+    with driver.session(database="neo4j") as session:
+        results = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())[0]['paper_ids']
+
+    return results

@@ -87,6 +87,15 @@
                 } else {
                     return d3.rgb(z(d.i)).brighter(1); // Lighter color for old data
                 }
+            })
+            .on('click', function(event, d, i){
+                query_list.push(x1Name[d.i]);
+                query_list.push(x0Name[d.j]);
+                query_year_list.push(x0Name[d.j]);
+                query_dept_list.push(x1Name[d.i])
+                QueryResults();
+                fixSelectors(x1Name[d.i]);
+                fixSelectors(x0Name[d.j])
             });
 
         // Conditionally apply transition only if className is "new"

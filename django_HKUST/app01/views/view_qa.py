@@ -41,7 +41,7 @@ def chat(request):
         # 运行QA链
         # output = chain.invoke({"question": user_input.lower()})
         output = '1111111'
-        with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
+        with open('app01/datasets/entity_qa_test.json', 'r', encoding='utf-8') as f:
             paper_entity = json.load(f)
         # ans = chain.invoke(
         #     {
