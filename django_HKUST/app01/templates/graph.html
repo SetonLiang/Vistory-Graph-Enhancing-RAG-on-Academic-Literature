@@ -65,6 +65,12 @@
         .style("width", '100%')
         .style("height", 'auto')
         .attr("viewBox", [0, 0, width, height])
+        .on('click', function (e) {
+            console.log(11111111)
+            if (e.target.tagName === 'svg') {
+                resetNodeColors();
+            }
+        })
 
 
     function createMarker(id, d, fill, opacity, refX, refY) {
@@ -92,7 +98,8 @@
     const negativeMarker = createMarker('negativeMarker', 'M 10 -5 L 0 0 L 10 5', color[3], 0.1, -15, 0);
 
 
-    svg.append('rect').attr('id', 'rect').attr('height', '100%').attr('width', '100%').attr('fill', 'white')
+    {#svg.append('rect').attr('id', 'rect').attr('height', '100%').attr('width', '100%').attr('fill', 'white')#}
+
     const g = svg.append('g').attr('id', 'graph_svg_g')
 
     const zoom = d3.zoom().scaleExtent([0.1, 10]).on('zoom', function (event) {
@@ -452,6 +459,10 @@
                     QueryResults();
                     fixSelectors(d.name);
                 }
+                selectedNode = d;
+
+                // Call the function to highlight the neighborhood
+                highlightNeighborhood(selectedNode);
             });
 
         node.on('mouseover', function (event, d) {
@@ -706,15 +717,20 @@
                     fixSelectors(d.id)
                 }
                 if (d.group === 4) {
-                    if (already_click_author.indexOf(d.name) === -1 || already_click_author.length === 0) {
-                        query_paper(d.name);
-                    }
+                    //if (already_click_author.indexOf(d.name) === -1 || already_click_author.length === 0) {
+                    //    query_paper(d.name);
+                    //}
                     already_click_author.push(d.name)
                     query_list.push(d.name)
                     query_author_list.push(d.name)
                     QueryResults()
                     fixSelectors(d.name)
                 }
+                // Set the clicked node as the selected node
+                selectedNode = d;
+
+                // Call the function to highlight the neighborhood
+                highlightNeighborhood(selectedNode);
             })
 
         node.on('mouseover', function (event, d) {
@@ -1046,6 +1062,240 @@
                     });
             });
     }
+
+
+    let selectedNode = null;
+
+    // Function to highlight the selected node and its first-order neighbors
+    function highlightNeighborhood(selectedNode) {
+        const neighbors = new Set();
+
+        // Find the neighbors (first-order connections)
+        console.log(selectedNode)
+        links.forEach(link => {
+            if (link.source.name === selectedNode.name) {
+                neighbors.add(link.target.name);
+            } else if (link.target.name === selectedNode.name) {
+                neighbors.add(link.source.name);
+            }
+        });
+        neighbors.add(selectedNode.name); // Also include the selected node itself
+
+        // Update the color of nodes
+        node.attr('fill', (n) => {
+            if (neighbors.has(n.name)) {
+                // Original color for the selected node and its neighbors
+                if (n.group === 0) {
+                    return colorScale(parseInt(n.released));
+                } else if (n.group === 4) {
+                    return colorScale_auther(n.count);
+                } else {
+                    if (n.name === "AI") {
+                        return '#e3716e';
+                    } else if (n.name === "CMA") {
+                        return '#7ac7e2';
+                    } else if (n.name === 'DSA') {
+                        return '#f7df87';
+                    }
+                }
+            } else {
+                // Lighten color for other nodes
+                return "#ddd"; // or use a different light color
+            }
+        });
+
+        // Update the color of links
+        link.attr("stroke", (l) => {
+            if (neighbors.has(l.source.name) && neighbors.has(l.target.name)) {
+                return color[3]; // Original color for links between selected node and its neighbors
+            } else {
+                return "#ddd"; // Lighten color for other links
+            }
+        }).attr("stroke-opacity", (l) => {
+            if (neighbors.has(l.source.name) && neighbors.has(l.target.name)) {
+                if (l.relationship === 'BELONGS_TO') {
+                    return 1;
+                } else {
+                    return 0.6;
+                }
+            } else {
+                return 0.3; // Reduce opacity for other links
+            }
+        });
+    }
+
+    // Function to reset all nodes to their original colors
+    function resetNodeColors() {
+        node.attr('fill', (n) => {
+            if (n.group === 0) {
+                return colorScale(parseInt(n.released));
+            } else if (n.group === 4) {
+                return colorScale_auther(n.count);
+            } else {
+                if (n.name === "AI") {
+                    return '#e3716e';
+                } else if (n.name === "CMA") {
+                    return '#7ac7e2';
+                } else if (n.name === 'DSA') {
+                    return '#f7df87';
+                }
+            }
+        });
+
+        link.attr("stroke", color[3])
+            .attr("stroke-opacity", (d) => {
+                if (d.relationship === 'BELONGS_TO') {
+                    return 1;
+                } else {
+                    return 0.6;
+                }
+            });
+
+
+        selectedNode = null; // Clear the selection
+    }
+
+    // Function to highlight papers published in a specific year and their neighbors
+    function highlightPapersByYear(year) {
+        const papers = nodes.filter(n => n.group === 0 && n.released === year);
+        const neighbors = new Set();
+        const relatedLinks = new Set();
+
+        papers.forEach(paper => {
+            neighbors.add(paper.name);
+            links.forEach(link => {
+                if (link.source.name === paper.name || link.target.name === paper.name) {
+                    neighbors.add(link.source.name);
+                    neighbors.add(link.target.name);
+                    relatedLinks.add(link);
+                }
+            });
+        });
+
+        // Update the color of nodes
+        node.attr('fill', (n) => {
+            if (neighbors.has(n.name)) {
+                // Original color for the paper and its neighbors
+                if (n.group === 0) {
+                    return colorScale(parseInt(n.released));
+                } else if (n.group === 4) {
+                    return colorScale_auther(n.count);
+                } else {
+                    if (n.name === "AI") {
+                        return '#e3716e';
+                    } else if (n.name === "CMA") {
+                        return '#7ac7e2';
+                    } else if (n.name === 'DSA') {
+                        return '#f7df87';
+                    }
+                }
+            } else {
+                // Lighten color for other nodes
+                return "#ddd"; // or use a different light color
+            }
+        });
+
+        // Update the color of links
+        link.attr("stroke", (l) => {
+            if (relatedLinks.has(l)) {
+                return color[3]; // Original color for links between papers and their neighbors
+            } else {
+                return "#ddd"; // Lighten color for other links
+            }
+        }).attr("stroke-opacity", (l) => {
+            if (relatedLinks.has(l)) {
+                if (l.relationship === 'BELONGS_TO') {
+                    return 1;
+                } else {
+                    return 0.6;
+                }
+            } else {
+                return 0.3; // Reduce opacity for other links
+            }
+        });
+    }
+
+    // Function to highlight nodes based on department and year
+    function highlightByDepartmentAndYear(departmentName, year) {
+        // Find the selected department
+        const department = nodes.find(n => n.group === 1 && n.name === departmentName);
+        if (!department) return;
+
+        // Find authors belonging to this department
+        const authors = nodes.filter(n => n.group === 4 &&
+            links.some(l => l.source.name === department.name && l.target.name === n.name));
+
+        const papers = [];
+        const neighbors = new Set();
+        const relatedLinks = new Set();
+
+        authors.forEach(author => {
+            // Add the author as a neighbor
+            neighbors.add(author.name);
+
+            // Find papers by this author in the selected year
+            const authorPapers = nodes.filter(n => n.group === 0 && n.released === year &&
+                links.some(l => l.source.name === author.name && l.target.name === n.name));
+
+            papers.push(...authorPapers);
+
+            // Add the paper as a neighbor
+            authorPapers.forEach(paper => {
+                neighbors.add(paper.name);
+
+                // Add links related to this author and paper
+                links.forEach(link => {
+                    if ((link.source.name === author.name && link.target.name === paper.name) ||
+                        (link.target.name === author.name && link.source.name === paper.name)) {
+                        relatedLinks.add(link);
+                    }
+                });
+            });
+        });
+
+        // Update the color of nodes
+        node.attr('fill', (n) => {
+            if (n.name === department.name || neighbors.has(n.name)) {
+                // Original color for the department, authors, and papers
+                if (n.group === 0) {
+                    return colorScale(parseInt(n.released));
+                } else if (n.group === 4) {
+                    return colorScale_auther(n.count);
+                } else {
+                    if (n.name === "AI") {
+                        return '#e3716e';
+                    } else if (n.name === "CMA") {
+                        return '#7ac7e2';
+                    } else if (n.name === 'DSA') {
+                        return '#f7df87';
+                    }
+                }
+            } else {
+                // Lighten color for other nodes
+                return "#ddd"; // or use a different light color
+            }
+        });
+
+        // Update the color of links
+        link.attr("stroke", (l) => {
+            if (relatedLinks.has(l) || (l.source.name === department.name && neighbors.has(l.target.name))) {
+                return color[3]; // Original color for links between the department, authors, and papers
+            } else {
+                return "#ddd"; // Lighten color for other links
+            }
+        }).attr("stroke-opacity", (l) => {
+            if (relatedLinks.has(l) || (l.source.name === department.name && neighbors.has(l.target.name))) {
+                if (l.relationship === 'BELONGS_TO') {
+                    return 1;
+                } else {
+                    return 0.6;
+                }
+            } else {
+                return 0.3; // Reduce opacity for other links
+            }
+        });
+    }
+
 
 </script>
 

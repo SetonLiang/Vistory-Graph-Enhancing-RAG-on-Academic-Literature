@@ -49,6 +49,7 @@
             .selectAll("text")  // 选择所有x轴的刻度标签
             .style("cursor", "pointer")  // 添加鼠标指针样式，表示可点击
             .on("click", function (event, d) {
+                highlightPapersByYear(d)
                 query_list.push(d);
                 query_year_list.push(d);
                 QueryResults();
@@ -96,6 +97,7 @@
                 QueryResults();
                 fixSelectors(x1Name[d.i]);
                 fixSelectors(x0Name[d.j])
+                highlightByDepartmentAndYear(x1Name[d.i],x0Name[d.j])
             });
 
         // Conditionally apply transition only if className is "new"
