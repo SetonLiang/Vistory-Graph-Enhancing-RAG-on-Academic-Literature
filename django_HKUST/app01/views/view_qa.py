@@ -1,6 +1,7 @@
-import json
+import json,time
 
 from django.shortcuts import HttpResponse, render
+from django.http import StreamingHttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from app01.views import graph_rag
@@ -23,7 +24,7 @@ def chat(request):
         answer_template = """Answer the question based only on the following context:
                     {context}
                     Question: {question}
-                    Use natural language and be concise.
+                    Use natural language and provide a concise, detailed answer.
                     Answer:"""
         answer_prompt = graph_rag.ChatPromptTemplate.from_template(answer_template)
         print(answer_prompt)
@@ -34,14 +35,26 @@ def chat(request):
                     "question": graph_rag.RunnablePassthrough(),
                 })
                 | answer_prompt
-                | graph_rag.ChatOpenAI(temperature=0)
+                | graph_rag.ChatOpenAI(temperature=0,streaming=True)
                 | graph_rag.StrOutputParser()
         )
 
         # 运行QA链
-        # output = chain.invoke({"question": user_input.lower()})
-        output = '1111111'
-        with open('app01/datasets/entity_qa_test.json', 'r', encoding='utf-8') as f:
+        output = chain.invoke({"question": user_input.lower()})
+        # output = '1111111'
+        def generate():
+            full_message = ''
+            for chunk in chain.stream({"question": user_input.lower()}):
+                full_message += chunk
+                # 处理到达一定长度后发送一个完整消息块
+                if len(full_message) > 1000:  # 调整阈值以满足实际需求
+                    yield json.dumps({"response": full_message}) + '\n'
+                    full_message = ''
+            
+            # 确保最后剩余的消息块也被发送
+            if full_message:
+                yield json.dumps({"response": full_message}) + '\n'
+        with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
             paper_entity = json.load(f)
         # ans = chain.invoke(
         #     {
@@ -63,3 +76,5 @@ def chat(request):
 
         # res = response.json()['choices'][0]['message']['content']
         return HttpResponse(json.dumps({'response': output, 'entity': paper_entity}))
+        # return StreamingHttpResponse(generate(), content_type='application/json')
+    # return HttpResponse(status=405) 

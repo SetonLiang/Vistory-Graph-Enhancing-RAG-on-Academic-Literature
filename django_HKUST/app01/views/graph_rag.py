@@ -214,7 +214,7 @@ entity_prompt = ChatPromptTemplate.from_messages([
 ])
 
 # 实体链
-entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-4').with_structured_output(Entities)
+entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-3.5-turbo').with_structured_output(Entities)
 # print(entity_chain)
 # print(entity_chain.invoke({"question":"How many authors does CMA have?","examples":examples}).names)
 # print(structured_retriever("What are the key contributions of Kang Zhang's papers?"))
@@ -354,7 +354,7 @@ def structured_retriever(question: str) -> dict:
                 if filtered_papers:
                     result.append({
                         "type": "department",
-                        "author": record['a'].get('name'),
+                        # "author": record['a'].get('name'),
                         "papers": filtered_papers,
                         "department": record['d'].get('name'),
                         "paper_count": paper_count
@@ -501,23 +501,23 @@ def retriever(question: str):
     graph.query("CREATE FULLTEXT INDEX entity IF NOT EXISTS FOR (e:__Entity__) ON EACH [e.id]")
 
     print(f"Search query: {question}")
-    structured_data = structured_retriever(question)
-    is_year = structured_data.get('is_year')
-    structured_results = structured_data.get('results', [])
+    # structured_data = structured_retriever(question)
+    # is_year = structured_data.get('is_year')
+    # structured_results = structured_data.get('results', [])
 
     unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
-    if is_year:
-        relevant_paper = [record.get('paper') for record in structured_results]
-    else:
-        relevant_paper = extract_paper_names(unstructured_data)
+
+    # if is_year:
+    #     relevant_paper = [record.get('paper') for record in structured_results]
+    # else:
+    relevant_paper = extract_paper_names(unstructured_data)
     if len(relevant_paper)>10:
         relevant_paper = relevant_paper[:10]
     print(relevant_paper)
     paper_entity = make_entity_json(relevant_paper,session)
     with open('app01/datasets/test.json', 'w') as f:
         json.dump(paper_entity, f, indent=4)
-    final_data = f"""Structured data: 
-                    {structured_data}
+    final_data = f"""
                     Unstructured data:
                     {"#Document ".join(unstructured_data)}
                 """

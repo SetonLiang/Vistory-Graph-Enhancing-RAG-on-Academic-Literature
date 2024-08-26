@@ -77,6 +77,54 @@
         })
         return botRes;
     }
+    function old_generateBotResponse(userInput) {
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://127.0.0.1:8000/qa/chat', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+    
+        let responseBuffer = ''; // 用于缓存所有数据块
+        let completeMessage = ''; // 缓存完整消息
+    
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 3) { // 处理流式数据
+                responseBuffer += xhr.responseText;
+    
+                try {
+                    // 检查是否接收到完整的消息块
+                    let endIndex = responseBuffer.lastIndexOf('\n');
+                    if (endIndex !== -1) {
+                        let chunks = responseBuffer.slice(0, endIndex).split('\n');
+                        responseBuffer = responseBuffer.slice(endIndex + 1); // 更新缓冲区
+    
+                        // 处理每个消息块
+                        for (let chunk of chunks) {
+                            try {
+                                // 解析 JSON 数据
+                                let json = JSON.parse(chunk);
+                                if (json.response) {
+                                    completeMessage += json.response;
+                                }
+                            } catch (e) {
+                                console.error("解析数据块时出错:", e);
+                            }
+                        }
+    
+                        // 更新 UI 显示完整消息
+                        if (completeMessage.trim()) {
+                            streamBotResponse(completeMessage);
+                            completeMessage = ''; // 清空缓存
+                        }
+                    }
+                } catch (e) {
+                    console.error("处理数据块时出错:", e);
+                }
+            }
+        };
+    
+        xhr.send(JSON.stringify({'message': userInput}));
+    }
+
+    
 
     function controlGraph(botRes, entityRes) {
         console.log(entityRes)
@@ -110,6 +158,7 @@
             messageElement.scrollIntoView({behavior: 'smooth'});
         }, 5); // Adjust the interval time to control the speed of the typing effect
     }
+    
 
     // Allow pressing Enter to send the message
     document.getElementById('user-input').addEventListener('keydown', function (event) {

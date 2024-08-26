@@ -1,4 +1,506 @@
 {
-    "nodes": [],
-    "links": []
+    "nodes": [
+        {
+            "group": 2,
+            "name": "probabilistic principal component analysis (PCA) model"
+        },
+        {
+            "group": 0,
+            "name": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
+            "id": "xu2024robust",
+            "released": "2024",
+            "count": 0,
+            "citation": 0
+        },
+        {
+            "name": "normalization",
+            "group": 2
+        },
+        {
+            "name": "smartglasses",
+            "group": 2
+        },
+        {
+            "name": "distribution shift",
+            "group": 2
+        },
+        {
+            "released": "2020",
+            "group": 0,
+            "name": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "citation": 56,
+            "count": 0,
+            "id": "he2020benchmarking"
+        },
+        {
+            "name": "Deep Learning",
+            "group": 2
+        },
+        {
+            "name": "likelihood ratio test (LRT)",
+            "group": 2
+        },
+        {
+            "name": "digital twins",
+            "group": 2
+        },
+        {
+            "name": "machine learning for data management",
+            "group": 2
+        },
+        {
+            "name": "Neural Machine Translation",
+            "group": 2
+        },
+        {
+            "released": "2020",
+            "group": 0,
+            "citation": 27,
+            "id": "wang2020monotonic",
+            "count": 0,
+            "name": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach"
+        },
+        {
+            "name": "Evolutionary Algorithm",
+            "group": 2
+        },
+        {
+            "name": "Deep learning",
+            "group": 2
+        },
+        {
+            "name": "Molecular Optimization",
+            "group": 2
+        },
+        {
+            "name": "cardinality estimation",
+            "group": 2
+        },
+        {
+            "name": "fault direction",
+            "group": 2
+        },
+        {
+            "name": "deep learning",
+            "group": 2
+        },
+        {
+            "name": "similarity selection",
+            "group": 2
+        },
+        {
+            "name": "CT scans",
+            "group": 2
+        },
+        {
+            "citation": 12,
+            "group": 0,
+            "released": "2021",
+            "count": 0,
+            "id": "he2021efficient",
+            "name": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+        },
+        {
+            "released": "2020",
+            "name": "Automatic mandibular canal detection using a deep convolutional neural network",
+            "group": 0,
+            "count": 0,
+            "citation": 115,
+            "id": "kwak2020automatic"
+        },
+        {
+            "name": "interaction techniques",
+            "group": 2
+        },
+        {
+            "name": "smart city",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "machine learning"
+        },
+        {
+            "group": 2,
+            "name": "virtual reality"
+        },
+        {
+            "group": 2,
+            "name": "augmented reality"
+        },
+        {
+            "name": "Data augmentation",
+            "group": 2
+        },
+        {
+            "released": "2020",
+            "group": 0,
+            "name": "A survey of deep learning techniques for neural machine translation",
+            "count": 0,
+            "citation": 177,
+            "id": "yang2020survey"
+        },
+        {
+            "name": "uncertainty",
+            "group": 2
+        },
+        {
+            "name": "conformal prediction",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "COVID-19"
+        },
+        {
+            "group": 2,
+            "name": "Chest CT"
+        },
+        {
+            "group": 0,
+            "released": "2021",
+            "id": "he2021automated",
+            "count": 0,
+            "citation": 42,
+            "name": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans"
+        },
+        {
+            "name": "urban computing",
+            "group": 2
+        },
+        {
+            "name": "Composite hypothesis",
+            "group": 2
+        },
+        {
+            "group": 0,
+            "released": "2021",
+            "name": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
+            "citation": 17,
+            "count": 0,
+            "id": "li2021directional"
+        },
+        {
+            "name": "Benchmark",
+            "group": 2
+        },
+        {
+            "name": "Extended reality",
+            "group": 2
+        },
+        {
+            "name": "AutoML",
+            "group": 2
+        },
+        {
+            "group": 0,
+            "id": "niutrading",
+            "released": "2023",
+            "count": 0,
+            "citation": 0,
+            "name": "Trading-off Multiple Properties for Molecular Optimization"
+        },
+        {
+            "name": "Multi-objective optimization",
+            "group": 2
+        },
+        {
+            "name": "Neural Architecture Search",
+            "group": 2
+        },
+        {
+            "released": "2020",
+            "group": 0,
+            "citation": 8,
+            "name": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "count": 0,
+            "id": "lee2020towards"
+        },
+        {
+            "name": "Attention Mechanism",
+            "group": 2
+        },
+        {
+            "name": "Preference-Conditioned Inversion",
+            "group": 2
+        },
+        {
+            "name": "Fugee Tsung",
+            "type": "Author",
+            "count": 57,
+            "group": 4
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 250,
+            "group": 4
+        },
+        {
+            "name": "Xiaowen Chu",
+            "type": "Author",
+            "count": 93,
+            "group": 4
+        },
+        {
+            "name": "Jia Li",
+            "type": "Author",
+            "count": 57,
+            "group": 4
+        },
+        {
+            "name": "Sihong Xie",
+            "type": "Author",
+            "count": 25,
+            "group": 4
+        },
+        {
+            "name": "Wei Wang",
+            "type": "Author",
+            "count": 54,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "relationship": "HAS_KEYWORD",
+            "target": "Benchmark"
+        },
+        {
+            "target": "deep learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "cardinality estimation",
+            "source": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach"
+        },
+        {
+            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "relationship": "HAS_KEYWORD",
+            "target": "Chest CT"
+        },
+        {
+            "source": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
+            "relationship": "HAS_KEYWORD",
+            "target": "distribution shift"
+        },
+        {
+            "source": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
+            "target": "conformal prediction",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
+            "target": "probabilistic principal component analysis (PCA) model"
+        },
+        {
+            "source": "Pan Hui",
+            "target": "Automatic mandibular canal detection using a deep convolutional neural network",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "machine learning for data management",
+            "source": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach"
+        },
+        {
+            "source": "A survey of deep learning techniques for neural machine translation",
+            "relationship": "HAS_KEYWORD",
+            "target": "Attention Mechanism"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "COVID-19",
+            "source": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+        },
+        {
+            "target": "Extended reality",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "relationship": "HAS_KEYWORD",
+            "target": "Data augmentation"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
+            "target": "normalization"
+        },
+        {
+            "target": "interaction techniques",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Neural Architecture Search",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+        },
+        {
+            "source": "A survey of deep learning techniques for neural machine translation",
+            "relationship": "HAS_KEYWORD",
+            "target": "Neural Machine Translation"
+        },
+        {
+            "target": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Trading-off Multiple Properties for Molecular Optimization",
+            "relationship": "HAS_KEYWORD",
+            "target": "Preference-Conditioned Inversion"
+        },
+        {
+            "source": "Fugee Tsung",
+            "target": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "Evolutionary Algorithm",
+            "source": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+        },
+        {
+            "source": "Jia Li",
+            "target": "Trading-off Multiple Properties for Molecular Optimization",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Multi-objective optimization",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+        },
+        {
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "relationship": "HAS_KEYWORD",
+            "target": "augmented reality"
+        },
+        {
+            "source": "Trading-off Multiple Properties for Molecular Optimization",
+            "relationship": "HAS_KEYWORD",
+            "target": "Molecular Optimization"
+        },
+        {
+            "source": "A survey of deep learning techniques for neural machine translation",
+            "target": "Deep Learning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
+            "target": "likelihood ratio test (LRT)"
+        },
+        {
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "relationship": "HAS_KEYWORD",
+            "target": "digital twins"
+        },
+        {
+            "source": "Xiaowen Chu",
+            "target": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "relationship": "HAS_KEYWORD",
+            "target": "Deep learning"
+        },
+        {
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "relationship": "HAS_KEYWORD",
+            "target": "virtual reality"
+        },
+        {
+            "source": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
+            "relationship": "HAS_KEYWORD",
+            "target": "machine learning"
+        },
+        {
+            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "relationship": "HAS_KEYWORD",
+            "target": "AutoML"
+        },
+        {
+            "source": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
+            "relationship": "HAS_KEYWORD",
+            "target": "uncertainty"
+        },
+        {
+            "target": "smartglasses",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
+            "source": "Sihong Xie",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "CT scans",
+            "relationship": "HAS_KEYWORD",
+            "source": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "COVID-19",
+            "source": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans"
+        },
+        {
+            "target": "similarity selection",
+            "relationship": "HAS_KEYWORD",
+            "source": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach"
+        },
+        {
+            "source": "Wei Wang",
+            "target": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Xiaowen Chu",
+            "target": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "fault direction",
+            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Composite hypothesis",
+            "relationship": "HAS_KEYWORD",
+            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework"
+        },
+        {
+            "target": "urban computing",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "smart city",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Xiaowen Chu",
+            "target": "A survey of deep learning techniques for neural machine translation",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Xiaowen Chu",
+            "target": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "relationship": "HAS_KEYWORD",
+            "target": "COVID-19"
+        }
+    ]
 }
