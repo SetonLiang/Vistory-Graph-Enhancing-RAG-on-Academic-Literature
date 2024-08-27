@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from app01.models import PublicationDatasets
 from app01.views.view_knowledge_graph import flite_years, query_departments_chart, query_departments_min_chart, \
-    flite_dept, query_paper_department, query_paper_department_year
+    flite_dept, query_paper_department, query_paper_department_year, query_keywords
 from app01.views.view_knowledge_graph import query_author, query_year, query_authors_chart, flite_authors
 
 
@@ -32,6 +32,12 @@ def get_data_for_chart(request):
         'chart3': paper_department_year,
         'chart4': paper_author,
     }
+    return HttpResponse(json.dumps(results))
+
+
+def get_keyword_for_word_cloud(request):
+
+    results = query_keywords()
     return HttpResponse(json.dumps(results))
 
 

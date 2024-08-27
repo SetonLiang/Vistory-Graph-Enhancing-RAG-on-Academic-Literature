@@ -126,38 +126,6 @@
                     <div id="wordCloud_container" style="height: 100%;width: 100%">
                     </div>
                 </div>
-                <script>
-                    window.onload = function () {
-                        const cloud_containerWidth = d3.select('#wordCloud_container').node().getBoundingClientRect().width;
-                        const cloud_containerHeight = d3.select('#wordCloud_container').node().getBoundingClientRect().height;
-                        d3.select('#wordCloud_container').append('div')
-                            .attr('id', 'wordCloud')
-                            .style('height', cloud_containerHeight + 'px').style('width', cloud_containerWidth + 'px')
-                        const wordArray = [
-                            ['JavaScript', 15],
-                            ['HTML', 10],
-                            ['CSS', 9],
-                            ['Web Development', 14],
-                            ['Programming', 12],
-                            ['Coding', 8],
-                            ['Frontend', 11],
-                            ['Backend', 7],
-                            ['Framework', 6],
-                            ['Library', 5]
-                        ];
-
-                        WordCloud(document.getElementById('wordCloud'), {
-                            list: wordArray,
-                            gridSize: 3,
-                            weightFactor: 3,
-                            fontFamily: 'Roboto, sans-serif',
-                            color: 'random-light',
-                            rotateRatio: 0.5,
-                            backgroundColor: '#f0f0f0'
-                        });
-                    }
-
-                </script>
                 <div>
                     {#                <div class="content-box auto" id="publication" style="height: calc(100% - 30px)">#}
                     {#                    {% for publication in publication_list %}#}
@@ -259,6 +227,40 @@
 </script>
 
 <script>
+    window.onload = function () {
+        LoadKeywords()
+    }
+
+    function createWordCloud(wordArray) {
+        const cloud_containerWidth = d3.select('#wordCloud_container').node().getBoundingClientRect().width;
+        const cloud_containerHeight = d3.select('#wordCloud_container').node().getBoundingClientRect().height;
+        d3.select('#wordCloud_container').append('div')
+            .attr('id', 'wordCloud')
+            .style('height', cloud_containerHeight + 'px').style('width', cloud_containerWidth + 'px')
+
+        WordCloud(document.getElementById('wordCloud'), {
+            list: wordArray,
+            gridSize: 1,
+            weightFactor: 1.5,
+            fontFamily: 'Roboto, sans-serif',
+            color: 'random-dark',
+            rotateRatio: 0.5,
+            backgroundColor: '#ffffff'
+        });
+    }
+
+
+    function LoadKeywords() {
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data_neo4j/keyword',
+            type: 'GET', // 发送信息至服务器时内容编码类型
+            data: {},
+            success: function (res) {
+                let request = JSON.parse(res)
+                createWordCloud(request)
+            }
+        })
+    }
 
     const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
