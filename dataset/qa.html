@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q&A Dialog</title>
+    <link rel="stylesheet" href="{% static 'css/for_qa.css' %}">
+</head>
+<body>
+<div style="height: 100%; width: 100%;overflow: hidden">
+    <div id="chat-container">
+        <div id="chat-box">
+            <div id="messages"></div>
+        </div>
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Type your question here...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // script.js
+    document.getElementById('send-button').addEventListener('click', function () {
+        const userInput = document.getElementById('user-input').value;
+        if (userInput.trim() !== "") {
+            addMessage(userInput, 'user');
+            document.getElementById('user-input').value = '';
+            
+            handleNewQuestion() 
+            generateBotResponse(userInput)
+
+        }
+    });
+
+    function addMessage(message, sender) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', sender + '-message');
+        messageElement.textContent = message;
+        document.getElementById('messages').appendChild(messageElement);
+        messageElement.scrollIntoView({behavior: 'smooth'});
+    }
+
+    function old_generateBotResponse(userInput) {
+        // This is a placeholder response.
+        // In a real application, you would replace this with an API call to your backend or AI model.
+        let botRes
+        let entityRes
+        $.ajax({
+            url: 'http://127.0.0.1:8000/qa/chat',
+            type: 'POST',
+            contentType: 'application/json', // 发送信息至服务器时内容编码类型
+            data: JSON.stringify({'message': userInput}),
+            success: function (res) {
+                let request = JSON.parse(res)
+                botRes = request['response']
+                entityRes = request['entity']
+                controlGraph(botRes, entityRes)
+            }
+        })
+        return botRes;
+    }
+    function generateBotResponse(userInput) {
+        // 使用 fetch 发送 POST 请求
+        fetch('http://127.0.0.1:8000/qa/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({'message': userInput}),
+        })
+        .then(response => {
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder("utf-8");
+            let responseBuffer = ''; // 缓存流数据
+    
+            // 处理流式数据
+            const processStream = () => {
+                reader.read().then(({ done, value }) => {
+                    if (done) {
+                        // 流数据读取完成
+                        return;
+                    }
+    
+                    // 解码并处理数据块
+                    responseBuffer += decoder.decode(value, { stream: true });
+    
+                    // 处理数据块
+                    let endIndex = responseBuffer.lastIndexOf('\n');
+                    if (endIndex !== -1) {
+                        let chunks = responseBuffer.slice(0, endIndex).split('\n');
+                        responseBuffer = responseBuffer.slice(endIndex + 1); // 更新缓冲区
+    
+                        chunks.forEach(chunk => {
+                            if (chunk.trim()) {
+                                try {
+                                    let request = JSON.parse(chunk);
+                                    if (request && request.response) {
+                                        // 实时渲染机器人响应
+                                        streamBotResponse(request.response);
+                                    }
+                                } catch (e) {
+                                    console.error("解析数据块时出错:", e);
+                                }
+                            }
+                        });
+                    }
+    
+                    // 继续处理流
+                    processStream();
+                });
+            };
+    
+            // 启动流处理
+            processStream();
+        })
+        .catch(error => {
+            console.error('请求出错:', error);
+        });
+    }
+    
+
+    function controlGraph(botRes, entityRes) {
+        console.log(entityRes)
+        disableComponent()
+        streamBotResponse(botRes)
+        let clear = {
+            'nodes': [],
+            'links': [],
+        }
+        updateGraph(clear)
+        InitGraphByQA(entityRes)
+    }
+
+
+    function old_streamBotResponse(message) {
+        const messageContainer = document.getElementById('messages');
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', 'bot-message');
+        messageContainer.appendChild(messageElement);
+        messageElement.scrollIntoView({behavior: 'smooth'});
+
+        let index = 0;
+        const interval = setInterval(() => {
+            if (index < message.length) {
+                messageElement.textContent += message[index];
+                index++;
+            } else {
+                clearInterval(interval);
+            }
+            messageElement.scrollIntoView({behavior: 'smooth'});
+        }, 5); // Adjust the interval time to control the speed of the typing effect
+    }
+    let currentMessageElement = null;
+
+    function streamBotResponse(message) {
+        const messageContainer = document.getElementById('messages');
+
+        // 如果存在正在显示的消息元素，说明之前的回答尚未完成
+        if (currentMessageElement) {
+            // 追加新的 chunk 到当前消息元素
+            currentMessageElement.textContent += message;
+        } else {
+            // 否则，创建新的消息元素
+            currentMessageElement = document.createElement('div');
+            currentMessageElement.classList.add('message', 'bot-message');
+            currentMessageElement.textContent = message;
+            messageContainer.appendChild(currentMessageElement);
+        }
+
+        // 确保最新的内容可见
+        currentMessageElement.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleNewQuestion() {
+        // 清除旧的消息元素
+        currentMessageElement = null;
+
+        // 也可以清除整个消息容器，以确保没有旧内容
+        // document.getElementById('messages').innerHTML = '';
+    }
+
+    
+
+    // Allow pressing Enter to send the message
+    document.getElementById('user-input').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            document.getElementById('send-button').click();
+        }
+    });
+
+</script>
+</body>
+</html>

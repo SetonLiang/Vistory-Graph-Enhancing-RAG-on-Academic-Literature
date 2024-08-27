@@ -26,6 +26,12 @@ from typing import Tuple, List, Optional, Union
 from operator import itemgetter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from sentence_transformers import SentenceTransformer
+
+from transformers import AutoTokenizer, AutoModel
+import torch
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+
 # 环境变量设置
 os.environ["OPENAI_API_BASE"] = 'https://api.chsdw.top/v1'
 os.environ["OPENAI_API_KEY"] = "sk-gO7KhknYxgDCHTzC0aE1A4Df0fC040E78c80D296C9FbA001"
@@ -221,6 +227,52 @@ entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-3.5-turbo').w
 
 
 
+# 初始化模型和tokenizer
+model_name = "BAAI/bge-m3"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModel.from_pretrained(model_name)
+def embed_text(text):
+    """将文本嵌入到向量空间中"""
+    inputs = tokenizer(text, return_tensors='pt', truncation=True, padding=True, max_length=512)
+    with torch.no_grad():
+        outputs = model(**inputs)
+        # 取文本的平均池化作为嵌入
+        embeddings = outputs.last_hidden_state.mean(dim=1)
+    return embeddings.numpy().flatten()
+def load_embeddings(file_path):
+    """从 JSON 文件加载嵌入数据"""
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    return data["nodes"]
+def similarity_search(question, file_path, k=10):
+    """执行相似度搜索"""
+    # 加载节点嵌入
+    nodes = load_embeddings(file_path)
+
+    # 计算问题的嵌入
+    question_embedding = embed_text(question)
+
+    # 提取节点嵌入
+    node_embeddings = np.array([np.array(node["embedding"]) for node in nodes])
+    
+    # 计算相似度
+    similarities = cosine_similarity([question_embedding], node_embeddings)[0]
+
+    # 结合相似度和节点信息
+    results = []
+    for i, node in enumerate(nodes):
+        results.append({
+            "name": node.get("name"),
+            "abstract": node.get("abstract"),
+            "keywords": node.get("keywords")
+        })
+    
+    # 按相似度排序并获取前 k 个结果
+    sorted_results = sorted(zip(results, similarities), key=lambda x: x[1], reverse=True)
+    top_results = [result for result, _ in sorted_results[:k]]
+    
+    return top_results
+
 def structured_retriever(question: str) -> dict:
     result = []
     # 解析问题中的实体
@@ -395,12 +447,13 @@ def make_entity_json(relevant_paper,session):
             MATCH (p:Papers {name: $paper_name})
             OPTIONAL MATCH (p)-[r1]->(author:Author)
             OPTIONAL MATCH (p)-[r2]->(keyword:Keyword)
-            RETURN p, author AS a, keyword AS k, r1, r2
+            OPTIONAL MATCH (author)-[r3]->(department:Department)
+            RETURN p, author AS a, keyword AS k, department as d, r1, r2, r3
         """         
         
         temp = session.execute_read(lambda tx: tx.run(cypher_query, paper_name=item).data())    
         results.append(temp)
-    
+
     nodes = []
     links = []
     for lst in results:
@@ -417,29 +470,38 @@ def make_entity_json(relevant_paper,session):
             #     'name': item['a']['name'],
             #     'group': 1,
             # }
-            if 'k' in item and item['k'] is not None:
+            if item.get('k'):
                 temp_keyword = {
                     'name': item['k']['name'],
                     'group': 2
                 }
-                temp_link_r2 = {
-                    'source': item['r2'][0]['name'],
-                    'target': item['r2'][2]['name'],
-                    'relationship': item['r2'][1],
-                }
-                nodes.append(temp_keyword)
-                links.append(temp_link_r2)
-
+            temp_department = {
+                'name': item['d']['name'],
+                'group': 1
+            }
             temp_link_r1 = {
                 'source': item['r1'][2]['name'],
                 'target': item['r1'][0]['name'],
                 'relationship': item['r1'][1],
             }
-                     
+            if item['r2']:
+                temp_link_r2 = {
+                    'source': item['r2'][0]['name'],
+                    'target': item['r2'][2]['name'],
+                    'relationship': item['r2'][1],
+                }
+            temp_link_r3 = {
+                'source': item['r3'][0]['name'],
+                'target': item['r3'][2]['name'],
+                'relationship': item['r3'][1],
+            }
+            nodes.append(temp_keyword)
             # nodes.append(temp_author)
             nodes.append(temp_paper)
+            nodes.append(temp_department)
             links.append(temp_link_r1)
-            
+            links.append(temp_link_r2)
+            links.append(temp_link_r3)
     nodes = list(map(dict, set(frozenset(item.items()) for item in nodes)))
     links = list(map(dict, set(frozenset(item.items()) for item in links)))
 
@@ -475,28 +537,41 @@ model_name = "BAAI/bge-m3"
 embedding_model = HuggingFaceEmbeddings(
     model_name=model_name,
 )
+file_path = "app01/datasets/final_vector_index.json"
 
-    
+def format_unstructured_data(data):
+    """将 unstructured_data 格式化为文本"""
+    formatted_data = []
+    for item in data:
+        # 提取需要的信息
+        name = item.get('name', 'None')
+        abstract = item.get('abstract', 'None')
+        keywords = item.get('keywords', 'None')
+
+        # 格式化每个条目
+        formatted_data.append(f"name: {name}\nabstract: {abstract}\nkeywords: {keywords}\n")
+    return formatted_data
+
 def retriever(question: str):
     # 向量索引创建: https://python.langchain.com/v0.2/docs/integrations/vectorstores/neo4jvector/
-    session.run("""
-            MATCH (p:Papers)
-            REMOVE p.embedding
-    """               
-    )
-    try:
-        vector_index = Neo4jVector.from_existing_graph(
-            # OpenAIEmbeddings(),
-            embedding_model,
-            search_type="hybrid",
-            node_label="Papers",
-            text_node_properties=["abstract", "name", "keywords"],
-            embedding_node_property="embedding",
-            # database="mysql"
-        )
-        print(vector_index)
-    except Exception as e:
-        print(f"Error creating vector index: {e}")
+    # session.run("""
+    #         MATCH (p:Papers)
+    #         REMOVE p.embedding
+    # """               
+    # )
+    # try:
+    #     vector_index = Neo4jVector.from_existing_graph(
+    #         # OpenAIEmbeddings(),
+    #         embedding_model,
+    #         search_type="hybrid",
+    #         node_label="Papers",
+    #         text_node_properties=["abstract", "name", "keywords"],
+    #         embedding_node_property="embedding",
+    #         # database="mysql"
+    #     )
+    #     print(vector_index)
+    # except Exception as e:
+    #     print(f"Error creating vector index: {e}")
     # 创建全文索引
     graph.query("CREATE FULLTEXT INDEX entity IF NOT EXISTS FOR (e:__Entity__) ON EACH [e.id]")
 
@@ -505,7 +580,9 @@ def retriever(question: str):
     is_year = structured_data.get('is_year')
     structured_results = structured_data.get('results', [])
 
-    unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
+    # unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
+    unstructured_data = similarity_search(question, file_path, k=10)
+    unstructured_data = format_unstructured_data(unstructured_data)
 
     if is_year:
         relevant_paper = [record.get('paper') for record in structured_results]

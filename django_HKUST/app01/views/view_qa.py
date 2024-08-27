@@ -35,7 +35,7 @@ def chat(request):
                     "question": graph_rag.RunnablePassthrough(),
                 })
                 | answer_prompt
-                | graph_rag.ChatOpenAI(temperature=0,streaming=True)
+                | graph_rag.ChatOpenAI(temperature=0,model='gpt-4',streaming=True)
                 | graph_rag.StrOutputParser()
         )
 
@@ -43,17 +43,23 @@ def chat(request):
         output = chain.invoke({"question": user_input.lower()})
         # output = '1111111'
         def generate():
-            full_message = ''
             for chunk in chain.stream({"question": user_input.lower()}):
-                full_message += chunk
-                # 处理到达一定长度后发送一个完整消息块
-                if len(full_message) > 1000:  # 调整阈值以满足实际需求
-                    yield json.dumps({"response": full_message}) + '\n'
-                    full_message = ''
-            
-            # 确保最后剩余的消息块也被发送
-            if full_message:
-                yield json.dumps({"response": full_message}) + '\n'
+                if chunk is not None:
+                    yield json.dumps({"response": chunk}) + '\n'
+                        # 加载实体数据
+                        #     with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
+                        #         paper_entity = json.load(f)
+                        #         yield f'data: {json.dumps({"entity": paper_entity})}\n\n'
+            # full_message = ''
+            # for chunk in chain.stream({"question": user_input.lower()}):
+            #     full_message += chunk
+            #     # 处理到达一定长度后发送一个完整消息块
+            #     if len(full_message) > 400:  # 调整阈值以满足实际需求
+            #         yield json.dumps({"response": full_message}) + '\n'
+            #         full_message = ''
+        
+
+
         with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
             paper_entity = json.load(f)
         # ans = chain.invoke(

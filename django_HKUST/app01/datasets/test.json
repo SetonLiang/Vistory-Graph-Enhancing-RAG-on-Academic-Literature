@@ -2,505 +2,530 @@
     "nodes": [
         {
             "group": 2,
-            "name": "probabilistic principal component analysis (PCA) model"
+            "name": "generative AI"
         },
         {
+            "group": 2,
+            "name": "Accessibility"
+        },
+        {
+            "count": 0,
+            "citation": 0,
             "group": 0,
-            "name": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
-            "id": "xu2024robust",
+            "id": "shen2024neural",
+            "name": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
+            "released": "2024"
+        },
+        {
+            "group": 2,
+            "name": "human avatar"
+        },
+        {
+            "citation": 1,
+            "count": 0,
+            "group": 0,
             "released": "2024",
+            "name": "HeadEvolver: Text to Head Avatars via Locally Learnable Mesh Deformation",
+            "id": "wang2024headevolver"
+        },
+        {
+            "group": 1,
+            "name": "AI"
+        },
+        {
+            "group": 2,
+            "name": "livestreaming"
+        },
+        {
+            "name": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
+            "id": "fu2024bridging",
             "count": 0,
-            "citation": 0
-        },
-        {
-            "name": "normalization",
-            "group": 2
-        },
-        {
-            "name": "smartglasses",
-            "group": 2
-        },
-        {
-            "name": "distribution shift",
-            "group": 2
-        },
-        {
-            "released": "2020",
+            "citation": 0,
             "group": 0,
-            "name": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
-            "citation": 56,
+            "released": "2024"
+        },
+        {
+            "citation": 1,
             "count": 0,
-            "id": "he2020benchmarking"
-        },
-        {
-            "name": "Deep Learning",
-            "group": 2
-        },
-        {
-            "name": "likelihood ratio test (LRT)",
-            "group": 2
-        },
-        {
-            "name": "digital twins",
-            "group": 2
-        },
-        {
-            "name": "machine learning for data management",
-            "group": 2
-        },
-        {
-            "name": "Neural Machine Translation",
-            "group": 2
-        },
-        {
-            "released": "2020",
             "group": 0,
-            "citation": 27,
-            "id": "wang2020monotonic",
+            "id": "jin2024exploring",
+            "released": "2024",
+            "name": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications"
+        },
+        {
             "count": 0,
-            "name": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach"
-        },
-        {
-            "name": "Evolutionary Algorithm",
-            "group": 2
-        },
-        {
-            "name": "Deep learning",
-            "group": 2
-        },
-        {
-            "name": "Molecular Optimization",
-            "group": 2
-        },
-        {
-            "name": "cardinality estimation",
-            "group": 2
-        },
-        {
-            "name": "fault direction",
-            "group": 2
-        },
-        {
-            "name": "deep learning",
-            "group": 2
-        },
-        {
-            "name": "similarity selection",
-            "group": 2
-        },
-        {
-            "name": "CT scans",
-            "group": 2
-        },
-        {
-            "citation": 12,
+            "id": "fu2024aromablendz",
+            "citation": 0,
             "group": 0,
-            "released": "2021",
-            "count": 0,
-            "id": "he2021efficient",
-            "name": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+            "released": "2024",
+            "name": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
         },
         {
-            "released": "2020",
-            "name": "Automatic mandibular canal detection using a deep convolutional neural network",
-            "group": 0,
-            "count": 0,
-            "citation": 115,
-            "id": "kwak2020automatic"
-        },
-        {
-            "name": "interaction techniques",
-            "group": 2
-        },
-        {
-            "name": "smart city",
+            "name": "storytelling",
             "group": 2
         },
         {
             "group": 2,
-            "name": "machine learning"
+            "name": "GPU"
+        },
+        {
+            "count": 0,
+            "name": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
+            "group": 0,
+            "released": "2024",
+            "citation": 5,
+            "id": "tian2024poeticar"
         },
         {
             "group": 2,
-            "name": "virtual reality"
+            "name": "short-form video"
+        },
+        {
+            "group": 1,
+            "name": "CMA"
+        },
+        {
+            "group": 2,
+            "name": "Proactive conversational assistants"
+        },
+        {
+            "group": 2,
+            "name": "data visualization"
+        },
+        {
+            "group": 2,
+            "name": "scenic design"
+        },
+        {
+            "count": 0,
+            "id": "jiang2024designing",
+            "citation": 0,
+            "name": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
+            "group": 0,
+            "released": "2024"
+        },
+        {
+            "group": 2,
+            "name": "Accessible Data Visualization"
+        },
+        {
+            "group": 2,
+            "name": "indepen\u0002dent learning"
+        },
+        {
+            "group": 2,
+            "name": "Olfactory experiences"
+        },
+        {
+            "count": 0,
+            "citation": 10,
+            "group": 0,
+            "id": "shao2024splattingavatar",
+            "released": "2024",
+            "name": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting"
+        },
+        {
+            "group": 2,
+            "name": "Digital smell technology"
+        },
+        {
+            "group": 2,
+            "name": "adult literacy"
+        },
+        {
+            "name": "Personal data",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "Hardware"
+        },
+        {
+            "group": 2,
+            "name": "prototyping"
+        },
+        {
+            "group": 2,
+            "name": "independent learning"
+        },
+        {
+            "group": 2,
+            "name": "Human-AI collaboration"
+        },
+        {
+            "group": 2,
+            "name": "education"
+        },
+        {
+            "group": 2,
+            "name": "FPS"
+        },
+        {
+            "name": "cultural heritage",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "count": 0,
+            "group": 0,
+            "released": "2024",
+            "name": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "id": "kuang2024enhancing"
+        },
+        {
+            "group": 2,
+            "name": "Odour interfaces"
+        },
+        {
+            "group": 2,
+            "name": "Electrotactile"
+        },
+        {
+            "group": 2,
+            "name": "Olfactory Device"
+        },
+        {
+            "group": 2,
+            "name": "User experience"
+        },
+        {
+            "name": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
+            "count": 0,
+            "citation": 0,
+            "group": 0,
+            "id": "tong2024vistellar",
+            "released": "2024"
+        },
+        {
+            "name": "personal data",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "mesh"
+        },
+        {
+            "group": 2,
+            "name": "smartphone exploration"
+        },
+        {
+            "group": 2,
+            "name": "Gaussian Splatting"
+        },
+        {
+            "group": 2,
+            "name": "3D sketching"
         },
         {
             "group": 2,
             "name": "augmented reality"
         },
         {
-            "name": "Data augmentation",
-            "group": 2
-        },
-        {
-            "released": "2020",
-            "group": 0,
-            "name": "A survey of deep learning techniques for neural machine translation",
-            "count": 0,
-            "citation": 177,
-            "id": "yang2020survey"
-        },
-        {
-            "name": "uncertainty",
-            "group": 2
-        },
-        {
-            "name": "conformal prediction",
-            "group": 2
+            "group": 2,
+            "name": "older adults"
         },
         {
             "group": 2,
-            "name": "COVID-19"
+            "name": "Usability testing"
         },
         {
-            "group": 2,
-            "name": "Chest CT"
-        },
-        {
-            "group": 0,
-            "released": "2021",
-            "id": "he2021automated",
-            "count": 0,
-            "citation": 42,
-            "name": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans"
-        },
-        {
-            "name": "urban computing",
+            "name": "Haptic Data Visualization",
             "group": 2
         },
         {
-            "name": "Composite hypothesis",
-            "group": 2
-        },
-        {
-            "group": 0,
-            "released": "2021",
-            "name": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
-            "citation": 17,
-            "count": 0,
-            "id": "li2021directional"
-        },
-        {
-            "name": "Benchmark",
-            "group": 2
-        },
-        {
-            "name": "Extended reality",
-            "group": 2
-        },
-        {
-            "name": "AutoML",
-            "group": 2
-        },
-        {
-            "group": 0,
-            "id": "niutrading",
-            "released": "2023",
-            "count": 0,
-            "citation": 0,
-            "name": "Trading-off Multiple Properties for Molecular Optimization"
-        },
-        {
-            "name": "Multi-objective optimization",
-            "group": 2
-        },
-        {
-            "name": "Neural Architecture Search",
-            "group": 2
-        },
-        {
-            "released": "2020",
-            "group": 0,
-            "citation": 8,
-            "name": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
-            "count": 0,
-            "id": "lee2020towards"
-        },
-        {
-            "name": "Attention Mechanism",
-            "group": 2
-        },
-        {
-            "name": "Preference-Conditioned Inversion",
-            "group": 2
-        },
-        {
-            "name": "Fugee Tsung",
+            "name": "Zeyu Wang",
             "type": "Author",
-            "count": 57,
+            "count": 10,
             "group": 4
         },
         {
-            "name": "Pan Hui",
+            "name": "Huamin Qu",
             "type": "Author",
-            "count": 250,
+            "count": 126,
             "group": 4
         },
         {
-            "name": "Xiaowen Chu",
+            "name": "Mingming Fan",
             "type": "Author",
-            "count": 93,
-            "group": 4
-        },
-        {
-            "name": "Jia Li",
-            "type": "Author",
-            "count": 57,
-            "group": 4
-        },
-        {
-            "name": "Sihong Xie",
-            "type": "Author",
-            "count": 25,
-            "group": 4
-        },
-        {
-            "name": "Wei Wang",
-            "type": "Author",
-            "count": 54,
+            "count": 70,
             "group": 4
         }
     ],
     "links": [
         {
-            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
-            "relationship": "HAS_KEYWORD",
-            "target": "Benchmark"
-        },
-        {
-            "target": "deep learning",
-            "relationship": "HAS_KEYWORD",
-            "source": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "cardinality estimation",
-            "source": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach"
-        },
-        {
-            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
-            "relationship": "HAS_KEYWORD",
-            "target": "Chest CT"
-        },
-        {
-            "source": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
-            "relationship": "HAS_KEYWORD",
-            "target": "distribution shift"
-        },
-        {
-            "source": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
-            "target": "conformal prediction",
+            "target": "mesh",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
             "relationship": "HAS_KEYWORD"
         },
         {
+            "target": "personal data",
             "relationship": "HAS_KEYWORD",
-            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
-            "target": "probabilistic principal component analysis (PCA) model"
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
         },
         {
-            "source": "Pan Hui",
-            "target": "Automatic mandibular canal detection using a deep convolutional neural network",
-            "relationship": "OWNED_BY"
-        },
-        {
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
             "relationship": "HAS_KEYWORD",
-            "target": "machine learning for data management",
-            "source": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach"
+            "target": "indepen\u0002dent learning"
         },
         {
-            "source": "A survey of deep learning techniques for neural machine translation",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+        },
+        {
+            "target": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu"
+        },
+        {
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
             "relationship": "HAS_KEYWORD",
-            "target": "Attention Mechanism"
+            "target": "independent learning"
         },
         {
+            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
             "relationship": "HAS_KEYWORD",
-            "target": "COVID-19",
-            "source": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+            "target": "generative AI"
         },
         {
-            "target": "Extended reality",
-            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
             "relationship": "HAS_KEYWORD",
-            "target": "Data augmentation"
+            "target": "Electrotactile"
         },
         {
+            "target": "livestreaming",
             "relationship": "HAS_KEYWORD",
-            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
-            "target": "normalization"
+            "source": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming"
         },
         {
-            "target": "interaction techniques",
-            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Neural Architecture Search",
+            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
             "relationship": "HAS_KEYWORD",
-            "source": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+            "target": "Haptic Data Visualization"
         },
         {
-            "source": "A survey of deep learning techniques for neural machine translation",
-            "relationship": "HAS_KEYWORD",
-            "target": "Neural Machine Translation"
-        },
-        {
-            "target": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
-            "source": "Pan Hui",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Trading-off Multiple Properties for Molecular Optimization",
-            "relationship": "HAS_KEYWORD",
-            "target": "Preference-Conditioned Inversion"
-        },
-        {
-            "source": "Fugee Tsung",
-            "target": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
-            "relationship": "OWNED_BY"
+            "source": "Zeyu Wang",
+            "relationship": "BELONGS_TO",
+            "target": "AI"
         },
         {
             "relationship": "HAS_KEYWORD",
-            "target": "Evolutionary Algorithm",
-            "source": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+            "source": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
+            "target": "augmented reality"
         },
         {
-            "source": "Jia Li",
-            "target": "Trading-off Multiple Properties for Molecular Optimization",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "Multi-objective optimization",
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
             "relationship": "HAS_KEYWORD",
-            "source": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans"
+            "target": "older adults"
         },
         {
-            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "target": "Olfactory experiences",
+            "relationship": "HAS_KEYWORD",
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
+        },
+        {
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
             "relationship": "HAS_KEYWORD",
             "target": "augmented reality"
         },
         {
-            "source": "Trading-off Multiple Properties for Molecular Optimization",
+            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
             "relationship": "HAS_KEYWORD",
-            "target": "Molecular Optimization"
+            "target": "Accessible Data Visualization"
         },
         {
-            "source": "A survey of deep learning techniques for neural machine translation",
-            "target": "Deep Learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
+            "target": "education"
+        },
+        {
+            "target": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "Digital smell technology",
+            "relationship": "HAS_KEYWORD",
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
+        },
+        {
+            "target": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "HeadEvolver: Text to Head Avatars via Locally Learnable Mesh Deformation"
+        },
+        {
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "HAS_KEYWORD",
+            "target": "FPS"
+        },
+        {
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "relationship": "HAS_KEYWORD",
+            "target": "Proactive conversational assistants"
+        },
+        {
+            "target": "Olfactory Device",
+            "relationship": "HAS_KEYWORD",
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
+            "source": "Huamin Qu"
+        },
+        {
+            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "augmented reality",
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+        },
+        {
+            "target": "Gaussian Splatting",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
             "relationship": "HAS_KEYWORD"
         },
         {
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
             "relationship": "HAS_KEYWORD",
-            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
-            "target": "likelihood ratio test (LRT)"
+            "target": "Usability testing"
         },
         {
-            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
             "relationship": "HAS_KEYWORD",
-            "target": "digital twins"
+            "target": "Human-AI collaboration"
         },
         {
-            "source": "Xiaowen Chu",
-            "target": "Efficient multi-objective evolutionary 3D neural architecture search for COVID-19 detection with chest CT scans",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
             "relationship": "HAS_KEYWORD",
-            "target": "Deep learning"
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents",
+            "target": "Odour interfaces"
         },
         {
-            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
             "relationship": "HAS_KEYWORD",
-            "target": "virtual reality"
+            "target": "Accessibility"
         },
         {
-            "source": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
             "relationship": "HAS_KEYWORD",
-            "target": "machine learning"
+            "target": "human avatar"
         },
         {
-            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
+            "target": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu"
+        },
+        {
+            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
             "relationship": "HAS_KEYWORD",
-            "target": "AutoML"
+            "target": "prototyping"
         },
         {
-            "source": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
             "relationship": "HAS_KEYWORD",
-            "target": "uncertainty"
+            "target": "smartphone exploration"
         },
         {
-            "target": "smartglasses",
-            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "target": "cultural heritage",
+            "source": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "Robust Conformal Prediction under Distribution Shift via Physics-Informed Structural Causal Model",
-            "source": "Sihong Xie",
-            "relationship": "OWNED_BY"
+            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "OWNED_BY",
+            "source": "Zeyu Wang"
         },
         {
-            "target": "CT scans",
+            "target": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "AromaBlendz: An Olfactory System for Crafting Personalized Scents",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI"
+        },
+        {
+            "target": "Hardware",
             "relationship": "HAS_KEYWORD",
-            "source": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans"
+            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
+        },
+        {
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "HAS_KEYWORD",
+            "target": "GPU"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Huamin Qu"
+        },
+        {
+            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
+            "relationship": "HAS_KEYWORD",
+            "target": "3D sketching"
+        },
+        {
+            "target": "CMA",
+            "source": "Mingming Fan",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "relationship": "HAS_KEYWORD",
+            "target": "User experience"
         },
         {
             "relationship": "HAS_KEYWORD",
-            "target": "COVID-19",
-            "source": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans"
+            "source": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
+            "target": "adult literacy"
         },
         {
-            "target": "similarity selection",
+            "target": "storytelling",
             "relationship": "HAS_KEYWORD",
-            "source": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach"
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
         },
         {
-            "source": "Wei Wang",
-            "target": "Monotonic Cardinality Estimation of Similarity Selection: A Deep Learning Approach",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Xiaowen Chu",
-            "target": "Automated Model Design and Benchmarking of 3D Deep Learning Models for COVID-19 Detection with Chest CT Scans",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "fault direction",
-            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Composite hypothesis",
             "relationship": "HAS_KEYWORD",
-            "source": "Directional PCA for fast detection and accurate diagnosis: A unified framework"
+            "target": "Personal data",
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
         },
         {
-            "target": "urban computing",
-            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "smart city",
-            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Xiaowen Chu",
-            "target": "A survey of deep learning techniques for neural machine translation",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Xiaowen Chu",
-            "target": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Benchmarking Deep Learning Models and Automated Model Design for COVID-19 Detection with Chest CT Scans (preprint)",
             "relationship": "HAS_KEYWORD",
-            "target": "COVID-19"
+            "target": "data visualization",
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+        },
+        {
+            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
+            "relationship": "HAS_KEYWORD",
+            "target": "scenic design"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "short-form video",
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
         }
     ]
 }

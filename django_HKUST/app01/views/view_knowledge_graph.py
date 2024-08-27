@@ -123,7 +123,7 @@ def query_keywords():
                 WITH k, COUNT(DISTINCT p) AS path_count
                 RETURN k.name AS keyword, path_count
                 ORDER BY path_count DESC
-                LIMIT 100
+                LIMIT 200
                 '''
     with driver.session(database="neo4j") as session:
         results = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())
