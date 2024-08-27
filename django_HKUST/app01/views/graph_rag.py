@@ -501,23 +501,24 @@ def retriever(question: str):
     graph.query("CREATE FULLTEXT INDEX entity IF NOT EXISTS FOR (e:__Entity__) ON EACH [e.id]")
 
     print(f"Search query: {question}")
-    # structured_data = structured_retriever(question)
-    # is_year = structured_data.get('is_year')
-    # structured_results = structured_data.get('results', [])
+    structured_data = structured_retriever(question)
+    is_year = structured_data.get('is_year')
+    structured_results = structured_data.get('results', [])
 
     unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
 
-    # if is_year:
-    #     relevant_paper = [record.get('paper') for record in structured_results]
-    # else:
-    relevant_paper = extract_paper_names(unstructured_data)
+    if is_year:
+        relevant_paper = [record.get('paper') for record in structured_results]
+    else:
+        relevant_paper = extract_paper_names(unstructured_data)
     if len(relevant_paper)>10:
         relevant_paper = relevant_paper[:10]
     print(relevant_paper)
     paper_entity = make_entity_json(relevant_paper,session)
     with open('app01/datasets/test.json', 'w') as f:
         json.dump(paper_entity, f, indent=4)
-    final_data = f"""
+    final_data = f"""Structured data: 
+                    {structured_data}
                     Unstructured data:
                     {"#Document ".join(unstructured_data)}
                 """
