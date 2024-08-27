@@ -54,21 +54,17 @@
                 .attr("x", d => x(d.author))
                 .attr("width", x.bandwidth());
             const xAxisGroup = svg.selectAll(".x-axis");
-            xAxisGroup.call(d3.axisBottom(x).tickFormat(scale < 4 ? '...' : d => d));
+            xAxisGroup.call(d3.axisBottom(x).tickFormat(scale < 3 ? '...' : d => d.split(' ')[1]));
             xAxisGroup.selectAll("text")
                 .style("text-anchor", "middle");
         }
     }
 
     // 单独的图表1绘制函数
-    function createChart1(svg) {
-        const data = [
-            {year: 2015, papers: 1500},
-            {year: 2016, papers: 2500},
-            {year: 2017, papers: 500},
-            {year: 2018, papers: 3000},
-            {year: 2019, papers: 2000}
-        ];
+    function createChart1(svg, data) {
+        const colorScale_chart = d3.scaleLinear()
+            .domain([2020, 2024])
+            .range(["#ffebf4", "#d32465"]);
 
         const x = d3.scaleBand()
             .domain(data.map(d => d.year))
@@ -91,9 +87,14 @@
             .attr("y", d => y(d.papers))
             .attr("height", d => y(0) - y(d.papers))
             .attr("width", x.bandwidth())
-            .attr("fill", "steelblue")
+            .attr("fill", d => colorScale_chart(d.year))
+            .on('click', function (e, d) {
+                highlightPapersByYear(d.year)
+            })
             .on("mouseover", function (event, d) {
-                d3.select(this).attr("fill", "orange");
+                const currentColor = d3.select(this).attr("fill");
+                d3.select(this)
+                    .attr("fill", d3.rgb(currentColor).darker(1.2));
                 tooltip.transition().duration(200).style("opacity", .9);
                 tooltip.html(
                     () => {
@@ -103,7 +104,8 @@
                     .style("top", (event.pageY - 28) + "px");
             })
             .on("mouseout", function () {
-                d3.select(this).attr("fill", "steelblue");
+                const originalColor = d3.select(this).attr("fill");
+                d3.select(this).attr("fill", d3.rgb(originalColor).brighter(1.2));
                 tooltip.transition().duration(500).style("opacity", 0);
             });
 
@@ -125,12 +127,7 @@
     }
 
     // 单独的图表2绘制函数
-    function createChart2(svg) {
-        const data = [
-            {department: "CMA", papers: 1200},
-            {department: "AI", papers: 1500},
-            {department: "DSA", papers: 800}
-        ];
+    function createChart2(svg, data) {
 
         const x = d3.scaleBand()
             .domain(data.map(d => d.department))
@@ -146,26 +143,40 @@
 
         svg.append("g")
             .attr("class", "bars")
-            .attr("fill", "steelblue")
             .selectAll("rect")
             .data(data)
             .join("rect")
+            .attr("fill", function (d) {
+                if (d.department === 'AI') {
+                    return '#6b486b'
+                } else if (d.department === 'CMA') {
+                    return '#98abc5'
+                } else if (d.department === 'DSA') {
+                    return '#ff8c00'
+                }
+            })
             .attr("x", d => x(d.department))
             .attr("y", d => y(d.papers))
             .attr("height", d => y(0) - y(d.papers))
             .attr("width", x.bandwidth())
-            .on("mouseover", function (e, d) {
-                d3.select(this).attr("fill", "orange");
+            .on('click', function (e, d) {
+                const sNode = {'name': d.department}
+                highlightNeighborhood_2(sNode)
+            })
+            .on("mouseover", function (event, d) {
+                // 获取当前颜色并在鼠标悬浮时加深
+                const currentColor = d3.select(this).attr("fill");
+                d3.select(this)
+                    .attr("fill", d3.rgb(currentColor).darker(1.2));
                 tooltip.transition().duration(200).style("opacity", .9);
-                tooltip.html(
-                    () => {
-                        return d.papers
-                    })
+                tooltip.html(`${d.department}<br>Quantity: ${d.papers}`)
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
             .on("mouseout", function () {
-                d3.select(this).attr("fill", "steelblue");
+                // 恢复原来的颜色
+                const originalColor = d3.select(this).attr("fill");
+                d3.select(this).attr("fill", d3.rgb(originalColor).brighter(1.2));
                 tooltip.transition().duration(500).style("opacity", 0);
             });
 
@@ -183,16 +194,9 @@
     }
 
     // 单独的图表3绘制函数
-    function createChart3(svg) {
-        const data = [
-            {year: 2015, departmentA: 400, departmentB: 600, departmentC: 200},
-            {year: 2016, departmentA: 300, departmentB: 700, departmentC: 400},
-            {year: 2017, departmentA: 500, departmentB: 800, departmentC: 300},
-            {year: 2018, departmentA: 600, departmentB: 900, departmentC: 500},
-            {year: 2019, departmentA: 700, departmentB: 1000, departmentC: 400}
-        ];
+    function createChart3(svg, data) {
 
-        const keys = ["departmentA", "departmentB", "departmentC"];
+        const keys = ["AI", "CMA", "DSA"];
 
         const x = d3.scaleBand()
             .domain(data.map(d => d.year))
@@ -200,7 +204,7 @@
             .padding(0.1);
 
         const y = d3.scaleLinear()
-            .domain([0, d3.max(data, d => d.departmentA + d.departmentB + d.departmentC)]).nice()
+            .domain([0, d3.max(data, d => d.AI + d.CMA + d.DSA)]).nice()
             .range([chartHeight - marginBottom, marginTop]);
 
         const color = d3.scaleOrdinal()
@@ -230,6 +234,10 @@
             .attr("y", d => y(d[1]))
             .attr("height", d => y(d[0]) - y(d[1]))
             .attr("width", x.bandwidth())
+            .on('click', function (e, d) {
+
+                highlightByDepartmentAndYear(d3.select(this.parentNode).datum().key, String(d.data.year))
+            })
             .on("mouseover", function (event, d) {
                 const key = d3.select(this.parentNode).datum().key;
                 const value = d[1] - d[0];
@@ -260,11 +268,10 @@
     }
 
     // 单独的图表4绘制函数
-    function createChart4(svg) {
-        const data = Array.from({length: 25}, (_, i) => ({
-            author: `Author ${String.fromCharCode(65 + i)}`,
-            papers: Math.floor(Math.random() * 100) + 1
-        }));
+    function createChart4(svg, data) {
+        const colorScale_auther_chart = d3.scaleLinear()
+            .domain([18, 249])
+            .range(["#e0f3e5", "#007f5f"]);
 
         const x = d3.scaleBand()
             .domain(data.map(d => d.author))
@@ -280,16 +287,23 @@
 
         svg.append("g")
             .attr("class", "bars")
-            .attr("fill", "steelblue")
             .selectAll("rect")
             .data(data)
             .join("rect")
+            .attr("fill", d => colorScale_auther_chart(d.papers))
             .attr("x", d => x(d.author))
             .attr("y", d => y(d.papers))
             .attr("height", d => y(0) - y(d.papers))
             .attr("width", x.bandwidth())
+            .on('click', function(e, d) {
+                const sNode = {'name': d.author}
+                highlightNeighborhood(sNode)
+            })
             .on("mouseover", function (e, d) {
-                d3.select(this).attr("fill", "orange");
+                // 获取当前颜色并在鼠标悬浮时加深
+                const currentColor = d3.select(this).attr("fill");
+                d3.select(this)
+                    .attr("fill", d3.rgb(currentColor).darker(1.2));
                 tooltip.transition().duration(200).style("opacity", .9);
                 tooltip.html(
                     () => {
@@ -299,7 +313,9 @@
                     .style("top", (event.pageY - 28) + "px");
             })
             .on("mouseout", function () {
-                d3.select(this).attr("fill", "steelblue");
+                // 恢复原来的颜色
+                const originalColor = d3.select(this).attr("fill");
+                d3.select(this).attr("fill", d3.rgb(originalColor).brighter(1.2));
                 tooltip.transition().duration(500).style("opacity", 0);
             });
 
@@ -333,11 +349,28 @@
 <script>
     $(document).ready(function () {
         // 分别调用每个图表的绘制函数
-        d3.select("#chart1").call(createChart1);
-        d3.select("#chart2").call(createChart2);
-        d3.select("#chart3").call(createChart3);
-        d3.select("#chart4").call(createChart4);
+        {#d3.select("#chart1").call(createChart1);#}
+        {#d3.select("#chart2").call(createChart2);#}
+        {#d3.select("#chart3").call(createChart3);#}
+        {#d3.select("#chart4").call(createChart4);#}
+        loadDataForChart()
     });
+
+    function loadDataForChart() {
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data_neo4j/forChart',
+            type: 'get',
+            data: {},
+            success: function (res) {
+                let request = JSON.parse(res)
+                console.log(request)
+                createChart1(d3.select("#chart1"), request['chart1'])
+                createChart2(d3.select("#chart2"), request['chart2'])
+                createChart3(d3.select("#chart3"), request['chart3'])
+                createChart4(d3.select("#chart4"), request['chart4'])
+            }
+        });
+    }
 </script>
 
 </body>

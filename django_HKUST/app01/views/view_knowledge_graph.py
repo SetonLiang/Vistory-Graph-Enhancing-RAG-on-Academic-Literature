@@ -1,5 +1,5 @@
 import json
-
+from collections import defaultdict
 from django.shortcuts import HttpResponse, render
 from neo4j import GraphDatabase
 
@@ -96,8 +96,8 @@ def query_publication():
 
 def query_year():
     cypher_query = '''MATCH (p:Papers)
-    RETURN p.year AS group, COUNT(p) AS value
-    ORDER BY group
+    RETURN p.year AS year, COUNT(p) AS papers
+    ORDER BY year
     '''
 
     with driver.session(database="neo4j") as session:
@@ -108,7 +108,7 @@ def query_year():
 
 def query_authors_chart():
     cypher_query = '''MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)
-    RETURN a.name AS group, COUNT(p) AS value
+    RETURN a.name AS author, COUNT(p) AS papers
     '''
 
     with driver.session(database="neo4j") as session:
@@ -264,3 +264,41 @@ def flite_dept(departments):
         results = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())[0]['paper_ids']
 
     return results
+
+
+def query_paper_department():
+    query = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
+            WITH d.name AS department, COUNT(p) AS papers
+            RETURN department, papers'''
+    with driver.session(database="neo4j") as session:
+        results = session.execute_read(lambda tx: tx.run(query, iata="DEN").data())
+
+    return results
+
+
+def query_paper_department_year():
+    query = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
+            WITH d.name AS department, p.year AS year, COUNT(p) AS paper_count
+            RETURN department, year, paper_count
+            ORDER BY department, year'''
+    with driver.session(database="neo4j") as session:
+        results = session.execute_read(lambda tx: tx.run(query, iata="DEN").data())
+
+    # 使用 defaultdict 创建一个字典，其中 key 是年份，value 是另一个字典用于存储各部门的论文数量
+    data_dict = defaultdict(lambda: defaultdict(int))
+
+    # 填充数据
+    for entry in results:
+        year = int(entry['year'])
+        department = entry['department']
+        paper_count = entry['paper_count']
+        data_dict[year][department] = paper_count
+
+    # 将数据转换为所需的格式
+    data = []
+    for year, departments in sorted(data_dict.items()):
+        entry = {"year": year}
+        entry.update(departments)
+        data.append(entry)
+
+    return data

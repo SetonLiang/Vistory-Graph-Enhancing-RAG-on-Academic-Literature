@@ -130,7 +130,6 @@
                     window.onload = function () {
                         const cloud_containerWidth = d3.select('#wordCloud_container').node().getBoundingClientRect().width;
                         const cloud_containerHeight = d3.select('#wordCloud_container').node().getBoundingClientRect().height;
-                        console.log(cloud_containerHeight)
                         d3.select('#wordCloud_container').append('div')
                             .attr('id', 'wordCloud')
                             .style('height', cloud_containerHeight + 'px').style('width', cloud_containerWidth + 'px')

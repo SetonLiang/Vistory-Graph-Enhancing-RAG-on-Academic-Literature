@@ -66,7 +66,6 @@
         .style("height", 'auto')
         .attr("viewBox", [0, 0, width, height])
         .on('click', function (e) {
-            console.log(11111111)
             if (e.target.tagName === 'svg') {
                 resetNodeColors();
             }
@@ -245,7 +244,6 @@
     }
 
     function query_paper(name) {
-        console.log(name)
         $.ajax({
             url: 'http://127.0.0.1:8000/graph/query_paper/',
             type: 'get',
@@ -274,7 +272,6 @@
                     })
                 }
                 entity_data.links = Array.from(new Set(entity_data.links.map(JSON.stringify))).map(JSON.parse);
-                console.log(entity_data)
                 filterNode(entity_data)
                 {#updateGraph(entity_data)#}
             }
@@ -705,25 +702,9 @@
             })
             .attr('class', 'circle')
             .on('click', function (e, d) {
-                {#if (d.group === 0) {#}
-                {#    query_list.push(d.id)#}
-                {#    query_id_list.push(d.id)#}
-                {#    QueryResults()#}
-                {#    fixSelectors(d.id)#}
-                //}
-                {#if (d.group === 4) {#}
-                {#    //if (already_click_author.indexOf(d.name) === -1 || already_click_author.length === 0) {#}
-                {#    //    query_paper(d.name);#}
-                {#    //}#}
-                {#    already_click_author.push(d.name)#}
-                {#    query_list.push(d.name)#}
-                {#    query_author_list.push(d.name)#}
-                {#    QueryResults()#}
-                {#    fixSelectors(d.name)#}
-                //}
-
                 // Set the clicked node as the selected node
                 selectedNode = d;
+                console.log(d)
                 if (d.group === 1) {
                     // Call the function to highlight the neighborhood
                     highlightNeighborhood_2(selectedNode);
@@ -1071,7 +1052,6 @@
         const neighbors = new Set();
 
         // Find the neighbors (first-order connections)
-        console.log(selectedNode)
         links.forEach(link => {
             if (link.source.name === selectedNode.name) {
                 neighbors.add(link.target.name);
@@ -1323,7 +1303,6 @@
             // Find papers by this author in the selected year
             const authorPapers = nodes.filter(n => n.group === 0 && n.released === year &&
                 links.some(l => l.source.name === author.name && l.target.name === n.name));
-
             papers.push(...authorPapers);
 
             // Add the paper as a neighbor
@@ -1339,6 +1318,8 @@
                 });
             });
         });
+
+
 
         // Update the color of nodes
         node.attr('fill', (n) => {

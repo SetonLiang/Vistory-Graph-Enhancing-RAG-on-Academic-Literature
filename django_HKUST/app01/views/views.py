@@ -5,9 +5,9 @@ from django.shortcuts import render, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from app01.models import PublicationDatasets
-# from view_knowledge_graph import query_author
-from app01.views.view_knowledge_graph import query_author, query_year, query_authors_chart, flite_authors, flite_years, \
-    query_departments_chart, query_departments_min_chart, flite_dept
+from app01.views.view_knowledge_graph import flite_years, query_departments_chart, query_departments_min_chart, \
+    flite_dept, query_paper_department, query_paper_department_year
+from app01.views.view_knowledge_graph import query_author, query_year, query_authors_chart, flite_authors
 
 
 # Create your views here.
@@ -19,6 +19,20 @@ def index(request):
         data = json.load(file)
     publication_list = list(data)
     return render(request, "index.html", {"publication_list": publication_list})
+
+
+def get_data_for_chart(request):
+    paper_year = query_year()
+    paper_department = query_paper_department()
+    paper_department_year = query_paper_department_year()
+    paper_author = query_authors_chart()
+    results = {
+        'chart1': paper_year,
+        'chart2': paper_department,
+        'chart3': paper_department_year,
+        'chart4': paper_author,
+    }
+    return HttpResponse(json.dumps(results))
 
 
 def get_years_from_neo4j(request):
@@ -41,7 +55,6 @@ def get_departments_from_neo4j(request):
 
 @csrf_exempt
 def get_departments_min_from_neo4j(request):
-
     data = json.loads(request.body)
     min = data['min']
     departments_authors_min = query_departments_min_chart(min)
