@@ -249,13 +249,24 @@
 
 
     function draw(words) {
-        let width = d3.select('#wordCloud_container').node().getBoundingClientRect().width
-        let height = d3.select('#wordCloud_container').node().getBoundingClientRect().height
+        let width = d3.select('#wordCloud_container').node().getBoundingClientRect().width;
+        let height = d3.select('#wordCloud_container').node().getBoundingClientRect().height;
+
+        // Calculate the bounding box of the word cloud
+        let xExtent = d3.extent(words, d => d.x);
+        let yExtent = d3.extent(words, d => d.y);
+        let xRange = xExtent[1] - xExtent[0];
+        let yRange = yExtent[1] - yExtent[0];
+
+        // Calculate the translation to center the word cloud within the SVG
+        let xOffset = (width - xRange) / 2 - xExtent[0];
+        let yOffset = (height - yRange) / 2 - yExtent[0];
+
         let svg = d3.select('#wordCloud_container').append("svg")
             .attr("width", width)
             .attr("height", height)
             .append("g")
-            .attr("transform", "translate(" + width/2 + "," + height/2 +")");
+            .attr("transform", "translate(" + xOffset + "," + yOffset + ")");
 
         svg.selectAll("text")
             .data(words)
@@ -275,7 +286,6 @@
             .text(function (d) {
                 return d.text;
             });
-
     }
 
     function randomColor() {
