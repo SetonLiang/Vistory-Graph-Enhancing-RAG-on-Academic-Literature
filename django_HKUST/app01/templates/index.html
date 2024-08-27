@@ -14,7 +14,7 @@
 <body>
 <script src="{% static 'js/jquery-3.7.1.js' %}"></script>
 <script src="{% static 'plugins/d3/d3.v7.js' %}"></script>
-<script src="../static/plugins/wordCloud/wordcloud2.js"></script>
+<script src="{% static 'plugins/d3/d3.layout.cloud.js' %}"></script>
 
 
 <div class="Self_container">
@@ -227,9 +227,74 @@
 </script>
 
 <script>
+    let words = []
+    let colorMap = {};
+
+    function initWordCloud() {
+        d3.layout.cloud().size([d3.select('#wordCloud_container').node().getBoundingClientRect().width,
+            d3.select('#wordCloud_container').node().getBoundingClientRect().height])
+            .words(words.map(function (d) {
+                return {text: d.text, size: d.size};
+            }))
+            .padding(5)
+            .rotate(0) // All words will be horizontal
+            .font("Impact")
+            .fontSize(function (d) {
+                return d.size;
+            })
+            .on("end", draw)
+            .start();
+
+    }
+
+
+    function draw(words) {
+        let width = d3.select('#wordCloud_container').node().getBoundingClientRect().width
+        let height = d3.select('#wordCloud_container').node().getBoundingClientRect().height
+        let svg = d3.select('#wordCloud_container').append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width/2 + "," + height/2 +")");
+
+        svg.selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", function (d) {
+                return d.size + "px";
+            })
+            .style("fill", function (d) {
+                var color = randomColor();
+                colorMap[d.text] = color; // Store the color for each word
+                return color; // Initial color without transparency
+            })
+            .attr("text-anchor", "middle")
+            .attr("transform", function (d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function (d) {
+                return d.text;
+            });
+
+    }
+
+    function randomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+
+</script>
+
+<script>
     window.onload = function () {
         LoadKeywords()
     }
+
 
     function createWordCloud(wordArray) {
         const cloud_containerWidth = d3.select('#wordCloud_container').node().getBoundingClientRect().width;
@@ -257,7 +322,9 @@
             data: {},
             success: function (res) {
                 let request = JSON.parse(res)
-                createWordCloud(request)
+                console.log(request)
+                words = request
+                initWordCloud()
             }
         })
     }
