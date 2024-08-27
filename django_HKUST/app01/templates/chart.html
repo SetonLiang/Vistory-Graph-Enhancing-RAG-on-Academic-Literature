@@ -13,192 +13,105 @@
 
 <!-- Create a div where the graph will take place -->
 <div id="dataVis" class="chart_container">
-    <!-- Add buttons with a container -->
+    <svg id="chart1" ></svg>
+    <svg id="chart2" ></svg>
+    <svg id="chart3" ></svg>
+    <svg id="chart4" ></svg>
 </div>
 
 <script>
-    function createChart() {
+    const data1 = [
+        { label: "A", value: 30 },
+        { label: "B", value: 86 },
+        { label: "C", value: 168 },
+        { label: "D", value: 281 },
+        { label: "E", value: 303 },
+        { label: "F", value: 365 }
+    ];
 
-        Init_width = d3.select('.chart_container').node().getBoundingClientRect().width;
-        Init_height = d3.select('.chart_container').node().getBoundingClientRect().height;
+    const data2 = [
+        { label: "A", value: 45 },
+        { label: "B", value: 120 },
+        { label: "C", value: 190 },
+        { label: "D", value: 260 },
+        { label: "E", value: 340 },
+        { label: "F", value: 410 }
+    ];
 
-        // set the dimensions and margins of the graph
-        margin = {top: 10, right: 30, bottom: 50, left: 40};
-        width_chart = Init_width - margin.left - margin.right;
-        height_chart = Init_height - margin.top - margin.bottom;
+    const data3 = [
+        { label: "A", value: 25 },
+        { label: "B", value: 95 },
+        { label: "C", value: 140 },
+        { label: "D", value: 230 },
+        { label: "E", value: 280 },
+        { label: "F", value: 320 }
+    ];
 
-        // append the svg object to the body of the page
-        svg_chart = d3.select("#dataVis")
-            .append("svg")
-            .attr("width", width_chart + margin.left + margin.right)
-            .attr("height", height_chart + margin.top + margin.bottom)
-            .style('display', 'block')
-            .style('background-color', 'white');
+    const data4 = [
+        { label: "A", value: 55 },
+        { label: "B", value: 110 },
+        { label: "C", value: 170 },
+        { label: "D", value: 200 },
+        { label: "E", value: 275 },
+        { label: "F", value: 340 }
+    ];
 
-        g_chart = svg_chart.append("g")
-            .attr("transform", `translate(${margin.left},${margin.top})`);
+    const chartsData = [data1, data2, data3, data4];
+    const chartIds = ["chart1", "chart2", "chart3", "chart4"];
 
-        x0 = d3.scaleBand().domain(x0Name).range([0, width_chart]).paddingInner(0.1);
-        x1 = d3.scaleBand().domain(x1Name).rangeRound([0, x0.bandwidth()]).padding(0.05);
-        y = d3.scaleLinear().domain([0, Math.max(...initialData.flat())]).range([height_chart, 0]).nice();
-        z = d3.scaleOrdinal().range(["#e3716e", "#7ac7e2", "#f7df87", "#6b486b"]);
+    margin = { top: 20, right: 20, bottom: 50, left: 40 };
 
-        g_chart.append('g')
-            .attr('transform', `translate(0,${height_chart})`)
-            .call(d3.axisBottom(x0))
-            .selectAll("text")  // 选择所有x轴的刻度标签
-            .style("cursor", "pointer")  // 添加鼠标指针样式，表示可点击
-            .on("click", function (event, d) {
-                highlightPapersByYear(d)
-                query_list.push(d);
-                query_year_list.push(d);
-                QueryResults();
-                fixSelectors(d);
-            });
+    chartsData.forEach((data, index) => {
+        const svg = d3.select(`#${chartIds[index]}`);
+        const boundingRect = svg.node().getBoundingClientRect();
+        const width = boundingRect.width - margin.left - margin.right;
+        const height = boundingRect.height - margin.top - margin.bottom;
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-        {#g_chart.append('g').attr('transform', `translate(0,${height_chart})`).call(d3.axisBottom(x0));#}
-        g_chart.append('g').attr('transform', `translate(0,0)`).call(d3.axisLeft(y));
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.label))
+            .range([0, width])
+            .padding(0.1);
 
-        // Draw initial bars
-        drawBars(initialData, "original");
-        // drawLegend();
-    }
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.value)])
+            .nice()
+            .range([height, 0]);
 
-    function drawBars(data, className) {
-        // Define transition settings
-        const transitionDuration = 750; // Duration of the transition
-
-        // Draw bars with a specific class name
-        const bars = g_chart.selectAll(`g.bars.${className}`)
+        g.append("g")
+            .selectAll("rect")
             .data(data)
-            .join('g')
-            .attr('class', `bars ${className}`)
-            .attr('transform', (d, i) => `translate(${x0(x0Name[i])},0)`);
+            .enter()
+            .append("rect")
+            .attr("x", d => x(d.label))
+            .attr("y", d => y(d.value))
+            .attr("width", x.bandwidth())
+            .attr("height", d => height - y(d.value))
+            .attr("fill", "steelblue");
 
-        const rects = bars.selectAll('rect')
-            .data((d, j) => d.map((value, i) => ({value, i, j})))
-            .join('rect')
-            .attr('x', (d, i) => x1(x1Name[d.i]))
-            .attr('y', height_chart) // Start from the bottom
-            .attr('width', x1.bandwidth())
-            .attr('height', 0) // Initial height 0
-            .attr('fill', (d, i) => {
-                if (className === "new" || className === "original") {
-                    return z(d.i); // Color for new data
-                } else {
-                    return d3.rgb(z(d.i)).brighter(1); // Lighter color for old data
-                }
-            })
-            .on('click', function(event, d, i){
-                query_list.push(x1Name[d.i]);
-                query_list.push(x0Name[d.j]);
-                query_year_list.push(x0Name[d.j]);
-                query_dept_list.push(x1Name[d.i])
-                QueryResults();
-                fixSelectors(x1Name[d.i]);
-                fixSelectors(x0Name[d.j])
-                highlightByDepartmentAndYear(x1Name[d.i],x0Name[d.j])
-            });
+        // 添加X轴
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x));
 
-        // Conditionally apply transition only if className is "new"
-        if (className === 'new') {
-            rects.transition() // Start the transition
-                .duration(transitionDuration) // Set the duration of the transition
-                .attr('y', d => y(d.value)) // Animate y position
-                .attr('height', d => height_chart - y(d.value)); // Animate height
-        } else {
-            // If not "new", directly set final positions without animation
-            rects.attr('y', d => y(d.value))
-                .attr('height', d => height_chart - y(d.value));
-        }
+        // 添加Y轴
+        g.append("g")
+            .call(d3.axisLeft(y));
 
-        // Add mouseover and mouseout events
-        rects.on('mouseover', function (event, d, i) {
-            tooltip.transition().duration(200).style("opacity", .9);
-            tooltip.html(
-                () => {
-                    return x1Name[d.i] +
-                        '<br>' + d.value
-                })
-                .style("left", (event.pageX + 10) + "px")
-                .style("top", (event.pageY - 28) + "px");
-        })
-            .on('mouseout', function (d) {
-                tooltip.transition().duration(500).style("opacity", 0);
-            });
-    }
-
-
-    function drawLegend() {
-        // Draw legend
-        const legend = g_chart.selectAll('g_chart.legend')
-            .data(x1Name)
-            .join('g')
-            .attr('class', 'legend')
-            .attr('transform', (d, i) => `translate(0,${i * 20})`);
-
-        legend.append('rect')
-            .attr('x', width_chart - 19)
-            .attr('width', 19)
-            .attr('height', 19)
-            .attr('fill', (d, i) => z(i));
-
-        legend.append('text')
-            .attr('x', width_chart - 60)
-            .attr('y', 9.5)
-            .attr('dy', '0.32em')
-            .text(d => d);
-    }
-
-    function updateData() {
-        // Make old data bars lighter
-        g_chart.selectAll('g.bars.original rect')
-            .transition().duration(500)
-            .attr('fill', '#dadada');
-
-        // Draw new bars on top
-        drawBars(newData, "new");
-    }
-
-</script>
-
-<script>
-    $(document).ready(function () {
-        LoadDepartmentData()
+        // 添加文本标签
+        g.selectAll("text.bar")
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("class", "bar")
+            .attr("x", d => x(d.label) + x.bandwidth() / 2)
+            .attr("y", d => y(d.value) - 5)
+            .attr("dy", ".35em")
+            .attr("fill", "black")
+            .attr("text-anchor", "middle")
+            .text(d => d.value);
     });
-
-
-    function LoadDepartmentData() {
-        $.ajax({
-            url: 'http://127.0.0.1:8000/data_neo4j/departments',
-            type: 'get',
-            data: {},
-            success: function (res) {
-                let request = JSON.parse(res)
-                x0Name = request['x0Name']
-                x1Name = request['x1Name']
-                initialData = request['initData']
-                createChart()
-                LoadDepartmentData_with_min()
-            }
-        });
-    }
-
-    function LoadDepartmentData_with_min() {
-        let data = {'min': min_citation}
-        $.ajax({
-            url: 'http://127.0.0.1:8000/data_neo4j/departmentsMin',
-            type: 'POST',
-            contentType: 'application/json', // 发送信息至服务器时内容编码类型
-            data: JSON.stringify(data),
-            success: function (res) {
-                let request = JSON.parse(res)
-                newData = request['newData']
-                updateData()
-            }
-        });
-    }
-
 </script>
+
 </body>
 </html>

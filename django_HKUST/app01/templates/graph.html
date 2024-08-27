@@ -443,26 +443,14 @@
             .attr('class', 'circle')
             .merge(node)
             .on('click', function (e, d) {
-                if (d.group === 0) {
-                    query_list.push(d.id);
-                    query_id_list.push(d.id);
-                    QueryResults();
-                    fixSelectors(d.id);
-                }
-                if (d.group === 4) {
-                    //if (already_click_author.indexOf(d.name) === -1 || already_click_author.length === 0) {
-                    //    query_paper(d.name);
-                    //}
-                    //already_click_author.push(d.name);
-                    query_list.push(d.name);
-                    query_author_list.push(d.name);
-                    QueryResults();
-                    fixSelectors(d.name);
-                }
+                // Set the clicked node as the selected node
                 selectedNode = d;
-
-                // Call the function to highlight the neighborhood
-                highlightNeighborhood(selectedNode);
+                if (d.group === 1) {
+                    // Call the function to highlight the neighborhood
+                    highlightNeighborhood_2(selectedNode);
+                } else {
+                    highlightNeighborhood(selectedNode)
+                }
             });
 
         node.on('mouseover', function (event, d) {
@@ -544,9 +532,16 @@
         const paperNodes = nodes.filter(node => node.group === 0);
 
         // 给每个节点一个初始位置，避免重叠
+        {#departmentNodes.forEach((node, index) => {#}
+        {#    node.x = width / 2 + 1200 * Math.cos(index * 2 * Math.PI / departmentNodes.length);#}
+        {#    node.y = height / 2 + 1200 * Math.sin(index * 2 * Math.PI / departmentNodes.length);#}
+        // });
+
+        const spacing = 2000; // 你想要的节点之间的固定间距
+
         departmentNodes.forEach((node, index) => {
-            node.x = width / 2 + 1200 * Math.cos(index * 2 * Math.PI / departmentNodes.length);
-            node.y = height / 2 + 1200 * Math.sin(index * 2 * Math.PI / departmentNodes.length);
+            node.x = (width - spacing * (departmentNodes.length - 1)) / 2 + spacing * index;
+            node.y = height / 2; // 保持所有节点在垂直方向上的位置一致
         });
 
         departmentNodes.forEach((department) => {
@@ -710,27 +705,32 @@
             })
             .attr('class', 'circle')
             .on('click', function (e, d) {
-                if (d.group === 0) {
-                    query_list.push(d.id)
-                    query_id_list.push(d.id)
-                    QueryResults()
-                    fixSelectors(d.id)
-                }
-                if (d.group === 4) {
-                    //if (already_click_author.indexOf(d.name) === -1 || already_click_author.length === 0) {
-                    //    query_paper(d.name);
-                    //}
-                    already_click_author.push(d.name)
-                    query_list.push(d.name)
-                    query_author_list.push(d.name)
-                    QueryResults()
-                    fixSelectors(d.name)
-                }
+                {#if (d.group === 0) {#}
+                {#    query_list.push(d.id)#}
+                {#    query_id_list.push(d.id)#}
+                {#    QueryResults()#}
+                {#    fixSelectors(d.id)#}
+                //}
+                {#if (d.group === 4) {#}
+                {#    //if (already_click_author.indexOf(d.name) === -1 || already_click_author.length === 0) {#}
+                {#    //    query_paper(d.name);#}
+                {#    //}#}
+                {#    already_click_author.push(d.name)#}
+                {#    query_list.push(d.name)#}
+                {#    query_author_list.push(d.name)#}
+                {#    QueryResults()#}
+                {#    fixSelectors(d.name)#}
+                //}
+
                 // Set the clicked node as the selected node
                 selectedNode = d;
+                if (d.group === 1) {
+                    // Call the function to highlight the neighborhood
+                    highlightNeighborhood_2(selectedNode);
+                } else {
+                    highlightNeighborhood(selectedNode)
+                }
 
-                // Call the function to highlight the neighborhood
-                highlightNeighborhood(selectedNode);
             })
 
         node.on('mouseover', function (event, d) {
@@ -1118,6 +1118,93 @@
                 } else {
                     return 0.6;
                 }
+            } else {
+                return 0.3; // Reduce opacity for other links
+            }
+        });
+    }
+
+    function highlightNeighborhood_2(selectedNode) {
+        const neighbors = new Set();
+        const secondNeighbors = new Set();
+
+        // Find the first-order neighbors (direct connections)
+        links.forEach(link => {
+            if (link.source.name === selectedNode.name) {
+                neighbors.add(link.target.name);
+            } else if (link.target.name === selectedNode.name) {
+                neighbors.add(link.source.name);
+            }
+        });
+
+        // Find the second-order neighbors (neighbors of first-order neighbors)
+        links.forEach(link => {
+            if (neighbors.has(link.source.name)) {
+                secondNeighbors.add(link.target.name);
+            } else if (neighbors.has(link.target.name)) {
+                secondNeighbors.add(link.source.name);
+            }
+        });
+
+        neighbors.add(selectedNode.name); // Include the selected node itself
+        secondNeighbors.delete(selectedNode.name); // Avoid re-adding the selected node
+
+        // Update the color of nodes
+        node.attr('fill', (n) => {
+            if (neighbors.has(n.name)) {
+                // Original color for the selected node and its first-order neighbors
+                if (n.group === 0) {
+                    return colorScale(parseInt(n.released));
+                } else if (n.group === 4) {
+                    return colorScale_auther(n.count);
+                } else {
+                    if (n.name === "AI") {
+                        return '#e3716e';
+                    } else if (n.name === "CMA") {
+                        return '#7ac7e2';
+                    } else if (n.name === 'DSA') {
+                        return '#f7df87';
+                    }
+                }
+            } else if (secondNeighbors.has(n.name)) {
+                // Original color for the selected node and its first-order neighbors
+                if (n.group === 0) {
+                    return colorScale(parseInt(n.released));
+                } else if (n.group === 4) {
+                    return colorScale_auther(n.count);
+                } else {
+                    if (n.name === "AI") {
+                        return '#e3716e';
+                    } else if (n.name === "CMA") {
+                        return '#7ac7e2';
+                    } else if (n.name === 'DSA') {
+                        return '#f7df87';
+                    }
+                }
+            } else {
+                // Lighten color for other nodes
+                return "#ddd"; // or use a different light color
+            }
+        });
+
+        // Update the color of links
+        link.attr("stroke", (l) => {
+            if (neighbors.has(l.source.name) && neighbors.has(l.target.name)) {
+                return color[3]; // Original color for links between selected node and its first-order neighbors
+            } else if (secondNeighbors.has(l.source.name) || secondNeighbors.has(l.target.name)) {
+                return "#aaa"; // Slightly different color for links to second-order neighbors
+            } else {
+                return "#ddd"; // Lighten color for other links
+            }
+        }).attr("stroke-opacity", (l) => {
+            if (neighbors.has(l.source.name) && neighbors.has(l.target.name)) {
+                if (l.relationship === 'BELONGS_TO') {
+                    return 1;
+                } else {
+                    return 0.6;
+                }
+            } else if (secondNeighbors.has(l.source.name) || secondNeighbors.has(l.target.name)) {
+                return 0.5; // Reduce opacity for second-order links
             } else {
                 return 0.3; // Reduce opacity for other links
             }

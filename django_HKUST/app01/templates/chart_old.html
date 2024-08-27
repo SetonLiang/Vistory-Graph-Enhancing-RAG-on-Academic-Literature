@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+{% load static %}
+{% load my_filter %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart</title>
+    <link rel="stylesheet" href="{% static 'css/for_chart.css' %}">
+    <style>
+    </style>
+</head>
+<body>
+
+<!-- Create a div where the graph will take place -->
+<div id="dataVis" class="chart_container">
+    <!-- Add buttons with a container -->
+</div>
+
+<script>
+    function createChart() {
+
+        Init_width = d3.select('.chart_container').node().getBoundingClientRect().width;
+        Init_height = d3.select('.chart_container').node().getBoundingClientRect().height;
+
+        // set the dimensions and margins of the graph
+        margin = {top: 10, right: 30, bottom: 50, left: 40};
+        width_chart = Init_width - margin.left - margin.right;
+        height_chart = Init_height - margin.top - margin.bottom;
+
+        // append the svg object to the body of the page
+        svg_chart = d3.select("#dataVis")
+            .append("svg")
+            .attr("width", width_chart + margin.left + margin.right)
+            .attr("height", height_chart + margin.top + margin.bottom)
+            .style('display', 'block')
+            .style('background-color', 'white');
+
+        g_chart = svg_chart.append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        x0 = d3.scaleBand().domain(x0Name).range([0, width_chart]).paddingInner(0.1);
+        x1 = d3.scaleBand().domain(x1Name).rangeRound([0, x0.bandwidth()]).padding(0.05);
+        y = d3.scaleLinear().domain([0, Math.max(...initialData.flat())]).range([height_chart, 0]).nice();
+        z = d3.scaleOrdinal().range(["#e3716e", "#7ac7e2", "#f7df87", "#6b486b"]);
+
+        g_chart.append('g')
+            .attr('transform', `translate(0,${height_chart})`)
+            .call(d3.axisBottom(x0))
+            .selectAll("text")  // 选择所有x轴的刻度标签
+            .style("cursor", "pointer")  // 添加鼠标指针样式，表示可点击
+            .on("click", function (event, d) {
+                highlightPapersByYear(d)
+                query_list.push(d);
+                query_year_list.push(d);
+                QueryResults();
+                fixSelectors(d);
+            });
+
+        {#g_chart.append('g').attr('transform', `translate(0,${height_chart})`).call(d3.axisBottom(x0));#}
+        g_chart.append('g').attr('transform', `translate(0,0)`).call(d3.axisLeft(y));
+
+        // Draw initial bars
+        drawBars(initialData, "original");
+        // drawLegend();
+    }
+
+    function drawBars(data, className) {
+        // Define transition settings
+        const transitionDuration = 750; // Duration of the transition
+
+        // Draw bars with a specific class name
+        const bars = g_chart.selectAll(`g.bars.${className}`)
+            .data(data)
+            .join('g')
+            .attr('class', `bars ${className}`)
+            .attr('transform', (d, i) => `translate(${x0(x0Name[i])},0)`);
+
+        const rects = bars.selectAll('rect')
+            .data((d, j) => d.map((value, i) => ({value, i, j})))
+            .join('rect')
+            .attr('x', (d, i) => x1(x1Name[d.i]))
+            .attr('y', height_chart) // Start from the bottom
+            .attr('width', x1.bandwidth())
+            .attr('height', 0) // Initial height 0
+            .attr('fill', (d, i) => {
+                if (className === "new" || className === "original") {
+                    return z(d.i); // Color for new data
+                } else {
+                    return d3.rgb(z(d.i)).brighter(1); // Lighter color for old data
+                }
+            })
+            .on('click', function(event, d, i){
+                query_list.push(x1Name[d.i]);
+                query_list.push(x0Name[d.j]);
+                query_year_list.push(x0Name[d.j]);
+                query_dept_list.push(x1Name[d.i])
+                QueryResults();
+                fixSelectors(x1Name[d.i]);
+                fixSelectors(x0Name[d.j])
+                highlightByDepartmentAndYear(x1Name[d.i],x0Name[d.j])
+            });
+
+        // Conditionally apply transition only if className is "new"
+        if (className === 'new') {
+            rects.transition() // Start the transition
+                .duration(transitionDuration) // Set the duration of the transition
+                .attr('y', d => y(d.value)) // Animate y position
+                .attr('height', d => height_chart - y(d.value)); // Animate height
+        } else {
+            // If not "new", directly set final positions without animation
+            rects.attr('y', d => y(d.value))
+                .attr('height', d => height_chart - y(d.value));
+        }
+
+        // Add mouseover and mouseout events
+        rects.on('mouseover', function (event, d, i) {
+            tooltip.transition().duration(200).style("opacity", .9);
+            tooltip.html(
+                () => {
+                    return x1Name[d.i] +
+                        '<br>' + d.value
+                })
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 28) + "px");
+        })
+            .on('mouseout', function (d) {
+                tooltip.transition().duration(500).style("opacity", 0);
+            });
+    }
+
+
+    function drawLegend() {
+        // Draw legend
+        const legend = g_chart.selectAll('g_chart.legend')
+            .data(x1Name)
+            .join('g')
+            .attr('class', 'legend')
+            .attr('transform', (d, i) => `translate(0,${i * 20})`);
+
+        legend.append('rect')
+            .attr('x', width_chart - 19)
+            .attr('width', 19)
+            .attr('height', 19)
+            .attr('fill', (d, i) => z(i));
+
+        legend.append('text')
+            .attr('x', width_chart - 60)
+            .attr('y', 9.5)
+            .attr('dy', '0.32em')
+            .text(d => d);
+    }
+
+    function updateData() {
+        // Make old data bars lighter
+        g_chart.selectAll('g.bars.original rect')
+            .transition().duration(500)
+            .attr('fill', '#dadada');
+
+        // Draw new bars on top
+        drawBars(newData, "new");
+    }
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        LoadDepartmentData()
+    });
+
+
+    function LoadDepartmentData() {
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data_neo4j/departments',
+            type: 'get',
+            data: {},
+            success: function (res) {
+                let request = JSON.parse(res)
+                x0Name = request['x0Name']
+                x1Name = request['x1Name']
+                initialData = request['initData']
+                createChart()
+                LoadDepartmentData_with_min()
+            }
+        });
+    }
+
+    function LoadDepartmentData_with_min() {
+        let data = {'min': min_citation}
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data_neo4j/departmentsMin',
+            type: 'POST',
+            contentType: 'application/json', // 发送信息至服务器时内容编码类型
+            data: JSON.stringify(data),
+            success: function (res) {
+                let request = JSON.parse(res)
+                newData = request['newData']
+                updateData()
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

@@ -23,14 +23,14 @@
         </div>
 
         <div id="selector" class="clearfix">
-            <div class="local-label">Selectors</div>
-            <div class="selector" id="selector0" value=" "></div>
-            <div class="selector" id="selector1" value=" "></div>
-            <div class="selector" id="selector2" value=" "></div>
-            <div class="selector" id="selector3" value=" "></div>
-            <div class="selector" id="selector4" value=" "></div>
-            <div class="selector" id="selector5" value=" "></div>
-            <div class="button" id="selector_button" onclick="clearSelector()">clear</div>
+{#            <div class="local-label">Selectors</div>#}
+{#            <div class="selector" id="selector0" value=" "></div>#}
+{#            <div class="selector" id="selector1" value=" "></div>#}
+{#            <div class="selector" id="selector2" value=" "></div>#}
+{#            <div class="selector" id="selector3" value=" "></div>#}
+{#            <div class="selector" id="selector4" value=" "></div>#}
+{#            <div class="selector" id="selector5" value=" "></div>#}
+{#            <div class="button" id="selector_button" onclick="clearSelector()">clear</div>#}
 
             <div class="dropdown-container">
                 <span id="min_citation" class="local-label">Min_citation:</span>
@@ -116,7 +116,7 @@
                         let Init_width, Init_height, margin, width_chart, height_chart,
                             svg_chart, g_chart,
                             x0Name, x1Name,
-                            x0, x1, y, z,
+                            x0, x1, y, z, x,
                             initialData, newData,
                             bars;
                     </script>
@@ -144,61 +144,61 @@
             <div class="top">
                 <div class="title-box" id="publicationTitle">Publication</div>
                 <div class="content-box auto" id="publication" style="height: calc(100% - 30px)">
-                    {% for publication in publication_list %}
-                        <div id="{{ publication.IdName }}" class="publication-card"
-                             style="border-color: rgb(200, 200, 200)">
-                            <div class="entry_img">
-                                {% with final_path='img/'|add:publication.IdName|add:'.png' %}
-                                    {% if final_path|file_exists %}
-                                        <img class="thumb" src="{% static final_path %}" alt="">
-                                    {% else %}
-                                        <!-- 文件不存在时显示的内容 -->
-                                        <img class="thumb" src="{% static 'img/default.png' %}" alt="">
-                                    {% endif %}
-                                {% endwith %}
-                            </div>
-                            <div class="entry_main">
-                                <div class="links">
-                                    <a href="{{ publication.Doi }}" target="_blank">DOI</a>
-                                    <a href="http://scholar.google.de/scholar?hl=en&amp;q={{ publication.Name }}"
-                                       target="_blank">Google Scholar</a>
-                                    <a href="https://www.google.de/search?q={{ publication.Name }}"
-                                       target="_blank">Google</a>
-                                </div>
-                                <div class="entry_header">
-                                    <div class="vis  tooltipstered"></div>
-                                    <div class="id">{{ publication.IdName }}</div>
-                                    <div class="series">{{ publication.Sources }}</div>
-                                    <div class="year">{{ publication.PublishedYears }}</div>
-                                </div>
-                                <a class="title" target="_blank" href="{{ publication.Doi }}">{{ publication.Name }}</a>
-                                <div class="authors">
-                                    {% for author in publication.Authors %}
-                                        {% if author == None %}
-                                        {% else %}
-                                            <div class="author" value="{{ author }}">
-                                                <span class="last_name">{{ author }}</span>
-
-                                                <!--                                    <span class="last_name">{{ author|spilt_author_last }}</span>-->
-                                                <!--                                    <span class="first_name">{{ author|spilt_author_first }}</span>-->
-                                            </div>
-                                        {% endif %}
-                                    {% endfor %}
-                                </div>
-                                <div class="abstract text-collapse"
-                                     value="{{ publication.Abstracts }}"
-                                     onclick="text_collapse(d3.select(this))">
-                                    <span class="label">Abstract: </span>
-                                    {{ publication.Abstracts }}
-                                </div>
-                                <div class="tags">
-                                    <div class="tag">
-                                        {{ publication.Keywords }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
+{#                    {% for publication in publication_list %}#}
+{#                        <div id="{{ publication.IdName }}" class="publication-card"#}
+{#                             style="border-color: rgb(200, 200, 200)">#}
+{#                            <div class="entry_img">#}
+{#                                {% with final_path='img/'|add:publication.IdName|add:'.png' %}#}
+{#                                    {% if final_path|file_exists %}#}
+{#                                        <img class="thumb" src="{% static final_path %}" alt="">#}
+{#                                    {% else %}#}
+{#                                        <!-- 文件不存在时显示的内容 -->#}
+{#                                        <img class="thumb" src="{% static 'img/default.png' %}" alt="">#}
+{#                                    {% endif %}#}
+{#                                {% endwith %}#}
+{#                            </div>#}
+{#                            <div class="entry_main">#}
+{#                                <div class="links">#}
+{#                                    <a href="{{ publication.Doi }}" target="_blank">DOI</a>#}
+{#                                    <a href="http://scholar.google.de/scholar?hl=en&amp;q={{ publication.Name }}"#}
+{#                                       target="_blank">Google Scholar</a>#}
+{#                                    <a href="https://www.google.de/search?q={{ publication.Name }}"#}
+{#                                       target="_blank">Google</a>#}
+{#                                </div>#}
+{#                                <div class="entry_header">#}
+{#                                    <div class="vis  tooltipstered"></div>#}
+{#                                    <div class="id">{{ publication.IdName }}</div>#}
+{#                                    <div class="series">{{ publication.Sources }}</div>#}
+{#                                    <div class="year">{{ publication.PublishedYears }}</div>#}
+{#                                </div>#}
+{#                                <a class="title" target="_blank" href="{{ publication.Doi }}">{{ publication.Name }}</a>#}
+{#                                <div class="authors">#}
+{#                                    {% for author in publication.Authors %}#}
+{#                                        {% if author == None %}#}
+{#                                        {% else %}#}
+{#                                            <div class="author" value="{{ author }}">#}
+{#                                                <span class="last_name">{{ author }}</span>#}
+{##}
+{#                                                <!--                                    <span class="last_name">{{ author|spilt_author_last }}</span>-->#}
+{#                                                <!--                                    <span class="first_name">{{ author|spilt_author_first }}</span>-->#}
+{#                                            </div>#}
+{#                                        {% endif %}#}
+{#                                    {% endfor %}#}
+{#                                </div>#}
+{#                                <div class="abstract text-collapse"#}
+{#                                     value="{{ publication.Abstracts }}"#}
+{#                                     onclick="text_collapse(d3.select(this))">#}
+{#                                    <span class="label">Abstract: </span>#}
+{#                                    {{ publication.Abstracts }}#}
+{#                                </div>#}
+{#                                <div class="tags">#}
+{#                                    <div class="tag">#}
+{#                                        {{ publication.Keywords }}#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    {% endfor %}#}
                 </div>
             </div>
             <div class="bottom">
