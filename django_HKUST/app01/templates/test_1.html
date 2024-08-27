@@ -51,70 +51,6 @@
 </div>
 
 <script>
-    // 数据集定义
-    const dataSets = [
-        [ // chart1 数据
-            {author: "Author A", papers: 15},
-            {author: "Author B", papers: 25},
-            {author: "Author C", papers: 5},
-            {author: "Author D", papers: 30},
-            {author: "Author E", papers: 20}
-        ],
-        [ // chart2 数据
-            {author: "Author F", papers: 10},
-            {author: "Author G", papers: 12},
-            {author: "Author H", papers: 7}
-        ],
-        [ // chart3 数据
-            {author: "Author I", papers: 22},
-            {author: "Author J", papers: 8},
-            {author: "Author K", papers: 18},
-            {author: "Author L", papers: 14},
-            {author: "Author M", papers: 11},
-            {author: "Author N", papers: 9},
-            {author: "Author O", papers: 17},
-            {author: "Author P", papers: 19},
-            {author: "Author Q", papers: 21},
-            {author: "Author R", papers: 16},
-            {author: "Author S", papers: 13},
-            {author: "Author T", papers: 24},
-            {author: "Author U", papers: 26},
-            {author: "Author V", papers: 28},
-            {author: "Author W", papers: 23},
-            {author: "Author X", papers: 27},
-            {author: "Author Y", papers: 12},
-            {author: "Author Z", papers: 6}
-        ],
-        [ // chart4 数据
-            {author: "Author A", papers: 15},
-            {author: "Author B", papers: 25},
-            {author: "Author C", papers: 5},
-            {author: "Author D", papers: 30},
-            {author: "Author E", papers: 20},
-            {author: "Author F", papers: 10},
-            {author: "Author G", papers: 12},
-            {author: "Author H", papers: 7},
-            {author: "Author I", papers: 22},
-            {author: "Author J", papers: 8},
-            {author: "Author K", papers: 18},
-            {author: "Author L", papers: 14},
-            {author: "Author M", papers: 11},
-            {author: "Author N", papers: 9},
-            {author: "Author O", papers: 17},
-            {author: "Author P", papers: 19},
-            {author: "Author Q", papers: 21},
-            {author: "Author R", papers: 16},
-            {author: "Author S", papers: 13},
-            {author: "Author T", papers: 24},
-            {author: "Author U", papers: 26},
-            {author: "Author V", papers: 28},
-            {author: "Author W", papers: 23},
-            {author: "Author X", papers: 27},
-            {author: "Author Y", papers: 12},
-            {author: "Author Z", papers: 6}
-        ]
-    ];
-
     const containerWidth = 877;
     const containerHeight = 220;
     const chartWidth = containerWidth / 4; // 每个图表宽度占容器的25%
@@ -171,14 +107,20 @@
 
         svg.append("g")
             .attr("class", "bars")
-            .attr("fill", "steelblue")
             .selectAll("rect")
             .data(data)
             .join("rect")
             .attr("x", d => x(d.year))
             .attr("y", d => y(d.papers))
             .attr("height", d => y(0) - y(d.papers))
-            .attr("width", x.bandwidth());
+            .attr("width", x.bandwidth())
+            .attr("fill", "steelblue")
+            .on("mouseover", function () {
+                d3.select(this).attr("fill", "orange");
+            })
+            .on("mouseout", function () {
+                d3.select(this).attr("fill", "steelblue");
+            });
 
         svg.append("g")
             .attr("class", "x-axis")
@@ -244,7 +186,17 @@
             .attr("x", d => x(d.data.year))
             .attr("y", d => y(d[1]))
             .attr("height", d => y(d[0]) - y(d[1]))
-            .attr("width", x.bandwidth());
+            .attr("width", x.bandwidth())
+            .on("mouseover", function (event, d) {
+                const key = d3.select(this.parentNode).datum().key;
+                d3.select(this)
+                    .attr("fill", d3.rgb(color(key)).darker(1.2));
+            })
+            .on("mouseout", function (event, d) {
+                const key = d3.select(this.parentNode).datum().key;
+                d3.select(this)
+                    .attr("fill", color(key));
+            });
 
         svg.append("g")
             .attr("class", "x-axis")
@@ -282,11 +234,16 @@
 
     // 单独的图表3绘制函数
     function createChart3(svg) {
-        const data = dataSets[2];
+        const data = [
+            {department: "CMA", papers: 1200},
+            {department: "AI", papers: 1500},
+            {department: "DSA", papers: 800}
+        ];
+
         const x = d3.scaleBand()
-            .domain(data.map(d => d.author))
+            .domain(data.map(d => d.department))
             .range([marginLeft, chartWidth - marginRight])
-            .padding(0.1);
+            .padding(0.2);
 
         const y = d3.scaleLinear()
             .domain([0, d3.max(data, d => d.papers)]).nice()
@@ -301,10 +258,16 @@
             .selectAll("rect")
             .data(data)
             .join("rect")
-            .attr("x", d => x(d.author))
+            .attr("x", d => x(d.department))
             .attr("y", d => y(d.papers))
             .attr("height", d => y(0) - y(d.papers))
-            .attr("width", x.bandwidth());
+            .attr("width", x.bandwidth())
+            .on("mouseover", function () {
+                d3.select(this).attr("fill", "orange");
+            })
+            .on("mouseout", function () {
+                d3.select(this).attr("fill", "steelblue");
+            });
 
         svg.append("g")
             .attr("class", "x-axis")
@@ -314,28 +277,21 @@
         svg.append("g")
             .attr("class", "y-axis")
             .attr("transform", `translate(${marginLeft},0)`)
-            .call(d3.axisLeft(y))
+            .call(d3.axisLeft(y).tickFormat(d3.format(".2s")))
             .call(g => g.select(".domain").remove());
-
-        // 检查数据长度，决定是否调整x轴标签
-        if (data.length > 10) {
-            svg.selectAll(".x-axis text")
-                .text('...');
-        }
-
-        // 调用zoom功能
-        if (data.length > 10) {
-            zoom(svg, x, chartWidth, chartHeight);
-        }
     }
 
     // 单独的图表4绘制函数
     function createChart4(svg) {
-        const data = dataSets[3];
+        const data = Array.from({length: 25}, (_, i) => ({
+            author: `Author ${String.fromCharCode(65 + i)}`,
+            papers: Math.floor(Math.random() * 100) + 1
+        }));
+
         const x = d3.scaleBand()
             .domain(data.map(d => d.author))
             .range([marginLeft, chartWidth - marginRight])
-            .padding(0.1);
+            .padding(0.2);
 
         const y = d3.scaleLinear()
             .domain([0, d3.max(data, d => d.papers)]).nice()
@@ -353,26 +309,33 @@
             .attr("x", d => x(d.author))
             .attr("y", d => y(d.papers))
             .attr("height", d => y(0) - y(d.papers))
-            .attr("width", x.bandwidth());
+            .attr("width", x.bandwidth())
+            .on("mouseover", function () {
+                d3.select(this).attr("fill", "orange");
+            })
+            .on("mouseout", function () {
+                d3.select(this).attr("fill", "steelblue");
+            });
 
         svg.append("g")
             .attr("class", "x-axis")
             .attr("transform", `translate(0,${chartHeight - marginBottom})`)
-            .call(d3.axisBottom(x).tickSizeOuter(0));
+            .call(d3.axisBottom(x).tickSizeOuter(0).tickFormat(d => data.length > 20 ? '...' : d))
+            .selectAll("text")
+            .style("text-anchor", "middle")
+            .attr("font-size", "10px");
 
         svg.append("g")
             .attr("class", "y-axis")
             .attr("transform", `translate(${marginLeft},0)`)
-            .call(d3.axisLeft(y))
+            .call(d3.axisLeft(y).tickFormat(d3.format(".2s")))
             .call(g => g.select(".domain").remove());
 
-        // 检查数据长度，决定是否调整x轴标签
         if (data.length > 10) {
             svg.selectAll(".x-axis text")
                 .text('...');
         }
 
-        // 调用zoom功能
         if (data.length > 10) {
             zoom(svg, x, chartWidth, chartHeight);
         }

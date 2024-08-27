@@ -13,103 +13,330 @@
 
 <!-- Create a div where the graph will take place -->
 <div id="dataVis" class="chart_container">
-    <svg id="chart1" ></svg>
-    <svg id="chart2" ></svg>
-    <svg id="chart3" ></svg>
-    <svg id="chart4" ></svg>
+    <div class="chart">
+        <svg id="chart1"></svg>
+    </div>
+    <div class="chart">
+        <svg id="chart2"></svg>
+    </div>
+    <div class="chart">
+        <svg id="chart3"></svg>
+    </div>
+    <div class="chart">
+        <svg id="chart4"></svg>
+    </div>
 </div>
 
 <script>
-    const data1 = [
-        { label: "A", value: 30 },
-        { label: "B", value: 86 },
-        { label: "C", value: 168 },
-        { label: "D", value: 281 },
-        { label: "E", value: 303 },
-        { label: "F", value: 365 }
-    ];
+    const containerWidth = d3.select('.chart_container').node().getBoundingClientRect().width;
+    const containerHeight = d3.select('.chart_container').node().getBoundingClientRect().height;
+    const chartWidth = containerWidth / 4; // 每个图表宽度占容器的25%
+    const chartHeight = containerHeight;
+    const marginTop = 10;
+    const marginRight = 10;
+    const marginBottom = 20;
+    const marginLeft = 30;
 
-    const data2 = [
-        { label: "A", value: 45 },
-        { label: "B", value: 120 },
-        { label: "C", value: 190 },
-        { label: "D", value: 260 },
-        { label: "E", value: 340 },
-        { label: "F", value: 410 }
-    ];
+    // 通用的缩放功能
+    function zoom_chart(svg, x, chartWidth, chartHeight) {
+        const extent = [[marginLeft, marginTop], [chartWidth - marginRight, chartHeight - marginTop]];
 
-    const data3 = [
-        { label: "A", value: 25 },
-        { label: "B", value: 95 },
-        { label: "C", value: 140 },
-        { label: "D", value: 230 },
-        { label: "E", value: 280 },
-        { label: "F", value: 320 }
-    ];
+        svg.call(d3.zoom()
+            .scaleExtent([1, 8])
+            .translateExtent(extent)
+            .extent(extent)
+            .on("zoom", zoomed));
 
-    const data4 = [
-        { label: "A", value: 55 },
-        { label: "B", value: 110 },
-        { label: "C", value: 170 },
-        { label: "D", value: 200 },
-        { label: "E", value: 275 },
-        { label: "F", value: 340 }
-    ];
+        function zoomed(event) {
+            const scale = event.transform.k;
+            x.range([marginLeft, chartWidth - marginRight].map(d => event.transform.applyX(d)));
+            svg.selectAll(".bars rect")
+                .attr("x", d => x(d.author))
+                .attr("width", x.bandwidth());
+            const xAxisGroup = svg.selectAll(".x-axis");
+            xAxisGroup.call(d3.axisBottom(x).tickFormat(scale < 4 ? '...' : d => d));
+            xAxisGroup.selectAll("text")
+                .style("text-anchor", "middle");
+        }
+    }
 
-    const chartsData = [data1, data2, data3, data4];
-    const chartIds = ["chart1", "chart2", "chart3", "chart4"];
-
-    margin = { top: 20, right: 20, bottom: 50, left: 40 };
-
-    chartsData.forEach((data, index) => {
-        const svg = d3.select(`#${chartIds[index]}`);
-        const boundingRect = svg.node().getBoundingClientRect();
-        const width = boundingRect.width - margin.left - margin.right;
-        const height = boundingRect.height - margin.top - margin.bottom;
-        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+    // 单独的图表1绘制函数
+    function createChart1(svg) {
+        const data = [
+            {year: 2015, papers: 1500},
+            {year: 2016, papers: 2500},
+            {year: 2017, papers: 500},
+            {year: 2018, papers: 3000},
+            {year: 2019, papers: 2000}
+        ];
 
         const x = d3.scaleBand()
-            .domain(data.map(d => d.label))
-            .range([0, width])
+            .domain(data.map(d => d.year))
+            .range([marginLeft, chartWidth - marginRight])
             .padding(0.1);
 
         const y = d3.scaleLinear()
-            .domain([0, d3.max(data, d => d.value)])
-            .nice()
-            .range([height, 0]);
+            .domain([0, d3.max(data, d => d.papers)]).nice()
+            .range([chartHeight - marginBottom, marginTop]);
 
-        g.append("g")
+        svg.attr("viewBox", [0, 0, chartWidth, chartHeight])
+            .attr("style", "width: 100%; height: 100%;");
+
+        svg.append("g")
+            .attr("class", "bars")
             .selectAll("rect")
             .data(data)
-            .enter()
-            .append("rect")
-            .attr("x", d => x(d.label))
-            .attr("y", d => y(d.value))
+            .join("rect")
+            .attr("x", d => x(d.year))
+            .attr("y", d => y(d.papers))
+            .attr("height", d => y(0) - y(d.papers))
             .attr("width", x.bandwidth())
-            .attr("height", d => height - y(d.value))
-            .attr("fill", "steelblue");
+            .attr("fill", "steelblue")
+            .on("mouseover", function (event, d) {
+                d3.select(this).attr("fill", "orange");
+                tooltip.transition().duration(200).style("opacity", .9);
+                tooltip.html(
+                    () => {
+                        return d.papers
+                    })
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function () {
+                d3.select(this).attr("fill", "steelblue");
+                tooltip.transition().duration(500).style("opacity", 0);
+            });
 
-        // 添加X轴
-        g.append("g")
-            .attr("transform", `translate(0,${height})`)
-            .call(d3.axisBottom(x));
+        svg.append("g")
+            .attr("class", "x-axis")
+            .attr("transform", `translate(0,${chartHeight - marginBottom})`)
+            .call(d3.axisBottom(x).tickSizeOuter(0));
 
-        // 添加Y轴
-        g.append("g")
-            .call(d3.axisLeft(y));
+        svg.append("g")
+            .attr("class", "y-axis")
+            .attr("transform", `translate(${marginLeft},0)`)
+            .call(d3.axisLeft(y).tickFormat(d3.format(".2s")))
+            .call(g => g.select(".domain").remove());
 
-        // 添加文本标签
-        g.selectAll("text.bar")
+        if (data.length > 10) {
+            svg.selectAll(".x-axis text")
+                .text('...');
+        }
+    }
+
+    // 单独的图表2绘制函数
+    function createChart2(svg) {
+        const data = [
+            {department: "CMA", papers: 1200},
+            {department: "AI", papers: 1500},
+            {department: "DSA", papers: 800}
+        ];
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.department))
+            .range([marginLeft, chartWidth - marginRight])
+            .padding(0.2);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.papers)]).nice()
+            .range([chartHeight - marginBottom, marginTop]);
+
+        svg.attr("viewBox", [0, 0, chartWidth, chartHeight])
+            .attr("style", "width: 100%; height: 100%;");
+
+        svg.append("g")
+            .attr("class", "bars")
+            .attr("fill", "steelblue")
+            .selectAll("rect")
             .data(data)
-            .enter()
-            .append("text")
-            .attr("class", "bar")
-            .attr("x", d => x(d.label) + x.bandwidth() / 2)
-            .attr("y", d => y(d.value) - 5)
-            .attr("dy", ".35em")
-            .attr("fill", "black")
-            .attr("text-anchor", "middle")
-            .text(d => d.value);
+            .join("rect")
+            .attr("x", d => x(d.department))
+            .attr("y", d => y(d.papers))
+            .attr("height", d => y(0) - y(d.papers))
+            .attr("width", x.bandwidth())
+            .on("mouseover", function (e, d) {
+                d3.select(this).attr("fill", "orange");
+                tooltip.transition().duration(200).style("opacity", .9);
+                tooltip.html(
+                    () => {
+                        return d.papers
+                    })
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function () {
+                d3.select(this).attr("fill", "steelblue");
+                tooltip.transition().duration(500).style("opacity", 0);
+            });
+
+        svg.append("g")
+            .attr("class", "x-axis")
+            .attr("transform", `translate(0,${chartHeight - marginBottom})`)
+            .call(d3.axisBottom(x).tickSizeOuter(0));
+
+        svg.append("g")
+            .attr("class", "y-axis")
+            .attr("transform", `translate(${marginLeft},0)`)
+            .call(d3.axisLeft(y).tickFormat(d3.format(".2s")))
+            .call(g => g.select(".domain").remove());
+
+    }
+
+    // 单独的图表3绘制函数
+    function createChart3(svg) {
+        const data = [
+            {year: 2015, departmentA: 400, departmentB: 600, departmentC: 200},
+            {year: 2016, departmentA: 300, departmentB: 700, departmentC: 400},
+            {year: 2017, departmentA: 500, departmentB: 800, departmentC: 300},
+            {year: 2018, departmentA: 600, departmentB: 900, departmentC: 500},
+            {year: 2019, departmentA: 700, departmentB: 1000, departmentC: 400}
+        ];
+
+        const keys = ["departmentA", "departmentB", "departmentC"];
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.year))
+            .range([marginLeft, chartWidth - marginRight])
+            .padding(0.1);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.departmentA + d.departmentB + d.departmentC)]).nice()
+            .range([chartHeight - marginBottom, marginTop]);
+
+        const color = d3.scaleOrdinal()
+            .domain(keys)
+            .range(["#6b486b", "#98abc5", "#ff8c00"]);
+
+        const stack = d3.stack()
+            .keys(keys)
+            .order(d3.stackOrderNone)
+            .offset(d3.stackOffsetNone);
+
+        const series = stack(data);
+
+        svg.attr("viewBox", [0, 0, chartWidth, chartHeight])
+            .attr("style", "width: 100%; height: 100%;");
+
+        svg.append("g")
+            .attr("class", "bars")
+            .selectAll("g")
+            .data(series)
+            .join("g")
+            .attr("fill", d => color(d.key))
+            .selectAll("rect")
+            .data(d => d)
+            .join("rect")
+            .attr("x", d => x(d.data.year))
+            .attr("y", d => y(d[1]))
+            .attr("height", d => y(d[0]) - y(d[1]))
+            .attr("width", x.bandwidth())
+            .on("mouseover", function (event, d) {
+                const key = d3.select(this.parentNode).datum().key;
+                const value = d[1] - d[0];
+                d3.select(this)
+                    .attr("fill", d3.rgb(color(key)).darker(1.2));
+                tooltip.transition().duration(200).style("opacity", .9);
+                tooltip.html(`${key}<br>Quantity: ${value}`)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function (event, d) {
+                const key = d3.select(this.parentNode).datum().key;
+                d3.select(this)
+                    .attr("fill", color(key));
+                tooltip.transition().duration(500).style("opacity", 0);
+            });
+
+        svg.append("g")
+            .attr("class", "x-axis")
+            .attr("transform", `translate(0,${chartHeight - marginBottom})`)
+            .call(d3.axisBottom(x).tickSizeOuter(0));
+
+        svg.append("g")
+            .attr("class", "y-axis")
+            .attr("transform", `translate(${marginLeft},0)`)
+            .call(d3.axisLeft(y).tickFormat(d3.format(".2s")))
+            .call(g => g.select(".domain").remove());
+    }
+
+    // 单独的图表4绘制函数
+    function createChart4(svg) {
+        const data = Array.from({length: 25}, (_, i) => ({
+            author: `Author ${String.fromCharCode(65 + i)}`,
+            papers: Math.floor(Math.random() * 100) + 1
+        }));
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.author))
+            .range([marginLeft, chartWidth - marginRight])
+            .padding(0.2);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.papers)]).nice()
+            .range([chartHeight - marginBottom, marginTop]);
+
+        svg.attr("viewBox", [0, 0, chartWidth, chartHeight])
+            .attr("style", "width: 100%; height: 100%;");
+
+        svg.append("g")
+            .attr("class", "bars")
+            .attr("fill", "steelblue")
+            .selectAll("rect")
+            .data(data)
+            .join("rect")
+            .attr("x", d => x(d.author))
+            .attr("y", d => y(d.papers))
+            .attr("height", d => y(0) - y(d.papers))
+            .attr("width", x.bandwidth())
+            .on("mouseover", function (e, d) {
+                d3.select(this).attr("fill", "orange");
+                tooltip.transition().duration(200).style("opacity", .9);
+                tooltip.html(
+                    () => {
+                        return d.author + '<br>' + d.papers
+                    })
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function () {
+                d3.select(this).attr("fill", "steelblue");
+                tooltip.transition().duration(500).style("opacity", 0);
+            });
+
+        svg.append("g")
+            .attr("class", "x-axis")
+            .attr("transform", `translate(0,${chartHeight - marginBottom})`)
+            .call(d3.axisBottom(x).tickSizeOuter(0).tickFormat(d => data.length > 20 ? '...' : d))
+            .selectAll("text")
+            .style("text-anchor", "middle")
+            .attr("font-size", "10px");
+
+        svg.append("g")
+            .attr("class", "y-axis")
+            .attr("transform", `translate(${marginLeft},0)`)
+            .call(d3.axisLeft(y).tickFormat(d3.format(".2s")))
+            .call(g => g.select(".domain").remove());
+
+        if (data.length > 10) {
+            svg.selectAll(".x-axis text")
+                .text('...');
+        }
+
+        if (data.length > 10) {
+            zoom_chart(svg, x, chartWidth, chartHeight);
+        }
+    }
+
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        // 分别调用每个图表的绘制函数
+        d3.select("#chart1").call(createChart1);
+        d3.select("#chart2").call(createChart2);
+        d3.select("#chart3").call(createChart3);
+        d3.select("#chart4").call(createChart4);
     });
 </script>
 

@@ -34,13 +34,14 @@ html, body {
     align-items: center; /* 垂直居中 */
     font-family: 'Arial', 'Helvetica', sans-serif; /* 设置本地字体 */
     justify-content: space-between; /* 使 title 和 btn-group 在水平方向上两端对齐 */
+    position: relative;
 }
 
 
 .content-box {
     flex: 1;
     border-radius: 5px;
-
+    position: relative;
     height: 100%;
     width: 100%;
     /*border: 1px solid #ccc;*/
@@ -120,7 +121,7 @@ html, body {
 
 
 #title {
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
 }
 
 #title h1 {
@@ -129,7 +130,7 @@ html, body {
 }
 
 #selector {
-    margin-top: 8px;
+    margin-top: 0px;
 }
 
 .local-label {
@@ -396,29 +397,93 @@ a {
     transform: translateY(-50%) rotate(-45deg);
 }
 
+/* .dropdown-container */
+.dropdown-container {
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    gap: 10px; /* 元素之间的间距 */
+    margin-right: 10px;
+    position: relative;
+}
 
+/* .dropdown-button */
+.dropdown-button {
+    background-color: #ffffff; /* 白色背景 */
+    color: black; /* 黑色字体 */
+    border: 1px solid #ccc; /* 边框 */
+    padding: 8px 12px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时显示为手型 */
+    font-size: 16px; /* 字体大小 */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* 动画效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    display: inline-flex; /* 使用 inline-flex 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    text-align: center; /* 文本居中 */
+}
 
+/* .dropdown-menu */
+.dropdown-menu {
+    display: none; /* 默认隐藏 */
+    position: absolute; /* 绝对定位 */
+    background-color: #ffffff; /* 背景色 */
+    border: 1px solid #ccc; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
+    margin-top: 5px; /* 距离上方的间距 */
+    z-index: 1000; /* 确保在其他内容上方 */
+    top: 100%;
+    right: 0; /* 菜单与按钮对齐 */
+    margin-right: 34px;
+    width: max-content;
+}
+
+/* .dropdown-menu.show */
+.dropdown-menu.show {
+    display: block; /* 显示下拉菜单 */
+}
+
+/* .dropdown-menu a */
+.dropdown-menu a {
+    display: block; /* 每个菜单项占据一行 */
+    padding: 0px 0px; /* 内边距 */
+    text-decoration: none; /* 去掉下划线 */
+    color: black; /* 文字颜色 */
+    border-bottom: 1px solid #eee; /* 分隔线 */
+    text-align: center; /* 文本居中 */
+    font-size: 12pt;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none; /* 去掉最后一项的下边框 */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0; /* 鼠标悬停时的背景色 */
+}
+
+/* .refresh-btn */
 .refresh-btn {
     background-color: #ffffff; /* 白色背景 */
     color: black; /* 黑色字体 */
-    border: 1px solid #ccc; /* 添加边框 */
-    padding: 2.4px 1px 2px 2px;
-    margin: 2px 8px 2px 0px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-    display: flex;
-    align-items: center;
+    border: 1px solid #ccc; /* 边框 */
+    padding: 8px 12px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时显示为手型 */
+    font-size: 16px; /* 字体大小 */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* 动画效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
+    display: inline-flex; /* 使用 inline-flex 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    text-align: center; /* 文本居中 */
 }
 
-.refresh-btn.active {
-    background-color: #f0f0f0; /* 活动状态下背景颜色 */
+/* 使 dropdown-button 和 refresh-btn 样式一致 */
+.refresh-btn,
+.dropdown-button {
+    font-size: 16px; /* 确保字体大小一致 */
+    padding: 2px 3px; /* 内边距一致 */
 }
 
-.refresh-btn:hover {
-    background-color: #f0f0f0; /* 悬停时背景颜色 */
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 悬停时阴影 */
-}
