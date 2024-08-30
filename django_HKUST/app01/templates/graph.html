@@ -57,7 +57,7 @@
 
     const colorScale_auther = d3.scaleLinear()
         .domain([18, 249])
-        .range(["#e0f3e5", "#007f5f"]);
+        .range(["#b9ded3", "#007f5f"]);
 
     // Create the SVG container.     preserveAspectRatio="xMinYMin meet"
     const svg = d3.select('#container_kg').append("svg")
@@ -693,11 +693,11 @@
                     return colorScale_auther(d.count)
                 } else {
                     if (d.name === "AI") {
-                        return '#e3716e'
+                        return '#247181'
                     } else if (d.name === "CMA") {
-                        return '#7ac7e2'
+                        return '#619ea9'
                     } else if (d.name === 'DSA') {
-                        return '#f7df87'
+                        return '#224659'
                     }
                 }
             })

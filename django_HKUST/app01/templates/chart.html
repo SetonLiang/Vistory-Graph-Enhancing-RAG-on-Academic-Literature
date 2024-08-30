@@ -66,6 +66,7 @@
             .domain([2020, 2024])
         .range(["#e6b1be", "#d14163"]);
 
+
         const x = d3.scaleBand()
             .domain(data.map(d => d.year))
             .range([marginLeft, chartWidth - marginRight])
@@ -148,11 +149,11 @@
             .join("rect")
             .attr("fill", function (d) {
                 if (d.department === 'AI') {
-                    return '#6b486b'
+                    return '#247485'
                 } else if (d.department === 'CMA') {
-                    return '#98abc5'
+                    return '#64a4af'
                 } else if (d.department === 'DSA') {
-                    return '#ff8c00'
+                    return '#22465b'
                 }
             })
             .attr("x", d => x(d.department))
@@ -209,7 +210,7 @@
 
         const color = d3.scaleOrdinal()
             .domain(keys)
-            .range(["#6b486b", "#98abc5", "#ff8c00"]);
+            .range(["#22788a", "#68aab6", "#22475d"]);
 
         const stack = d3.stack()
             .keys(keys)
