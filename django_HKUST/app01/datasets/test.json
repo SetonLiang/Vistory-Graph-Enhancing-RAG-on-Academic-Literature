@@ -2,31 +2,31 @@
     "nodes": [
         {
             "group": 2,
-            "name": "generative AI"
+            "name": "Risk analysis"
+        },
+        {
+            "name": "anomaly detection",
+            "group": 2
         },
         {
             "group": 2,
-            "name": "Accessibility"
-        },
-        {
-            "count": 0,
-            "citation": 0,
-            "group": 0,
-            "id": "shen2024neural",
-            "name": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
-            "released": "2024"
+            "name": "Hearing-impaired"
         },
         {
             "group": 2,
-            "name": "human avatar"
+            "name": "Mandarin Cued Speech"
         },
         {
             "citation": 1,
             "count": 0,
             "group": 0,
-            "released": "2024",
-            "name": "HeadEvolver: Text to Head Avatars via Locally Learnable Mesh Deformation",
-            "id": "wang2024headevolver"
+            "id": "niu2021exploring",
+            "released": "2021",
+            "name": "Exploring the risky travel area and behavior of car-hailing service"
+        },
+        {
+            "group": 2,
+            "name": "multi-agent reinforcement learning"
         },
         {
             "group": 1,
@@ -34,498 +34,429 @@
         },
         {
             "group": 2,
-            "name": "livestreaming"
+            "name": "medical resource allocation"
         },
         {
-            "name": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
-            "id": "fu2024bridging",
-            "count": 0,
-            "citation": 0,
-            "group": 0,
-            "released": "2024"
-        },
-        {
-            "citation": 1,
-            "count": 0,
-            "group": 0,
-            "id": "jin2024exploring",
-            "released": "2024",
-            "name": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications"
-        },
-        {
-            "count": 0,
-            "id": "fu2024aromablendz",
-            "citation": 0,
-            "group": 0,
-            "released": "2024",
-            "name": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
-        },
-        {
-            "name": "storytelling",
+            "name": "rumor detection",
             "group": 2
         },
         {
+            "citation": 0,
+            "count": 0,
+            "group": 0,
+            "released": "2022",
+            "id": "hao2022hierarchical",
+            "name": "Hierarchical Multi-agent Model for Reinforced Medical Resource Allocation with Imperfect Information"
+        },
+        {
             "group": 2,
-            "name": "GPU"
+            "name": "COVID-19 pandemic"
+        },
+        {
+            "name": "Profile decomposition based hybrid transfer learning for cold-start data anomaly detection",
+            "count": 0,
+            "group": 0,
+            "released": "2022",
+            "citation": 15,
+            "id": "li2022profile"
+        },
+        {
+            "group": 2,
+            "name": "bipartite graph optimization"
+        },
+        {
+            "group": 2,
+            "name": "best arm identification"
+        },
+        {
+            "name": "Influence Maximization Revisited: Efficient Sampling with Bound Tightened",
+            "count": 0,
+            "group": 0,
+            "released": "2022",
+            "id": "guo2022influence",
+            "citation": 18
+        },
+        {
+            "group": 2,
+            "name": "Hybrid Transfer learning"
+        },
+        {
+            "group": 2,
+            "name": "Cold-start anomaly detection"
+        },
+        {
+            "name": "Asynchronous multi-modality",
+            "group": 2
+        },
+        {
+            "citation": 30,
+            "name": "Deep reinforcement learning approaches for global public health strategies for COVID-19 pandemic",
+            "count": 0,
+            "group": 0,
+            "released": "2021",
+            "id": "kwak2021deep"
+        },
+        {
+            "group": 2,
+            "name": "graph adversarial attack"
+        },
+        {
+            "name": "A Novel Interpretable and Generalizable Re-synchronization Model for Cued Speech based on a Multi-Cuer Corpus",
+            "released": "2023",
+            "count": 0,
+            "citation": 3,
+            "group": 0,
+            "id": "gao2023novel"
+        },
+        {
+            "name": "imperfect information",
+            "group": 2
         },
         {
             "count": 0,
-            "name": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
             "group": 0,
-            "released": "2024",
-            "citation": 5,
-            "id": "tian2024poeticar"
+            "name": "Optimal Streaming Algorithms for Multi-Armed Bandits",
+            "id": "jin2021optimal",
+            "citation": 15,
+            "released": "2021"
         },
         {
             "group": 2,
-            "name": "short-form video"
+            "name": "Profile decomposition"
+        },
+        {
+            "group": 2,
+            "name": "Online social networks"
+        },
+        {
+            "group": 2,
+            "name": "sampling"
         },
         {
             "group": 1,
             "name": "CMA"
         },
         {
-            "group": 2,
-            "name": "Proactive conversational assistants"
+            "name": "Influence maximization",
+            "group": 2
         },
         {
-            "group": 2,
-            "name": "data visualization"
-        },
-        {
-            "group": 2,
-            "name": "scenic design"
-        },
-        {
+            "released": "2023",
             "count": 0,
-            "id": "jiang2024designing",
-            "citation": 0,
-            "name": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
             "group": 0,
-            "released": "2024"
+            "name": "2-hop+ Sampling: Efficient and Effective Influence Estimation",
+            "id": "zhu20212",
+            "citation": 9
         },
         {
             "group": 2,
-            "name": "Accessible Data Visualization"
+            "name": "fraud detection"
         },
         {
             "group": 2,
-            "name": "indepen\u0002dent learning"
+            "name": "reinforcement learning"
+        },
+        {
+            "name": "Bayesian probabilistic model and regularization",
+            "group": 2
+        },
+        {
+            "name": "ordersequence syndrome",
+            "group": 2
+        },
+        {
+            "group": 1,
+            "name": "DSA"
         },
         {
             "group": 2,
-            "name": "Olfactory experiences"
+            "name": "Hand preceding time"
         },
         {
+            "id": "alhilal2021cad3",
             "count": 0,
-            "citation": 10,
             "group": 0,
-            "id": "shao2024splattingavatar",
-            "released": "2024",
-            "name": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting"
+            "name": "CAD3: Edge-facilitated real-time collaborative abnormal driving distributed detection",
+            "citation": 6,
+            "released": "2021"
         },
         {
-            "group": 2,
-            "name": "Digital smell technology"
+            "name": "Hierarchical reinforcement learning",
+            "group": 2
         },
         {
-            "group": 2,
-            "name": "adult literacy"
+            "id": "lyu2023interpretable",
+            "released": "2023",
+            "count": 0,
+            "group": 0,
+            "citation": 6,
+            "name": "Interpretable and Effective Reinforcement Learning for Attacking against Graph-based Rumor Detection"
         },
         {
-            "name": "Personal data",
+            "name": "graph convolutional network",
             "group": 2
         },
         {
             "group": 2,
-            "name": "Hardware"
+            "name": "influence estimation"
         },
         {
-            "group": 2,
-            "name": "prototyping"
-        },
-        {
-            "group": 2,
-            "name": "independent learning"
-        },
-        {
-            "group": 2,
-            "name": "Human-AI collaboration"
-        },
-        {
-            "group": 2,
-            "name": "education"
-        },
-        {
-            "group": 2,
-            "name": "FPS"
-        },
-        {
-            "name": "cultural heritage",
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "count": 0,
-            "group": 0,
-            "released": "2024",
-            "name": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
-            "id": "kuang2024enhancing"
-        },
-        {
-            "group": 2,
-            "name": "Odour interfaces"
-        },
-        {
-            "group": 2,
-            "name": "Electrotactile"
-        },
-        {
-            "group": 2,
-            "name": "Olfactory Device"
-        },
-        {
-            "group": 2,
-            "name": "User experience"
-        },
-        {
-            "name": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "count": 0,
-            "citation": 0,
-            "group": 0,
-            "id": "tong2024vistellar",
-            "released": "2024"
-        },
-        {
-            "name": "personal data",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "mesh"
-        },
-        {
-            "group": 2,
-            "name": "smartphone exploration"
-        },
-        {
-            "group": 2,
-            "name": "Gaussian Splatting"
-        },
-        {
-            "group": 2,
-            "name": "3D sketching"
-        },
-        {
-            "group": 2,
-            "name": "augmented reality"
-        },
-        {
-            "group": 2,
-            "name": "older adults"
-        },
-        {
-            "group": 2,
-            "name": "Usability testing"
-        },
-        {
-            "name": "Haptic Data Visualization",
-            "group": 2
-        },
-        {
-            "name": "Zeyu Wang",
+            "name": "Li Liu",
             "type": "Author",
-            "count": 10,
+            "count": 59,
             "group": 4
         },
         {
-            "name": "Huamin Qu",
+            "name": "Jing Tang",
             "type": "Author",
-            "count": 126,
+            "count": 38,
             "group": 4
         },
         {
-            "name": "Mingming Fan",
+            "name": "Pan Hui",
             "type": "Author",
-            "count": 70,
+            "count": 250,
+            "group": 4
+        },
+        {
+            "name": "Fugee Tsung",
+            "type": "Author",
+            "count": 57,
+            "group": 4
+        },
+        {
+            "name": "Sihong Xie",
+            "type": "Author",
+            "count": 25,
+            "group": 4
+        },
+        {
+            "name": "Ying Sun",
+            "type": "Author",
+            "count": 28,
             "group": 4
         }
     ],
     "links": [
         {
-            "target": "mesh",
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "personal data",
-            "relationship": "HAS_KEYWORD",
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
-        },
-        {
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "HAS_KEYWORD",
-            "target": "indepen\u0002dent learning"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan",
-            "target": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
-        },
-        {
-            "target": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "target": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "HAS_KEYWORD",
-            "target": "independent learning"
-        },
-        {
-            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
-            "relationship": "HAS_KEYWORD",
-            "target": "generative AI"
-        },
-        {
-            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
-            "relationship": "HAS_KEYWORD",
-            "target": "Electrotactile"
-        },
-        {
-            "target": "livestreaming",
-            "relationship": "HAS_KEYWORD",
-            "source": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming"
-        },
-        {
-            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
-            "relationship": "HAS_KEYWORD",
-            "target": "Haptic Data Visualization"
-        },
-        {
-            "source": "Zeyu Wang",
             "relationship": "BELONGS_TO",
+            "source": "Li Liu",
             "target": "AI"
         },
         {
-            "relationship": "HAS_KEYWORD",
-            "source": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
-            "target": "augmented reality"
-        },
-        {
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "HAS_KEYWORD",
-            "target": "older adults"
-        },
-        {
-            "target": "Olfactory experiences",
-            "relationship": "HAS_KEYWORD",
-            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
-        },
-        {
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "HAS_KEYWORD",
-            "target": "augmented reality"
-        },
-        {
-            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
-            "relationship": "HAS_KEYWORD",
-            "target": "Accessible Data Visualization"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
-            "target": "education"
-        },
-        {
-            "target": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "target": "Digital smell technology",
-            "relationship": "HAS_KEYWORD",
-            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
-        },
-        {
-            "target": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan",
-            "target": "HeadEvolver: Text to Head Avatars via Locally Learnable Mesh Deformation"
-        },
-        {
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "relationship": "HAS_KEYWORD",
-            "target": "FPS"
-        },
-        {
-            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
-            "relationship": "HAS_KEYWORD",
-            "target": "Proactive conversational assistants"
-        },
-        {
-            "target": "Olfactory Device",
-            "relationship": "HAS_KEYWORD",
-            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "source": "Huamin Qu"
-        },
-        {
-            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan",
-            "target": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "augmented reality",
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
-        },
-        {
-            "target": "Gaussian Splatting",
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "target": "reinforcement learning",
+            "source": "Interpretable and Effective Reinforcement Learning for Attacking against Graph-based Rumor Detection",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
-            "relationship": "HAS_KEYWORD",
-            "target": "Usability testing"
-        },
-        {
-            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
-            "relationship": "HAS_KEYWORD",
-            "target": "Human-AI collaboration"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents",
-            "target": "Odour interfaces"
-        },
-        {
-            "source": "Designing Unobtrusive Modulated Electrotactile Feedback on Fingertip Edge to Assist Blind and Low Vision (BLV) People in Comprehending Charts",
-            "relationship": "HAS_KEYWORD",
-            "target": "Accessibility"
-        },
-        {
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "relationship": "HAS_KEYWORD",
-            "target": "human avatar"
-        },
-        {
-            "target": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
-            "relationship": "HAS_KEYWORD",
-            "target": "prototyping"
-        },
-        {
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "HAS_KEYWORD",
-            "target": "smartphone exploration"
-        },
-        {
-            "target": "cultural heritage",
-            "source": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
+            "target": "COVID-19 pandemic",
+            "source": "Hierarchical Multi-agent Model for Reinforced Medical Resource Allocation with Imperfect Information",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "relationship": "OWNED_BY",
-            "source": "Zeyu Wang"
-        },
-        {
-            "target": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "AromaBlendz: An Olfactory System for Crafting Personalized Scents",
-            "source": "Mingming Fan"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan",
-            "target": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI"
-        },
-        {
-            "target": "Hardware",
+            "source": "Interpretable and Effective Reinforcement Learning for Attacking against Graph-based Rumor Detection",
             "relationship": "HAS_KEYWORD",
-            "source": "AromaBlendz: An Olfactory System for Crafting Personalized Scents"
+            "target": "graph convolutional network"
         },
         {
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
             "relationship": "HAS_KEYWORD",
-            "target": "GPU"
+            "source": "Influence Maximization Revisited: Efficient Sampling with Bound Tightened",
+            "target": "Influence maximization"
+        },
+        {
+            "source": "Jing Tang",
+            "relationship": "OWNED_BY",
+            "target": "2-hop+ Sampling: Efficient and Effective Influence Estimation"
+        },
+        {
+            "source": "Exploring the risky travel area and behavior of car-hailing service",
+            "target": "Risk analysis",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Hybrid Transfer learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "Profile decomposition based hybrid transfer learning for cold-start data anomaly detection"
+        },
+        {
+            "source": "Hierarchical Multi-agent Model for Reinforced Medical Resource Allocation with Imperfect Information",
+            "relationship": "HAS_KEYWORD",
+            "target": "Hierarchical reinforcement learning"
+        },
+        {
+            "target": "Profile decomposition",
+            "relationship": "HAS_KEYWORD",
+            "source": "Profile decomposition based hybrid transfer learning for cold-start data anomaly detection"
+        },
+        {
+            "target": "bipartite graph optimization",
+            "source": "Exploring the risky travel area and behavior of car-hailing service",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "A Novel Interpretable and Generalizable Re-synchronization Model for Cued Speech based on a Multi-Cuer Corpus",
+            "source": "Li Liu",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "CAD3: Edge-facilitated real-time collaborative abnormal driving distributed detection"
+        },
+        {
+            "source": "Jing Tang",
+            "relationship": "OWNED_BY",
+            "target": "Influence Maximization Revisited: Efficient Sampling with Bound Tightened"
+        },
+        {
+            "target": "sampling",
+            "relationship": "HAS_KEYWORD",
+            "source": "2-hop+ Sampling: Efficient and Effective Influence Estimation"
+        },
+        {
+            "target": "sampling",
+            "relationship": "HAS_KEYWORD",
+            "source": "Influence Maximization Revisited: Efficient Sampling with Bound Tightened"
+        },
+        {
+            "source": "Fugee Tsung",
+            "relationship": "OWNED_BY",
+            "target": "Profile decomposition based hybrid transfer learning for cold-start data anomaly detection"
+        },
+        {
+            "source": "Exploring the risky travel area and behavior of car-hailing service",
+            "relationship": "HAS_KEYWORD",
+            "target": "ordersequence syndrome"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "Asynchronous multi-modality",
+            "source": "A Novel Interpretable and Generalizable Re-synchronization Model for Cued Speech based on a Multi-Cuer Corpus"
+        },
+        {
+            "source": "Exploring the risky travel area and behavior of car-hailing service",
+            "relationship": "HAS_KEYWORD",
+            "target": "anomaly detection"
+        },
+        {
+            "target": "Hearing-impaired",
+            "relationship": "HAS_KEYWORD",
+            "source": "A Novel Interpretable and Generalizable Re-synchronization Model for Cued Speech based on a Multi-Cuer Corpus"
         },
         {
             "relationship": "BELONGS_TO",
-            "target": "CMA",
-            "source": "Huamin Qu"
+            "target": "AI",
+            "source": "Sihong Xie"
         },
         {
-            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
             "relationship": "HAS_KEYWORD",
-            "target": "3D sketching"
+            "source": "Profile decomposition based hybrid transfer learning for cold-start data anomaly detection",
+            "target": "Bayesian probabilistic model and regularization"
         },
         {
-            "target": "CMA",
-            "source": "Mingming Fan",
+            "target": "DSA",
+            "source": "Fugee Tsung",
             "relationship": "BELONGS_TO"
         },
         {
-            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "target": "best arm identification",
             "relationship": "HAS_KEYWORD",
-            "target": "User experience"
+            "source": "Optimal Streaming Algorithms for Multi-Armed Bandits"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Exploring the risky travel area and behavior of car-hailing service",
+            "source": "Ying Sun"
+        },
+        {
+            "target": "Mandarin Cued Speech",
+            "relationship": "HAS_KEYWORD",
+            "source": "A Novel Interpretable and Generalizable Re-synchronization Model for Cued Speech based on a Multi-Cuer Corpus"
+        },
+        {
+            "target": "fraud detection",
+            "source": "Exploring the risky travel area and behavior of car-hailing service",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Interpretable and Effective Reinforcement Learning for Attacking against Graph-based Rumor Detection",
+            "source": "Sihong Xie",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Jing Tang",
+            "target": "DSA",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "source": "Hierarchical Multi-agent Model for Reinforced Medical Resource Allocation with Imperfect Information",
+            "target": "multi-agent reinforcement learning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "influence estimation",
+            "relationship": "HAS_KEYWORD",
+            "source": "2-hop+ Sampling: Efficient and Effective Influence Estimation"
+        },
+        {
+            "target": "CMA",
+            "source": "Pan Hui",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "AI",
+            "source": "Ying Sun"
+        },
+        {
+            "target": "Cold-start anomaly detection",
+            "relationship": "HAS_KEYWORD",
+            "source": "Profile decomposition based hybrid transfer learning for cold-start data anomaly detection"
+        },
+        {
+            "source": "Hierarchical Multi-agent Model for Reinforced Medical Resource Allocation with Imperfect Information",
+            "target": "medical resource allocation",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Deep reinforcement learning approaches for global public health strategies for COVID-19 pandemic",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Pan Hui",
+            "target": "Hierarchical Multi-agent Model for Reinforced Medical Resource Allocation with Imperfect Information",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Interpretable and Effective Reinforcement Learning for Attacking against Graph-based Rumor Detection",
+            "relationship": "HAS_KEYWORD",
+            "target": "rumor detection"
         },
         {
             "relationship": "HAS_KEYWORD",
-            "source": "Bridging the Literacy Gap for Adults: Streaming and Engaging in Adult Literacy Education through Livestreaming",
-            "target": "adult literacy"
+            "target": "Hand preceding time",
+            "source": "A Novel Interpretable and Generalizable Re-synchronization Model for Cued Speech based on a Multi-Cuer Corpus"
         },
         {
-            "target": "storytelling",
-            "relationship": "HAS_KEYWORD",
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+            "target": "graph adversarial attack",
+            "source": "Interpretable and Effective Reinforcement Learning for Attacking against Graph-based Rumor Detection",
+            "relationship": "HAS_KEYWORD"
         },
         {
-            "relationship": "HAS_KEYWORD",
-            "target": "Personal data",
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+            "source": "Jing Tang",
+            "relationship": "OWNED_BY",
+            "target": "Optimal Streaming Algorithms for Multi-Armed Bandits"
         },
         {
+            "target": "Online social networks",
             "relationship": "HAS_KEYWORD",
-            "target": "data visualization",
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+            "source": "2-hop+ Sampling: Efficient and Effective Influence Estimation"
         },
         {
-            "source": "Neural Canvas: Supporting Scenic Design Prototyping by Integrating 3D Sketching and Generative AI",
+            "source": "Hierarchical Multi-agent Model for Reinforced Medical Resource Allocation with Imperfect Information",
             "relationship": "HAS_KEYWORD",
-            "target": "scenic design"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "short-form video",
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+            "target": "imperfect information"
         }
     ]
 }
