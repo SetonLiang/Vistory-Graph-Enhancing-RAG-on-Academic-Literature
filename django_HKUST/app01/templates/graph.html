@@ -814,9 +814,12 @@
         nodes = data.nodes.map(d => ({...d}));
 
 
+
+        const deptNodes = nodes.filter(node => node.group === 1);
         const authorNodes = nodes.filter(node => node.group === 4);
         const paperNodes = nodes.filter(node => node.group === 0);
         const keywordNodes = nodes.filter(node => node.group === 2);
+        console.log(deptNodes)
 
         // 给每个节点一个初始位置，避免重叠
         authorNodes.forEach((node, index) => {
@@ -830,6 +833,15 @@
             papers.forEach((node, index) => {
                 node.x = author.x + 250 * Math.cos(index * 2 * Math.PI / papers.length);
                 node.y = author.y + 250 * Math.sin(index * 2 * Math.PI / papers.length);
+            });
+        });
+
+        authorNodes.forEach((author) => {
+            const depts = deptNodes.filter(
+                dept => links.some(link => link.source === author.name && link.target === dept.name));
+            depts.forEach((node, index) => {
+                node.x = author.x + 250 * Math.cos(index * 2 * Math.PI / depts.length);
+                node.y = author.y + 250 * Math.sin(index * 2 * Math.PI / depts.length);
             });
         });
 
