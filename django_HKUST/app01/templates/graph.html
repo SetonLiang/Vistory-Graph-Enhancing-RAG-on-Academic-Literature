@@ -53,7 +53,7 @@
     // 定义颜色比例尺，根据citation的范围调整颜色的深浅
     const colorScale = d3.scaleLinear()
         .domain([2020, 2024])
-        .range(["#e6b1bd", "#d44369"]);
+        .range(["#ffebf4", "#d32465"]);
 
     const colorScale_auther = d3.scaleLinear()
         .domain([18, 249])
@@ -660,6 +660,7 @@
 
         node = g.append("g")
             .attr("stroke", '#ffffff')
+            .attr("stroke", color[5])
             .attr("stroke-width", 1.5)
             .selectAll()
             .data(nodes)
@@ -692,11 +693,11 @@
                     return colorScale_auther(d.count)
                 } else {
                     if (d.name === "AI") {
-                        return '#f57a16'
+                        return '#e3716e'
                     } else if (d.name === "CMA") {
-                        return '#2073ad'
+                        return '#7ac7e2'
                     } else if (d.name === 'DSA') {
-                        return '#87544a'
+                        return '#f7df87'
                     }
                 }
             })
@@ -813,12 +814,9 @@
         nodes = data.nodes.map(d => ({...d}));
 
 
-
-        const deptNodes = nodes.filter(node => node.group === 1);
         const authorNodes = nodes.filter(node => node.group === 4);
         const paperNodes = nodes.filter(node => node.group === 0);
         const keywordNodes = nodes.filter(node => node.group === 2);
-        console.log(deptNodes)
 
         // 给每个节点一个初始位置，避免重叠
         authorNodes.forEach((node, index) => {
@@ -832,15 +830,6 @@
             papers.forEach((node, index) => {
                 node.x = author.x + 250 * Math.cos(index * 2 * Math.PI / papers.length);
                 node.y = author.y + 250 * Math.sin(index * 2 * Math.PI / papers.length);
-            });
-        });
-
-        authorNodes.forEach((author) => {
-            const depts = deptNodes.filter(
-                dept => links.some(link => link.source === author.name && link.target === dept.name));
-            depts.forEach((node, index) => {
-                node.x = author.x + 250 * Math.cos(index * 2 * Math.PI / depts.length);
-                node.y = author.y + 250 * Math.sin(index * 2 * Math.PI / depts.length);
             });
         });
 
@@ -1013,6 +1002,7 @@
             'nodes': [],
             'links': [],
         }
+        
         updateGraph(clear)
         removeNode(entity_data)
     }
