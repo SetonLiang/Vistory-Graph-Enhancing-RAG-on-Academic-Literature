@@ -32,10 +32,10 @@
     const containerHeight = d3.select('.chart_container').node().getBoundingClientRect().height;
     const chartWidth = containerWidth; // 每个图表宽度占容器的25%
     const chartHeight = containerHeight/4;
-    const marginTop = 30;
-    const marginRight = 30;
-    const marginBottom = 40;
-    const marginLeft = 50;
+    const marginTop = 10;
+    const marginRight = 10;
+    const marginBottom = 20;
+    const marginLeft = 30;
 
     // 通用的缩放功能
     function zoom_chart(svg, x, chartWidth, chartHeight) {
@@ -64,7 +64,7 @@
     function createChart1(svg, data) {
         const colorScale_chart = d3.scaleLinear()
             .domain([2020, 2024])
-            .range(["#e6b1bd", "#d44369"]);
+            .range(["#ffebf4", "#d32465"]);
 
         const x = d3.scaleBand()
             .domain(data.map(d => d.year))
@@ -148,11 +148,11 @@
             .join("rect")
             .attr("fill", function (d) {
                 if (d.department === 'AI') {
-                    return '#f57a16'
+                    return '#6b486b'
                 } else if (d.department === 'CMA') {
-                    return '#2073ad'
+                    return '#98abc5'
                 } else if (d.department === 'DSA') {
-                    return '#87544a'
+                    return '#ff8c00'
                 }
             })
             .attr("x", d => x(d.department))
@@ -209,7 +209,7 @@
 
         const color = d3.scaleOrdinal()
             .domain(keys)
-            .range(["#f57a16", "#2073ad", "#87544a"]);
+            .range(["#6b486b", "#98abc5", "#ff8c00"]);
 
         const stack = d3.stack()
             .keys(keys)
