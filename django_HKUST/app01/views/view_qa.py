@@ -40,8 +40,8 @@ def chat(request):
         )
 
         # 运行QA链
-        output = chain.invoke({"question": user_input.lower()})
-        # output = '1111111'
+        # output = chain.invoke({"question": user_input.lower()})
+        output = '1111111'
         def generate():
             for chunk in chain.stream({"question": user_input.lower()}):
                 if chunk is not None:
