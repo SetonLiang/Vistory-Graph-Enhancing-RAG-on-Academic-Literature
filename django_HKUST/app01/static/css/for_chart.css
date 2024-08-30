@@ -1,16 +1,15 @@
 
-
 .chart_container {
     width: 100%;
     height: calc(100% - 30px);
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-direction: column;
     /*overflow-x: auto;*/
 }
 
 .chart {
     flex: 1; /* Make each chart occupy 25% of the container's width */
-    height: 100%; /* Full height of the container */
+    height: 25%; /* Full height of the container */
 }
 
 svg {

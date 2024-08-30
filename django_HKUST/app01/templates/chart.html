@@ -14,13 +14,13 @@
 <!-- Create a div where the graph will take place -->
 <div id="dataVis" class="chart_container">
     <div class="chart">
-        <svg id="chart1"></svg>
-    </div>
-    <div class="chart">
         <svg id="chart2"></svg>
     </div>
     <div class="chart">
         <svg id="chart3"></svg>
+    </div>
+    <div class="chart">
+        <svg id="chart1"></svg>
     </div>
     <div class="chart">
         <svg id="chart4"></svg>
@@ -30,8 +30,8 @@
 <script>
     const containerWidth = d3.select('.chart_container').node().getBoundingClientRect().width;
     const containerHeight = d3.select('.chart_container').node().getBoundingClientRect().height;
-    const chartWidth = containerWidth / 4; // 每个图表宽度占容器的25%
-    const chartHeight = containerHeight;
+    const chartWidth = containerWidth; // 每个图表宽度占容器的25%
+    const chartHeight = containerHeight/4;
     const marginTop = 10;
     const marginRight = 10;
     const marginBottom = 20;

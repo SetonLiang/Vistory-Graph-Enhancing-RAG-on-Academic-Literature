@@ -1,131 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Cloud Example</title>
-    <script src="../static/plugins/d3/d3.v7.js"></script>
-    <script src="../static/plugins/d3/d3.layout.cloud.js"></script>
+    <title>四个容器布局</title>
     <style>
-        .word {
-            cursor: pointer;
+        /* 页面基本样式 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
         }
 
-        .content-box {
-            width: 100%;
-            height: 100%;
-            border: 1px solid #ddd;
+        /* 左边容器 */
+        .left-container {
+            width: 20%;
+            background-color: #f2a2a2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 中间容器 */
+        .middle-container {
+            width: 60%;
+            background-color: #a2d2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 右边容器 */
+        .right-container {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 右边上、下两个容器 */
+        .top-container {
+            height: 50%;
+            background-color: #a2f2a2;
+        }
+
+        .bottom-container {
+            height: 50%;
+            background-color: #f2e2a2;
         }
     </style>
 </head>
 <body>
-
-<div style="height: 200px;width: 584px">
-    <div class="content-box" id="wordCloud_container"></div>
-</div>
-
-
-<script>
-    // 定义词汇数据
-    const data = [
-        {text: 'Deep learning', size: 50}, {text: 'Federated learning', size: 41}, {
-            text: 'Large language models',
-            size: 36
-        },
-        {text: 'Visual analytics', size: 34}, {text: 'Virtual reality', size: 34}, {text: 'Machine learning', size: 30},
-        {text: 'Graph neural networks', size: 28}, {text: 'Augmented reality', size: 28}, {
-            text: 'Visualization',
-            size: 24
-        },
-        {text: 'Metaverse', size: 18}, {text: 'Edge computing', size: 14}, {text: 'Gpu', size: 14},
-        {text: 'Reinforcement learning', size: 14}, {text: 'Data visualization', size: 13}, {
-            text: 'Benchmark',
-            size: 12
-        },
-        {text: 'Accessibility', size: 12}, {text: 'Transformer', size: 11}, {text: 'Covid-19', size: 11},
-        {text: 'Blockchain', size: 11}, {text: 'Older adults', size: 10}, {text: 'Representation learning', size: 10},
-        {text: 'Distributed deep learning', size: 9}, {text: 'Deep neural networks', size: 9}, {
-            text: 'Survey',
-            size: 8
-        },
-        {text: 'Storytelling', size: 8}, {text: 'Contrastive learning', size: 8}, {text: 'Interview', size: 8},
-        {text: 'Artificial intelligence', size: 7}, {text: 'Cinematic arts', size: 7}, {text: 'Road network', size: 7},
-        {text: 'State-of-the-art', size: 7}, {text: 'Gan', size: 7}, {text: 'Human-centered computing', size: 7},
-        {text: 'Computer vision', size: 6}, {text: 'Anomaly detection', size: 6}, {
-            text: 'Large language model',
-            size: 6
-        },
-        {text: 'Transfer learning', size: 6}, {text: 'Graphs', size: 5}, {text: 'Submodular maximization', size: 5},
-        {text: '5g', size: 5}, {text: 'Creative arts', size: 5}, {text: 'Mobile augmented reality', size: 5},
-        {text: 'Privacy', size: 5}, {text: 'Diffusion model', size: 5}, {text: 'Dataset', size: 5},
-        {text: 'Graph neural network', size: 5}, {text: 'Cued speech', size: 5}, {text: 'Relation extraction', size: 5},
-        {text: 'Time series', size: 5}, {text: 'Action recognition', size: 5}, {text: 'Vr', size: 5},
-        {text: 'Self-supervised learning', size: 5}, {text: 'Neural networks', size: 5}, {
-            text: 'Interactive art',
-            size: 4
-        },
-        {text: 'Aigc', size: 4}, {text: 'Influence maximization', size: 4}, {
-            text: 'Statistical process control',
-            size: 4
-        },
-        {text: 'Bodily engagement', size: 4}, {text: 'Llama', size: 4}, {text: 'Deep neural network', size: 4},
-        {text: 'Emg', size: 4}, {text: 'Smartphone', size: 4}, {text: 'Data video', size: 4}, {
-            text: 'Urban computing',
-            size: 4
-        },
-        {text: 'Interaction', size: 4}, {text: 'Verbalization', size: 4}, {text: 'Covid-19 pandemic', size: 4},
-        {text: 'Neural radiance fields', size: 4}, {text: 'Mobile computing', size: 4}, {text: 'Inference', size: 4},
-        {text: 'Social media', size: 4}, {text: 'Human-ai collaboration', size: 4}, {text: 'Chatgpt', size: 4},
-        {text: 'Digital humanities', size: 4}, {text: 'Multi-task learning', size: 4}, {
-            text: 'Extended reality',
-            size: 4
-        },
-        {text: 'Visualization recommendation', size: 4}, {text: 'Detection transformer', size: 4}
-    ];
-
-    // 设置词云的尺寸
-    const width = d3.select('#wordCloud_container').node().getBoundingClientRect().width;
-    const height = d3.select('#wordCloud_container').node().getBoundingClientRect().height;
-
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
-
-    // 创建词云布局
-    const layout = d3.layout.cloud()
-        .size([width, height])
-        .words(data.map(d => ({text: d.text, size: d.size})))
-        .padding(5)
-        .rotate(() => ~~(Math.random() * 2) * 90)
-        .fontSize(d => d.size)
-        .on('end', draw);
-
-    layout.start();
-
-    function draw(words) {
-        d3.select('#wordCloud_container').append('svg')
-            .attr('width', width)
-            .attr('height', height)
-            .append('g')
-            .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')')
-            .selectAll('text')
-            .data(words)
-            .enter().append('text')
-            .style('font-size', d => d.size + 'px')
-            .style('fill', () => getRandomColor()) // 设置随机颜色
-            .style('cursor', 'pointer')
-            .attr('text-anchor', 'middle')
-            .attr('transform', d => 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')')
-            .text(d => d.text)
-            .on('click', function (e, d) {
-                console.log('Clicked on: ' + d.text);
-            });
-    }
-</script>
+    <div class="left-container">
+        左边容器
+    </div>
+    <div class="middle-container">
+        中间容器
+    </div>
+    <div class="right-container">
+        <div class="top-container">
+            右边上容器
+        </div>
+        <div class="bottom-container">
+            右边下容器
+        </div>
+    </div>
 </body>
 </html>

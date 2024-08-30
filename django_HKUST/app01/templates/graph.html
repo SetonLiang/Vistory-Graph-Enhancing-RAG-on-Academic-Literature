@@ -529,17 +529,17 @@
         const paperNodes = nodes.filter(node => node.group === 0);
 
         // 给每个节点一个初始位置，避免重叠
-        {#departmentNodes.forEach((node, index) => {#}
-        {#    node.x = width / 2 + 1200 * Math.cos(index * 2 * Math.PI / departmentNodes.length);#}
-        {#    node.y = height / 2 + 1200 * Math.sin(index * 2 * Math.PI / departmentNodes.length);#}
-        // });
-
-        const spacing = 2000; // 你想要的节点之间的固定间距
-
         departmentNodes.forEach((node, index) => {
-            node.x = (width - spacing * (departmentNodes.length - 1)) / 2 + spacing * index;
-            node.y = height / 2; // 保持所有节点在垂直方向上的位置一致
+            node.x = width / 2 + 1200 * Math.cos(index * 2 * Math.PI / departmentNodes.length);
+            node.y = height / 2 + 1200 * Math.sin(index * 2 * Math.PI / departmentNodes.length);
         });
+
+        {#const spacing = 2000; // 你想要的节点之间的固定间距#}
+        {##}
+        {#departmentNodes.forEach((node, index) => {#}
+        {#    node.x = (width - spacing * (departmentNodes.length - 1)) / 2 + spacing * index;#}
+        {#    node.y = height / 2; // 保持所有节点在垂直方向上的位置一致#}
+        //});
 
         departmentNodes.forEach((department) => {
             const authors = authorNodes.filter(

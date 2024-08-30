@@ -52,15 +52,15 @@ html, body {
 .header {
     border-bottom: 2px solid #ddd; /* 添加底部边框 */
     background-color: #f8f8f8; /* 设置背景色 */
-    padding-bottom: 5px; /* 上下内边距 */
-    margin-bottom: 2px;
+    padding-bottom: 0px; /* 上下内边距 */
+    margin-bottom: 4px;
 }
 
 .main {
     display: flex;
     flex: 1;
     overflow: hidden;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
     background-color: #ffffff; /* 确保背景色 */
@@ -117,6 +117,52 @@ html, body {
 .right .bottom {
     margin-top: 1px;
     flex: 7; /* 40% 高度 */
+}
+
+/* 左边容器 */
+.left-container {
+    border: 1px solid #ccc;
+    margin-right: 2px;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 20%;
+}
+
+/* 中间容器 */
+.middle-container {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 5px;
+    width: 60%;
+}
+
+/* 右边容器 */
+.right-container {
+    overflow: hidden;
+    margin-left: 2px;
+    border-radius: 5px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 右边上、下两个容器 */
+.top-container {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    height: 40%;
+}
+
+.bottom-container {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    margin-top: 2px;
+    border-radius: 5px;
+    height: 60%;
 }
 
 
