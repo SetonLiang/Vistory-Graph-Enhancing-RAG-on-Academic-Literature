@@ -107,26 +107,46 @@ def query_year():
     return result
 
 
+def query_find_paper_by_keyword(keyword):
+    specified_keyword = keyword
+
+    query = '''
+    MATCH (k:Keyword)<-[:HAS_KEYWORD]-(p)
+    WHERE toLower(k.name) = toLower($keyword)
+    RETURN p AS paper
+    '''
+
+    # Execute the query and process results
+    with driver.session(database="neo4j") as session:
+        results = session.execute_read(lambda tx: tx.run(query, keyword=specified_keyword).data())
+
+    # Extract paper names into a list
+    paper_names = [result['paper']['name'] for result in results]
+    return paper_names
+
+
 def query_authors_chart():
     cypher_query = '''MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)
     RETURN a.name AS author, COUNT(p) AS papers
+    ORDER BY papers DESC
     '''
 
     with driver.session(database="neo4j") as session:
         result = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())
 
-    return result
+    return result[:5]
 
 
 def query_keywords():
-    cypher_query = '''MATCH (k:Keyword)<-[:HAS_KEYWORD]-(p)
-                WITH k, COUNT(DISTINCT p) AS path_count
-                RETURN k.name AS keyword, path_count
-                ORDER BY path_count DESC
-                LIMIT 200
-                '''
+    cypher_query = '''
+    MATCH (k:Keyword)<-[:HAS_KEYWORD]-(p)
+    WITH toLower(k.name) AS keyword, COUNT(DISTINCT p) AS path_count
+    RETURN keyword, path_count
+    ORDER BY path_count DESC
+    LIMIT 100
+    '''
     with driver.session(database="neo4j") as session:
-        results = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())
+        results = session.execute_read(lambda tx: tx.run(cypher_query).data())
 
     words = [
         {"text": result["keyword"], "size": result["path_count"]}

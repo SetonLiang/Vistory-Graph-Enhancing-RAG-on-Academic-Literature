@@ -132,7 +132,7 @@
         const x = d3.scaleBand()
             .domain(data.map(d => d.department))
             .range([marginLeft, chartWidth - marginRight])
-            .padding(0.2);
+            .padding(0.4);
 
         const y = d3.scaleLinear()
             .domain([0, d3.max(data, d => d.papers)]).nice()
@@ -169,7 +169,7 @@
                 d3.select(this)
                     .attr("fill", d3.rgb(currentColor).darker(1.2));
                 tooltip.transition().duration(200).style("opacity", .9);
-                tooltip.html(`${d.department}<br>Quantity: ${d.papers}`)
+                tooltip.html(`${d.department}<br>${d.papers}`)
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
@@ -244,7 +244,7 @@
                 d3.select(this)
                     .attr("fill", d3.rgb(color(key)).darker(1.2));
                 tooltip.transition().duration(200).style("opacity", .9);
-                tooltip.html(`${key}<br>Quantity: ${value}`)
+                tooltip.html(`${key}<br>${value}`)
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
@@ -276,7 +276,7 @@
         const x = d3.scaleBand()
             .domain(data.map(d => d.author))
             .range([marginLeft, chartWidth - marginRight])
-            .padding(0.2);
+            .padding(0.1);
 
         const y = d3.scaleLinear()
             .domain([0, d3.max(data, d => d.papers)]).nice()
@@ -322,7 +322,7 @@
         svg.append("g")
             .attr("class", "x-axis")
             .attr("transform", `translate(0,${chartHeight - marginBottom})`)
-            .call(d3.axisBottom(x).tickSizeOuter(0).tickFormat(d => data.length > 20 ? '...' : d))
+            .call(d3.axisBottom(x).tickSizeOuter(0).tickFormat(d => data.length > 20 ? '...' : d.split(' ')[1]))
             .selectAll("text")
             .style("text-anchor", "middle")
             .attr("font-size", "10px");
@@ -363,7 +363,6 @@
             data: {},
             success: function (res) {
                 let request = JSON.parse(res)
-                console.log(request)
                 createChart1(d3.select("#chart1"), request['chart1'])
                 createChart2(d3.select("#chart2"), request['chart2'])
                 createChart3(d3.select("#chart3"), request['chart3'])

@@ -1320,7 +1320,6 @@
         });
 
 
-
         // Update the color of nodes
         node.attr('fill', (n) => {
             if (n.name === department.name || neighbors.has(n.name)) {
@@ -1353,6 +1352,68 @@
             }
         }).attr("stroke-opacity", (l) => {
             if (relatedLinks.has(l) || (l.source.name === department.name && neighbors.has(l.target.name))) {
+                if (l.relationship === 'BELONGS_TO') {
+                    return 1;
+                } else {
+                    return 0.6;
+                }
+            } else {
+                return 0.3; // Reduce opacity for other links
+            }
+        });
+    }
+
+    function highlightNodesByNameList(nameList) {
+        const nodesToHighlight = new Set(nameList);
+        const neighbors = new Set();
+        const relatedLinks = new Set();
+
+        // Identify all nodes and links to be highlighted
+        nodes.forEach(node => {
+            if (nodesToHighlight.has(node.name)) {
+                neighbors.add(node.name);
+                links.forEach(link => {
+                    if (link.source.name === node.name || link.target.name === node.name) {
+                        neighbors.add(link.source.name);
+                        neighbors.add(link.target.name);
+                        relatedLinks.add(link);
+                    }
+                });
+            }
+        });
+
+        // Update the color of nodes
+        node.attr('fill', (n) => {
+            if (neighbors.has(n.name)) {
+                // Original color for the highlighted nodes and their neighbors
+                if (n.group === 0) {
+                    return colorScale(parseInt(n.released));
+                } else if (n.group === 4) {
+                    return colorScale_auther(n.count);
+                } else {
+                    if (n.name === "AI") {
+                        return '#e3716e';
+                    } else if (n.name === "CMA") {
+                        return '#7ac7e2';
+                    } else if (n.name === 'DSA') {
+                        return '#f7df87';
+                    }
+                }
+            } else {
+                // Lighten color for other nodes
+                return "#ddd"; // or use a different light color
+            }
+        });
+
+        // Update the color and opacity of links
+        link.attr("stroke", (l) => {
+            if (relatedLinks.has(l)) {
+                return color[3]; // Original color for links involving highlighted nodes
+            } else {
+                return "#ddd"; // Lighten color for other links
+            }
+        }).attr("stroke-opacity", (l) => {
+            if (relatedLinks.has(l)) {
                 if (l.relationship === 'BELONGS_TO') {
                     return 1;
                 } else {

@@ -271,11 +271,15 @@
                 return color; // Initial color without transparency
             })
             .attr("text-anchor", "middle")
+            .style('cursor', 'pointer')
             .attr("transform", function (d) {
                 return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
             })
             .text(function (d) {
                 return d.text;
+            })
+            .on('click', function (e, d) {
+                FindPaperHasKeyword(d.text)
             });
 
         // Calculate the bounding box of the g element
@@ -304,25 +308,21 @@
         LoadKeywords()
     }
 
-
-    function createWordCloud(wordArray) {
-        const cloud_containerWidth = d3.select('#wordCloud_container').node().getBoundingClientRect().width;
-        const cloud_containerHeight = d3.select('#wordCloud_container').node().getBoundingClientRect().height;
-        d3.select('#wordCloud_container').append('div')
-            .attr('id', 'wordCloud')
-            .style('height', cloud_containerHeight + 'px').style('width', cloud_containerWidth + 'px')
-
-        WordCloud(document.getElementById('wordCloud'), {
-            list: wordArray,
-            gridSize: 1,
-            weightFactor: 1.5,
-            fontFamily: 'Roboto, sans-serif',
-            color: 'random-dark',
-            rotateRatio: 0.5,
-            backgroundColor: '#ffffff'
-        });
+    function FindPaperHasKeyword(keyword) {
+        let data = {
+            'keyword': keyword
+        }
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data_neo4j/keywordFindPaper',
+            type: 'POST', // 发送信息至服务器时内容编码类型
+            contentType: 'application/json', // 发送信息至服务器时内容编码类型
+            data: JSON.stringify(data),
+            success: function (res) {
+                let request = JSON.parse(res)
+                highlightNodesByNameList(request)
+            }
+        })
     }
-
 
     function LoadKeywords() {
         $.ajax({
@@ -330,9 +330,7 @@
             type: 'GET', // 发送信息至服务器时内容编码类型
             data: {},
             success: function (res) {
-                let request = JSON.parse(res)
-                console.log(request)
-                words = request
+                words = JSON.parse(res)
                 initWordCloud()
             }
         })

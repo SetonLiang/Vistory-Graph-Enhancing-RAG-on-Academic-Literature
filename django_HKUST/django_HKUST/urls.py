@@ -46,6 +46,7 @@ urlpatterns = [
     path('data_neo4j/departmentsMin', views.get_departments_min_from_neo4j),
     path('data_neo4j/forChart', views.get_data_for_chart),
     path('data_neo4j/keyword', views.get_keyword_for_word_cloud),
+    path('data_neo4j/keywordFindPaper', views.keyword_find_paper),
 
     # 获取数据_graph
     path('graph/query/', view_knowledge_graph.query_base),
