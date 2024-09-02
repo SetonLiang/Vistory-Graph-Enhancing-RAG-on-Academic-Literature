@@ -823,16 +823,16 @@
 
         // 给每个节点一个初始位置，避免重叠
         authorNodes.forEach((node, index) => {
-            node.x = width / 2 + 300 * Math.cos(index * 2 * Math.PI / authorNodes.length);
-            node.y = height / 2 + 300 * Math.sin(index * 2 * Math.PI / authorNodes.length);
+            node.x = width / 2 + 600 * Math.cos(index * 2 * Math.PI / authorNodes.length);
+            node.y = height / 2 + 600 * Math.sin(index * 2 * Math.PI / authorNodes.length);
         });
 
         authorNodes.forEach((author) => {
             const papers = paperNodes.filter(
                 paper => links.some(link => link.source === author.name && link.target === paper.name));
             papers.forEach((node, index) => {
-                node.x = author.x + 250 * Math.cos(index * 2 * Math.PI / papers.length);
-                node.y = author.y + 250 * Math.sin(index * 2 * Math.PI / papers.length);
+                node.x = author.x + 400 * Math.cos(index * 2 * Math.PI / papers.length);
+                node.y = author.y + 400 * Math.sin(index * 2 * Math.PI / papers.length);
             });
         });
 
@@ -840,8 +840,8 @@
             const depts = deptNodes.filter(
                 dept => links.some(link => link.source === author.name && link.target === dept.name));
             depts.forEach((node, index) => {
-                node.x = author.x + 250 * Math.cos(index * 2 * Math.PI / depts.length);
-                node.y = author.y + 250 * Math.sin(index * 2 * Math.PI / depts.length);
+                node.x = author.x + 400 * Math.cos(index * 2 * Math.PI / depts.length);
+                node.y = author.y + 400 * Math.sin(index * 2 * Math.PI / depts.length);
             });
         });
 
@@ -849,8 +849,8 @@
             const keywords = keywordNodes.filter(
                 keyword => links.some(link => link.source === paper.name && link.target === keyword.name));
             keywords.forEach((node, index) => {
-                node.x = paper.x + 100 * Math.cos(index * 2 * Math.PI / keywords.length);
-                node.y = paper.y + 100 * Math.sin(index * 2 * Math.PI / keywords.length);
+                node.x = paper.x + 200 * Math.cos(index * 2 * Math.PI / keywords.length);
+                node.y = paper.y + 200 * Math.sin(index * 2 * Math.PI / keywords.length);
             });
         });
 
@@ -911,12 +911,19 @@
             })
             .attr("fill", (d) => {
                 if (d.group === 0) {
-
-                    return colorScale(parseInt(d.released))
+                    return colorScale(parseInt(d.released));
                 } else if (d.group === 4) {
                     return colorScale_auther(d.count)
-                } else {
-                    return color[d.group]; // 其他节点保持原来的颜色
+                } else if (d.group === 2){
+                    return '#ffdf60'
+                }else {
+                    if (d.name === "AI") {
+                        return '#247181'
+                    } else if (d.name === "CMA") {
+                        return '#619ea9'
+                    } else if (d.name === 'DSA') {
+                        return '#224659'
+                    }
                 }
             })
             .attr('class', 'circle')
@@ -944,12 +951,29 @@
             {#tooltip.html(function(d) {return d.name})#}
             tooltip.html(
                 () => {
-                    if (d.group === 4 || d.group === 1 || d.group === 2) {
+                    if (d.group === 4) {
+                        return '<div class="publication-card" style="text-align: left">' +
+                            '<h4>' + d.name + '</h4>' +
+                            '<p>' + d.count + ' papers</p>' +
+                            '<br>' +
+                            '</div>'
+                    } else if (d.group === 1 || d.group === 2) {
                         return d.name
                     } else {
-                        return 'Title: ' + d.name +
-                            '<br>Citation: ' + d.citation +
-                            '<br>Year:' + d.released
+                        let temp_path = '/static/img/' + d.id + '.png'
+                        return '<div class="publication-card" style="width: 600px; text-align: left">' +
+                            '<div class="entry_img">' +
+                            '<img class="thumb" src="' + temp_path + '" alt="">' +
+                            '</div>' +
+                            '<div class="entry_main">' +
+                            '<h4>' + d.name + '</h4>' +
+                            '<p>' + d.authors + '</p>' +
+                            '<br>' +
+                            '<p>Citation:' + d.citation + '</p>' +
+                            '<p>Published:' + d.released + '</p>' +
+                            '<p>Venue:' + d.venue + '</p>' +
+                            '</div>' +
+                            '</div>'
                     }
                 })
                 .style("left", (event.pageX + 10) + "px")
@@ -1085,11 +1109,11 @@
                     return colorScale_auther(n.count);
                 } else {
                     if (n.name === "AI") {
-                        return '#e3716e';
+                        return '#247181';
                     } else if (n.name === "CMA") {
-                        return '#7ac7e2';
+                        return '#619ea9';
                     } else if (n.name === 'DSA') {
-                        return '#f7df87';
+                        return '#224659';
                     }
                 }
             } else {
@@ -1153,11 +1177,11 @@
                     return colorScale_auther(n.count);
                 } else {
                     if (n.name === "AI") {
-                        return '#e3716e';
+                        return '#247181';
                     } else if (n.name === "CMA") {
-                        return '#7ac7e2';
+                        return '#619ea9';
                     } else if (n.name === 'DSA') {
-                        return '#f7df87';
+                        return '#234559';
                     }
                 }
             } else if (secondNeighbors.has(n.name)) {
@@ -1214,11 +1238,11 @@
                 return colorScale_auther(n.count);
             } else {
                 if (n.name === "AI") {
-                    return '#e3716e';
+                    return '#247181';
                 } else if (n.name === "CMA") {
-                    return '#7ac7e2';
+                    return '#619ea9';
                 } else if (n.name === 'DSA') {
-                    return '#f7df87';
+                    return '#224659';
                 }
             }
         });
@@ -1263,11 +1287,11 @@
                     return colorScale_auther(n.count);
                 } else {
                     if (n.name === "AI") {
-                        return '#e3716e';
+                        return '#247181';
                     } else if (n.name === "CMA") {
-                        return '#7ac7e2';
+                        return '#619ea9';
                     } else if (n.name === 'DSA') {
-                        return '#f7df87';
+                        return '#224659';
                     }
                 }
             } else {
@@ -1344,11 +1368,11 @@
                     return colorScale_auther(n.count);
                 } else {
                     if (n.name === "AI") {
-                        return '#e3716e';
+                        return '#247181';
                     } else if (n.name === "CMA") {
-                        return '#7ac7e2';
+                        return '#619ea9';
                     } else if (n.name === 'DSA') {
-                        return '#f7df87';
+                        return '#224659';
                     }
                 }
             } else {
@@ -1406,11 +1430,11 @@
                     return colorScale_auther(n.count);
                 } else {
                     if (n.name === "AI") {
-                        return '#e3716e';
+                        return '#247181';
                     } else if (n.name === "CMA") {
-                        return '#7ac7e2';
+                        return '#619ea9';
                     } else if (n.name === 'DSA') {
-                        return '#f7df87';
+                        return '#234559';
                     }
                 }
             } else {

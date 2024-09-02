@@ -225,16 +225,22 @@
         g.attr("transform", "translate(" + xOffset + "," + yOffset + ")");
     }
 
+    {#function randomColor() {#}
+    {#    let letters = '0123456789ABCDEF';#}
+    {#    let color = '#';#}
+    {#    for (let i = 0; i < 6; i++) {#}
+    {#        color += letters[Math.floor(Math.random() * 16)];#}
+    {#    }#}
+    {#    return color;#}
+    //}
+
     function randomColor() {
-        let letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
+        let colors = ['#73846a', '#c78c50', '#4f6157', '#7298c5',
+            '#9e938a', '#68aab6','#7c4e4c', '#333333',
+        '#827473', '#8e9898','#deb9ae', '#b8bec1',]; // 这是你的颜色列表
+        let randomIndex = Math.floor(Math.random() * colors.length);
+        return colors[randomIndex];
     }
-
-
 </script>
 
 <script>
