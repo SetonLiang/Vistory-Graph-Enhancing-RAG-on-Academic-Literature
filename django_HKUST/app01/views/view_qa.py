@@ -42,21 +42,21 @@ def chat(request):
                     | graph_rag.StrOutputParser()
             )
         start_time = time.time()
-        if not chat_history:
+        # if not chat_history:
             # 运行QA链
-            output = chain.invoke({"question": user_input})
-            chat_history.append((user_input, output))
+            # output = chain.invoke({"question": user_input})
+            # chat_history.append((user_input, output))
 
-        # output = '1111111'
+        output = '1111111'
        
-        else:
-            previous_question, previous_answer = chat_history[-1]
-            output = chain.invoke(
-                {
-                    "question": user_input,
-                    "chat_history": [(previous_question, previous_answer)],
-                }
-            )
+        # else:
+        #     previous_question, previous_answer = chat_history[-1]
+        #     output = chain.invoke(
+        #         {
+        #             "question": user_input,
+        #             "chat_history": [(previous_question, previous_answer)],
+        #         }
+        #     )
         duration = time.time()-start_time
         print(duration)
         with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:

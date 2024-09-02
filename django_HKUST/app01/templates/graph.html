@@ -50,6 +50,9 @@
     // Specify the color scale.
     let color = ['#f2a7da', '#71b7ed', '#f8dc4c', 'grey', '#84c3b7', 'black']
     let color_key = '#f8dc4c'
+    const colorScale_keyword = d3.scaleLinear()
+        .domain([1, 30])
+        .range(["#fff293", "#f8dc4c"]);
     // 定义颜色比例尺，根据citation的范围调整颜色的深浅
     const colorScale = d3.scaleLinear()
         .domain([2020, 2024])
@@ -814,45 +817,80 @@
         nodes = data.nodes.map(d => ({...d}));
 
 
-
         const deptNodes = nodes.filter(node => node.group === 1);
         const authorNodes = nodes.filter(node => node.group === 4);
         const paperNodes = nodes.filter(node => node.group === 0);
         const keywordNodes = nodes.filter(node => node.group === 2);
-       
 
-        // 给每个节点一个初始位置，避免重叠
-        authorNodes.forEach((node, index) => {
-            node.x = width / 2 + 600 * Math.cos(index * 2 * Math.PI / authorNodes.length);
-            node.y = height / 2 + 600 * Math.sin(index * 2 * Math.PI / authorNodes.length);
-        });
+        deptNodes.forEach((node, index) => {
+            node.x = width / 2 + 1000 * Math.cos(index * 2 * Math.PI / deptNodes.length);
+            node.y = height / 2 + 1000 * Math.sin(index * 2 * Math.PI / deptNodes.length);
+        })
 
-        authorNodes.forEach((author) => {
-            const papers = paperNodes.filter(
-                paper => links.some(link => link.source === author.name && link.target === paper.name));
-            papers.forEach((node, index) => {
-                node.x = author.x + 400 * Math.cos(index * 2 * Math.PI / papers.length);
-                node.y = author.y + 400 * Math.sin(index * 2 * Math.PI / papers.length);
+        deptNodes.forEach((dept) => {
+            const authors = authorNodes.filter(
+                author => links.some(link => link.source === author.name && link.target === dept.name))
+            authors.forEach((node, index) => {
+                node.x = dept.x + 1000 * Math.cos(index * 2 * Math.PI / authors.length);
+                node.y = dept.y + 1000 * Math.sin(index * 2 * Math.PI / authors.length);
             });
-        });
+        })
 
-        authorNodes.forEach((author) => {
-            const depts = deptNodes.filter(
-                dept => links.some(link => link.source === author.name && link.target === dept.name));
-            depts.forEach((node, index) => {
-                node.x = author.x + 400 * Math.cos(index * 2 * Math.PI / depts.length);
-                node.y = author.y + 400 * Math.sin(index * 2 * Math.PI / depts.length);
+        authorNodes.forEach((author, index) => {
+
+            const papers = paperNodes.filter(paper => links.some(link => link.source === author.name && link.target === paper.name));
+
+            // 计算每个paper节点的位置
+            papers.forEach(paper => {
+                // 找到与当前paper节点连接的所有author节点
+                const connectedAuthors = authorNodes.filter(node =>
+                    links.some(link => (link.source === node.name && link.target === paper.name) ||
+                        (link.target === node.name && link.source === paper.name))
+                );
+
+                if (connectedAuthors.length > 1) {
+                    // 计算所有连接的author节点的中心位置
+                    const sum = connectedAuthors.reduce((acc, author) => {
+                        acc.x += author.x;
+                        acc.y += author.y;
+                        return acc;
+                    }, {x: 0, y: 0});
+
+                    paper.x = sum.x / connectedAuthors.length;
+                    paper.y = sum.y / connectedAuthors.length;
+                } else {
+                    paper.x = author.x + 800 * Math.cos(index * 2 * Math.PI / papers.length);
+                    paper.y = author.y + 800 * Math.sin(index * 2 * Math.PI / papers.length);
+                }
             });
+
         });
 
-        paperNodes.forEach((paper) => {
+        paperNodes.forEach((paper, index) => {
             const keywords = keywordNodes.filter(
                 keyword => links.some(link => link.source === paper.name && link.target === keyword.name));
-            keywords.forEach((node, index) => {
-                node.x = paper.x + 200 * Math.cos(index * 2 * Math.PI / keywords.length);
-                node.y = paper.y + 200 * Math.sin(index * 2 * Math.PI / keywords.length);
-            });
+            keywords.forEach(keyword => {
+                const connectedPapers = paperNodes.filter(node =>
+                    links.some(link => (link.source === node.name && link.target === keyword.name) ||
+                        (link.target === node.name && link.source === keyword.name))
+                )
+
+                if (connectedPapers.length > 1) {
+                    const sum = connectedPapers.reduce((acc, paper) => {
+                        acc.x += paper.x;
+                        acc.y += paper.y;
+                        return acc
+                    }, {x: 0, y: 0})
+                    keyword.x = sum.x / connectedPapers.length;
+                    keyword.y = sum.y / connectedPapers.length;
+                } else {
+                    keyword.x = paper.x + 200 * Math.cos(index * 2 * Math.PI / keywords.length);
+                    keyword.y = paper.y + 200 * Math.sin(index * 2 * Math.PI / keywords.length);
+                }
+
+            })
         });
+
 
         console.log(deptNodes)
         console.log(authorNodes)
@@ -876,7 +914,7 @@
                 return d.distance
             }))
 
-            .force('collision', d3.forceCollide().radius(35))
+            .force('collision', d3.forceCollide().radius(50))
             .force("charge", d3.forceManyBody().strength(-50))
             .force("center", d3.forceCenter(width / 2, height / 2))
             .alphaMin(0.05)
@@ -889,14 +927,14 @@
             .data(links)
             .join("path")
             .attr("stroke-opacity", (d) => {
-                if (d.relationship === 'OWNED_BY') {
+                if (d.relationship === 'BELONGS_TO') {
                     return 1
                 } else {
                     return 0.6
                 }
             })
             .attr('stroke-width', (d) => {
-                if (d.relationship === 'OWNED_BY') {
+                if (d.relationship === 'BELONGS_TO') {
                     return 5
                 } else {
                     return 3
@@ -912,16 +950,37 @@
             .data(nodes)
             .join("circle")
             .attr("r", (d) => {
-                return 30
+                if (d.group === 1) {
+                    return 100
+                }
+                if (d.group === 4) {
+                    return 70
+                }
+                if (d.group === 0) {
+                    if (d.citation < 21) {
+                        return 10
+                    } else if (d.citation > 20 && d.citation < 51) {
+                        return 20
+                    } else if (d.citation > 50 && d.citation < 101) {
+                        return 30
+                    } else if (d.citation > 100 && d.citation < 151) {
+                        return 40
+                    } else {
+                        return 50
+                    }
+                }
+                if (d.group === 2) {
+                    return 20
+                }
             })
             .attr("fill", (d) => {
                 if (d.group === 0) {
                     return colorScale(parseInt(d.released));
                 } else if (d.group === 4) {
                     return colorScale_auther(d.count)
-                } else if (d.group === 2){
+                } else if (d.group === 2) {
                     return '#ffdf60'
-                }else {
+                } else {
                     if (d.name === "AI") {
                         return '#247181'
                     } else if (d.name === "CMA") {
@@ -933,21 +992,14 @@
             })
             .attr('class', 'circle')
             .on('click', function (e, d) {
-                if (d.group === 0) {
-                    query_list.push(d.id)
-                    query_id_list.push(d.id)
-                    QueryResults()
-                    fixSelectors(d.id)
-                }
-                if (d.group === 4) {
-                    if (already_click_author.indexOf(d.name) === -1 || already_click_author.length === 0) {
-                        query_paper(d.name);
-                    }
-                    already_click_author.push(d.name)
-                    query_list.push(d.name)
-                    query_author_list.push(d.name)
-                    QueryResults()
-                    fixSelectors(d.name)
+                // Set the clicked node as the selected node
+                selectedNode = d;
+                console.log(d)
+                if (d.group === 1 || d.group === 4) {
+                    // Call the function to highlight the neighborhood
+                    highlightNeighborhood_2(selectedNode);
+                } else {
+                    highlightNeighborhood(selectedNode)
                 }
             })
 
@@ -996,12 +1048,21 @@
             })
             .attr('dy', (d) => {
                 if (d.group === 1) {
-                    return 8
-                } else {
+                    return 15
+                } else if (d.group === 2) {
                     return 45
+                } else {
+                    return 10
                 }
             })
             .attr('fill', color[5])
+            .attr('font-size', (d) => {
+                if (d.group === 1) {
+                    return '40px';  // 对于 group 1 的字体大小
+                } else {
+                    return '20px';  // 对于其他组的字体大小
+                }
+            });
 
         // 然后通过 each 方法调整 dx 属性
         nodeNameText.each(function (d) {
@@ -1043,7 +1104,7 @@
             'nodes': [],
             'links': [],
         }
-        
+
         updateGraph(clear)
         removeNode(entity_data)
     }
@@ -1112,6 +1173,8 @@
                     return colorScale(parseInt(n.released));
                 } else if (n.group === 4) {
                     return colorScale_auther(n.count);
+                } else if (n.group === 2) {
+                    return '#ffdf60'
                 } else {
                     if (n.name === "AI") {
                         return '#247181';
@@ -1175,11 +1238,14 @@
         // Update the color of nodes
         node.attr('fill', (n) => {
             if (neighbors.has(n.name)) {
+                console.log(n.group)
                 // Original color for the selected node and its first-order neighbors
                 if (n.group === 0) {
                     return colorScale(parseInt(n.released));
                 } else if (n.group === 4) {
                     return colorScale_auther(n.count);
+                } else if (n.group === 2) {
+                    return '#ffdf60'
                 } else {
                     if (n.name === "AI") {
                         return '#247181';
@@ -1195,6 +1261,8 @@
                     return colorScale(parseInt(n.released));
                 } else if (n.group === 4) {
                     return colorScale_auther(n.count);
+                } else if (n.group === 2) {
+                    return '#ffdf60'
                 } else {
                     if (n.name === "AI") {
                         return '#e3716e';
@@ -1241,6 +1309,8 @@
                 return colorScale(parseInt(n.released));
             } else if (n.group === 4) {
                 return colorScale_auther(n.count);
+            } else if (n.group === 2) {
+                return '#ffdf60'
             } else {
                 if (n.name === "AI") {
                     return '#247181';
