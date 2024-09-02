@@ -32,6 +32,7 @@ import torch
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
+from app01.views.entity_query import *
 # 环境变量设置
 os.environ["OPENAI_API_BASE"] = 'https://api.chsdw.top/v1'
 os.environ["OPENAI_API_KEY"] = "sk-gO7KhknYxgDCHTzC0aE1A4Df0fC040E78c80D296C9FbA001"
@@ -253,7 +254,7 @@ def similarity_search(question, file_path, k=10):
     question_embedding = embed_text(question)
 
     # 提取节点嵌入
-    node_embeddings = np.array([np.array(node["embedding"]) for node in nodes])
+    node_embeddings = np.array([np.array(node["embedding"]) for node in nodes if "embedding" in node])
     
     # 计算相似度
     similarities = cosine_similarity([question_embedding], node_embeddings)[0]
@@ -273,148 +274,462 @@ def similarity_search(question, file_path, k=10):
     
     return top_results
 
+# def structured_retriever(question: str) -> dict:
+#     result = []
+#     # 解析问题中的实体
+#     entities = entity_chain.invoke({"question": question, "examples": examples})
+#     print(entities, type(entities))
+#     try:
+#         entity_names = parse_entities(entities)
+#     except ValueError as e:
+#         return {"error": str(e)}
+    
+#     # 提取年份实体，如果存在的话
+#     year_entity = None
+#     for entity in entity_names:
+#         if entity.isdigit() and len(entity) == 4:  # 简单判断年份
+#             year_entity = entity
+#             break
+
+#     for entity in entity_names:
+#         if '"' in entity:
+#             entity = entity.strip('"').replace(",", "").replace(":", "").replace("?", "").replace("-", "").replace(" ", "").lower()
+#         else:
+#             entity = entity.strip("'").replace(",", "").replace(":", "").replace("?", "").replace("-", "").replace(" ", "").lower()
+#         print(entity)
+
+#         def run_to_query(query, params):
+#             response = session.run(query, params)
+#             return [record.data() for record in response]
+#         # 查询作者相关路径
+#         author_response = run_to_query(
+#             """
+#             MATCH (a:Author)-[:OWNED_BY]-(p:Papers)
+#             WHERE apoc.text.clean(a.name) = $name
+#             OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
+#             OPTIONAL MATCH (a)-[:BELONGS_TO]->(d:Department)
+#             RETURN a, p, collect(k) as keywords, d
+#             """,
+#             {"name": entity}
+#         )
+        
+#         # 查询论文标题相关路径
+#         paper_response = run_to_query(
+#             """
+#             MATCH (p:Papers)
+#             WHERE apoc.text.clean(p.name) = apoc.text.clean($title)
+#             OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
+#             OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
+#             RETURN p, collect(k) as keywords, a
+#             """,
+#             {"title": entity}
+#         )
+        
+#         # 查询关键词相关路径
+#         keyword_response = run_to_query(
+#             """
+#             MATCH (k:Keyword)
+#             WHERE apoc.text.clean(k.name) = apoc.text.clean($keyword)
+#             OPTIONAL MATCH (k)<-[:HAS_KEYWORD]-(p:Papers)
+#             OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
+#             RETURN k, collect(p) as papers, collect(a) as authors
+#             """,
+#             {"keyword": entity}
+#         )
+        
+#         # 查询作者所属部门
+#         department_response = run_to_query(
+#             """
+#             MATCH (d:Department)
+#             WHERE apoc.text.clean(d.name) = apoc.text.clean($name)
+#             OPTIONAL MATCH (a:Author)-[:BELONGS_TO]->(d)
+#             OPTIONAL MATCH (p:Papers)-[:OWNED_BY]->(a)            
+#             RETURN a, d, collect(p) as papers
+#             """,
+#             {"name": entity}
+#         )
+
+#         # 处理查询结果
+#         if author_response:
+#             for record in author_response:
+#                 if not year_entity or record['p'].get('year') == year_entity:
+#                     result.append({
+#                         "type": "author",
+#                         "author": record['a'].get('name'),
+#                         "paper": record['p'].get('name'),
+#                         "year": record['p'].get('year'),
+#                         "source": record['p'].get('source'),
+#                         "keywords": [k.get('name') for k in record['keywords']],
+#                         "department": record['d'].get('name') if record.get('d') else None
+#                     })
+
+#         if paper_response:
+#             for record in paper_response:
+#                 if not year_entity or record['p'].get('year') == year_entity:
+#                     result.append({
+#                         "type": "paper",
+#                         "paper": record['p'].get('name'),
+#                         "year": record['p'].get('year'),
+#                         "source": record['p'].get('source'),
+#                         "author": record['a'].get('name'),
+#                         "keywords": [k.get('name') for k in record['keywords']]
+#                     })
+
+#         if keyword_response:
+#             for record in keyword_response:
+#                 filtered_papers = [
+#                     {
+#                         "name": p.get('name'),
+#                         "year": p.get('year'),
+#                         "source": p.get('source')
+#                     } for p in record['papers'] if not year_entity or p.get('year') == year_entity
+#                 ]
+#                 if filtered_papers:
+#                     result.append({
+#                         "type": "keyword",
+#                         "keyword": record['k'].get('name'),
+#                         "papers": filtered_papers,
+#                         "authors": [a.get('name') for a in record['authors']]
+#                     })
+
+#         if department_response:
+#             total_paper_count = 0
+#             for record in department_response:
+#                 filtered_papers = [
+#                     {
+#                         "name": p.get('name'),
+#                         "year": p.get('year'),
+#                         "source": p.get('source')
+#                     } for p in record['papers'] if not year_entity or p.get('year') == year_entity
+#                 ]
+#                 paper_count = len(filtered_papers)  # 统计每个作者的paper数量
+#                 total_paper_count += paper_count
+#                 if filtered_papers:
+#                     result.append({
+#                         "type": "department",
+#                         # "author": record['a'].get('name'),
+#                         "papers": filtered_papers,
+#                         "department": record['d'].get('name'),
+#                         "paper_count": paper_count
+#                     })
+#             result.append({"total_paper_count": total_paper_count})
+#     print(result)
+#     print(len(result))
+#     return {"results": result, "length": len(result), "is_year": year_entity}
+def infer_entity_type(entity_name):
+    with open("app01/datasets/final_entity_type_map.json","r",encoding='utf-8') as f:
+        ENTITY_TYPE_MAP = json.load(f)
+    return ENTITY_TYPE_MAP.get(entity_name.lower(), "unknown")
+
 def structured_retriever(question: str) -> dict:
     result = []
-    # 解析问题中的实体
+
+    # 使用实体提取工具解析问题中的实体
     entities = entity_chain.invoke({"question": question, "examples": examples})
-    print(entities, type(entities))
+    
+    # 解析出实体名称和类型
     try:
         entity_names = parse_entities(entities)
     except ValueError as e:
         return {"error": str(e)}
     
-    # 提取年份实体，如果存在的话
-    year_entity = None
-    for entity in entity_names:
-        if entity.isdigit() and len(entity) == 4:  # 简单判断年份
-            year_entity = entity
-            break
+    # 推断实体类型
+    inferred_types = {name: infer_entity_type(name) for name in entity_names}
+    print(inferred_types)
+     
+    # 如果有多个实体，执行联合查询以识别共同关联
+    if len(inferred_types) > 1:
+        combined_responses = query_combined_entities(inferred_types)
+        if combined_responses:
+            formatted_result = format_combined_response(combined_responses, inferred_types)
+            result.extend(formatted_result)
+    else:
+        # 构建查询语句
+        for entity, entity_type in inferred_types.items():
+            
+            clean_entity = clean_entity_name(entity)
+            # print(clean_entity)
+            # 根据实体类型选择相应的查询逻辑
+            if entity_type == "Author":
+                author_response = query_author(clean_entity)
+                if author_response:
+                    result.extend(format_author_response(author_response))
+                
+            elif entity_type == "Papers":
+                paper_response = query_paper(clean_entity)
+                if paper_response:
+                    result.extend(format_paper_response(paper_response))
+                
+            elif entity_type == "Keyword":
+                keyword_response = query_keyword(clean_entity)
+                if keyword_response:
+                    print(keyword_response)
+                    result.extend(format_keyword_response(keyword_response))
+                
+            elif entity_type == "Department":
+                department_response = query_department(clean_entity)
+                if department_response:
+                    result.extend(format_department_response(department_response))
+                
+            elif entity_type == "Year":
+                year_response = query_year(clean_entity)
+                if year_response:
+                    result.extend(format_year_response(year_response))
 
-    for entity in entity_names:
-        if '"' in entity:
-            entity = entity.strip('"').replace(",", "").replace(":", "").replace("?", "").replace("-", "").replace(" ", "").lower()
-        else:
-            entity = entity.strip("'").replace(",", "").replace(":", "").replace("?", "").replace("-", "").replace(" ", "").lower()
-        print(entity)
+            elif entity_type == "Venue":
+                venue_response = query_venue(clean_entity)
+                # print(venue_response)
+                if venue_response:
+                    result.extend(format_venue_response(venue_response))
 
-        def run_to_query(query, params):
-            response = session.run(query, params)
-            return [record.data() for record in response]
-        # 查询作者相关路径
-        author_response = run_to_query(
-            """
-            MATCH (a:Author)-[:OWNED_BY]-(p:Papers)
-            WHERE apoc.text.clean(a.name) = $name
-            OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
-            OPTIONAL MATCH (a)-[:BELONGS_TO]->(d:Department)
-            RETURN a, p, collect(k) as keywords, d
-            """,
-            {"name": entity}
+    return {"results": result, "length": len(result)}
+
+def clean_entity_name(entity):
+    """Clean and normalize the entity name."""
+    return entity.strip('"\'').replace(",", "").replace(":", "").replace("?", "").replace("-", "").replace(" ", "").lower()
+
+def query_author(author_name):
+    """Query for author-related information."""
+    query = """
+        MATCH (a:Author)-[:OWNED_BY]-(p:Papers)
+        WHERE apoc.text.clean(a.name) = apoc.text.clean($name)
+        OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
+        OPTIONAL MATCH (a)-[:BELONGS_TO]->(d:Department)
+        RETURN a, p, collect(k) as keywords, d
+    """
+    return session.run(query, {"name": author_name})
+
+def query_paper(paper_title):
+    """Query for paper-related information."""
+    query = """
+        MATCH (p:Papers)
+        WHERE apoc.text.clean(p.name) = apoc.text.clean($title)
+        OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
+        OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
+        RETURN p, collect(k) as keywords, a
+    """
+    return session.run(query, {"title": paper_title})
+
+def query_keyword(keyword_name):
+    """Query for keyword-related information."""
+    query = """
+        MATCH (k:Keyword)
+        WHERE apoc.text.clean(k.name) = apoc.text.clean($keyword)
+        OPTIONAL MATCH (k)<-[:HAS_KEYWORD]-(p:Papers)
+        OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
+        RETURN k, collect(p) as papers, collect(a) as authors
+    """
+    return session.run(query, {"keyword": keyword_name})
+
+def query_department(department_name):
+    """Query for department-related information."""
+    query = """
+        MATCH (d:Department)
+        WHERE apoc.text.clean(d.name) = apoc.text.clean($name)
+        OPTIONAL MATCH (a:Author)-[:BELONGS_TO]->(d)
+        OPTIONAL MATCH (p:Papers)-[:OWNED_BY]->(a)
+        RETURN a, d, collect(p) as papers
+    """
+    return session.run(query, {"name": department_name})
+
+def query_year(year):
+    """Query for year-related information."""
+    query = """
+        MATCH (y:Year {name: $year})<-[:PUBLISHED_IN]-(p:Papers)
+        OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
+        OPTIONAL MATCH (a)-[:BELONGS_TO]->(d:Department)
+        RETURN a, y, d, collect(p) as papers
+    """
+    return session.run(query, {"year": year})
+
+def query_venue(venue):
+    """Query for venue-related information."""
+    query = """
+        MATCH (v:Venue)
+        WHERE apoc.text.clean(v.name) = apoc.text.clean($venue)
+        OPTIONAL MATCH (v)<-[:PRESENTED_AT]-(p:Papers)
+        OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
+        OPTIONAL MATCH (a)-[:BELONGS_TO]->(d:Department)
+        RETURN a, v, d, collect(p) as papers
+    """
+    return session.run(query, {"venue": venue})
+
+
+def query_combined_entities(entities):
+    """Query for combined entities to find common links."""
+    query_author_year = """
+        MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)-[:PUBLISHED_IN]->(y:Year)
+        WHERE apoc.text.clean(a.name) = apoc.text.clean($author_name)
+        AND y.name = $year
+        RETURN a, collect(p) as papers, y
+    """
+    query_author_keyword = """
+        MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)-[:HAS_KEYWORD]->(k:Keyword)
+        WHERE apoc.text.clean(a.name) = apoc.text.clean($author_name)
+        AND apoc.text.clean(k.name) = apoc.text.clean($keyword)
+        RETURN p as papers
+    """
+    query_author_venue = """
+        MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)-[:PRESENTED_AT]->(v:Venue)
+        WHERE apoc.text.clean(a.name) = apoc.text.clean($author_name)
+        AND apoc.text.clean(v.name) = apoc.text.clean($venue)
+        RETURN p as papers
+    """
+    
+
+    query_department_year = """
+        MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)-[:PUBLISHED_IN]->(y:Year)
+        WHERE apoc.text.clean(d.name) = apoc.text.clean($department_name)
+        AND y.name in $year
+        RETURN d, a, y, collect(p) as papers
+    """
+    query_department_keyword = """
+        MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)-[:HAS_KEYWORD]->(k:Keyword)
+        WHERE apoc.text.clean(d.name) = apoc.text.clean($department_name)
+        AND apoc.text.clean(k.name) = apoc.text.clean($keyword)
+        RETURN a, p as papers
+    """
+    query_department_venue = """
+        MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)-[:PRESENTED_AT]->(v:Venue)
+        WHERE apoc.text.clean(d.name) = apoc.text.clean($department_name)
+        AND apoc.text.clean(v.name) = apoc.text.clean($venue)
+        RETURN a, p as papers
+    """
+
+
+    query_keyword_year = """
+        MATCH (k:Keyword)<-[:HAS_KEYWORD]-(p:Papers)-[:PUBLISHED_IN]->(y:Year)
+        WHERE apoc.text.clean(k.name) = apoc.text.clean($keyword)
+        AND y.name = $year
+        OPTIONAL MATCH (a:Author)<-[:OWNED_BY]-(p)
+        RETURN a, p as papers
+    """
+    query_keyword_venue = """
+        MATCH (k:Keyword)<-[:HAS_KEYWORD]-(p:Papers)-[:PRESENTED_AT]->(v:Venue)
+        WHERE apoc.text.clean(k.name) = apoc.text.clean($keyword)
+        AND apoc.text.clean(v.name) = apoc.text.clean($venue)
+        OPTIONAL MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)
+        RETURN a, p as papers
+    """
+
+    query_year_venue = """
+        MATCH (y:Year)<-[:PUBLISHED_IN]-(p:Papers)-[:PRESENTED_AT]->(v:Venue)
+        WHERE y.name = $year
+        AND apoc.text.clean(v.name) = apoc.text.clean($venue)
+        OPTIONAL MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)
+        RETURN a, p as papers
+    """
+
+    authors = get_key(entities, 'Author') #判断是否有多个作者
+    departments = get_key(entities, 'Department') #判断是否有多个部门
+
+
+    # Example for combining author and year entities
+    if "Author" in entities.values() and "Year" in entities.values():
+        author_name = clean_entity_name(get_key(entities,'Author')[0])
+        year = get_key(entities,'Year')[0]
+        return session.run(query_author_year, {"author_name": author_name, "year": year})
+    
+    if "Author" in entities.values() and "Keyword" in entities.values():
+        author_name = clean_entity_name(get_key(entities,'Author')[0])
+        keyword = clean_entity_name(get_key(entities,'Keyword')[0])
+        return session.run(query_author_keyword, {"author_name": author_name, "keyword": keyword})
+    
+    if "Author" in entities.values() and "Venue" in entities.values():
+        author_name = clean_entity_name(get_key(entities,'Author')[0])
+        venue = clean_entity_name(get_key(entities,'Venue')[0])
+        return session.run(query_author_venue, {"author_name": author_name, "venue": venue})
+    
+    # Example for combining Department and others
+    # department can combine with mutiple year=> trend
+    if "Department" in entities.values() and "Year" in entities.values():
+        department_name = clean_entity_name(get_key(entities,'Department')[0])
+        year = get_key(entities,'Year')
+        return session.run(query_department_year, {"department_name": department_name, "year": year})
+    if "Department" in entities.values() and "Keyword" in entities.values():
+        department_name = clean_entity_name(get_key(entities,'Department')[0])
+        keyword = clean_entity_name(get_key(entities,'Keyword')[0])
+        return session.run(query_department_keyword, {"department_name": department_name, "keyword": keyword})
+    if "Department" in entities.values() and "Venue" in entities.values():
+        department_name = clean_entity_name(get_key(entities,'Department')[0])
+        venue = clean_entity_name(get_key(entities,'Venue')[0])
+        return session.run(query_department_venue, {"department_name": department_name, "venue": venue})
+
+    # Example for combining keyword and others
+    if "Keyword" in entities.values() and "Year" in entities.values():
+        keyword = clean_entity_name(get_key(entities,'Keyword')[0])
+        year = get_key(entities,'Year')[0]
+        return session.run(query_keyword_year, {"keyword": keyword, "year": year})
+    if "Keyword" in entities.values() and "Venue" in entities.values():
+        keyword = clean_entity_name(get_key(entities,'Keyword')[0])
+        venue = clean_entity_name(get_key(entities,'Venue')[0])
+        return session.run(query_keyword_venue, {"keyword": keyword, "venue": venue})
+
+    # Example for combining year and venue
+    if "Year" in entities.values() and "Venue" in entities.values():
+        year = get_key(entities,'Year')[0]
+        venue = clean_entity_name(get_key(entities,'Venue')[0])
+        return session.run(query_year_venue, {"year": year, "venue": venue})
+    
+    if len(authors) > 1:
+       # 动态构建MATCH查询部分，包含所有作者
+        match_clause = "MATCH " + ", ".join(
+            [f"(a{i}:Author)<-[:OWNED_BY]-(p{i}:Papers)" for i in range(len(authors))]
         )
         
-        # 查询论文标题相关路径
-        paper_response = run_to_query(
-            """
-            MATCH (p:Papers)
-            WHERE apoc.text.clean(p.name) = apoc.text.clean($title)
-            OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
-            OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
-            RETURN p, collect(k) as keywords, a
-            """,
-            {"title": entity}
+        # 构建WHERE子句，用于过滤每个作者的名字
+        where_clause = " AND ".join(
+            [f"apoc.text.clean(a{i}.name) = apoc.text.clean($author{i}_name)" for i in range(len(authors))]
         )
+
+        # 确保论文节点相同的条件
+        paper_match_clause = " AND ".join(
+            [f"p0.name = p{i}.name" for i in range(1, len(authors))]
+        )
+
+        # 组合完整的Cypher查询
+        query_authors = f"""
+            {match_clause}
+            WHERE {where_clause} AND {paper_match_clause}
+            RETURN collect(p0) AS papers
+        """
+        # 创建参数字典，存储每个作者的名字
+        parameters = {f"author{i}_name": clean_entity_name(author) for i, author in enumerate(authors)}
         
-        # 查询关键词相关路径
-        keyword_response = run_to_query(
-            """
-            MATCH (k:Keyword)
-            WHERE apoc.text.clean(k.name) = apoc.text.clean($keyword)
-            OPTIONAL MATCH (k)<-[:HAS_KEYWORD]-(p:Papers)
-            OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
-            RETURN k, collect(p) as papers, collect(a) as authors
-            """,
-            {"keyword": entity}
-        )
-        
-        # 查询作者所属部门
-        department_response = run_to_query(
-            """
-            MATCH (d:Department)
-            WHERE apoc.text.clean(d.name) = apoc.text.clean($name)
-            OPTIONAL MATCH (a:Author)-[:BELONGS_TO]->(d)
-            OPTIONAL MATCH (p:Papers)-[:OWNED_BY]->(a)            
-            RETURN a, d, collect(p) as papers
-            """,
-            {"name": entity}
+        # 执行查询并返回结果
+        return session.run(query_authors, parameters)
+
+    if len(departments) > 1:
+        # 动态构建MATCH查询部分，包含所有部门
+        match_clause = "MATCH " + ", ".join(
+            [f"(d{i}:Department)<-[:BELONGS_TO]-(a{i}:Author)-[:OWNED_BY]->(p{i}:Papers)" for i in range(len(departments))]
         )
 
-        # 处理查询结果
-        if author_response:
-            for record in author_response:
-                if not year_entity or record['p'].get('year') == year_entity:
-                    result.append({
-                        "type": "author",
-                        "author": record['a'].get('name'),
-                        "paper": record['p'].get('name'),
-                        "year": record['p'].get('year'),
-                        "source": record['p'].get('source'),
-                        "keywords": [k.get('name') for k in record['keywords']],
-                        "department": record['d'].get('name') if record.get('d') else None
-                    })
+        # 构建WHERE子句，用于过滤每个部门的名字
+        where_clause = " AND ".join(
+            [f"apoc.text.clean(d{i}.name) = apoc.text.clean($department{i}_name)" for i in range(len(departments))]
+        )
 
-        if paper_response:
-            for record in paper_response:
-                if not year_entity or record['p'].get('year') == year_entity:
-                    result.append({
-                        "type": "paper",
-                        "paper": record['p'].get('name'),
-                        "year": record['p'].get('year'),
-                        "source": record['p'].get('source'),
-                        "author": record['a'].get('name'),
-                        "keywords": [k.get('name') for k in record['keywords']]
-                    })
+        # 确保论文节点相同的条件
+        paper_match_clause = " AND ".join(
+            [f"p0.name = p{i}.name" for i in range(1, len(departments))]
+        )
 
-        if keyword_response:
-            for record in keyword_response:
-                filtered_papers = [
-                    {
-                        "name": p.get('name'),
-                        "year": p.get('year'),
-                        "source": p.get('source')
-                    } for p in record['papers'] if not year_entity or p.get('year') == year_entity
-                ]
-                if filtered_papers:
-                    result.append({
-                        "type": "keyword",
-                        "keyword": record['k'].get('name'),
-                        "papers": filtered_papers,
-                        "authors": [a.get('name') for a in record['authors']]
-                    })
+        # 组合完整的Cypher查询
+        query_departments = f"""
+            {match_clause}
+            WHERE {where_clause} AND {paper_match_clause}
+            RETURN collect(p0) AS papers
+        """
 
-        if department_response:
-            total_paper_count = 0
-            for record in department_response:
-                filtered_papers = [
-                    {
-                        "name": p.get('name'),
-                        "year": p.get('year'),
-                        "source": p.get('source')
-                    } for p in record['papers'] if not year_entity or p.get('year') == year_entity
-                ]
-                paper_count = len(filtered_papers)  # 统计每个作者的paper数量
-                total_paper_count += paper_count
-                if filtered_papers:
-                    result.append({
-                        "type": "department",
-                        # "author": record['a'].get('name'),
-                        "papers": filtered_papers,
-                        "department": record['d'].get('name'),
-                        "paper_count": paper_count
-                    })
-            result.append({"total_paper_count": total_paper_count})
-    print(result)
-    print(len(result))
-    return {"results": result, "length": len(result), "is_year": year_entity}
+        # 创建参数字典，存储每个部门的名字
+        parameters = {f"department{i}_name": clean_entity_name(department) for i, department in enumerate(departments)}
+
+        # 执行查询并返回结果
+        return session.run(query_departments, parameters)
+
+    return None
+
 
 # 提取unstructured_data的relevant paper name
 def extract_paper_names(unstructured_data):
@@ -456,6 +771,7 @@ def make_entity_json(relevant_paper,session):
 
     nodes = []
     links = []
+    temp_keyword = None
     for lst in results:
         for item in lst:
             temp_paper = {
@@ -577,19 +893,19 @@ def retriever(question: str):
 
     print(f"Search query: {question}")
     structured_data = structured_retriever(question)
-    is_year = structured_data.get('is_year')
+    # is_year = structured_data.get('is_year')
     structured_results = structured_data.get('results', [])
-
+    print(structured_results)
     # unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
-    unstructured_data = similarity_search(question, file_path, k=10)
+    unstructured_data = similarity_search(question, file_path, k=5)
     unstructured_data = format_unstructured_data(unstructured_data)
 
-    if is_year:
+    if structured_results != []:
         relevant_paper = [record.get('paper') for record in structured_results]
     else:
         relevant_paper = extract_paper_names(unstructured_data)
-    if len(relevant_paper)>10:
-        relevant_paper = relevant_paper[:10]
+    if len(relevant_paper)>20:
+        relevant_paper = relevant_paper[:20]
     print(relevant_paper)
     paper_entity = make_entity_json(relevant_paper,session)
     with open('app01/datasets/test.json', 'w') as f:
@@ -599,7 +915,7 @@ def retriever(question: str):
                     Unstructured data:
                     {"#Document ".join(unstructured_data)}
                 """
-
+    print(final_data)
     return final_data
 
 

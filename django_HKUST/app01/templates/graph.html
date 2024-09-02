@@ -819,7 +819,7 @@
         const authorNodes = nodes.filter(node => node.group === 4);
         const paperNodes = nodes.filter(node => node.group === 0);
         const keywordNodes = nodes.filter(node => node.group === 2);
-        console.log(deptNodes)
+       
 
         // 给每个节点一个初始位置，避免重叠
         authorNodes.forEach((node, index) => {
@@ -853,6 +853,11 @@
                 node.y = paper.y + 200 * Math.sin(index * 2 * Math.PI / keywords.length);
             });
         });
+
+        console.log(deptNodes)
+        console.log(authorNodes)
+        console.log(paperNodes)
+        console.log(keywordNodes)
 
         links.forEach(link => {
             const sourceNode = nodes.find(node => node.name === link.source);

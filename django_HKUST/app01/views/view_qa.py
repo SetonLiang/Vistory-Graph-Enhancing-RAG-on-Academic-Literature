@@ -13,9 +13,11 @@ OPENAI_API_KEY = 'sk-YoZZU2QvKG6Kzqhv9c18648062D94c08965128Ce4196E2E8'
 def qa(request):
     return render(request, 'qa.html')
 
-
+chat_history = []
 @csrf_exempt
 def chat(request):
+    global chat_history
+
     if request.method == 'POST':
         data = json.loads(request.body)
         user_input = data['message']
@@ -28,20 +30,38 @@ def chat(request):
                     Answer:"""
         answer_prompt = graph_rag.ChatPromptTemplate.from_template(answer_template)
         print(answer_prompt)
+
         # QA链
         chain = (
-                graph_rag.RunnableParallel({
-                    "context": graph_rag._search_query | graph_rag.retriever,
-                    "question": graph_rag.RunnablePassthrough(),
-                })
-                | answer_prompt
-                | graph_rag.ChatOpenAI(temperature=0,model='gpt-4',streaming=True)
-                | graph_rag.StrOutputParser()
-        )
+                    graph_rag.RunnableParallel({
+                        "context": graph_rag._search_query | graph_rag.retriever,
+                        "question": graph_rag.RunnablePassthrough(),
+                    })
+                    | answer_prompt
+                    | graph_rag.ChatOpenAI(temperature=0,model='gpt-4',streaming=True)
+                    | graph_rag.StrOutputParser()
+            )
+        start_time = time.time()
+        if not chat_history:
+            # 运行QA链
+            output = chain.invoke({"question": user_input})
+            chat_history.append((user_input, output))
 
-        # 运行QA链
-        # output = chain.invoke({"question": user_input.lower()})
-        output = '1111111'
+        # output = '1111111'
+       
+        else:
+            previous_question, previous_answer = chat_history[-1]
+            output = chain.invoke(
+                {
+                    "question": user_input,
+                    "chat_history": [(previous_question, previous_answer)],
+                }
+            )
+        duration = time.time()-start_time
+        print(duration)
+        with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
+            paper_entity = json.load(f)
+        
         def generate():
             for chunk in chain.stream({"question": user_input.lower()}):
                 if chunk is not None:
@@ -59,16 +79,6 @@ def chat(request):
             #         full_message = ''
         
 
-
-        with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
-            paper_entity = json.load(f)
-        # ans = chain.invoke(
-        #     {
-        #         "question": "Please give me the relavant paper names ",
-        #         "chat_history": [(user_input.lower(), output)],
-        #     }
-        # )
-        # print(ans)
         # # 调用 OpenAI API 生成响应
         # headers = {
         #     "Authorization": f"Bearer {OPENAI_API_KEY}",
