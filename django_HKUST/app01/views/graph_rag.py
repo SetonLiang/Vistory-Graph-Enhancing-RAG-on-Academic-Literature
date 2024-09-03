@@ -133,7 +133,7 @@ def load_author_data(department_name, author_name, csv_file):
 class Entities(BaseModel):
     names: List[str] = Field(
         ...,
-        description="All the Department, Author, keyword, Papers and year entities that appear in the text",
+        description="All the Department, Author, keyword, Papers, Year and Venue entities that appear in the text",
     )
 
 def generate_full_text_query(input: str) -> str:
@@ -207,7 +207,7 @@ examples = [
 entity_prompt = ChatPromptTemplate.from_messages([
     (
         "system", 
-        " You are extracting Department, Author, keyword, Papers and year entities from the text.",           
+        " You are extracting Department, Author, keyword, Year, Venue and Papers entities from the text.",        
     ),
     (
         "placeholder",
@@ -743,16 +743,22 @@ def extract_paper_names(unstructured_data):
     return paper_names
 
 def unique_dict_list(dict_list):
+    # Step 1: Flatten the nested list of dictionaries
+    flattened_list = [d for sublist in dict_list for d in sublist]
+    
+    # Step 2: Remove duplicates using a set of frozensets
     seen = set()
     unique_list = []
-    for d in dict_list:
-        # 将字典转换为 frozenset
+    
+    for d in flattened_list:
+        # Convert the dictionary to a frozenset for uniqueness check
         dict_frozenset = frozenset(d.items())
         if dict_frozenset not in seen:
             seen.add(dict_frozenset)
             unique_list.append(d)
     
     return unique_list
+
 
 def make_entity_json(relevant_paper,session):
     results = []
@@ -762,10 +768,12 @@ def make_entity_json(relevant_paper,session):
             MATCH (p:Papers {name: $paper_name})
             OPTIONAL MATCH (p)-[r1]->(author:Author)
             OPTIONAL MATCH (p)-[r2]->(keyword:Keyword)
+            OPTIONAL MATCH (keyword)<-[rel:HAS_KEYWORD]-() 
             OPTIONAL MATCH (author)-[r3]->(department:Department)
-            RETURN p, author AS a, keyword AS k, department as d, r1, r2, r3
+            WHERE (author)-[:BELONGS_TO]->(department)
+            RETURN p, author AS a, keyword AS k, department as d, r1, r2, r3, COUNT(rel) AS keyword_count
         """         
-        
+        # "RETURN p, author AS a, keyword AS k, department as d, r1, r2, r3, COUNT(r2) AS keyword_count"
         temp = session.execute_read(lambda tx: tx.run(cypher_query, paper_name=item).data())    
         results.append(temp)
 
@@ -779,6 +787,8 @@ def make_entity_json(relevant_paper,session):
                 'name': item['p']['name'],
                 'released': item['p']['year'],
                 'citation': int(item['p']['citation']),
+                'authors': item['p']['authors'],
+                'venue': item['p']['venue'],
                 'group': 0,
                 'count': 0,
             }
@@ -789,6 +799,7 @@ def make_entity_json(relevant_paper,session):
             if item.get('k'):
                 temp_keyword = {
                     'name': item['k']['name'],
+                    'citation': item['keyword_count'],
                     'group': 2
                 }
             temp_department = {
@@ -832,8 +843,8 @@ def make_entity_json(relevant_paper,session):
 
     author_list = [[author['a'] for author in lst] for lst in results2]
     # author_list = [list({author['name']: author for author in lst}.values()) for lst in author_list]
-    author_list = unique_dict_list([item[0] for item in author_list])
-    
+    author_list = unique_dict_list(author_list)
+
     for item in author_list:
         cypher_count_query = '''MATCH (n:Author {name:'%s'})-[:OWNED_BY]-(p) RETURN count(p)''' % item['name']
         with driver.session(database="neo4j") as session:
@@ -908,7 +919,7 @@ def retriever(question: str):
         relevant_paper = relevant_paper[:20]
     print(relevant_paper)
     paper_entity = make_entity_json(relevant_paper,session)
-    with open('app01/datasets/test.json', 'w') as f:
+    with open('app01/datasets/case1_test1.json', 'w') as f:
         json.dump(paper_entity, f, indent=4)
     final_data = f"""Structured data: 
                     {structured_data}

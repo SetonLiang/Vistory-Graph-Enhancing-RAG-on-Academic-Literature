@@ -51,8 +51,8 @@
     let color = ['#f2a7da', '#71b7ed', '#f8dc4c', 'grey', '#84c3b7', 'black']
     let color_key = '#f8dc4c'
     const colorScale_keyword = d3.scaleLinear()
-        .domain([1, 30])
-        .range(["#fff293", "#f8dc4c"]);
+        .domain([1, 20])
+        .range(["#FACA2E", "#D56F1B"]);
     // 定义颜色比例尺，根据citation的范围调整颜色的深浅
     const colorScale = d3.scaleLinear()
         .domain([2020, 2024])
@@ -823,16 +823,16 @@
         const keywordNodes = nodes.filter(node => node.group === 2);
 
         deptNodes.forEach((node, index) => {
-            node.x = width / 2 + 1000 * Math.cos(index * 2 * Math.PI / deptNodes.length);
-            node.y = height / 2 + 1000 * Math.sin(index * 2 * Math.PI / deptNodes.length);
+            node.x = width / 2 + 600 * Math.cos(index * 2 * Math.PI / deptNodes.length);
+            node.y = height / 2 + 600 * Math.sin(index * 2 * Math.PI / deptNodes.length);
         })
 
         deptNodes.forEach((dept) => {
             const authors = authorNodes.filter(
                 author => links.some(link => link.source === author.name && link.target === dept.name))
             authors.forEach((node, index) => {
-                node.x = dept.x + 1000 * Math.cos(index * 2 * Math.PI / authors.length);
-                node.y = dept.y + 1000 * Math.sin(index * 2 * Math.PI / authors.length);
+                node.x = dept.x + 600 * Math.cos(index * 2 * Math.PI / authors.length);
+                node.y = dept.y + 600 * Math.sin(index * 2 * Math.PI / authors.length);
             });
         })
 
@@ -859,8 +859,8 @@
                     paper.x = sum.x / connectedAuthors.length;
                     paper.y = sum.y / connectedAuthors.length;
                 } else {
-                    paper.x = author.x + 800 * Math.cos(index * 2 * Math.PI / papers.length);
-                    paper.y = author.y + 800 * Math.sin(index * 2 * Math.PI / papers.length);
+                    paper.x = author.x + 400 * Math.cos(index * 2 * Math.PI / papers.length);
+                    paper.y = author.y + 400 * Math.sin(index * 2 * Math.PI / papers.length);
                 }
             });
 
@@ -958,7 +958,7 @@
                 }
                 if (d.group === 0) {
                     if (d.citation < 21) {
-                        return 10
+                        return 20
                     } else if (d.citation > 20 && d.citation < 51) {
                         return 20
                     } else if (d.citation > 50 && d.citation < 101) {
@@ -979,7 +979,7 @@
                 } else if (d.group === 4) {
                     return colorScale_auther(d.count)
                 } else if (d.group === 2) {
-                    return '#ffdf60'
+                    return colorScale_keyword(d.citation)
                 } else {
                     if (d.name === "AI") {
                         return '#247181'
@@ -1174,7 +1174,7 @@
                 } else if (n.group === 4) {
                     return colorScale_auther(n.count);
                 } else if (n.group === 2) {
-                    return '#ffdf60'
+                    return colorScale_keyword(d.citation)
                 } else {
                     if (n.name === "AI") {
                         return '#247181';
@@ -1245,7 +1245,7 @@
                 } else if (n.group === 4) {
                     return colorScale_auther(n.count);
                 } else if (n.group === 2) {
-                    return '#ffdf60'
+                    return colorScale_keyword(d.citation)
                 } else {
                     if (n.name === "AI") {
                         return '#247181';

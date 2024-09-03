@@ -1,344 +1,96 @@
 {
     "nodes": [
         {
-            "name": "collaboration",
+            "name": "data format",
             "group": 2
         },
         {
             "group": 2,
-            "name": "smartphone exploration"
-        },
-        {
-            "name": "machine form",
-            "group": 2
+            "name": "Immersive learning"
         },
         {
             "group": 2,
-            "name": "Social VR"
+            "name": "Media production"
         },
         {
             "group": 2,
-            "name": "VR"
+            "name": "Visual storytelling"
         },
         {
             "group": 2,
-            "name": "independent learning"
+            "name": "artificial intelligence."
         },
         {
-            "group": 2,
-            "name": "occlusion"
-        },
-        {
-            "group": 2,
-            "name": "control"
-        },
-        {
-            "name": "Chartseer: Interactive steering exploratory visual analysis with machine intelligence",
-            "id": "zhao2020chartseer",
-            "count": 0,
             "released": "2020",
-            "citation": 42,
-            "group": 0
-        },
-        {
-            "group": 2,
-            "name": "verbalization"
-        },
-        {
-            "name": "Storytelling",
-            "group": 2
-        },
-        {
-            "name": "seniors",
-            "group": 2
-        },
-        {
-            "name": "Think aloud",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "Communication"
-        },
-        {
-            "citation": 15,
+            "group": 0,
+            "name": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
+            "citation": 80,
             "count": 0,
-            "name": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
-            "released": "2021",
-            "id": "jiang2021douleur",
-            "group": 0
+            "id": "zeng2020emotioncues"
         },
         {
-            "name": "visualization recommendation",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "short-form video"
-        },
-        {
-            "name": "Virtual Reality",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "video analysis"
-        },
-        {
-            "group": 2,
-            "name": "Gaussian Splatting"
-        },
-        {
-            "id": "jin2024exploring",
-            "count": 0,
-            "citation": 1,
-            "name": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "released": "2024",
-            "group": 0
-        },
-        {
-            "name": "Android app",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "data visualization"
-        },
-        {
-            "group": 2,
-            "name": "elderly"
-        },
-        {
-            "group": 2,
-            "name": "UX problems"
-        },
-        {
-            "id": "fan2020automatic",
-            "count": 0,
-            "released": "2020",
-            "citation": 26,
-            "name": "Automatic Detection of Usability Problem Encounters in Think-Aloud Sessions",
-            "group": 0
-        },
-        {
-            "count": 0,
-            "citation": 10,
-            "released": "2024",
-            "name": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "id": "shao2024splattingavatar",
-            "group": 0
-        },
-        {
-            "group": 2,
-            "name": "DOF"
-        },
-        {
-            "group": 2,
-            "name": "trust"
-        },
-        {
-            "name": "human-AI collaboration",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "intelligent user interface(UI) design"
-        },
-        {
-            "name": "User experience",
-            "group": 2
-        },
-        {
-            "citation": 15,
+            "group": 0,
             "released": "2022",
-            "count": 0,
+            "name": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
             "id": "xu2022wow",
-            "name": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
-            "group": 0
-        },
-        {
-            "group": 2,
-            "name": "AI-assisted UX evaluation"
-        },
-        {
-            "group": 2,
-            "name": "usability test"
-        },
-        {
-            "group": 2,
-            "name": "personal data"
-        },
-        {
-            "name": "user experience(UX)",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "automated accessibility testing"
-        },
-        {
-            "group": 2,
-            "name": "Wetness illusion"
-        },
-        {
-            "group": 2,
-            "name": "Virtual mirror"
-        },
-        {
-            "id": "soure2021coux",
-            "citation": 21,
             "count": 0,
-            "released": "2021",
-            "name": "CoUX: collaborative visual analysis of think-aloud usability test videos for digital interfaces",
-            "group": 0
+            "citation": 15
         },
         {
-            "name": "human avatar",
-            "group": 2
+            "group": 2,
+            "name": "Tabular Data"
         },
         {
-            "name": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "released": "2022",
+            "group": 2,
+            "name": "Counterfactual Explanation"
+        },
+        {
+            "group": 2,
+            "name": "visual summarization"
+        },
+        {
+            "group": 2,
+            "name": "virtual and augmented reality"
+        },
+        {
+            "group": 2,
+            "name": "Visual structure"
+        },
+        {
+            "group": 2,
+            "name": "origin-destination data"
+        },
+        {
+            "released": "2020",
+            "group": 0,
+            "name": "Dece: Decision explorer with counterfactual explanations for machine learning models",
+            "citation": 92,
             "count": 0,
-            "citation": 30,
-            "id": "fan2022human",
-            "group": 0
+            "id": "cheng2020dece"
         },
         {
-            "citation": 15,
-            "released": "2022",
+            "name": "volumetric video",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "Game design"
+        },
+        {
+            "released": "2020",
+            "group": 0,
+            "id": "wang2020generating",
+            "citation": 28,
             "count": 0,
-            "name": "Synapse: interactive guidance by demonstration with trial-and-error support for older adults to use smartphone apps",
-            "id": "jin2022synapse",
-            "group": 0
-        },
-        {
-            "name": "safety",
-            "group": 2
-        },
-        {
-            "name": "augmented reality",
-            "group": 2
-        },
-        {
-            "citation": 5,
-            "count": 0,
-            "id": "tian2024poeticar",
-            "name": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
-            "released": "2024",
-            "group": 0
+            "name": "Generating layout designs from high-level specifications"
         },
         {
             "group": 2,
-            "name": "Interview"
+            "name": "Bodily Engagement"
         },
         {
             "group": 2,
-            "name": "Misperceptions"
-        },
-        {
-            "name": "indepen\u0002dent learning",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "guiding robot"
-        },
-        {
-            "group": 2,
-            "name": "Evaluation"
-        },
-        {
-            "group": 2,
-            "name": "level of autonomy"
-        },
-        {
-            "citation": 21,
-            "released": "2022",
-            "count": 0,
-            "id": "wei2022communication",
-            "name": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
-            "group": 0
-        },
-        {
-            "name": "explainable AI",
-            "group": 2
-        },
-        {
-            "name": "interactive steering",
-            "group": 2
-        },
-        {
-            "name": "virtual reality",
-            "group": 2
-        },
-        {
-            "name": "user experience (UX)",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "visual analytics"
-        },
-        {
-            "group": 2,
-            "name": "Lab Study"
-        },
-        {
-            "id": "zhang2023follower",
-            "count": 0,
-            "released": "2023",
-            "citation": 13,
-            "name": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
-            "group": 0
-        },
-        {
-            "group": 2,
-            "name": "user experience"
-        },
-        {
-            "group": 2,
-            "name": "GPU"
-        },
-        {
-            "name": "AI",
-            "group": 1
-        },
-        {
-            "group": 2,
-            "name": "pain sensation"
-        },
-        {
-            "name": "usability testing",
-            "group": 2
-        },
-        {
-            "name": "usability problem",
-            "group": 2
-        },
-        {
-            "name": "usability problems",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "safety education"
-        },
-        {
-            "name": "Accessible or not? an empirical investigation of Android app accessibility",
-            "count": 0,
-            "released": "2021",
-            "citation": 39,
-            "id": "chen2021accessible",
-            "group": 0
-        },
-        {
-            "name": "Data Video",
-            "group": 2
-        },
-        {
-            "name": "visual impairment",
-            "group": 2
+            "name": "Invisible editing"
         },
         {
             "group": 2,
@@ -346,215 +98,351 @@
         },
         {
             "group": 2,
-            "name": "Virtual reality"
+            "name": "Survey"
         },
         {
-            "name": "capsaicin",
-            "group": 2
+            "group": 0,
+            "released": "2022",
+            "id": "yip2022between",
+            "name": "Between Passive Viewing and Active Choosing in Storytelling",
+            "citation": 2,
+            "count": 0
         },
         {
-            "name": "vMirror",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "People with disabilities"
-        },
-        {
-            "count": 0,
-            "id": "tong2024vistellar",
+            "released": "2023",
+            "group": 0,
+            "id": "zhou2023painterly",
             "citation": 0,
-            "released": "2024",
-            "name": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "group": 0
+            "name": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "count": 0
         },
         {
-            "name": "Exploratory visual analysis",
+            "group": 2,
+            "name": "visualization"
+        },
+        {
+            "group": 2,
+            "name": "Bodily Movement"
+        },
+        {
+            "group": 2,
+            "name": "Narrative content"
+        },
+        {
+            "name": "data visualization",
             "group": 2
         },
         {
-            "name": "\u201cI Choose Assistive Devices That Save My Face\u201d A Study on Perceptions of Accessibility and Assistive Technology Use Conducted in China",
+            "group": 2,
+            "name": "Lab Study"
+        },
+        {
+            "group": 2,
+            "name": "Creative arts"
+        },
+        {
+            "group": 2,
+            "name": "Chinese Comic Painting"
+        },
+        {
+            "name": "Transmedia storytelling",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "Body Embodiment"
+        },
+        {
+            "group": 2,
+            "name": "Cinematic arts"
+        },
+        {
+            "name": "AI",
+            "group": 1
+        },
+        {
+            "id": "wang2021survey",
+            "group": 0,
             "count": 0,
-            "citation": 27,
+            "citation": 76,
             "released": "2021",
-            "id": "li2021choose",
-            "group": 0
+            "name": "A survey on ML4VIS: Applying machine learning advances to data visualization"
         },
         {
             "group": 2,
-            "name": "think-aloud"
+            "name": "Art of storytelling"
         },
         {
-            "group": 2,
-            "name": "cultural heritage"
-        },
-        {
-            "name": "remote usability testing",
+            "name": "Word cloud",
             "group": 2
         },
         {
-            "group": 2,
-            "name": "international survey"
+            "name": "CMA",
+            "group": 1
         },
         {
-            "group": 2,
-            "name": "Personal data"
-        },
-        {
-            "group": 2,
-            "name": "think-aloud usability test"
-        },
-        {
-            "group": 2,
-            "name": "raycasting"
-        },
-        {
-            "group": 2,
-            "name": "China"
-        },
-        {
-            "id": "fan2020practices",
-            "count": 0,
             "released": "2020",
-            "citation": 75,
-            "name": "Practices and Challenges of Using Think-Aloud Protocols in Industry: An International Survey",
-            "group": 0
+            "group": 0,
+            "citation": 26,
+            "count": 0,
+            "name": "The influence of font scale on semantic expression of word cloud",
+            "id": "yang2020influence"
         },
         {
             "group": 2,
-            "name": "user study"
+            "name": "Collaborative Art Creation"
         },
         {
-            "name": "speech features",
+            "name": "Cinematic storytelling",
             "group": 2
         },
         {
             "group": 2,
-            "name": "Assistive technology"
+            "name": "Data visualization"
         },
         {
-            "name": "prototype",
+            "name": "expanded cinema",
             "group": 2
         },
         {
-            "group": 1,
-            "name": "CMA"
+            "name": "ML4VIS",
+            "group": 2
         },
         {
-            "group": 2,
-            "name": "Xbot"
+            "name": "Explainable Machine Learning",
+            "group": 2
         },
         {
-            "group": 2,
-            "name": "Guideline"
-        },
-        {
-            "name": "target selection",
+            "name": "Guideline",
             "group": 2
         },
         {
             "group": 2,
-            "name": "AI-assisted UX analysis"
+            "name": "massive open online courses (MOOC)"
+        },
+        {
+            "group": 2,
+            "name": "artificial intelligence"
+        },
+        {
+            "name": "The Invisible Art of Storytelling and Media Production",
+            "released": "2020",
+            "group": 0,
+            "citation": 6,
+            "count": 0,
+            "id": "yip2020invisible"
+        },
+        {
+            "group": 2,
+            "name": "Interactive Art"
+        },
+        {
+            "name": "metaverse",
+            "group": 2
+        },
+        {
+            "name": "Dream Visualization",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "AI-Art"
+        },
+        {
+            "group": 2,
+            "name": "Narrative theory"
+        },
+        {
+            "group": 2,
+            "name": "Artistic practice"
+        },
+        {
+            "name": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "released": "2023",
+            "group": 0,
+            "id": "song2023expanded",
+            "citation": 2,
+            "count": 0
+        },
+        {
+            "group": 2,
+            "name": "Decision Making"
+        },
+        {
+            "group": 2,
+            "name": "Interactive narrative"
+        },
+        {
+            "group": 0,
+            "name": "The hidden art of transmedia storytelling across cinema and video game",
+            "count": 0,
+            "citation": 3,
+            "released": "2021",
+            "id": "yip2021hidden"
+        },
+        {
+            "group": 2,
+            "name": "Design principles"
+        },
+        {
+            "released": "2023",
+            "group": 0,
+            "citation": 1,
+            "name": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "count": 0,
+            "id": "xu2023end"
+        },
+        {
+            "name": "massive open metaverse courses (MOMC)",
+            "group": 2
+        },
+        {
+            "name": "dockless bike-sharing",
+            "group": 2
+        },
+        {
+            "name": "Interview",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "Content design"
+        },
+        {
+            "group": 2,
+            "name": "Interactive storytelling"
+        },
+        {
+            "id": "wang2021m2lens",
+            "citation": 72,
+            "group": 0,
+            "name": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
+            "count": 0,
+            "released": "2021"
+        },
+        {
+            "name": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
+            "group": 0,
+            "citation": 97,
+            "count": 0,
+            "released": "2021",
+            "id": "wu2021ai4vis"
+        },
+        {
+            "group": 2,
+            "name": "classroom videos"
+        },
+        {
+            "name": "metaphor",
+            "group": 2
         },
         {
             "group": 2,
             "name": "machine learning"
         },
         {
-            "name": "synchronization",
-            "group": 2
+            "group": 2,
+            "name": "Film art"
         },
         {
             "group": 2,
-            "name": "Qualitative study"
-        },
-        {
-            "citation": 24,
-            "count": 0,
-            "name": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems",
-            "released": "2021",
-            "id": "fan2021older",
-            "group": 0
+            "name": "Storytelling"
         },
         {
             "group": 2,
-            "name": "Think-aloud protocols"
+            "name": "Lab  Study"
         },
         {
             "group": 2,
-            "name": "empirical study"
+            "name": "Extended reality"
         },
         {
-            "group": 2,
-            "name": "FPS"
-        },
-        {
-            "group": 2,
-            "name": "AI-assisted UX analysis method"
-        },
-        {
-            "group": 2,
-            "name": "explanation"
-        },
-        {
-            "name": "human-AI collaboration for UX analysis",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "out of reach"
-        },
-        {
-            "name": "Accessibility",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "storytelling"
-        },
-        {
-            "name": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "count": 0,
-            "released": "2021",
-            "citation": 23,
-            "id": "li2021vmirror",
-            "group": 0
-        },
-        {
-            "name": "mesh",
-            "group": 2
-        },
-        {
-            "name": "Eyelid gestures on mobile devices for people with motor impairments",
-            "count": 0,
-            "id": "fan2020eyelid",
             "released": "2020",
-            "citation": 25,
-            "group": 0
+            "group": 0,
+            "citation": 4,
+            "name": "Visual Elements and Design Principles in Media Production",
+            "count": 0,
+            "id": "yip2020visual"
         },
         {
             "group": 2,
-            "name": "Mobile accessibility"
+            "name": "Visual communication"
         },
         {
-            "name": "older adults",
+            "released": "2020",
+            "group": 0,
+            "id": "yip2020cinematic",
+            "citation": 3,
+            "name": "Cinematic Surrealism of the Interactive Virtual Space",
+            "count": 0
+        },
+        {
+            "group": 0,
+            "citation": 87,
+            "count": 0,
+            "name": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation",
+            "id": "li2021kg4vis",
+            "released": "2021"
+        },
+        {
+            "group": 2,
+            "name": "Visualization recommendation"
+        },
+        {
+            "group": 2,
+            "name": "visual analytics"
+        },
+        {
+            "group": 2,
+            "name": "survey"
+        },
+        {
+            "id": "huang2023crossing",
+            "group": 0,
+            "released": "2023",
+            "citation": 2,
+            "count": 0,
+            "name": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream"
+        },
+        {
+            "name": "FONG Tse Ka",
             "group": 2
         },
         {
-            "count": 0,
-            "released": "2020",
-            "id": "han2020mouille",
-            "name": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr",
-            "citation": 19,
-            "group": 0
+            "group": 2,
+            "name": "Data Video"
         },
         {
             "group": 2,
-            "name": "industry practices and challenges"
+            "name": "Semantic expression"
+        },
+        {
+            "name": "Emotion",
+            "group": 2
         },
         {
             "group": 2,
-            "name": "navigation"
+            "name": "LDA ensemble-based method"
+        },
+        {
+            "name": "Color structure",
+            "group": 2
+        },
+        {
+            "name": "Visual elements",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "Knowledge graph"
+        },
+        {
+            "id": "zhang2023introducing",
+            "released": "2023",
+            "group": 0,
+            "citation": 4,
+            "name": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "count": 0
         },
         {
             "name": "Zeyu Wang",
@@ -575,637 +463,57 @@
             "group": 4
         },
         {
-            "name": "Mingming Fan",
+            "name": "Kang Zhang",
             "type": "Author",
-            "count": 70,
+            "count": 39,
             "group": 4
         }
     ],
     "links": [
         {
-            "source": "Automatic Detection of Usability Problem Encounters in Think-Aloud Sessions",
-            "relationship": "HAS_KEYWORD",
-            "target": "Think aloud"
-        },
-        {
-            "target": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "source": "Automatic Detection of Usability Problem Encounters in Think-Aloud Sessions",
-            "relationship": "HAS_KEYWORD",
-            "target": "user experience (UX)"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "AI-assisted UX analysis",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems"
-        },
-        {
-            "target": "Gaussian Splatting",
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "relationship": "HAS_KEYWORD",
-            "target": "out of reach"
-        },
-        {
-            "target": "collaboration",
-            "relationship": "HAS_KEYWORD",
-            "source": "CoUX: collaborative visual analysis of think-aloud usability test videos for digital interfaces"
-        },
-        {
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "target": "older adults",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "relationship": "HAS_KEYWORD",
-            "target": "user experience(UX)"
-        },
-        {
-            "source": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "HAS_KEYWORD",
-            "target": "Interview"
-        },
-        {
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "relationship": "HAS_KEYWORD",
-            "target": "short-form video"
-        },
-        {
-            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "relationship": "HAS_KEYWORD",
-            "target": "human-AI collaboration"
-        },
-        {
-            "target": "usability problems",
-            "relationship": "HAS_KEYWORD",
-            "source": "CoUX: collaborative visual analysis of think-aloud usability test videos for digital interfaces"
-        },
-        {
-            "source": "Automatic Detection of Usability Problem Encounters in Think-Aloud Sessions",
-            "relationship": "HAS_KEYWORD",
-            "target": "verbalization"
-        },
-        {
-            "source": "Automatic Detection of Usability Problem Encounters in Think-Aloud Sessions",
-            "relationship": "HAS_KEYWORD",
-            "target": "speech features"
-        },
-        {
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "target": "DOF",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
-            "target": "Communication",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "video analysis",
-            "relationship": "HAS_KEYWORD",
-            "source": "CoUX: collaborative visual analysis of think-aloud usability test videos for digital interfaces"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems",
-            "target": "speech features"
-        },
-        {
-            "target": "human-AI collaboration for UX analysis",
-            "relationship": "HAS_KEYWORD",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "Eyelid gestures on mobile devices for people with motor impairments",
-            "source": "Mingming Fan"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "\u201cI Choose Assistive Devices That Save My Face\u201d A Study on Perceptions of Accessibility and Assistive Technology Use Conducted in China",
-            "target": "Accessibility"
-        },
-        {
-            "target": "user experience",
-            "source": "Practices and Challenges of Using Think-Aloud Protocols in Industry: An International Survey",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "relationship": "HAS_KEYWORD",
-            "target": "explanation"
-        },
-        {
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "target": "data visualization",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "target": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Chartseer: Interactive steering exploratory visual analysis with machine intelligence",
-            "target": "interactive steering"
-        },
-        {
-            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
-            "relationship": "HAS_KEYWORD",
-            "target": "guiding robot"
-        },
-        {
-            "source": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
             "target": "Visualization",
+            "source": "The influence of font scale on semantic expression of word cloud",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "relationship": "HAS_KEYWORD",
-            "target": "People with disabilities",
-            "source": "\u201cI Choose Assistive Devices That Save My Face\u201d A Study on Perceptions of Accessibility and Assistive Technology Use Conducted in China"
-        },
-        {
-            "source": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "HAS_KEYWORD",
-            "target": "Data Video"
-        },
-        {
-            "target": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
             "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
+            "target": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
+            "source": "David Yip"
         },
         {
-            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
-            "target": "user experience",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "source": "Automatic Detection of Usability Problem Encounters in Think-Aloud Sessions",
-            "relationship": "HAS_KEYWORD",
-            "target": "machine learning"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Chartseer: Interactive steering exploratory visual analysis with machine intelligence",
-            "target": "machine learning"
-        },
-        {
-            "target": "prototype",
-            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "machine learning",
-            "source": "CoUX: collaborative visual analysis of think-aloud usability test videos for digital interfaces"
-        },
-        {
-            "target": "think-aloud",
-            "relationship": "HAS_KEYWORD",
-            "source": "CoUX: collaborative visual analysis of think-aloud usability test videos for digital interfaces"
-        },
-        {
-            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
-            "relationship": "HAS_KEYWORD",
-            "target": "Virtual Reality"
-        },
-        {
-            "target": "Synapse: interactive guidance by demonstration with trial-and-error support for older adults to use smartphone apps",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "source": "David Yip",
-            "relationship": "BELONGS_TO",
-            "target": "CMA"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "Android app",
-            "source": "Accessible or not? an empirical investigation of Android app accessibility"
-        },
-        {
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "target": "personal data",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Misperceptions",
-            "source": "\u201cI Choose Assistive Devices That Save My Face\u201d A Study on Perceptions of Accessibility and Assistive Technology Use Conducted in China",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
-            "target": "Lab Study",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "target": "prototype",
-            "relationship": "HAS_KEYWORD",
-            "source": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr"
-        },
-        {
-            "target": "Mobile accessibility",
-            "relationship": "HAS_KEYWORD",
-            "source": "Accessible or not? an empirical investigation of Android app accessibility"
-        },
-        {
-            "target": "CoUX: collaborative visual analysis of think-aloud usability test videos for digital interfaces",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "target": "think-aloud",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "trust",
-            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "source": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "HAS_KEYWORD",
-            "target": "Storytelling"
-        },
-        {
-            "target": "\u201cI Choose Assistive Devices That Save My Face\u201d A Study on Perceptions of Accessibility and Assistive Technology Use Conducted in China",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "target": "Automatic Detection of Usability Problem Encounters in Think-Aloud Sessions",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "source": "Automatic Detection of Usability Problem Encounters in Think-Aloud Sessions",
-            "target": "AI-assisted UX analysis method",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "user study",
-            "relationship": "HAS_KEYWORD",
-            "source": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr"
-        },
-        {
-            "source": "Automatic Detection of Usability Problem Encounters in Think-Aloud Sessions",
-            "relationship": "HAS_KEYWORD",
-            "target": "usability problem"
-        },
-        {
-            "source": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
-            "relationship": "HAS_KEYWORD",
-            "target": "cultural heritage"
-        },
-        {
-            "target": "navigation",
-            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "HAS_KEYWORD",
-            "target": "Guideline"
-        },
-        {
-            "target": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "relationship": "HAS_KEYWORD",
-            "target": "target selection"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems",
-            "target": "older adults"
-        },
-        {
-            "target": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "relationship": "HAS_KEYWORD",
-            "target": "VR"
-        },
-        {
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "relationship": "HAS_KEYWORD",
-            "target": "vMirror"
-        },
-        {
-            "target": "empirical study",
-            "relationship": "HAS_KEYWORD",
-            "source": "Accessible or not? an empirical investigation of Android app accessibility"
-        },
-        {
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "target": "occlusion",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "visual analytics",
-            "relationship": "HAS_KEYWORD",
-            "source": "CoUX: collaborative visual analysis of think-aloud usability test videos for digital interfaces"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "verbalization",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems"
-        },
-        {
-            "relationship": "BELONGS_TO",
             "source": "Huamin Qu",
-            "target": "CMA"
-        },
-        {
-            "target": "FPS",
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "smartphone exploration",
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "target": "independent learning",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
-            "relationship": "HAS_KEYWORD",
-            "target": "safety"
-        },
-        {
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "relationship": "HAS_KEYWORD",
-            "target": "Virtual mirror"
-        },
-        {
-            "target": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems",
             "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
+            "target": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation"
         },
         {
-            "target": "augmented reality",
-            "source": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
+            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
+            "target": "Data Video",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "target": "mesh",
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "target": "Data Video",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "Interview",
-            "relationship": "HAS_KEYWORD",
-            "source": "\u201cI Choose Assistive Devices That Save My Face\u201d A Study on Perceptions of Accessibility and Assistive Technology Use Conducted in China"
-        },
-        {
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "target": "human avatar",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "UX problems",
-            "relationship": "HAS_KEYWORD",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems"
-        },
-        {
-            "target": "virtual reality",
-            "relationship": "HAS_KEYWORD",
-            "source": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr"
-        },
-        {
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "target": "Personal data",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
-            "relationship": "HAS_KEYWORD",
-            "target": "capsaicin"
-        },
-        {
-            "target": "automated accessibility testing",
-            "relationship": "HAS_KEYWORD",
-            "source": "Accessible or not? an empirical investigation of Android app accessibility"
-        },
-        {
-            "target": "international survey",
-            "relationship": "HAS_KEYWORD",
-            "source": "Practices and Challenges of Using Think-Aloud Protocols in Industry: An International Survey"
-        },
-        {
-            "source": "David Yip",
-            "target": "From \u2018wow\u2019to \u2018why\u2019: Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "relationship": "HAS_KEYWORD",
-            "target": "synchronization"
-        },
-        {
-            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
-            "target": "Evaluation",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
-            "target": "Social VR",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
             "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
+            "target": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "source": "David Yip"
         },
         {
-            "target": "augmented reality",
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
+            "target": "Media production",
+            "source": "The Invisible Art of Storytelling and Media Production",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "target": "industry practices and challenges",
-            "source": "Practices and Challenges of Using Think-Aloud Protocols in Industry: An International Survey",
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "target": "artificial intelligence",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "elderly",
-            "relationship": "HAS_KEYWORD",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems"
-        },
-        {
-            "target": "seniors",
-            "relationship": "HAS_KEYWORD",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems"
-        },
-        {
-            "target": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
-            "relationship": "HAS_KEYWORD",
-            "target": "control"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems",
-            "target": "usability testing"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "Qualitative study",
-            "source": "\u201cI Choose Assistive Devices That Save My Face\u201d A Study on Perceptions of Accessibility and Assistive Technology Use Conducted in China"
-        },
-        {
-            "target": "Wetness illusion",
-            "relationship": "HAS_KEYWORD",
-            "source": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr"
-        },
-        {
-            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
-            "relationship": "HAS_KEYWORD",
-            "target": "visual impairment"
-        },
-        {
-            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
-            "target": "pain sensation",
+            "target": "massive open online courses (MOOC)",
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
             "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "relationship": "HAS_KEYWORD",
-            "target": "Virtual Reality"
-        },
-        {
-            "target": "Exploratory visual analysis",
-            "relationship": "HAS_KEYWORD",
-            "source": "Chartseer: Interactive steering exploratory visual analysis with machine intelligence"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Chartseer: Interactive steering exploratory visual analysis with machine intelligence",
-            "target": "visualization recommendation"
-        },
-        {
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "relationship": "HAS_KEYWORD",
-            "target": "raycasting"
-        },
-        {
-            "target": "CMA",
-            "relationship": "BELONGS_TO",
-            "source": "Mingming Fan"
-        },
-        {
-            "target": "augmented reality",
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "target": "AI-assisted UX evaluation",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
-            "relationship": "HAS_KEYWORD",
-            "target": "machine form"
-        },
-        {
-            "target": "usability test",
-            "relationship": "HAS_KEYWORD",
-            "source": "Practices and Challenges of Using Think-Aloud Protocols in Industry: An International Survey"
-        },
-        {
-            "target": "level of autonomy",
-            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "target": "Chartseer: Interactive steering exploratory visual analysis with machine intelligence",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "target": "intelligent user interface(UI) design",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
-            "relationship": "HAS_KEYWORD",
-            "target": "Virtual reality"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Older adults\u2019 think-aloud verbalizations and speech features for identifying user experience problems",
-            "target": "remote usability testing"
-        },
-        {
-            "source": "Zeyu Wang",
-            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "relationship": "OWNED_BY"
         },
         {
             "source": "Zeyu Wang",
@@ -1213,69 +521,594 @@
             "target": "AI"
         },
         {
-            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
-            "target": "GPU",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
             "relationship": "HAS_KEYWORD",
-            "target": "China",
-            "source": "\u201cI Choose Assistive Devices That Save My Face\u201d A Study on Perceptions of Accessibility and Assistive Technology Use Conducted in China"
+            "target": "volumetric video"
         },
         {
-            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
-            "target": "indepen\u0002dent learning",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Practices and Challenges of Using Think-Aloud Protocols in Industry: An International Survey",
-            "relationship": "OWNED_BY",
-            "source": "Mingming Fan"
-        },
-        {
-            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
-            "target": "storytelling",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Think-aloud protocols",
+            "target": "Narrative theory",
             "relationship": "HAS_KEYWORD",
-            "source": "Practices and Challenges of Using Think-Aloud Protocols in Industry: An International Survey"
-        },
-        {
-            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "target": "think-aloud usability test",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
-            "relationship": "HAS_KEYWORD",
-            "target": "safety education"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "User experience",
-            "source": "CoUX: collaborative visual analysis of think-aloud usability test videos for digital interfaces"
-        },
-        {
-            "target": "Assistive technology",
-            "source": "\u201cI Choose Assistive Devices That Save My Face\u201d A Study on Perceptions of Accessibility and Assistive Technology Use Conducted in China",
-            "relationship": "HAS_KEYWORD"
+            "source": "The hidden art of transmedia storytelling across cinema and video game"
         },
         {
             "relationship": "OWNED_BY",
-            "target": "Accessible or not? an empirical investigation of Android app accessibility",
+            "target": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "source": "David Yip"
+        },
+        {
+            "source": "Visual Elements and Design Principles in Media Production",
+            "target": "Visual elements",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "The Invisible Art of Storytelling and Media Production",
+            "target": "Cinematic arts",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Art of storytelling",
+            "source": "The Invisible Art of Storytelling and Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Lab  Study",
+            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "target": "Lab  Study",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Visual communication",
+            "relationship": "HAS_KEYWORD",
+            "source": "Between Passive Viewing and Active Choosing in Storytelling"
+        },
+        {
+            "target": "ML4VIS",
+            "relationship": "HAS_KEYWORD",
+            "source": "A survey on ML4VIS: Applying machine learning advances to data visualization"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "source": "David Yip"
+        },
+        {
+            "target": "machine learning",
+            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Visual Elements and Design Principles in Media Production",
+            "target": "Color structure",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "The influence of font scale on semantic expression of word cloud",
+            "target": "Semantic expression",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "target": "Visualization",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
+            "target": "Interview",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
+        },
+        {
+            "target": "Data visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation"
+        },
+        {
+            "target": "Body Embodiment",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "M2lens: Visualizing and explaining multimodal models for sentiment analysis"
+        },
+        {
+            "source": "Kang Zhang",
+            "target": "Generating layout designs from high-level specifications",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Design principles",
+            "source": "Visual Elements and Design Principles in Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "metaphor",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "target": "Immersive learning",
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Visual Elements and Design Principles in Media Production",
+            "relationship": "OWNED_BY",
+            "source": "David Yip"
+        },
+        {
+            "target": "Creative arts",
+            "source": "The Invisible Art of Storytelling and Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Chinese Comic Painting",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "target": "Cinematic arts",
+            "relationship": "HAS_KEYWORD",
+            "source": "The hidden art of transmedia storytelling across cinema and video game"
+        },
+        {
+            "target": "Interview",
+            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "The influence of font scale on semantic expression of word cloud",
+            "relationship": "HAS_KEYWORD",
+            "target": "Word cloud"
+        },
+        {
+            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
+            "relationship": "HAS_KEYWORD",
+            "target": "Guideline"
+        },
+        {
+            "source": "Visual Elements and Design Principles in Media Production",
+            "target": "Cinematic arts",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Art of storytelling",
+            "source": "Visual Elements and Design Principles in Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Invisible editing",
+            "source": "The Invisible Art of Storytelling and Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        },
+        {
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "target": "Lab Study",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
+            "relationship": "HAS_KEYWORD",
+            "target": "data format"
+        },
+        {
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "HAS_KEYWORD",
+            "target": "expanded cinema"
+        },
+        {
+            "target": "Bodily Engagement",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "target": "Visual storytelling",
+            "relationship": "HAS_KEYWORD",
+            "source": "Between Passive Viewing and Active Choosing in Storytelling"
+        },
+        {
+            "target": "Creative arts",
+            "relationship": "HAS_KEYWORD",
+            "source": "The hidden art of transmedia storytelling across cinema and video game"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Between Passive Viewing and Active Choosing in Storytelling",
+            "source": "David Yip"
+        },
+        {
+            "target": "Content design",
+            "source": "The Invisible Art of Storytelling and Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "LDA ensemble-based method",
+            "source": "The influence of font scale on semantic expression of word cloud",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Artistic practice",
+            "relationship": "HAS_KEYWORD",
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream"
+        },
+        {
+            "target": "Cinematic arts",
+            "relationship": "HAS_KEYWORD",
+            "source": "Between Passive Viewing and Active Choosing in Storytelling"
+        },
+        {
+            "source": "Huamin Qu",
+            "target": "A survey on ML4VIS: Applying machine learning advances to data visualization",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "Ai4vis: Survey on artificial intelligence approaches for data visualization"
+        },
+        {
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "relationship": "HAS_KEYWORD",
+            "target": "Guideline"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "A survey on ML4VIS: Applying machine learning advances to data visualization",
+            "target": "data visualization"
+        },
+        {
+            "target": "virtual and augmented reality",
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Kang Zhang",
+            "relationship": "OWNED_BY",
+            "target": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "target": "Knowledge graph",
+            "relationship": "HAS_KEYWORD",
+            "source": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation"
+        },
+        {
+            "source": "Huamin Qu",
+            "target": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Visualization recommendation",
+            "relationship": "HAS_KEYWORD",
+            "source": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "The hidden art of transmedia storytelling across cinema and video game",
+            "source": "David Yip"
+        },
+        {
+            "target": "machine learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "A survey on ML4VIS: Applying machine learning advances to data visualization"
+        },
+        {
+            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
+            "target": "artificial intelligence",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Extended reality",
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Zeyu Wang",
+            "relationship": "OWNED_BY",
+            "target": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences"
+        },
+        {
+            "target": "Creative arts",
+            "source": "Visual Elements and Design Principles in Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "source": "Kang Zhang",
+            "relationship": "OWNED_BY",
+            "target": "The influence of font scale on semantic expression of word cloud"
+        },
+        {
+            "target": "origin-destination data",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "David Yip",
+            "target": "Cinematic Surrealism of the Interactive Virtual Space"
+        },
+        {
+            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
+            "relationship": "HAS_KEYWORD",
+            "target": "Storytelling"
+        },
+        {
+            "source": "Huamin Qu",
+            "target": "Dece: Decision explorer with counterfactual explanations for machine learning models",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Visual structure",
+            "source": "Visual Elements and Design Principles in Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "HAS_KEYWORD",
+            "target": "metaverse"
+        },
+        {
+            "target": "visual summarization",
+            "source": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "David Yip",
+            "target": "CMA"
+        },
+        {
+            "target": "Interactive Art",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "The Invisible Art of Storytelling and Media Production",
+            "source": "David Yip"
+        },
+        {
+            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
+            "relationship": "HAS_KEYWORD",
+            "target": "data visualization"
+        },
+        {
+            "target": "Visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles"
+        },
+        {
+            "target": "Cinematic storytelling",
+            "relationship": "HAS_KEYWORD",
+            "source": "Between Passive Viewing and Active Choosing in Storytelling"
+        },
+        {
+            "source": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
+            "relationship": "HAS_KEYWORD",
+            "target": "classroom videos"
+        },
+        {
+            "target": "Interactive narrative",
+            "relationship": "HAS_KEYWORD",
+            "source": "Between Passive Viewing and Active Choosing in Storytelling"
+        },
+        {
+            "target": "Visual storytelling",
+            "relationship": "HAS_KEYWORD",
+            "source": "The hidden art of transmedia storytelling across cinema and video game"
+        },
+        {
+            "target": "Game design",
+            "relationship": "HAS_KEYWORD",
+            "source": "The hidden art of transmedia storytelling across cinema and video game"
+        },
+        {
+            "target": "Film art",
+            "source": "The Invisible Art of Storytelling and Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Creative arts",
+            "relationship": "HAS_KEYWORD",
+            "source": "Between Passive Viewing and Active Choosing in Storytelling"
+        },
+        {
+            "target": "Data Video",
+            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "survey",
+            "relationship": "HAS_KEYWORD",
+            "source": "A survey on ML4VIS: Applying machine learning advances to data visualization"
+        },
+        {
+            "target": "Counterfactual Explanation",
+            "source": "Dece: Decision explorer with counterfactual explanations for machine learning models",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Media production",
+            "source": "Visual Elements and Design Principles in Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "AI-Art",
+            "relationship": "HAS_KEYWORD",
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream"
+        },
+        {
+            "target": "Survey",
+            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Kang Zhang",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        },
+        {
+            "target": "Bodily Movement",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "target": "Dream Visualization"
+        },
+        {
+            "target": "Decision Making",
+            "source": "Dece: Decision explorer with counterfactual explanations for machine learning models",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Interactive storytelling",
+            "relationship": "HAS_KEYWORD",
+            "source": "Between Passive Viewing and Active Choosing in Storytelling"
+        },
+        {
+            "source": "Dece: Decision explorer with counterfactual explanations for machine learning models",
+            "relationship": "HAS_KEYWORD",
+            "target": "Explainable Machine Learning"
+        },
+        {
+            "source": "Dece: Decision explorer with counterfactual explanations for machine learning models",
+            "relationship": "HAS_KEYWORD",
+            "target": "Tabular Data"
+        },
+        {
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "HAS_KEYWORD",
+            "target": "massive open metaverse courses (MOMC)"
+        },
+        {
+            "target": "artificial intelligence.",
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Huamin Qu",
+            "target": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "dockless bike-sharing",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "FONG Tse Ka",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "target": "Lab Study",
+            "relationship": "HAS_KEYWORD",
+            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles"
+        },
+        {
+            "target": "Storytelling",
+            "relationship": "HAS_KEYWORD",
+            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles"
+        },
+        {
+            "source": "Kang Zhang",
+            "target": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Narrative content",
+            "source": "The Invisible Art of Storytelling and Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Visual Elements and Design Principles in Media Production",
+            "target": "Film art",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
+            "target": "Emotion",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "OWNED_BY",
+            "source": "David Yip"
+        },
+        {
+            "source": "Zeyu Wang",
+            "target": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "visual analytics",
+            "source": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Mingming Fan",
+            "target": "CMA"
+        },
+        {
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "target": "Interview",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Visualization",
+            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Collaborative Art Creation",
+            "relationship": "HAS_KEYWORD",
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream"
+        },
+        {
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "target": "Storytelling",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
+            "target": "Guideline"
+        },
+        {
+            "target": "Content design",
+            "source": "Visual Elements and Design Principles in Media Production",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "The hidden art of transmedia storytelling across cinema and video game",
+            "target": "Transmedia storytelling"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
             "source": "Mingming Fan"
-        },
-        {
-            "target": "Xbot",
-            "relationship": "HAS_KEYWORD",
-            "source": "Accessible or not? an empirical investigation of Android app accessibility"
-        },
-        {
-            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
-            "relationship": "HAS_KEYWORD",
-            "target": "explainable AI"
         }
     ]
 }

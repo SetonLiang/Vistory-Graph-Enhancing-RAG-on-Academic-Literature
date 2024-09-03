@@ -22,11 +22,12 @@ def chat(request):
         data = json.loads(request.body)
         user_input = data['message']
 
+        # Use natural language and provide a concise, detailed answer.
         # QA提示模版
         answer_template = """Answer the question based only on the following context:
                     {context}
-                    Question: {question}
-                    Use natural language and provide a concise, detailed answer.
+                    Question: {question}   
+                    Use natural language and be concise.
                     Answer:"""
         answer_prompt = graph_rag.ChatPromptTemplate.from_template(answer_template)
         print(answer_prompt)
@@ -42,24 +43,24 @@ def chat(request):
                     | graph_rag.StrOutputParser()
             )
         start_time = time.time()
-        # if not chat_history:
+        if not chat_history:
             # 运行QA链
-            # output = chain.invoke({"question": user_input})
-            # chat_history.append((user_input, output))
+            output = chain.invoke({"question": user_input})
+            chat_history.append((user_input, output))
 
-        output = '1111111'
+        # output = '1111111'
        
-        # else:
-        #     previous_question, previous_answer = chat_history[-1]
-        #     output = chain.invoke(
-        #         {
-        #             "question": user_input,
-        #             "chat_history": [(previous_question, previous_answer)],
-        #         }
-        #     )
+        else:
+            previous_question, previous_answer = chat_history[-1]
+            output = chain.invoke(
+                {
+                    "question": user_input,
+                    "chat_history": [(previous_question, previous_answer)],
+                }
+            )
         duration = time.time()-start_time
         print(duration)
-        with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
+        with open('app01/datasets/case1_test1.json', 'r', encoding='utf-8') as f:
             paper_entity = json.load(f)
         
         def generate():
