@@ -221,7 +221,7 @@ entity_prompt = ChatPromptTemplate.from_messages([
 ])
 
 # 实体链
-entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-3.5-turbo').with_structured_output(Entities)
+entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-4').with_structured_output(Entities)
 # print(entity_chain)
 # print(entity_chain.invoke({"question":"How many authors does CMA have?","examples":examples}).names)
 # print(structured_retriever("What are the key contributions of Kang Zhang's papers?"))
@@ -496,6 +496,7 @@ def query_author(author_name):
         OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
         OPTIONAL MATCH (a)-[:BELONGS_TO]->(d:Department)
         RETURN a, p, collect(k) as keywords, d
+        Limit 60
     """
     return session.run(query, {"name": author_name})
 
@@ -509,6 +510,20 @@ def query_paper(paper_title):
         RETURN p, collect(k) as keywords, a
     """
     return session.run(query, {"title": paper_title})
+# def query_paper(paper_title):
+#     """Query for paper-related information."""
+#     query = """
+#         MATCH (p:Papers)
+#         WHERE apoc.text.clean(p.name) = apoc.text.clean($title)
+#         OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
+#         OPTIONAL MATCH (k)<-[:HAS_KEYWORD]-(related_paper:Papers)
+#         WITH p, k, related_paper
+#         ORDER BY related_paper.citation DESC
+#         WITH p, k, collect(related_paper)[0..5] as top_related_papers
+#         OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
+#         RETURN p, collect(k) as keywords, a, top_related_papers
+#     """
+#     return session.run(query, {"title": paper_title})
 
 def query_keyword(keyword_name):
     """Query for keyword-related information."""
@@ -773,15 +788,19 @@ def make_entity_json(relevant_paper,session):
             WHERE (author)-[:BELONGS_TO]->(department)
             RETURN p, author AS a, keyword AS k, department as d, r1, r2, r3, COUNT(rel) AS keyword_count
         """         
+
         # "RETURN p, author AS a, keyword AS k, department as d, r1, r2, r3, COUNT(r2) AS keyword_count"
         temp = session.execute_read(lambda tx: tx.run(cypher_query, paper_name=item).data())    
         results.append(temp)
 
     nodes = []
     links = []
+    keywords_set = {}
+    keyword_counts = {}
     temp_keyword = None
     for lst in results:
         for item in lst:
+
             temp_paper = {
                 'id': item['p']['id'],
                 'name': item['p']['name'],
@@ -796,12 +815,36 @@ def make_entity_json(relevant_paper,session):
             #     'name': item['a']['name'],
             #     'group': 1,
             # }
-            if item.get('k'):
-                temp_keyword = {
-                    'name': item['k']['name'],
-                    'citation': item['keyword_count'],
-                    'group': 2
-                }
+            # if item.get('k'):
+            #     temp_keyword = {
+            #         'name': item['k']['name'],
+            #         'citation': item['keyword_count'],
+            #         'group': 2
+            #     }
+            if item['k']:
+                keyword_name = item['k']['name']
+                
+                keyword_count = item['keyword_count']
+                # 使用小写形式作为键
+                keyword_name_lower = keyword_name.lower()
+
+                # 检查是否已经存在于 keywords_set 中
+                if keyword_name_lower not in keywords_set:
+                    keyword_counts[keyword_name_lower]=set()
+                    keyword_counts[keyword_name_lower].add(keyword_count)
+                    keywords_set[keyword_name_lower] = {
+                        'name': keyword_name_lower,
+                        'citation': keyword_count,
+                        'group': 2
+                    }
+                else:
+                    # if keyword_name_lower == 'visualization':
+                    #     print(keyword_name,keyword_count)
+                    #     print(keyword_counts[keyword_name_lower],type(keyword_counts[keyword_name_lower]))
+                    keyword_counts[keyword_name_lower].add(keyword_count)
+                    keywords_set[keyword_name_lower]['citation']=sum(list(keyword_counts[keyword_name_lower]))
+                nodes.append(keywords_set[keyword_name_lower])
+                
             temp_department = {
                 'name': item['d']['name'],
                 'group': 1
@@ -814,20 +857,21 @@ def make_entity_json(relevant_paper,session):
             if item['r2']:
                 temp_link_r2 = {
                     'source': item['r2'][0]['name'],
-                    'target': item['r2'][2]['name'],
+                    'target': item['r2'][2]['name'].lower(),
                     'relationship': item['r2'][1],
                 }
+                links.append(temp_link_r2)
             temp_link_r3 = {
                 'source': item['r3'][0]['name'],
                 'target': item['r3'][2]['name'],
                 'relationship': item['r3'][1],
             }
-            nodes.append(temp_keyword)
+           
             # nodes.append(temp_author)
             nodes.append(temp_paper)
             nodes.append(temp_department)
             links.append(temp_link_r1)
-            links.append(temp_link_r2)
+            
             links.append(temp_link_r3)
     nodes = list(map(dict, set(frozenset(item.items()) for item in nodes)))
     links = list(map(dict, set(frozenset(item.items()) for item in links)))
@@ -908,7 +952,7 @@ def retriever(question: str):
     structured_results = structured_data.get('results', [])
     print(structured_results)
     # unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
-    unstructured_data = similarity_search(question, file_path, k=5)
+    unstructured_data = similarity_search(question, file_path, k=10)
     unstructured_data = format_unstructured_data(unstructured_data)
 
     if structured_results != []:
@@ -919,7 +963,7 @@ def retriever(question: str):
         relevant_paper = relevant_paper[:20]
     print(relevant_paper)
     paper_entity = make_entity_json(relevant_paper,session)
-    with open('app01/datasets/case1_test1.json', 'w') as f:
+    with open('app01/datasets/test.json', 'w') as f:
         json.dump(paper_entity, f, indent=4)
     final_data = f"""Structured data: 
                     {structured_data}

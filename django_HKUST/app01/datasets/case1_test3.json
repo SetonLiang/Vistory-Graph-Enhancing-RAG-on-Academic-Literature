@@ -1,0 +1,86 @@
+{
+    "nodes": [
+        {
+            "name": "virtual reality",
+            "citation": 14,
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "name": "digital twin",
+            "group": 2
+        },
+        {
+            "name": "CMA",
+            "group": 1
+        },
+        {
+            "count": 0,
+            "group": 0,
+            "id": "yu2024attention",
+            "released": "2024",
+            "venue": "Article",
+            "citation": 5,
+            "name": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "authors": "Jiadong Yu, Ahmad Alhilal, Tailin Zhou, Pan Hui, Danny HK Tsang"
+        },
+        {
+            "name": "edge computing",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "continual reinforcement learning"
+        },
+        {
+            "citation": 1,
+            "name": "quality of experience",
+            "group": 2
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 250,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "quality of experience"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "digital twin"
+        },
+        {
+            "target": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "target": "continual reinforcement learning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "target": "edge computing",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Pan Hui"
+        }
+    ]
+}

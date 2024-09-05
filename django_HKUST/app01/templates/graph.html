@@ -52,7 +52,7 @@
     let color_key = '#f8dc4c'
     const colorScale_keyword = d3.scaleLinear()
         .domain([1, 20])
-        .range(["#FACA2E", "#D56F1B"]);
+        .range(["#FACA2E", "#b85e14"]);
     // 定义颜色比例尺，根据citation的范围调整颜色的深浅
     const colorScale = d3.scaleLinear()
         .domain([2020, 2024])
@@ -476,6 +476,7 @@
                             '<p>' + d.authors + '</p>' +
                             '<br>' +
                             '<p>Published:' + d.released + '</p>' +
+                            '<p>Citation:' + d.citation + '<p>' +
                             '<p>Venue:' + d.venue + '</p>' +
                             '</div>' +
                             '</div>'
@@ -1174,7 +1175,7 @@
                 } else if (n.group === 4) {
                     return colorScale_auther(n.count);
                 } else if (n.group === 2) {
-                    return colorScale_keyword(d.citation)
+                    return colorScale_keyword(n.citation)
                 } else {
                     if (n.name === "AI") {
                         return '#247181';
@@ -1245,7 +1246,7 @@
                 } else if (n.group === 4) {
                     return colorScale_auther(n.count);
                 } else if (n.group === 2) {
-                    return colorScale_keyword(d.citation)
+                    return colorScale_keyword(n.citation)
                 } else {
                     if (n.name === "AI") {
                         return '#247181';
@@ -1262,7 +1263,7 @@
                 } else if (n.group === 4) {
                     return colorScale_auther(n.count);
                 } else if (n.group === 2) {
-                    return '#ffdf60'
+                    return colorScale_keyword(n.citation)
                 } else {
                     if (n.name === "AI") {
                         return '#e3716e';
@@ -1310,7 +1311,7 @@
             } else if (n.group === 4) {
                 return colorScale_auther(n.count);
             } else if (n.group === 2) {
-                return '#ffdf60'
+                return colorScale_keyword(n.citation)
             } else {
                 if (n.name === "AI") {
                     return '#247181';

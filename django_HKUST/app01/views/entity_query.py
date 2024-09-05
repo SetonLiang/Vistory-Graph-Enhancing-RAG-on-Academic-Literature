@@ -25,6 +25,20 @@ def format_paper_response(response):
             "keywords": [k.get('name') for k in record['keywords']]
         })
     return formatted_results
+# def format_paper_response(response):
+#     formatted_results = []
+#     for record in response:
+#         for related_paper in record['top_related_papers']:
+#             formatted_results.append({
+#                 "type": "paper",
+#                 "paper": related_paper.get('name'),
+#                 "year": related_paper.get('year'),
+#                 "venue": related_paper.get('source'),
+#                 "author": record['a'].get('name'),
+#                 "abstract": related_paper.get('abstract'),
+#                 "keywords": [k.get('name') for k in record['keywords']]
+#             })
+#     return formatted_results
 def format_keyword_response(response):
     formatted_results = []
     for record in response:
@@ -54,7 +68,7 @@ def format_department_response(response):
         author_set.add(author_name)
         
         # 只返回前8篇论文
-        limited_papers = papers[:8]
+        limited_papers = papers[:10]
         
         for paper in limited_papers:
             formatted_results.append({

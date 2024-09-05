@@ -1,454 +1,256 @@
 {
     "nodes": [
         {
-            "name": "data format",
-            "group": 2
+            "group": 2,
+            "name": "multi-modal transformer",
+            "citation": 1
         },
         {
             "group": 2,
-            "name": "Immersive learning"
+            "name": "personalized speech feature",
+            "citation": 1
         },
         {
             "group": 2,
-            "name": "Media production"
+            "citation": 1,
+            "name": "dream visualization"
         },
         {
-            "group": 2,
-            "name": "Visual storytelling"
-        },
-        {
-            "group": 2,
-            "name": "artificial intelligence."
-        },
-        {
-            "released": "2020",
-            "group": 0,
-            "name": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
-            "citation": 80,
-            "count": 0,
-            "id": "zeng2020emotioncues"
-        },
-        {
+            "id": "wang2022acoustic",
             "group": 0,
             "released": "2022",
-            "name": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
-            "id": "xu2022wow",
+            "name": "Acoustic-to-Articulatory Inversion Based on Speech Decomposition and Auxiliary Feature",
+            "citation": 7,
+            "venue": "Conference paper",
             "count": 0,
-            "citation": 15
+            "authors": "Jianrong Wang, Jinyu Liu, Longxuan Zhao, Shanyu Wang, Ruiguo Yu, Li Liu"
         },
         {
-            "group": 2,
-            "name": "Tabular Data"
-        },
-        {
-            "group": 2,
-            "name": "Counterfactual Explanation"
-        },
-        {
-            "group": 2,
-            "name": "visual summarization"
-        },
-        {
-            "group": 2,
-            "name": "virtual and augmented reality"
-        },
-        {
-            "group": 2,
-            "name": "Visual structure"
-        },
-        {
-            "group": 2,
-            "name": "origin-destination data"
-        },
-        {
-            "released": "2020",
-            "group": 0,
-            "name": "Dece: Decision explorer with counterfactual explanations for machine learning models",
-            "citation": 92,
-            "count": 0,
-            "id": "cheng2020dece"
-        },
-        {
-            "name": "volumetric video",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "Game design"
-        },
-        {
-            "released": "2020",
-            "group": 0,
-            "id": "wang2020generating",
-            "citation": 28,
-            "count": 0,
-            "name": "Generating layout designs from high-level specifications"
-        },
-        {
-            "group": 2,
-            "name": "Bodily Engagement"
-        },
-        {
-            "group": 2,
-            "name": "Invisible editing"
-        },
-        {
-            "group": 2,
-            "name": "Visualization"
-        },
-        {
-            "group": 2,
-            "name": "Survey"
-        },
-        {
+            "citation": 8,
+            "authors": "Lei Liu, Li Liu",
             "group": 0,
             "released": "2022",
-            "id": "yip2022between",
-            "name": "Between Passive Viewing and Active Choosing in Storytelling",
+            "name": "Cross-Modal Mutual Learning for Cued Speech Recognition",
+            "venue": "Article",
+            "count": 0,
+            "id": "liu2023cross"
+        },
+        {
+            "group": 0,
+            "authors": "Zixuan Ke, Bing Liu, Hu Xu, Lei Shu",
+            "id": "ke2021classic",
+            "citation": 52,
+            "released": "2021",
+            "name": "CLASSIC: Continual and contrastive learning of aspect sentiment classification tasks",
+            "venue": "Article",
+            "count": 0
+        },
+        {
+            "group": 2,
+            "name": "collaborative art creation",
+            "citation": 1
+        },
+        {
             "citation": 2,
-            "count": 0
-        },
-        {
-            "released": "2023",
             "group": 0,
-            "id": "zhou2023painterly",
-            "citation": 0,
-            "name": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "released": "2022",
+            "id": "xiu2022chromatic",
+            "venue": "Conference paper",
+            "authors": "Qing Xiu, Kai Han, Jing Tang, Shuang Cui, He Huang",
+            "name": "Chromatic Correlation Clustering, Revisited",
             "count": 0
         },
         {
             "group": 2,
-            "name": "visualization"
+            "name": "speech",
+            "citation": 1
         },
         {
             "group": 2,
-            "name": "Bodily Movement"
+            "name": "survey",
+            "citation": 8
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "smart healthcare"
         },
         {
             "group": 2,
-            "name": "Narrative content"
+            "name": "artistic practice",
+            "citation": 1
         },
         {
-            "name": "data visualization",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "Lab Study"
-        },
-        {
-            "group": 2,
-            "name": "Creative arts"
-        },
-        {
-            "group": 2,
-            "name": "Chinese Comic Painting"
-        },
-        {
-            "name": "Transmedia storytelling",
-            "group": 2
+            "group": 0,
+            "released": "2024",
+            "name": "A Semantic Invariant Robust Watermark for Large Language Models",
+            "venue": "Article",
+            "count": 0,
+            "authors": "A Liu, L Pan, X Hu, S Meng, L Wen",
+            "citation": 38,
+            "id": "liu2023semantic"
         },
         {
             "group": 2,
-            "name": "Body Embodiment"
+            "citation": 1,
+            "name": "decomposition"
         },
         {
+            "citation": 2,
             "group": 2,
-            "name": "Cinematic arts"
+            "name": "speaker-independent"
         },
         {
             "name": "AI",
             "group": 1
         },
         {
-            "id": "wang2021survey",
+            "name": "Eigenvector-based sparse canonical correlation analysis: Fast computation for estimation of multiple canonical vectors",
             "group": 0,
-            "count": 0,
-            "citation": 76,
             "released": "2021",
-            "name": "A survey on ML4VIS: Applying machine learning advances to data visualization"
+            "venue": "Article",
+            "authors": "Wenjia Wang, Yi-Hui Zhou",
+            "citation": 6,
+            "count": 0,
+            "id": "wang2021eigenvector"
         },
         {
             "group": 2,
-            "name": "Art of storytelling"
+            "citation": 1,
+            "name": "watermark algorithms"
         },
         {
-            "name": "Word cloud",
-            "group": 2
+            "group": 2,
+            "name": "segment anything",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "open source projects",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "aspect sentiment",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "classification",
+            "citation": 1
+        },
+        {
+            "id": "liu2022contribution",
+            "citation": 56,
+            "released": "2022",
+            "group": 0,
+            "venue": "Article",
+            "count": 0,
+            "name": "Contribution-aware federated learning for smart healthcare",
+            "authors": "Zelei Liu, Yuanyuan Chen, Yansong Zhao, Han Yu, Yang Liu, Renyi Bao, Jinpeng Jiang, Zaiqing Nie, Qian Xu, Qiang Yang"
+        },
+        {
+            "group": 2,
+            "name": "linguistic representation",
+            "citation": 1
         },
         {
             "name": "CMA",
             "group": 1
         },
         {
-            "released": "2020",
+            "group": 2,
+            "name": "auxiliary feature",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "ai-art",
+            "citation": 1
+        },
+        {
+            "name": "DSA",
+            "group": 1
+        },
+        {
+            "authors": "Prosper Chemouil, Pan Hui, Wolfgang Kellerer, Noura Limam, Rolf Stadler, Yonggang Wen",
             "group": 0,
-            "citation": 26,
+            "id": "chemouil2020guest",
+            "name": "Guest editorial special issue on advances in artificial intelligence and machine learning for networking",
+            "venue": "Article",
+            "released": "2020",
             "count": 0,
-            "name": "The influence of font scale on semantic expression of word cloud",
-            "id": "yang2020influence"
+            "citation": 9
         },
         {
             "group": 2,
-            "name": "Collaborative Art Creation"
+            "name": "chromatic correlation clustering",
+            "citation": 1
         },
         {
-            "name": "Cinematic storytelling",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "Data visualization"
-        },
-        {
-            "name": "expanded cinema",
-            "group": 2
-        },
-        {
-            "name": "ML4VIS",
-            "group": 2
-        },
-        {
-            "name": "Explainable Machine Learning",
-            "group": 2
-        },
-        {
-            "name": "Guideline",
-            "group": 2
+            "citation": 2,
+            "group": 0,
+            "authors": "Jiayang Huang, Yiran Chen, David Yip",
+            "name": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "venue": "Conference paper",
+            "released": "2023",
+            "count": 0,
+            "id": "huang2023crossing"
         },
         {
             "group": 2,
-            "name": "massive open online courses (MOOC)"
-        },
-        {
-            "group": 2,
+            "citation": 7,
             "name": "artificial intelligence"
         },
         {
-            "name": "The Invisible Art of Storytelling and Media Production",
-            "released": "2020",
-            "group": 0,
-            "citation": 6,
-            "count": 0,
-            "id": "yip2020invisible"
-        },
-        {
-            "group": 2,
-            "name": "Interactive Art"
-        },
-        {
-            "name": "metaverse",
-            "group": 2
-        },
-        {
-            "name": "Dream Visualization",
+            "name": "large language models",
+            "citation": 14,
             "group": 2
         },
         {
             "group": 2,
-            "name": "AI-Art"
+            "name": "foundation models",
+            "citation": 1
         },
         {
-            "group": 2,
-            "name": "Narrative theory"
-        },
-        {
-            "group": 2,
-            "name": "Artistic practice"
-        },
-        {
-            "name": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
-            "released": "2023",
-            "group": 0,
-            "id": "song2023expanded",
             "citation": 2,
-            "count": 0
-        },
-        {
-            "group": 2,
-            "name": "Decision Making"
-        },
-        {
-            "group": 2,
-            "name": "Interactive narrative"
-        },
-        {
-            "group": 0,
-            "name": "The hidden art of transmedia storytelling across cinema and video game",
-            "count": 0,
-            "citation": 3,
-            "released": "2021",
-            "id": "yip2021hidden"
-        },
-        {
-            "group": 2,
-            "name": "Design principles"
-        },
-        {
-            "released": "2023",
-            "group": 0,
-            "citation": 1,
-            "name": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
-            "count": 0,
-            "id": "xu2023end"
-        },
-        {
-            "name": "massive open metaverse courses (MOMC)",
+            "name": "continual learning",
             "group": 2
         },
         {
-            "name": "dockless bike-sharing",
-            "group": 2
-        },
-        {
-            "name": "Interview",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "Content design"
-        },
-        {
-            "group": 2,
-            "name": "Interactive storytelling"
-        },
-        {
-            "id": "wang2021m2lens",
-            "citation": 72,
-            "group": 0,
-            "name": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
-            "count": 0,
-            "released": "2021"
-        },
-        {
-            "name": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
-            "group": 0,
-            "citation": 97,
-            "count": 0,
-            "released": "2021",
-            "id": "wu2021ai4vis"
-        },
-        {
-            "group": 2,
-            "name": "classroom videos"
-        },
-        {
-            "name": "metaphor",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "machine learning"
-        },
-        {
-            "group": 2,
-            "name": "Film art"
-        },
-        {
-            "group": 2,
-            "name": "Storytelling"
-        },
-        {
-            "group": 2,
-            "name": "Lab  Study"
-        },
-        {
-            "group": 2,
-            "name": "Extended reality"
-        },
-        {
-            "released": "2020",
-            "group": 0,
-            "citation": 4,
-            "name": "Visual Elements and Design Principles in Media Production",
-            "count": 0,
-            "id": "yip2020visual"
-        },
-        {
-            "group": 2,
-            "name": "Visual communication"
-        },
-        {
-            "released": "2020",
-            "group": 0,
-            "id": "yip2020cinematic",
-            "citation": 3,
-            "name": "Cinematic Surrealism of the Interactive Virtual Space",
-            "count": 0
-        },
-        {
-            "group": 0,
-            "citation": 87,
-            "count": 0,
-            "name": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation",
-            "id": "li2021kg4vis",
-            "released": "2021"
-        },
-        {
-            "group": 2,
-            "name": "Visualization recommendation"
-        },
-        {
-            "group": 2,
-            "name": "visual analytics"
-        },
-        {
-            "group": 2,
-            "name": "survey"
-        },
-        {
-            "id": "huang2023crossing",
-            "group": 0,
-            "released": "2023",
             "citation": 2,
-            "count": 0,
-            "name": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream"
-        },
-        {
-            "name": "FONG Tse Ka",
+            "name": "mandarin chinese cued speech",
             "group": 2
         },
         {
+            "citation": 2,
             "group": 2,
-            "name": "Data Video"
+            "name": "acoustic-to-articulatory inversion"
         },
         {
-            "group": 2,
-            "name": "Semantic expression"
-        },
-        {
-            "name": "Emotion",
+            "name": "federated learning",
+            "citation": 16,
             "group": 2
         },
         {
-            "group": 2,
-            "name": "LDA ensemble-based method"
-        },
-        {
-            "name": "Color structure",
+            "citation": 2,
+            "name": "artificial general intelligence",
             "group": 2
         },
         {
-            "name": "Visual elements",
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "Knowledge graph"
-        },
-        {
-            "id": "zhang2023introducing",
-            "released": "2023",
+            "id": "zhang2023comprehensive",
             "group": 0,
-            "citation": 4,
-            "name": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "name": "A comprehensive survey on segment anything model for vision and beyond",
+            "venue": "Conference paper",
+            "citation": 48,
+            "released": "2023",
+            "authors": "Chunhui Zhang, Li Liu, Yawen Cui, Guanjie Huang, Weilin Lin, Yiqian Yang, Yuehong Hu",
             "count": 0
         },
         {
-            "name": "Zeyu Wang",
-            "type": "Author",
-            "count": 10,
-            "group": 4
+            "citation": 2,
+            "name": "robustness",
+            "group": 2
         },
         {
             "name": "David Yip",
@@ -457,658 +259,267 @@
             "group": 4
         },
         {
-            "name": "Huamin Qu",
+            "name": "Pan Hui",
             "type": "Author",
-            "count": 126,
+            "count": 250,
             "group": 4
         },
         {
-            "name": "Kang Zhang",
+            "name": "Jing Tang",
             "type": "Author",
-            "count": 39,
+            "count": 38,
+            "group": 4
+        },
+        {
+            "name": "Li Liu",
+            "type": "Author",
+            "count": 59,
+            "group": 4
+        },
+        {
+            "name": "Wenjia Wang",
+            "type": "Author",
+            "count": 21,
+            "group": 4
+        },
+        {
+            "name": "Xuming Hu",
+            "type": "Author",
+            "count": 55,
+            "group": 4
+        },
+        {
+            "name": "Qian Xu",
+            "type": "Author",
+            "count": 33,
             "group": 4
         }
     ],
     "links": [
         {
-            "target": "Visualization",
-            "source": "The influence of font scale on semantic expression of word cloud",
-            "relationship": "HAS_KEYWORD"
+            "target": "robustness",
+            "relationship": "HAS_KEYWORD",
+            "source": "A Semantic Invariant Robust Watermark for Large Language Models"
         },
         {
             "relationship": "OWNED_BY",
-            "target": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
-            "source": "David Yip"
+            "source": "Xuming Hu",
+            "target": "CLASSIC: Continual and contrastive learning of aspect sentiment classification tasks"
         },
         {
-            "source": "Huamin Qu",
-            "relationship": "OWNED_BY",
-            "target": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation"
+            "relationship": "HAS_KEYWORD",
+            "source": "A comprehensive survey on segment anything model for vision and beyond",
+            "target": "survey"
         },
         {
-            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
-            "target": "Data Video",
-            "relationship": "HAS_KEYWORD"
+            "relationship": "HAS_KEYWORD",
+            "target": "speech",
+            "source": "Acoustic-to-Articulatory Inversion Based on Speech Decomposition and Auxiliary Feature"
         },
         {
-            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
-            "target": "Data Video",
-            "relationship": "HAS_KEYWORD"
+            "relationship": "HAS_KEYWORD",
+            "source": "Acoustic-to-Articulatory Inversion Based on Speech Decomposition and Auxiliary Feature",
+            "target": "auxiliary feature"
         },
         {
-            "relationship": "OWNED_BY",
-            "target": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
-            "source": "David Yip"
-        },
-        {
-            "target": "Media production",
-            "source": "The Invisible Art of Storytelling and Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "HAS_KEYWORD",
             "target": "artificial intelligence",
+            "source": "Contribution-aware federated learning for smart healthcare"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Acoustic-to-Articulatory Inversion Based on Speech Decomposition and Auxiliary Feature",
+            "target": "personalized speech feature"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Xuming Hu",
+            "target": "A Semantic Invariant Robust Watermark for Large Language Models"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Cross-Modal Mutual Learning for Cued Speech Recognition",
+            "target": "linguistic representation"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Guest editorial special issue on advances in artificial intelligence and machine learning for networking",
+            "source": "Pan Hui"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Chromatic Correlation Clustering, Revisited",
+            "target": "chromatic correlation clustering"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Xuming Hu",
+            "target": "AI"
+        },
+        {
+            "target": "mandarin chinese cued speech",
+            "source": "Cross-Modal Mutual Learning for Cued Speech Recognition",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "massive open online courses (MOOC)",
-            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
-            "relationship": "HAS_KEYWORD"
+            "relationship": "HAS_KEYWORD",
+            "target": "classification",
+            "source": "CLASSIC: Continual and contrastive learning of aspect sentiment classification tasks"
         },
         {
-            "source": "Zeyu Wang",
+            "relationship": "HAS_KEYWORD",
+            "source": "A comprehensive survey on segment anything model for vision and beyond",
+            "target": "open source projects"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Cross-Modal Mutual Learning for Cued Speech Recognition",
+            "target": "multi-modal transformer"
+        },
+        {
+            "target": "A comprehensive survey on segment anything model for vision and beyond",
+            "source": "Li Liu",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "continual learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "CLASSIC: Continual and contrastive learning of aspect sentiment classification tasks"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Contribution-aware federated learning for smart healthcare",
+            "target": "federated learning"
+        },
+        {
+            "source": "Qian Xu",
             "relationship": "BELONGS_TO",
             "target": "AI"
         },
         {
-            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
             "relationship": "HAS_KEYWORD",
-            "target": "volumetric video"
+            "target": "speaker-independent",
+            "source": "Acoustic-to-Articulatory Inversion Based on Speech Decomposition and Auxiliary Feature"
         },
         {
-            "target": "Narrative theory",
-            "relationship": "HAS_KEYWORD",
-            "source": "The hidden art of transmedia storytelling across cinema and video game"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
-            "source": "David Yip"
-        },
-        {
-            "source": "Visual Elements and Design Principles in Media Production",
-            "target": "Visual elements",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "The Invisible Art of Storytelling and Media Production",
-            "target": "Cinematic arts",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Art of storytelling",
-            "source": "The Invisible Art of Storytelling and Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Lab  Study",
-            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
-            "target": "Lab  Study",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Visual communication",
-            "relationship": "HAS_KEYWORD",
-            "source": "Between Passive Viewing and Active Choosing in Storytelling"
-        },
-        {
-            "target": "ML4VIS",
-            "relationship": "HAS_KEYWORD",
-            "source": "A survey on ML4VIS: Applying machine learning advances to data visualization"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
-            "source": "David Yip"
-        },
-        {
-            "target": "machine learning",
-            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Visual Elements and Design Principles in Media Production",
-            "target": "Color structure",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "The influence of font scale on semantic expression of word cloud",
-            "target": "Semantic expression",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
-            "target": "Visualization",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
-            "target": "Interview",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Huamin Qu",
-            "relationship": "OWNED_BY",
-            "target": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
-        },
-        {
-            "target": "Data visualization",
-            "relationship": "HAS_KEYWORD",
-            "source": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation"
-        },
-        {
-            "target": "Body Embodiment",
-            "relationship": "HAS_KEYWORD",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "source": "Huamin Qu",
-            "relationship": "OWNED_BY",
-            "target": "M2lens: Visualizing and explaining multimodal models for sentiment analysis"
-        },
-        {
-            "source": "Kang Zhang",
-            "target": "Generating layout designs from high-level specifications",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "Design principles",
-            "source": "Visual Elements and Design Principles in Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "metaphor",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "target": "Immersive learning",
-            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Visual Elements and Design Principles in Media Production",
-            "relationship": "OWNED_BY",
-            "source": "David Yip"
-        },
-        {
-            "target": "Creative arts",
-            "source": "The Invisible Art of Storytelling and Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Chinese Comic Painting",
-            "relationship": "HAS_KEYWORD",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "target": "Cinematic arts",
-            "relationship": "HAS_KEYWORD",
-            "source": "The hidden art of transmedia storytelling across cinema and video game"
-        },
-        {
-            "target": "Interview",
-            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "The influence of font scale on semantic expression of word cloud",
-            "relationship": "HAS_KEYWORD",
-            "target": "Word cloud"
-        },
-        {
-            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
-            "relationship": "HAS_KEYWORD",
-            "target": "Guideline"
-        },
-        {
-            "source": "Visual Elements and Design Principles in Media Production",
-            "target": "Cinematic arts",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Art of storytelling",
-            "source": "Visual Elements and Design Principles in Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Invisible editing",
-            "source": "The Invisible Art of Storytelling and Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Huamin Qu",
-            "relationship": "BELONGS_TO",
-            "target": "CMA"
-        },
-        {
-            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
-            "target": "Lab Study",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
-            "relationship": "HAS_KEYWORD",
-            "target": "data format"
-        },
-        {
-            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
-            "relationship": "HAS_KEYWORD",
-            "target": "expanded cinema"
-        },
-        {
-            "target": "Bodily Engagement",
-            "relationship": "HAS_KEYWORD",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "target": "Visual storytelling",
-            "relationship": "HAS_KEYWORD",
-            "source": "Between Passive Viewing and Active Choosing in Storytelling"
-        },
-        {
-            "target": "Creative arts",
-            "relationship": "HAS_KEYWORD",
-            "source": "The hidden art of transmedia storytelling across cinema and video game"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "Between Passive Viewing and Active Choosing in Storytelling",
-            "source": "David Yip"
-        },
-        {
-            "target": "Content design",
-            "source": "The Invisible Art of Storytelling and Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "LDA ensemble-based method",
-            "source": "The influence of font scale on semantic expression of word cloud",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Artistic practice",
-            "relationship": "HAS_KEYWORD",
-            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream"
-        },
-        {
-            "target": "Cinematic arts",
-            "relationship": "HAS_KEYWORD",
-            "source": "Between Passive Viewing and Active Choosing in Storytelling"
-        },
-        {
-            "source": "Huamin Qu",
-            "target": "A survey on ML4VIS: Applying machine learning advances to data visualization",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Huamin Qu",
-            "relationship": "OWNED_BY",
-            "target": "Ai4vis: Survey on artificial intelligence approaches for data visualization"
-        },
-        {
-            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
-            "relationship": "HAS_KEYWORD",
-            "target": "Guideline"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "A survey on ML4VIS: Applying machine learning advances to data visualization",
-            "target": "data visualization"
-        },
-        {
-            "target": "virtual and augmented reality",
-            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Kang Zhang",
-            "relationship": "OWNED_BY",
-            "target": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "target": "Knowledge graph",
-            "relationship": "HAS_KEYWORD",
-            "source": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation"
-        },
-        {
-            "source": "Huamin Qu",
-            "target": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "Visualization recommendation",
-            "relationship": "HAS_KEYWORD",
-            "source": "KG4Vis: A Knowledge Graph-Based Approach for Visualization Recommendation"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "The hidden art of transmedia storytelling across cinema and video game",
-            "source": "David Yip"
-        },
-        {
-            "target": "machine learning",
-            "relationship": "HAS_KEYWORD",
-            "source": "A survey on ML4VIS: Applying machine learning advances to data visualization"
-        },
-        {
-            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
-            "target": "artificial intelligence",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Extended reality",
-            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Zeyu Wang",
-            "relationship": "OWNED_BY",
-            "target": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences"
-        },
-        {
-            "target": "Creative arts",
-            "source": "Visual Elements and Design Principles in Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "visualization",
-            "relationship": "HAS_KEYWORD",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "source": "Kang Zhang",
-            "relationship": "OWNED_BY",
-            "target": "The influence of font scale on semantic expression of word cloud"
-        },
-        {
-            "target": "origin-destination data",
-            "relationship": "HAS_KEYWORD",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "David Yip",
-            "target": "Cinematic Surrealism of the Interactive Virtual Space"
-        },
-        {
-            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
-            "relationship": "HAS_KEYWORD",
-            "target": "Storytelling"
-        },
-        {
-            "source": "Huamin Qu",
-            "target": "Dece: Decision explorer with counterfactual explanations for machine learning models",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "Visual structure",
-            "source": "Visual Elements and Design Principles in Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
-            "relationship": "HAS_KEYWORD",
-            "target": "metaverse"
-        },
-        {
-            "target": "visual summarization",
-            "source": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "BELONGS_TO",
-            "source": "David Yip",
-            "target": "CMA"
-        },
-        {
-            "target": "Interactive Art",
-            "relationship": "HAS_KEYWORD",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "The Invisible Art of Storytelling and Media Production",
-            "source": "David Yip"
-        },
-        {
-            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
-            "relationship": "HAS_KEYWORD",
-            "target": "data visualization"
-        },
-        {
-            "target": "Visualization",
-            "relationship": "HAS_KEYWORD",
-            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles"
-        },
-        {
-            "target": "Cinematic storytelling",
-            "relationship": "HAS_KEYWORD",
-            "source": "Between Passive Viewing and Active Choosing in Storytelling"
-        },
-        {
-            "source": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
-            "relationship": "HAS_KEYWORD",
-            "target": "classroom videos"
-        },
-        {
-            "target": "Interactive narrative",
-            "relationship": "HAS_KEYWORD",
-            "source": "Between Passive Viewing and Active Choosing in Storytelling"
-        },
-        {
-            "target": "Visual storytelling",
-            "relationship": "HAS_KEYWORD",
-            "source": "The hidden art of transmedia storytelling across cinema and video game"
-        },
-        {
-            "target": "Game design",
-            "relationship": "HAS_KEYWORD",
-            "source": "The hidden art of transmedia storytelling across cinema and video game"
-        },
-        {
-            "target": "Film art",
-            "source": "The Invisible Art of Storytelling and Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Creative arts",
-            "relationship": "HAS_KEYWORD",
-            "source": "Between Passive Viewing and Active Choosing in Storytelling"
-        },
-        {
-            "target": "Data Video",
-            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "survey",
-            "relationship": "HAS_KEYWORD",
-            "source": "A survey on ML4VIS: Applying machine learning advances to data visualization"
-        },
-        {
-            "target": "Counterfactual Explanation",
-            "source": "Dece: Decision explorer with counterfactual explanations for machine learning models",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Media production",
-            "source": "Visual Elements and Design Principles in Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "AI-Art",
-            "relationship": "HAS_KEYWORD",
-            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream"
-        },
-        {
-            "target": "Survey",
-            "source": "Ai4vis: Survey on artificial intelligence approaches for data visualization",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Kang Zhang",
-            "relationship": "BELONGS_TO",
-            "target": "CMA"
-        },
-        {
-            "target": "Bodily Movement",
-            "relationship": "HAS_KEYWORD",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
             "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
-            "target": "Dream Visualization"
-        },
-        {
-            "target": "Decision Making",
-            "source": "Dece: Decision explorer with counterfactual explanations for machine learning models",
+            "target": "artistic practice",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "Interactive storytelling",
-            "relationship": "HAS_KEYWORD",
-            "source": "Between Passive Viewing and Active Choosing in Storytelling"
-        },
-        {
-            "source": "Dece: Decision explorer with counterfactual explanations for machine learning models",
-            "relationship": "HAS_KEYWORD",
-            "target": "Explainable Machine Learning"
-        },
-        {
-            "source": "Dece: Decision explorer with counterfactual explanations for machine learning models",
-            "relationship": "HAS_KEYWORD",
-            "target": "Tabular Data"
-        },
-        {
-            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
-            "relationship": "HAS_KEYWORD",
-            "target": "massive open metaverse courses (MOMC)"
-        },
-        {
-            "target": "artificial intelligence.",
-            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "target": "dream visualization",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "Huamin Qu",
-            "target": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
+            "relationship": "HAS_KEYWORD",
+            "target": "large language models",
+            "source": "A Semantic Invariant Robust Watermark for Large Language Models"
+        },
+        {
+            "target": "DSA",
+            "source": "Wenjia Wang",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "target": "Chromatic Correlation Clustering, Revisited",
+            "relationship": "OWNED_BY",
+            "source": "Jing Tang"
+        },
+        {
+            "source": "Li Liu",
+            "relationship": "OWNED_BY",
+            "target": "Acoustic-to-Articulatory Inversion Based on Speech Decomposition and Auxiliary Feature"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Acoustic-to-Articulatory Inversion Based on Speech Decomposition and Auxiliary Feature",
+            "target": "decomposition"
+        },
+        {
+            "target": "aspect sentiment",
+            "relationship": "HAS_KEYWORD",
+            "source": "CLASSIC: Continual and contrastive learning of aspect sentiment classification tasks"
+        },
+        {
+            "source": "Li Liu",
+            "target": "Cross-Modal Mutual Learning for Cued Speech Recognition",
             "relationship": "OWNED_BY"
         },
         {
-            "relationship": "HAS_KEYWORD",
-            "target": "dockless bike-sharing",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "FONG Tse Ka",
-            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
-        },
-        {
-            "target": "Lab Study",
-            "relationship": "HAS_KEYWORD",
-            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles"
-        },
-        {
-            "target": "Storytelling",
-            "relationship": "HAS_KEYWORD",
-            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles"
-        },
-        {
-            "source": "Kang Zhang",
-            "target": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "Narrative content",
-            "source": "The Invisible Art of Storytelling and Media Production",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Visual Elements and Design Principles in Media Production",
-            "target": "Film art",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
-            "target": "Emotion",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "target": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
             "relationship": "OWNED_BY",
             "source": "David Yip"
         },
         {
-            "source": "Zeyu Wang",
-            "target": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
-            "relationship": "OWNED_BY"
+            "relationship": "HAS_KEYWORD",
+            "source": "A comprehensive survey on segment anything model for vision and beyond",
+            "target": "foundation models"
         },
         {
-            "target": "visual analytics",
-            "source": "EmotionCues: Emotion-Oriented Visual Summarization of Classroom Videos",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
+            "target": "CMA",
             "relationship": "BELONGS_TO",
-            "source": "Mingming Fan",
-            "target": "CMA"
-        },
-        {
-            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
-            "target": "Interview",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Visualization",
-            "source": "M2lens: Visualizing and explaining multimodal models for sentiment analysis",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Collaborative Art Creation",
-            "relationship": "HAS_KEYWORD",
-            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream"
-        },
-        {
-            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
-            "target": "Storytelling",
-            "relationship": "HAS_KEYWORD"
+            "source": "David Yip"
         },
         {
             "relationship": "HAS_KEYWORD",
-            "source": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
-            "target": "Guideline"
+            "target": "watermark algorithms",
+            "source": "A Semantic Invariant Robust Watermark for Large Language Models"
         },
         {
-            "target": "Content design",
-            "source": "Visual Elements and Design Principles in Media Production",
-            "relationship": "HAS_KEYWORD"
+            "source": "Li Liu",
+            "relationship": "BELONGS_TO",
+            "target": "AI"
+        },
+        {
+            "target": "DSA",
+            "relationship": "BELONGS_TO",
+            "source": "Jing Tang"
+        },
+        {
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "relationship": "HAS_KEYWORD",
+            "target": "collaborative art creation"
         },
         {
             "relationship": "HAS_KEYWORD",
-            "source": "The hidden art of transmedia storytelling across cinema and video game",
-            "target": "Transmedia storytelling"
+            "source": "A comprehensive survey on segment anything model for vision and beyond",
+            "target": "segment anything"
         },
         {
+            "target": "CMA",
+            "relationship": "BELONGS_TO",
+            "source": "Pan Hui"
+        },
+        {
+            "source": "Qian Xu",
             "relationship": "OWNED_BY",
-            "target": "From 'wow' to 'why': Guidelines for creating the opening of a data video with cinematic styles",
-            "source": "Mingming Fan"
+            "target": "Contribution-aware federated learning for smart healthcare"
+        },
+        {
+            "target": "artificial general intelligence",
+            "source": "A comprehensive survey on segment anything model for vision and beyond",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "smart healthcare",
+            "source": "Contribution-aware federated learning for smart healthcare"
+        },
+        {
+            "target": "acoustic-to-articulatory inversion",
+            "source": "Acoustic-to-Articulatory Inversion Based on Speech Decomposition and Auxiliary Feature",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "target": "ai-art",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Wenjia Wang",
+            "relationship": "OWNED_BY",
+            "target": "Eigenvector-based sparse canonical correlation analysis: Fast computation for estimation of multiple canonical vectors"
         }
     ]
 }

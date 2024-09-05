@@ -1,0 +1,582 @@
+{
+    "nodes": [
+        {
+            "citation": 1,
+            "name": "vmirror",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "live streaming",
+            "group": 2
+        },
+        {
+            "id": "alhilal2023network",
+            "group": 0,
+            "released": "2023",
+            "authors": "Ahmad Alhilal, Kirill Shatilov, Gareth Tyson, Tristan Braud, Pan Hui",
+            "count": 0,
+            "citation": 6,
+            "venue": "Conference paper",
+            "name": "Network Traffic in the Metaverse: The Case of Social VR"
+        },
+        {
+            "citation": 23,
+            "group": 0,
+            "name": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "id": "li2021vmirror",
+            "released": "2021",
+            "count": 0,
+            "authors": "Nianlong Li, Zhengquan Zhang, Can Liu, Zengyao Yang, Yinan Fu, Feng Tian, Teng Han, Mingming Fan",
+            "venue": "Conference paper"
+        },
+        {
+            "id": "alhilal2020distributed",
+            "authors": "Ahmad Alhilal, Benjamin Finley, Tristan Braud, Dongzhe Su, Pan Hui",
+            "group": 0,
+            "venue": "Article",
+            "count": 0,
+            "released": "2020",
+            "name": "Distributed vehicular computing at the dawn of 5G: A survey",
+            "citation": 30
+        },
+        {
+            "group": 0,
+            "authors": "Lik-Hang Lee, Carlos Bermejo Fernandez, Ahmad Alhilal, Tristan Braud, Simo Hosio, Esm\u00e9e Henrieke Anne De Haas, Pan Hui",
+            "citation": 3,
+            "id": "lee2022beyond",
+            "count": 0,
+            "name": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "released": "2022",
+            "venue": "Conference paper"
+        },
+        {
+            "name": "cloud computing",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "group": 1,
+            "name": "CMA"
+        },
+        {
+            "citation": 1,
+            "name": "virtual mirror",
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "edge computing"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "network management"
+        },
+        {
+            "name": "interplanetary cyberspace",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "space chi",
+            "group": 2
+        },
+        {
+            "authors": "Jiadong Yu, Ahmad Alhilal, Tailin Zhou, Pan Hui, Danny HK Tsang",
+            "group": 0,
+            "id": "yu2024attention",
+            "venue": "Article",
+            "name": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "count": 0,
+            "released": "2024",
+            "citation": 5
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "digital twin"
+        },
+        {
+            "group": 0,
+            "released": "2023",
+            "citation": 0,
+            "venue": "Article",
+            "name": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment",
+            "count": 0,
+            "authors": "Ziru Zhang, Xuling Zhang, Guangzhi Zhu, Yuyang Wang, Pan Hui",
+            "id": "zhang2023efficient"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "occlusion"
+        },
+        {
+            "name": "DSA",
+            "group": 1
+        },
+        {
+            "name": "virtual reality",
+            "citation": 14,
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "graph traversal"
+        },
+        {
+            "name": "space communications",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "intelligent transportation system",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "multimedia context",
+            "group": 2
+        },
+        {
+            "name": "mobile edge computing",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "distributed computing",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "random walk",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "out of reach"
+        },
+        {
+            "name": "traffic classification",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "eigenvector"
+        },
+        {
+            "name": "social vr",
+            "citation": 3,
+            "group": 2
+        },
+        {
+            "name": "vr",
+            "group": 2,
+            "citation": 5
+        },
+        {
+            "citation": 2,
+            "name": "digital twins",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "vehicular networks",
+            "group": 2
+        },
+        {
+            "name": "continual reinforcement learning",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "group": 0,
+            "citation": 3,
+            "authors": "Mohammad A Hoque, Ashwin Rao, Abhishek Kumar, Mostafa Ammar, Pan Hui, Sasu Tarkoma",
+            "count": 0,
+            "released": "2020",
+            "name": "Sensing multimedia contexts on mobile devices",
+            "id": "hoque2020sensing",
+            "venue": "Conference paper"
+        },
+        {
+            "name": "5g",
+            "group": 2,
+            "citation": 5
+        },
+        {
+            "group": 2,
+            "name": "distributed deep learning",
+            "citation": 9
+        },
+        {
+            "citation": 12,
+            "name": "metaverse",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "spanning centrality",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "voice over ip"
+        },
+        {
+            "name": "quality of experience",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "target selection"
+        },
+        {
+            "name": "raycasting",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "task offloading",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "sensor fusion"
+        },
+        {
+            "citation": 1,
+            "name": "mobile cloud computing",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "dof"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "big data"
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 250,
+            "group": 4
+        },
+        {
+            "name": "Mingming Fan",
+            "type": "Author",
+            "count": 70,
+            "group": 4
+        },
+        {
+            "name": "Jing Tang",
+            "type": "Author",
+            "count": 38,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "target": "spanning centrality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+        },
+        {
+            "target": "space chi",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "continual reinforcement learning",
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Sensing multimedia contexts on mobile devices",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
+            "target": "edge computing",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "eigenvector",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+        },
+        {
+            "target": "live streaming",
+            "source": "Sensing multimedia contexts on mobile devices",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "mobile cloud computing",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+        },
+        {
+            "source": "Network Traffic in the Metaverse: The Case of Social VR",
+            "relationship": "HAS_KEYWORD",
+            "target": "social vr"
+        },
+        {
+            "target": "distributed computing",
+            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "DSA",
+            "relationship": "BELONGS_TO",
+            "source": "Jing Tang"
+        },
+        {
+            "target": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "multimedia context",
+            "source": "Sensing multimedia contexts on mobile devices",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "graph traversal",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+        },
+        {
+            "target": "virtual mirror",
+            "relationship": "HAS_KEYWORD",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Pan Hui",
+            "target": "Distributed vehicular computing at the dawn of 5G: A survey"
+        },
+        {
+            "source": "Sensing multimedia contexts on mobile devices",
+            "target": "voice over ip",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Sensing multimedia contexts on mobile devices",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "edge computing",
+            "relationship": "HAS_KEYWORD",
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "occlusion",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Pan Hui",
+            "target": "CMA"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Pan Hui",
+            "target": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "target": "distributed deep learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+        },
+        {
+            "target": "metaverse",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "target selection",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "dof",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "target": "raycasting"
+        },
+        {
+            "target": "mobile edge computing",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "out of reach",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
+        },
+        {
+            "target": "digital twin",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+        },
+        {
+            "target": "vmirror",
+            "relationship": "HAS_KEYWORD",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
+        },
+        {
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "relationship": "HAS_KEYWORD",
+            "target": "interplanetary cyberspace"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Sensing multimedia contexts on mobile devices",
+            "target": "traffic classification"
+        },
+        {
+            "target": "sensor fusion",
+            "source": "Sensing multimedia contexts on mobile devices",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment",
+            "source": "Jing Tang",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "digital twins",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "target": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "relationship": "HAS_KEYWORD",
+            "target": "space communications"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY",
+            "target": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
+        },
+        {
+            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
+            "target": "big data",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
+            "relationship": "HAS_KEYWORD",
+            "target": "intelligent transportation system"
+        },
+        {
+            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
+            "relationship": "HAS_KEYWORD",
+            "target": "5g"
+        },
+        {
+            "target": "quality of experience",
+            "relationship": "HAS_KEYWORD",
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
+        },
+        {
+            "target": "random walk",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Network Traffic in the Metaverse: The Case of Social VR",
+            "target": "metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "target": "vr"
+        },
+        {
+            "target": "vehicular networks",
+            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "task offloading",
+            "relationship": "HAS_KEYWORD",
+            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+        },
+        {
+            "target": "digital twin",
+            "relationship": "HAS_KEYWORD",
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
+        },
+        {
+            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
+            "relationship": "HAS_KEYWORD",
+            "target": "cloud computing"
+        },
+        {
+            "target": "network management",
+            "source": "Sensing multimedia contexts on mobile devices",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "target": "Network Traffic in the Metaverse: The Case of Social VR",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Mingming Fan",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        }
+    ]
+}

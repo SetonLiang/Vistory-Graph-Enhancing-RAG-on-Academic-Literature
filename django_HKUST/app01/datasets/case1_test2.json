@@ -1,0 +1,503 @@
+{
+    "nodes": [
+        {
+            "count": 0,
+            "citation": 0,
+            "group": 0,
+            "authors": "Qiuxin Du, Zhen Song, Haiyan Jiang, Xiaoying Wei, Dongdong Weng, Mingming Fan",
+            "name": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "released": "2024",
+            "id": "du2024lightsword",
+            "venue": "Conference paper"
+        },
+        {
+            "count": 0,
+            "citation": 0,
+            "authors": "Yifan Cao, Qing Shi, Lue Shen, Kani Chen, Yang Wang, Wei Zeng, Huamin Qu",
+            "group": 0,
+            "released": "2024",
+            "venue": "Article",
+            "name": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "id": "cao2024nftracer"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "human-centered computing; virtual reality"
+        },
+        {
+            "name": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior",
+            "citation": 0,
+            "count": 0,
+            "group": 0,
+            "authors": "Xinyi Luo, Yuyang Wang, Lik-Hang Lee, Zihan Xing, Shan Jin, Boya Dong, Yuanyi Hu, Zeming Chen, Jing Yan, Pan Hui",
+            "released": "2024",
+            "venue": "Article",
+            "id": "luo2024using"
+        },
+        {
+            "name": "edge computing",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "people with spinal muscular atrophy"
+        },
+        {
+            "name": "virtual reality",
+            "citation": 24,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "continual reinforcement learning"
+        },
+        {
+            "citation": 1,
+            "name": "anxiety",
+            "group": 2
+        },
+        {
+            "count": 0,
+            "citation": 0,
+            "group": 0,
+            "released": "2024",
+            "name": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR",
+            "venue": "Conference paper",
+            "id": "tan2024wieldingcanvas",
+            "authors": "Xiaohui Tan, Zhenxuan He, Can Liu, Mingming Fan, Tianren Luo, Zitao Liu, Mi Tian, Teng Han, Feng Tian"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "image processing and computer vision"
+        },
+        {
+            "citation": 2,
+            "name": "digital twin",
+            "group": 2
+        },
+        {
+            "count": 0,
+            "group": 0,
+            "id": "yu2024attention",
+            "released": "2024",
+            "venue": "Article",
+            "citation": 5,
+            "name": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "authors": "Jiadong Yu, Ahmad Alhilal, Tailin Zhou, Pan Hui, Danny HK Tsang"
+        },
+        {
+            "name": "participatory design",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "quality of experience",
+            "group": 2
+        },
+        {
+            "count": 0,
+            "citation": 0,
+            "authors": "Jingze Tian, Yingna Wang, Keye Yu, Liyi Xu, Junan Xie, Franklin Mingzhe Li, Yafeng Niu, Mingming Fan",
+            "group": 0,
+            "id": "tian2024designing",
+            "name": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "released": "2024",
+            "venue": "Conference paper"
+        },
+        {
+            "name": "interaction paradigms",
+            "citation": 3,
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "nft transaction data"
+        },
+        {
+            "count": 0,
+            "id": "cao2024learning",
+            "citation": 0,
+            "group": 0,
+            "authors": "Zidong Cao, Zhan Wang, Yexin Liu, Yan-Pei Cao, Ying Shan, Wei Zeng, Lin Wang",
+            "released": "2024",
+            "venue": "Article",
+            "name": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality"
+        },
+        {
+            "count": 0,
+            "citation": 0,
+            "group": 0,
+            "id": "yuan2024generating",
+            "authors": "Lin-Ping Yuan, Boyu Li, Jindong Wang, Huamin Qu, Wei Zeng",
+            "released": "2024",
+            "venue": "Conference paper",
+            "name": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data"
+        },
+        {
+            "name": "CMA",
+            "group": 1
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "user interfaces"
+        },
+        {
+            "citation": 1,
+            "name": "upper-body gestures",
+            "group": 2
+        },
+        {
+            "count": 0,
+            "citation": 0,
+            "group": 0,
+            "name": "Exploring Stage Lighting Education in Metaverse",
+            "released": "2024",
+            "venue": "Conference paper",
+            "authors": "Wai Tong, Meng Xia, Huamin Qu",
+            "id": "tong2024exploring"
+        },
+        {
+            "name": "interview",
+            "citation": 8,
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "non-fungible tokens (nfts)"
+        },
+        {
+            "name": "user-defined gestures",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "human-computer interaction"
+        },
+        {
+            "citation": 7,
+            "name": "human-centered computing",
+            "group": 2
+        },
+        {
+            "name": "visual\nanalytics",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "older adults",
+            "group": 2,
+            "citation": 4
+        },
+        {
+            "group": 1,
+            "name": "DSA"
+        },
+        {
+            "citation": 1,
+            "name": "health",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "stage lighting education",
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "name": "impact dynamics analysis",
+            "group": 2
+        },
+        {
+            "name": "substitutive systems",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "name": "Huamin Qu",
+            "type": "Author",
+            "count": 126,
+            "group": 4
+        },
+        {
+            "name": "Wei Zeng",
+            "type": "Author",
+            "count": 45,
+            "group": 4
+        },
+        {
+            "name": "Mingming Fan",
+            "type": "Author",
+            "count": 70,
+            "group": 4
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 250,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Exploring Stage Lighting Education in Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "quality of experience"
+        },
+        {
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "target": "people with spinal muscular atrophy",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data"
+        },
+        {
+            "source": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "relationship": "HAS_KEYWORD",
+            "target": "older adults"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR"
+        },
+        {
+            "target": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "digital twin"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "target": "edge computing",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "HAS_KEYWORD",
+            "target": "user-defined gestures"
+        },
+        {
+            "target": "anxiety",
+            "relationship": "HAS_KEYWORD",
+            "source": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior"
+        },
+        {
+            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality"
+        },
+        {
+            "target": "interview",
+            "relationship": "HAS_KEYWORD",
+            "source": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior"
+        },
+        {
+            "target": "image processing and computer vision",
+            "relationship": "HAS_KEYWORD",
+            "source": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality"
+        },
+        {
+            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "OWNED_BY",
+            "source": "Wei Zeng"
+        },
+        {
+            "target": "interaction paradigms",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Pan Hui"
+        },
+        {
+            "target": "nft transaction data",
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "source": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Wei Zeng"
+        },
+        {
+            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "relationship": "HAS_KEYWORD",
+            "target": "human-centered computing"
+        },
+        {
+            "target": "stage lighting education",
+            "source": "Exploring Stage Lighting Education in Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "relationship": "OWNED_BY",
+            "source": "Wei Zeng"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR"
+        },
+        {
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Exploring Stage Lighting Education in Metaverse",
+            "target": "participatory design",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "target": "continual reinforcement learning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality",
+            "relationship": "OWNED_BY",
+            "source": "Wei Zeng"
+        },
+        {
+            "target": "human-computer interaction",
+            "relationship": "HAS_KEYWORD",
+            "source": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "human-centered computing"
+        },
+        {
+            "target": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "DSA",
+            "source": "Wei Zeng",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "target": "human-centered computing; virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "HAS_KEYWORD",
+            "target": "upper-body gestures"
+        },
+        {
+            "source": "Huamin Qu",
+            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "substitutive systems",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "visual\nanalytics",
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "target": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior",
+            "relationship": "OWNED_BY",
+            "source": "Pan Hui"
+        },
+        {
+            "source": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "target": "health",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior"
+        },
+        {
+            "target": "impact dynamics analysis",
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        },
+        {
+            "source": "Huamin Qu",
+            "target": "Exploring Stage Lighting Education in Metaverse",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "non-fungible tokens (nfts)",
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "target": "user interfaces",
+            "relationship": "HAS_KEYWORD",
+            "source": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior"
+        }
+    ]
+}

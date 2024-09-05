@@ -23,6 +23,7 @@ def chat(request):
         user_input = data['message']
 
         # Use natural language and provide a concise, detailed answer.
+        # Use natural language and be concise.
         # QA提示模版
         answer_template = """Answer the question based only on the following context:
                     {context}
@@ -60,7 +61,7 @@ def chat(request):
             )
         duration = time.time()-start_time
         print(duration)
-        with open('app01/datasets/case1_test1.json', 'r', encoding='utf-8') as f:
+        with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
             paper_entity = json.load(f)
         
         def generate():
