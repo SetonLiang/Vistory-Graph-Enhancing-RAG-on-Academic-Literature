@@ -5,36 +5,53 @@
     <meta charset="UTF-8">
     <title>KG</title>
     <link rel="stylesheet" href="{% static 'css/for_graph.css' %}">
+    <style>
+    </style>
 </head>
 <body>
 
 <div id="container_kg" class="kg_container" style="height: 100%;width: 100%">
-    {#    <div class="legend-container">#}
-    {#        <div class="legend-title">Legend ▼</div>#}
-    {#        <div class="legend-content">#}
-    {#            <div class="legend-divider"></div>#}
-    {#            <div class="legend-item">#}
-    {#                <div class="legend-label">Dept.</div>#}
-    {#                <div class="legend-gradient department"></div>#}
-    {#            </div>#}
-    {#            <div class="legend-item">#}
-    {#                <div class="legend-label">Author’s works</div>#}
-    {#                <div class="legend-gradient authorForLegend"></div>#}
-    {#                <div class="legend-scale">#}
-    {#                    <span>Less</span>#}
-    {#                    <span>More</span>#}
-    {#                </div>#}
-    {#            </div>#}
-    {#            <div class="legend-item">#}
-    {#                <div class="legend-label">Paper citations</div>#}
-    {#                <div class="legend-gradient paperForLegend"></div>#}
-    {#                <div class="legend-scale">#}
-    {#                    <span>Less</span>#}
-    {#                    <span>More</span>#}
-    {#                </div>#}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </div>#}
+    <!-- 图例容器 -->
+    <div id="legend" class="legend-container">
+        <div class="legend-header" onclick="toggleLegend()">
+            Legend
+            <span id="toggle-icon">+</span>
+        </div>
+        <div class="legend-content">
+            <div class="legend-row">
+                <div class="legend-item-full">
+                    <span class="legend-text">Paper:</span>
+                    <div class="legend-gradient"></div>
+                    <span class="legend-bottom-left">2024</span>
+                    <span class="legend-bottom-right">2020</span>
+                </div>
+            </div>
+            <div class="legend-row">
+                <div class="legend-item-full">
+                    <span class="legend-text">Author:</span>
+                    <div class="legend-gradient" style="background: linear-gradient(to right, #007f5f, #b9ded3);"></div>
+                    <span class="legend-bottom-left">High</span>
+                    <span class="legend-bottom-right">Low</span>
+                </div>
+            </div>
+            <div class="legend-row-dept">
+                <div class="legend-item-dept">
+                    <div class="legend-square" style="background-color: #247181;"></div>
+                    <span class="legend-text-dept">Dept.1</span>
+                </div>
+                <div class="legend-item-dept">
+                    <div class="legend-square" style="background-color: #619ea9;"></div>
+                    <span class="legend-text-dept">Dept.2</span>
+                </div>
+                <div class="legend-item-dept">
+                    <div class="legend-square" style="background-color: #224659;"></div>
+                    <span class="legend-text-dept">Dept.3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
 <script src="{% static 'js/jquery-3.7.1.js' %}"></script>
@@ -42,6 +59,12 @@
 
 
 <script>
+    function toggleLegend() {
+        const legend = document.getElementById('legend');
+        const icon = document.getElementById('toggle-icon');
+        legend.classList.toggle('expanded');
+        icon.textContent = legend.classList.contains('expanded') ? '-' : '+';
+    }
 
     // Specify the dimensions of the chart.
     const width = d3.select('.kg_container').node().getBoundingClientRect().width
@@ -513,16 +536,6 @@
 
     function InitGraph(data) {
         // 图例折叠功能
-        d3.select(".legend-title").on("click", function () {
-            const content = d3.select(".legend-content");
-            if (content.style("display") === "none") {
-                content.style("display", "block");
-                d3.select(this).text("Legend ▲");
-            } else {
-                content.style("display", "none");
-                d3.select(this).text("Legend ▼");
-            }
-        });
 
         // so that re-evaluating this cell produces the same result.
         links = data.links.map(d => ({...d}));

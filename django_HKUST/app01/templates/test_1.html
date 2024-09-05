@@ -3,189 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Cloud with D3.js</title>
-
-    <script src="../static/plugins/d3/d3.v7.js"></script>
-    <script src="../static/plugins/d3/d3.layout.cloud.js"></script>
+    <title>Knowledge Graph with Legend</title>
     <style>
-        .word {
+        body {
             font-family: Arial, sans-serif;
-            font-weight: bold;
         }
 
-        #container {
-            position: relative;
-        }
-
-        #reset-button, #randomize-button {
+        /* 图例容器样式 */
+        .legend-container {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
             padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
+            width: 220px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 折叠/展开按钮样式 */
+        .legend-header {
             cursor: pointer;
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 图例内容样式 */
+        .legend-content {
+            padding: 10px;
+            display: none; /* 默认折叠状态 */
+        }
+
+        .legend-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .legend-row-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px; /* 可选：增加每行之间的间距 */
+        }
+
+        .legend-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .legend-square {
+            width: 10px;
+            height: 15px;
+            margin-bottom: 2px;
+        }
+
+        /* 展开状态 */
+        .expanded .legend-content {
+            display: block;
+        }
+
+        /* 调整文字大小 */
+        .legend-text {
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .legend-text-bar {
+            width: 100px; /* 根据需要调整宽度以适应最长文本 */
+            text-align: left;
             margin-right: 10px;
         }
 
-        #randomize-button {
-            left: 120px;
+        /* 新增的 legend-item-full 样式，使文字和渐变色长方形在一行 */
+        .legend-item-full {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: relative; /* 为子元素定位提供参考 */
+        }
+
+        /* 渐变色的长方形样式，填充剩余空间 */
+        .legend-gradient-paper {
+            flex-grow: 1;
+            height: 10px;
+            margin-left: 10px;
+            background: linear-gradient(to right, #d14163, #e6b1be);
+        {#clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0% 0%);#}
+        }
+
+        .legend-gradient-author {
+            flex-grow: 1;
+            height: 10px;
+            margin-left: 10px;
+            background: linear-gradient(to right, #007f5f, #b9ded3);
+        {#clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0% 0%);#}
+        }
+
+        .legend-bottom-left,
+        .legend-bottom-right {
+            position: absolute;
+            font-size: 12px;
+            color: #000;
+        }
+
+        .legend-bottom-left {
+            bottom: 0;
+            left: 0;
+            padding: 0 5px;
+            background: white;
+        }
+
+        .legend-bottom-right {
+            bottom: 0;
+            right: 0;
+            padding: 0 5px;
+            background: white;
+            text-align: right;
         }
     </style>
 </head>
 <body>
-<div id="container">
-    <button id="randomize-button">Randomize Colors</button>
-    <button id="reset-button">Reset Colors</button>
+
+<!-- 图例容器 -->
+<div id="legend" class="legend-container">
+    <div class="legend-header" onclick="toggleLegend()">
+        Legend
+        <span id="toggle-icon">+</span>
+    </div>
+    <div class="legend-content">
+        <div class="legend-row">
+            <div class="legend-item">
+                <div class="legend-square" style="background-color: #247181;"></div>
+                <span class="legend-text">Dept.1</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-square" style="background-color: #619ea9;"></div>
+                <span class="legend-text">Dept.2</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-square" style="background-color: #ffb3b3;"></div>
+                <span class="legend-text">Dept.3</span>
+            </div>
+        </div>
+        <!-- 新增的一行 -->
+        <div class="legend-row">
+            <div class="legend-item-full">
+                <!--<span class="legend-text" style="width: 30px">Paper:</span>-->
+                <div class="legend-gradient-paper"></div>
+                <span class="legend-bottom-left">Low</span>
+                <span class="legend-bottom-right">High</span>
+            </div>
+        </div>
+        <div class="legend-row">
+            <div class="legend-item-full">
+                <span class="legend-text" style="width: 30px">Author:</span>
+                <div class="legend-gradient-author"></div>
+                <span class="legend-bottom-left">Low</span>
+                <span class="legend-bottom-right">High</span>
+            </div>
+        </div>
+
+
+    </div>
 </div>
 
 <script>
-    var words = [
-        {text: 'Deep learning', size: 50}, {text: 'Federated learning', size: 41}, {
-            text: 'Large language models',
-            size: 36
-        },
-        {text: 'Visual analytics', size: 34}, {text: 'Virtual reality', size: 34}, {text: 'Machine learning', size: 30},
-        {text: 'Graph neural networks', size: 28}, {text: 'Augmented reality', size: 28}, {
-            text: 'Visualization',
-            size: 24
-        },
-        {text: 'Metaverse', size: 18}, {text: 'Edge computing', size: 14}, {text: 'Gpu', size: 14},
-        {text: 'Reinforcement learning', size: 14}, {text: 'Data visualization', size: 13}, {
-            text: 'Benchmark',
-            size: 12
-        },
-        {text: 'Accessibility', size: 12}, {text: 'Transformer', size: 11}, {text: 'Covid-19', size: 11},
-        {text: 'Blockchain', size: 11}, {text: 'Older adults', size: 10}, {text: 'Representation learning', size: 10},
-        {text: 'Distributed deep learning', size: 9}, {text: 'Deep neural networks', size: 9}, {
-            text: 'Survey',
-            size: 8
-        },
-        {text: 'Storytelling', size: 8}, {text: 'Contrastive learning', size: 8}, {text: 'Interview', size: 8},
-        {text: 'Artificial intelligence', size: 7}, {text: 'Cinematic arts', size: 7}, {text: 'Road network', size: 7},
-        {text: 'State-of-the-art', size: 7}, {text: 'Gan', size: 7}, {text: 'Human-centered computing', size: 7},
-        {text: 'Computer vision', size: 6}, {text: 'Anomaly detection', size: 6}, {
-            text: 'Large language model',
-            size: 6
-        },
-        {text: 'Transfer learning', size: 6}, {text: 'Graphs', size: 5}, {text: 'Submodular maximization', size: 5},
-        {text: '5g', size: 5}, {text: 'Creative arts', size: 5}, {text: 'Mobile augmented reality', size: 5},
-        {text: 'Privacy', size: 5}, {text: 'Diffusion model', size: 5}, {text: 'Dataset', size: 5},
-        {text: 'Graph neural network', size: 5}, {text: 'Cued speech', size: 5}, {text: 'Relation extraction', size: 5},
-        {text: 'Time series', size: 5}, {text: 'Action recognition', size: 5}, {text: 'Vr', size: 5},
-        {text: 'Self-supervised learning', size: 5}, {text: 'Neural networks', size: 5}, {
-            text: 'Interactive art',
-            size: 4
-        },
-        {text: 'Aigc', size: 4}, {text: 'Influence maximization', size: 4}, {
-            text: 'Statistical process control',
-            size: 4
-        },
-        {text: 'Bodily engagement', size: 4}, {text: 'Llama', size: 4}, {text: 'Deep neural network', size: 4},
-        {text: 'Emg', size: 4}, {text: 'Smartphone', size: 4}, {text: 'Data video', size: 4}, {
-            text: 'Urban computing',
-            size: 4
-        },
-        {text: 'Interaction', size: 4}, {text: 'Verbalization', size: 4}, {text: 'Covid-19 pandemic', size: 4},
-        {text: 'Neural radiance fields', size: 4}, {text: 'Mobile computing', size: 4}, {text: 'Inference', size: 4},
-        {text: 'Social media', size: 4}, {text: 'Human-ai collaboration', size: 4}, {text: 'Chatgpt', size: 4},
-        {text: 'Digital humanities', size: 4}, {text: 'Multi-task learning', size: 4}, {
-            text: 'Extended reality',
-            size: 4
-        },
-        {text: 'Visualization recommendation', size: 4}, {text: 'Detection transformer', size: 4}
-    ];
-
-    var colorMap = {}; // Map to store initial colors
-
-    // Create the word cloud layout
-    d3.layout.cloud().size([800, 400])
-        .words(words.map(function (d) {
-            return {text: d.text, size: d.size};
-        }))
-        .padding(5)
-        .rotate(0) // All words will be horizontal
-        .font("Impact")
-        .fontSize(function (d) {
-            return d.size;
-        })
-        .on("end", draw)
-        .start();
-
-    function draw(words) {
-        var svg = d3.select("body").append("svg")
-            .attr("width", 800)
-            .attr("height", 400)
-            .append("g")
-            .attr("transform", "translate(400,200)");
-
-        svg.selectAll("text")
-            .data(words)
-            .enter().append("text")
-            .style("font-size", function (d) {
-                return d.size + "px";
-            })
-            .style("fill", function (d) {
-                var color = randomColor();
-                colorMap[d.text] = color; // Store the color for each word
-                return color; // Initial color without transparency
-            })
-            .attr("text-anchor", "middle")
-            .attr("transform", function (d) {
-                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-            })
-            .text(function (d) {
-                return d.text;
-            });
-
-        // Add event listeners to the buttons
-        d3.select("#reset-button").on("click", resetColors);
-        d3.select("#randomize-button").on("click", randomizeColors);
-    }
-
-    function randomizeColors() {
-        var numWords = words.length;
-        var numToColor = Math.floor(numWords * 0.5); // 50% of words to keep color
-        var selectedWords = [];
-
-        // Randomly select words to keep color
-        while (selectedWords.length < numToColor) {
-            var randomIndex = Math.floor(Math.random() * numWords);
-            if (!selectedWords.includes(words[randomIndex].text)) {
-                selectedWords.push(words[randomIndex].text);
-            }
-        }
-
-        d3.selectAll("text")
-            .style("fill", function (d) {
-                return selectedWords.includes(d.text) ? colorMap[d.text] : "#9e9e9e"; // Color selected words, others gray
-            })
-            .style("opacity", function (d) {
-                return selectedWords.includes(d.text) ? 1 : 0.2; // Set opacity
-            });
-    }
-
-    function resetColors() {
-        d3.selectAll("text")
-            .style("fill", function (d) {
-                return colorMap[d.text]; // Restore original color
-            })
-            .style("opacity", 1); // Restore opacity
-    }
-
-    function randomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
+    // 折叠/展开图例的功能
+    function toggleLegend() {
+        const legend = document.getElementById('legend');
+        const icon = document.getElementById('toggle-icon');
+        legend.classList.toggle('expanded');
+        icon.textContent = legend.classList.contains('expanded') ? '-' : '+';
     }
 </script>
-</body>
-</html>
-</script>
+
 </body>
 </html>

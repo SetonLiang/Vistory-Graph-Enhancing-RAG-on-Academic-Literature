@@ -46,7 +46,7 @@ html, body {
     width: 100%;
     /*border: 1px solid #ccc;*/
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-    background-color: #e9e9e9; /* 确保背景色 */
+    /*background-color: #e9e9e9; !* 确保背景色 *!*/
 }
 
 .header {

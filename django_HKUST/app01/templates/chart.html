@@ -32,10 +32,10 @@
     const containerHeight = d3.select('.chart_container').node().getBoundingClientRect().height;
     const chartWidth = containerWidth; // 每个图表宽度占容器的25%
     const chartHeight = containerHeight/4;
-    const marginTop = 10;
-    const marginRight = 10;
-    const marginBottom = 20;
-    const marginLeft = 30;
+    const marginTop = 30;
+    const marginRight = 30;
+    const marginBottom = 40;
+    const marginLeft = 50;
 
     // 通用的缩放功能
     function zoom_chart(svg, x, chartWidth, chartHeight) {
@@ -70,7 +70,7 @@
         const x = d3.scaleBand()
             .domain(data.map(d => d.year))
             .range([marginLeft, chartWidth - marginRight])
-            .padding(0.1);
+            .padding(0.3);
 
         const y = d3.scaleLinear()
             .domain([0, d3.max(data, d => d.papers)]).nice()
@@ -133,7 +133,7 @@
         const x = d3.scaleBand()
             .domain(data.map(d => d.department))
             .range([marginLeft, chartWidth - marginRight])
-            .padding(0.4);
+            .padding(0.5);
 
         const y = d3.scaleLinear()
             .domain([0, d3.max(data, d => d.papers)]).nice()
@@ -202,7 +202,7 @@
         const x = d3.scaleBand()
             .domain(data.map(d => d.year))
             .range([marginLeft, chartWidth - marginRight])
-            .padding(0.1);
+            .padding(0.3);
 
         const y = d3.scaleLinear()
             .domain([0, d3.max(data, d => d.AI + d.CMA + d.DSA)]).nice()
@@ -277,7 +277,7 @@
         const x = d3.scaleBand()
             .domain(data.map(d => d.author))
             .range([marginLeft, chartWidth - marginRight])
-            .padding(0.1);
+            .padding(0.3);
 
         const y = d3.scaleLinear()
             .domain([0, d3.max(data, d => d.papers)]).nice()

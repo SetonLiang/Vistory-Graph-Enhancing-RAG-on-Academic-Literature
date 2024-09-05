@@ -25,7 +25,6 @@
 }
 
 
-
 .legend-container {
     position: absolute;
     margin: 10px;
@@ -100,4 +99,108 @@
     justify-content: space-between;
     font-size: 10px;
     color: #666;
+}
+
+/* 图例容器样式 */
+.legend-container {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 折叠/展开按钮样式 */
+.legend-header {
+    cursor: pointer;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 图例内容样式 */
+.legend-content {
+    padding: 10px;
+    display: none; /* 默认折叠状态 */
+}
+
+/* 展开状态 */
+.expanded .legend-content {
+    display: block;
+}
+
+/* 图例行样式 */
+.legend-row {
+    margin-bottom: 20px;
+}
+
+.legend-text {
+    font-size: 10px;
+    display: block;
+    text-align: center;
+    margin-bottom: 2px; /* 与长方形的间距 */
+}
+
+.legend-item-full {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* 为子元素定位提供参考 */
+}
+
+/* 渐变色的长方形样式 */
+.legend-gradient {
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to right, #d14163, #e6b1be); /* 适用于 Paper */
+    /* background: linear-gradient(to right, #007f5f, #b9ded3); */ /* 适用于 Author */
+}
+
+.legend-bottom-left,
+.legend-bottom-right {
+    position: absolute;
+    font-size: 12px;
+    color: #000;
+    bottom: -13px; /* 在长方形下方放置 */
+}
+
+.legend-bottom-left {
+    left: 0;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.legend-bottom-right {
+    right: 0;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.legend-row-dept {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.legend-item-dept {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legend-text-dept {
+    font-size: 10px;
+    text-align: center;
+}
+
+.legend-square {
+    width: 10px;
+    height: 15px;
+    margin-bottom: 2px;
 }
