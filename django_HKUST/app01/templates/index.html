@@ -200,13 +200,13 @@
                 return d.size + "px";
             })
             .style("fill", function (d) {
-                if(d.text === 'virtual reality' || d.text === 'augmented reality' || d.text === 'edge computing' || d.text === 'metaverse' || d.text === 'federated learning'){
-                    var color = randomColor();
-                    colorMap[d.text] = color; // Store the color for each word
-                    return color; // Initial color without transparency
-                }else {
-                    return '#ddd'
-                }
+                //if(d.text === 'virtual reality' || d.text === 'augmented reality' || d.text === 'edge computing' || d.text === 'metaverse' || d.text === 'federated learning'){
+                var color = randomColor();
+                colorMap[d.text] = color; // Store the color for each word
+                return color; // Initial color without transparency
+                //}else {
+                    //return '#ddd'
+                //}
             })
             .attr("text-anchor", "middle")
             .style('cursor', 'pointer')

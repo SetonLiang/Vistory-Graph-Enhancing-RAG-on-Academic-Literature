@@ -1,0 +1,299 @@
+{
+    "nodes": [
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "virtual and augmented reality"
+        },
+        {
+            "group": 2,
+            "citation": 4,
+            "name": "extended reality"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "fps"
+        },
+        {
+            "group": 1,
+            "name": "CMA"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "massive open online courses (mooc)"
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "gaussian splatting"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "immersive learning"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "volumetric video"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "expanded cinema"
+        },
+        {
+            "group": 1,
+            "name": "AI"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "mesh"
+        },
+        {
+            "id": "shao2024splattingavatar",
+            "count": 0,
+            "venue": "Conference paper",
+            "released": "2024",
+            "citation": 10,
+            "group": 0,
+            "name": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "authors": "Zhijing Shao, Zhaolong Wang, Zhuang Li, Duotun Wang, Xiangru Lin, Yu Zhang, Mingming Fan, Zeyu Wang"
+        },
+        {
+            "group": 2,
+            "citation": 14,
+            "name": "gpu"
+        },
+        {
+            "released": "2023",
+            "name": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "count": 0,
+            "venue": "Conference paper",
+            "citation": 2,
+            "authors": "Junrong Song, Bingyuan Wang, Zeyu Wang, David Kei-man Yip",
+            "id": "song2023expanded",
+            "group": 0
+        },
+        {
+            "group": 2,
+            "citation": 7,
+            "name": "artificial intelligence"
+        },
+        {
+            "citation": 1,
+            "name": "massive open metaverse courses (momc)",
+            "group": 2
+        },
+        {
+            "released": "2023",
+            "count": 0,
+            "venue": "Article",
+            "name": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "authors": "Kang Zhang, Zhijing Shao, Yun Lu, Ying Yu, Wei Sun, Zeyu Wang",
+            "id": "zhang2023introducing",
+            "citation": 4,
+            "group": 0
+        },
+        {
+            "count": 0,
+            "venue": "Conference paper",
+            "released": "2022",
+            "authors": "Anqi Wang, Gao Ze, Zeyu Wang, Tristan Braud, Pan Hui",
+            "id": "wang2022envisioning",
+            "citation": 2,
+            "group": 0,
+            "name": "Envisioning A Hyper-Learning System in the Age of Metaverse"
+        },
+        {
+            "name": "artificial intelligence.",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "metaverse",
+            "citation": 6
+        },
+        {
+            "citation": 1,
+            "name": "human avatar",
+            "group": 2
+        },
+        {
+            "name": "Zeyu Wang",
+            "type": "Author",
+            "count": 10,
+            "group": 4
+        },
+        {
+            "name": "Mingming Fan",
+            "type": "Author",
+            "count": 70,
+            "group": 4
+        },
+        {
+            "name": "Kang Zhang",
+            "type": "Author",
+            "count": 39,
+            "group": 4
+        },
+        {
+            "name": "David Yip",
+            "type": "Author",
+            "count": 18,
+            "group": 4
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 250,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "source": "Zeyu Wang",
+            "relationship": "OWNED_BY",
+            "target": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences"
+        },
+        {
+            "source": "Zeyu Wang",
+            "relationship": "OWNED_BY",
+            "target": "Envisioning A Hyper-Learning System in the Age of Metaverse"
+        },
+        {
+            "target": "CMA",
+            "relationship": "BELONGS_TO",
+            "source": "David Yip"
+        },
+        {
+            "source": "Zeyu Wang",
+            "relationship": "OWNED_BY",
+            "target": "Introducing Massive Open Metaverse Course and Its Enabling Technology"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Envisioning A Hyper-Learning System in the Age of Metaverse"
+        },
+        {
+            "target": "CMA",
+            "source": "Mingming Fan",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "target": "CMA",
+            "relationship": "BELONGS_TO",
+            "source": "Kang Zhang"
+        },
+        {
+            "source": "Pan Hui",
+            "target": "CMA",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "HAS_KEYWORD",
+            "target": "gaussian splatting"
+        },
+        {
+            "target": "extended reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences"
+        },
+        {
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "HAS_KEYWORD",
+            "target": "virtual and augmented reality"
+        },
+        {
+            "source": "Zeyu Wang",
+            "relationship": "OWNED_BY",
+            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting"
+        },
+        {
+            "target": "mesh",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "target": "immersive learning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "source": "David Yip"
+        },
+        {
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "HAS_KEYWORD",
+            "target": "massive open online courses (mooc)"
+        },
+        {
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "target": "volumetric video",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "artificial intelligence.",
+            "relationship": "HAS_KEYWORD",
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences"
+        },
+        {
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "target": "massive open metaverse courses (momc)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "HAS_KEYWORD",
+            "target": "metaverse"
+        },
+        {
+            "target": "human avatar",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "expanded cinema",
+            "relationship": "HAS_KEYWORD",
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences"
+        },
+        {
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "HAS_KEYWORD",
+            "target": "gpu"
+        },
+        {
+            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "source": "Kang Zhang"
+        },
+        {
+            "target": "artificial intelligence",
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Zeyu Wang",
+            "relationship": "BELONGS_TO",
+            "target": "AI"
+        },
+        {
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "relationship": "HAS_KEYWORD",
+            "target": "fps"
+        }
+    ]
+}

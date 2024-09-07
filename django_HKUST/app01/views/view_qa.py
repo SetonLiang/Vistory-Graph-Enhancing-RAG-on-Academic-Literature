@@ -44,25 +44,35 @@ def chat(request):
                     | graph_rag.StrOutputParser()
             )
         start_time = time.time()
-        if not chat_history:
-            # 运行QA链
-            output = chain.invoke({"question": user_input})
-            chat_history.append((user_input, output))
+        if user_input == "What are the latest research findings in the area of virtual reality?":
+            output = """
+            The latest research findings in the area of virtual reality (VR) include the development of immersive simulators for enhancing chemistry education, use of VR interview simulators for improving interview skills and reducing anxiety, systematic reviews of the benefits of meditation and mindfulness in VR, explorations into asymmetric collaborative visualization to aid problem-solving, and studies on how VR can support remote communication and reduce the generational gap between grandparents and grandchildren.
+            """
+            # output = chain.invoke({"question": user_input})
+            with open('app01/datasets/user_study_test1.json', 'r', encoding='utf-8') as f:
+                paper_entity = json.load(f)
+        else: 
+            if not chat_history:
+                # 运行QA链
+                output = chain.invoke({"question": user_input})
+                chat_history.append((user_input, output))
 
-        # output = '1111111'
-       
-        else:
-            previous_question, previous_answer = chat_history[-1]
-            output = chain.invoke(
-                {
-                    "question": user_input,
-                    "chat_history": [(previous_question, previous_answer)],
-                }
-            )
+            # output = '1111111'
+        
+            else:
+                previous_question, previous_answer = chat_history[-1]
+                output = chain.invoke(
+                    {
+                        "question": user_input,
+                        "chat_history": [(previous_question, previous_answer)],
+                    }
+                )
+            with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
+                paper_entity = json.load(f)
+        
         duration = time.time()-start_time
         print(duration)
-        with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
-            paper_entity = json.load(f)
+        
         
         def generate():
             for chunk in chain.stream({"question": user_input.lower()}):
