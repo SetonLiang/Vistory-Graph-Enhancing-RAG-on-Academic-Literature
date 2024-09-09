@@ -31,7 +31,7 @@
     const containerWidth = d3.select('.chart_container').node().getBoundingClientRect().width;
     const containerHeight = d3.select('.chart_container').node().getBoundingClientRect().height;
     const chartWidth = containerWidth; // 每个图表宽度占容器的25%
-    const chartHeight = containerHeight/4;
+    const chartHeight = containerHeight / 4;
     const marginTop = 30;
     const marginRight = 30;
     const marginBottom = 40;
@@ -64,7 +64,7 @@
     function createChart1(svg, data) {
         const colorScale_chart = d3.scaleLinear()
             .domain([2020, 2024])
-        .range(["#e6b1be", "#d14163"]);
+            .range(["#e6b1be", "#d14163"]);
 
 
         const x = d3.scaleBand()
@@ -227,7 +227,9 @@
             .selectAll("g")
             .data(series)
             .join("g")
-            .attr("fill", d => color(d.key))
+            .attr("fill", d => {
+                return color(d.key)
+            })
             .selectAll("rect")
             .data(d => d)
             .join("rect")
@@ -296,7 +298,7 @@
             .attr("y", d => y(d.papers))
             .attr("height", d => y(0) - y(d.papers))
             .attr("width", x.bandwidth())
-            .on('click', function(e, d) {
+            .on('click', function (e, d) {
                 const sNode = {'name': d.author}
                 highlightNeighborhood(sNode)
             })

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Chart with Labels Inside</title>
+    <style>
+        .arc text {
+            font: 14px sans-serif;
+            text-anchor: middle;
+            fill: white;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<svg width="600" height="400"></svg>
+<button id="updateButton">Update Data</button>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+
+// 定义图的宽、高和半径
+const width = 600;
+const height = 400;
+const radius = Math.min(width, height) / 2 - 50;
+
+// 定义颜色比例尺
+const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+// 定义初始数据
+let data = [
+    {department: "Dept. A", value: 40},
+    {department: "Dept. B", value: 60},
+    {department: "Dept. C", value: 30}
+];
+
+// 创建SVG容器
+const svg = d3.select("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", `translate(${width / 2},${height / 2})`);
+
+// 定义弧生成器
+const arc = d3.arc()
+    .innerRadius(radius - 100)  // Donut Chart 的内半径
+    .outerRadius(radius);       // Donut Chart 的外半径
+
+// 定义饼图生成器
+const pie = d3.pie()
+    .value(d => d.value)
+    .sort(null);
+
+// 绘制初始的 Donut Chart
+const arcs = svg.selectAll("path")
+    .data(pie(data))
+    .enter().append("path")
+    .attr("fill", d => color(d.data.department))
+    .attr("d", arc)
+    .each(function(d) { this._current = d; }); // 保存当前的弧，后续用作动画
+
+// 添加文本标注到扇区内部
+const labels = svg.selectAll("text")
+    .data(pie(data))
+    .enter()
+    .append("text")
+    .attr("transform", d => {
+        const [x, y] = arc.centroid(d);
+        return `translate(${x},${y})`;
+    })
+    .attr("dy", "0.35em") // 垂直居中对齐
+    .attr("text-anchor", "middle") // 水平居中对齐
+    .text(d => `${d.data.department}: ${d.data.value}`)
+    .attr("fill", "white");
+
+// 定义一个更新数据的函数
+function updateData() {
+    // 新的数据
+    const newData = [
+        {department: "Dept. A", value: Math.floor(Math.random() * 100)},
+        {department: "Dept. B", value: Math.floor(Math.random() * 100)},
+        {department: "Dept. C", value: Math.floor(Math.random() * 100)}
+    ];
+
+    // 重新绑定新数据
+    const newArcs = pie(newData);
+
+    // 动画更新弧形
+    arcs.data(newArcs)
+        .transition()
+        .duration(1000)
+        .attrTween("d", function(d) {
+            const interpolate = d3.interpolate(this._current, d);
+            this._current = interpolate(0);
+            return t => arc(interpolate(t));
+        });
+
+    // 动画更新文本标注
+    labels.data(newArcs)
+        .transition()
+        .duration(1000)
+        .attr("transform", d => {
+            const [x, y] = arc.centroid(d);
+            return `translate(${x},${y})`;
+        })
+        .text(d => `${d.data.department}: ${d.data.value}`);
+}
+
+// 按钮点击事件监听
+d3.select("#updateButton").on("click", updateData);
+
+</script>
+
+</body>
+</html>

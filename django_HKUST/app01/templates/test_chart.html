@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Bar Chart with D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .bar {
+            stroke: #000;
+        }
+        button {
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleData">切换数据</button>
+    <svg width="700" height="300"></svg> <!-- 调整SVG宽高比为2:1 -->
+
+    <script>
+        const svg = d3.select("svg");
+        const margin = {top: 20, right: 30, bottom: 40, left: 50};
+        const width = +svg.attr("width") - margin.left - margin.right;
+        const height = +svg.attr("height") - margin.top - margin.bottom;
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // 使用paddingOuter增加x轴标签与两边的间距
+        const x = d3.scaleBand().rangeRound([0, width]).paddingInner(0.4).paddingOuter(0.4);
+        const y = d3.scaleLinear().rangeRound([height, 0]);
+        const z = d3.scaleOrdinal().range(["#22788a", "#68aab6", "#22475d"]);
+
+        const stack = d3.stack();
+        let data1 = [
+            {year: 2020, apples: 79, oranges: 108, bananas: 28},
+            {year: 2021, apples: 80, oranges: 99, bananas: 61},
+            {year: 2022, apples: 67, oranges: 110, bananas: 60},
+            {year: 2023, apples: 134, oranges: 143, bananas: 99},
+            {year: 2024, apples: 60, oranges: 88, bananas: 80}
+        ];
+
+        let data2 = [
+            {year: 2020, apples: 40, oranges: 25, bananas: 15},
+            {year: 2021, apples: 30, oranges: 30, bananas: 20},
+            {year: 2022, apples: 20, oranges: 20, bananas: 30},
+            {year: 2023, apples: 35, oranges: 25, bananas: 25},
+            {year: 2024, apples: 45, oranges: 35, bananas: 20}
+        ];
+
+        let currentData = data1;
+
+        function update(data) {
+            const keys = ["apples", "oranges", "bananas"];
+
+            x.domain(data.map(d => d.year));
+            y.domain([0, d3.max(data, d => d.apples + d.oranges + d.bananas)]).nice();
+            z.domain(keys);
+
+            // Remove old elements
+            g.selectAll(".axis").remove();
+            g.selectAll(".layer").remove();
+
+            const layer = g.selectAll(".layer")
+                .data(stack.keys(keys)(data), d => d.key);
+
+            const layerEnter = layer.enter().append("g")
+                .attr("class", "layer")
+                .attr("fill", d => z(d.key));
+
+            const rect = layerEnter.selectAll("rect")
+                .data(d => d, d => d.data.year);
+
+            rect.enter().append("rect")
+                .attr("x", d => x(d.data.year))
+                .attr("y", y(0))
+                .attr("height", 0)
+                .attr("width", x.bandwidth())
+                .on("click", function(event, d) {
+                    // 点击事件：改变颜色
+                    d3.select(this).attr("fill", "#BDBEC2");
+                })
+                .transition()
+                .duration(1000)
+                .attr("y", d => y(d[1]))
+                .attr("height", d => y(d[0]) - y(d[1]));
+
+            rect.transition()
+                .duration(1000)
+                .attr("x", d => x(d.data.year))
+                .attr("y", d => y(d[1]))
+                .attr("height", d => y(d[0]) - y(d[1]))
+                .attr("width", x.bandwidth());
+
+            // X Axis
+            g.append("g")
+                .attr("class", "axis axis--x")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+
+            // Y Axis
+            g.append("g")
+                .attr("class", "axis axis--y")
+                .call(d3.axisLeft(y).ticks(10, "s"));
+        }
+
+        update(currentData);
+
+        document.getElementById("toggleData").addEventListener("click", () => {
+            currentData = currentData === data1 ? data2 : data1;
+            update(currentData);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treemap of Publications</title>
+    <style>
+        .node {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            box-shadow: inset 0 0 0 1px white;
+        }
+
+        .leaf {
+            fill: #69b3a2;
+        }
+
+        text {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<svg width="960" height="600"></svg>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+
+// 数据
+const data = {
+  "name": "Publications",
+  "children": [
+    { "name": "Conference A", "value": 100 },
+    { "name": "Conference B", "value": 80 },
+    { "name": "Journal X", "value": 50 },
+    { "name": "Journal Y", "value": 30 },
+    { "name": "Conference C", "value": 60 },
+    { "name": "Conference D", "value": 90 },
+    { "name": "Journal Z", "value": 40 },
+    { "name": "Journal W", "value": 70 },
+    { "name": "Conference E", "value": 110 },
+    { "name": "Conference F", "value": 95 },
+    { "name": "Journal V", "value": 55 },
+    { "name": "Journal U", "value": 85 },
+    { "name": "Conference G", "value": 65 },
+    { "name": "Conference H", "value": 75 },
+    { "name": "Journal T", "value": 45 },
+    { "name": "Journal S", "value": 25 },
+    { "name": "Conference I", "value": 120 },
+    { "name": "Conference J", "value": 100 },
+    { "name": "Journal R", "value": 50 },
+    { "name": "Journal Q", "value": 30 },
+    { "name": "Conference K", "value": 60 },
+    { "name": "Conference L", "value": 90 },
+    { "name": "Journal P", "value": 40 },
+    { "name": "Journal O", "value": 70 },
+    { "name": "Conference M", "value": 110 },
+    { "name": "Conference N", "value": 95 },
+    { "name": "Journal N", "value": 55 },
+    { "name": "Journal M", "value": 85 },
+    { "name": "Conference O", "value": 65 },
+    { "name": "Conference P", "value": 75 },
+    { "name": "Journal L", "value": 45 },
+    { "name": "Journal K", "value": 25 },
+    { "name": "Conference Q", "value": 120 },
+    { "name": "Conference R", "value": 100 },
+    { "name": "Journal J", "value": 50 },
+    { "name": "Journal I", "value": 30 },
+    { "name": "Conference S", "value": 60 },
+    { "name": "Conference T", "value": 90 },
+    { "name": "Journal H", "value": 40 },
+    { "name": "Journal G", "value": 70 },
+    { "name": "Conference U", "value": 110 },
+    { "name": "Conference V", "value": 95 },
+    { "name": "Journal F", "value": 55 },
+    { "name": "Journal E", "value": 85 },
+    { "name": "Conference W", "value": 65 },
+    { "name": "Conference X", "value": 75 },
+    { "name": "Journal D", "value": 45 },
+    { "name": "Journal C", "value": 25 }
+  ]
+}
+
+// 创建SVG画布的宽和高
+const width = 960;
+const height = 600;
+
+// 创建根节点
+const root = d3.hierarchy(data)
+  .sum(d => d.value)  // 聚合每个节点的value
+  .sort((a, b) => b.value - a.value);  // 根据value排序
+
+// 创建treemap布局
+d3.treemap()
+  .size([width, height])  // 定义布局的大小
+  .padding(2)  // 设置每个节点之间的间隔
+  (root);
+
+// 选择SVG元素
+const svg = d3.select("svg");
+
+// 绑定数据，创建每个矩形元素
+const nodes = svg.selectAll("g")
+  .data(root.leaves())
+  .enter()
+  .append("g")
+  .attr("transform", d => `translate(${d.x0},${d.y0})`);
+
+// 绘制矩形
+nodes.append("rect")
+  .attr("class", "node")
+  .attr("id", d => d.data.name)
+  .attr("width", d => d.x1 - d.x0)
+  .attr("height", d => d.y1 - d.y0)
+  .attr("fill", d => d3.schemeCategory10[Math.floor(Math.random() * 10)])
+  .on("mouseover", function(event, d) {
+    tooltip.style("visibility", "visible")
+      .text(d.data.name + ": " + d.data.value);  // 显示会议或期刊名称和文献数
+  })
+  .on("mousemove", function(event) {
+    tooltip.style("top", (event.pageY - 10) + "px")
+      .style("left", (event.pageX + 10) + "px");
+  })
+  .on("mouseout", function() {
+    tooltip.style("visibility", "hidden");
+  })
+    .on("click", function(){
+        console.log(1234567)
+    });
+
+// 添加文本标签
+nodes.append("text")
+  .attr("x", 5)  // 设置文本的X位置
+  .attr("y", 20) // 设置文本的Y位置
+  .text(d => d.data.name + ": " + d.data.value)
+  .attr("fill", "white");  // 设置文本颜色为白色
+
+</script>
+
+</body>
+</html>
