@@ -8,37 +8,39 @@ def format_author_response(response):
             "paper": record['p'].get('name'),
             "year": record['p'].get('year'),
             "venue": record['p'].get('source'),
+            "citation": record['p'].get('citation'),
             "keywords": [k.get('name') for k in record['keywords']],
             "department": record['d'].get('name') if record.get('d') else None
-        })
-    return formatted_results
-def format_paper_response(response):
-    formatted_results = []
-    for record in response:
-        formatted_results.append({
-            "type": "paper",
-            "paper": record['p'].get('name'),
-            "year": record['p'].get('year'),
-            "venue": record['p'].get('source'),
-            "author": record['a'].get('name'),
-            "abstract": record['p'].get('abstract'),
-            "keywords": [k.get('name') for k in record['keywords']]
         })
     return formatted_results
 # def format_paper_response(response):
 #     formatted_results = []
 #     for record in response:
-#         for related_paper in record['top_related_papers']:
-#             formatted_results.append({
-#                 "type": "paper",
-#                 "paper": related_paper.get('name'),
-#                 "year": related_paper.get('year'),
-#                 "venue": related_paper.get('source'),
-#                 "author": record['a'].get('name'),
-#                 "abstract": related_paper.get('abstract'),
-#                 "keywords": [k.get('name') for k in record['keywords']]
-#             })
+#         formatted_results.append({
+#             "type": "paper",
+#             "paper": record['p'].get('name'),
+#             "year": record['p'].get('year'),
+#             "venue": record['p'].get('source'),
+#             "author": record['a'].get('name'),
+#             "abstract": record['p'].get('abstract'),
+#             "keywords": [k.get('name') for k in record['keywords']]
+#         })
 #     return formatted_results
+def format_paper_response(response):
+    formatted_results = []
+    for record in response:
+        for related_paper in record['top_related_papers']:
+            formatted_results.append({
+                "type": "paper",
+                "paper": related_paper.get('name'),
+                "year": related_paper.get('year'),
+                "venue": related_paper.get('source'),
+                "citation": related_paper.get('citation'),
+                "author": record['a'].get('name'),
+                "abstract": related_paper.get('abstract'),
+                "keywords": [k.get('name') for k in record['keywords']]
+            })
+    return formatted_results
 def format_keyword_response(response):
     formatted_results = []
     for record in response:
@@ -49,6 +51,7 @@ def format_keyword_response(response):
                 "paper": p.get('name'),
                 "year": p.get('year'),
                 "venue": p.get('source'),
+                "citation": p.get('citation'),
                 "authors": [a.get('name') for a in record['authors']]
             })
     return formatted_results
@@ -76,6 +79,7 @@ def format_department_response(response):
                 "paper": paper.get('name'),
                 "year": paper.get('year'),
                 "venue": paper.get('source'),
+                "citation":paper.get('citation'),
                 "department": department_name
             })
     
@@ -100,18 +104,19 @@ def format_year_response(response):
         department_name = record['d'].get('name')  
         papers = record['papers']  # 获取作者的所有论文
         
-        # 统计部门内所有论文的总数
+        # 统计每年内所有论文的总数
         total_paper_count += len(papers)
         author_set.add(author_name)
         
         # 只返回前8篇论文
-        limited_papers = papers[:5]
+        limited_papers = papers[:3]
         
         for paper in limited_papers:
             formatted_results.append({
                 "author": author_name,
                 "paper": paper.get('name'),
                 "venue": paper.get('source'),
+                "citation": paper.get('citation'),
                 "keywords": paper.get('keywords'),
                 "department": department_name
             })
@@ -143,6 +148,7 @@ def format_venue_response(response):
                 "author": author_name,
                 "paper": paper.get('name'),
                 "year": paper.get('year'),
+                "citation": paper.get('citation'),
                 "keywords": paper.get('keywords'),
                 "department": department_name
             })
@@ -165,7 +171,9 @@ def format_author_year_response(response):
                 "author": author_name,
                 "paper": paper.get('name'),
                 "venue": paper.get('source'),
+                "citation": paper.get('citation'),
                 "keywords": paper.get('keywords'),  # 假设关键词是一个单一值或字符串
+                "year": paper.get("year")
                 # "abstract": paper.get('abstract')
             })
 
@@ -181,6 +189,7 @@ def format_author_author_response(responses):
             formatted_results.append({
                 "paper": paper.get('name'),
                 "venue": paper.get('source'),
+                "citation": paper.get('citation'),
                 "keywords": paper.get('keywords')  # 假设关键词是单一值或字符串
             })
 
@@ -196,6 +205,7 @@ def format_author_keyword_response(responses):
             "paper": papers.get('name'),
             "venue": papers.get('source'),
             "year": papers.get('year'),
+            "citation": paper.get('citation'),
             "keywords": papers.get('keywords')  # 假设关键词是一个单一值或字符串
         })
 
@@ -210,6 +220,7 @@ def format_author_venue_response(responses):
         formatted_results.append({
             "paper": papers.get('name'),
             "year": papers.get('year'),
+            "citation": papers.get('citation'),
             "keywords": papers.get('keywords')  # 假设关键词是一个单一值或字符串
             
         })
@@ -228,7 +239,9 @@ def format_department_year_response(responses):
                 "paper": paper.get('name'),
                 "author": author_name.get('name') ,
                 "venue": paper.get('source'),
-                "keywords": paper.get('keywords')  # 假设关键词是一个单一值或字符串
+                "citation": paper.get('citation'),
+                "keywords": paper.get('keywords'),  # 假设关键词是一个单一值或字符串
+                "year": paper.get("year")
             })
 
     return formatted_results
@@ -244,6 +257,7 @@ def format_department_keyword_response(responses):
             "venue": papers.get('source'),
             "year": papers.get('year'),
             "author": author_name.get('name'),
+            "citation": paper.get('citation'),
             "keywords": papers.get('keywords') 
         })
 
@@ -259,6 +273,7 @@ def format_department_venue_response(responses):
             "paper": papers.get('name'),
             "year": papers.get('year'),
             "author": author_name.get('name'),
+            "citation": papers.get('citation'),
             "keywords": papers.get('keywords') 
         })
 
@@ -274,6 +289,8 @@ def format_department_department_response(responses):
                 "paper": paper.get('name'),
                 "venue": paper.get('source'),
                 "year": paper.get('year'),
+                "citation": paper.get('citation'),
+                "abstract": paper.get('abstract'),
                 "keywords": paper.get('keywords')  # 假设关键词是单一值或字符串
             })
 
@@ -289,6 +306,7 @@ def format_keyword_year_response(responses):
             "paper": papers.get('name'),
             "author": author_name.get('name'),
             "venue": papers.get('source'),
+            "citation": papers.get('citation'),
             "keywords": papers.get('keywords')
         })
 
@@ -303,6 +321,7 @@ def format_keyword_venue_response(responses):
             "paper": papers.get('name'),
             "year": papers.get('year'),
             "author": author_name.get('name'),
+            "citation": papers.get('citation'),
             "keywords": papers.get('keywords')
         })
 
@@ -317,6 +336,7 @@ def format_year_venue_response(responses):
         formatted_results.append({
             "paper": papers.get('name'),
             "author": author_name.get('name'),
+            "citation": papers.get('citation'),
             "keywords": papers.get('keywords')
         })
 

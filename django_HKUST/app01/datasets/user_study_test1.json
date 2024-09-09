@@ -1,0 +1,974 @@
+{
+    "nodes": [
+        {
+            "citation": 1,
+            "name": "capsaicin",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "information systems",
+            "group": 2
+        },
+        {
+            "group": 0,
+            "venue": "Article",
+            "authors": "Xinyi Luo, Yuyang Wang, Lik-Hang Lee, Zihan Xing, Shan Jin, Boya Dong, Yuanyi Hu, Zeming Chen, Jing Yan, Pan Hui",
+            "id": "luo2024using",
+            "count": 0,
+            "released": "2024",
+            "name": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior",
+            "citation": 0
+        },
+        {
+            "name": "arts and humanities",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "prototype",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "group": 0,
+            "released": "2021",
+            "citation": 15,
+            "venue": "Article",
+            "count": 0,
+            "id": "jiang2021douleur",
+            "authors": "Chutian Jiang, Yanjun Chen, Mingming Fan, Liuping Wang, Luyao Shen, Nianlong Li, Wei Sun, Yu Zhang, Feng Tian, Teng Han",
+            "name": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality"
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "communication"
+        },
+        {
+            "name": "authoring tools",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "group": 0,
+            "venue": "Article",
+            "count": 0,
+            "citation": 0,
+            "released": "2024",
+            "id": "cao2024nftracer",
+            "authors": "Yifan Cao, Qing Shi, Lue Shen, Kani Chen, Yang Wang, Wei Zeng, Huamin Qu"
+        },
+        {
+            "name": "CMA",
+            "group": 1
+        },
+        {
+            "name": "interaction design",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "dof"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "pain sensation"
+        },
+        {
+            "group": 0,
+            "released": "2023",
+            "venue": "Conference paper",
+            "count": 0,
+            "authors": "Shihan Fu, Liangliang Qiang, Wei Zeng",
+            "name": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "id": "fu2023loop",
+            "citation": 0
+        },
+        {
+            "name": "evaluation",
+            "group": 2,
+            "citation": 2
+        },
+        {
+            "id": "tan2024wieldingcanvas",
+            "group": 0,
+            "authors": "Xiaohui Tan, Zhenxuan He, Can Liu, Mingming Fan, Tianren Luo, Zitao Liu, Mi Tian, Teng Han, Feng Tian",
+            "venue": "Conference paper",
+            "count": 0,
+            "released": "2024",
+            "citation": 0,
+            "name": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR"
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "interaction paradigms"
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "substitutive systems"
+        },
+        {
+            "name": "human-centered computing",
+            "citation": 7,
+            "group": 2
+        },
+        {
+            "authors": "Wai Tong, Haotian Li, Huan Wei, Liwenhan Xie, Yanna Lin, Huamin Qu",
+            "name": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning",
+            "group": 0,
+            "venue": "Conference paper",
+            "citation": 2,
+            "count": 0,
+            "released": "2022",
+            "id": "tong2022let"
+        },
+        {
+            "name": "interaction",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "name": "safety education",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "group": 0,
+            "id": "yuan2024generating",
+            "venue": "Conference paper",
+            "authors": "Lin-Ping Yuan, Boyu Li, Jindong Wang, Huamin Qu, Wei Zeng",
+            "count": 0,
+            "released": "2024",
+            "citation": 0
+        },
+        {
+            "name": "hand gestures",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "simulator",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "human-centered computing; virtual reality",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "virtual mirror"
+        },
+        {
+            "name": "impact dynamics analysis",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "the metaverse"
+        },
+        {
+            "name": "mindfulness",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "literature review"
+        },
+        {
+            "name": "human-computer interaction",
+            "group": 2,
+            "citation": 3
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "meditation"
+        },
+        {
+            "citation": 1,
+            "name": "multimedia streaming",
+            "group": 2
+        },
+        {
+            "name": "3d modeling",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "DSA",
+            "group": 1
+        },
+        {
+            "name": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data",
+            "id": "lin2023body",
+            "group": 0,
+            "released": "2023",
+            "venue": "Conference paper",
+            "count": 0,
+            "citation": 1,
+            "authors": "Rem RunGu Lin, Yongen Ke, Kang Zhang"
+        },
+        {
+            "name": "virtual reality",
+            "citation": 24,
+            "group": 2
+        },
+        {
+            "name": "3d authoring",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "user interfaces"
+        },
+        {
+            "name": "user experience",
+            "group": 2,
+            "citation": 3
+        },
+        {
+            "name": "visual\nanalytics",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "metaverse",
+            "citation": 12,
+            "group": 2
+        },
+        {
+            "group": 0,
+            "id": "du2024lightsword",
+            "venue": "Conference paper",
+            "count": 0,
+            "authors": "Qiuxin Du, Zhen Song, Haiyan Jiang, Xiaoying Wei, Dongdong Weng, Mingming Fan",
+            "released": "2024",
+            "citation": 0,
+            "name": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults"
+        },
+        {
+            "name": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "group": 0,
+            "authors": "Kit Yung Lam, Lik-Hang Lee, Pan Hui",
+            "venue": "Conference paper",
+            "id": "lam20223deformr",
+            "count": 0,
+            "citation": 4,
+            "released": "2022"
+        },
+        {
+            "name": "out of reach",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "wellness",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "image processing and computer vision",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "health"
+        },
+        {
+            "name": "anxiety",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "group": 0,
+            "id": "li2021vmirror",
+            "released": "2021",
+            "venue": "Conference paper",
+            "count": 0,
+            "authors": "Nianlong Li, Zhengquan Zhang, Can Liu, Zengyao Yang, Yinan Fu, Feng Tian, Teng Han, Mingming Fan",
+            "citation": 23
+        },
+        {
+            "name": "target selection",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "vmirror",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "citation": 4,
+            "name": "older adults",
+            "group": 2
+        },
+        {
+            "name": "non-fungible tokens (nfts)",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "name": "human computer interaction (hci)",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "chemistry learning",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "authors": "Shan Jin, Yuyang Wang, Lik-Hang Lee, Xinyi Luo, Pan Hui",
+            "group": 0,
+            "name": "Development of an immersive simulator for improving student chemistry learning efficiency",
+            "id": "jin2023development",
+            "released": "2023",
+            "venue": "Conference paper",
+            "count": 0,
+            "citation": 1
+        },
+        {
+            "group": 0,
+            "name": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "released": "2023",
+            "venue": "Conference paper",
+            "authors": "Xian Xu, Wai Tong, Zheng Wei, Meng Xia, Lik-Hang Lee, Huamin Qu",
+            "count": 0,
+            "id": "xu2023cinematography",
+            "citation": 4
+        },
+        {
+            "group": 2,
+            "name": "interview",
+            "citation": 8
+        },
+        {
+            "citation": 5,
+            "name": "vr",
+            "group": 2
+        },
+        {
+            "citation": 17,
+            "name": "visualization",
+            "group": 2
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "social vr"
+        },
+        {
+            "group": 0,
+            "venue": "Article",
+            "count": 0,
+            "id": "cao2024learning",
+            "released": "2024",
+            "name": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality",
+            "citation": 0,
+            "authors": "Zidong Cao, Zhan Wang, Yexin Liu, Yan-Pei Cao, Ying Shan, Wei Zeng, Lin Wang"
+        },
+        {
+            "authors": "Wenxiao Zhang, Feng Qian, Bo Han, Pan Hui",
+            "group": 0,
+            "released": "2021",
+            "venue": "Conference paper",
+            "count": 0,
+            "citation": 21,
+            "id": "zhang2021deepvista",
+            "name": "Deepvista: 16k panoramic cinema on your mobile device"
+        },
+        {
+            "group": 0,
+            "id": "wang2022reducing",
+            "name": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "venue": "Conference paper",
+            "count": 0,
+            "citation": 11,
+            "authors": "Xian Wang, Xiaoyu Mo, Mingming Fan, Lik-Hang Lee, Bertram Shi, Pan Hui",
+            "released": "2022"
+        },
+        {
+            "name": "occlusion",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "group": 0,
+            "authors": "Xiaoying Wei, Xiaofu Jin, Mingming Fan",
+            "venue": "Conference paper",
+            "count": 0,
+            "citation": 21,
+            "name": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "id": "wei2022communication",
+            "released": "2022"
+        },
+        {
+            "name": "nft transaction data",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "name": "raycasting",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "Huamin Qu",
+            "type": "Author",
+            "count": 126,
+            "group": 4
+        },
+        {
+            "name": "Wei Zeng",
+            "type": "Author",
+            "count": 45,
+            "group": 4
+        },
+        {
+            "name": "Kang Zhang",
+            "type": "Author",
+            "count": 39,
+            "group": 4
+        },
+        {
+            "name": "Mingming Fan",
+            "type": "Author",
+            "count": 70,
+            "group": 4
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 250,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data",
+            "target": "interaction design"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "chemistry learning",
+            "source": "Development of an immersive simulator for improving student chemistry learning efficiency"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "information systems",
+            "source": "Deepvista: 16k panoramic cinema on your mobile device",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "interaction paradigms",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior",
+            "target": "interview",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "interaction",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD",
+            "target": "vr"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Kang Zhang"
+        },
+        {
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "target": "vmirror",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "target": "human computer interaction (hci)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "target": "interaction paradigms",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
+            "target": "prototype"
+        },
+        {
+            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "source": "Wei Zeng",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        },
+        {
+            "target": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu"
+        },
+        {
+            "source": "Pan Hui",
+            "target": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "relationship": "OWNED_BY",
+            "source": "Wei Zeng"
+        },
+        {
+            "target": "safety education",
+            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior",
+            "relationship": "HAS_KEYWORD",
+            "target": "anxiety"
+        },
+        {
+            "target": "human-centered computing",
+            "source": "Deepvista: 16k panoramic cinema on your mobile device",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality",
+            "relationship": "OWNED_BY",
+            "source": "Wei Zeng"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Wei Zeng",
+            "target": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Deepvista: 16k panoramic cinema on your mobile device"
+        },
+        {
+            "target": "pain sensation",
+            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data",
+            "target": "visualization"
+        },
+        {
+            "target": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "target": "3d modeling",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "the metaverse",
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "target": "metaverse"
+        },
+        {
+            "target": "dof",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "evaluation",
+            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "DSA",
+            "relationship": "BELONGS_TO",
+            "source": "Wei Zeng"
+        },
+        {
+            "target": "human-centered computing",
+            "source": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "substitutive systems",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Development of an immersive simulator for improving student chemistry learning efficiency"
+        },
+        {
+            "target": "health",
+            "source": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu",
+            "target": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
+            "target": "user experience",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "target": "older adults"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "impact dynamics analysis",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "non-fungible tokens (nfts)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "meditation",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data",
+            "relationship": "HAS_KEYWORD",
+            "target": "arts and humanities"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "relationship": "HAS_KEYWORD",
+            "target": "authoring tools"
+        },
+        {
+            "target": "social vr",
+            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "human-centered computing; virtual reality",
+            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Deepvista: 16k panoramic cinema on your mobile device",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "target": "raycasting",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Development of an immersive simulator for improving student chemistry learning efficiency",
+            "target": "simulator"
+        },
+        {
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "target": "target selection",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Wei Zeng",
+            "target": "CMA"
+        },
+        {
+            "target": "capsaicin",
+            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "image processing and computer vision"
+        },
+        {
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "target": "3d authoring",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "visual\nanalytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD",
+            "target": "occlusion"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "target": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "meditation",
+            "source": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "human-centered computing",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "target": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "communication",
+            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "target": "human-centered computing",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "virtual reality",
+            "source": "Development of an immersive simulator for improving student chemistry learning efficiency"
+        },
+        {
+            "source": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior",
+            "target": "user interfaces",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "literature review",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality",
+            "target": "human-computer interaction",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu"
+        },
+        {
+            "target": "hand gestures",
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data",
+            "source": "Kang Zhang"
+        },
+        {
+            "target": "virtual mirror",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Deepvista: 16k panoramic cinema on your mobile device",
+            "relationship": "HAS_KEYWORD",
+            "target": "multimedia streaming"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Huamin Qu",
+            "target": "CMA"
+        },
+        {
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "target": "mindfulness",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "wellness",
+            "source": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Using a virtual reality interview simulator to explore factors influencing people\u2019s behavior",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "interaction paradigms",
+            "source": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "nft transaction data"
+        },
+        {
+            "source": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "target": "human-centered computing",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "target": "interaction design"
+        },
+        {
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD",
+            "target": "out of reach"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Douleur: creating pain sensation with chemical stimulant to enhance user experience in virtual reality",
+            "relationship": "HAS_KEYWORD"
+        }
+    ]
+}

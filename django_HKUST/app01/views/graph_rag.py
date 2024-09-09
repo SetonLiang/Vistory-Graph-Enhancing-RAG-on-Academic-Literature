@@ -500,30 +500,30 @@ def query_author(author_name):
     """
     return session.run(query, {"name": author_name})
 
-def query_paper(paper_title):
-    """Query for paper-related information."""
-    query = """
-        MATCH (p:Papers)
-        WHERE apoc.text.clean(p.name) = apoc.text.clean($title)
-        OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
-        OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
-        RETURN p, collect(k) as keywords, a
-    """
-    return session.run(query, {"title": paper_title})
 # def query_paper(paper_title):
 #     """Query for paper-related information."""
 #     query = """
 #         MATCH (p:Papers)
 #         WHERE apoc.text.clean(p.name) = apoc.text.clean($title)
 #         OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
-#         OPTIONAL MATCH (k)<-[:HAS_KEYWORD]-(related_paper:Papers)
-#         WITH p, k, related_paper
-#         ORDER BY related_paper.citation DESC
-#         WITH p, k, collect(related_paper)[0..5] as top_related_papers
 #         OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
-#         RETURN p, collect(k) as keywords, a, top_related_papers
+#         RETURN p, collect(k) as keywords, a
 #     """
 #     return session.run(query, {"title": paper_title})
+def query_paper(paper_title):
+    """Query for paper-related information."""
+    query = """
+        MATCH (p:Papers)
+        WHERE apoc.text.clean(p.name) = apoc.text.clean($title)
+        OPTIONAL MATCH (p)-[:HAS_KEYWORD]->(k:Keyword)
+        OPTIONAL MATCH (k)<-[:HAS_KEYWORD]-(related_paper:Papers)
+        WITH p, k, related_paper
+        ORDER BY related_paper.citation DESC
+        WITH p, k, collect(related_paper)[0..5] as top_related_papers
+        OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
+        RETURN p, collect(k) as keywords, a, top_related_papers
+    """
+    return session.run(query, {"title": paper_title})
 
 def query_keyword(keyword_name):
     """Query for keyword-related information."""
@@ -575,9 +575,20 @@ def query_combined_entities(entities):
     query_author_year = """
         MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)-[:PUBLISHED_IN]->(y:Year)
         WHERE apoc.text.clean(a.name) = apoc.text.clean($author_name)
-        AND y.name = $year
-        RETURN a, collect(p) as papers, y
+        AND y.name in $year
+        WITH a, p, y
+        ORDER BY toInteger(p.citation) DESC  
+        RETURN a, collect(p)[0..20] as papers, y 
     """
+    """
+    1. citation排序
+    WITH a, p, y
+    ORDER BY p.citations DESC  // Assuming you have a citation or other metric for ordering
+    RETURN a, collect(p)[0..20] as papers, y  // Limit to the top 20 papers per year
+
+    2. RETURN a, collect(p) as papers, y
+    """
+
     query_author_keyword = """
         MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)-[:HAS_KEYWORD]->(k:Keyword)
         WHERE apoc.text.clean(a.name) = apoc.text.clean($author_name)
@@ -596,7 +607,10 @@ def query_combined_entities(entities):
         MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)-[:PUBLISHED_IN]->(y:Year)
         WHERE apoc.text.clean(d.name) = apoc.text.clean($department_name)
         AND y.name in $year
-        RETURN d, a, y, collect(p) as papers
+        WITH d, y, a, p
+        ORDER BY y.name, toInteger(p.citation) DESC 
+        WITH d, y, a, collect(p)[0..20] as papers
+        RETURN d, a, papers, y  
     """
     query_department_keyword = """
         MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)-[:HAS_KEYWORD]->(k:Keyword)
@@ -642,7 +656,7 @@ def query_combined_entities(entities):
     # Example for combining author and year entities
     if "Author" in entities.values() and "Year" in entities.values():
         author_name = clean_entity_name(get_key(entities,'Author')[0])
-        year = get_key(entities,'Year')[0]
+        year = get_key(entities,'Year')
         return session.run(query_author_year, {"author_name": author_name, "year": year})
     
     if "Author" in entities.values() and "Keyword" in entities.values():
@@ -717,7 +731,7 @@ def query_combined_entities(entities):
     if len(departments) > 1:
         # 动态构建MATCH查询部分，包含所有部门
         match_clause = "MATCH " + ", ".join(
-            [f"(d{i}:Department)<-[:BELONGS_TO]-(a{i}:Author)-[:OWNED_BY]->(p{i}:Papers)" for i in range(len(departments))]
+            [f"(d{i}:Department)<-[:BELONGS_TO]-(a{i}:Author)<-[:OWNED_BY]-(p{i}:Papers)" for i in range(len(departments))]
         )
 
         # 构建WHERE子句，用于过滤每个部门的名字
@@ -952,7 +966,7 @@ def retriever(question: str):
     structured_results = structured_data.get('results', [])
     print(structured_results)
     # unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
-    unstructured_data = similarity_search(question, file_path, k=10)
+    unstructured_data = similarity_search(question, file_path, k=5)
     unstructured_data = format_unstructured_data(unstructured_data)
 
     if structured_results != []:
@@ -963,8 +977,12 @@ def retriever(question: str):
         relevant_paper = relevant_paper[:20]
     print(relevant_paper)
     paper_entity = make_entity_json(relevant_paper,session)
-    with open('app01/datasets/test.json', 'w') as f:
-        json.dump(paper_entity, f, indent=4)
+    if question == "What are the latest research findings in the area of virtual reality?":
+        with open('app01/datasets/user_study_test1.json', 'w') as f:
+            json.dump(paper_entity, f, indent=4)
+    else:
+        with open('app01/datasets/test.json', 'w') as f:
+            json.dump(paper_entity, f, indent=4)
     final_data = f"""Structured data: 
                     {structured_data}
                     Unstructured data:
