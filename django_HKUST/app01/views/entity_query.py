@@ -71,7 +71,7 @@ def format_department_response(response):
         author_set.add(author_name)
         
         # 只返回前8篇论文
-        limited_papers = papers[:10]
+        limited_papers = papers[:6]
         
         for paper in limited_papers:
             formatted_results.append({
@@ -109,7 +109,7 @@ def format_year_response(response):
         author_set.add(author_name)
         
         # 只返回前8篇论文
-        limited_papers = papers[:3]
+        limited_papers = papers[:2]
         
         for paper in limited_papers:
             formatted_results.append({
@@ -205,7 +205,7 @@ def format_author_keyword_response(responses):
             "paper": papers.get('name'),
             "venue": papers.get('source'),
             "year": papers.get('year'),
-            "citation": paper.get('citation'),
+            "citation": papers.get('citation'),
             "keywords": papers.get('keywords')  # 假设关键词是一个单一值或字符串
         })
 
@@ -229,12 +229,23 @@ def format_author_venue_response(responses):
 
 def format_department_year_response(responses):
     formatted_results = []
+    author_set = set() 
+    total_paper_count = 0
 
     for record in responses:
         papers = record['papers']  # 获取所有论文
         author_name = record['a']
+
+        # 统计部门内所有论文的总数
+        total_paper_count += len(papers)
+        author_set.add(author_name)
+        
+        # 只返回前8篇论文
+        limited_papers = papers[:8]
+        
         # 遍历每篇论文并将其添加到结果列表
-        for paper in papers:
+        # for paper in papers:
+        for paper in limited_papers:
             formatted_results.append({
                 "paper": paper.get('name'),
                 "author": author_name.get('name') ,
@@ -257,7 +268,7 @@ def format_department_keyword_response(responses):
             "venue": papers.get('source'),
             "year": papers.get('year'),
             "author": author_name.get('name'),
-            "citation": paper.get('citation'),
+            "citation": papers.get('citation'),
             "keywords": papers.get('keywords') 
         })
 

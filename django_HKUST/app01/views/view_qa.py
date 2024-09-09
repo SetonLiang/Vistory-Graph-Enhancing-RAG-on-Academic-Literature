@@ -40,7 +40,7 @@ def chat(request):
                         "question": graph_rag.RunnablePassthrough(),
                     })
                     | answer_prompt
-                    | graph_rag.ChatOpenAI(temperature=0,model='gpt-4',streaming=True)
+                    | graph_rag.ChatOpenAI(temperature=0,model='gpt-4o',streaming=True)
                     | graph_rag.StrOutputParser()
             )
         start_time = time.time()

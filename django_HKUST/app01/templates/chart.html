@@ -261,6 +261,7 @@
         svg.append("g")
             .attr("class", "x-axis")
             .attr("transform", `translate(0,${chartHeight - marginBottom})`)
+            .attr("font-size", "20px")
             .call(d3.axisBottom(x).tickSizeOuter(0));
 
         svg.append("g")

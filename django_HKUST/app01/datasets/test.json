@@ -1,452 +1,162 @@
 {
     "nodes": [
         {
-            "authors": "Ziqi Gao, Xiangguo Sun, Zijing Liu, Yu Li, Hong Cheng, Jia Li",
-            "venue": "Article",
-            "id": "gao2024protein",
-            "group": 0,
-            "name": "Protein Multimer Structure Prediction via Prompt Learning",
-            "citation": 5,
-            "count": 0,
-            "released": "2024"
+            "citation": 2,
+            "group": 2,
+            "name": "ai for drug discovery"
         },
         {
-            "citation": 0,
-            "venue": "Article",
-            "name": "MultiFun-DAG: Multivariate Functional Directed Acyclic Graph",
-            "group": 0,
-            "id": "lan2024multifun",
-            "count": 0,
-            "released": "2024",
-            "authors": "Tian Lan, Ziyue Li, Junpeng Lin, Zhishuai Li, Lei Bai, Man Li, Fugee Tsung, Rui Zhao, Chen Zhang"
+            "group": 2,
+            "citation": 4,
+            "name": "human-ai collaboration"
         },
         {
             "group": 2,
             "citation": 1,
-            "name": "harmful memes"
+            "name": "intelligent user interface(ui) design"
         },
         {
-            "authors": "Jiexia Ye, Weiqi Zhang, Ke Yi, Yongzi Yu, Ziyue Li, Jia Li, Fugee Tsung",
-            "id": "ye2024survey",
-            "venue": "Article",
-            "group": 0,
-            "name": "A Survey of Time Series Foundation Models: Generalizing Time Series Representation with Large Language Mode",
-            "count": 0,
-            "released": "2024",
-            "citation": 1
-        },
-        {
-            "group": 2,
-            "name": "tensor decomposition",
-            "citation": 1
-        },
-        {
-            "name": "semantic segmentation",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "name": "process-supervised verifier",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "group": 1,
-            "name": "AI"
-        },
-        {
-            "citation": 2,
-            "name": "vision transformers",
+            "name": "quantitative investment",
+            "citation": 1,
             "group": 2
-        },
-        {
-            "name": "recurrent neural network",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "venue": "Article",
-            "group": 0,
-            "id": "zhou2024actionhub",
-            "count": 0,
-            "released": "2024",
-            "citation": 4,
-            "authors": "Jiaming Zhou, Junwei Liang, Kun-Yu Lin, Jinrui Yang, Wei-Shi Zheng",
-            "name": "Actionhub: a large-scale action video description dataset for zero-shot action recognition"
-        },
-        {
-            "group": 2,
-            "name": "quantization aware training",
-            "citation": 1
-        },
-        {
-            "group": 2,
-            "citation": 3,
-            "name": "action recognition"
-        },
-        {
-            "citation": 2,
-            "group": 2,
-            "name": "pseudo labeling"
-        },
-        {
-            "id": "hu2024complexity",
-            "venue": "Article",
-            "group": 0,
-            "authors": "Tianyang Hu, Fei Chen, Haonan Wang, Jiawei Li, Wenjia Wang, Jiacheng Sun, Zhenguo Li",
-            "citation": 5,
-            "count": 0,
-            "released": "2024",
-            "name": "Complexity matters: Rethinking the latent space for generative modeling"
-        },
-        {
-            "group": 2,
-            "name": "scene understanding",
-            "citation": 1
-        },
-        {
-            "group": 2,
-            "name": "lstm",
-            "citation": 1
         },
         {
             "group": 1,
             "name": "DSA"
         },
         {
-            "name": "prompt learning",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "group": 2,
-            "name": "spatiotemporal forecasting",
-            "citation": 1
-        },
-        {
-            "name": "directed acyclic graph",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "zero-shot action recognition"
-        },
-        {
-            "name": "generative pretrained transformer",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "citation": 0,
-            "group": 0,
-            "authors": "Xiaolong Chen, Yifan Song, Jing Tang",
-            "id": "chen2024link",
-            "count": 0,
-            "released": "2024",
-            "name": "Link Recommendation to Augment Influence Diffusion with Provable Guarantees",
-            "venue": "Conference paper"
-        },
-        {
-            "venue": "Article",
-            "group": 0,
-            "id": "tang2024vmrnn",
-            "name": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "count": 0,
-            "released": "2024",
-            "authors": "Yujin Tang, Peijie Dong, Zhenheng Tang, Xiaowen Chu, Junwei Liang",
-            "citation": 7
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "quality of service"
-        },
-        {
-            "group": 2,
-            "name": "long-term",
-            "citation": 1
-        },
-        {
-            "name": "time series",
-            "group": 2,
-            "citation": 5
-        },
-        {
-            "name": "4d point cloud",
-            "group": 2,
-            "citation": 2
-        },
-        {
-            "name": "graph neural networks",
-            "group": 2,
-            "citation": 18
-        },
-        {
-            "name": "lean 4",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "name": "patch-mixing",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "citation": 36,
-            "group": 2,
-            "name": "large language models"
-        },
-        {
-            "name": "cnns",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "group": 2,
-            "name": "multi-attribute face manipulation",
-            "citation": 1
-        },
-        {
-            "name": "forecasting",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "group": 2,
-            "name": "vits",
-            "citation": 1
-        },
-        {
-            "name": "subspace clustering",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "citation": 0,
-            "venue": "Article",
-            "group": 0,
-            "authors": "Jiuyun Hu, Ziyue Li, Chen Zhang, Fugee Tsung, Hao Yan",
-            "count": 0,
-            "released": "2024",
-            "name": "Low-Rank Robust Subspace Tensor Clustering for Metro Passenger Flow Modeling",
-            "id": "hu2024low"
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "action video description dataset"
-        },
-        {
-            "group": 2,
-            "name": "protein-protein interactions",
-            "citation": 1
-        },
-        {
-            "group": 2,
-            "name": "textual description",
-            "citation": 1
-        },
-        {
-            "venue": "Article",
-            "group": 0,
-            "name": "PatchMixer: A Patch-Mixing Architecture for Long-Term Time Series Forecasting",
-            "count": 0,
-            "citation": 8,
-            "released": "2024",
-            "authors": "Zeying Gong, Yujin Tang, Junwei Liang",
-            "id": "gong2023patchmixer"
-        },
-        {
-            "id": "zhao2024all",
-            "name": "All in One and One for All: A Simple yet Effective Method towards Cross-domain Graph Pretraining",
-            "venue": "Article",
-            "group": 0,
-            "citation": 6,
-            "count": 0,
-            "authors": "Haihong Zhao, Aochuan Chen, Xiangguo Sun, Hong Cheng, Jia Li",
-            "released": "2024"
-        },
-        {
-            "name": "functional data",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "citation": 0,
-            "venue": "Article",
-            "authors": "Jianqiao Lu, Zhengying Liu, Yingjia Wan, Yinya Huang, Haiming Wang, Zhicheng Yang, Jing Tang, Zhijiang Guo",
-            "group": 0,
-            "id": "lu2024process",
-            "count": 0,
-            "name": "Process-Driven Autoformalization in Lean 4",
-            "released": "2024"
-        },
-        {
-            "name": "multimodal detection",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "citation": 2,
-            "group": 2,
-            "name": "pretraining"
-        },
-        {
-            "citation": 2,
-            "group": 2,
-            "name": "batch inference"
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "bursty workloads"
-        },
-        {
-            "authors": "Dayou Du, Yijia Zhang, Shijie Cao, Jiaqi Guo, Ting Cao, Xiaowen Chu, Ningyi Xu",
-            "venue": "Article",
-            "group": 0,
-            "citation": 3,
-            "count": 0,
-            "released": "2024",
-            "name": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
-            "id": "du2024bitdistiller"
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "rnns"
-        },
-        {
-            "group": 2,
-            "name": "causal structure learning",
-            "citation": 1
-        },
-        {
-            "name": "spatiotemporal analysis",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "citation": 2,
-            "group": 2,
-            "name": "prompt tuning"
-        },
-        {
-            "name": "mamba",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "venue": "Article",
-            "authors": "Yuxin Wang, Yuhan Chen, Zeyu Li, Zhenheng Tang, Rui Guo, Xin Wang, Qiang Wang, Amelie Chi Zhou, Xiaowen Chu",
-            "group": 0,
-            "name": "Towards Efficient and Reliable LLM Serving: A Real-World Workload Study",
-            "id": "wang2024towards",
-            "count": 0,
-            "released": "2024",
-            "citation": 4
-        },
-        {
-            "id": "wang2024proving",
-            "citation": 0,
-            "venue": "Article",
-            "group": 0,
-            "name": "Proving Theorems Recursively",
-            "count": 0,
-            "released": "2024",
-            "authors": "Haiming Wang, Huajian Xin, Zhengying Liu, Wenda Li, Yinya Huang, Jianqiao Lu, Zhicheng Yang, Jing Tang, Jian Yin, Zhenguo Li, Xiaodan Liang"
-        },
-        {
-            "id": "wang2024maniclip",
-            "name": "Maniclip: Multi-attribute face manipulation from text",
-            "venue": "Article",
-            "group": 0,
-            "citation": 6,
-            "count": 0,
-            "released": "2024",
-            "authors": "Hao Wang, Guosheng Lin, Ana Garc\u00eda del Molino, Anran Wang, Jiashi Feng, Zhiqi Shen"
-        },
-        {
-            "name": "gpu serving",
-            "group": 2,
-            "citation": 1
-        },
-        {
-            "citation": 2,
-            "name": "benchmarking",
-            "group": 2
-        },
-        {
-            "citation": 2,
-            "group": 2,
-            "name": "anomaly detection"
-        },
-        {
-            "id": "cao2024ospc",
-            "name": "OSPC: Detecting Harmful Memes with Large Language Model as a Catalyst",
-            "citation": 0,
-            "venue": "Article",
-            "group": 0,
-            "authors": "Jingtao Cao, Zheng Zhang, Hongru Wang, Bin Liang, Hao Wang, Kam-Fai Wong",
-            "count": 0,
-            "released": "2024"
-        },
-        {
-            "name": "texts",
-            "group": 2,
-            "citation": 2
-        },
-        {
             "group": 2,
             "citation": 4,
-            "name": "influence maximization"
+            "name": "chatgpt"
         },
         {
-            "citation": 0,
-            "venue": "Article",
-            "group": 0,
-            "name": "Learning Temporal Variations for 4D Point Cloud Segmentation",
-            "authors": "Hanyu Shi, Jiacheng Wei, Hao Wang, Fayao Liu, Guosheng Lin",
-            "count": 0,
-            "released": "2024",
-            "id": "shi2024learning"
-        },
-        {
-            "id": "wang2024deep",
-            "citation": 0,
-            "venue": "Article",
-            "group": 0,
-            "name": "Deep Insights into Noisy Pseudo Labeling on Graph Data",
-            "count": 0,
-            "released": "2024",
-            "authors": "Botao Wang, Jia Li, Yang Liu, Jiashun Cheng, Yu Rong, Wenjia Wang, Fugee Tsung"
-        },
-        {
-            "name": "social networks",
-            "citation": 3,
+            "name": "explainable ai",
+            "citation": 1,
             "group": 2
         },
         {
-            "id": "botao2023deep",
-            "authors": "WANG Botao, Jia Li, Yang Liu, Jiashun Cheng, Yu Rong, Wenjia Wang, Fugee Tsung",
-            "citation": 3,
-            "group": 0,
-            "name": "Deep Insights into Noisy Pseudo Labeling on Graph Data",
+            "name": "CMA",
+            "group": 1
+        },
+        {
+            "name": "think-aloud usability test",
+            "citation": 1,
+            "group": 2
+        },
+        {
             "released": "2023",
+            "venue": "arXiv preprint arXiv:2309.15723",
+            "group": 0,
             "count": 0,
-            "venue": "Conference paper"
+            "id": "li2023we",
+            "name": "Where Are We So Far? Understanding Data Storytelling Tools from the Perspective of Human-AI Collaboration",
+            "authors": "Haotian Li, Yun Wang, Huamin Qu",
+            "citation": 8
+        },
+        {
+            "name": "explanation",
+            "citation": 1,
+            "group": 2
         },
         {
             "citation": 2,
-            "group": 2,
-            "name": "convolutional neural networks"
+            "name": "imbalanced learning",
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "name": "detection",
+            "group": 2
+        },
+        {
+            "released": "2023",
+            "group": 0,
+            "count": 0,
+            "name": "Alpha-gpt: Human-ai interactive alpha mining for quantitative investment",
+            "citation": 6,
+            "authors": "Saizhuo Wang, Hang Yuan, Leon Zhou, Lionel M Ni, Heung-Yeung Shum, Jian Guo",
+            "venue": "arXiv preprint arXiv:2308.00016",
+            "id": "wang2023alpha"
+        },
+        {
+            "name": "AI",
+            "group": 1
+        },
+        {
+            "name": "user experience(ux)",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "released": "2023",
+            "group": 0,
+            "id": "chen2022large",
+            "count": 0,
+            "citation": 15,
+            "authors": "Nuo Chen, Yan Wang, Haiyun Jiang, Deng Cai, Yuhan Li, Ziyang Chen, Longyue Wang, Jia Li",
+            "venue": "EMNLP Findings",
+            "name": "Large Language Models Meet Harry Potter: A Bilingual Dataset for Aligning Dialogue Agents with Characters"
+        },
+        {
+            "citation": 2,
+            "name": "long-tailed learning",
+            "group": 2
+        },
+        {
+            "released": "2023",
+            "group": 0,
+            "count": 0,
+            "venue": "arXiv preprint arXiv:2310.14479",
+            "citation": 2,
+            "name": "DetectGPT-SC: Improving Detection of Text Generated by Large Language Models through Self-Consistency with Masked Predictions",
+            "id": "wang2023detectgpt",
+            "authors": "Rongsheng Wang, Qi Li, Sihong Xie"
+        },
+        {
+            "citation": 22,
+            "name": "large language models",
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "name": "data storytelling",
+            "group": 2
+        },
+        {
+            "name": "ai-assisted ux evaluation",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "name": "synchronization",
+            "citation": 1,
+            "group": 2
+        },
+        {
+            "authors": "Mingming Fan, Xianyou Yang, TszTung Yu, Q Vera Liao, Jian Zhao",
+            "group": 0,
+            "count": 0,
+            "venue": "Proceedings of the ACM on Human-Computer Interaction",
+            "released": "2022",
+            "name": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
+            "citation": 30,
+            "id": "fan2022human"
+        },
+        {
+            "citation": 2,
+            "name": "deep learning benchmark",
+            "group": 2
         },
         {
             "group": 2,
-            "name": "knowledge distillation",
+            "name": "text generation",
             "citation": 1
+        },
+        {
+            "name": "Huamin Qu",
+            "type": "Author",
+            "count": 126,
+            "group": 4
         },
         {
             "name": "Jia Li",
@@ -455,452 +165,174 @@
             "group": 4
         },
         {
-            "name": "Fugee Tsung",
+            "name": "Lionel Ni",
             "type": "Author",
-            "count": 57,
+            "count": 20,
             "group": 4
         },
         {
-            "name": "Wenjia Wang",
+            "name": "Sihong Xie",
             "type": "Author",
-            "count": 21,
+            "count": 25,
             "group": 4
         },
         {
-            "name": "Jing Tang",
+            "name": "Mingming Fan",
             "type": "Author",
-            "count": 38,
-            "group": 4
-        },
-        {
-            "name": "Hao Wang",
-            "type": "Author",
-            "count": 19,
-            "group": 4
-        },
-        {
-            "name": "Junwei Liang",
-            "type": "Author",
-            "count": 30,
-            "group": 4
-        },
-        {
-            "name": "Xiaowen Chu",
-            "type": "Author",
-            "count": 93,
+            "count": 70,
             "group": 4
         }
     ],
     "links": [
         {
-            "target": "large language models",
-            "source": "A Survey of Time Series Foundation Models: Generalizing Time Series Representation with Large Language Mode",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
-            "target": "large language models",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "time series",
-            "source": "A Survey of Time Series Foundation Models: Generalizing Time Series Representation with Large Language Mode",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "target": "mamba",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "target": "convolutional neural networks",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "Proving Theorems Recursively",
-            "source": "Jing Tang"
-        },
-        {
-            "source": "OSPC: Detecting Harmful Memes with Large Language Model as a Catalyst",
-            "target": "multimodal detection",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Low-Rank Robust Subspace Tensor Clustering for Metro Passenger Flow Modeling",
-            "relationship": "HAS_KEYWORD",
-            "target": "subspace clustering"
-        },
-        {
-            "target": "directed acyclic graph",
-            "source": "MultiFun-DAG: Multivariate Functional Directed Acyclic Graph",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "functional data",
-            "source": "MultiFun-DAG: Multivariate Functional Directed Acyclic Graph",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Maniclip: Multi-attribute face manipulation from text",
-            "target": "textual description",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Wenjia Wang",
-            "target": "Complexity matters: Rethinking the latent space for generative modeling"
-        },
-        {
-            "target": "Deep Insights into Noisy Pseudo Labeling on Graph Data",
-            "source": "Jia Li",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "All in One and One for All: A Simple yet Effective Method towards Cross-domain Graph Pretraining",
-            "source": "Jia Li",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "target": "Link Recommendation to Augment Influence Diffusion with Provable Guarantees",
-            "source": "Jing Tang"
-        },
-        {
-            "source": "Junwei Liang",
-            "target": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "target": "cnns",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Junwei Liang",
-            "target": "Actionhub: a large-scale action video description dataset for zero-shot action recognition",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "A Survey of Time Series Foundation Models: Generalizing Time Series Representation with Large Language Mode",
-            "source": "Fugee Tsung",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
-            "relationship": "HAS_KEYWORD",
-            "target": "knowledge distillation"
-        },
-        {
-            "target": "harmful memes",
-            "source": "OSPC: Detecting Harmful Memes with Large Language Model as a Catalyst",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "large language models",
-            "source": "OSPC: Detecting Harmful Memes with Large Language Model as a Catalyst",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "quality of service",
-            "relationship": "HAS_KEYWORD",
-            "source": "Towards Efficient and Reliable LLM Serving: A Real-World Workload Study"
-        },
-        {
-            "target": "large language models",
-            "relationship": "HAS_KEYWORD",
-            "source": "Towards Efficient and Reliable LLM Serving: A Real-World Workload Study"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "generative pretrained transformer",
-            "source": "Towards Efficient and Reliable LLM Serving: A Real-World Workload Study"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "gpu serving",
-            "source": "Towards Efficient and Reliable LLM Serving: A Real-World Workload Study"
-        },
-        {
-            "target": "quantization aware training",
-            "source": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Protein Multimer Structure Prediction via Prompt Learning",
-            "source": "Jia Li",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Fugee Tsung",
-            "target": "Low-Rank Robust Subspace Tensor Clustering for Metro Passenger Flow Modeling"
-        },
-        {
-            "source": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "target": "spatiotemporal forecasting",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "target": "vision transformers",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Maniclip: Multi-attribute face manipulation from text",
-            "relationship": "HAS_KEYWORD",
-            "target": "multi-attribute face manipulation"
-        },
-        {
-            "source": "Xiaowen Chu",
-            "target": "Towards Efficient and Reliable LLM Serving: A Real-World Workload Study",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "target": "recurrent neural network",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "long-term",
-            "source": "PatchMixer: A Patch-Mixing Architecture for Long-Term Time Series Forecasting",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "lean 4",
-            "source": "Process-Driven Autoformalization in Lean 4",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Junwei Liang",
             "target": "AI",
+            "source": "Sihong Xie",
             "relationship": "BELONGS_TO"
         },
         {
-            "source": "Hao Wang",
-            "target": "Learning Temporal Variations for 4D Point Cloud Segmentation",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "process-supervised verifier",
-            "source": "Process-Driven Autoformalization in Lean 4",
+            "target": "long-tailed learning",
+            "source": "Large Language Models Meet Harry Potter: A Bilingual Dataset for Aligning Dialogue Agents with Characters",
             "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Protein Multimer Structure Prediction via Prompt Learning",
-            "target": "protein-protein interactions"
-        },
-        {
-            "target": "MultiFun-DAG: Multivariate Functional Directed Acyclic Graph",
-            "source": "Fugee Tsung",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Hao Wang",
-            "target": "AI",
-            "relationship": "BELONGS_TO"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Actionhub: a large-scale action video description dataset for zero-shot action recognition",
-            "target": "action recognition"
         },
         {
             "target": "DSA",
             "relationship": "BELONGS_TO",
-            "source": "Jing Tang"
+            "source": "Lionel Ni"
         },
         {
-            "target": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
-            "source": "Xiaowen Chu",
-            "relationship": "OWNED_BY"
+            "source": "Large Language Models Meet Harry Potter: A Bilingual Dataset for Aligning Dialogue Agents with Characters",
+            "target": "ai for drug discovery",
+            "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "batch inference",
+            "target": "text generation",
             "relationship": "HAS_KEYWORD",
-            "source": "Towards Efficient and Reliable LLM Serving: A Real-World Workload Study"
+            "source": "DetectGPT-SC: Improving Detection of Text Generated by Large Language Models through Self-Consistency with Masked Predictions"
+        },
+        {
+            "target": "chatgpt",
+            "relationship": "HAS_KEYWORD",
+            "source": "DetectGPT-SC: Improving Detection of Text Generated by Large Language Models through Self-Consistency with Masked Predictions"
+        },
+        {
+            "source": "Where Are We So Far? Understanding Data Storytelling Tools from the Perspective of Human-AI Collaboration",
+            "relationship": "HAS_KEYWORD",
+            "target": "data storytelling"
+        },
+        {
+            "target": "ai-assisted ux evaluation",
+            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Alpha-gpt: Human-ai interactive alpha mining for quantitative investment",
+            "target": "large language models",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "imbalanced learning",
+            "source": "Large Language Models Meet Harry Potter: A Bilingual Dataset for Aligning Dialogue Agents with Characters",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Jia Li",
+            "target": "DSA",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
+            "target": "explanation"
+        },
+        {
+            "source": "Jia Li",
+            "relationship": "OWNED_BY",
+            "target": "Large Language Models Meet Harry Potter: A Bilingual Dataset for Aligning Dialogue Agents with Characters"
+        },
+        {
+            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
+            "relationship": "HAS_KEYWORD",
+            "target": "explainable ai"
         },
         {
             "relationship": "OWNED_BY",
-            "target": "Process-Driven Autoformalization in Lean 4",
-            "source": "Jing Tang"
+            "source": "Sihong Xie",
+            "target": "DetectGPT-SC: Improving Detection of Text Generated by Large Language Models through Self-Consistency with Masked Predictions"
         },
         {
-            "source": "Link Recommendation to Augment Influence Diffusion with Provable Guarantees",
-            "target": "influence maximization",
-            "relationship": "HAS_KEYWORD"
+            "relationship": "OWNED_BY",
+            "target": "Alpha-gpt: Human-ai interactive alpha mining for quantitative investment",
+            "source": "Lionel Ni"
         },
         {
-            "target": "A Survey of Time Series Foundation Models: Generalizing Time Series Representation with Large Language Mode",
-            "source": "Jia Li",
-            "relationship": "OWNED_BY"
+            "source": "Large Language Models Meet Harry Potter: A Bilingual Dataset for Aligning Dialogue Agents with Characters",
+            "relationship": "HAS_KEYWORD",
+            "target": "deep learning benchmark"
         },
         {
-            "target": "DSA",
-            "source": "Jia Li",
+            "target": "large language models",
+            "relationship": "HAS_KEYWORD",
+            "source": "DetectGPT-SC: Improving Detection of Text Generated by Large Language Models through Self-Consistency with Masked Predictions"
+        },
+        {
+            "source": "Mingming Fan",
+            "target": "CMA",
             "relationship": "BELONGS_TO"
         },
         {
-            "source": "Low-Rank Robust Subspace Tensor Clustering for Metro Passenger Flow Modeling",
-            "target": "tensor decomposition",
+            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
+            "relationship": "HAS_KEYWORD",
+            "target": "think-aloud usability test"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu",
+            "target": "Where Are We So Far? Understanding Data Storytelling Tools from the Perspective of Human-AI Collaboration"
+        },
+        {
+            "source": "Huamin Qu",
+            "target": "CMA",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "target": "human-ai collaboration",
+            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
             "relationship": "HAS_KEYWORD"
         },
         {
             "relationship": "OWNED_BY",
-            "source": "Hao Wang",
-            "target": "Maniclip: Multi-attribute face manipulation from text"
+            "target": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
+            "source": "Mingming Fan"
         },
         {
-            "relationship": "HAS_KEYWORD",
-            "source": "Protein Multimer Structure Prediction via Prompt Learning",
-            "target": "prompt learning"
-        },
-        {
-            "source": "Maniclip: Multi-attribute face manipulation from text",
-            "target": "texts",
+            "target": "synchronization",
+            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "Low-Rank Robust Subspace Tensor Clustering for Metro Passenger Flow Modeling",
-            "target": "anomaly detection",
+            "target": "user experience(ux)",
+            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "PatchMixer: A Patch-Mixing Architecture for Long-Term Time Series Forecasting",
-            "target": "patch-mixing",
+            "source": "Where Are We So Far? Understanding Data Storytelling Tools from the Perspective of Human-AI Collaboration",
+            "target": "human-ai collaboration",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "relationship": "HAS_KEYWORD",
-            "target": "vits"
-        },
-        {
-            "source": "PatchMixer: A Patch-Mixing Architecture for Long-Term Time Series Forecasting",
-            "target": "forecasting",
+            "target": "intelligent user interface(ui) design",
+            "source": "Human-ai collaboration for ux evaluation: Effects of explanation and synchronization",
             "relationship": "HAS_KEYWORD"
         },
         {
             "relationship": "HAS_KEYWORD",
-            "source": "Learning Temporal Variations for 4D Point Cloud Segmentation",
-            "target": "semantic segmentation"
+            "source": "Alpha-gpt: Human-ai interactive alpha mining for quantitative investment",
+            "target": "quantitative investment"
         },
         {
-            "source": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "target": "lstm",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "prompt tuning",
-            "source": "All in One and One for All: A Simple yet Effective Method towards Cross-domain Graph Pretraining",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
+            "target": "detection",
             "relationship": "HAS_KEYWORD",
-            "source": "Learning Temporal Variations for 4D Point Cloud Segmentation",
-            "target": "scene understanding"
-        },
-        {
-            "target": "Deep Insights into Noisy Pseudo Labeling on Graph Data",
-            "source": "Fugee Tsung",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Low-Rank Robust Subspace Tensor Clustering for Metro Passenger Flow Modeling",
-            "target": "spatiotemporal analysis",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Hao Wang",
-            "target": "OSPC: Detecting Harmful Memes with Large Language Model as a Catalyst",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "target": "rnns",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Deep Insights into Noisy Pseudo Labeling on Graph Data",
-            "target": "pseudo labeling",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "All in One and One for All: A Simple yet Effective Method towards Cross-domain Graph Pretraining",
-            "target": "graph neural networks",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Link Recommendation to Augment Influence Diffusion with Provable Guarantees",
-            "target": "social networks",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "4d point cloud",
-            "source": "Learning Temporal Variations for 4D Point Cloud Segmentation"
-        },
-        {
-            "target": "Deep Insights into Noisy Pseudo Labeling on Graph Data",
-            "source": "Wenjia Wang",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "DSA",
-            "source": "Xiaowen Chu",
-            "relationship": "BELONGS_TO"
-        },
-        {
-            "source": "Xiaowen Chu",
-            "target": "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "benchmarking",
-            "relationship": "HAS_KEYWORD",
-            "source": "Towards Efficient and Reliable LLM Serving: A Real-World Workload Study"
-        },
-        {
-            "target": "DSA",
-            "relationship": "BELONGS_TO",
-            "source": "Fugee Tsung"
-        },
-        {
-            "target": "zero-shot action recognition",
-            "source": "Actionhub: a large-scale action video description dataset for zero-shot action recognition",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "MultiFun-DAG: Multivariate Functional Directed Acyclic Graph",
-            "relationship": "HAS_KEYWORD",
-            "target": "causal structure learning"
-        },
-        {
-            "target": "pretraining",
-            "source": "All in One and One for All: A Simple yet Effective Method towards Cross-domain Graph Pretraining",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "DSA",
-            "source": "Wenjia Wang",
-            "relationship": "BELONGS_TO"
-        },
-        {
-            "target": "action video description dataset",
-            "source": "Actionhub: a large-scale action video description dataset for zero-shot action recognition",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "bursty workloads",
-            "relationship": "HAS_KEYWORD",
-            "source": "Towards Efficient and Reliable LLM Serving: A Real-World Workload Study"
-        },
-        {
-            "target": "PatchMixer: A Patch-Mixing Architecture for Long-Term Time Series Forecasting",
-            "source": "Junwei Liang",
-            "relationship": "OWNED_BY"
+            "source": "DetectGPT-SC: Improving Detection of Text Generated by Large Language Models through Self-Consistency with Masked Predictions"
         }
     ]
 }
