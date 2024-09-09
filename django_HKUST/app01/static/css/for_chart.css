@@ -10,7 +10,8 @@
 .chart {
     flex: 1; /* Make each chart occupy 25% of the container's width */
     height: 25%; /* Full height of the container */
-    border-bottom: 1px dashed #ccc; /* 添加边框 */
+    border: 2px solid #ccc; /* 添加边框 */
+    margin: 3px
 }
 
 svg {

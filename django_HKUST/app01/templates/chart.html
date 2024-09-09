@@ -31,10 +31,10 @@
     const containerWidth = d3.select('.chart_container').node().getBoundingClientRect().width;
     const containerHeight = d3.select('.chart_container').node().getBoundingClientRect().height;
     const chartWidth = containerWidth; // 每个图表宽度占容器的25%
-    const chartHeight = containerHeight / 4;
-    const marginTop = 30;
+    const chartHeight = containerHeight / 4 - 40;
+    const marginTop = 10;
     const marginRight = 30;
-    const marginBottom = 20;
+    const marginBottom = 10;
     const marginLeft = 50;
 
     // 通用的缩放功能
@@ -350,7 +350,7 @@
     // 绘制矩形和文本
     function drawTreemap(svg, data) {
         // 定义外部间距
-        const margin = {top: 20, right: 20, bottom: 20, left: 20};
+        const margin = {top: 10, right: 0, bottom: 10, left: 0};
         const width = 800 - margin.left - margin.right;  // 减去左右间距
         const height = 600 - margin.top - margin.bottom; // 减去上下间距
 
@@ -436,7 +436,7 @@
     }
 
 
-    const radius = Math.min(chartWidth, chartHeight) / 2 - 25;
+    const radius = Math.min(chartWidth, chartHeight) / 2 - 15;
 
     // 定义颜色比例尺
     const color_test = d3.scaleOrdinal(d3.schemeCategory10);
@@ -647,7 +647,6 @@
             .start();
 
     }
-
 
     function draw(words) {
         const margin = {top: 60, right: 60, bottom: 60, left: 60}; // 增加边距
