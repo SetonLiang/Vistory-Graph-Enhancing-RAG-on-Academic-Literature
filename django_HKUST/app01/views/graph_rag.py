@@ -221,7 +221,7 @@ entity_prompt = ChatPromptTemplate.from_messages([
 ])
 
 # 实体链
-entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-4').with_structured_output(Entities)
+entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-4o').with_structured_output(Entities)
 # print(entity_chain)
 # print(entity_chain.invoke({"question":"How many authors does CMA have?","examples":examples}).names)
 # print(structured_retriever("What are the key contributions of Kang Zhang's papers?"))
@@ -533,6 +533,7 @@ def query_keyword(keyword_name):
         OPTIONAL MATCH (k)<-[:HAS_KEYWORD]-(p:Papers)
         OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
         RETURN k, collect(p) as papers, collect(a) as authors
+        limit 40
     """
     return session.run(query, {"keyword": keyword_name})
 
@@ -821,7 +822,7 @@ def make_entity_json(relevant_paper,session):
                 'released': item['p']['year'],
                 'citation': int(item['p']['citation']),
                 'authors': item['p']['authors'],
-                'venue': item['p']['venue'],
+                'venue': item['p']['source'],
                 'group': 0,
                 'count': 0,
             }
@@ -973,8 +974,8 @@ def retriever(question: str):
         relevant_paper = [record.get('paper') for record in structured_results]
     else:
         relevant_paper = extract_paper_names(unstructured_data)
-    if len(relevant_paper)>20:
-        relevant_paper = relevant_paper[:20]
+    if len(relevant_paper)>30:
+        relevant_paper = relevant_paper[:30]
     print(relevant_paper)
     paper_entity = make_entity_json(relevant_paper,session)
     if question == "What are the latest research findings in the area of virtual reality?":
