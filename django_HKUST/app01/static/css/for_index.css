@@ -154,7 +154,7 @@ html, body {
     overflow: hidden;
     margin-bottom: 2px;
     border-radius: 5px;
-    height: 30%;
+    height: 0%;
 }
 
 .bottom-container {
@@ -162,7 +162,7 @@ html, body {
     overflow: hidden;
     margin-top: 2px;
     border-radius: 5px;
-    height: 70%;
+    height: 100%;
 }
 
 

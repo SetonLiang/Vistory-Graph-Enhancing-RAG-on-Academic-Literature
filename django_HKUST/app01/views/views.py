@@ -28,9 +28,9 @@ def get_data_for_chart(request):
     paper_author = query_authors_chart()
     results = {
         'chart1': paper_year,
-        'chart2': paper_department,
-        'chart3': paper_department_year,
-        'chart4': paper_author,
+        'donut': paper_department,
+        'chart_d_y': paper_department_year,
+        'heatmap': paper_author,
     }
     return HttpResponse(json.dumps(results))
 

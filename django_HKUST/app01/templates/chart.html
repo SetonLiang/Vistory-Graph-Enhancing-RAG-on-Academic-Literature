@@ -14,16 +14,16 @@
 <!-- Create a div where the graph will take place -->
 <div id="dataVis" class="chart_container">
     <div class="chart">
-        <svg id="chart2"></svg>
+        <svg id="word_cloud"></svg>
     </div>
     <div class="chart">
-        <svg id="chart3"></svg>
+        <svg id="donut"></svg>
     </div>
     <div class="chart">
-        <svg id="chart1"></svg>
+        <svg id="chart_d_y"></svg>
     </div>
     <div class="chart">
-        <svg id="chart4"></svg>
+        <svg id="treemap"></svg>
     </div>
 </div>
 
@@ -34,7 +34,7 @@
     const chartHeight = containerHeight / 4;
     const marginTop = 30;
     const marginRight = 30;
-    const marginBottom = 40;
+    const marginBottom = 20;
     const marginLeft = 50;
 
     // 通用的缩放功能
@@ -195,10 +195,9 @@
     }
 
     // 单独的图表3绘制函数
-    function createChart3(svg, data) {
-
+    function createChart(svg, data) {
         const keys = ["AI", "CMA", "DSA"];
-
+        console.log(data)
         const x = d3.scaleBand()
             .domain(data.map(d => d.year))
             .range([marginLeft, chartWidth - marginRight])
@@ -347,6 +346,362 @@
     }
 
 
+    // 绘制矩形和文本
+    function drawTreemap(svg, data) {
+        // 定义外部间距
+        const margin = {top: 20, right: 20, bottom: 20, left: 20};
+        const width = 800 - margin.left - margin.right;  // 减去左右间距
+        const height = 600 - margin.top - margin.bottom; // 减去上下间距
+
+
+
+        // 创建根节点
+        const root = d3.hierarchy(data)
+            .sum(d => d.value)  // 聚合每个节点的value
+            .sort((a, b) => b.value - a.value);  // 根据value排序
+
+        // 创建treemap布局
+        const treemap = d3.treemap()
+            .size([width, height])  // 使用更新后的大小
+            .padding(2)  // 设置每个节点之间的间隔
+            .paddingInner(4)  // 部门之间的间隔
+            (root);
+
+        const departmentColors = {
+            "AI": "#247485",
+            "CMA": "#64a4af",
+            "DSA": "#22465b"
+        };
+
+        // 绑定数据，创建每个矩形元素
+        const nodes = svg
+            .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom]) // 使用更新后的视口
+            .attr("style", "width: 100%; height: 100%;")
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`); // 应用间距
+
+        // 绑定数据，创建每个矩形元素
+        const rects = nodes
+            .selectAll("g")
+            .data(root.leaves())
+            .enter()
+            .append("g")
+            .attr("transform", d => `translate(${d.x0},${d.y0})`);
+
+        // 绘制矩形
+        rects.append("rect")
+            .attr("class", "node")
+            .attr("id", d => d.data.name)
+            .attr("width", d => d.x1 - d.x0)
+            .attr("height", d => d.y1 - d.y0)
+            .attr("fill", d => {
+                console.log(departmentColors[d.parent.data.name])
+                return departmentColors[d.parent.data.name]
+            })  // 根据department设置颜色
+            .on("mouseover", function (event, d) {
+                // 获取当前填充颜色
+                const currentColor = d3.color(d3.select(this).attr("fill"));
+
+                // 计算新颜色（深 1.2 倍）
+                const darkerColor = d3.color(currentColor).darker(1.2);
+
+                // 设置新颜色
+                d3.select(this)
+                    .attr("fill", darkerColor);
+
+                tooltip.transition().duration(200).style("opacity", .9);
+                tooltip.html(d.data.name)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function (event, d) {
+                // 恢复原始颜色
+                d3.select(this)
+                    .attr("fill", departmentColors[d.parent.data.name]);
+                tooltip.transition().duration(500).style("opacity", 0);
+            })
+            .on('click', function (e, d) {
+                const sNode = {'name': d.data.name}
+                highlightNeighborhood(sNode)
+            });
+
+        // 添加文本标签
+        rects.append("text")
+            .attr("x", 5)  // 设置文本的X位置
+            .attr("y", 20) // 设置文本的Y位置
+            .attr('font-size', "20px")
+            .text(d => `${d.data.value}`)
+            .attr("fill", "white");  // 设置文本颜色为白色
+    }
+
+
+    const radius = Math.min(chartWidth, chartHeight) / 2 - 25;
+
+    // 定义颜色比例尺
+    const color_test = d3.scaleOrdinal(d3.schemeCategory10);
+
+    // 定义弧生成器
+    const arc = d3.arc()
+        .innerRadius(radius - Math.min(chartWidth, chartHeight) / 3.2 + 10)  // Donut Chart 的内半径
+        .outerRadius(radius);       // Donut Chart 的外半径
+
+    // 定义饼图生成器
+    const pie = d3.pie()
+        .value(d => d.value)
+        .sort(null);
+
+    // 定义全局变量，用于存储弧形和标签元素
+    let arcs, labels, lines;
+
+    function createDonut(svg, data) {
+
+        const g = svg
+            .attr("viewBox", [0, 0, chartWidth, chartHeight])
+            .attr("style", "width: 100%; height: 100%;")
+            .append("g")
+            .attr("transform", `translate(${chartWidth / 2},${chartHeight / 2})`);
+
+
+        // 绑定数据，绘制弧形路径
+        arcs = g.selectAll("path")
+            .data(pie(data))
+            .enter().append("path")
+            .attr("fill", function (d) {
+                if (d.data.department === 'Dept.1') {
+                    return '#247485'
+                } else if (d.data.department === 'Dept.2') {
+                    return '#64a4af'
+                } else if (d.data.department === 'Dept.3') {
+                    return '#22465b'
+                }
+            })
+            .attr("d", arc)
+            .on("mouseover", function (event, d) {
+                // 获取当前填充颜色
+                const currentColor = d3.color(d3.select(this).attr("fill"));
+
+                // 计算新颜色（深 1.2 倍）
+                const darkerColor = d3.color(currentColor).darker(1.2);
+
+                // 设置新颜色
+                d3.select(this)
+                    .attr("fill", darkerColor);
+
+                tooltip.transition().duration(200).style("opacity", .9);
+                tooltip.html(d.data.department)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function (event, d) {
+                // 恢复原始颜色
+                d3.select(this)
+                    .attr("fill", function (d) {
+                        if (d.data.department === 'Dept.1') {
+                            return '#247485'
+                        } else if (d.data.department === 'Dept.2') {
+                            return '#64a4af'
+                        } else if (d.data.department === 'Dept.3') {
+                            return '#22465b'
+                        }
+                    });
+                tooltip.transition().duration(500).style("opacity", 0);
+            })
+            .on('click', function (e, d) {
+                if (d.data.department === 'Dept.1') {
+                    highlightNeighborhood_2({'name': 'AI'})
+                } else if (d.data.department === 'Dept.2') {
+                    highlightNeighborhood_2({'name': 'CMA'})
+                } else {
+                    highlightNeighborhood_2({'name': 'DSA'})
+                }
+            })
+            .each(function (d) {
+                this._current = d;
+            }); // 保存当前弧
+
+
+
+        updateLabelsAndLines(data, g)
+
+    }
+
+    function updateLabelsAndLines(data, g) {
+        // 先清除之前的线条和标签
+        g.selectAll(".label").remove();
+        g.selectAll(".line").remove();
+
+        const offset = 20;  // 偏移量，用于将线条稍微偏移出饼图
+        const outerArc = d3.arc()
+            .innerRadius(radius * 1.1)
+            .outerRadius(radius * 1.1);  // 外部弧，用于确定线条的折点
+
+        // 更新线条
+        lines = g.selectAll(".line")
+            .data(pie(data))
+            .enter()
+            .append("polyline")  // 使用polyline创建带折线的线条
+            .attr("class", "line")
+            .attr("points", d => {
+                const pos = outerArc.centroid(d);  // 第一个折点：稍微偏移出饼图
+                const midAngle = (d.startAngle + d.endAngle) / 2;
+                pos[0] = radius * (midAngle < Math.PI ? 1 : -1);  // 判断线条是朝左还是朝右
+                const centroid = arc.centroid(d);  // 起点：扇形的中心
+                return [centroid, outerArc.centroid(d), pos];  // 三个点构成折线
+            })
+            .attr("stroke", "black")
+            .attr("stroke-width", 1)
+            .attr("fill", "none");
+
+        // 添加外部标签
+        labels = g.selectAll(".label")
+            .data(pie(data))
+            .enter()
+            .append("text")
+            .attr("class", "label")
+            .attr("x", d => {
+                const pos = outerArc.centroid(d);
+                const midAngle = (d.startAngle + d.endAngle) / 2;
+                pos[0] = radius * (midAngle < Math.PI ? 1 : -1);  // 将标签放在左侧或右侧
+                return pos[0] + (midAngle < Math.PI ? 10 : -10);  // 偏移以避免贴线条太近
+            })
+            .attr("y", d => outerArc.centroid(d)[1])
+            .attr("text-anchor", d => {
+                const midAngle = (d.startAngle + d.endAngle) / 2;
+                return midAngle < Math.PI ? "start" : "end";  // 根据角度调整对齐方式
+            })
+            .each(function (d) {
+                const label = `${d.data.department}: ${d.data.value}`;
+                const [department, value] = label.split(': ');  // 分成两行
+
+                d3.select(this).append("tspan")  // 第一行：部门名称
+                    .attr("x", d => {
+                        const pos = outerArc.centroid(d);
+                        const midAngle = (d.startAngle + d.endAngle) / 2;
+                        pos[0] = radius * (midAngle < Math.PI ? 1 : -1);
+                        return pos[0] + (midAngle < Math.PI ? 10 : -10);
+                    })
+                    .attr("y", outerArc.centroid(d)[1])
+                    .text(department);
+
+                d3.select(this).append("tspan")  // 第二行：数值
+                    .attr("x", d => {
+                        const pos = outerArc.centroid(d);
+                        const midAngle = (d.startAngle + d.endAngle) / 2;
+                        pos[0] = radius * (midAngle < Math.PI ? 1 : -1);
+                        return pos[0] + (midAngle < Math.PI ? 10 : -10);
+                    })
+                    .attr("dy", "1.2em")  // 将第二行向下移动
+                    .text(value);
+            });
+    }
+
+    function updateDonut() {
+        // 生成新的随机数据
+        const newData = [
+            {department: "Dept. A", value: Math.floor(Math.random() * 100)},
+            {department: "Dept. B", value: Math.floor(Math.random() * 100)},
+            {department: "Dept. C", value: Math.floor(Math.random() * 100)}
+        ];
+
+        // 重新绑定数据
+        const newArcs = pie(newData);
+
+        // 更新弧形路径的动画
+        arcs.data(newArcs)
+            .transition()
+            .duration(1000)
+            .attrTween("d", function (d) {
+                const interpolate = d3.interpolate(this._current, d);
+                this._current = interpolate(0);
+                return t => arc(interpolate(t));
+            });
+
+        // 更新文本标签的位置和内容
+        labels.data(newArcs)
+            .transition()
+            .duration(1000)
+            .attr("transform", d => {
+                const [x, y] = arc.centroid(d);
+                return `translate(${x},${y})`;
+            })
+            .text(d => `${d.data.department}: ${d.data.value}`);
+    }
+
+
+    let words = []
+    let colorMap = {};
+
+    function initWordCloud() {
+        d3.layout.cloud().size([chartWidth, chartHeight])
+            .words(words.map(function (d) {
+                return {text: d.text, size: d.size};
+            }))
+            .padding(5)
+            .rotate(0) // All words will be horizontal
+            .font("Impact")
+            .fontSize(function (d) {
+                return d.size;
+            })
+            .on("end", draw)
+            .start();
+
+    }
+
+
+    function draw(words) {
+        const margin = {top: 60, right: 60, bottom: 60, left: 60}; // 增加边距
+        const width = chartWidth - margin.left - margin.right;  // 减去左右间距
+        const height = chartHeight - margin.top - margin.bottom; // 减去上下间距
+
+        let svg = d3.select('#word_cloud')
+            .attr("viewBox", [0, 0, chartWidth, chartHeight])
+            .attr("style", "width: 100%; height: 100%;");
+
+        let g = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        // Append words to the g element
+        let text = g.selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", function (d) {
+                return d.size + "px";
+            })
+            .style("fill", function (d) {
+                var color = randomColor();
+                colorMap[d.text] = color; // Store the color for each word
+                return color; // Initial color without transparency
+            })
+            .attr("text-anchor", "middle")
+            .style('cursor', 'pointer')
+            .attr("transform", function (d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function (d) {
+                return d.text;
+            })
+            .on('click', function (e, d) {
+                FindPaperHasKeyword(d.text);
+            });
+
+        // Calculate the bounding box of the g element
+        let bbox = g.node().getBBox();
+        let xOffset = (width - bbox.width) / 2 - bbox.x;
+        let yOffset = (height - bbox.height) / 2 - bbox.y;
+
+        // Apply translation to center the g element within the svg
+        g.attr("transform", "translate(" + (margin.left + xOffset) + "," + (margin.top + yOffset) + ")");
+    }
+
+    function randomColor() {
+        let colors = ['#73846a', '#c78c50', '#4f6157', '#7298c5',
+            '#9e938a', '#68aab6', '#7c4e4c', '#333333',
+            '#827473', '#8e9898', '#deb9ae', '#b8bec1']; // 这是你的颜色列表
+        let randomIndex = Math.floor(Math.random() * colors.length);
+        return colors[randomIndex];
+    }
+
+
 </script>
 
 <script>
@@ -357,6 +712,7 @@
         {#d3.select("#chart3").call(createChart3);#}
         {#d3.select("#chart4").call(createChart4);#}
         loadDataForChart()
+        LoadKeywords()
     });
 
     function loadDataForChart() {
@@ -366,10 +722,10 @@
             data: {},
             success: function (res) {
                 let request = JSON.parse(res)
-                createChart1(d3.select("#chart1"), request['chart1'])
-                createChart2(d3.select("#chart2"), request['chart2'])
-                createChart3(d3.select("#chart3"), request['chart3'])
-                createChart4(d3.select("#chart4"), request['chart4'])
+                console.log(request)
+                createChart(d3.select('#chart_d_y'), request['chart_d_y'])
+                createDonut(d3.select('#donut'), request['donut'])
+                drawTreemap(d3.select('#treemap'), request['heatmap'])
             }
         });
     }

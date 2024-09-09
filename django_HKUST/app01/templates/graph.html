@@ -782,7 +782,15 @@
                     return 10
                 }
             })
-            .attr('fill', color[5])
+            .attr('fill', (d) => {
+                if (d.group === 1) {
+                    return '#ffffff'
+                } else{
+                    return color[5]
+                }
+
+            })
+
             .attr('font-size', (d) => {
                 if (d.group === 1) {
                     return '40px';  // 对于 group 1 的字体大小

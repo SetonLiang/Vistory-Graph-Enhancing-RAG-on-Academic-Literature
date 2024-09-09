@@ -26,95 +26,136 @@
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
 
-// 定义图的宽、高和半径
-const width = 600;
-const height = 400;
-const radius = Math.min(width, height) / 2 - 50;
+    // 定义图的宽、高和半径
+    const width = 600;
+    const height = 400;
+    const radius = Math.min(width, height) / 2 - 50;
 
-// 定义颜色比例尺
-const color = d3.scaleOrdinal(d3.schemeCategory10);
+    // 定义颜色比例尺
+    const color = d3.scaleOrdinal(d3.schemeCategory10);
 
-// 定义初始数据
-let data = [
-    {department: "Dept. A", value: 40},
-    {department: "Dept. B", value: 60},
-    {department: "Dept. C", value: 30}
-];
+    // 定义弧生成器
+    const arc = d3.arc()
+        .innerRadius(radius - 100)  // Donut Chart 的内半径
+        .outerRadius(radius);       // Donut Chart 的外半径
 
-// 创建SVG容器
-const svg = d3.select("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g")
-    .attr("transform", `translate(${width / 2},${height / 2})`);
+    // 定义饼图生成器
+    const pie = d3.pie()
+        .value(d => d.value)
+        .sort(null);
 
-// 定义弧生成器
-const arc = d3.arc()
-    .innerRadius(radius - 100)  // Donut Chart 的内半径
-    .outerRadius(radius);       // Donut Chart 的外半径
+    // 创建SVG容器
+    const svg = d3.select("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
 
-// 定义饼图生成器
-const pie = d3.pie()
-    .value(d => d.value)
-    .sort(null);
+    // 定义全局变量，用于存储弧形和标签元素
+    let arcs, labels;
 
-// 绘制初始的 Donut Chart
-const arcs = svg.selectAll("path")
-    .data(pie(data))
-    .enter().append("path")
-    .attr("fill", d => color(d.data.department))
-    .attr("d", arc)
-    .each(function(d) { this._current = d; }); // 保存当前的弧，后续用作动画
-
-// 添加文本标注到扇区内部
-const labels = svg.selectAll("text")
-    .data(pie(data))
-    .enter()
-    .append("text")
-    .attr("transform", d => {
-        const [x, y] = arc.centroid(d);
-        return `translate(${x},${y})`;
-    })
-    .attr("dy", "0.35em") // 垂直居中对齐
-    .attr("text-anchor", "middle") // 水平居中对齐
-    .text(d => `${d.data.department}: ${d.data.value}`)
-    .attr("fill", "white");
-
-// 定义一个更新数据的函数
-function updateData() {
-    // 新的数据
-    const newData = [
-        {department: "Dept. A", value: Math.floor(Math.random() * 100)},
-        {department: "Dept. B", value: Math.floor(Math.random() * 100)},
-        {department: "Dept. C", value: Math.floor(Math.random() * 100)}
+    // 初始数据
+    let data = [
+        {department: "Dept. A", value: 40},
+        {department: "Dept. B", value: 60},
+        {department: "Dept. C", value: 30}
     ];
 
-    // 重新绑定新数据
-    const newArcs = pie(newData);
+    // 创建和绘制初始 Donut 图表
+    function createChart(data) {
+        // 绑定数据，绘制弧形路径
+        arcs = svg.selectAll("path")
+            .data(pie(data))
+            .enter().append("path")
+            .attr("fill", d => color(d.data.department))
+            .attr("d", arc)
+            .each(function (d) {
+                this._current = d;
+            }); // 保存当前弧
 
-    // 动画更新弧形
-    arcs.data(newArcs)
-        .transition()
-        .duration(1000)
-        .attrTween("d", function(d) {
-            const interpolate = d3.interpolate(this._current, d);
-            this._current = interpolate(0);
-            return t => arc(interpolate(t));
-        });
+        // 在扇区内部添加文本标签
+        labels = svg.selectAll("text")
+            .data(pie(data))
+            .enter()
+            .append("text")
+            .attr("transform", d => {
+                const [x, y] = arc.centroid(d);
+                return `translate(${x},${y})`;
+            })
+            .attr("dy", "0.35em") // 垂直居中对齐
+            .attr("text-anchor", "middle") // 水平居中对齐
+            .text(d => `${d.data.department}: ${d.data.value}`)
+            .attr("fill", "white");
+    }
 
-    // 动画更新文本标注
-    labels.data(newArcs)
-        .transition()
-        .duration(1000)
-        .attr("transform", d => {
-            const [x, y] = arc.centroid(d);
-            return `translate(${x},${y})`;
-        })
-        .text(d => `${d.data.department}: ${d.data.value}`);
-}
+    // 更新图表数据并进行动画
+    function updateChart() {
+        // 生成新的随机数据
+        const newData = [
+            {department: "Dept. A", value: Math.floor(Math.random() * 100)},
+            {department: "Dept. B", value: Math.floor(Math.random() * 100)},
+            {department: "Dept. C", value: Math.floor(Math.random() * 100)}
+        ];
 
-// 按钮点击事件监听
-d3.select("#updateButton").on("click", updateData);
+        // 重新绑定数据
+        const newArcs = pie(newData);
+
+        // 更新弧形路径的动画
+        arcs.data(newArcs)
+            .transition()
+            .duration(1000)
+            .attrTween("d", function (d) {
+                const interpolate = d3.interpolate(this._current, d);
+                this._current = interpolate(0);
+                return t => arc(interpolate(t));
+            });
+
+        {#// 更新文本标签的位置和内容#}
+        {#labels.data(newArcs)#}
+        {#    .transition()#}
+        {#    .duration(1000)#}
+        {#    .attr("transform", d => {#}
+        {#        const [x, y] = arc.centroid(d);#}
+        {#        return `translate(${x},${y})`;#}
+        {#    })#}
+        {#    .text(d => `${d.data.department}: ${d.data.value}`);#}
+
+        // 在外部添加线条
+        lines = svg.selectAll("polyline")
+            .data(pie(data))
+            .enter().append("polyline")
+            .attr("stroke", "black")
+            .attr("stroke-width", 1)
+            .attr("fill", "none")
+            .attr("points", d => {
+                const posA = arc.centroid(d);           // 扇区的中心点
+                const posB = outerArc.centroid(d);      // 外圆弧的中心点
+                const posC = [posB[0] * 1.3, posB[1]];  // 把线条延伸一点
+                return [posA, posB, posC];
+            });
+
+        // 在外部添加标签
+        labels = svg.selectAll("text.line-label")
+            .data(pie(data))
+            .enter()
+            .append("text")
+            .attr("class", "line-label")
+            .attr("transform", d => {
+                const pos = outerArc.centroid(d); // 获取线条末端的位置
+                const adjustedPos = [pos[0] * 1.35, pos[1]]; // 延伸一点
+                return `translate(${adjustedPos})`;
+            })
+            .attr("dy", "0.35em")
+            .attr("text-anchor", d => d.endAngle > Math.PI ? "end" : "start")  // 根据位置调整对齐方式
+            .text(d => `${d.data.department}: ${d.data.value}`);
+
+    }
+
+    // 创建初始图表
+    createChart(data);
+
+    // 按钮点击事件监听，更新数据
+    d3.select("#updateButton").on("click", updateChart);
 
 </script>
 

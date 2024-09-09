@@ -24,7 +24,7 @@
     <div class="main">
 
         <div class="left-container">
-            <div class="title-box">Chart</div>
+            <div class="title-box">Faceted View</div>
             <div class="content-box hidden" id="chart"></div>
         </div>
 
@@ -109,16 +109,16 @@
 
         <div class="right-container">
 
-            <div class="top-container">
-                <div class="title-box" id="publicationTitle">Word Cloud</div>
-                <div class="content-box" style="height: calc(100% - 30px)">
-                    <div id="wordCloud_container" style="height: 100%;width: 100%">
-                    </div>
-                </div>
-            </div>
+{#            <div class="top-container">#}
+{#                <div class="title-box" id="publicationTitle">Word Cloud</div>#}
+{#                <div class="content-box" style="height: calc(100% - 30px)">#}
+{#                    <div id="wordCloud_container" style="height: 100%;width: 100%">#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
 
             <div class="bottom-container">
-                <div class="title-box">Q&A</div>
+                <div class="title-box">Analytical Discourse</div>
                 <div class="content-box hidden" id="qa" style="height: calc(100% - 30px)">
                 </div>
             </div>
@@ -160,96 +160,88 @@
     fetchAndExecute('qa/', 'qa');
 </script>
 
-<script>
-    let words = []
-    let colorMap = {};
-
-    function initWordCloud() {
-        d3.layout.cloud().size([d3.select('#wordCloud_container').node().getBoundingClientRect().width,
-            d3.select('#wordCloud_container').node().getBoundingClientRect().height])
-            .words(words.map(function (d) {
-                return {text: d.text, size: d.size};
-            }))
-            .padding(5)
-            .rotate(0) // All words will be horizontal
-            .font("Impact")
-            .fontSize(function (d) {
-                return d.size;
-            })
-            .on("end", draw)
-            .start();
-
-    }
-
-
-    function draw(words) {
-        let width = d3.select('#wordCloud_container').node().getBoundingClientRect().width;
-        let height = d3.select('#wordCloud_container').node().getBoundingClientRect().height;
-
-        let svg = d3.select('#wordCloud_container').append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-        let g = svg.append("g");
-
-        // Append words to the g element
-        let text = g.selectAll("text")
-            .data(words)
-            .enter().append("text")
-            .style("font-size", function (d) {
-                return d.size + "px";
-            })
-            .style("fill", function (d) {
-                //if(d.text === 'virtual reality' || d.text === 'augmented reality' || d.text === 'edge computing' || d.text === 'metaverse' || d.text === 'federated learning'){
-                var color = randomColor();
-                colorMap[d.text] = color; // Store the color for each word
-                return color; // Initial color without transparency
-                //}else {
-                    //return '#ddd'
-                //}
-            })
-            .attr("text-anchor", "middle")
-            .style('cursor', 'pointer')
-            .attr("transform", function (d) {
-                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-            })
-            .text(function (d) {
-                return d.text;
-            })
-            .on('click', function (e, d) {
-                FindPaperHasKeyword(d.text)
-            });
-
-        // Calculate the bounding box of the g element
-        let bbox = g.node().getBBox();
-        let xOffset = (width - bbox.width) / 2 - bbox.x;
-        let yOffset = (height - bbox.height) / 2 - bbox.y;
-
-        // Apply translation to center the g element within the svg
-        g.attr("transform", "translate(" + xOffset + "," + yOffset + ")");
-    }
-
-    {#function randomColor() {#}
-    {#    let letters = '0123456789ABCDEF';#}
-    {#    let color = '#';#}
-    {#    for (let i = 0; i < 6; i++) {#}
-    {#        color += letters[Math.floor(Math.random() * 16)];#}
-    {#    }#}
-    {#    return color;#}
-    //}
-
-    function randomColor() {
-        let colors = ['#73846a', '#c78c50', '#4f6157', '#7298c5',
-            '#9e938a', '#68aab6','#7c4e4c', '#333333',
-        '#827473', '#8e9898','#deb9ae', '#b8bec1',]; // 这是你的颜色列表
-        let randomIndex = Math.floor(Math.random() * colors.length);
-        return colors[randomIndex];
-    }
-</script>
+{#<script>#}
+{#    let words = []#}
+{#    let colorMap = {};#}
+{##}
+{#    function initWordCloud() {#}
+{#        d3.layout.cloud().size([d3.select('#wordCloud_container').node().getBoundingClientRect().width,#}
+{#            d3.select('#wordCloud_container').node().getBoundingClientRect().height])#}
+{#            .words(words.map(function (d) {#}
+{#                return {text: d.text, size: d.size};#}
+{#            }))#}
+{#            .padding(5)#}
+{#            .rotate(0) // All words will be horizontal#}
+{#            .font("Impact")#}
+{#            .fontSize(function (d) {#}
+{#                return d.size;#}
+{#            })#}
+{#            .on("end", draw)#}
+{#            .start();#}
+{##}
+{#    }#}
+{##}
+{##}
+{#    function draw(words) {#}
+{#        let width = d3.select('#wordCloud_container').node().getBoundingClientRect().width;#}
+{#        let height = d3.select('#wordCloud_container').node().getBoundingClientRect().height;#}
+{##}
+{#        let svg = d3.select('#wordCloud_container').append("svg")#}
+{#            .attr("width", width)#}
+{#            .attr("height", height);#}
+{##}
+{#        let g = svg.append("g");#}
+{##}
+{#        // Append words to the g element#}
+{#        let text = g.selectAll("text")#}
+{#            .data(words)#}
+{#            .enter().append("text")#}
+{#            .style("font-size", function (d) {#}
+{#                return d.size + "px";#}
+{#            })#}
+{#            .style("fill", function (d) {#}
+{#                //if(d.text === 'virtual reality' || d.text === 'augmented reality' || d.text === 'edge computing' || d.text === 'metaverse' || d.text === 'federated learning'){#}
+{#                var color = randomColor();#}
+{#                colorMap[d.text] = color; // Store the color for each word#}
+{#                return color; // Initial color without transparency#}
+{#                //}else {#}
+{#                    //return '#ddd'#}
+{#                //}#}
+{#            })#}
+{#            .attr("text-anchor", "middle")#}
+{#            .style('cursor', 'pointer')#}
+{#            .attr("transform", function (d) {#}
+{#                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";#}
+{#            })#}
+{#            .text(function (d) {#}
+{#                return d.text;#}
+{#            })#}
+{#            .on('click', function (e, d) {#}
+{#                FindPaperHasKeyword(d.text)#}
+{#            });#}
+{##}
+{#        // Calculate the bounding box of the g element#}
+{#        let bbox = g.node().getBBox();#}
+{#        let xOffset = (width - bbox.width) / 2 - bbox.x;#}
+{#        let yOffset = (height - bbox.height) / 2 - bbox.y;#}
+{##}
+{#        // Apply translation to center the g element within the svg#}
+{#        g.attr("transform", "translate(" + xOffset + "," + yOffset + ")");#}
+{#    }#}
+{#    #}
+{##}
+{#    function randomColor() {#}
+{#        let colors = ['#73846a', '#c78c50', '#4f6157', '#7298c5',#}
+{#            '#9e938a', '#68aab6','#7c4e4c', '#333333',#}
+{#        '#827473', '#8e9898','#deb9ae', '#b8bec1',]; // 这是你的颜色列表#}
+{#        let randomIndex = Math.floor(Math.random() * colors.length);#}
+{#        return colors[randomIndex];#}
+{#    }#}
+{#</script>#}
 
 <script>
     window.onload = function () {
-        LoadKeywords()
+        {#LoadKeywords()#}
     }
 
     function FindPaperHasKeyword(keyword) {

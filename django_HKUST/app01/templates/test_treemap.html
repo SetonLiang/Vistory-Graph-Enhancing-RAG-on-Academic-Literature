@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treemap of Publications</title>
+    <title>Treemap of Authors</title>
     <style>
         .node {
             font-family: Arial, sans-serif;
@@ -18,124 +18,139 @@
         text {
             pointer-events: none;
         }
+
+        .tooltip {
+            position: absolute;
+            background: #f9f9f9;
+            padding: 5px;
+            border: 1px solid #d3d3d3;
+            border-radius: 3px;
+            pointer-events: none;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
 
 <svg width="960" height="600"></svg>
 
+<div class="tooltip" style="visibility: hidden;"></div>
+
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
+    // 数据，按照部门分组，确保每个部门下至少有8个作者
+    const data = {
+        "name": "Authors",
+        "children": [
+            {
+                "name": "Department A",
+                "children": [
+                    { "name": "Author 1", "value": 100 },
+                    { "name": "Author 2", "value": 80 },
+                    { "name": "Author 3", "value": 90 },
+                    { "name": "Author 4", "value": 110 },
+                    { "name": "Author 5", "value": 65 },
+                    { "name": "Author 6", "value": 25 },
+                    { "name": "Author 7", "value": 40 },
+                    { "name": "Author 8", "value": 70 }
+                ]
+            },
+            {
+                "name": "Department B",
+                "children": [
+                    { "name": "Author 9", "value": 50 },
+                    { "name": "Author 10", "value": 60 },
+                    { "name": "Author 11", "value": 70 },
+                    { "name": "Author 12", "value": 55 },
+                    { "name": "Author 13", "value": 75 },
+                    { "name": "Author 14", "value": 85 },
+                    { "name": "Author 15", "value": 40 },
+                    { "name": "Author 16", "value": 45 }
+                ]
+            },
+            {
+                "name": "Department C",
+                "children": [
+                    { "name": "Author 17", "value": 30 },
+                    { "name": "Author 18", "value": 40 },
+                    { "name": "Author 19", "value": 95 },
+                    { "name": "Author 20", "value": 85 },
+                    { "name": "Author 21", "value": 45 },
+                    { "name": "Author 22", "value": 50 },
+                    { "name": "Author 23", "value": 55 },
+                    { "name": "Author 24", "value": 60 }
+                ]
+            }
+        ]
+    };
 
-// 数据
-const data = {
-  "name": "Publications",
-  "children": [
-    { "name": "Conference A", "value": 100 },
-    { "name": "Conference B", "value": 80 },
-    { "name": "Journal X", "value": 50 },
-    { "name": "Journal Y", "value": 30 },
-    { "name": "Conference C", "value": 60 },
-    { "name": "Conference D", "value": 90 },
-    { "name": "Journal Z", "value": 40 },
-    { "name": "Journal W", "value": 70 },
-    { "name": "Conference E", "value": 110 },
-    { "name": "Conference F", "value": 95 },
-    { "name": "Journal V", "value": 55 },
-    { "name": "Journal U", "value": 85 },
-    { "name": "Conference G", "value": 65 },
-    { "name": "Conference H", "value": 75 },
-    { "name": "Journal T", "value": 45 },
-    { "name": "Journal S", "value": 25 },
-    { "name": "Conference I", "value": 120 },
-    { "name": "Conference J", "value": 100 },
-    { "name": "Journal R", "value": 50 },
-    { "name": "Journal Q", "value": 30 },
-    { "name": "Conference K", "value": 60 },
-    { "name": "Conference L", "value": 90 },
-    { "name": "Journal P", "value": 40 },
-    { "name": "Journal O", "value": 70 },
-    { "name": "Conference M", "value": 110 },
-    { "name": "Conference N", "value": 95 },
-    { "name": "Journal N", "value": 55 },
-    { "name": "Journal M", "value": 85 },
-    { "name": "Conference O", "value": 65 },
-    { "name": "Conference P", "value": 75 },
-    { "name": "Journal L", "value": 45 },
-    { "name": "Journal K", "value": 25 },
-    { "name": "Conference Q", "value": 120 },
-    { "name": "Conference R", "value": 100 },
-    { "name": "Journal J", "value": 50 },
-    { "name": "Journal I", "value": 30 },
-    { "name": "Conference S", "value": 60 },
-    { "name": "Conference T", "value": 90 },
-    { "name": "Journal H", "value": 40 },
-    { "name": "Journal G", "value": 70 },
-    { "name": "Conference U", "value": 110 },
-    { "name": "Conference V", "value": 95 },
-    { "name": "Journal F", "value": 55 },
-    { "name": "Journal E", "value": 85 },
-    { "name": "Conference W", "value": 65 },
-    { "name": "Conference X", "value": 75 },
-    { "name": "Journal D", "value": 45 },
-    { "name": "Journal C", "value": 25 }
-  ]
-}
+    // 创建SVG画布的宽和高
+    const width = 290;
+    const height = 187;
 
-// 创建SVG画布的宽和高
-const width = 960;
-const height = 600;
+    // 定义部门对应的颜色
+    const departmentColors = {
+        "Department A": "#247485",
+        "Department B": "#64a4af",
+        "Department C": "#22465b"
+    };
 
-// 创建根节点
-const root = d3.hierarchy(data)
-  .sum(d => d.value)  // 聚合每个节点的value
-  .sort((a, b) => b.value - a.value);  // 根据value排序
+    // 创建根节点
+    const root = d3.hierarchy(data)
+        .sum(d => d.value)  // 聚合每个节点的value
+        .sort((a, b) => b.value - a.value);  // 根据value排序
 
-// 创建treemap布局
-d3.treemap()
-  .size([width, height])  // 定义布局的大小
-  .padding(2)  // 设置每个节点之间的间隔
-  (root);
+    // 创建treemap布局
+    const treemap = d3.treemap()
+        .size([width, height])  // 定义布局的大小
+        .padding(2)  // 设置每个节点之间的间隔
+        .paddingInner(4)  // 部门之间的间隔
+        (root);
 
-// 选择SVG元素
-const svg = d3.select("svg");
+    // 选择SVG元素
+    const svg = d3.select("svg");
 
-// 绑定数据，创建每个矩形元素
-const nodes = svg.selectAll("g")
-  .data(root.leaves())
-  .enter()
-  .append("g")
-  .attr("transform", d => `translate(${d.x0},${d.y0})`);
+    // 创建 tooltip
+    const tooltip = d3.select(".tooltip");
 
-// 绘制矩形
-nodes.append("rect")
-  .attr("class", "node")
-  .attr("id", d => d.data.name)
-  .attr("width", d => d.x1 - d.x0)
-  .attr("height", d => d.y1 - d.y0)
-  .attr("fill", d => d3.schemeCategory10[Math.floor(Math.random() * 10)])
-  .on("mouseover", function(event, d) {
-    tooltip.style("visibility", "visible")
-      .text(d.data.name + ": " + d.data.value);  // 显示会议或期刊名称和文献数
-  })
-  .on("mousemove", function(event) {
-    tooltip.style("top", (event.pageY - 10) + "px")
-      .style("left", (event.pageX + 10) + "px");
-  })
-  .on("mouseout", function() {
-    tooltip.style("visibility", "hidden");
-  })
-    .on("click", function(){
-        console.log(1234567)
-    });
+    // 绘制矩形和文本
+    function drawTreemap() {
+        // 绑定数据，创建每个矩形元素
+        const nodes = svg.selectAll("g")
+            .data(root.leaves())
+            .enter()
+            .append("g")
+            .attr("transform", d => `translate(${d.x0},${d.y0})`);
 
-// 添加文本标签
-nodes.append("text")
-  .attr("x", 5)  // 设置文本的X位置
-  .attr("y", 20) // 设置文本的Y位置
-  .text(d => d.data.name + ": " + d.data.value)
-  .attr("fill", "white");  // 设置文本颜色为白色
+        // 绘制矩形
+        nodes.append("rect")
+            .attr("class", "node")
+            .attr("id", d => d.data.name)
+            .attr("width", d => d.x1 - d.x0)
+            .attr("height", d => d.y1 - d.y0)
+            .attr("fill", d => departmentColors[d.parent.data.name])  // 根据department设置颜色
+            .on("mouseover", function(event, d) {
+                tooltip.style("visibility", "visible")
+                    .text(`${d.data.name}: ${d.data.value} papers, ${d.parent.data.name}`);
+            })
+            .on("mousemove", function(event) {
+                tooltip.style("top", (event.pageY - 10) + "px")
+                    .style("left", (event.pageX + 10) + "px");
+            })
+            .on("mouseout", function() {
+                tooltip.style("visibility", "hidden");
+            });
 
+        // 添加文本标签
+        nodes.append("text")
+            .attr("x", 5)  // 设置文本的X位置
+            .attr("y", 10) // 设置文本的Y位置
+            .attr('font-size',"7px")
+            .text(d => `${d.data.value}`)
+            .attr("fill", "white");  // 设置文本颜色为白色
+    }
+
+    drawTreemap();  // 调用函数绘制treemap
 </script>
 
 </body>

@@ -126,15 +126,34 @@ def query_find_paper_by_keyword(keyword):
 
 
 def query_authors_chart():
-    cypher_query = '''MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)
-    RETURN a.name AS author, COUNT(p) AS papers
-    ORDER BY papers DESC
-    '''
+    cypher_query = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
+RETURN d.name AS department, a.name AS author, COUNT(p) AS papers
+ORDER BY department, papers DESC'''
 
+    # Execute the query and process results
     with driver.session(database="neo4j") as session:
-        result = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())
+        query_results = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())
 
-    return result[:5]
+    # 初始化数据结构
+    data = {"name": "Authors", "children": []}
+    department_map = defaultdict(list)
+
+    # 组织数据
+    for result in query_results:
+        department = result["department"]
+        author = result["author"]
+        papers = result["papers"]
+
+        department_map[department].append({"name": author, "value": papers})
+
+    # 将组织的数据加入到主数据结构中
+    for department, authors in department_map.items():
+        data["children"].append({
+            "name": department,
+            "children": authors
+        })
+
+    return data
 
 
 def query_keywords():
@@ -306,8 +325,15 @@ def flite_dept(departments):
 
 def query_paper_department():
     query = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
-            WITH d.name AS department, COUNT(p) AS papers
-            RETURN department, papers'''
+WITH d.name AS department, COUNT(p) AS value
+RETURN 
+    CASE 
+        WHEN department = 'AI' THEN 'Dept.1'
+        WHEN department = 'CMA' THEN 'Dept.2'
+        WHEN department = 'DSA' THEN 'Dept.3'
+        ELSE department
+    END AS department,
+    value'''
     with driver.session(database="neo4j") as session:
         results = session.execute_read(lambda tx: tx.run(query, iata="DEN").data())
 
