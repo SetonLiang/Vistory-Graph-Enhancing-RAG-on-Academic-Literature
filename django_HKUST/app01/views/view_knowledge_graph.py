@@ -325,7 +325,7 @@ def flite_dept(departments):
 
 def query_paper_department():
     query = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
-WITH d.name AS department, COUNT(p) AS value
+WITH d.name AS department, COUNT(DISTINCT a) AS value
 RETURN 
     CASE 
         WHEN department = 'AI' THEN 'Dept.1'
@@ -335,7 +335,7 @@ RETURN
     END AS department,
     value'''
     with driver.session(database="neo4j") as session:
-        results = session.execute_read(lambda tx: tx.run(query, iata="DEN").data())
+        results = session.execute_read(lambda tx: tx.run(query).data())
 
     return results
 
