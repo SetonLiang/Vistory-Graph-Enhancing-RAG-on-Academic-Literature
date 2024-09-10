@@ -140,6 +140,7 @@ html, body {
 
 /* 右边容器 */
 .right-container {
+    border: 1px solid #ccc;
     overflow: hidden;
     margin-left: 2px;
     border-radius: 5px;

@@ -355,7 +355,6 @@
         const height = 600 - margin.top - margin.bottom; // 减去上下间距
 
 
-
         // 创建根节点
         const root = d3.hierarchy(data)
             .sum(d => d.value)  // 聚合每个节点的value
@@ -521,7 +520,6 @@
             }); // 保存当前弧
 
 
-
         updateLabelsAndLines(data, g)
 
     }
@@ -645,7 +643,6 @@
             })
             .on("end", draw)
             .start();
-
     }
 
     function draw(words) {
@@ -691,6 +688,15 @@
 
         // Apply translation to center the g element within the svg
         g.attr("transform", "translate(" + (margin.left + xOffset) + "," + (margin.top + yOffset) + ")");
+
+        // Add zoom functionality
+        let zoom = d3.zoom()
+            .scaleExtent([0.5, 5]) // Min and max scale
+            .on("zoom", function (event) {
+                g.attr("transform", "translate(" + (event.transform.x+chartWidth/2) + "," + (event.transform.y+chartHeight/2) + ")scale(" + event.transform.k + ")");
+            });
+
+        svg.call(zoom);
     }
 
     function randomColor() {
