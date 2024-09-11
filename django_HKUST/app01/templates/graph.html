@@ -769,10 +769,35 @@
                 tooltip.transition().duration(500).style("opacity", 0);
             });
 
+        // 生成字母序列的函数
+        function getLetterSequence(index) {
+            let letters = '';
+            while (index >= 0) {
+                letters = String.fromCharCode(index % 26 + 65) + letters;
+                index = Math.floor(index / 26) - 1;
+            }
+            return letters;
+        }
+
+        let authorCount = 0; // 用于跟踪作者的数量
+
         nodeNameText = g.append('g').selectAll().data(nodes).join('text')
             .text((d) => {
-                if (d.group === 4 || d.group === 1) {
-                    return d.name
+                if (d.group === 1) {
+                    if (d.name === 'AI') {
+                        return 'Dept.1'
+                    }
+                    if (d.name === 'CMA') {
+                        return 'Dept.2'
+                    }
+                    if (d.name === 'DSA') {
+                        return 'Dept.3'
+                    }
+                }
+                if (d.group === 4) {
+                    let authorLabel = 'Author ' + getLetterSequence(authorCount); // 生成 'Author' + 唯一字母序列
+                    authorCount++; // 增加作者计数，确保每个作者都有唯一标识
+                    return authorLabel;
                 }
             })
             .attr('dy', (d) => {
@@ -785,7 +810,7 @@
             .attr('fill', (d) => {
                 if (d.group === 1) {
                     return '#ffffff'
-                } else{
+                } else {
                     return color[5]
                 }
 
