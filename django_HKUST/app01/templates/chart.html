@@ -663,7 +663,7 @@
             .enter().append("text")
             .style("font-size", function (d) {
 
-                return Math.min(d.size, 30) + "px";
+                return Math.min(d.size+2, 20) + "px";
                 {#return d.size + "px";#}
             })
             .style("fill", function (d) {
