@@ -662,7 +662,9 @@
             .data(words)
             .enter().append("text")
             .style("font-size", function (d) {
-                return d.size + "px";
+
+                return Math.min(d.size, 30) + "px";
+                {#return d.size + "px";#}
             })
             .style("fill", function (d) {
                 var color = randomColor();
@@ -693,7 +695,7 @@
         let zoom = d3.zoom()
             .scaleExtent([0.5, 5]) // Min and max scale
             .on("zoom", function (event) {
-                g.attr("transform", "translate(" + (event.transform.x+chartWidth/2) + "," + (event.transform.y+chartHeight/2) + ")scale(" + event.transform.k + ")");
+                g.attr("transform", "translate(" + (event.transform.x + chartWidth / 2) + "," + (event.transform.y + chartHeight / 2) + ")scale(" + event.transform.k + ")");
             });
 
         svg.call(zoom);
