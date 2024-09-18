@@ -1,0 +1,1282 @@
+{
+    "nodes": [
+        {
+            "name": "virtual reality",
+            "group": 2,
+            "citation": 24
+        },
+        {
+            "group": 0,
+            "count": 0,
+            "citation": 0,
+            "id": "wang2023designing",
+            "name": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "venue": "Proceedings of the 31st ACM International Conference on Multimedia",
+            "released": "2023",
+            "authors": "Xian Wang, Xiaoyu Mo, Lik-Hang Lee, Xiaoying Wei, Xiaofu Jin, Mingming Fan, Pan Hui"
+        },
+        {
+            "name": "imu-based interaction trace extraction",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "independent learning",
+            "group": 2,
+            "citation": 2
+        },
+        {
+            "name": "museum",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 0,
+            "id": "li2023exploring",
+            "count": 0,
+            "name": "Exploring the Opportunities of AR for Enriching Storytelling with Family Photos between Grandparents and Grandchildren",
+            "venue": "Proceedings of the ACM on Interactive",
+            "citation": 2,
+            "authors": "Zisu Li, Li Feng, Chen Liang, Yuru Huang, Mingming Fan",
+            "released": "2023"
+        },
+        {
+            "group": 2,
+            "name": "natural language interface",
+            "citation": 1
+        },
+        {
+            "name": "daily data analysis",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "ux evaluation",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "visual impairment"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "grandchildren"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "social media/online communities"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "data exploration"
+        },
+        {
+            "citation": 8,
+            "group": 0,
+            "count": 0,
+            "id": "batch2023uxsense",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "authors": "Andrea Batch, Yipeng Ji, Mingming Fan, Jian Zhao, Niklas Elmqvist",
+            "name": "uxSense: Supporting user experience analysis with visualization and computer vision",
+            "released": "2023"
+        },
+        {
+            "group": 2,
+            "name": "intangible cultural heritage",
+            "citation": 1
+        },
+        {
+            "group": 0,
+            "authors": "Emily Kuang, Ruihuan Chen, Mingming Fan",
+            "citation": 1,
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "count": 0,
+            "id": "kuang2023enhancing",
+            "name": "Enhancing Older Adults\u2019 Gesture Typing Experience Using the T9 Keyboard on Small Touchscreen Devices",
+            "released": "2023"
+        },
+        {
+            "group": 2,
+            "name": "machine form",
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "acoustic sensing",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "qualitative study",
+            "citation": 1
+        },
+        {
+            "group": 0,
+            "name": "OperARtistry: An AR-based Interactive Application to Assist the Learning of Chinese Traditional Opera (Xiqu) Makeup",
+            "citation": 1,
+            "count": 0,
+            "authors": "Zeyu Xiong, Shihan Fu, Mingming Fan",
+            "venue": "Proceedings of the Eleventh International Symposium of Chinese CHI",
+            "id": "xiong2023operartistry",
+            "released": "2023"
+        },
+        {
+            "citation": 3,
+            "name": "think-aloud",
+            "group": 2
+        },
+        {
+            "name": "vr",
+            "citation": 5,
+            "group": 2
+        },
+        {
+            "group": 0,
+            "id": "huang2023toward",
+            "authors": "Yuru Huang, Liyi Xu, You Zhou, Qiongyan Chen, Zhiqing Wu, Li Feng, Mingming Fan",
+            "count": 0,
+            "citation": 0,
+            "name": "Toward Leveraging Augmented Reality (AR) for Enhancing Remote Intergenerational Communication in Cooking Scenarios",
+            "venue": "Proceedings of the Eleventh International Symposium of Chinese CHI",
+            "released": "2023"
+        },
+        {
+            "name": "accessibility",
+            "group": 2,
+            "citation": 12
+        },
+        {
+            "name": "human-food interaction",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "control"
+        },
+        {
+            "group": 0,
+            "name": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "count": 0,
+            "id": "huang2023understanding",
+            "venue": "Proceedings of the 25th International ACM SIGACCESS Conference on Computers?\u2026",
+            "citation": 2,
+            "authors": "Yuru Huang, Jingling Zhang, Xiaofu Jin, Mingming Fan",
+            "released": "2023"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "navigation"
+        },
+        {
+            "group": 0,
+            "venue": "Proceedings of the 16th International Symposium on Visual Information?\u2026",
+            "id": "zhang2023odorv",
+            "count": 0,
+            "citation": 0,
+            "name": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "authors": "Shumeng Zhang, Ziyan Wang, You Zhou, Hao Cui, Shihan Fu, Zeyu Wang, Mingming Fan",
+            "released": "2023"
+        },
+        {
+            "group": 0,
+            "name": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "count": 0,
+            "id": "jiang2023understanding",
+            "citation": 2,
+            "venue": "Proceedings of the 25th International ACM SIGACCESS Conference on Computers?\u2026",
+            "authors": "Chutian Jiang, Wentao Lei, Emily Kuang, Teng Han, Mingming Fan",
+            "released": "2023"
+        },
+        {
+            "name": "exhibition",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "visualization",
+            "group": 2,
+            "citation": 17
+        },
+        {
+            "venue": "Proceedings of the 36th Annual ACM Symposium on User Interface Software and?\u2026",
+            "group": 0,
+            "name": "ShadowTouch: Enabling Free-Form Touch-Based Hand-to-Surface Interaction with Wrist-Mounted Illuminant by Shadow Projection",
+            "citation": 1,
+            "id": "liang2023shadowtouch",
+            "count": 0,
+            "authors": "Chen Liang, Xutong Wang, Zisu Li, Chi Hsia, Mingming Fan, Chun Yu, Yuanchun Shi",
+            "released": "2023"
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "interview"
+        },
+        {
+            "group": 0,
+            "count": 0,
+            "citation": 0,
+            "venue": "Adjunct Proceedings of the 36th Annual ACM Symposium on User Interface?\u2026",
+            "name": "A Multi-modal Toolkit to Support DIY Assistive Technology Creation for Blind and Low Vision People",
+            "id": "he2023multi",
+            "authors": "Liwen He, Yifan Li, Mingming Fan, Liang He, Yuhang Zhao",
+            "released": "2023"
+        },
+        {
+            "citation": 10,
+            "group": 2,
+            "name": "older adults"
+        },
+        {
+            "name": "t9 keyboard",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "computer vision",
+            "citation": 6
+        },
+        {
+            "name": "field study",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "venue": "Proceedings of the 28th International Conference on Intelligent User?\u2026",
+            "group": 0,
+            "citation": 1,
+            "count": 0,
+            "authors": "Xiaozhu Hu, Yanwen Huang, Bo Liu, Ruolan Wu, Yongquan Hu, Aaron J Quigley, Mingming Fan, Chun Yu, Yuanchun Shi",
+            "id": "hu2023smartrecorder",
+            "name": "SmartRecorder: An IMU-based Video Tutorial Creation by Demonstration System for Smartphone Interaction Tasks",
+            "released": "2023"
+        },
+        {
+            "name": "deep learning",
+            "group": 2,
+            "citation": 28
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "deaf or hard of hearing (dhh)"
+        },
+        {
+            "citation": 2,
+            "name": "smartphone exploration",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "gesture typing"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "inter-generational communication"
+        },
+        {
+            "name": "low vision",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "hand gestures",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "safety",
+            "citation": 1
+        },
+        {
+            "name": "assistive technology",
+            "citation": 3,
+            "group": 2
+        },
+        {
+            "name": "computer aided instruction",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "human-ai collaboration",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "user experience(ux)",
+            "citation": 1
+        },
+        {
+            "name": "collaborative programming",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "meditation"
+        },
+        {
+            "group": 2,
+            "name": "data accessibility",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "text entry"
+        },
+        {
+            "group": 0,
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "count": 0,
+            "id": "zhang2023follower",
+            "citation": 13,
+            "name": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "authors": "Yan Zhang, Ziang Li, Haole Guo, Luyao Wang, Qihe Chen, Wenjie Jiang, Mingming Fan, Guyue Zhou, Jiangtao Gong",
+            "released": "2023"
+        },
+        {
+            "group": 1,
+            "name": "CMA"
+        },
+        {
+            "name": "landscape painting",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 0,
+            "citation": 4,
+            "name": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "count": 0,
+            "venue": "arXiv preprint arXiv:2310.09235",
+            "id": "feng2023coprompt",
+            "released": "2023",
+            "authors": "Felicia Li Feng, Ryan Yen, Yuzhe You, Mingming Fan, Jian Zhao, Zhicong Lu"
+        },
+        {
+            "name": "tangible modules",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "touch detection",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "prompt engineering"
+        },
+        {
+            "name": "blind",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 0,
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "id": "kuang2023collaboration",
+            "count": 0,
+            "authors": "Emily Kuang, Ehsan Jahangirzadeh Soure, Mingming Fan, Jian Zhao, Kristen Shinohara",
+            "name": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)",
+            "citation": 9,
+            "released": "2023"
+        },
+        {
+            "name": "user-centered design",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "guiding robot",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "usability testing"
+        },
+        {
+            "group": 2,
+            "name": "probe study",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "tutorial creation by demonstration",
+            "citation": 1
+        },
+        {
+            "name": "small touchscreen  devices",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "art appreciation",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "augmented reality",
+            "citation": 22
+        },
+        {
+            "citation": 3,
+            "name": "ar",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "participatory design"
+        },
+        {
+            "group": 2,
+            "citation": 6,
+            "name": "large language model"
+        },
+        {
+            "name": "level of autonomy",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 8,
+            "group": 0,
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "count": 0,
+            "id": "li2023enabling",
+            "name": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing",
+            "authors": "Zisu Li, Chen Liang, Yuntao Wang, Yue Qin, Chun Yu, Yukang Yan, Mingming Fan, Yuanchun Shi",
+            "released": "2023"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "smartphone usage video tutorial"
+        },
+        {
+            "group": 2,
+            "name": "computer vision.",
+            "citation": 1
+        },
+        {
+            "name": "visually impaired",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "generational gap",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "couples",
+            "citation": 1
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "aging"
+        },
+        {
+            "citation": 2,
+            "name": "livestreaming",
+            "group": 2
+        },
+        {
+            "group": 0,
+            "id": "feng2023copractter",
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "count": 0,
+            "name": "CoPracTter: Toward Integrating Personalized Practice Scenarios, Timely Feedback and Social Support into An Online Support Tool for Coping with Stuttering in China",
+            "authors": "Li Feng, Zeyu Xiong, Xinyi Li, Mingming Fan",
+            "citation": 2,
+            "released": "2023"
+        },
+        {
+            "name": "sensor fusion",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "conversational assistants",
+            "citation": 1
+        },
+        {
+            "name": "dda",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "virtual museum"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "curator"
+        },
+        {
+            "name": "non-experts",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "video analytics",
+            "citation": 1
+        },
+        {
+            "group": 0,
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "count": 0,
+            "authors": "Beiyan Cao, Changyang He, Muzhi Zhou, Mingming Fan",
+            "id": "cao2023sparkling",
+            "name": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "citation": 5,
+            "released": "2023"
+        },
+        {
+            "citation": 25,
+            "group": 2,
+            "name": "machine learning"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "natural language programming"
+        },
+        {
+            "group": 2,
+            "name": "grandparents",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "diy toolkit",
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "blind and low vision",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "evaluation",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "people who stutter",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "visual analytics",
+            "citation": 17
+        },
+        {
+            "group": 2,
+            "name": "intergenerational communication",
+            "citation": 1
+        },
+        {
+            "citation": 8,
+            "group": 0,
+            "count": 0,
+            "venue": "International Journal of Human\u2013Computer Interaction",
+            "id": "fan2023understanding",
+            "name": "Understanding how older adults comprehend COVID-19 interactive visualizations via think-aloud protocol",
+            "authors": "Mingming Fan, Yiwen Wang, Yuni Xie, Franklin Mingzhe Li, Chunyang Chen",
+            "released": "2023"
+        },
+        {
+            "name": "blv",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "trust",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "hand-to-surface interaction",
+            "citation": 1
+        },
+        {
+            "name": "olfactory display",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 0,
+            "authors": "Xiaoying Wei, Yizheng Gu, Emily Kuang, Xian Wang, Beiyan Cao, Xiaofu Jin, Mingming Fan",
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "count": 0,
+            "id": "wei2023bridging",
+            "citation": 12,
+            "name": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "released": "2023"
+        },
+        {
+            "name": "Mingming Fan",
+            "type": "Author",
+            "count": 70,
+            "group": 4
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 250,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "target": "art appreciation",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "machine learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "target": "older adults",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing Older Adults\u2019 Gesture Typing Experience Using the T9 Keyboard on Small Touchscreen Devices"
+        },
+        {
+            "target": "touch detection",
+            "relationship": "HAS_KEYWORD",
+            "source": "ShadowTouch: Enabling Free-Form Touch-Based Hand-to-Surface Interaction with Wrist-Mounted Illuminant by Shadow Projection"
+        },
+        {
+            "target": "smartphone usage video tutorial",
+            "source": "SmartRecorder: An IMU-based Video Tutorial Creation by Demonstration System for Smartphone Interaction Tasks",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "control",
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "target": "blind and low vision",
+            "source": "A Multi-modal Toolkit to Support DIY Assistive Technology Creation for Blind and Low Vision People",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring the Opportunities of AR for Enriching Storytelling with Family Photos between Grandparents and Grandchildren",
+            "target": "independent learning"
+        },
+        {
+            "source": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing",
+            "relationship": "HAS_KEYWORD",
+            "target": "acoustic sensing"
+        },
+        {
+            "target": "intergenerational communication",
+            "source": "Toward Leveraging Augmented Reality (AR) for Enhancing Remote Intergenerational Communication in Cooking Scenarios",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "navigation",
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "assistive technology",
+            "source": "OperARtistry: An AR-based Interactive Application to Assist the Learning of Chinese Traditional Opera (Xiqu) Makeup"
+        },
+        {
+            "target": "ar",
+            "source": "Toward Leveraging Augmented Reality (AR) for Enhancing Remote Intergenerational Communication in Cooking Scenarios",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "generational gap",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "target": "CoPracTter: Toward Integrating Personalized Practice Scenarios, Timely Feedback and Social Support into An Online Support Tool for Coping with Stuttering in China",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "target": "exhibition",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "gesture typing",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing Older Adults\u2019 Gesture Typing Experience Using the T9 Keyboard on Small Touchscreen Devices"
+        },
+        {
+            "source": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "relationship": "HAS_KEYWORD",
+            "target": "blv"
+        },
+        {
+            "target": "virtual reality",
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "target": "natural language programming",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "SmartRecorder: An IMU-based Video Tutorial Creation by Demonstration System for Smartphone Interaction Tasks",
+            "relationship": "HAS_KEYWORD",
+            "target": "non-experts"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships"
+        },
+        {
+            "target": "ux evaluation",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "target": "curator",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "t9 keyboard",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing Older Adults\u2019 Gesture Typing Experience Using the T9 Keyboard on Small Touchscreen Devices"
+        },
+        {
+            "source": "A Multi-modal Toolkit to Support DIY Assistive Technology Creation for Blind and Low Vision People",
+            "relationship": "HAS_KEYWORD",
+            "target": "accessibility"
+        },
+        {
+            "target": "visual analytics",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "ShadowTouch: Enabling Free-Form Touch-Based Hand-to-Surface Interaction with Wrist-Mounted Illuminant by Shadow Projection",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "target": "data exploration",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "target": "assistive technology",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "level of autonomy",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "target": "computer vision.",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "target": "grandchildren",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "target": "evaluation",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "target": "field study",
+            "relationship": "HAS_KEYWORD",
+            "source": "CoPracTter: Toward Integrating Personalized Practice Scenarios, Timely Feedback and Social Support into An Online Support Tool for Coping with Stuttering in China"
+        },
+        {
+            "target": "diy toolkit",
+            "source": "A Multi-modal Toolkit to Support DIY Assistive Technology Creation for Blind and Low Vision People",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "video analytics",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "uxSense: Supporting user experience analysis with visualization and computer vision",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "small touchscreen  devices",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing Older Adults\u2019 Gesture Typing Experience Using the T9 Keyboard on Small Touchscreen Devices"
+        },
+        {
+            "target": "smartphone exploration",
+            "source": "Exploring the Opportunities of AR for Enriching Storytelling with Family Photos between Grandparents and Grandchildren",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "tutorial creation by demonstration",
+            "source": "SmartRecorder: An IMU-based Video Tutorial Creation by Demonstration System for Smartphone Interaction Tasks",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "human-ai collaboration",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "data accessibility",
+            "source": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing",
+            "relationship": "HAS_KEYWORD",
+            "target": "hand gestures"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "target": "interview",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "relationship": "HAS_KEYWORD",
+            "target": "blind"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "target": "natural language interface",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "assistive technology",
+            "source": "CoPracTter: Toward Integrating Personalized Practice Scenarios, Timely Feedback and Social Support into An Online Support Tool for Coping with Stuttering in China"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Toward Leveraging Augmented Reality (AR) for Enhancing Remote Intergenerational Communication in Cooking Scenarios",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Pan Hui",
+            "target": "CMA"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Enhancing Older Adults\u2019 Gesture Typing Experience Using the T9 Keyboard on Small Touchscreen Devices",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "hand-to-surface interaction",
+            "relationship": "HAS_KEYWORD",
+            "source": "ShadowTouch: Enabling Free-Form Touch-Based Hand-to-Surface Interaction with Wrist-Mounted Illuminant by Shadow Projection"
+        },
+        {
+            "target": "landscape painting",
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "relationship": "HAS_KEYWORD",
+            "target": "olfactory display"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring the Opportunities of AR for Enriching Storytelling with Family Photos between Grandparents and Grandchildren",
+            "target": "augmented reality"
+        },
+        {
+            "target": "qualitative study",
+            "source": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "interview",
+            "source": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "couples",
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "target": "collaborative programming",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "relationship": "HAS_KEYWORD",
+            "target": "low vision"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "relationship": "HAS_KEYWORD",
+            "target": "accessibility"
+        },
+        {
+            "target": "OperARtistry: An AR-based Interactive Application to Assist the Learning of Chinese Traditional Opera (Xiqu) Makeup",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "A Multi-modal Toolkit to Support DIY Assistive Technology Creation for Blind and Low Vision People",
+            "relationship": "HAS_KEYWORD",
+            "target": "tangible modules"
+        },
+        {
+            "target": "blind and low vision",
+            "source": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "target": "virtual museum",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "relationship": "HAS_KEYWORD",
+            "target": "think-aloud"
+        },
+        {
+            "target": "visual impairment",
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "OperARtistry: An AR-based Interactive Application to Assist the Learning of Chinese Traditional Opera (Xiqu) Makeup",
+            "target": "user-centered design"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "target": "visually impaired",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "older adults",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "source": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "target": "deaf or hard of hearing (dhh)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "relationship": "HAS_KEYWORD",
+            "target": "accessibility"
+        },
+        {
+            "source": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "target": "dda",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "usability testing",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "target": "guiding robot",
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "CoPracTter: Toward Integrating Personalized Practice Scenarios, Timely Feedback and Social Support into An Online Support Tool for Coping with Stuttering in China",
+            "target": "accessibility"
+        },
+        {
+            "target": "conversational assistants",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "target": "probe study",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "A Multi-modal Toolkit to Support DIY Assistive Technology Creation for Blind and Low Vision People",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "computer aided instruction",
+            "source": "OperARtistry: An AR-based Interactive Application to Assist the Learning of Chinese Traditional Opera (Xiqu) Makeup"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "target": "meditation",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "deep learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "target": "trust",
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "target": "intangible cultural heritage",
+            "relationship": "HAS_KEYWORD",
+            "source": "OperARtistry: An AR-based Interactive Application to Assist the Learning of Chinese Traditional Opera (Xiqu) Makeup"
+        },
+        {
+            "target": "vr",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "target": "SmartRecorder: An IMU-based Video Tutorial Creation by Demonstration System for Smartphone Interaction Tasks",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "Exploring the Opportunities of AR for Enriching Storytelling with Family Photos between Grandparents and Grandchildren",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "text entry",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing Older Adults\u2019 Gesture Typing Experience Using the T9 Keyboard on Small Touchscreen Devices"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Understanding how older adults comprehend COVID-19 interactive visualizations via think-aloud protocol",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "SmartRecorder: An IMU-based Video Tutorial Creation by Demonstration System for Smartphone Interaction Tasks",
+            "target": "imu-based interaction trace extraction"
+        },
+        {
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "target": "large language model",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Understanding Strategies and Challenges of Conducting Daily Data Analysis (DDA) Among Blind and Low-vision People",
+            "relationship": "HAS_KEYWORD",
+            "target": "daily data analysis"
+        },
+        {
+            "target": "machine form",
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "target": "grandparents",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "target": "aging",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "people who stutter",
+            "source": "CoPracTter: Toward Integrating Personalized Practice Scenarios, Timely Feedback and Social Support into An Online Support Tool for Coping with Stuttering in China"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "augmented reality",
+            "source": "OperARtistry: An AR-based Interactive Application to Assist the Learning of Chinese Traditional Opera (Xiqu) Makeup"
+        },
+        {
+            "target": "computer vision",
+            "relationship": "HAS_KEYWORD",
+            "source": "ShadowTouch: Enabling Free-Form Touch-Based Hand-to-Surface Interaction with Wrist-Mounted Illuminant by Shadow Projection"
+        },
+        {
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "target": "prompt engineering",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "inter-generational communication",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "target": "participatory design"
+        },
+        {
+            "target": "older adults",
+            "source": "Exploring the Opportunities of AR for Enriching Storytelling with Family Photos between Grandparents and Grandchildren",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "social media/online communities",
+            "source": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Toward Leveraging Augmented Reality (AR) for Enhancing Remote Intergenerational Communication in Cooking Scenarios",
+            "relationship": "HAS_KEYWORD",
+            "target": "human-food interaction"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "relationship": "HAS_KEYWORD",
+            "target": "livestreaming"
+        },
+        {
+            "target": "museum",
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "safety",
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "user experience(ux)",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+            "target": "visual impairment",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing",
+            "relationship": "HAS_KEYWORD",
+            "target": "sensor fusion"
+        }
+    ]
+}

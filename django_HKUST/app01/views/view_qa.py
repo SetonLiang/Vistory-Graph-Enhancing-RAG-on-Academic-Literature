@@ -60,7 +60,8 @@ def chat(request):
             #     output = chain.invoke({"question": user_input})
             #     chat_history.append((user_input, output))
 
-            output = '''Wei Zeng's key contributions in 2024 include research on tracing NFT impact dynamics in transaction-flow substitutive systems using visual analytics, generating Virtual Reality stroke gesture data from out-of-distribution desktop stroke gesture data, and a visual analytics design for higher-order movement modeling and visualization. Zeng has also incorporated an iterative design process into generative artificial intelligence for landscape rendering and enhanced multi-modal interaction for Virtual Tour Guidance through Large Language Models.'''
+            output = "111"
+
 
             # else:
             #     previous_question, previous_answer = chat_history[-1]
@@ -70,7 +71,7 @@ def chat(request):
             #             "chat_history": [(previous_question, previous_answer)],
             #         }
             #     )
-            with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
+            with open('app01/datasets/case2_test2.json', 'r', encoding='utf-8') as f:
                 paper_entity = json.load(f)
 
         duration = time.time() - start_time

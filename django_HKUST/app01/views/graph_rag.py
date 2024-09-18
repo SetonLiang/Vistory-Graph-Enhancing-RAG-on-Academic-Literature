@@ -532,10 +532,12 @@ def query_keyword(keyword_name):
         WHERE apoc.text.clean(k.name) = apoc.text.clean($keyword)
         OPTIONAL MATCH (k)<-[:HAS_KEYWORD]-(p:Papers)
         OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
-        RETURN k, collect(p) as papers, collect(a) as authors
-        limit 40
+        OPTIONAL MATCH (a)-[:BELONGS_TO]->(d:Department)
+        WITH a, k, d, p
+        ORDER BY p.citation DESC
+        RETURN k, collect(p) as papers, collect(a) as authors,d 
     """
-    return session.run(query, {"keyword": keyword_name})
+    return graph.query(query, {"keyword": keyword_name})
 
 def query_department(department_name):
     """Query for department-related information."""
@@ -566,6 +568,9 @@ def query_venue(venue):
         OPTIONAL MATCH (v)<-[:PRESENTED_AT]-(p:Papers)
         OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
         OPTIONAL MATCH (a)-[:BELONGS_TO]->(d:Department)
+        WITH a, v, d, p
+        ORDER BY p.citation_count DESC
+        LIMIT 20
         RETURN a, v, d, collect(p) as papers
     """
     return session.run(query, {"venue": venue})
@@ -608,10 +613,7 @@ def query_combined_entities(entities):
         MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)-[:PUBLISHED_IN]->(y:Year)
         WHERE apoc.text.clean(d.name) = apoc.text.clean($department_name)
         AND y.name in $year
-        WITH d, y, a, p
-        ORDER BY y.name, toInteger(p.citation) DESC 
-        WITH d, y, a, collect(p)[0..20] as papers
-        RETURN d, a, papers, y  
+        RETURN d, a, collect(p) as papers, y  
     """
     query_department_keyword = """
         MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)-[:HAS_KEYWORD]->(k:Keyword)
@@ -652,7 +654,7 @@ def query_combined_entities(entities):
 
     authors = get_key(entities, 'Author') #判断是否有多个作者
     departments = get_key(entities, 'Department') #判断是否有多个部门
-
+    keywords = get_key(entities, "Keyword")
 
     # Example for combining author and year entities
     if "Author" in entities.values() and "Year" in entities.values():
@@ -757,6 +759,25 @@ def query_combined_entities(entities):
 
         # 执行查询并返回结果
         return session.run(query_departments, parameters)
+    if len(keywords) > 1:
+        # Handling for multiple keywords
+        match_clause = "OPTIONAL MATCH " + ", ".join(
+            [f"(k{i}:Keyword)<-[:HAS_KEYWORD]-(p{i}:Papers)" for i in range(len(keywords))]
+        )
+        where_clause = " AND ".join(
+            [f"apoc.text.clean(k{i}.name) = apoc.text.clean($keyword{i}_name)" for i in range(len(keywords))]
+        )
+        paper_match_clause = " AND ".join(
+            [f"p0.name = p{i}.name" for i in range(1, len(keywords))]
+        )
+
+        query_keywords = f"""
+            {match_clause}
+            WHERE {where_clause} AND {paper_match_clause}
+            RETURN collect(p0) AS papers
+        """
+        parameters = {f"keyword{i}_name": clean_entity_name(keyword) for i, keyword in enumerate(keywords)}
+        return graph.query(query_keywords, parameters)
 
     return None
 
@@ -974,8 +995,8 @@ def retriever(question: str):
         relevant_paper = [record.get('paper') for record in structured_results]
     else:
         relevant_paper = extract_paper_names(unstructured_data)
-    if len(relevant_paper)>30:
-        relevant_paper = relevant_paper[:30]
+    # if len(relevant_paper)>30:
+    #     relevant_paper = relevant_paper[:30]
     print(relevant_paper)
     paper_entity = make_entity_json(relevant_paper,session)
     if question == "What are the latest research findings in the area of virtual reality?":
