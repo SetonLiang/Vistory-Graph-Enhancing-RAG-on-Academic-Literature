@@ -1,39 +1,35 @@
-from neo4j import GraphDatabase
 from collections import defaultdict
+
+from neo4j import GraphDatabase
+
 # Neo4j connection details
 URI = "neo4j+s://d537b991.databases.neo4j.io"
 AUTH = ("neo4j", "IXnft6DFgKXaIRnKdszXZDUkGW38tBTUSnJSE3LwSAc")
 driver = GraphDatabase.driver(URI, auth=AUTH)
 
-# Define the Cypher query
-specified_keyword = "deep learning"
+# 根据给定作者统计他每年发布文章的数量
+query = '''
+    MATCH (a:Author {name: $author_name})<-[:OWNED_BY]-(p:Papers)
+    WITH p.year AS year, COUNT(p) AS paper_count
+    RETURN year, paper_count
+    ORDER BY year
+    '''
 
-Qquery = '''MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)
-RETURN d.name AS department, a.name AS author, COUNT(p) AS papers
-ORDER BY department, papers DESC'''
-
-# Execute the query and process results
 with driver.session(database="neo4j") as session:
-    query_results = session.execute_read(lambda tx: tx.run(Qquery, iata="DEN").data())
+    results = session.execute_read(lambda tx: tx.run(query, author_name='Wei Zeng').data())
 
-# 初始化数据结构
-data = {"name": "Authors", "children": []}
-department_map = defaultdict(list)
+# 使用 defaultdict 创建一个字典，其中 key 是年份，value 是论文数量
+data_dict = defaultdict(int)
 
-# 组织数据
-for result in query_results:
-    department = result["department"]
-    author = result["author"]
-    papers = result["papers"]
+# 填充数据
+for entry in results:
+    year = int(entry['year'])
+    paper_count = entry['paper_count']
+    data_dict[year] = paper_count
 
-    department_map[department].append({"name": author, "value": papers})
+# 将数据转换为所需的格式
+data = []
+for year, paper_count in sorted(data_dict.items()):
+    data.append({"year": year, "paper_count": paper_count})
 
-# 将组织的数据加入到主数据结构中
-for department, authors in department_map.items():
-    data["children"].append({
-        "name": department,
-        "children": authors
-    })
-
-# Print the result
-print(123)
+print(111)

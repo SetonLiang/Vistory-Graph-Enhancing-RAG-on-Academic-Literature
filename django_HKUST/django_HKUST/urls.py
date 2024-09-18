@@ -21,13 +21,11 @@ from app01.views import views, view_knowledge_graph, view_chart, view_qa
 urlpatterns = [
     # 页面
     path('', views.index),
-    path('tpl/', views.tpl),
     path('KG/', view_knowledge_graph.knowledge_graph),
     path('chart/', view_chart.chart),
     path('qa/', view_qa.qa),
 
     # 测试
-    path('tpl/test/ajax', views.tpl_ajax),
     path('test/query/', view_knowledge_graph.query_base),
     path('test/query_paper/', view_knowledge_graph.query_paper),
 
@@ -47,6 +45,7 @@ urlpatterns = [
     path('data_neo4j/forChart', views.get_data_for_chart),
     path('data_neo4j/keyword', views.get_keyword_for_word_cloud),
     path('data_neo4j/keywordFindPaper', views.keyword_find_paper),
+    path('data_neo4j/forchartupdate', views.update_for_chart),
 
     # 获取数据_graph
     path('graph/query/', view_knowledge_graph.query_base),

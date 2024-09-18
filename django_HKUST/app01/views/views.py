@@ -7,7 +7,10 @@ from django.views.decorators.csrf import csrf_exempt
 from app01.models import PublicationDatasets
 from app01.views.view_knowledge_graph import flite_years, query_departments_chart, query_departments_min_chart, \
     flite_dept, query_paper_department, query_paper_department_year, query_keywords, query_find_paper_by_keyword
-from app01.views.view_knowledge_graph import query_author, query_year, query_authors_chart, flite_authors
+from app01.views.view_knowledge_graph import query_author, query_year, query_authors_chart, flite_authors, \
+    update_data_for_wordcloud_dept, update_data_for_chart_dept, update_data_for_treemap_dept, \
+    update_data_for_donut_dept, update_data_for_donut_author, update_data_for_chart_author, \
+    update_data_for_wordcloud_author, update_data_for_treemap_author
 
 
 # Create your views here.
@@ -46,6 +49,32 @@ def keyword_find_paper(request):
     keyword = data['keyword']
     paper_list = query_find_paper_by_keyword(keyword)
     return HttpResponse(json.dumps(paper_list))
+
+
+@csrf_exempt
+def update_for_chart(request):
+    new_donut = []
+    new_chart_d_y = []
+    new_treemap = []
+    data = json.loads(request.body)
+    name = data['name']
+    group = data['group']
+    print(data)
+    if group == 4:
+        new_donut = update_data_for_donut_author(name)
+        new_chart_d_y = update_data_for_chart_author(name)
+        new_treemap = update_data_for_treemap_author(name)
+
+    elif group == 1:
+        new_donut = update_data_for_donut_dept(name)
+        new_chart_d_y = update_data_for_chart_dept(name)
+        new_treemap = update_data_for_treemap_dept(name)
+
+    return HttpResponse(json.dumps({
+        'donut': new_donut,
+        'chart_d_y': new_chart_d_y,
+        'treemap': new_treemap,
+    }))
 
 
 def get_years_from_neo4j(request):
@@ -332,25 +361,3 @@ def common_elements(*lists):
     return list(common_set)
 
 
-def tpl(request):
-    name = "樊秋辰"
-    roles = ['宇宙英雄奥特曼', '迪迦奥特曼', '银河奥特曼']
-    user_info = {'name': 'Xiaomi', 'salary': 100000, 'role': 'CEO'}
-
-    data_list = [
-        {'name': 'Xiaomi', 'salary': 100000, 'role': 'CEO'},
-        {'name': 'Huawei', 'salary': 100400, 'role': 'CEO'},
-        {'name': 'Apple', 'salary': 100500, 'role': 'CEO'},
-        {'name': 'Meizu', 'salary': 100600, 'role': 'CEO'}
-    ]
-    return render(
-        request,
-        "tpl.html",
-        {'n1': name, 'n2': roles, 'n3': user_info, 'n4': data_list}
-    )
-
-
-def tpl_ajax(request):
-    a = request.GET
-    print(a, a['n1'])
-    return HttpResponse('成功')

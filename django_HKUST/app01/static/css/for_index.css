@@ -532,3 +532,7 @@ a {
     padding: 2px 3px; /* 内边距一致 */
 }
 
+@font-face {
+    font-family: 'Lobster';
+    src: url('../fonts/Lobster-Regular.ttf');
+}

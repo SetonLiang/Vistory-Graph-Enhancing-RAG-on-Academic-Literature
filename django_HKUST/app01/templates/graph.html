@@ -94,6 +94,9 @@
         .on('click', function (e) {
             if (e.target.tagName === 'svg') {
                 resetNodeColors();
+                updateDonut(d3.select('#donut') ,initDataChart['donut'])
+                updateChart(d3.select('#chart_d_y') ,initDataChart['chart_d_y'])
+                updateTreemap(d3.select('#treemap') ,initDataChart['heatmap'])
             }
         })
 
@@ -722,10 +725,14 @@
             .on('click', function (e, d) {
                 // Set the clicked node as the selected node
                 selectedNode = d;
-                console.log(d)
+                console.log(selectedNode)
                 if (d.group === 1) {
                     // Call the function to highlight the neighborhood
                     highlightNeighborhood_2(selectedNode);
+                    update_for_chart(selectedNode)
+                } else if (d.group === 4) {
+                    highlightNeighborhood(selectedNode)
+                    update_for_chart(selectedNode)
                 } else {
                     highlightNeighborhood(selectedNode)
                 }
@@ -1620,6 +1627,27 @@
     }
 
 
+</script>
+
+<script>
+    function update_for_chart(node) {
+        $.ajax({
+            url: 'http://127.0.0.1:8000/data_neo4j/forchartupdate',
+            type: 'POST',
+            contentType: 'application/json', // 发送信息至服务器时内容编码类型
+            data: JSON.stringify({
+                'name': node.name,
+                'group': node.group
+            }),
+            success: function (res) {
+                let request = JSON.parse(res)
+                console.log(request)
+                updateDonut(d3.select('#donut'), request['donut'])
+                updateChart(d3.select('#chart_d_y'), request['chart_d_y'])
+                updateTreemap(d3.select('#treemap'), request['treemap'])
+            }
+        })
+    }
 </script>
 
 

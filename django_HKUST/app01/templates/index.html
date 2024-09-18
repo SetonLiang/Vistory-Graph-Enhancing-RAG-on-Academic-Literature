@@ -13,23 +13,27 @@
 <script src="{% static 'js/jquery-3.7.1.js' %}"></script>
 <script src="{% static 'plugins/d3/d3.v7.js' %}"></script>
 <script src="{% static 'plugins/d3/d3.layout.cloud.js' %}"></script>
-
+<script src="{% static 'fonts/Lobster-Regular.ttf' %}"></script>
 
 <div class="Self_container">
     <div class="header">
         <div id="title" class="clearfix">
-            <h1>AcademiaEyes</h1>
+{#            <h1>AcademiaEyes</h1>#}
+            <span style="font-family: 'Lobster'; font-size: 35px; margin-left: 50px;">AcademiaEyes</span>
         </div>
     </div>
     <div class="main">
 
         <div class="left-container">
-            <div class="title-box">Faceted View</div>
+            <div class="title-box">
+                <span style="margin-left: 10px;">Faceted View</span>
+            </div>
             <div class="content-box hidden" id="chart"></div>
         </div>
 
         <div class="middle-container">
-            <div class="title-box">Knowledge Graph
+            <div class="title-box">
+                <span style="margin-left: 10px;">Knowledge Graph</span>
                 <div class="dropdown-container">
                     <span id="min_citation" class="local-label">Min-citation:</span>
                     <button id="dropdownButton" class="dropdown-button">20</button>
@@ -118,7 +122,9 @@
             {#            </div>#}
 
             {#            <div class="bottom-container">#}
-            <div class="title-box">Analytical Discourse</div>
+            <div class="title-box">
+                <span style="margin-left: 10px;">Analytical Discourse</span>
+            </div>
             <div class="content-box hidden" id="qa" style="height: calc(100% - 30px)">
             </div>
             {#            </div>#}
