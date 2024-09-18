@@ -1,38 +1,34 @@
-import os,json,re,csv
-from typing import List, Tuple
+import csv
+import json
+import os
+import re
+from typing import Tuple, List, Union
+
+import numpy as np
+import torch
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.graphs import Neo4jGraph
+from langchain_community.vectorstores import Neo4jVector
+from langchain_community.vectorstores.neo4j_vector import remove_lucene_chars
+from langchain_core.messages import AIMessage, HumanMessage, ToolMessage
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.prompts.prompt import PromptTemplate
+from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_core.runnables import (
     RunnableBranch,
     RunnableLambda,
     RunnableParallel,
-    RunnablePassthrough,
-    Runnable
+    RunnablePassthrough
 )
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.prompts.prompt import PromptTemplate
-from langchain_core.pydantic_v1 import BaseModel, Field
-from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
-from langchain_core.output_parsers import StrOutputParser
-from langchain_community.graphs import Neo4jGraph
 from langchain_openai import ChatOpenAI
-from langchain_experimental.graph_transformers import LLMGraphTransformer
-from neo4j import GraphDatabase, basic_auth
-from langchain_community.vectorstores import Neo4jVector
-from langchain_openai import OpenAIEmbeddings
-from langchain.load import dumps, loads
-from langchain_community.vectorstores.neo4j_vector import remove_lucene_chars
-from langchain_core.messages import AIMessage, HumanMessage, ToolMessage
-from yfiles_jupyter_graphs import GraphWidget
-from typing import Tuple, List, Optional, Union
-from operator import itemgetter
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from sentence_transformers import SentenceTransformer
-
-from transformers import AutoTokenizer, AutoModel
-import torch
-import numpy as np
+from neo4j import GraphDatabase
 from sklearn.metrics.pairwise import cosine_similarity
+from transformers import AutoTokenizer, AutoModel
+from yfiles_jupyter_graphs import GraphWidget
 
 from app01.views.entity_query import *
+
 # 环境变量设置
 os.environ["OPENAI_API_BASE"] = 'https://api.chsdw.top/v1'
 os.environ["OPENAI_API_KEY"] = "sk-gO7KhknYxgDCHTzC0aE1A4Df0fC040E78c80D296C9FbA001"
@@ -40,33 +36,34 @@ os.environ["NEO4J_URI"] = "neo4j+s://d537b991.databases.neo4j.io"
 os.environ["NEO4J_USERNAME"] = "neo4j"
 os.environ["NEO4J_PASSWORD"] = "IXnft6DFgKXaIRnKdszXZDUkGW38tBTUSnJSE3LwSAc"
 
-
-
 graph = Neo4jGraph()
 # 连接到Neo4j数据库
 driver = GraphDatabase.driver(
-    uri = os.environ["NEO4J_URI"],
-    auth = (os.environ["NEO4J_USERNAME"],
-            os.environ["NEO4J_PASSWORD"])
+    uri=os.environ["NEO4J_URI"],
+    auth=(os.environ["NEO4J_USERNAME"],
+          os.environ["NEO4J_PASSWORD"])
 )
 session = driver.session()
 
 default_cypher = "MATCH (s)-[r:!HAS_KEYWORD]->(t) RETURN s,r,t LIMIT 50"
+
+
 def showGraph(cypher: str = default_cypher):
     # create a neo4j session to run queries
     driver = GraphDatabase.driver(
-        uri = os.environ["NEO4J_URI"],
-        auth = (os.environ["NEO4J_USERNAME"],
-                os.environ["NEO4J_PASSWORD"])
+        uri=os.environ["NEO4J_URI"],
+        auth=(os.environ["NEO4J_USERNAME"],
+              os.environ["NEO4J_PASSWORD"])
     )
     session = driver.session()
-    widget = GraphWidget(graph = session.run(cypher).graph())
+    widget = GraphWidget(graph=session.run(cypher).graph())
     widget.node_label_mapping = 'id'
-    #display(widget)
+    # display(widget)
     return widget
+
+
 # 加载作者数据并创建图谱
 def load_author_data(department_name, author_name, csv_file):
-  
     # 创建作者和部门节点，以及它们之间的关系
     create_author_query = """
         MERGE (d:Department {name: $department_name,type: "Department"})
@@ -79,7 +76,7 @@ def load_author_data(department_name, author_name, csv_file):
     # 读取CSV文件并创建论文节点及其关系
     with open(csv_file, mode='r', encoding='utf-8') as file:
         first_line = file.readline()
-        #去除BOM格式
+        # 去除BOM格式
         if first_line.startswith('\ufeff'):
             first_line = first_line.lstrip('\ufeff')
 
@@ -101,11 +98,11 @@ def load_author_data(department_name, author_name, csv_file):
                 ON CREATE SET f.name = $author_name
                 MERGE (z)-[:OWNED_BY]->(f)
             """
-            session.run(create_paper_query, id=line['Id'], year=line['Year'], source=line['Sources'], 
-                        name=line['Name'], authors=line['Authors'], abstract=line['Abstract'], 
-                        venue=line['Venues'], keywords=line['Keywords'], citation=line['Citation'], author_name=author_name)
-                
-                
+            session.run(create_paper_query, id=line['Id'], year=line['Year'], source=line['Sources'],
+                        name=line['Name'], authors=line['Authors'], abstract=line['Abstract'],
+                        venue=line['Venues'], keywords=line['Keywords'], citation=line['Citation'],
+                        author_name=author_name)
+
             # 处理关键词并创建关键词节点及关系
             keywords = line['Keywords'].split(',')
             for keyword in keywords:
@@ -118,7 +115,6 @@ def load_author_data(department_name, author_name, csv_file):
                     """
                     session.run(create_keyword_query, keyword=keyword.strip(), id=line['Id'])
 
-            
     # 创建论文之间的关键词关系
     create_relationships_query = """
         MATCH (p1:Papers)-[:HAS_KEYWORD]->(k:Keyword)<-[:HAS_KEYWORD]-(p2:Papers)
@@ -127,7 +123,6 @@ def load_author_data(department_name, author_name, csv_file):
     """
     session.run(create_relationships_query)
 
-   
 
 # 实体识别模型
 class Entities(BaseModel):
@@ -136,6 +131,7 @@ class Entities(BaseModel):
         description="All the Department, Author, keyword, Papers, Year and Venue entities that appear in the text",
     )
 
+
 def generate_full_text_query(input: str) -> str:
     full_text_query = ""
     words = [el for el in remove_lucene_chars(input).split() if el]
@@ -143,6 +139,7 @@ def generate_full_text_query(input: str) -> str:
         full_text_query += f" {word}~2 AND"
     full_text_query += f" {words[-1]}~2"
     return full_text_query.strip()
+
 
 def parse_entities(entities: Union[Entities, dict]) -> List[str]:
     if isinstance(entities, Entities):
@@ -162,7 +159,7 @@ examples = [
             {
                 "name": "Entities",
                 "args": {
-                    "names":["CMA"],
+                    "names": ["CMA"],
                 },
                 "id": "1",
             }
@@ -180,7 +177,7 @@ examples = [
             {
                 "name": "Entities",
                 "args": {
-                    "names":["fan mingming"],
+                    "names": ["fan mingming"],
                 },
                 "id": "2",
             }
@@ -189,49 +186,50 @@ examples = [
     ToolMessage("", tool_call_id="2"),
     HumanMessage("Which papers contain the keyword 'deep learning'", name="example_user"),
     AIMessage(
-            "",
-            tool_calls=[
-                {
-                    "name": "Entities",
-                    "args": {
-                        "names":["deep learning"],
-                    },
-                    "id": "3",
-                }
-            ],
-        ),
-        ToolMessage("", tool_call_id="3"),
+        "",
+        tool_calls=[
+            {
+                "name": "Entities",
+                "args": {
+                    "names": ["deep learning"],
+                },
+                "id": "3",
+            }
+        ],
+    ),
+    ToolMessage("", tool_call_id="3"),
 ]
 
 # 实体识别提示模板
 entity_prompt = ChatPromptTemplate.from_messages([
     (
-        "system", 
-        " You are extracting Department, Author, keyword, Year, Venue and Papers entities from the text.",        
+        "system",
+        " You are extracting Department, Author, keyword, Year, Venue and Papers entities from the text.",
     ),
     (
         "placeholder",
         "{examples}"
     ),
     (
-        "human", 
+        "human",
         "Use the given format to extract information from the following"
         "input: {question}",
     ),
 ])
 
 # 实体链
-entity_chain = entity_prompt | ChatOpenAI(temperature=0,model='gpt-4o').with_structured_output(Entities)
+entity_chain = entity_prompt | ChatOpenAI(temperature=0, model='gpt-4o').with_structured_output(Entities)
 # print(entity_chain)
 # print(entity_chain.invoke({"question":"How many authors does CMA have?","examples":examples}).names)
 # print(structured_retriever("What are the key contributions of Kang Zhang's papers?"))
-
 
 
 # 初始化模型和tokenizer
 model_name = "BAAI/bge-m3"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModel.from_pretrained(model_name)
+
+
 def embed_text(text):
     """将文本嵌入到向量空间中"""
     inputs = tokenizer(text, return_tensors='pt', truncation=True, padding=True, max_length=512)
@@ -240,11 +238,15 @@ def embed_text(text):
         # 取文本的平均池化作为嵌入
         embeddings = outputs.last_hidden_state.mean(dim=1)
     return embeddings.numpy().flatten()
+
+
 def load_embeddings(file_path):
     """从 JSON 文件加载嵌入数据"""
     with open(file_path, 'r') as file:
         data = json.load(file)
     return data["nodes"]
+
+
 def similarity_search(question, file_path, k=10):
     """执行相似度搜索"""
     # 加载节点嵌入
@@ -255,7 +257,7 @@ def similarity_search(question, file_path, k=10):
 
     # 提取节点嵌入
     node_embeddings = np.array([np.array(node["embedding"]) for node in nodes if "embedding" in node])
-    
+
     # 计算相似度
     similarities = cosine_similarity([question_embedding], node_embeddings)[0]
 
@@ -267,12 +269,13 @@ def similarity_search(question, file_path, k=10):
             "abstract": node.get("abstract"),
             "keywords": node.get("keywords")
         })
-    
+
     # 按相似度排序并获取前 k 个结果
     sorted_results = sorted(zip(results, similarities), key=lambda x: x[1], reverse=True)
     top_results = [result for result, _ in sorted_results[:k]]
-    
+
     return top_results
+
 
 # def structured_retriever(question: str) -> dict:
 #     result = []
@@ -283,7 +286,7 @@ def similarity_search(question, file_path, k=10):
 #         entity_names = parse_entities(entities)
 #     except ValueError as e:
 #         return {"error": str(e)}
-    
+
 #     # 提取年份实体，如果存在的话
 #     year_entity = None
 #     for entity in entity_names:
@@ -312,7 +315,7 @@ def similarity_search(question, file_path, k=10):
 #             """,
 #             {"name": entity}
 #         )
-        
+
 #         # 查询论文标题相关路径
 #         paper_response = run_to_query(
 #             """
@@ -324,7 +327,7 @@ def similarity_search(question, file_path, k=10):
 #             """,
 #             {"title": entity}
 #         )
-        
+
 #         # 查询关键词相关路径
 #         keyword_response = run_to_query(
 #             """
@@ -336,7 +339,7 @@ def similarity_search(question, file_path, k=10):
 #             """,
 #             {"keyword": entity}
 #         )
-        
+
 #         # 查询作者所属部门
 #         department_response = run_to_query(
 #             """
@@ -417,26 +420,27 @@ def similarity_search(question, file_path, k=10):
 #     print(len(result))
 #     return {"results": result, "length": len(result), "is_year": year_entity}
 def infer_entity_type(entity_name):
-    with open("app01/datasets/final_entity_type_map.json","r",encoding='utf-8') as f:
+    with open("app01/datasets/final_entity_type_map.json", "r", encoding='utf-8') as f:
         ENTITY_TYPE_MAP = json.load(f)
     return ENTITY_TYPE_MAP.get(entity_name.lower(), "unknown")
+
 
 def structured_retriever(question: str) -> dict:
     result = []
 
     # 使用实体提取工具解析问题中的实体
     entities = entity_chain.invoke({"question": question, "examples": examples})
-    
+
     # 解析出实体名称和类型
     try:
         entity_names = parse_entities(entities)
     except ValueError as e:
         return {"error": str(e)}
-    
+
     # 推断实体类型
     inferred_types = {name: infer_entity_type(name) for name in entity_names}
     print(inferred_types)
-     
+
     # 如果有多个实体，执行联合查询以识别共同关联
     if len(inferred_types) > 1:
         combined_responses = query_combined_entities(inferred_types)
@@ -446,7 +450,7 @@ def structured_retriever(question: str) -> dict:
     else:
         # 构建查询语句
         for entity, entity_type in inferred_types.items():
-            
+
             clean_entity = clean_entity_name(entity)
             # print(clean_entity)
             # 根据实体类型选择相应的查询逻辑
@@ -454,23 +458,23 @@ def structured_retriever(question: str) -> dict:
                 author_response = query_author(clean_entity)
                 if author_response:
                     result.extend(format_author_response(author_response))
-                
+
             elif entity_type == "Papers":
                 paper_response = query_paper(clean_entity)
                 if paper_response:
                     result.extend(format_paper_response(paper_response))
-                
+
             elif entity_type == "Keyword":
                 keyword_response = query_keyword(clean_entity)
                 if keyword_response:
                     print(keyword_response)
                     result.extend(format_keyword_response(keyword_response))
-                
+
             elif entity_type == "Department":
                 department_response = query_department(clean_entity)
                 if department_response:
                     result.extend(format_department_response(department_response))
-                
+
             elif entity_type == "Year":
                 year_response = query_year(clean_entity)
                 if year_response:
@@ -484,9 +488,12 @@ def structured_retriever(question: str) -> dict:
 
     return {"results": result, "length": len(result)}
 
+
 def clean_entity_name(entity):
     """Clean and normalize the entity name."""
-    return entity.strip('"\'').replace(",", "").replace(":", "").replace("?", "").replace("-", "").replace(" ", "").lower()
+    return entity.strip('"\'').replace(",", "").replace(":", "").replace("?", "").replace("-", "").replace(" ",
+                                                                                                           "").lower()
+
 
 def query_author(author_name):
     """Query for author-related information."""
@@ -499,6 +506,7 @@ def query_author(author_name):
         Limit 60
     """
     return session.run(query, {"name": author_name})
+
 
 # def query_paper(paper_title):
 #     """Query for paper-related information."""
@@ -525,6 +533,7 @@ def query_paper(paper_title):
     """
     return session.run(query, {"title": paper_title})
 
+
 def query_keyword(keyword_name):
     """Query for keyword-related information."""
     query = """
@@ -537,6 +546,7 @@ def query_keyword(keyword_name):
     """
     return session.run(query, {"keyword": keyword_name})
 
+
 def query_department(department_name):
     """Query for department-related information."""
     query = """
@@ -548,6 +558,7 @@ def query_department(department_name):
     """
     return session.run(query, {"name": department_name})
 
+
 def query_year(year):
     """Query for year-related information."""
     query = """
@@ -557,6 +568,7 @@ def query_year(year):
         RETURN a, y, d, collect(p) as papers
     """
     return session.run(query, {"year": year})
+
 
 def query_venue(venue):
     """Query for venue-related information."""
@@ -602,7 +614,6 @@ def query_combined_entities(entities):
         AND apoc.text.clean(v.name) = apoc.text.clean($venue)
         RETURN p as papers
     """
-    
 
     query_department_year = """
         MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)-[:PUBLISHED_IN]->(y:Year)
@@ -625,7 +636,6 @@ def query_combined_entities(entities):
         AND apoc.text.clean(v.name) = apoc.text.clean($venue)
         RETURN a, p as papers
     """
-
 
     query_keyword_year = """
         MATCH (k:Keyword)<-[:HAS_KEYWORD]-(p:Papers)-[:PUBLISHED_IN]->(y:Year)
@@ -650,63 +660,62 @@ def query_combined_entities(entities):
         RETURN a, p as papers
     """
 
-    authors = get_key(entities, 'Author') #判断是否有多个作者
-    departments = get_key(entities, 'Department') #判断是否有多个部门
-
+    authors = get_key(entities, 'Author')  # 判断是否有多个作者
+    departments = get_key(entities, 'Department')  # 判断是否有多个部门
 
     # Example for combining author and year entities
     if "Author" in entities.values() and "Year" in entities.values():
-        author_name = clean_entity_name(get_key(entities,'Author')[0])
-        year = get_key(entities,'Year')
+        author_name = clean_entity_name(get_key(entities, 'Author')[0])
+        year = get_key(entities, 'Year')
         return session.run(query_author_year, {"author_name": author_name, "year": year})
-    
+
     if "Author" in entities.values() and "Keyword" in entities.values():
-        author_name = clean_entity_name(get_key(entities,'Author')[0])
-        keyword = clean_entity_name(get_key(entities,'Keyword')[0])
+        author_name = clean_entity_name(get_key(entities, 'Author')[0])
+        keyword = clean_entity_name(get_key(entities, 'Keyword')[0])
         return session.run(query_author_keyword, {"author_name": author_name, "keyword": keyword})
-    
+
     if "Author" in entities.values() and "Venue" in entities.values():
-        author_name = clean_entity_name(get_key(entities,'Author')[0])
-        venue = clean_entity_name(get_key(entities,'Venue')[0])
+        author_name = clean_entity_name(get_key(entities, 'Author')[0])
+        venue = clean_entity_name(get_key(entities, 'Venue')[0])
         return session.run(query_author_venue, {"author_name": author_name, "venue": venue})
-    
+
     # Example for combining Department and others
     # department can combine with mutiple year=> trend
     if "Department" in entities.values() and "Year" in entities.values():
-        department_name = clean_entity_name(get_key(entities,'Department')[0])
-        year = get_key(entities,'Year')
+        department_name = clean_entity_name(get_key(entities, 'Department')[0])
+        year = get_key(entities, 'Year')
         return session.run(query_department_year, {"department_name": department_name, "year": year})
     if "Department" in entities.values() and "Keyword" in entities.values():
-        department_name = clean_entity_name(get_key(entities,'Department')[0])
-        keyword = clean_entity_name(get_key(entities,'Keyword')[0])
+        department_name = clean_entity_name(get_key(entities, 'Department')[0])
+        keyword = clean_entity_name(get_key(entities, 'Keyword')[0])
         return session.run(query_department_keyword, {"department_name": department_name, "keyword": keyword})
     if "Department" in entities.values() and "Venue" in entities.values():
-        department_name = clean_entity_name(get_key(entities,'Department')[0])
-        venue = clean_entity_name(get_key(entities,'Venue')[0])
+        department_name = clean_entity_name(get_key(entities, 'Department')[0])
+        venue = clean_entity_name(get_key(entities, 'Venue')[0])
         return session.run(query_department_venue, {"department_name": department_name, "venue": venue})
 
     # Example for combining keyword and others
     if "Keyword" in entities.values() and "Year" in entities.values():
-        keyword = clean_entity_name(get_key(entities,'Keyword')[0])
-        year = get_key(entities,'Year')[0]
+        keyword = clean_entity_name(get_key(entities, 'Keyword')[0])
+        year = get_key(entities, 'Year')[0]
         return session.run(query_keyword_year, {"keyword": keyword, "year": year})
     if "Keyword" in entities.values() and "Venue" in entities.values():
-        keyword = clean_entity_name(get_key(entities,'Keyword')[0])
-        venue = clean_entity_name(get_key(entities,'Venue')[0])
+        keyword = clean_entity_name(get_key(entities, 'Keyword')[0])
+        venue = clean_entity_name(get_key(entities, 'Venue')[0])
         return session.run(query_keyword_venue, {"keyword": keyword, "venue": venue})
 
     # Example for combining year and venue
     if "Year" in entities.values() and "Venue" in entities.values():
-        year = get_key(entities,'Year')[0]
-        venue = clean_entity_name(get_key(entities,'Venue')[0])
+        year = get_key(entities, 'Year')[0]
+        venue = clean_entity_name(get_key(entities, 'Venue')[0])
         return session.run(query_year_venue, {"year": year, "venue": venue})
-    
+
     if len(authors) > 1:
-       # 动态构建MATCH查询部分，包含所有作者
+        # 动态构建MATCH查询部分，包含所有作者
         match_clause = "MATCH " + ", ".join(
             [f"(a{i}:Author)<-[:OWNED_BY]-(p{i}:Papers)" for i in range(len(authors))]
         )
-        
+
         # 构建WHERE子句，用于过滤每个作者的名字
         where_clause = " AND ".join(
             [f"apoc.text.clean(a{i}.name) = apoc.text.clean($author{i}_name)" for i in range(len(authors))]
@@ -725,14 +734,15 @@ def query_combined_entities(entities):
         """
         # 创建参数字典，存储每个作者的名字
         parameters = {f"author{i}_name": clean_entity_name(author) for i, author in enumerate(authors)}
-        
+
         # 执行查询并返回结果
         return session.run(query_authors, parameters)
 
     if len(departments) > 1:
         # 动态构建MATCH查询部分，包含所有部门
         match_clause = "MATCH " + ", ".join(
-            [f"(d{i}:Department)<-[:BELONGS_TO]-(a{i}:Author)<-[:OWNED_BY]-(p{i}:Papers)" for i in range(len(departments))]
+            [f"(d{i}:Department)<-[:BELONGS_TO]-(a{i}:Author)<-[:OWNED_BY]-(p{i}:Papers)" for i in
+             range(len(departments))]
         )
 
         # 构建WHERE子句，用于过滤每个部门的名字
@@ -764,33 +774,34 @@ def query_combined_entities(entities):
 # 提取unstructured_data的relevant paper name
 def extract_paper_names(unstructured_data):
     pattern = re.compile(r'name:\s*([^#\n]+)')
-    
+
     paper_names = []
     for entry in unstructured_data:
         matches = pattern.findall(entry)
         paper_names.extend(match.strip() for match in matches)
-    
+
     return paper_names
+
 
 def unique_dict_list(dict_list):
     # Step 1: Flatten the nested list of dictionaries
     flattened_list = [d for sublist in dict_list for d in sublist]
-    
+
     # Step 2: Remove duplicates using a set of frozensets
     seen = set()
     unique_list = []
-    
+
     for d in flattened_list:
         # Convert the dictionary to a frozenset for uniqueness check
         dict_frozenset = frozenset(d.items())
         if dict_frozenset not in seen:
             seen.add(dict_frozenset)
             unique_list.append(d)
-    
+
     return unique_list
 
 
-def make_entity_json(relevant_paper,session):
+def make_entity_json(relevant_paper, session):
     results = []
     results2 = []
     for item in relevant_paper:
@@ -802,10 +813,10 @@ def make_entity_json(relevant_paper,session):
             OPTIONAL MATCH (author)-[r3]->(department:Department)
             WHERE (author)-[:BELONGS_TO]->(department)
             RETURN p, author AS a, keyword AS k, department as d, r1, r2, r3, COUNT(rel) AS keyword_count
-        """         
+        """
 
         # "RETURN p, author AS a, keyword AS k, department as d, r1, r2, r3, COUNT(r2) AS keyword_count"
-        temp = session.execute_read(lambda tx: tx.run(cypher_query, paper_name=item).data())    
+        temp = session.execute_read(lambda tx: tx.run(cypher_query, paper_name=item).data())
         results.append(temp)
 
     nodes = []
@@ -838,14 +849,14 @@ def make_entity_json(relevant_paper,session):
             #     }
             if item['k']:
                 keyword_name = item['k']['name']
-                
+
                 keyword_count = item['keyword_count']
                 # 使用小写形式作为键
                 keyword_name_lower = keyword_name.lower()
 
                 # 检查是否已经存在于 keywords_set 中
                 if keyword_name_lower not in keywords_set:
-                    keyword_counts[keyword_name_lower]=set()
+                    keyword_counts[keyword_name_lower] = set()
                     keyword_counts[keyword_name_lower].add(keyword_count)
                     keywords_set[keyword_name_lower] = {
                         'name': keyword_name_lower,
@@ -857,9 +868,9 @@ def make_entity_json(relevant_paper,session):
                     #     print(keyword_name,keyword_count)
                     #     print(keyword_counts[keyword_name_lower],type(keyword_counts[keyword_name_lower]))
                     keyword_counts[keyword_name_lower].add(keyword_count)
-                    keywords_set[keyword_name_lower]['citation']=sum(list(keyword_counts[keyword_name_lower]))
+                    keywords_set[keyword_name_lower]['citation'] = sum(list(keyword_counts[keyword_name_lower]))
                 nodes.append(keywords_set[keyword_name_lower])
-                
+
             temp_department = {
                 'name': item['d']['name'],
                 'group': 1
@@ -881,12 +892,12 @@ def make_entity_json(relevant_paper,session):
                 'target': item['r3'][2]['name'],
                 'relationship': item['r3'][1],
             }
-           
+
             # nodes.append(temp_author)
             nodes.append(temp_paper)
             nodes.append(temp_department)
             links.append(temp_link_r1)
-            
+
             links.append(temp_link_r3)
     nodes = list(map(dict, set(frozenset(item.items()) for item in nodes)))
     links = list(map(dict, set(frozenset(item.items()) for item in links)))
@@ -898,7 +909,7 @@ def make_entity_json(relevant_paper,session):
             RETURN  a
         """
         temp2 = session.execute_read(lambda tx: tx.run(cypher_query2, paper_name=item).data())
-        results2.append(temp2)    
+        results2.append(temp2)
 
     author_list = [[author['a'] for author in lst] for lst in results2]
     # author_list = [list({author['name']: author for author in lst}.values()) for lst in author_list]
@@ -919,11 +930,13 @@ def make_entity_json(relevant_paper,session):
     }
     return entity
 
+
 model_name = "BAAI/bge-m3"
 embedding_model = HuggingFaceEmbeddings(
     model_name=model_name,
 )
 file_path = "app01/datasets/final_vector_index.json"
+
 
 def format_unstructured_data(data):
     """将 unstructured_data 格式化为文本"""
@@ -937,6 +950,7 @@ def format_unstructured_data(data):
         # 格式化每个条目
         formatted_data.append(f"name: {name}\nabstract: {abstract}\nkeywords: {keywords}\n")
     return formatted_data
+
 
 def retriever(question: str):
     # 向量索引创建: https://python.langchain.com/v0.2/docs/integrations/vectorstores/neo4jvector/
@@ -974,10 +988,10 @@ def retriever(question: str):
         relevant_paper = [record.get('paper') for record in structured_results]
     else:
         relevant_paper = extract_paper_names(unstructured_data)
-    if len(relevant_paper)>30:
+    if len(relevant_paper) > 30:
         relevant_paper = relevant_paper[:30]
     print(relevant_paper)
-    paper_entity = make_entity_json(relevant_paper,session)
+    paper_entity = make_entity_json(relevant_paper, session)
     if question == "What are the latest research findings in the area of virtual reality?":
         with open('app01/datasets/user_study_test1.json', 'w') as f:
             json.dump(paper_entity, f, indent=4)
@@ -999,12 +1013,14 @@ CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template("""Given the following c
     Follow Up Input: {question}
     Standalone question:""")
 
+
 def _format_chat_history(chat_history: List[Tuple[str, str]]) -> List:
     buffer = []
     for human, ai in chat_history:
         buffer.append(HumanMessage(content=human))
         buffer.append(AIMessage(content=ai))
     return buffer
+
 
 _search_query = RunnableBranch(
     (
@@ -1014,22 +1030,22 @@ _search_query = RunnableBranch(
         | ChatOpenAI(temperature=0)
         | StrOutputParser(),
     ),
-    RunnableLambda(lambda x : x["question"]),
+    RunnableLambda(lambda x: x["question"]),
 )
 
 
 def return_response(question):
     model_name = "BAAI/bge-m3"
     embedding_model = HuggingFaceEmbeddings(
-            model_name=model_name,
+        model_name=model_name,
     )
 
     # 向量索引创建: https://python.langchain.com/v0.2/docs/integrations/vectorstores/neo4jvector/
     session.run("""
              MATCH (p:Papers)
             REMOVE p.embedding
-    """               
-    )
+    """
+                )
     try:
         vector_index = Neo4jVector.from_existing_graph(
             # OpenAIEmbeddings(),
@@ -1046,7 +1062,6 @@ def return_response(question):
 
     # 创建全文索引
     graph.query("CREATE FULLTEXT INDEX entity IF NOT EXISTS FOR (e:__Entity__) ON EACH [e.id]")
-    
 
     # QA提示模版
     answer_template = """Answer the question based only on the following context:
@@ -1058,19 +1073,19 @@ def return_response(question):
 
     # QA链
     chain = (
-        RunnableParallel({
-            "context": _search_query | retriever,
-            "question": RunnablePassthrough(),
-        })
-        | answer_prompt
-        | ChatOpenAI(temperature=0)
-        | StrOutputParser()
+            RunnableParallel({
+                "context": _search_query | retriever,
+                "question": RunnablePassthrough(),
+            })
+            | answer_prompt
+            | ChatOpenAI(temperature=0)
+            | StrOutputParser()
     )
 
     # 运行QA链
     ans = chain.invoke({"question": question.lower()})
 
-    #利用chat history
+    # 利用chat history
     # ans = chain.invoke(
     #     {
     #         "question": "Please give me the paper names",
