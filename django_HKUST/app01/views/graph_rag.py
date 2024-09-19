@@ -218,7 +218,7 @@ entity_prompt = ChatPromptTemplate.from_messages([
 ])
 
 # 实体链
-entity_chain = entity_prompt | ChatOpenAI(temperature=0, model='gpt-4o').with_structured_output(Entities)
+entity_chain = entity_prompt | ChatOpenAI(temperature=0, model='gpt-3.5-turbo').with_structured_output(Entities)
 # print(entity_chain)
 # print(entity_chain.invoke({"question":"How many authors does CMA have?","examples":examples}).names)
 # print(structured_retriever("What are the key contributions of Kang Zhang's papers?"))
@@ -823,6 +823,106 @@ def unique_dict_list(dict_list):
 
     return unique_list
 
+def update_data_for_donut_dept(author_name, dept_name,processed_authors,results):
+    department_counts = {
+        "Dept.1": results[0]['value'],
+        "Dept.2": results[1]['value'],
+        "Dept.3": results[2]['value']
+    }
+
+    if dept_name == "AI":
+        mapped_department = "Dept.1"
+    elif dept_name == "CMA":
+        mapped_department = "Dept.2"
+    elif dept_name == "DSA":
+        mapped_department = "Dept.3"
+    else:
+        mapped_department = dept_name
+            
+    # 如果作者是第一次出现，并且部门是目标部门，更新 value
+    if (author_name, dept_name) not in processed_authors:
+        department_counts[mapped_department] += 1
+        processed_authors.add((author_name, dept_name))
+
+    return  [
+            {"department": "Dept.1", "value": department_counts["Dept.1"]},
+            {"department": "Dept.2", "value": department_counts["Dept.2"]},
+            {"department": "Dept.3", "value": department_counts["Dept.3"]}
+        ]
+
+
+
+def update_data_for_chart_dept(paper_name, dept_name, processed_papers, chart_d_y):
+    # 查询给定论文的所属年份
+    cypher_query = '''
+    MATCH (p:Papers {name: $paper_name})-[:OWNED_BY]->(a:Author)-[:BELONGS_TO]->(d:Department)
+    WHERE d.name = $dept_name
+    RETURN p.year AS year
+    '''
+
+    with driver.session(database="neo4j") as session:
+        result = session.execute_read(lambda tx: tx.run(cypher_query, paper_name=paper_name, dept_name=dept_name).single())
+
+    if result:
+        paper_year = int(result['year'])
+
+        # 遍历 chart_d_y 列表，找到与论文年份匹配的字典，并更新对应部门和 paper_count
+        for entry in chart_d_y:
+            if entry['year'] == paper_year:
+                if (paper_name,dept_name) not in processed_papers:
+                    processed_papers.add((paper_name,dept_name))
+                    entry[dept_name] += 1  # 更新对应部门的计数
+                
+    return chart_d_y
+
+
+def update_data_for_treemap_dept(author_name, dept_name, results):
+    for dept in results['children']:
+        if dept['name'] == dept_name:
+            # Check if the author already exists in the department's children
+            author_found = False
+            for child in dept['children']:
+                if child['name'] == author_name:
+                    # If the author exists, increment the value
+                    child['value'] += 1
+                    author_found = True
+                    break
+                
+            # If the author does not exist, add a new entry
+            if not author_found:
+                dept['children'].append({'name': author_name, 'value': 1})
+   
+
+    return results
+
+def update_data_for_wordcloud_author(entity, update_results):
+    keyword_names = [{'text': node['name'], 'size': node['citation']} 
+                     for node in entity['nodes'] if node.get('group') == 2]
+    
+    keyword_names = list({tuple(k.items()): k for k in keyword_names}.values())
+
+    counts =[result["size"]for result in keyword_names]
+    # 计算最小和最大值
+    min_count = min(counts)
+    max_count = max(counts)
+    # 定义缩放的目标范围
+    target_min =3
+    target_max= 40
+    # 线性缩放函数
+    def scale(value,min_value, max_value, target_min, target_max):
+        if max_value == min_value:
+            # 如果最大值等于最小值，避免除零错误，直接返回 target_min 或 target_maxreturn target_min
+            return target_min
+        return target_min +(value -min_value) * (target_max - target_min)/(max_value - min_value)
+                
+    # 构建词云所需的数据格式，并将pathcount 缩放到[3，40]范围
+    words =[
+        {"text": result["text"], "size": scale(result["size"], min_count, max_count, target_min, target_max)}
+        for result in keyword_names
+    ]
+    update_results['wordcloud'] = words
+    return update_results
+
 
 def make_entity_json(relevant_paper, session):
     results = []
@@ -951,7 +1051,60 @@ def make_entity_json(relevant_paper, session):
         'nodes': nodes,
         'links': links
     }
-    return entity
+
+    update_results = {
+        "donut": [{'department': 'Dept.1', 'value': 0}, {'department': 'Dept.2', 'value': 0}, {'department': 'Dept.3', 'value': 0}],
+        "chart_d_y": [{'year': 2020, 'CMA': 0, 'AI': 0, 'DSA': 0, 'paper_count': 0}, 
+                      {'year': 2021, 'CMA': 0, 'AI': 0, 'DSA': 0, 'paper_count': 0}, 
+                      {'year': 2022, 'CMA': 0, 'AI': 0, 'DSA': 0, 'paper_count': 0}, 
+                      {'year': 2023, 'CMA': 0, 'AI': 0, 'DSA': 0, 'paper_count': 0}, 
+                      {'year': 2024, 'CMA': 0, 'AI': 0, 'DSA': 0, 'paper_count': 0}],
+        'treemap': {
+            'name': 'Authors',
+            'children': [
+                {'name': 'CMA', 'children': []},
+                {'name': 'DSA', 'children': []},
+                {'name': 'AI', 'children': []}
+            ]
+        },
+        'wordcloud': {
+        }
+    }
+    # 记录已处理过的作者
+    processed_authors = set()
+    processed_papers = set()
+
+    for paper_name in relevant_paper:
+        # Step 1: 先查询该论文所属的部门
+        cypher_query = '''
+        MATCH (p:Papers {name: $paper_name})-[:OWNED_BY]->(a:Author)-[:BELONGS_TO]->(d:Department)
+        RETURN DISTINCT p.name AS paper, a.name AS author, d.name AS department
+        '''
+        with driver.session(database="neo4j") as session:
+            department_result = session.execute_read(lambda tx: tx.run(cypher_query, paper_name=paper_name).data())
+        # print(department_result)
+        if department_result:
+            for department_result in department_result:
+                department_name = department_result['department']
+                author_name = department_result['author']
+                paper_name = department_result['paper']
+
+                # Step 2: 获取donut数据
+                donut_data = update_data_for_donut_dept(author_name,department_name,processed_authors,update_results["donut"])
+                update_results["donut"] = donut_data  # 假设每篇论文的部门一样的话直接覆盖   
+
+                # Step 3: 获取chart_d_y数据
+                chart_d_y_data = update_data_for_chart_dept(paper_name,department_name,processed_papers,update_results["chart_d_y"])
+                update_results["chart_d_y"] = chart_d_y_data
+
+                # Step 4: 获取treemap数据
+                treemap_data = update_data_for_treemap_dept(author_name,department_name,update_results["treemap"])
+                update_results["treemap"] = treemap_data
+
+        # Step 5: 获取wordcloud数据
+        wordcloud_data = update_data_for_wordcloud_author(entity,update_results)
+        # print(wordcloud_data)
+    return entity,wordcloud_data
 
 
 model_name = "BAAI/bge-m3"
@@ -1015,13 +1168,16 @@ def retriever(question: str):
     if len(relevant_paper) > 30:
         relevant_paper = relevant_paper[:30]
     print(relevant_paper)
-    paper_entity = make_entity_json(relevant_paper, session)
+    paper_entity, update_entity = make_entity_json(relevant_paper, session)
     if question == "What are the latest research findings in the area of virtual reality?":
         with open('app01/datasets/user_study_test1.json', 'w') as f:
             json.dump(paper_entity, f, indent=4)
     else:
         with open('app01/datasets/test.json', 'w') as f:
             json.dump(paper_entity, f, indent=4)
+        with open('app01/datasets/update_eneity.json', 'w') as f:
+            json.dump(update_entity, f, indent=4)
+    
     final_data = f"""Structured data: 
                     {structured_data}
                     Unstructured data:

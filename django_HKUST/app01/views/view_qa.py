@@ -55,23 +55,23 @@ def chat(request):
             with open('app01/datasets/user_study_test1.json', 'r', encoding='utf-8') as f:
                 paper_entity = json.load(f)
         else:
-            # if not chat_history:
-            #     # 运行QA链
-            #     output = chain.invoke({"question": user_input})
-            #     chat_history.append((user_input, output))
+            if not chat_history:
+                # 运行QA链
+                output = chain.invoke({"question": user_input})
+                chat_history.append((user_input, output))
 
-            output = "111"
+            # output = "111"
 
 
-            # else:
-            #     previous_question, previous_answer = chat_history[-1]
-            #     output = chain.invoke(
-            #         {
-            #             "question": user_input,
-            #             "chat_history": [(previous_question, previous_answer)],
-            #         }
-            #     )
-            with open('app01/datasets/case2_test2.json', 'r', encoding='utf-8') as f:
+            else:
+                previous_question, previous_answer = chat_history[-1]
+                output = chain.invoke(
+                    {
+                        "question": user_input,
+                        "chat_history": [(previous_question, previous_answer)],
+                    }
+                )
+            with open('app01/datasets/test.json', 'r', encoding='utf-8') as f:
                 paper_entity = json.load(f)
 
         duration = time.time() - start_time
