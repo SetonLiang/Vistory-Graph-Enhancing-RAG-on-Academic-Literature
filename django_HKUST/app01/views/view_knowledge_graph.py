@@ -220,11 +220,26 @@ def update_data_for_treemap_dept(node):
 
 
 def update_data_for_wordcloud_dept(node):
-    # 这个部门的词云
-    cypher_query = ''''''
+    # Cypher 查询，基于部门名称，找到该部门下所有作者文献的关键词，并统计关键词的使用次数（仅部门内）
+    cypher_query = '''
+    MATCH (d:Department)<-[:BELONGS_TO]-(a:Author)<-[:OWNED_BY]-(p:Papers)-[:HAS_KEYWORD]->(k:Keyword)
+    WHERE d.name = $departmentName
+    RETURN toLower(k.name) AS keyword, COUNT(DISTINCT p) AS path_count
+    ORDER BY path_count DESC
+    LIMIT 50
+    '''
 
+    # 执行查询，传入指定的部门名称
     with driver.session(database="neo4j") as session:
-        query_results = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())
+        results = session.execute_read(lambda tx: tx.run(cypher_query, departmentName=node).data())
+
+    # 构建词云所需的数据格式
+    words = [
+        {"text": result["keyword"], "size": result["path_count"]}
+        for result in results
+    ]
+
+    return words
 
 
 def update_data_for_donut_author(node):
@@ -354,11 +369,48 @@ def update_data_for_treemap_author(author_name):
 
 
 def update_data_for_wordcloud_author(node):
-    # 这个部门的词云
-    cypher_query = ''''''
+    # Cypher 查询，基于作者名称，找到该作者所有文献的关键词，并统计关键词的使用次数
+    cypher_query = '''
+    MATCH (a:Author)<-[:OWNED_BY]-(p:Papers)-[:HAS_KEYWORD]->(k:Keyword)
+    WHERE a.name = $authorName
+    RETURN toLower(k.name) AS keyword, COUNT(DISTINCT p) AS path_count
+    ORDER BY path_count DESC
+    LIMIT 50
+    '''
 
+    # 执行查询，传入指定的作者名称
     with driver.session(database="neo4j") as session:
-        query_results = session.execute_read(lambda tx: tx.run(cypher_query, iata="DEN").data())
+        results = session.execute_read(lambda tx: tx.run(cypher_query, authorName=node).data())
+
+    # 如果结果为空，返回空列表
+    if not results:
+        return []
+
+    # 获取关键词的 path_count 数值
+    counts = [result["path_count"] for result in results]
+
+    # 计算最小和最大值
+    min_count = min(counts)
+    max_count = max(counts)
+
+    # 定义缩放的目标范围
+    target_min = 3
+    target_max = 40
+
+    # 线性缩放函数
+    def scale(value, min_value, max_value, target_min, target_max):
+        if max_value == min_value:
+            # 如果最大值等于最小值，避免除零错误，直接返回 target_min 或 target_max
+            return target_min
+        return target_min + (value - min_value) * (target_max - target_min) / (max_value - min_value)
+
+    # 构建词云所需的数据格式，并将 path_count 缩放到 [3, 40] 范围
+    words = [
+        {"text": result["keyword"], "size": scale(result["path_count"], min_count, max_count, target_min, target_max)}
+        for result in results
+    ]
+
+    return words
 
 
 def query_find_paper_by_keyword(keyword):

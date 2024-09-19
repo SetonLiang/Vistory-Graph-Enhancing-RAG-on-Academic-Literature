@@ -56,6 +56,7 @@ def update_for_chart(request):
     new_donut = []
     new_chart_d_y = []
     new_treemap = []
+    new_wordcloud = []
     data = json.loads(request.body)
     name = data['name']
     group = data['group']
@@ -64,16 +65,19 @@ def update_for_chart(request):
         new_donut = update_data_for_donut_author(name)
         new_chart_d_y = update_data_for_chart_author(name)
         new_treemap = update_data_for_treemap_author(name)
+        new_wordcloud = update_data_for_wordcloud_author(name)
 
     elif group == 1:
         new_donut = update_data_for_donut_dept(name)
         new_chart_d_y = update_data_for_chart_dept(name)
         new_treemap = update_data_for_treemap_dept(name)
+        new_wordcloud = update_data_for_wordcloud_dept(name)
 
     return HttpResponse(json.dumps({
         'donut': new_donut,
         'chart_d_y': new_chart_d_y,
         'treemap': new_treemap,
+        'wordcloud': new_wordcloud
     }))
 
 

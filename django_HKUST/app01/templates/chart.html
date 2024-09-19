@@ -713,6 +713,80 @@
         return colors[randomIndex];
     }
 
+    function updateWordCloud(newWords) {
+        // 更新词云的布局
+        d3.layout.cloud().size([chartWidth, chartHeight])
+            .words(newWords.map(function (d) {
+                return {text: d.text, size: d.size};
+            }))
+            .padding(5)
+            .rotate(0) // All words will be horizontal
+            .font("Impact")
+            .fontSize(function (d) {
+                return d.size;
+            })
+            .on("end", function (words) {
+                // 选择并更新词云的文本
+                let svg = d3.select('#word_cloud')
+                    .attr("viewBox", [0, 0, chartWidth, chartHeight])
+                    .attr("style", "width: 100%; height: 100%;");
+
+                let g = svg.select("g");
+
+                // Bind new data
+                let text = g.selectAll("text")
+                    .data(words, d => d.text);  // Use text as key
+
+                // Handle new text elements
+                text.enter().append("text")
+                    .style("font-size", function (d) {
+                        return Math.min(d.size + 2, 20) + "px";
+                    })
+                    .style("fill", function (d) {
+                        var color = randomColor();
+                        colorMap[d.text] = color; // Store the color for each word
+                        return color; // Initial color without transparency
+                    })
+                    .attr("text-anchor", "middle")
+                    .style('cursor', 'pointer')
+                    .attr("transform", function (d) {
+                        return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                    })
+                    .text(function (d) {
+                        return d.text;
+                    })
+                    .on('click', function (e, d) {
+                        FindPaperHasKeyword(d.text);
+                    })
+                    .transition() // Transition for new text
+                    .duration(750)
+                    .attr("transform", function (d) {
+                        return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                    });
+
+                // Handle updated text elements
+                text.transition()
+                    .duration(750)
+                    .attr("transform", function (d) {
+                        return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                    });
+
+                // Handle exit text elements
+                text.exit().transition()
+                    .duration(750)
+                    .style("opacity", 0)
+                    .remove();
+
+                // Calculate the bounding box of the g element and center it
+                let bbox = g.node().getBBox();
+                let xOffset = (chartWidth - bbox.width) / 2 - bbox.x;
+                let yOffset = (chartHeight - bbox.height) / 2 - bbox.y;
+
+                g.attr("transform", "translate(" + (margin.left + xOffset) + "," + (margin.top + yOffset) + ")");
+            })
+            .start();
+    }
+
 
 </script>
 
@@ -747,6 +821,24 @@
             }
         });
     }
+</script>
+
+<script>
+
+
+    // 更新词云
+    {#setTimeout(() => {#}
+    {#    let updatedData = [#}
+    {#        {text: "JavaScript", size: 40},#}
+    {#        {text: "D3.js", size: 35},#}
+    {#        {text: "WordCloud", size: 30},#}
+    {#        {text: "Visualization", size: 25},#}
+    {#        {text: "Interactive", size: 20},#}
+    {#        {text: "Data", size: 15},#}
+    {#        {text: "SVG", size: 10}#}
+    {#    ];#}
+    {#    updateWordCloud(updatedData);#}
+    //}, 5000); // Update after 5 seconds
 </script>
 
 </body>

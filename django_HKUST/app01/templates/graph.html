@@ -97,6 +97,7 @@
                 updateDonut(d3.select('#donut') ,initDataChart['donut'])
                 updateChart(d3.select('#chart_d_y') ,initDataChart['chart_d_y'])
                 updateTreemap(d3.select('#treemap') ,initDataChart['heatmap'])
+                updateWordCloud(words)
             }
         })
 
@@ -1645,6 +1646,7 @@
                 updateDonut(d3.select('#donut'), request['donut'])
                 updateChart(d3.select('#chart_d_y'), request['chart_d_y'])
                 updateTreemap(d3.select('#treemap'), request['treemap'])
+                updateWordCloud(request['wordcloud'])
             }
         })
     }
