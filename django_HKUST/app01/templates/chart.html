@@ -319,7 +319,7 @@
         rects.append("text")
             .attr("x", d => (d.x1 - d.x0) / 2)  // 文本在矩形中水平居中
             .attr("y", d => (d.y1 - d.y0) / 2)
-            .attr('font-size', "5px")
+            .attr('font-size', "13px")
             .text(d => `${d.data.value}`)
             .attr("fill", "white");  // 设置文本颜色为白色
     }
@@ -385,7 +385,7 @@
             .attr("x", d => (d.x1 - d.x0) / 2)  // 文本在矩形中水平居中
             .attr("y", d => (d.y1 - d.y0) / 2)  // 文本在矩形中垂直居中
             .attr("text-anchor", "middle")  // 文本居中对齐
-            .attr('font-size', "5px")
+            .attr('font-size', "13px")
             .text(d => `${d.data.value}`)
             .attr("fill", "white");  // 设置文本颜色为白色
 
@@ -403,7 +403,7 @@
             .attr("x", d => (d.x1 - d.x0) / 2)  // 更新文本的X位置
             .attr("y", d => (d.y1 - d.y0) / 2)  // 更新文本的Y位置
             .attr("text-anchor", "middle")
-            .attr('font-size', "5px")
+            .attr('font-size', "13px")
             .text(d => `${d.data.value}`);
 
         // 更新 g 元素的 transform，以处理位置的变化

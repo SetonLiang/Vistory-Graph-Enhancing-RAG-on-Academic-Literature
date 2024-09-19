@@ -1,0 +1,2665 @@
+{
+    "nodes": [
+        {
+            "id": "xiao2023let",
+            "released": "2023",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "citation": 10,
+            "name": "Let the chart spark: Embedding semantic context into chart with text-to-image generative model",
+            "count": 0,
+            "authors": "Shishi Xiao, Suizi Huang, Yue Lin, Yilin Ye, Wei Zeng",
+            "group": 0
+        },
+        {
+            "name": "counterfactual explanation",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "multiple-view visualization",
+            "citation": 3,
+            "group": 2
+        },
+        {
+            "citation": 28,
+            "name": "deep learning",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "artistic practice",
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "generative model",
+            "group": 2
+        },
+        {
+            "citation": 4,
+            "group": 2,
+            "name": "data video"
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "ai art"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "learningeffect"
+        },
+        {
+            "citation": 2,
+            "name": "livestreaming",
+            "group": 2
+        },
+        {
+            "name": "older adults",
+            "citation": 6,
+            "group": 2
+        },
+        {
+            "citation": 8,
+            "authors": "Mingming Fan, Yiwen Wang, Yuni Xie, Franklin Mingzhe Li, Chunyang Chen",
+            "released": "2023",
+            "venue": "International Journal of Human\u2013Computer Interaction",
+            "id": "fan2023understanding",
+            "name": "Understanding how older adults comprehend COVID-19 interactive visualizations via think-aloud protocol",
+            "count": 0,
+            "group": 0
+        },
+        {
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "id": "wei2023bridging",
+            "released": "2023",
+            "authors": "Xiaoying Wei, Yizheng Gu, Emily Kuang, Xian Wang, Beiyan Cao, Xiaofu Jin, Mingming Fan",
+            "count": 0,
+            "name": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "group": 0,
+            "citation": 12
+        },
+        {
+            "citation": 2,
+            "name": "image retrieval",
+            "group": 2
+        },
+        {
+            "released": "2023",
+            "name": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data",
+            "citation": 1,
+            "venue": "2023 IEEE VIS Arts Program (VISAP)",
+            "count": 0,
+            "id": "lin2023body",
+            "group": 0,
+            "authors": "Rem RunGu Lin, Yongen Ke, Kang Zhang"
+        },
+        {
+            "id": "lin2023dashboard",
+            "citation": 15,
+            "released": "2023",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "count": 0,
+            "name": "DMiner: Dashboard design mining and recommendation",
+            "authors": "Yanna Lin, Haotian Li, Aoyu Wu, Yong Wang, Huamin Qu",
+            "group": 0
+        },
+        {
+            "name": "The dark side of augmented reality: Exploring manipulative designs in ar",
+            "released": "2023",
+            "venue": "International Journal of Human\u2013Computer Interaction",
+            "id": "wang2023dark",
+            "count": 0,
+            "citation": 13,
+            "authors": "Xian Wang, Lik-Hang Lee, Carlos Bermejo Fernandez, Pan Hui",
+            "group": 0
+        },
+        {
+            "released": "2023",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "name": "TimeTuner: Diagnosing Time Representations for Time-Series Forecasting with Counterfactual Explanations",
+            "citation": 1,
+            "authors": "Jianing Hao, Qing Shi, Yilin Ye, Wei Zeng",
+            "count": 0,
+            "id": "hao2023timetuner",
+            "group": 0
+        },
+        {
+            "group": 2,
+            "name": "dark patterns; augmented reality",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "film"
+        },
+        {
+            "name": "chaptgpt",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "mobile devices",
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "venue": "2023 IEEE International Conference on Multimedia and Expo Workshops (ICMEW?\u2026",
+            "released": "2023",
+            "name": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "id": "huang2023crossing",
+            "authors": "Jiayang Huang, Yiran Chen, David Yip",
+            "count": 0,
+            "group": 0
+        },
+        {
+            "citation": 2,
+            "name": "nft transaction data",
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "name": "acoustic sensing",
+            "group": 2
+        },
+        {
+            "citation": 4,
+            "name": "interactive art",
+            "group": 2
+        },
+        {
+            "citation": 8,
+            "name": "large language model",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "arts and humanities"
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "lab  study"
+        },
+        {
+            "citation": 15,
+            "id": "li2023ai",
+            "name": "Why is ai not a panacea for data workers? an interview study on human-ai collaboration in data storytelling",
+            "authors": "Haotian Li, Yun Wang, Q Vera Liao, Huamin Qu",
+            "released": "2023",
+            "count": 0,
+            "group": 0,
+            "venue": "arXiv preprint arXiv:2304.08366"
+        },
+        {
+            "name": "video visualization",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 3,
+            "name": "guideline",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "covid-19",
+            "citation": 12
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "neighborhood deprivation"
+        },
+        {
+            "name": "inter-generational communication",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "user experience(ux)",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "authors": "Jianing Hao, Xibin Jiang, Qing Shi, Wei Zeng",
+            "released": "2023",
+            "name": "Does Where You are Matter? A Visual Analytics System for COVID-19 Transmission Based on Social Hierarchical Perspective",
+            "count": 0,
+            "id": "hao2023does",
+            "citation": 0,
+            "group": 0,
+            "venue": "Proceedings of the 16th International Symposium on Visual Information?\u2026"
+        },
+        {
+            "name": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "released": "2023",
+            "authors": "Shihan Fu, Liangliang Qiang, Wei Zeng",
+            "count": 0,
+            "citation": 0,
+            "group": 0,
+            "id": "fu2023loop",
+            "venue": "Proceedings of the 16th International Symposium on Visual Information?\u2026"
+        },
+        {
+            "name": "massive open online courses (mooc)",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "id": "li2023notable",
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "citation": 14,
+            "released": "2023",
+            "count": 0,
+            "name": "Notable: On-the-fly assistant for data storytelling in computational notebooks",
+            "authors": "Haotian Li, Lu Ying, Haidong Zhang, Yingcai Wu, Huamin Qu, Yun Wang",
+            "group": 0
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "interview study"
+        },
+        {
+            "released": "2023",
+            "venue": "arXiv preprint arXiv:2304.06488",
+            "name": "One small step for generative ai, one giant leap for agi: A complete survey on chatgpt in aigc era",
+            "citation": 126,
+            "count": 0,
+            "authors": "Chaoning Zhang, Chenshuang Zhang, Chenghao Li, Yu Qiao, Sheng Zheng, Sumit Kumar Dam, Mengchun Zhang, Jung Uk Kim, Seong Tae Kim, Jinwoo Choi, Gyeong-Moon Park, Sung-Ho Bae, Lik-Hang Lee, Pan Hui, In So Kweon, Choong Seon Hong",
+            "id": "zhang2023one",
+            "group": 0
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "agi"
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "co-creative ai"
+        },
+        {
+            "name": "chinese comic painting",
+            "citation": 3,
+            "group": 2
+        },
+        {
+            "venue": "2023 IEEE 43rd International Conference on Distributed Computing Systems?\u2026",
+            "released": "2023",
+            "citation": 11,
+            "name": "Empowering the metaverse with generative ai: Survey and future directions",
+            "authors": "Hua Xuan Qin, Pan Hui",
+            "count": 0,
+            "id": "qin2023empowering",
+            "group": 0
+        },
+        {
+            "name": "grandparents",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "Storyfier: Exploring Vocabulary Learning Support with Text Generation Models",
+            "venue": "Proceedings of the 36th Annual ACM Symposium on User Interface Software and?\u2026",
+            "id": "peng2023storyfier",
+            "released": "2023",
+            "count": 0,
+            "citation": 13,
+            "authors": "Zhenhui Peng, Xingbo Wang, Qiushi Han, Junkai Zhu, Xiaojuan Ma, Huamin Qu",
+            "group": 0
+        },
+        {
+            "released": "2023",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "id": "wong2023anchorage",
+            "name": "Anchorage: Visual analysis of satisfaction in customer service videos via anchor events",
+            "authors": "Kam Kwai Wong, Xingbo Wang, Yong Wang, Jianben He, Rong Zhang, Huamin Qu",
+            "count": 0,
+            "citation": 13,
+            "group": 0
+        },
+        {
+            "name": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing",
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "citation": 8,
+            "released": "2023",
+            "id": "li2023enabling",
+            "count": 0,
+            "authors": "Zisu Li, Chen Liang, Yuntao Wang, Yue Qin, Chun Yu, Yukang Yan, Mingming Fan, Yuanchun Shi",
+            "group": 0
+        },
+        {
+            "name": "gaze interaction",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "venue": "Computer Graphics Forum",
+            "authors": "Shishi Xiao, Yihan Hou, Cheng Jin, Wei Zeng",
+            "released": "2023",
+            "citation": 4,
+            "count": 0,
+            "name": "WYTIWYR: A User Intent\u2010Aware Framework with Multi\u2010modal Inputs for Visualization Retrieval",
+            "group": 0,
+            "id": "xiao2023wytiwyr"
+        },
+        {
+            "name": "image quality assessment",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "name": "visual data analysis",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "visual impairment",
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "name": "painting analysis",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "collaborative art creation"
+        },
+        {
+            "group": 2,
+            "name": "social computing annotations",
+            "citation": 1
+        },
+        {
+            "name": "head-mounted display",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "citation": 3,
+            "name": "non-fungible tokens (nfts)",
+            "group": 2
+        },
+        {
+            "released": "2023",
+            "name": "Naturality: A Natural Reflection of Chinese Calligraphy",
+            "authors": "Bingyuan Wang, Kang Zhang, Zeyu Wang",
+            "citation": 1,
+            "count": 0,
+            "id": "wang2023naturality",
+            "group": 0,
+            "venue": "Proceedings of the 16th International Symposium on Visual Information?\u2026"
+        },
+        {
+            "name": "visual analytics",
+            "citation": 34,
+            "group": 2
+        },
+        {
+            "citation": 3,
+            "name": "body embodiment",
+            "group": 2
+        },
+        {
+            "name": "human-ai collaboration",
+            "citation": 6,
+            "group": 2
+        },
+        {
+            "released": "2023",
+            "name": "A comparative study of oil paintings and Chinese ink paintings on composition",
+            "authors": "Zhen-Bao Fan, Yi-Xuan Zhu, Slobodan Markovi?, Kang Zhang",
+            "venue": "The Visual Computer",
+            "count": 0,
+            "group": 0,
+            "citation": 6,
+            "id": "fan2023comparative"
+        },
+        {
+            "group": 2,
+            "name": "video art",
+            "citation": 1
+        },
+        {
+            "name": "sensor fusion",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "design mining"
+        },
+        {
+            "name": "ai-art",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "authors": "Yifan Cao, Meng Xia, Kento Shigyo, Furui Cheng, Qianhang Yu, Xingxing Yang, Yang Wang, Wei Zeng, Huamin Qu",
+            "released": "2023",
+            "id": "cao2023nfteller",
+            "count": 0,
+            "citation": 0,
+            "name": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "group": 0,
+            "venue": "Proceedings of the 16th International Symposium on Visual Information?\u2026"
+        },
+        {
+            "group": 2,
+            "name": "generational gap",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "region selection",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "social media/online communities"
+        },
+        {
+            "name": "human-machine collaboration",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "video data",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "interaction design",
+            "group": 2
+        },
+        {
+            "name": "metaphor",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "name": "interior color design",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "id": "kuang2023collaboration",
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "released": "2023",
+            "name": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)",
+            "count": 0,
+            "citation": 9,
+            "authors": "Emily Kuang, Ehsan Jahangirzadeh Soure, Mingming Fan, Jian Zhao, Kristen Shinohara",
+            "group": 0
+        },
+        {
+            "citation": 4,
+            "group": 2,
+            "name": "data visualization"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "prompt engineering"
+        },
+        {
+            "name": "ai art.",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "artificial general intelligence"
+        },
+        {
+            "name": "user preference",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "name": "safety",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "gpt-4"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "virtualreality"
+        },
+        {
+            "citation": 4,
+            "name": "digital humanities",
+            "group": 2
+        },
+        {
+            "name": "artificial intelligence.",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "participatory design",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "guiding robot",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "pictorial visualization",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "crowdsourcing",
+            "group": 2
+        },
+        {
+            "group": 1,
+            "name": "AI"
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "chinese calligraphy"
+        },
+        {
+            "group": 2,
+            "name": "trust",
+            "citation": 1
+        },
+        {
+            "citation": 5,
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "released": "2023",
+            "authors": "Beiyan Cao, Changyang He, Muzhi Zhou, Mingming Fan",
+            "count": 0,
+            "name": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "group": 0,
+            "id": "cao2023sparkling"
+        },
+        {
+            "group": 2,
+            "citation": 5,
+            "name": "vr"
+        },
+        {
+            "name": "chatgpt",
+            "citation": 4,
+            "group": 2
+        },
+        {
+            "name": "grandchildren",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "artificial intelligence",
+            "group": 2,
+            "citation": 7
+        },
+        {
+            "group": 2,
+            "name": "human-centered computing\u2014visualization\u2014visualization techniques; human-centered computing\u2014collaborative and social computing\u2014empirical studies in collaborative and social computing",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "immersive learning"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "ai-generated content (aigc)"
+        },
+        {
+            "name": "visualization recommendation",
+            "citation": 4,
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "name": "traditional chinese painting",
+            "group": 2
+        },
+        {
+            "citation": 4,
+            "name": "aigc",
+            "group": 2
+        },
+        {
+            "citation": 3,
+            "name": "data storytelling",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "evaluation",
+            "citation": 1
+        },
+        {
+            "released": "2023",
+            "id": "xing2023ai",
+            "authors": "Qingqing Xing, Chenghong Zheng, Nan Zhu, David Yip",
+            "count": 0,
+            "citation": 0,
+            "venue": "2023 3rd International Conference on Educational Technology (ICET)",
+            "name": "AI-Generated Content for Academic Visualization and Communication in Maker Education",
+            "group": 0
+        },
+        {
+            "name": "customer satisfaction",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "massive open metaverse courses (momc)",
+            "citation": 1
+        },
+        {
+            "authors": "Felicia Li Feng, Ryan Yen, Yuzhe You, Mingming Fan, Jian Zhao, Zhicong Lu",
+            "id": "feng2023coprompt",
+            "released": "2023",
+            "venue": "arXiv preprint arXiv:2310.09235",
+            "citation": 4,
+            "count": 0,
+            "group": 0,
+            "name": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming"
+        },
+        {
+            "authors": "Yan Zhang, Ziang Li, Haole Guo, Luyao Wang, Qihe Chen, Wenjie Jiang, Mingming Fan, Guyue Zhou, Jiangtao Gong",
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "name": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "released": "2023",
+            "id": "zhang2023follower",
+            "count": 0,
+            "citation": 13,
+            "group": 0
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "volumetric video"
+        },
+        {
+            "citation": 8,
+            "name": "storytelling",
+            "group": 2
+        },
+        {
+            "name": "usability testing",
+            "citation": 3,
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "interactive story",
+            "citation": 1
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "creativity support"
+        },
+        {
+            "name": "CMA",
+            "group": 1
+        },
+        {
+            "name": "vision-language model",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "meditation"
+        },
+        {
+            "name": "machine form",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "dockless bike-sharing",
+            "group": 2
+        },
+        {
+            "name": "couples",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "virtual reality",
+            "group": 2,
+            "citation": 24
+        },
+        {
+            "name": "Exploring the Intersection of AI Art and Film: A Case Study of Giant",
+            "venue": "2023 IEEE International Conference on Multimedia and Expo Workshops (ICMEW?\u2026",
+            "released": "2023",
+            "id": "song2023exploring",
+            "count": 0,
+            "citation": 0,
+            "authors": "Junrong Song, David Yip",
+            "group": 0
+        },
+        {
+            "id": "zhang2023ultrahigh",
+            "citation": 8,
+            "venue": "Composites Part A: Applied Science and Manufacturing 167",
+            "released": "2023",
+            "count": 0,
+            "authors": "Kang Zhang, Xiyao Zhang, Qiang Gao, Meishan Chan, Shilong Zhang, Jifan Li, Wei-Hsin Liao",
+            "group": 0,
+            "name": "Ultrahigh energy-dissipation and multifunctional auxetic polymeric foam inspired by balloon art"
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "substitutive systems"
+        },
+        {
+            "citation": 4,
+            "name": "bodily engagement",
+            "group": 2
+        },
+        {
+            "released": "2023",
+            "citation": 78,
+            "id": "zhu2023can",
+            "authors": "Yiming Zhu, Peixian Zhang, Ehsan-Ul Haq, Pan Hui, Gareth Tyson",
+            "venue": "arXiv preprint arXiv:2304.10145",
+            "count": 0,
+            "group": 0,
+            "name": "Can chatgpt reproduce human-generated labels? a study of social computing tasks"
+        },
+        {
+            "citation": 3,
+            "name": "paintings",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "time-series forecasting"
+        },
+        {
+            "group": 2,
+            "name": "knowledge management",
+            "citation": 1
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "presence"
+        },
+        {
+            "group": 2,
+            "name": "ux evaluation",
+            "citation": 1
+        },
+        {
+            "id": "feng2023xnli",
+            "name": "Xnli: Explaining and diagnosing nli-based visual data analysis",
+            "released": "2023",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "authors": "Yingchaojie Feng, Xingbo Wang, Bo Pan, Kam Kwai Wong, Yi Ren, Shi Liu, Zihan Yan, Yuxin Ma, Huamin Qu, Wei Chen",
+            "citation": 23,
+            "count": 0,
+            "group": 0
+        },
+        {
+            "citation": 3,
+            "name": "bodily movement",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "collaborative programming"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "navigation"
+        },
+        {
+            "name": "vr education",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "extended reality",
+            "citation": 4,
+            "group": 2
+        },
+        {
+            "group": 2,
+            "name": "multimodal interaction",
+            "citation": 1
+        },
+        {
+            "name": "explainability",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "name": "tacit knowledge",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "authors": "Xian Wang, Xiaoyu Mo, Lik-Hang Lee, Xiaoying Wei, Xiaofu Jin, Mingming Fan, Pan Hui",
+            "released": "2023",
+            "id": "wang2023designing",
+            "venue": "Proceedings of the 31st ACM International Conference on Multimedia",
+            "count": 0,
+            "citation": 0,
+            "group": 0
+        },
+        {
+            "name": "composition",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "deaf or hard of hearing (dhh)",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "development framework",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "hand gestures"
+        },
+        {
+            "name": "layout adaptation",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "released": "2023",
+            "authors": "Junrong Song, Bingyuan Wang, Zeyu Wang, David Kei-man Yip",
+            "venue": "International Symposium on Visual Information Communication and Interaction?\u2026",
+            "count": 0,
+            "group": 0,
+            "id": "song2023expanded",
+            "name": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences"
+        },
+        {
+            "name": "impact dynamics analysis",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "name": "digital gallery",
+            "group": 2
+        },
+        {
+            "name": "composed retrieval",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "authors": "Kang Zhang, Zhijing Shao, Yun Lu, Ying Yu, Wei Sun, Zeyu Wang",
+            "venue": "IEEE Transactions on Learning Technologies",
+            "name": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "released": "2023",
+            "citation": 4,
+            "count": 0,
+            "group": 0,
+            "id": "zhang2023introducing"
+        },
+        {
+            "name": "expanded cinema",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "naturality"
+        },
+        {
+            "group": 2,
+            "name": "dashboards",
+            "citation": 1
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "responsive design"
+        },
+        {
+            "name": "maker education",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "authors": "Jacky Cao, Kit-Yung Lam, Lik-Hang Lee, Xiaoli Liu, Pan Hui, Xiang Su",
+            "id": "cao2023mobile",
+            "released": "2023",
+            "count": 0,
+            "name": "Mobile augmented reality: User interfaces, frameworks, and intelligence",
+            "citation": 58,
+            "group": 0,
+            "venue": "ACM Computing Surveys"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "layout rules"
+        },
+        {
+            "name": "vr creativity",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "human intelligence",
+            "citation": 1
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "ai"
+        },
+        {
+            "group": 2,
+            "name": "authoring tool",
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "name": "origin-destination data",
+            "group": 2
+        },
+        {
+            "authors": "Bingyuan Wang, Pinxi Zhu, Hao Li, David Kei-man Yip, Zeyu Wang",
+            "released": "2023",
+            "id": "wang2023simonstown",
+            "count": 0,
+            "citation": 0,
+            "name": "Simonstown: An AI-facilitated Interactive Story of Love, Life, and Pandemic",
+            "group": 0,
+            "venue": "Proceedings of the 16th International Symposium on Visual Information?\u2026"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "virtual and augmented reality"
+        },
+        {
+            "citation": 3,
+            "name": "aging",
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "name": "crowdsourced",
+            "group": 2
+        },
+        {
+            "citation": 5,
+            "group": 2,
+            "name": "mobile augmented reality"
+        },
+        {
+            "citation": 3,
+            "name": "lab study",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "computer vision."
+        },
+        {
+            "venue": "Leonardo",
+            "id": "zhou2023shanshui",
+            "released": "2023",
+            "citation": 1,
+            "count": 0,
+            "authors": "Aven Le Zhou, Kang Zhang",
+            "group": 0,
+            "name": "Shanshui Journey: AI Reproducing the Experience of Chinese \u201cLiterati\u201d Ink Paintings"
+        },
+        {
+            "authors": "Xian Xu, Aoyu Wu, Leni Yang, Zheng Wei, Rong Huang, David Yip, Huamin Qu",
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "released": "2023",
+            "citation": 1,
+            "name": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "count": 0,
+            "id": "xu2023end",
+            "group": 0
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "filmproduction"
+        },
+        {
+            "group": 2,
+            "name": "pre-visualization",
+            "citation": 1
+        },
+        {
+            "name": "machine learning",
+            "citation": 31,
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "released": "2023",
+            "id": "ye2023contemporary",
+            "authors": "Yilin Ye, Qian Zhu, Shishi Xiao, Kang Zhang, Wei Zeng",
+            "venue": "arXiv preprint arXiv:2312.01656",
+            "count": 0,
+            "name": "The Contemporary Art of Image Search: Iterative User Intent Expansion via Vision-Language Model",
+            "group": 0
+        },
+        {
+            "name": "conversational assistants",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 1,
+            "name": "DSA"
+        },
+        {
+            "name": "natural language programming",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "video analytics",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 8,
+            "group": 2,
+            "name": "survey"
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "computational notebooks"
+        },
+        {
+            "group": 2,
+            "citation": 6,
+            "name": "metaverse"
+        },
+        {
+            "authors": "Andrea Batch, Yipeng Ji, Mingming Fan, Jian Zhao, Niklas Elmqvist",
+            "citation": 8,
+            "released": "2023",
+            "name": "uxSense: Supporting user experience analysis with visualization and computer vision",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "count": 0,
+            "group": 0,
+            "id": "batch2023uxsense"
+        },
+        {
+            "citation": 8,
+            "group": 2,
+            "name": "interview"
+        },
+        {
+            "name": "visualization",
+            "group": 2,
+            "citation": 24
+        },
+        {
+            "citation": 3,
+            "name": "fong tse ka",
+            "group": 2
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "generative ai"
+        },
+        {
+            "id": "shi2023exploring",
+            "authors": "Rongkai Shi, Yushi Wei, Xueying Qin, Pan Hui, Hai-Ning Liang",
+            "released": "2023",
+            "venue": "Proceedings of the ACM on Human-Computer Interaction",
+            "count": 0,
+            "name": "Exploring gaze-assisted and hand-based region selection in augmented reality",
+            "citation": 9,
+            "group": 0
+        },
+        {
+            "authors": "Wai Tong, Meng Xia, Kam Kwai Wong, Doug A Bowman, Ting-Chuen Pong, Huamin Qu, Yalong Yang",
+            "name": "Towards an understanding of distributed asymmetric collaborative visualization on problem-solving",
+            "released": "2023",
+            "venue": "2023 IEEE Conference Virtual Reality and 3D User Interfaces (VR)",
+            "count": 0,
+            "id": "tong2023towards",
+            "citation": 13,
+            "group": 0
+        },
+        {
+            "group": 2,
+            "name": "multimodality",
+            "citation": 1
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "wellness"
+        },
+        {
+            "name": "augmented reality",
+            "citation": 21,
+            "group": 2
+        },
+        {
+            "citation": 5,
+            "authors": "Wei Zeng, Xi Chen, Yihan Hou, Lingdan Shao, Zhe Chu, Remco Chang",
+            "released": "2023",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "count": 0,
+            "name": "Semi-automatic layout adaptation for responsive multiple-view visualization design",
+            "id": "zeng2023semi",
+            "group": 0
+        },
+        {
+            "name": "dream visualization",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "Feeling Present! From Physical to Virtual Cinematography Lighting Education with Metashadow",
+            "authors": "Zheng Wei, Xian Xu, Lik-Hang Lee, Wai Tong, Huamin Qu, Pan Hui",
+            "venue": "Proceedings of the 31st ACM International Conference on Multimedia",
+            "released": "2023",
+            "citation": 1,
+            "id": "wei2023feeling",
+            "count": 0,
+            "group": 0
+        },
+        {
+            "name": "Dreaming Phantom in Immersive Experience: AIGC For Artistic Practice",
+            "released": "2023",
+            "id": "huang2023dreaming",
+            "authors": "Jiayang Huang, Yiran Chen, David Yip",
+            "count": 0,
+            "citation": 0,
+            "group": 0,
+            "venue": "Proceedings of the 16th International Symposium on Visual Information?\u2026"
+        },
+        {
+            "group": 2,
+            "name": "immersive experience",
+            "citation": 1
+        },
+        {
+            "name": "natural language interface",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "eye-tracking",
+            "citation": 1
+        },
+        {
+            "name": "Creative and progressive interior color design with eye-tracked user preference",
+            "venue": "ACM transactions on computer-human interaction",
+            "released": "2023",
+            "authors": "Shihui Guo, Yubin Shi, Pintong Xiao, Yinan Fu, Juncong Lin, Wei Zeng, Tong-Yee Lee",
+            "citation": 10,
+            "count": 0,
+            "id": "guo2023creative",
+            "group": 0
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "mood board"
+        },
+        {
+            "group": 2,
+            "name": "level of autonomy",
+            "citation": 1
+        },
+        {
+            "name": "accessibility",
+            "citation": 4,
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "group": 2,
+            "name": "visual design"
+        },
+        {
+            "name": "cinematography lighting",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "id": "zhou2023painterly",
+            "venue": "arXiv preprint arXiv:2312.01067",
+            "name": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "released": "2023",
+            "authors": "Aven Le Zhou, Kang Zhang, David Yip",
+            "count": 0,
+            "citation": 0,
+            "group": 0
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "user interactions"
+        },
+        {
+            "citation": 2,
+            "name": "control",
+            "group": 2
+        },
+        {
+            "name": "blockchain",
+            "group": 2,
+            "citation": 7
+        },
+        {
+            "name": "artificial creativity",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "visual balance",
+            "citation": 1
+        },
+        {
+            "name": "Zeyu Wang",
+            "type": "Author",
+            "count": 10,
+            "group": 4
+        },
+        {
+            "name": "Kang Zhang",
+            "type": "Author",
+            "count": 39,
+            "group": 4
+        },
+        {
+            "name": "David Yip",
+            "type": "Author",
+            "count": 18,
+            "group": 4
+        },
+        {
+            "name": "Huamin Qu",
+            "type": "Author",
+            "count": 126,
+            "group": 4
+        },
+        {
+            "name": "Pan Hui",
+            "type": "Author",
+            "count": 250,
+            "group": 4
+        },
+        {
+            "name": "Mingming Fan",
+            "type": "Author",
+            "count": 70,
+            "group": 4
+        },
+        {
+            "name": "Wei Zeng",
+            "type": "Author",
+            "count": 45,
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "target": "composed retrieval",
+            "relationship": "HAS_KEYWORD",
+            "source": "The Contemporary Art of Image Search: Iterative User Intent Expansion via Vision-Language Model"
+        },
+        {
+            "target": "video analytics",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Wei Zeng"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "target": "customer satisfaction",
+            "source": "Anchorage: Visual analysis of satisfaction in customer service videos via anchor events",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "relationship": "HAS_KEYWORD",
+            "target": "blockchain"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data",
+            "target": "arts and humanities"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "massive open metaverse courses (momc)",
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "aigc",
+            "source": "Dreaming Phantom in Immersive Experience: AIGC For Artistic Practice"
+        },
+        {
+            "source": "Notable: On-the-fly assistant for data storytelling in computational notebooks",
+            "relationship": "HAS_KEYWORD",
+            "target": "data storytelling"
+        },
+        {
+            "target": "video visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "Anchorage: Visual analysis of satisfaction in customer service videos via anchor events"
+        },
+        {
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "HAS_KEYWORD",
+            "target": "artificial intelligence"
+        },
+        {
+            "target": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "accessibility",
+            "relationship": "HAS_KEYWORD",
+            "source": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "target": "user experience(ux)",
+            "relationship": "HAS_KEYWORD",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)"
+        },
+        {
+            "source": "Why is ai not a panacea for data workers? an interview study on human-ai collaboration in data storytelling",
+            "relationship": "HAS_KEYWORD",
+            "target": "interview study"
+        },
+        {
+            "target": "machine learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "target": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Kang Zhang",
+            "target": "Naturality: A Natural Reflection of Chinese Calligraphy"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "metaverse",
+            "source": "Mobile augmented reality: User interfaces, frameworks, and intelligence"
+        },
+        {
+            "target": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "relationship": "HAS_KEYWORD",
+            "target": "visual design"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "target": "generational gap"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "composition",
+            "source": "A comparative study of oil paintings and Chinese ink paintings on composition"
+        },
+        {
+            "target": "user interactions",
+            "relationship": "HAS_KEYWORD",
+            "source": "Mobile augmented reality: User interfaces, frameworks, and intelligence"
+        },
+        {
+            "source": "Can chatgpt reproduce human-generated labels? a study of social computing tasks",
+            "target": "crowdsourcing",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "vr education",
+            "relationship": "HAS_KEYWORD",
+            "source": "Feeling Present! From Physical to Virtual Cinematography Lighting Education with Metashadow"
+        },
+        {
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "relationship": "HAS_KEYWORD",
+            "target": "participatory design"
+        },
+        {
+            "target": "WYTIWYR: A User Intent\u2010Aware Framework with Multi\u2010modal Inputs for Visualization Retrieval",
+            "relationship": "OWNED_BY",
+            "source": "Wei Zeng"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "video art",
+            "source": "Dreaming Phantom in Immersive Experience: AIGC For Artistic Practice"
+        },
+        {
+            "target": "human-machine collaboration",
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring the Intersection of AI Art and Film: A Case Study of Giant"
+        },
+        {
+            "target": "dockless bike-sharing",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "target": "video data",
+            "relationship": "HAS_KEYWORD",
+            "source": "Anchorage: Visual analysis of satisfaction in customer service videos via anchor events"
+        },
+        {
+            "target": "visual analytics",
+            "relationship": "HAS_KEYWORD",
+            "source": "TimeTuner: Diagnosing Time Representations for Time-Series Forecasting with Counterfactual Explanations"
+        },
+        {
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "relationship": "HAS_KEYWORD",
+            "target": "couples"
+        },
+        {
+            "target": "vision-language model",
+            "relationship": "HAS_KEYWORD",
+            "source": "The Contemporary Art of Image Search: Iterative User Intent Expansion via Vision-Language Model"
+        },
+        {
+            "target": "co-creative ai",
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Semi-automatic layout adaptation for responsive multiple-view visualization design",
+            "source": "Wei Zeng"
+        },
+        {
+            "target": "visualization",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "AI-Generated Content for Academic Visualization and Communication in Maker Education",
+            "source": "David Yip"
+        },
+        {
+            "target": "layout adaptation",
+            "relationship": "HAS_KEYWORD",
+            "source": "Semi-automatic layout adaptation for responsive multiple-view visualization design"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Kang Zhang",
+            "target": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "relationship": "HAS_KEYWORD",
+            "target": "natural language interface"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "metaverse"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "mobile devices",
+            "source": "Semi-automatic layout adaptation for responsive multiple-view visualization design"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "dream visualization",
+            "source": "Dreaming Phantom in Immersive Experience: AIGC For Artistic Practice"
+        },
+        {
+            "target": "tacit knowledge",
+            "relationship": "HAS_KEYWORD",
+            "source": "AI-Generated Content for Academic Visualization and Communication in Maker Education"
+        },
+        {
+            "target": "visual analytics",
+            "relationship": "HAS_KEYWORD",
+            "source": "Anchorage: Visual analysis of satisfaction in customer service videos via anchor events"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "ux evaluation",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)"
+        },
+        {
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "HAS_KEYWORD",
+            "target": "expanded cinema"
+        },
+        {
+            "target": "CMA",
+            "source": "Pan Hui",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "target": "trust"
+        },
+        {
+            "target": "human-ai collaboration",
+            "relationship": "HAS_KEYWORD",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)"
+        },
+        {
+            "target": "multiple-view visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "DMiner: Dashboard design mining and recommendation"
+        },
+        {
+            "target": "visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "target": "livestreaming"
+        },
+        {
+            "target": "visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Pan Hui",
+            "target": "Mobile augmented reality: User interfaces, frameworks, and intelligence"
+        },
+        {
+            "target": "Shanshui Journey: AI Reproducing the Experience of Chinese \u201cLiterati\u201d Ink Paintings",
+            "relationship": "OWNED_BY",
+            "source": "Kang Zhang"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "grandparents",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "source": "Shanshui Journey: AI Reproducing the Experience of Chinese \u201cLiterati\u201d Ink Paintings",
+            "relationship": "HAS_KEYWORD",
+            "target": "naturality"
+        },
+        {
+            "source": "Exploring gaze-assisted and hand-based region selection in augmented reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "head-mounted display"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "relationship": "HAS_KEYWORD",
+            "target": "non-fungible tokens (nfts)"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
+        },
+        {
+            "target": "responsive design",
+            "relationship": "HAS_KEYWORD",
+            "source": "Semi-automatic layout adaptation for responsive multiple-view visualization design"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Kang Zhang",
+            "target": "CMA"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "David Yip",
+            "target": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences"
+        },
+        {
+            "source": "Can chatgpt reproduce human-generated labels? a study of social computing tasks",
+            "relationship": "HAS_KEYWORD",
+            "target": "social computing annotations"
+        },
+        {
+            "target": "vr creativity",
+            "relationship": "HAS_KEYWORD",
+            "source": "Feeling Present! From Physical to Virtual Cinematography Lighting Education with Metashadow"
+        },
+        {
+            "target": "Creative and progressive interior color design with eye-tracked user preference",
+            "relationship": "OWNED_BY",
+            "source": "Wei Zeng"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "learningeffect",
+            "source": "Feeling Present! From Physical to Virtual Cinematography Lighting Education with Metashadow"
+        },
+        {
+            "source": "Exploring gaze-assisted and hand-based region selection in augmented reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "region selection"
+        },
+        {
+            "source": "Why is ai not a panacea for data workers? an interview study on human-ai collaboration in data storytelling",
+            "target": "human-ai collaboration",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "target": "fong tse ka"
+        },
+        {
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "HAS_KEYWORD",
+            "target": "artificial intelligence."
+        },
+        {
+            "target": "visual data analysis",
+            "source": "Xnli: Explaining and diagnosing nli-based visual data analysis",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Notable: On-the-fly assistant for data storytelling in computational notebooks",
+            "relationship": "HAS_KEYWORD",
+            "target": "computational notebooks"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "ai-generated content (aigc)"
+        },
+        {
+            "source": "Zeyu Wang",
+            "relationship": "BELONGS_TO",
+            "target": "AI"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "David Yip",
+            "target": "Simonstown: An AI-facilitated Interactive Story of Love, Life, and Pandemic"
+        },
+        {
+            "target": "interaction design",
+            "relationship": "HAS_KEYWORD",
+            "source": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data"
+        },
+        {
+            "target": "maker education",
+            "relationship": "HAS_KEYWORD",
+            "source": "AI-Generated Content for Academic Visualization and Communication in Maker Education"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "acoustic sensing",
+            "source": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing"
+        },
+        {
+            "target": "artificial creativity",
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring the Intersection of AI Art and Film: A Case Study of Giant"
+        },
+        {
+            "target": "bodily movement",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "source": "One small step for generative ai, one giant leap for agi: A complete survey on chatgpt in aigc era",
+            "relationship": "HAS_KEYWORD",
+            "target": "gpt-4"
+        },
+        {
+            "target": "usability testing",
+            "relationship": "HAS_KEYWORD",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)"
+        },
+        {
+            "target": "One small step for generative ai, one giant leap for agi: A complete survey on chatgpt in aigc era",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "target": "virtual and augmented reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "DMiner: Dashboard design mining and recommendation",
+            "target": "design mining"
+        },
+        {
+            "source": "One small step for generative ai, one giant leap for agi: A complete survey on chatgpt in aigc era",
+            "relationship": "HAS_KEYWORD",
+            "target": "artificial general intelligence"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Kang Zhang",
+            "target": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data"
+        },
+        {
+            "target": "The dark side of augmented reality: Exploring manipulative designs in ar",
+            "relationship": "OWNED_BY",
+            "source": "Pan Hui"
+        },
+        {
+            "target": "film",
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring the Intersection of AI Art and Film: A Case Study of Giant"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "generative ai"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "digital gallery",
+            "source": "The Contemporary Art of Image Search: Iterative User Intent Expansion via Vision-Language Model"
+        },
+        {
+            "target": "chatgpt",
+            "source": "One small step for generative ai, one giant leap for agi: A complete survey on chatgpt in aigc era",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "target": "machine learning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Xnli: Explaining and diagnosing nli-based visual data analysis",
+            "target": "natural language interface",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Pan Hui",
+            "target": "Exploring gaze-assisted and hand-based region selection in augmented reality"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "relationship": "HAS_KEYWORD",
+            "target": "substitutive systems"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "target": "visual analytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "relationship": "HAS_KEYWORD",
+            "target": "nft transaction data"
+        },
+        {
+            "target": "body embodiment",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "relationship": "HAS_KEYWORD",
+            "target": "collaborative programming"
+        },
+        {
+            "source": "One small step for generative ai, one giant leap for agi: A complete survey on chatgpt in aigc era",
+            "relationship": "HAS_KEYWORD",
+            "target": "agi"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "grandchildren",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "target": "multiple-view visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "Semi-automatic layout adaptation for responsive multiple-view visualization design"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "time-series forecasting",
+            "source": "TimeTuner: Diagnosing Time Representations for Time-Series Forecasting with Counterfactual Explanations"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Kang Zhang",
+            "target": "A comparative study of oil paintings and Chinese ink paintings on composition"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Kang Zhang",
+            "target": "Introducing Massive Open Metaverse Course and Its Enabling Technology"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Is It the End? Guidelines for Cinematic Endings in Data Videos",
+            "source": "David Yip"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "virtual reality"
+        },
+        {
+            "source": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "relationship": "HAS_KEYWORD",
+            "target": "virtual reality"
+        },
+        {
+            "target": "visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "counterfactual explanation",
+            "source": "TimeTuner: Diagnosing Time Representations for Time-Series Forecasting with Counterfactual Explanations"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "Notable: On-the-fly assistant for data storytelling in computational notebooks"
+        },
+        {
+            "target": "artificial intelligence",
+            "relationship": "HAS_KEYWORD",
+            "source": "Mobile augmented reality: User interfaces, frameworks, and intelligence"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "target": "visualization",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "target": "level of autonomy"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "Storyfier: Exploring Vocabulary Learning Support with Text Generation Models"
+        },
+        {
+            "source": "Exploring gaze-assisted and hand-based region selection in augmented reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "eye-tracking"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Let the chart spark: Embedding semantic context into chart with text-to-image generative model",
+            "source": "Wei Zeng"
+        },
+        {
+            "target": "prompt engineering",
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "origin-destination data",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Simonstown: An AI-facilitated Interactive Story of Love, Life, and Pandemic",
+            "relationship": "HAS_KEYWORD",
+            "target": "interactive story"
+        },
+        {
+            "target": "navigation",
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "target": "ai art",
+            "relationship": "HAS_KEYWORD",
+            "source": "Naturality: A Natural Reflection of Chinese Calligraphy"
+        },
+        {
+            "target": "ai",
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring the Intersection of AI Art and Film: A Case Study of Giant"
+        },
+        {
+            "target": "ai art",
+            "source": "Simonstown: An AI-facilitated Interactive Story of Love, Life, and Pandemic",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "social media/online communities",
+            "relationship": "HAS_KEYWORD",
+            "source": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers"
+        },
+        {
+            "target": "mobile augmented reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Mobile augmented reality: User interfaces, frameworks, and intelligence"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Mingming Fan",
+            "target": "CMA"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Pan Hui",
+            "target": "Feeling Present! From Physical to Virtual Cinematography Lighting Education with Metashadow"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Pan Hui",
+            "target": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "target": "metaverse"
+        },
+        {
+            "source": "Huamin Qu",
+            "target": "CMA",
+            "relationship": "BELONGS_TO"
+        },
+        {
+            "target": "lab study",
+            "relationship": "HAS_KEYWORD",
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "target": "impact dynamics analysis",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "relationship": "HAS_KEYWORD",
+            "target": "large language model"
+        },
+        {
+            "target": "massive open online courses (mooc)",
+            "relationship": "HAS_KEYWORD",
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology"
+        },
+        {
+            "target": "Xnli: Explaining and diagnosing nli-based visual data analysis",
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "ai art.",
+            "source": "Shanshui Journey: AI Reproducing the Experience of Chinese \u201cLiterati\u201d Ink Paintings",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "David Yip",
+            "target": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream"
+        },
+        {
+            "target": "visualization recommendation",
+            "relationship": "HAS_KEYWORD",
+            "source": "DMiner: Dashboard design mining and recommendation"
+        },
+        {
+            "target": "pictorial visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "Let the chart spark: Embedding semantic context into chart with text-to-image generative model"
+        },
+        {
+            "target": "deep learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "relationship": "HAS_KEYWORD",
+            "target": "virtual reality"
+        },
+        {
+            "target": "DSA",
+            "relationship": "BELONGS_TO",
+            "source": "Wei Zeng"
+        },
+        {
+            "source": "Creative and progressive interior color design with eye-tracked user preference",
+            "relationship": "HAS_KEYWORD",
+            "target": "interior color design"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "virtual reality",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "target": "interactive art"
+        },
+        {
+            "target": "explainability",
+            "source": "Xnli: Explaining and diagnosing nli-based visual data analysis",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "mood board",
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring the Intersection of AI Art and Film: A Case Study of Giant"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "Feeling Present! From Physical to Virtual Cinematography Lighting Education with Metashadow"
+        },
+        {
+            "target": "natural language programming",
+            "source": "CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "David Yip"
+        },
+        {
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "relationship": "HAS_KEYWORD",
+            "target": "dream visualization"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision",
+            "target": "computer vision."
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "source": "Wei Zeng"
+        },
+        {
+            "source": "One small step for generative ai, one giant leap for agi: A complete survey on chatgpt in aigc era",
+            "relationship": "HAS_KEYWORD",
+            "target": "survey"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "target": "image quality assessment",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Understanding how older adults comprehend COVID-19 interactive visualizations via think-aloud protocol"
+        },
+        {
+            "source": "Can chatgpt reproduce human-generated labels? a study of social computing tasks",
+            "relationship": "HAS_KEYWORD",
+            "target": "human intelligence"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Let the chart spark: Embedding semantic context into chart with text-to-image generative model",
+            "target": "authoring tool"
+        },
+        {
+            "target": "naturality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Naturality: A Natural Reflection of Chinese Calligraphy"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Pan Hui",
+            "target": "Can chatgpt reproduce human-generated labels? a study of social computing tasks"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "aging",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Does Where You are Matter? A Visual Analytics System for COVID-19 Transmission Based on Social Hierarchical Perspective",
+            "source": "Wei Zeng"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "storytelling",
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
+        },
+        {
+            "source": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "relationship": "HAS_KEYWORD",
+            "target": "wellness"
+        },
+        {
+            "source": "Simonstown: An AI-facilitated Interactive Story of Love, Life, and Pandemic",
+            "relationship": "HAS_KEYWORD",
+            "target": "filmproduction"
+        },
+        {
+            "target": "pre-visualization",
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring the Intersection of AI Art and Film: A Case Study of Giant"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "The dark side of augmented reality: Exploring manipulative designs in ar",
+            "target": "dark patterns; augmented reality"
+        },
+        {
+            "source": "Huamin Qu",
+            "target": "Towards an understanding of distributed asymmetric collaborative visualization on problem-solving",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "metaphor",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "target": "interview",
+            "relationship": "HAS_KEYWORD",
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "AI-Generated Content for Academic Visualization and Communication in Maker Education",
+            "target": "knowledge management"
+        },
+        {
+            "target": "sensor fusion",
+            "relationship": "HAS_KEYWORD",
+            "source": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "target": "volumetric video"
+        },
+        {
+            "source": "Why is ai not a panacea for data workers? an interview study on human-ai collaboration in data storytelling",
+            "relationship": "HAS_KEYWORD",
+            "target": "data storytelling"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Storyfier: Exploring Vocabulary Learning Support with Text Generation Models",
+            "target": "traditional chinese painting"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Storyfier: Exploring Vocabulary Learning Support with Text Generation Models",
+            "target": "digital humanities"
+        },
+        {
+            "target": "visual analytics",
+            "relationship": "HAS_KEYWORD",
+            "source": "Does Where You are Matter? A Visual Analytics System for COVID-19 Transmission Based on Social Hierarchical Perspective"
+        },
+        {
+            "target": "older adults",
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing"
+        },
+        {
+            "target": "chinese comic painting",
+            "relationship": "HAS_KEYWORD",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "virtual reality",
+            "source": "Body Cosmos: An Immersive Experience Driven by Real-Time Bio-Data"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "paintings",
+            "source": "A comparative study of oil paintings and Chinese ink paintings on composition"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "aigc",
+            "source": "AI-Generated Content for Academic Visualization and Communication in Maker Education"
+        },
+        {
+            "source": "Creative and progressive interior color design with eye-tracked user preference",
+            "target": "user preference",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "inter-generational communication",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "image retrieval",
+            "source": "The Contemporary Art of Image Search: Iterative User Intent Expansion via Vision-Language Model"
+        },
+        {
+            "target": "chinese calligraphy",
+            "relationship": "HAS_KEYWORD",
+            "source": "Naturality: A Natural Reflection of Chinese Calligraphy"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "conversational assistants",
+            "source": "Collaboration with conversational AI assistants for UX evaluation: Questions and how to ask them (voice vs. text)"
+        },
+        {
+            "source": "Shanshui Journey: AI Reproducing the Experience of Chinese \u201cLiterati\u201d Ink Paintings",
+            "relationship": "HAS_KEYWORD",
+            "target": "chinese calligraphy"
+        },
+        {
+            "target": "visual analytics",
+            "relationship": "HAS_KEYWORD",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "DMiner: Dashboard design mining and recommendation"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "target": "safety"
+        },
+        {
+            "target": "deaf or hard of hearing (dhh)",
+            "source": "Sparkling silence: Practices and challenges of livestreaming among deaf or hard of hearing streamers",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Creative and progressive interior color design with eye-tracked user preference",
+            "relationship": "HAS_KEYWORD",
+            "target": "creativity support"
+        },
+        {
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "relationship": "HAS_KEYWORD",
+            "target": "collaborative art creation"
+        },
+        {
+            "source": "Exploring gaze-assisted and hand-based region selection in augmented reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "gaze interaction"
+        },
+        {
+            "target": "bodily engagement",
+            "source": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "relationship": "HAS_KEYWORD",
+            "target": "interaction design"
+        },
+        {
+            "target": "cinematography lighting",
+            "relationship": "HAS_KEYWORD",
+            "source": "Feeling Present! From Physical to Virtual Cinematography Lighting Education with Metashadow"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "target": "vr"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Dreaming Phantom in Immersive Experience: AIGC For Artistic Practice",
+            "source": "David Yip"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "visual balance",
+            "source": "A comparative study of oil paintings and Chinese ink paintings on composition"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "dashboards",
+            "source": "DMiner: Dashboard design mining and recommendation"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Storyfier: Exploring Vocabulary Learning Support with Text Generation Models",
+            "target": "painting analysis"
+        },
+        {
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "relationship": "HAS_KEYWORD",
+            "target": "meditation"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "augmented reality"
+        },
+        {
+            "source": "Exploring gaze-assisted and hand-based region selection in augmented reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "multimodal interaction"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "large language model",
+            "source": "The Contemporary Art of Image Search: Iterative User Intent Expansion via Vision-Language Model"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Exploring the Intersection of AI Art and Film: A Case Study of Giant",
+            "source": "David Yip"
+        },
+        {
+            "source": "One small step for generative ai, one giant leap for agi: A complete survey on chatgpt in aigc era",
+            "relationship": "HAS_KEYWORD",
+            "target": "generative ai"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Painterly Reality: Enhancing Audience Experience with Paintings through Interactive Art",
+            "source": "David Yip"
+        },
+        {
+            "target": "immersive learning",
+            "relationship": "HAS_KEYWORD",
+            "source": "Introducing Massive Open Metaverse Course and Its Enabling Technology"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Kang Zhang",
+            "target": "Ultrahigh energy-dissipation and multifunctional auxetic polymeric foam inspired by balloon art"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "multimodality",
+            "source": "The Contemporary Art of Image Search: Iterative User Intent Expansion via Vision-Language Model"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "Why is ai not a panacea for data workers? an interview study on human-ai collaboration in data storytelling"
+        },
+        {
+            "source": "One small step for generative ai, one giant leap for agi: A complete survey on chatgpt in aigc era",
+            "target": "aigc",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Kang Zhang",
+            "target": "The Contemporary Art of Image Search: Iterative User Intent Expansion via Vision-Language Model"
+        },
+        {
+            "target": "Empowering the metaverse with generative ai: Survey and future directions",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "generative model",
+            "relationship": "HAS_KEYWORD",
+            "source": "Let the chart spark: Embedding semantic context into chart with text-to-image generative model"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Towards an understanding of distributed asymmetric collaborative visualization on problem-solving",
+            "target": "human-centered computing\u2014visualization\u2014visualization techniques; human-centered computing\u2014collaborative and social computing\u2014empirical studies in collaborative and social computing"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Does Where You are Matter? A Visual Analytics System for COVID-19 Transmission Based on Social Hierarchical Perspective",
+            "target": "covid-19"
+        },
+        {
+            "target": "visual impairment",
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "TimeTuner: Diagnosing Time Representations for Time-Series Forecasting with Counterfactual Explanations",
+            "source": "Wei Zeng"
+        },
+        {
+            "source": "Zeyu Wang",
+            "target": "Introducing Massive Open Metaverse Course and Its Enabling Technology",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "evaluation",
+            "source": "uxSense: Supporting user experience analysis with visualization and computer vision"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing",
+            "target": "hand gestures"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "guideline",
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "target": "control"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "target": "machine form"
+        },
+        {
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "relationship": "HAS_KEYWORD",
+            "target": "ai-art"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "OWNED_BY",
+            "target": "Anchorage: Visual analysis of satisfaction in customer service videos via anchor events"
+        },
+        {
+            "target": "visual analytics",
+            "relationship": "HAS_KEYWORD",
+            "source": "Storyfier: Exploring Vocabulary Learning Support with Text Generation Models"
+        },
+        {
+            "target": "data video",
+            "relationship": "HAS_KEYWORD",
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "virtualreality",
+            "source": "Feeling Present! From Physical to Virtual Cinematography Lighting Education with Metashadow"
+        },
+        {
+            "source": "LOOP Meditation: Enhancing Novice's VR Meditation Experience with Physical Movement",
+            "relationship": "HAS_KEYWORD",
+            "target": "meditation"
+        },
+        {
+            "source": "Zeyu Wang",
+            "relationship": "OWNED_BY",
+            "target": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences"
+        },
+        {
+            "target": "lab  study",
+            "relationship": "HAS_KEYWORD",
+            "source": "Is It the End? Guidelines for Cinematic Endings in Data Videos"
+        },
+        {
+            "target": "development framework",
+            "relationship": "HAS_KEYWORD",
+            "source": "Mobile augmented reality: User interfaces, frameworks, and intelligence"
+        },
+        {
+            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "target": "crowdsourced",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Exploring gaze-assisted and hand-based region selection in augmented reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "augmented reality"
+        },
+        {
+            "source": "From Expanded Cinema to Extended Reality: How AI Can Expand and Extend Cinematic Experiences",
+            "relationship": "HAS_KEYWORD",
+            "target": "extended reality"
+        },
+        {
+            "source": "Notable: On-the-fly assistant for data storytelling in computational notebooks",
+            "relationship": "HAS_KEYWORD",
+            "target": "data visualization"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "presence",
+            "source": "Feeling Present! From Physical to Virtual Cinematography Lighting Education with Metashadow"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "layout rules",
+            "source": "A comparative study of oil paintings and Chinese ink paintings on composition"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
+            "source": "Wei Zeng"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "immersive experience",
+            "source": "Dreaming Phantom in Immersive Experience: AIGC For Artistic Practice"
+        },
+        {
+            "source": "Crossing of the Dream Fantasy: AI Technique Application for Visualizing a Fictional Character's Dream",
+            "relationship": "HAS_KEYWORD",
+            "target": "artistic practice"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "\" I am the follower, also the boss\": Exploring Different Levels of Autonomy and Machine Forms of Guiding Robots for the Visually Impaired",
+            "target": "guiding robot"
+        },
+        {
+            "source": "Can chatgpt reproduce human-generated labels? a study of social computing tasks",
+            "relationship": "HAS_KEYWORD",
+            "target": "chaptgpt"
+        },
+        {
+            "target": "neighborhood deprivation",
+            "relationship": "HAS_KEYWORD",
+            "source": "Does Where You are Matter? A Visual Analytics System for COVID-19 Transmission Based on Social Hierarchical Perspective"
+        }
+    ]
+}

@@ -229,17 +229,24 @@ def format_author_venue_response(responses):
 
 def format_department_year_response(responses):
     formatted_results = []
-    author_set = set() 
+    # author_set = set() 
+    author_paper_count = {} 
     total_paper_count = 0
 
     for record in responses:
         papers = record['papers']  # 获取所有论文
-        author_name = record['a']
+        author_name = record['a'].get('name')
 
         # 统计部门内所有论文的总数
         total_paper_count += len(papers)
-        author_set.add(author_name)
         
+
+        if author_name not in author_paper_count:
+            author_paper_count[author_name] = 0
+        
+         # 统计该作者的文章数量
+        author_paper_count[author_name] += len(papers)
+
         # 只返回前8篇论文
         limited_papers = papers[:8]
         
@@ -248,13 +255,21 @@ def format_department_year_response(responses):
         for paper in limited_papers:
             formatted_results.append({
                 "paper": paper.get('name'),
-                "author": author_name.get('name') ,
+                "author": author_name ,
                 "venue": paper.get('source'),
                 "citation": paper.get('citation'),
                 "keywords": paper.get('keywords'),  # 假设关键词是一个单一值或字符串
                 "year": paper.get("year")
             })
-
+        
+        # 将每个作者的文章数量添加到结果中
+        for author_name, paper_count in author_paper_count.items():
+            formatted_results.append({
+                "author": author_name,  # 只返回作者的名字
+                "paper_count": paper_count
+            })
+        formatted_results.append({"total_paper_count": total_paper_count})
+        formatted_results.append({"author_count": len(author_paper_count)})
     return formatted_results
 
 def format_department_keyword_response(responses):
@@ -352,10 +367,27 @@ def format_year_venue_response(responses):
         })
 
     return formatted_results
+def format_keyword_keyword_response(responses):
+    formatted_results = []
 
+    for record in responses:
+        # 遍历每篇论文
+        for paper in record['papers']:
+            formatted_results.append({
+                "paper": paper.get('name'),
+                "venue": paper.get('source'),
+                "year": paper.get('year'),
+                "citation": paper.get('citation'),
+                "abstract": paper.get('abstract'),
+                "keywords": paper.get('keywords')  # 假设关键词是单一值或字符串
+            })
+
+    return formatted_results
 def format_combined_response(combined_responses, inferred_types):
     authors = get_key(inferred_types, 'Author') #判断是否有多个作者
     departments = get_key(inferred_types, 'Department') #判断是否有多个部门
+    keywords = get_key(inferred_types, 'Keyword') #判断是否有多个部门
+
     if "Author" in inferred_types.values() and "Year" in inferred_types.values():
         return format_author_year_response(combined_responses)
     elif "Author" in inferred_types.values() and "Keyword" in inferred_types.values():
@@ -383,6 +415,8 @@ def format_combined_response(combined_responses, inferred_types):
         return format_author_author_response(combined_responses)
     elif len(departments)> 1:
         return format_department_department_response(combined_responses)
+    elif len(keywords)> 1:
+        return format_keyword_keyword_response(combined_responses)
     # 添加其他组合的格式化逻辑...
     
     return []
