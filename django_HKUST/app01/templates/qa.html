@@ -77,12 +77,17 @@
                 let request = JSON.parse(res)
                 botRes = request['response']
                 entityRes = request['entity']
+                
 
                 // Hide the loading spinner
                 document.getElementById('loading-spinner').style.display = 'none';
-
-
                 controlGraph(botRes, entityRes)
+
+                updateDonut(d3.select('#donut'), request['donut'])
+                updateChart(d3.select('#chart_d_y'), request['chart_d_y'])
+                updateTreemap(d3.select('#treemap'), request['treemap'])
+                updateWordCloud(request['wordcloud'])
+                
             }
         })
         return botRes;

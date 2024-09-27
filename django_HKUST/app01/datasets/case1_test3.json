@@ -1,43 +1,139 @@
 {
     "nodes": [
         {
-            "name": "virtual reality",
-            "citation": 14,
-            "group": 2
-        },
-        {
+            "released": "2023",
+            "authors": "Kirill Shatilov, Ahmad Alhilal, Tristan Braud, Lik-Hang Lee, Pengyuan Zhou, Pan Hui",
             "citation": 2,
-            "name": "digital twin",
-            "group": 2
-        },
-        {
-            "name": "CMA",
-            "group": 1
-        },
-        {
+            "id": "shatilov2023players",
             "count": 0,
             "group": 0,
-            "id": "yu2024attention",
-            "released": "2024",
-            "venue": "Article",
-            "citation": 5,
-            "name": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
-            "authors": "Jiadong Yu, Ahmad Alhilal, Tailin Zhou, Pan Hui, Danny HK Tsang"
+            "venue": "Proceedings of the First Workshop on Metaverse Systems and Applications",
+            "name": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
         },
         {
-            "name": "edge computing",
-            "citation": 2,
-            "group": 2
+            "name": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "released": "2022",
+            "venue": "Proceedings of the Tenth International Symposium of Chinese CHI",
+            "id": "wang2022reducing",
+            "authors": "Xian Wang, Xiaoyu Mo, Mingming Fan, Lik-Hang Lee, Bertram Shi, Pan Hui",
+            "count": 0,
+            "group": 0,
+            "citation": 11
+        },
+        {
+            "authors": "Lik-Hang Lee, Carlos Bermejo Fernandez, Ahmad Alhilal, Tristan Braud, Simo Hosio, Esm\u00e9e Henrieke Anne De Haas, Pan Hui",
+            "citation": 3,
+            "released": "2022",
+            "id": "lee2022beyond",
+            "venue": "Proceedings of the 2022 International Conference on Multimodal Interaction?\u2026",
+            "count": 0,
+            "group": 0,
+            "name": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "citation": 18,
+            "group": 2,
+            "name": "metaverse"
         },
         {
             "citation": 1,
             "group": 2,
-            "name": "continual reinforcement learning"
+            "name": "mindfulness"
         },
         {
             "citation": 1,
-            "name": "quality of experience",
-            "group": 2
+            "group": 2,
+            "name": "interplanetary cyberspace"
+        },
+        {
+            "name": "space chi",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "ai-generated content (aigc)"
+        },
+        {
+            "venue": "2023 IEEE 43rd International Conference on Distributed Computing Systems?\u2026",
+            "name": "Empowering the metaverse with generative ai: Survey and future directions",
+            "released": "2023",
+            "id": "qin2023empowering",
+            "count": 0,
+            "group": 0,
+            "authors": "Hua Xuan Qin, Pan Hui",
+            "citation": 11
+        },
+        {
+            "group": 2,
+            "name": "augmented reality",
+            "citation": 15
+        },
+        {
+            "venue": "2023 IEEE 43rd International Conference on Distributed Computing Systems?\u2026",
+            "authors": "Ahmad Alhilal, Kirill Shatilov, Gareth Tyson, Tristan Braud, Pan Hui",
+            "released": "2023",
+            "citation": 6,
+            "id": "alhilal2023network",
+            "count": 0,
+            "name": "Network Traffic in the Metaverse: The Case of Social VR",
+            "group": 0
+        },
+        {
+            "group": 2,
+            "citation": 3,
+            "name": "social vr"
+        },
+        {
+            "group": 2,
+            "name": "digital twins",
+            "citation": 2
+        },
+        {
+            "group": 2,
+            "name": "meditation",
+            "citation": 2
+        },
+        {
+            "group": 1,
+            "name": "CMA"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "literature review"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "space communications"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "interaction"
+        },
+        {
+            "group": 2,
+            "name": "generative ai",
+            "citation": 3
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "co-creative ai"
+        },
+        {
+            "name": "virtual reality",
+            "group": 2,
+            "citation": 24
+        },
+        {
+            "name": "Mingming Fan",
+            "type": "Author",
+            "count": 70,
+            "group": 4
         },
         {
             "name": "Pan Hui",
@@ -48,39 +144,164 @@
     ],
     "links": [
         {
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
-            "target": "virtual reality",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "target": "generative ai",
             "relationship": "HAS_KEYWORD",
-            "target": "quality of experience"
-        },
-        {
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
-            "relationship": "HAS_KEYWORD",
-            "target": "digital twin"
-        },
-        {
-            "target": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
-            "source": "Pan Hui",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
-            "target": "continual reinforcement learning",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
-            "target": "edge computing",
-            "relationship": "HAS_KEYWORD"
+            "source": "Empowering the metaverse with generative ai: Survey and future directions"
         },
         {
             "relationship": "BELONGS_TO",
             "target": "CMA",
             "source": "Pan Hui"
+        },
+        {
+            "target": "augmented reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
+            "source": "Pan Hui"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "target": "space chi"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "target": "metaverse"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "metaverse"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "co-creative ai"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "metaverse",
+            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
+        },
+        {
+            "target": "mindfulness",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "target": "literature review"
+        },
+        {
+            "target": "space communications",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "metaverse",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "target": "interaction"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "source": "Pan Hui"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Mingming Fan",
+            "target": "CMA"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Network Traffic in the Metaverse: The Case of Social VR",
+            "source": "Pan Hui"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "ai-generated content (aigc)"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
+        },
+        {
+            "target": "social vr",
+            "relationship": "HAS_KEYWORD",
+            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "source": "Pan Hui"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Empowering the metaverse with generative ai: Survey and future directions",
+            "source": "Pan Hui"
+        },
+        {
+            "target": "meditation",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "target": "metaverse"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "target": "interplanetary cyberspace"
+        },
+        {
+            "target": "digital twins",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "target": "social vr",
+            "relationship": "HAS_KEYWORD",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR"
         }
     ]
 }

@@ -1,0 +1,141 @@
+{
+    "donut": [
+        {
+            "department": "Dept.1",
+            "value": 0
+        },
+        {
+            "department": "Dept.2",
+            "value": 2
+        },
+        {
+            "department": "Dept.3",
+            "value": 0
+        }
+    ],
+    "chart_d_y": [
+        {
+            "year": 2020,
+            "CMA": 0,
+            "AI": 0,
+            "DSA": 0,
+            "paper_count": 0
+        },
+        {
+            "year": 2021,
+            "CMA": 0,
+            "AI": 0,
+            "DSA": 0,
+            "paper_count": 0
+        },
+        {
+            "year": 2022,
+            "CMA": 2,
+            "AI": 0,
+            "DSA": 0,
+            "paper_count": 0
+        },
+        {
+            "year": 2023,
+            "CMA": 3,
+            "AI": 0,
+            "DSA": 0,
+            "paper_count": 0
+        },
+        {
+            "year": 2024,
+            "CMA": 0,
+            "AI": 0,
+            "DSA": 0,
+            "paper_count": 0
+        }
+    ],
+    "treemap": {
+        "name": "Authors",
+        "children": [
+            {
+                "name": "CMA",
+                "children": [
+                    {
+                        "name": "Mingming Fan",
+                        "value": 1
+                    },
+                    {
+                        "name": "Pan Hui",
+                        "value": 5
+                    }
+                ]
+            },
+            {
+                "name": "DSA",
+                "children": []
+            },
+            {
+                "name": "AI",
+                "children": []
+            }
+        ]
+    },
+    "wordcloud": [
+        {
+            "text": "metaverse",
+            "size": 30.347826086956523
+        },
+        {
+            "text": "mindfulness",
+            "size": 3.0
+        },
+        {
+            "text": "interplanetary cyberspace",
+            "size": 3.0
+        },
+        {
+            "text": "space chi",
+            "size": 3.0
+        },
+        {
+            "text": "ai-generated content (aigc)",
+            "size": 3.0
+        },
+        {
+            "text": "augmented reality",
+            "size": 25.52173913043478
+        },
+        {
+            "text": "social vr",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "digital twins",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "meditation",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "literature review",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "space communications",
+            "size": 3.0
+        },
+        {
+            "text": "interaction",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "generative ai",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "co-creative ai",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "virtual reality",
+            "size": 40.0
+        }
+    ]
+}

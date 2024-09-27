@@ -1,232 +1,49 @@
 {
     "nodes": [
         {
-            "citation": 1,
-            "name": "vmirror",
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "live streaming",
-            "group": 2
-        },
-        {
-            "id": "alhilal2023network",
-            "group": 0,
-            "released": "2023",
-            "authors": "Ahmad Alhilal, Kirill Shatilov, Gareth Tyson, Tristan Braud, Pan Hui",
-            "count": 0,
-            "citation": 6,
-            "venue": "Conference paper",
-            "name": "Network Traffic in the Metaverse: The Case of Social VR"
-        },
-        {
-            "citation": 23,
-            "group": 0,
-            "name": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "id": "li2021vmirror",
-            "released": "2021",
-            "count": 0,
-            "authors": "Nianlong Li, Zhengquan Zhang, Can Liu, Zengyao Yang, Yinan Fu, Feng Tian, Teng Han, Mingming Fan",
-            "venue": "Conference paper"
-        },
-        {
-            "id": "alhilal2020distributed",
-            "authors": "Ahmad Alhilal, Benjamin Finley, Tristan Braud, Dongzhe Su, Pan Hui",
-            "group": 0,
-            "venue": "Article",
-            "count": 0,
-            "released": "2020",
-            "name": "Distributed vehicular computing at the dawn of 5G: A survey",
-            "citation": 30
-        },
-        {
-            "group": 0,
-            "authors": "Lik-Hang Lee, Carlos Bermejo Fernandez, Ahmad Alhilal, Tristan Braud, Simo Hosio, Esm\u00e9e Henrieke Anne De Haas, Pan Hui",
+            "group": 2,
             "citation": 3,
-            "id": "lee2022beyond",
-            "count": 0,
-            "name": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
-            "released": "2022",
-            "venue": "Conference paper"
-        },
-        {
-            "name": "cloud computing",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "group": 1,
-            "name": "CMA"
+            "name": "user experience"
         },
         {
             "citation": 1,
-            "name": "virtual mirror",
-            "group": 2
-        },
-        {
-            "citation": 2,
             "group": 2,
-            "name": "edge computing"
+            "name": "quality of experience"
         },
         {
-            "group": 2,
             "citation": 1,
-            "name": "network management"
-        },
-        {
             "name": "interplanetary cyberspace",
-            "citation": 1,
             "group": 2
         },
         {
             "citation": 1,
-            "name": "space chi",
-            "group": 2
+            "group": 2,
+            "name": "authoring tools"
         },
         {
-            "authors": "Jiadong Yu, Ahmad Alhilal, Tailin Zhou, Pan Hui, Danny HK Tsang",
+            "citation": 3,
+            "group": 2,
+            "name": "aging"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "participatory design"
+        },
+        {
+            "authors": "Qiuxin Du, Zhen Song, Haiyan Jiang, Xiaoying Wei, Dongdong Weng, Mingming Fan",
+            "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
+            "name": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "id": "du2024lightsword",
             "group": 0,
-            "id": "yu2024attention",
-            "venue": "Article",
-            "name": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
-            "count": 0,
             "released": "2024",
-            "citation": 5
-        },
-        {
-            "citation": 2,
-            "group": 2,
-            "name": "digital twin"
-        },
-        {
-            "group": 0,
-            "released": "2023",
             "citation": 0,
-            "venue": "Article",
-            "name": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment",
-            "count": 0,
-            "authors": "Ziru Zhang, Xuling Zhang, Guangzhi Zhu, Yuyang Wang, Pan Hui",
-            "id": "zhang2023efficient"
+            "count": 0
         },
         {
             "citation": 1,
             "group": 2,
-            "name": "occlusion"
-        },
-        {
-            "name": "DSA",
-            "group": 1
-        },
-        {
-            "name": "virtual reality",
-            "citation": 14,
-            "group": 2
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "graph traversal"
-        },
-        {
-            "name": "space communications",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "intelligent transportation system",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "multimedia context",
-            "group": 2
-        },
-        {
-            "name": "mobile edge computing",
-            "citation": 2,
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "distributed computing",
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "random walk",
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "group": 2,
-            "name": "out of reach"
-        },
-        {
-            "name": "traffic classification",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "group": 2,
-            "name": "eigenvector"
-        },
-        {
-            "name": "social vr",
-            "citation": 3,
-            "group": 2
-        },
-        {
-            "name": "vr",
-            "group": 2,
-            "citation": 5
-        },
-        {
-            "citation": 2,
-            "name": "digital twins",
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "vehicular networks",
-            "group": 2
-        },
-        {
-            "name": "continual reinforcement learning",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "group": 0,
-            "citation": 3,
-            "authors": "Mohammad A Hoque, Ashwin Rao, Abhishek Kumar, Mostafa Ammar, Pan Hui, Sasu Tarkoma",
-            "count": 0,
-            "released": "2020",
-            "name": "Sensing multimedia contexts on mobile devices",
-            "id": "hoque2020sensing",
-            "venue": "Conference paper"
-        },
-        {
-            "name": "5g",
-            "group": 2,
-            "citation": 5
-        },
-        {
-            "group": 2,
-            "name": "distributed deep learning",
-            "citation": 9
-        },
-        {
-            "citation": 12,
-            "name": "metaverse",
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "spanning centrality",
-            "group": 2
+            "name": "people with spinal muscular atrophy"
         },
         {
             "citation": 1,
@@ -234,24 +51,34 @@
             "name": "voice over ip"
         },
         {
-            "name": "quality of experience",
-            "citation": 1,
-            "group": 2
+            "name": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "id": "cao2024nftracer",
+            "count": 0,
+            "group": 0,
+            "released": "2024",
+            "citation": 0,
+            "authors": "Yifan Cao, Qing Shi, Lue Shen, Kani Chen, Yang Wang, Wei Zeng, Huamin Qu",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics"
         },
         {
             "citation": 1,
             "group": 2,
-            "name": "target selection"
+            "name": "couples"
         },
         {
-            "name": "raycasting",
-            "citation": 1,
-            "group": 2
+            "authors": "Xian Xu, Wai Tong, Zheng Wei, Meng Xia, Lik-Hang Lee, Huamin Qu",
+            "id": "xu2023cinematography",
+            "name": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "citation": 4,
+            "group": 0,
+            "released": "2023",
+            "count": 0,
+            "venue": "2023 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and?\u2026"
         },
         {
             "citation": 1,
-            "name": "task offloading",
-            "group": 2
+            "group": 2,
+            "name": "upper-body gestures"
         },
         {
             "citation": 1,
@@ -260,8 +87,108 @@
         },
         {
             "citation": 1,
-            "name": "mobile cloud computing",
+            "group": 2,
+            "name": "hand gestures"
+        },
+        {
+            "name": "live streaming",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 1,
+            "name": "target selection",
             "group": 2
+        },
+        {
+            "authors": "Shumeng Zhang, Ziyan Wang, You Zhou, Hao Cui, Shihan Fu, Zeyu Wang, Mingming Fan",
+            "name": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "group": 0,
+            "citation": 0,
+            "released": "2023",
+            "count": 0,
+            "venue": "Proceedings of the 16th International Symposium on Visual Information?\u2026",
+            "id": "zhang2023odorv"
+        },
+        {
+            "venue": "Extended Abstracts of the CHI Conference on Human Factors in Computing?\u2026",
+            "group": 0,
+            "released": "2024",
+            "citation": 0,
+            "id": "tong2024exploring",
+            "authors": "Wai Tong, Meng Xia, Huamin Qu",
+            "name": "Exploring Stage Lighting Education in Metaverse",
+            "count": 0
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "space communications"
+        },
+        {
+            "group": 2,
+            "name": "augmented reality",
+            "citation": 15
+        },
+        {
+            "group": 2,
+            "name": "virtual reality",
+            "citation": 24
+        },
+        {
+            "citation": 2,
+            "name": "nft transaction data",
+            "group": 2
+        },
+        {
+            "name": "edge computing",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "venue": "2023 IEEE 43rd International Conference on Distributed Computing Systems?\u2026",
+            "id": "alhilal2023network",
+            "group": 0,
+            "authors": "Ahmad Alhilal, Kirill Shatilov, Gareth Tyson, Tristan Braud, Pan Hui",
+            "name": "Network Traffic in the Metaverse: The Case of Social VR",
+            "released": "2023",
+            "citation": 6,
+            "count": 0
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "olfactory display"
+        },
+        {
+            "name": "Sensing multimedia contexts on mobile devices",
+            "venue": "Proceedings of the 30th ACM Workshop on Network and Operating Systems?\u2026",
+            "group": 0,
+            "id": "hoque2020sensing",
+            "citation": 3,
+            "authors": "Mohammad A Hoque, Ashwin Rao, Abhishek Kumar, Mostafa Ammar, Pan Hui, Sasu Tarkoma",
+            "count": 0,
+            "released": "2020"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "button"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "multimedia context"
+        },
+        {
+            "name": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR",
+            "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
+            "group": 0,
+            "id": "tan2024wieldingcanvas",
+            "released": "2024",
+            "citation": 0,
+            "count": 0,
+            "authors": "Xiaohui Tan, Zhenxuan He, Can Liu, Mingming Fan, Tianren Luo, Zitao Liu, Mi Tian, Teng Han, Feng Tian"
         },
         {
             "citation": 1,
@@ -269,9 +196,517 @@
             "name": "dof"
         },
         {
+            "name": "out of reach",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "authors": "Ze Gao, Xiang Li, Changkun Liu, Xian Wang, Anqi Wang, Liang Yang, Yuyang Wang, Pan Hui, Tristan Braud",
+            "count": 0,
+            "group": 0,
+            "citation": 0,
+            "id": "gao2023vr",
+            "released": "2023",
+            "venue": "Proceedings of the Eleventh International Symposium of Chinese CHI",
+            "name": "VR PreM+: An Immersive Pre-learning Branching Visualization System for Museum Tours"
+        },
+        {
             "group": 2,
             "citation": 2,
-            "name": "big data"
+            "name": "digital twins"
+        },
+        {
+            "venue": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "count": 0,
+            "group": 0,
+            "id": "wei2023bridging",
+            "released": "2023",
+            "citation": 12,
+            "authors": "Xiaoying Wei, Yizheng Gu, Emily Kuang, Xian Wang, Beiyan Cao, Xiaofu Jin, Mingming Fan",
+            "name": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "mindfulness"
+        },
+        {
+            "name": "wetness illusion",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "smartglasses"
+        },
+        {
+            "venue": "2023 IEEE 43rd International Conference on Distributed Computing Systems?\u2026",
+            "citation": 11,
+            "name": "Empowering the metaverse with generative ai: Survey and future directions",
+            "group": 0,
+            "released": "2023",
+            "count": 0,
+            "authors": "Hua Xuan Qin, Pan Hui",
+            "id": "qin2023empowering"
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "interaction paradigms"
+        },
+        {
+            "citation": 1,
+            "name": "3d modeling",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "smart city"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "grandchildren"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "substitutive systems"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "prototype"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "virtual mirror"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "literature review"
+        },
+        {
+            "released": "2021",
+            "group": 0,
+            "name": "Deepvista: 16k panoramic cinema on your mobile device",
+            "authors": "Wenxiao Zhang, Feng Qian, Bo Han, Pan Hui",
+            "venue": "Proceedings of the Web Conference 2021",
+            "count": 0,
+            "id": "zhang2021deepvista",
+            "citation": 21
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "information systems"
+        },
+        {
+            "name": "DSA",
+            "group": 1
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "digital twin"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "stage lighting education"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "non-fungible tokens (nfts)"
+        },
+        {
+            "group": 2,
+            "citation": 7,
+            "name": "human-centered computing"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "generational gap"
+        },
+        {
+            "name": "Older Adults\u2019 Concurrent and Retrospective Think-Aloud Verbalizations for Identifying User Experience Problems of VR Games",
+            "group": 0,
+            "venue": "Interacting with Computers",
+            "released": "2022",
+            "citation": 6,
+            "count": 0,
+            "id": "fan2022older",
+            "authors": "Mingming Fan, Vinita Tibdewal, Qiwen Zhao, Lizhou Cao, Chao Peng, Runxuan Shu, Yujia Shan"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "meditation"
+        },
+        {
+            "id": "wei2022communication",
+            "count": 0,
+            "group": 0,
+            "released": "2022",
+            "venue": "Proceedings of the Tenth International Symposium of Chinese CHI",
+            "authors": "Xiaoying Wei, Xiaofu Jin, Mingming Fan",
+            "name": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "citation": 21
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "vr games"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "virtual museum"
+        },
+        {
+            "released": "2021",
+            "group": 0,
+            "id": "bermejo2021exploring",
+            "authors": "Carlos Bermejo, Lik Hang Lee, Paul Chojecki, David Przewozny, Pan Hui",
+            "count": 0,
+            "venue": "Proceedings of the ACM on Human-Computer Interaction",
+            "name": "Exploring button designs for mid-air interaction in virtual reality: A hexa-metric evaluation of key representations and multi-modal cues",
+            "citation": 28
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "evaluation"
+        },
+        {
+            "id": "lee2020towards",
+            "citation": 8,
+            "group": 0,
+            "authors": "Lik-Hang Lee, Tristan Braud, Simo Hosio, Pan Hui",
+            "count": 0,
+            "released": "2020",
+            "name": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "venue": "ArXiv"
+        },
+        {
+            "group": 2,
+            "citation": 10,
+            "name": "older adults"
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "generative ai"
+        },
+        {
+            "citation": 1,
+            "name": "health",
+            "group": 2
+        },
+        {
+            "name": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "released": "2021",
+            "citation": 46,
+            "id": "lee2021towards",
+            "group": 0,
+            "authors": "Lik-Hang Lee, Tristan Braud, Simo Hosio, Pan Hui",
+            "count": 0,
+            "venue": "ACM Computing Surveys (CSUR)"
+        },
+        {
+            "name": "vmirror",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 4,
+            "name": "verbalization"
+        },
+        {
+            "group": 2,
+            "citation": 3,
+            "name": "social vr"
+        },
+        {
+            "citation": 1,
+            "name": "traffic classification",
+            "group": 2
+        },
+        {
+            "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
+            "authors": "Jingze Tian, Yingna Wang, Keye Yu, Liyi Xu, Junan Xie, Franklin Mingzhe Li, Yafeng Niu, Mingming Fan",
+            "group": 0,
+            "released": "2024",
+            "citation": 0,
+            "id": "tian2024designing",
+            "count": 0,
+            "name": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "think-aloud protocols"
+        },
+        {
+            "name": "user-defined gestures",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "citation": 2,
+            "authors": "Kirill Shatilov, Ahmad Alhilal, Tristan Braud, Lik-Hang Lee, Pengyuan Zhou, Pan Hui",
+            "group": 0,
+            "released": "2023",
+            "venue": "Proceedings of the First Workshop on Metaverse Systems and Applications",
+            "name": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
+            "id": "shatilov2023players",
+            "count": 0
+        },
+        {
+            "citation": 1,
+            "name": "ai-generated content (aigc)",
+            "group": 2
+        },
+        {
+            "name": "multimedia streaming",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "group": 0,
+            "released": "2024",
+            "authors": "Jiadong Yu, Ahmad Alhilal, Tailin Zhou, Pan Hui, Danny HK Tsang",
+            "id": "yu2024attention",
+            "venue": "IEEE Transactions on Wireless Communications",
+            "count": 0,
+            "citation": 5
+        },
+        {
+            "authors": "Lik-Hang Lee, Carlos Bermejo Fernandez, Ahmad Alhilal, Tristan Braud, Simo Hosio, Esm\u00e9e Henrieke Anne De Haas, Pan Hui",
+            "id": "lee2022beyond",
+            "group": 0,
+            "name": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "citation": 3,
+            "released": "2022",
+            "venue": "Proceedings of the 2022 International Conference on Multimodal Interaction?\u2026",
+            "count": 0
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "the metaverse"
+        },
+        {
+            "authors": "Nianlong Li, Zhengquan Zhang, Can Liu, Zengyao Yang, Yinan Fu, Feng Tian, Teng Han, Mingming Fan",
+            "released": "2021",
+            "group": 0,
+            "citation": 23,
+            "id": "li2021vmirror",
+            "count": 0,
+            "name": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "venue": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems?\u2026"
+        },
+        {
+            "name": "CMA",
+            "group": 1
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "interaction techniques"
+        },
+        {
+            "citation": 1,
+            "name": "continual reinforcement learning",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "human computer interaction (hci)"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "user study"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "art appreciation"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "inter-generational communication"
+        },
+        {
+            "name": "raycasting",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "space chi"
+        },
+        {
+            "citation": 1,
+            "name": "occlusion",
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "name": "visual\nanalytics",
+            "group": 2
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "communication"
+        },
+        {
+            "name": "landscape painting",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "citation": 2,
+            "group": 0,
+            "id": "tong2022let",
+            "venue": "2022 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and?\u2026",
+            "name": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning",
+            "released": "2022",
+            "count": 0,
+            "authors": "Wai Tong, Haotian Li, Huan Wei, Liwenhan Xie, Yanna Lin, Huamin Qu"
+        },
+        {
+            "citation": 11,
+            "group": 0,
+            "name": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "authors": "Xian Wang, Xiaoyu Mo, Mingming Fan, Lik-Hang Lee, Bertram Shi, Pan Hui",
+            "released": "2022",
+            "venue": "Proceedings of the Tenth International Symposium of Chinese CHI",
+            "count": 0,
+            "id": "wang2022reducing"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "pre-learning system"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "3d authoring"
+        },
+        {
+            "group": 2,
+            "citation": 7,
+            "name": "visualization"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "co-creative ai"
+        },
+        {
+            "group": 2,
+            "name": "extended reality",
+            "citation": 4
+        },
+        {
+            "group": 2,
+            "citation": 4,
+            "name": "urban computing"
+        },
+        {
+            "id": "wang2023designing",
+            "authors": "Xian Wang, Xiaoyu Mo, Lik-Hang Lee, Xiaoying Wei, Xiaofu Jin, Mingming Fan, Pan Hui",
+            "group": 0,
+            "citation": 0,
+            "released": "2023",
+            "count": 0,
+            "name": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "venue": "Proceedings of the 31st ACM International Conference on Multimedia"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "key representation"
+        },
+        {
+            "group": 2,
+            "name": "vr",
+            "citation": 5
+        },
+        {
+            "name": "mid-air",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "id": "lam20223deformr",
+            "citation": 4,
+            "group": 0,
+            "released": "2022",
+            "name": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "venue": "Proceedings of the 13th ACM Multimedia Systems Conference",
+            "count": 0,
+            "authors": "Kit Yung Lam, Lik-Hang Lee, Pan Hui"
+        },
+        {
+            "name": "metaverse",
+            "citation": 18,
+            "group": 2
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "grandparents"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "network management"
+        },
+        {
+            "name": "interaction",
+            "citation": 2,
+            "group": 2
+        },
+        {
+            "name": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr",
+            "id": "han2020mouille",
+            "authors": "Teng Han, Sirui Wang, Sijia Wang, Xiangmin Fan, Jie Liu, Feng Tian, Mingming Fan",
+            "group": 0,
+            "citation": 19,
+            "count": 0,
+            "venue": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems?\u2026",
+            "released": "2020"
+        },
+        {
+            "citation": 1,
+            "group": 2,
+            "name": "immersive experience"
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "impact dynamics analysis"
+        },
+        {
+            "citation": 2,
+            "name": "ux problems",
+            "group": 2
         },
         {
             "name": "Pan Hui",
@@ -286,42 +721,493 @@
             "group": 4
         },
         {
-            "name": "Jing Tang",
+            "name": "Huamin Qu",
             "type": "Author",
-            "count": 38,
+            "count": 126,
+            "group": 4
+        },
+        {
+            "name": "Wei Zeng",
+            "type": "Author",
+            "count": 45,
             "group": 4
         }
     ],
     "links": [
         {
-            "target": "spanning centrality",
-            "relationship": "HAS_KEYWORD",
-            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+            "target": "virtual reality",
+            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "space chi",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
+            "source": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr",
+            "target": "user study",
             "relationship": "HAS_KEYWORD"
         },
         {
             "relationship": "HAS_KEYWORD",
-            "target": "continual reinforcement learning",
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
+            "target": "social vr",
+            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
+        },
+        {
+            "target": "generative ai",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "relationship": "HAS_KEYWORD"
         },
         {
             "target": "virtual reality",
+            "source": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "interaction techniques",
+            "relationship": "HAS_KEYWORD",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "source": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning",
+            "relationship": "HAS_KEYWORD",
+            "target": "human-centered computing"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "olfactory display",
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum"
+        },
+        {
+            "source": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "target": "health",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "target": "smart city"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "target": "continual reinforcement learning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring button designs for mid-air interaction in virtual reality: A hexa-metric evaluation of key representations and multi-modal cues",
+            "target": "button"
+        },
+        {
+            "target": "literature review",
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "source": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "target": "human computer interaction (hci)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "VR PreM+: An Immersive Pre-learning Branching Visualization System for Museum Tours",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "augmented reality",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "urban computing",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges"
+        },
+        {
+            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu"
+        },
+        {
+            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "OWNED_BY",
+            "source": "Wei Zeng"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR",
+            "target": "social vr"
+        },
+        {
+            "target": "digital twins",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Sensing multimedia contexts on mobile devices"
+        },
+        {
+            "target": "metaverse",
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "target": "meditation"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Older Adults\u2019 Concurrent and Retrospective Think-Aloud Verbalizations for Identifying User Experience Problems of VR Games"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Older Adults\u2019 Concurrent and Retrospective Think-Aloud Verbalizations for Identifying User Experience Problems of VR Games"
+        },
+        {
+            "target": "metaverse",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets",
+            "target": "3d authoring"
+        },
+        {
+            "target": "interaction",
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "target": "social vr"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "non-fungible tokens (nfts)",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "target": "urban computing"
+        },
+        {
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "relationship": "HAS_KEYWORD",
+            "target": "older adults"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "target": "digital twin",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Exploring Stage Lighting Education in Metaverse",
+            "source": "Huamin Qu"
+        },
+        {
+            "source": "Deepvista: 16k panoramic cinema on your mobile device",
+            "relationship": "HAS_KEYWORD",
+            "target": "information systems"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "virtual reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr",
+            "target": "prototype"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Towards augmented reality-driven human-city interaction: Current research and future challenges"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "interaction paradigms",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "augmented reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "source": "Pan Hui",
+            "target": "CMA"
+        },
+        {
+            "target": "nft transaction data",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "space communications",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "DSA",
+            "source": "Wei Zeng"
+        },
+        {
+            "target": "wetness illusion",
+            "source": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "target": "digital twins",
+            "source": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "authoring tools",
+            "relationship": "HAS_KEYWORD",
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets"
+        },
+        {
+            "target": "meditation",
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "HAS_KEYWORD",
+            "target": "human-centered computing"
+        },
+        {
+            "target": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "vr",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring button designs for mid-air interaction in virtual reality: A hexa-metric evaluation of key representations and multi-modal cues",
+            "target": "key representation"
+        },
+        {
+            "target": "ai-generated content (aigc)",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "extended reality",
+            "source": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "target selection",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "HAS_KEYWORD",
+            "target": "people with spinal muscular atrophy"
+        },
+        {
+            "target": "user-defined gestures",
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Sensing multimedia contexts on mobile devices",
+            "target": "sensor fusion",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "target": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "digital twins",
+            "relationship": "HAS_KEYWORD",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges",
+            "target": "smartglasses"
+        },
+        {
+            "target": "edge computing",
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "hand gestures",
+            "relationship": "HAS_KEYWORD",
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "target": "virtual museum"
+        },
+        {
+            "source": "Sensing multimedia contexts on mobile devices",
+            "relationship": "HAS_KEYWORD",
+            "target": "multimedia context"
+        },
+        {
+            "target": "out of reach",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "Empowering the metaverse with generative ai: Survey and future directions",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "target": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Wei Zeng"
+        },
+        {
+            "target": "think-aloud protocols",
+            "relationship": "HAS_KEYWORD",
+            "source": "Older Adults\u2019 Concurrent and Retrospective Think-Aloud Verbalizations for Identifying User Experience Problems of VR Games"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring Stage Lighting Education in Metaverse",
+            "target": "stage lighting education"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "VR PreM+: An Immersive Pre-learning Branching Visualization System for Museum Tours"
+        },
+        {
+            "target": "extended reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "space chi",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Exploring Stage Lighting Education in Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "dof",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "relationship": "HAS_KEYWORD",
+            "target": "evaluation"
+        },
+        {
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "relationship": "HAS_KEYWORD",
+            "target": "couples"
+        },
+        {
+            "target": "interplanetary cyberspace",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "target": "voice over ip",
             "source": "Sensing multimedia contexts on mobile devices",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
-            "target": "edge computing",
+            "source": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "target": "virtual reality",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "eigenvector",
+            "source": "Deepvista: 16k panoramic cinema on your mobile device",
             "relationship": "HAS_KEYWORD",
-            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+            "target": "human-centered computing"
+        },
+        {
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "relationship": "HAS_KEYWORD",
+            "target": "grandparents"
         },
         {
             "target": "live streaming",
@@ -329,254 +1215,384 @@
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "mobile cloud computing",
-            "relationship": "HAS_KEYWORD",
-            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
-        },
-        {
-            "source": "Network Traffic in the Metaverse: The Case of Social VR",
-            "relationship": "HAS_KEYWORD",
-            "target": "social vr"
-        },
-        {
-            "target": "distributed computing",
-            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
+            "target": "virtual reality",
+            "source": "WieldingCanvas: Interactive Sketch Canvases for Freehand Drawing in VR",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "DSA",
-            "relationship": "BELONGS_TO",
-            "source": "Jing Tang"
+            "source": "Sensing multimedia contexts on mobile devices",
+            "relationship": "HAS_KEYWORD",
+            "target": "network management"
         },
         {
-            "target": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment",
+            "target": "virtual reality",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "metaverse",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "visual\nanalytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "target": "aging",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "mid-air",
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring button designs for mid-air interaction in virtual reality: A hexa-metric evaluation of key representations and multi-modal cues"
+        },
+        {
+            "target": "older adults",
+            "relationship": "HAS_KEYWORD",
+            "source": "Older Adults\u2019 Concurrent and Retrospective Think-Aloud Verbalizations for Identifying User Experience Problems of VR Games"
+        },
+        {
+            "target": "visualization",
+            "source": "VR PreM+: An Immersive Pre-learning Branching Visualization System for Museum Tours",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "target": "interaction paradigms",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "metaverse",
+            "relationship": "HAS_KEYWORD",
+            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Huamin Qu"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Deepvista: 16k panoramic cinema on your mobile device",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Deepvista: 16k panoramic cinema on your mobile device"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Designing Upper-Body Gesture Interaction with and for People with Spinal Muscular Atrophy in VR",
+            "target": "upper-body gestures"
+        },
+        {
+            "source": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "relationship": "HAS_KEYWORD",
+            "target": "smart city"
+        },
+        {
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "target": "generational gap",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "interaction techniques",
+            "source": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "occlusion",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Cinematography in the Metaverse: Exploring the Lighting Education on a Soundstage",
+            "relationship": "HAS_KEYWORD",
+            "target": "human-centered computing"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "art appreciation",
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "co-creative ai",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Towards augmented reality-driven human-city interaction: Current research and future challenges"
+        },
+        {
+            "target": "landscape painting",
+            "relationship": "HAS_KEYWORD",
+            "source": "OdorV-Art: An Initial Exploration of An Olfactory Intervention for Appreciating Style Information of Artworks in Virtual Museum"
+        },
+        {
+            "target": "ux problems",
+            "relationship": "HAS_KEYWORD",
+            "source": "Older Adults\u2019 Concurrent and Retrospective Think-Aloud Verbalizations for Identifying User Experience Problems of VR Games"
+        },
+        {
+            "target": "multimedia streaming",
+            "source": "Deepvista: 16k panoramic cinema on your mobile device",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Exploring Stage Lighting Education in Metaverse",
+            "target": "participatory design"
+        },
+        {
+            "target": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "Network Traffic in the Metaverse: The Case of Social VR",
             "source": "Pan Hui",
             "relationship": "OWNED_BY"
         },
         {
-            "target": "multimedia context",
+            "target": "the metaverse",
+            "relationship": "HAS_KEYWORD",
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "HAS_KEYWORD",
+            "target": "substitutive systems"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "VR PreM+: An Immersive Pre-learning Branching Visualization System for Museum Tours",
+            "target": "immersive experience"
+        },
+        {
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "relationship": "HAS_KEYWORD",
+            "target": "inter-generational communication"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "target": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "source": "LightSword: A Customized Virtual Reality Exergame for Long-Term Cognitive Inhibition Training in Older Adults",
+            "relationship": "HAS_KEYWORD",
+            "target": "older adults"
+        },
+        {
+            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "target": "quality of experience"
+        },
+        {
+            "target": "raycasting",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "target": "vr",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets"
+        },
+        {
+            "target": "traffic classification",
             "source": "Sensing multimedia contexts on mobile devices",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "graph traversal",
+            "target": "Mouill\u00e9: Exploring wetness illusion on fingertips to enhance immersive experience in vr",
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan"
+        },
+        {
+            "relationship": "BELONGS_TO",
+            "target": "CMA",
+            "source": "Mingming Fan"
+        },
+        {
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "impact dynamics analysis",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Exploring button designs for mid-air interaction in virtual reality: A hexa-metric evaluation of key representations and multi-modal cues"
+        },
+        {
             "relationship": "HAS_KEYWORD",
-            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+            "target": "vr games",
+            "source": "Older Adults\u2019 Concurrent and Retrospective Think-Aloud Verbalizations for Identifying User Experience Problems of VR Games"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "verbalization",
+            "source": "Older Adults\u2019 Concurrent and Retrospective Think-Aloud Verbalizations for Identifying User Experience Problems of VR Games"
+        },
+        {
+            "target": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning",
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu"
+        },
+        {
+            "target": "interaction paradigms",
+            "source": "Let Every Seat Be Perfect! A Case Study on Combining BIM and VR for Room Planning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "relationship": "HAS_KEYWORD",
+            "target": "smartglasses"
+        },
+        {
+            "source": "Communication in immersive social virtual reality: A systematic review of 10 years\u2019 studies",
+            "relationship": "HAS_KEYWORD",
+            "target": "communication"
+        },
+        {
+            "target": "metaverse",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "user experience",
+            "source": "Older Adults\u2019 Concurrent and Retrospective Think-Aloud Verbalizations for Identifying User Experience Problems of VR Games"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Sensing multimedia contexts on mobile devices",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Bridging the generational gap: exploring how virtual reality supports remote communication between grandparents and grandchildren",
+            "relationship": "HAS_KEYWORD",
+            "target": "grandchildren"
+        },
+        {
+            "target": "3d modeling",
+            "relationship": "HAS_KEYWORD",
+            "source": "3DeformR: freehand 3D model editing in virtual environments considering head movements on mobile headsets"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Exploring button designs for mid-air interaction in virtual reality: A hexa-metric evaluation of key representations and multi-modal cues",
+            "relationship": "HAS_KEYWORD"
         },
         {
             "target": "virtual mirror",
-            "relationship": "HAS_KEYWORD",
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Pan Hui",
-            "target": "Distributed vehicular computing at the dawn of 5G: A survey"
-        },
-        {
-            "source": "Sensing multimedia contexts on mobile devices",
-            "target": "voice over ip",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Sensing multimedia contexts on mobile devices",
-            "source": "Pan Hui",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "edge computing",
-            "relationship": "HAS_KEYWORD",
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "occlusion",
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
-        },
-        {
-            "relationship": "BELONGS_TO",
-            "source": "Pan Hui",
-            "target": "CMA"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Pan Hui",
-            "target": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
-        },
-        {
-            "target": "distributed deep learning",
-            "relationship": "HAS_KEYWORD",
-            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
-        },
-        {
-            "target": "metaverse",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "target selection",
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "dof",
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
             "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "target": "raycasting"
+            "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "mobile edge computing",
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
+        },
+        {
+            "source": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
             "relationship": "HAS_KEYWORD",
-            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+            "target": "participatory design"
+        },
+        {
+            "target": "augmented reality",
+            "source": "Towards augmented reality driven human-city interaction: Current research on mobile headsets and future challenges",
+            "relationship": "HAS_KEYWORD"
         },
         {
             "relationship": "HAS_KEYWORD",
-            "target": "out of reach",
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
-        },
-        {
-            "target": "virtual reality",
-            "relationship": "HAS_KEYWORD",
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
-        },
-        {
-            "target": "digital twin",
-            "relationship": "HAS_KEYWORD",
-            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
+            "target": "pre-learning system",
+            "source": "VR PreM+: An Immersive Pre-learning Branching Visualization System for Museum Tours"
         },
         {
             "target": "vmirror",
-            "relationship": "HAS_KEYWORD",
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
-        },
-        {
-            "target": "virtual reality",
-            "relationship": "HAS_KEYWORD",
-            "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
-        },
-        {
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
-            "relationship": "HAS_KEYWORD",
-            "target": "interplanetary cyberspace"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Sensing multimedia contexts on mobile devices",
-            "target": "traffic classification"
-        },
-        {
-            "target": "sensor fusion",
-            "source": "Sensing multimedia contexts on mobile devices",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment",
-            "source": "Jing Tang",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "target": "digital twins",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Pan Hui",
-            "target": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
-            "relationship": "HAS_KEYWORD",
-            "target": "space communications"
-        },
-        {
-            "target": "virtual reality",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Mingming Fan",
-            "relationship": "OWNED_BY",
-            "target": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors"
-        },
-        {
-            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
-            "target": "big data",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
-            "relationship": "HAS_KEYWORD",
-            "target": "intelligent transportation system"
-        },
-        {
-            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
-            "relationship": "HAS_KEYWORD",
-            "target": "5g"
-        },
-        {
-            "target": "quality of experience",
-            "relationship": "HAS_KEYWORD",
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
-        },
-        {
-            "target": "random walk",
-            "relationship": "HAS_KEYWORD",
-            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
-        },
-        {
-            "target": "virtual reality",
-            "source": "Network Traffic in the Metaverse: The Case of Social VR",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Network Traffic in the Metaverse: The Case of Social VR",
-            "target": "metaverse",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
             "source": "Vmirror: Enhancing the interaction with occluded or distant objects in vr with virtual mirrors",
-            "target": "vr"
-        },
-        {
-            "target": "vehicular networks",
-            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "task offloading",
+            "target": "mindfulness",
             "relationship": "HAS_KEYWORD",
-            "source": "Efficient Task Offloading Algorithm for Digital Twin in Edge/Cloud Computing Environment"
-        },
-        {
-            "target": "digital twin",
-            "relationship": "HAS_KEYWORD",
-            "source": "Attention-based QoE-aware digital twin empowered edge computing for immersive virtual reality"
-        },
-        {
-            "source": "Distributed vehicular computing at the dawn of 5G: A survey",
-            "relationship": "HAS_KEYWORD",
-            "target": "cloud computing"
-        },
-        {
-            "target": "network management",
-            "source": "Sensing multimedia contexts on mobile devices",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Pan Hui",
-            "target": "Network Traffic in the Metaverse: The Case of Social VR",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "Mingming Fan",
-            "relationship": "BELONGS_TO",
-            "target": "CMA"
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
         }
     ]
 }

@@ -1157,7 +1157,7 @@ def retriever(question: str):
     structured_results = structured_data.get('results', [])
     print(structured_results)
     # unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
-    unstructured_data = similarity_search(question, file_path, k=5)
+    unstructured_data = similarity_search(question, file_path, k=3)
     unstructured_data = format_unstructured_data(unstructured_data)
 
     if structured_results != []:
@@ -1175,7 +1175,7 @@ def retriever(question: str):
     else:
         with open('app01/datasets/test.json', 'w') as f:
             json.dump(paper_entity, f, indent=4)
-        with open('app01/datasets/update_eneity.json', 'w') as f:
+        with open('app01/datasets/update_entity.json', 'w') as f:
             json.dump(update_entity, f, indent=4)
     
     final_data = f"""Structured data: 

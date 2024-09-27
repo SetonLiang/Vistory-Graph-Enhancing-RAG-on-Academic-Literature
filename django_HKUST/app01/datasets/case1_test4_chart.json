@@ -1,0 +1,438 @@
+{
+    "donut": [
+        {
+            "department": "Dept.1",
+            "value": 0
+        },
+        {
+            "department": "Dept.2",
+            "value": 4
+        },
+        {
+            "department": "Dept.3",
+            "value": 1
+        }
+    ],
+    "chart_d_y": [
+        {
+            "year": 2020,
+            "CMA": 3,
+            "AI": 0,
+            "DSA": 0,
+            "paper_count": 0
+        },
+        {
+            "year": 2021,
+            "CMA": 4,
+            "AI": 0,
+            "DSA": 0,
+            "paper_count": 0
+        },
+        {
+            "year": 2022,
+            "CMA": 6,
+            "AI": 0,
+            "DSA": 0,
+            "paper_count": 0
+        },
+        {
+            "year": 2023,
+            "CMA": 8,
+            "AI": 0,
+            "DSA": 0,
+            "paper_count": 0
+        },
+        {
+            "year": 2024,
+            "CMA": 6,
+            "AI": 0,
+            "DSA": 1,
+            "paper_count": 0
+        }
+    ],
+    "treemap": {
+        "name": "Authors",
+        "children": [
+            {
+                "name": "CMA",
+                "children": [
+                    {
+                        "name": "Pan Hui",
+                        "value": 16
+                    },
+                    {
+                        "name": "Mingming Fan",
+                        "value": 13
+                    },
+                    {
+                        "name": "Huamin Qu",
+                        "value": 5
+                    },
+                    {
+                        "name": "Wei Zeng",
+                        "value": 2
+                    }
+                ]
+            },
+            {
+                "name": "DSA",
+                "children": [
+                    {
+                        "name": "Wei Zeng",
+                        "value": 2
+                    }
+                ]
+            },
+            {
+                "name": "AI",
+                "children": []
+            }
+        ]
+    },
+    "wordcloud": [
+        {
+            "text": "user experience",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "quality of experience",
+            "size": 3.0
+        },
+        {
+            "text": "interplanetary cyberspace",
+            "size": 3.0
+        },
+        {
+            "text": "authoring tools",
+            "size": 3.0
+        },
+        {
+            "text": "aging",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "participatory design",
+            "size": 3.0
+        },
+        {
+            "text": "people with spinal muscular atrophy",
+            "size": 3.0
+        },
+        {
+            "text": "voice over ip",
+            "size": 3.0
+        },
+        {
+            "text": "couples",
+            "size": 3.0
+        },
+        {
+            "text": "upper-body gestures",
+            "size": 3.0
+        },
+        {
+            "text": "sensor fusion",
+            "size": 3.0
+        },
+        {
+            "text": "hand gestures",
+            "size": 3.0
+        },
+        {
+            "text": "live streaming",
+            "size": 3.0
+        },
+        {
+            "text": "target selection",
+            "size": 3.0
+        },
+        {
+            "text": "space communications",
+            "size": 3.0
+        },
+        {
+            "text": "augmented reality",
+            "size": 25.52173913043478
+        },
+        {
+            "text": "virtual reality",
+            "size": 40.0
+        },
+        {
+            "text": "nft transaction data",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "edge computing",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "olfactory display",
+            "size": 3.0
+        },
+        {
+            "text": "button",
+            "size": 3.0
+        },
+        {
+            "text": "multimedia context",
+            "size": 3.0
+        },
+        {
+            "text": "dof",
+            "size": 3.0
+        },
+        {
+            "text": "out of reach",
+            "size": 3.0
+        },
+        {
+            "text": "digital twins",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "mindfulness",
+            "size": 3.0
+        },
+        {
+            "text": "wetness illusion",
+            "size": 3.0
+        },
+        {
+            "text": "smartglasses",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "interaction paradigms",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "3d modeling",
+            "size": 3.0
+        },
+        {
+            "text": "smart city",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "grandchildren",
+            "size": 3.0
+        },
+        {
+            "text": "substitutive systems",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "prototype",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "virtual mirror",
+            "size": 3.0
+        },
+        {
+            "text": "literature review",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "information systems",
+            "size": 3.0
+        },
+        {
+            "text": "digital twin",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "stage lighting education",
+            "size": 3.0
+        },
+        {
+            "text": "non-fungible tokens (nfts)",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "human-centered computing",
+            "size": 12.652173913043478
+        },
+        {
+            "text": "generational gap",
+            "size": 3.0
+        },
+        {
+            "text": "meditation",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "vr games",
+            "size": 3.0
+        },
+        {
+            "text": "virtual museum",
+            "size": 3.0
+        },
+        {
+            "text": "evaluation",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "older adults",
+            "size": 17.47826086956522
+        },
+        {
+            "text": "generative ai",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "health",
+            "size": 3.0
+        },
+        {
+            "text": "vmirror",
+            "size": 3.0
+        },
+        {
+            "text": "verbalization",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "social vr",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "traffic classification",
+            "size": 3.0
+        },
+        {
+            "text": "think-aloud protocols",
+            "size": 3.0
+        },
+        {
+            "text": "user-defined gestures",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "ai-generated content (aigc)",
+            "size": 3.0
+        },
+        {
+            "text": "multimedia streaming",
+            "size": 3.0
+        },
+        {
+            "text": "the metaverse",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "interaction techniques",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "continual reinforcement learning",
+            "size": 3.0
+        },
+        {
+            "text": "human computer interaction (hci)",
+            "size": 3.0
+        },
+        {
+            "text": "user study",
+            "size": 3.0
+        },
+        {
+            "text": "art appreciation",
+            "size": 3.0
+        },
+        {
+            "text": "inter-generational communication",
+            "size": 3.0
+        },
+        {
+            "text": "raycasting",
+            "size": 3.0
+        },
+        {
+            "text": "space chi",
+            "size": 3.0
+        },
+        {
+            "text": "occlusion",
+            "size": 3.0
+        },
+        {
+            "text": "visual\nanalytics",
+            "size": 3.0
+        },
+        {
+            "text": "communication",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "landscape painting",
+            "size": 3.0
+        },
+        {
+            "text": "pre-learning system",
+            "size": 3.0
+        },
+        {
+            "text": "3d authoring",
+            "size": 3.0
+        },
+        {
+            "text": "visualization",
+            "size": 12.652173913043478
+        },
+        {
+            "text": "co-creative ai",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "extended reality",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "urban computing",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "key representation",
+            "size": 3.0
+        },
+        {
+            "text": "vr",
+            "size": 9.434782608695652
+        },
+        {
+            "text": "mid-air",
+            "size": 3.0
+        },
+        {
+            "text": "metaverse",
+            "size": 30.347826086956523
+        },
+        {
+            "text": "grandparents",
+            "size": 3.0
+        },
+        {
+            "text": "network management",
+            "size": 3.0
+        },
+        {
+            "text": "interaction",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "immersive experience",
+            "size": 3.0
+        },
+        {
+            "text": "impact dynamics analysis",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "ux problems",
+            "size": 4.608695652173913
+        }
+    ]
+}

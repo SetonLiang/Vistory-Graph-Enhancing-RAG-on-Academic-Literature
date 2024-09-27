@@ -1,313 +1,84 @@
 {
     "nodes": [
         {
-            "name": "non-fungible tokens (nfts)",
             "group": 2,
-            "citation": 3
-        },
-        {
-            "name": "multi-dimensional time series",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "venue": "IEEE Transactions on Visualization and Computer Graphics",
-            "count": 0,
-            "id": "zeng2020revisiting",
-            "released": "2020",
-            "authors": "Wei Zeng, Chengqiao Lin, Juncong Lin, Jincheng Jiang, Jiazhi Xia, Cagatay Turkay, Wei Chen",
-            "group": 0,
-            "citation": 35,
-            "name": "Revisiting the modifiable areal unit problem in deep traffic prediction with visual analytics"
-        },
-        {
-            "name": "floorplan design",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "movement modeling",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "design recommendation",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "network topology",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "count": 0,
-            "authors": "Yifan Cao, Meng Xia, Kento Shigyo, Furui Cheng, Qianhang Yu, Xingxing Yang, Yang Wang, Wei Zeng, Huamin Qu",
-            "venue": "Proceedings of the 16th International Symposium on Visual Information?\u2026",
-            "group": 0,
-            "released": "2023",
-            "name": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "citation": 0,
-            "id": "cao2023nfteller"
-        },
-        {
-            "id": "dong2019vistory",
-            "count": 0,
-            "name": "VIStory: interactive storyboard for exploring visual information in scientific publications",
-            "authors": "Wei Zeng, Ao Dong, Xi Chen, Zhang-lin Cheng",
-            "citation": 27,
-            "released": "2021",
-            "venue": "Journal of visualization",
-            "group": 0
-        },
-        {
-            "name": "maup",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "landscape rendering",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "released": "2022",
-            "id": "ye2022visatlas",
-            "count": 0,
-            "group": 0,
-            "citation": 23,
-            "name": "VISAtlas: An image-based exploration and query system for large visualization collections via neural image embedding",
-            "authors": "Yilin Ye, Rong Huang, Wei Zeng",
-            "venue": "IEEE Transactions on Visualization and Computer Graphics"
-        },
-        {
-            "released": "2022",
-            "count": 0,
-            "id": "lin2022saliency",
-            "authors": "Yanna Lin, Wei Zeng, Yu Ye, Huamin Qu",
-            "group": 0,
-            "citation": 7,
-            "name": "Saliency-aware color harmony models for outdoor signboard",
-            "venue": "Computers & Graphics 105"
-        },
-        {
-            "name": "interaction paradigms",
-            "group": 2,
-            "citation": 3
-        },
-        {
-            "name": "visual query",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "recurrent neural networks",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "citation": 9,
-            "group": 2,
-            "name": "data visualization"
-        },
-        {
-            "name": "visual saliency",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "crowdsourced",
-            "citation": 2
-        },
-        {
-            "citation": 1,
-            "name": "human-centric",
-            "group": 2
-        },
-        {
-            "name": "human-centered computing; virtual reality",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "count": 0,
-            "id": "wang2021actfloor",
-            "name": "ActFloor-GAN: activity-guided adversarial networks for human-centric floorplan design",
-            "released": "2021",
-            "authors": "Shidong Wang, Wei Zeng, Xi Chen, Yu Ye, Yu Qiao, Chi-Wing Fu",
-            "group": 0,
-            "citation": 20,
-            "venue": "IEEE Transactions on Visualization and Computer Graphics"
-        },
-        {
-            "citation": 34,
-            "name": "visual analytics",
-            "group": 2
+            "name": "augmented reality",
+            "citation": 15
         },
         {
             "group": 2,
             "citation": 2,
-            "name": "visual design"
+            "name": "interaction"
         },
         {
+            "group": 2,
+            "citation": 2,
+            "name": "literature review"
+        },
+        {
+            "group": 2,
             "citation": 1,
-            "name": "movement visualization",
-            "group": 2
+            "name": "ai-generated content (aigc)"
+        },
+        {
+            "venue": "Proceedings of the Tenth International Symposium of Chinese CHI",
+            "citation": 11,
+            "count": 0,
+            "name": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "group": 0,
+            "id": "wang2022reducing",
+            "authors": "Xian Wang, Xiaoyu Mo, Mingming Fan, Lik-Hang Lee, Bertram Shi, Pan Hui",
+            "released": "2022"
+        },
+        {
+            "group": 2,
+            "name": "social vr",
+            "citation": 3
+        },
+        {
+            "group": 2,
+            "citation": 2,
+            "name": "meditation"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "space communications"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "interplanetary cyberspace"
         },
         {
             "count": 0,
-            "name": "Visual interpretation of recurrent neural network on multi-dimensional time-series forecast",
-            "citation": 34,
-            "released": "2020",
-            "id": "shen2020visual",
-            "venue": "2020 IEEE Pacific visualization symposium (PacificVis)",
-            "group": 0,
-            "authors": "Qiaomu Shen, Yanhong Wu, Yuzhe Jiang, Wei Zeng, KH Alexis, Anna Vianova, Huamin Qu"
-        },
-        {
-            "name": "deep learning",
-            "citation": 28,
-            "group": 2
-        },
-        {
-            "authors": "Xi Chen, Wei Zeng, Yanna Lin, Hayder Mahdi Ai-Maneea, Jonathan Roberts, Remco Chang",
-            "count": 0,
-            "name": "Composition and configuration patterns in multiple-view visualizations",
-            "released": "2021",
-            "group": 0,
-            "citation": 97,
-            "venue": "IEEE Transactions on Visualization and Computer Graphics",
-            "id": "chen2020composition"
-        },
-        {
-            "name": "state sequence visualization",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "id": "feng2020topology",
-            "count": 0,
-            "authors": "Zezheng Feng, Haotian Li, Wei Zeng, Shuang-Hua Yang, Huamin Qu",
-            "name": "Topology density map for urban data visualization and analysis",
-            "released": "2020",
-            "venue": "IEEE transactions on visualization and computer graphics",
-            "group": 0,
-            "citation": 36
-        },
-        {
-            "name": "visualization survey",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "example-based design",
-            "group": 2
-        },
-        {
-            "name": "gan",
-            "citation": 7,
-            "group": 2
-        },
-        {
-            "count": 0,
-            "id": "cao2024nftracer",
-            "authors": "Yifan Cao, Qing Shi, Lue Shen, Kani Chen, Yang Wang, Wei Zeng, Huamin Qu",
-            "group": 0,
-            "name": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
-            "citation": 0,
-            "venue": "IEEE Transactions on Visualization and Computer Graphics",
-            "released": "2024"
-        },
-        {
-            "name": "urban\nvisual analytics.",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "blockchain",
-            "citation": 7,
-            "group": 2
-        },
-        {
-            "name": "machine learning",
+            "id": "alhilal2023network",
+            "authors": "Ahmad Alhilal, Kirill Shatilov, Gareth Tyson, Tristan Braud, Pan Hui",
+            "venue": "2023 IEEE 43rd International Conference on Distributed Computing Systems?\u2026",
+            "name": "Network Traffic in the Metaverse: The Case of Social VR",
             "citation": 6,
-            "group": 2
+            "group": 0,
+            "released": "2023"
         },
         {
-            "name": "scene graph",
-            "group": 2,
-            "citation": 2
-        },
-        {
-            "group": 2,
-            "name": "design pattern",
-            "citation": 2
-        },
-        {
-            "citation": 1,
-            "group": 2,
-            "name": "faceted\nmetadata"
-        },
-        {
-            "name": "visual\nanalytics",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "model diagnostic",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "air pollutant forecast",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "image quality assessment",
-            "group": 2,
-            "citation": 2
-        },
-        {
-            "name": "CMA",
-            "group": 1
-        },
-        {
-            "name": "human-centered computing",
-            "citation": 7,
-            "group": 2
-        },
-        {
-            "name": "color histogram",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "image visualization",
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "image browser",
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "group": 2,
-            "name": "density map"
-        },
-        {
-            "name": "urban data",
-            "group": 2,
-            "citation": 2
+            "authors": "Hua Xuan Qin, Pan Hui",
+            "id": "qin2023empowering",
+            "citation": 11,
+            "count": 0,
+            "name": "Empowering the metaverse with generative ai: Survey and future directions",
+            "venue": "2023 IEEE 43rd International Conference on Distributed Computing Systems?\u2026",
+            "group": 0,
+            "released": "2023"
         },
         {
             "group": 2,
-            "name": "substitutive systems",
-            "citation": 2
+            "citation": 2,
+            "name": "co-creative ai"
+        },
+        {
+            "group": 2,
+            "name": "generative ai",
+            "citation": 3
         },
         {
             "citation": 24,
@@ -316,672 +87,221 @@
         },
         {
             "group": 2,
-            "name": "nft transaction data",
-            "citation": 2
-        },
-        {
-            "name": "document visualization",
             "citation": 1,
-            "group": 2
+            "name": "mindfulness"
         },
         {
-            "authors": "Chi Zhang, Wei Zeng, Ligang Liu",
-            "citation": 22,
+            "id": "shatilov2023players",
+            "citation": 2,
+            "name": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
+            "venue": "Proceedings of the First Workshop on Metaverse Systems and Applications",
             "count": 0,
-            "venue": "Computers & Graphics 99",
-            "name": "UrbanVR: An immersive analytics system for context-aware urban design",
-            "released": "2021",
+            "authors": "Kirill Shatilov, Ahmad Alhilal, Tristan Braud, Lik-Hang Lee, Pengyuan Zhou, Pan Hui",
             "group": 0,
-            "id": "zhang2021urbanvr"
+            "released": "2023"
         },
         {
-            "name": "information visualization",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "large language model",
-            "citation": 6
-        },
-        {
-            "name": "color extraction",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "generative\nartificial intelligence",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "traffic prediction"
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "image embedding"
-        },
-        {
-            "name": "multiple views",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "interpretable machine learning",
-            "group": 2
-        },
-        {
-            "id": "yuan2021deep",
-            "name": "Deep colormap extraction from visualizations",
-            "count": 0,
-            "released": "2021",
-            "group": 0,
-            "citation": 20,
-            "authors": "Lin-Ping Yuan, Wei Zeng, Siwei Fu, Zhiliang Zeng, Haotian Li, Chi-Wing Fu, Huamin Qu",
-            "venue": "IEEE Transactions on Visualization and Computer Graphics"
-        },
-        {
-            "authors": "Rong Huang, Hai-Chuan Lin, Chuanzhang Chen, Kang Zhang, Wei Zeng",
-            "count": 0,
-            "name": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
-            "group": 0,
-            "citation": 1,
-            "venue": "arXiv preprint arXiv:2401.17120",
-            "id": "huang2024plantography",
-            "released": "2024"
-        },
-        {
-            "citation": 1,
-            "group": 2,
-            "name": "generative artificial intelligence"
-        },
-        {
-            "citation": 1,
-            "name": "quantitative analysis",
-            "group": 2
-        },
-        {
-            "citation": 1,
-            "name": "urban visual analytics.",
-            "group": 2
-        },
-        {
-            "name": "visualization",
-            "citation": 17,
-            "group": 2
-        },
-        {
-            "count": 0,
-            "authors": "Zezheng Feng, Fang Zhu, Hongjun Wang, Jianing Hao, ShuangHua Yang, Wei Zeng, Huamin Qu",
-            "venue": "arXiv preprint arXiv:2403.03822",
-            "group": 0,
-            "id": "feng2024holens",
-            "name": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "citation": 0,
-            "released": "2024"
-        },
-        {
-            "citation": 1,
-            "name": "outdoor signboard",
-            "group": 2
-        },
-        {
-            "name": "DSA",
+            "name": "CMA",
             "group": 1
         },
         {
+            "name": "digital twins",
             "group": 2,
-            "citation": 2,
-            "name": "impact dynamics analysis"
-        },
-        {
-            "name": "state\nsequence visualization",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "name": "visualization collection",
-            "citation": 1,
-            "group": 2
-        },
-        {
-            "group": 2,
-            "name": "color harmony",
             "citation": 2
         },
         {
-            "name": "room layout",
-            "citation": 1,
-            "group": 2
-        },
-        {
+            "venue": "Proceedings of the 2022 International Conference on Multimodal Interaction?\u2026",
+            "name": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
             "count": 0,
-            "authors": "Lin-Ping Yuan, Boyu Li, Jindong Wang, Huamin Qu, Wei Zeng",
-            "id": "yuan2024generating",
-            "venue": "2024 IEEE Conference Virtual Reality and 3D User Interfaces (VR)",
             "group": 0,
-            "citation": 0,
-            "released": "2024",
-            "name": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data"
+            "id": "lee2022beyond",
+            "citation": 3,
+            "authors": "Lik-Hang Lee, Carlos Bermejo Fernandez, Ahmad Alhilal, Tristan Braud, Simo Hosio, Esm\u00e9e Henrieke Anne De Haas, Pan Hui",
+            "released": "2022"
         },
         {
-            "name": "Huamin Qu",
+            "group": 2,
+            "name": "space chi",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "metaverse",
+            "citation": 18
+        },
+        {
+            "name": "Pan Hui",
             "type": "Author",
-            "count": 126,
+            "count": 250,
             "group": 4
         },
         {
-            "name": "Wei Zeng",
+            "name": "Mingming Fan",
             "type": "Author",
-            "count": 45,
-            "group": 4
-        },
-        {
-            "name": "Kang Zhang",
-            "type": "Author",
-            "count": 39,
+            "count": 70,
             "group": 4
         }
     ],
     "links": [
         {
-            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
-            "relationship": "HAS_KEYWORD",
-            "target": "substitutive systems"
-        },
-        {
-            "target": "density map",
-            "source": "Topology density map for urban data visualization and analysis",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "deep learning",
-            "source": "Revisiting the modifiable areal unit problem in deep traffic prediction with visual analytics"
-        },
-        {
-            "source": "Visual interpretation of recurrent neural network on multi-dimensional time-series forecast",
-            "relationship": "HAS_KEYWORD",
-            "target": "interpretable machine learning"
-        },
-        {
-            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "relationship": "HAS_KEYWORD",
-            "target": "urban visual analytics."
-        },
-        {
-            "source": "Saliency-aware color harmony models for outdoor signboard",
-            "target": "design recommendation",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "impact dynamics analysis",
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
+            "source": "Pan Hui",
             "relationship": "OWNED_BY",
-            "source": "Huamin Qu",
-            "target": "Topology density map for urban data visualization and analysis"
+            "target": "Empowering the metaverse with generative ai: Survey and future directions"
         },
         {
-            "target": "Saliency-aware color harmony models for outdoor signboard",
+            "target": "mindfulness",
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "target": "metaverse",
+            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "interaction",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "source": "Pan Hui",
             "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
+            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
         },
         {
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "target": "non-fungible tokens (nfts)",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "VISAtlas: An image-based exploration and query system for large visualization collections via neural image embedding",
+            "target": "interplanetary cyberspace",
             "relationship": "HAS_KEYWORD",
-            "target": "visualization collection"
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
         },
         {
-            "target": "Visual interpretation of recurrent neural network on multi-dimensional time-series forecast",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "target": "human-centric",
+            "target": "metaverse",
             "relationship": "HAS_KEYWORD",
-            "source": "ActFloor-GAN: activity-guided adversarial networks for human-centric floorplan design"
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
         },
         {
-            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "target": "data visualization",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "relationship": "HAS_KEYWORD",
-            "target": "substitutive systems"
-        },
-        {
-            "source": "Huamin Qu",
-            "target": "CMA",
-            "relationship": "BELONGS_TO"
-        },
-        {
-            "source": "Wei Zeng",
-            "target": "CMA",
-            "relationship": "BELONGS_TO"
-        },
-        {
-            "target": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "source": "Wei Zeng",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "gan",
-            "source": "ActFloor-GAN: activity-guided adversarial networks for human-centric floorplan design"
-        },
-        {
-            "target": "human-centered computing; virtual reality",
-            "relationship": "HAS_KEYWORD",
-            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data"
-        },
-        {
-            "source": "Visual interpretation of recurrent neural network on multi-dimensional time-series forecast",
-            "target": "recurrent neural networks",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
-            "relationship": "HAS_KEYWORD",
-            "target": "generative\nartificial intelligence"
-        },
-        {
-            "source": "Kang Zhang",
-            "target": "CMA",
-            "relationship": "BELONGS_TO"
-        },
-        {
-            "target": "urban data",
-            "source": "Topology density map for urban data visualization and analysis",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "maup",
-            "relationship": "HAS_KEYWORD",
-            "source": "Revisiting the modifiable areal unit problem in deep traffic prediction with visual analytics"
-        },
-        {
-            "target": "DSA",
-            "source": "Wei Zeng",
-            "relationship": "BELONGS_TO"
-        },
-        {
-            "source": "Saliency-aware color harmony models for outdoor signboard",
-            "target": "color harmony",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Kang Zhang",
-            "target": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
-            "target": "non-fungible tokens (nfts)",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng",
-            "target": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering"
-        },
-        {
-            "source": "VISAtlas: An image-based exploration and query system for large visualization collections via neural image embedding",
-            "relationship": "HAS_KEYWORD",
-            "target": "image visualization"
-        },
-        {
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "target": "blockchain",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "traffic prediction",
-            "relationship": "HAS_KEYWORD",
-            "source": "Revisiting the modifiable areal unit problem in deep traffic prediction with visual analytics"
-        },
-        {
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "target": "machine learning",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Composition and configuration patterns in multiple-view visualizations",
-            "relationship": "HAS_KEYWORD",
-            "target": "example-based design"
-        },
-        {
-            "source": "VISAtlas: An image-based exploration and query system for large visualization collections via neural image embedding",
-            "relationship": "HAS_KEYWORD",
-            "target": "design pattern"
-        },
-        {
-            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
             "target": "virtual reality",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "Saliency-aware color harmony models for outdoor signboard",
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
-        },
-        {
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
             "relationship": "HAS_KEYWORD",
-            "target": "visual analytics",
-            "source": "Revisiting the modifiable areal unit problem in deep traffic prediction with visual analytics"
-        },
-        {
-            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "target": "state\nsequence visualization",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
-            "target": "large language model",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "UrbanVR: An immersive analytics system for context-aware urban design",
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
-        },
-        {
-            "source": "Composition and configuration patterns in multiple-view visualizations",
-            "relationship": "HAS_KEYWORD",
-            "target": "design pattern"
-        },
-        {
-            "target": "scene graph",
-            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
-            "target": "interaction paradigms",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "source": "Huamin Qu",
-            "relationship": "OWNED_BY"
-        },
-        {
-            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "target": "state sequence visualization",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "network topology",
-            "source": "Topology density map for urban data visualization and analysis",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "VIStory: interactive storyboard for exploring visual information in scientific publications",
-            "relationship": "HAS_KEYWORD",
-            "target": "document visualization"
-        },
-        {
-            "target": "VISAtlas: An image-based exploration and query system for large visualization collections via neural image embedding",
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
-        },
-        {
-            "target": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "target": "landscape rendering",
-            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "VISAtlas: An image-based exploration and query system for large visualization collections via neural image embedding",
-            "target": "image embedding",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "target": "crowdsourced"
-        },
-        {
-            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "target": "urban\nvisual analytics.",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "relationship": "HAS_KEYWORD",
-            "target": "movement modeling"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "room layout",
-            "source": "ActFloor-GAN: activity-guided adversarial networks for human-centric floorplan design"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng",
-            "target": "Composition and configuration patterns in multiple-view visualizations"
-        },
-        {
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "relationship": "HAS_KEYWORD",
-            "target": "image quality assessment"
-        },
-        {
-            "source": "Composition and configuration patterns in multiple-view visualizations",
-            "relationship": "HAS_KEYWORD",
-            "target": "quantitative analysis"
-        },
-        {
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "target": "visual analytics",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Visual interpretation of recurrent neural network on multi-dimensional time-series forecast",
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
-        },
-        {
-            "target": "ActFloor-GAN: activity-guided adversarial networks for human-centric floorplan design",
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
-        },
-        {
-            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "relationship": "HAS_KEYWORD",
-            "target": "movement visualization"
-        },
-        {
-            "source": "VISAtlas: An image-based exploration and query system for large visualization collections via neural image embedding",
-            "target": "visual query",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng",
-            "target": "Topology density map for urban data visualization and analysis"
-        },
-        {
-            "source": "Saliency-aware color harmony models for outdoor signboard",
-            "relationship": "HAS_KEYWORD",
-            "target": "visual saliency"
-        },
-        {
-            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
-            "target": "human-centered computing",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
-        },
-        {
-            "target": "floorplan design",
-            "relationship": "HAS_KEYWORD",
-            "source": "ActFloor-GAN: activity-guided adversarial networks for human-centric floorplan design"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "model diagnostic",
-            "source": "Revisiting the modifiable areal unit problem in deep traffic prediction with visual analytics"
-        },
-        {
-            "source": "Deep colormap extraction from visualizations",
-            "target": "color extraction",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
-            "target": "nft transaction data",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Saliency-aware color harmony models for outdoor signboard",
-            "relationship": "HAS_KEYWORD",
-            "target": "outdoor signboard"
-        },
-        {
-            "target": "VIStory: interactive storyboard for exploring visual information in scientific publications",
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
-        },
-        {
-            "source": "VIStory: interactive storyboard for exploring visual information in scientific publications",
-            "target": "visualization survey",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Revisiting the modifiable areal unit problem in deep traffic prediction with visual analytics",
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
-        },
-        {
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "target": "nft transaction data",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "VIStory: interactive storyboard for exploring visual information in scientific publications",
-            "target": "faceted\nmetadata",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "generative artificial intelligence",
-            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Visual interpretation of recurrent neural network on multi-dimensional time-series forecast",
-            "relationship": "HAS_KEYWORD",
-            "target": "multi-dimensional time series"
-        },
-        {
-            "source": "Visual interpretation of recurrent neural network on multi-dimensional time-series forecast",
-            "target": "air pollutant forecast",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
-            "target": "visual\nanalytics",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "visual design",
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Deep colormap extraction from visualizations",
-            "target": "deep learning",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "Deep colormap extraction from visualizations",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
-        },
-        {
-            "target": "Deep colormap extraction from visualizations",
-            "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
-        },
-        {
-            "target": "human-centered computing",
-            "relationship": "HAS_KEYWORD",
-            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data"
-        },
-        {
-            "source": "NFTeller: Dual-centric Visual Analytics for Assessing Market Performance of NFT Collectibles",
-            "target": "visualization",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Deep colormap extraction from visualizations",
-            "target": "color histogram"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "source": "Composition and configuration patterns in multiple-view visualizations",
-            "target": "multiple views"
-        },
-        {
-            "target": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
-            "relationship": "OWNED_BY",
-            "source": "Huamin Qu"
+            "target": "co-creative ai"
         },
         {
             "target": "virtual reality",
             "relationship": "HAS_KEYWORD",
-            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data"
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
         },
         {
-            "target": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "source": "Pan Hui",
             "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
+            "target": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
         },
         {
-            "source": "VIStory: interactive storyboard for exploring visual information in scientific publications",
-            "relationship": "HAS_KEYWORD",
-            "target": "image browser"
+            "target": "virtual reality",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR",
+            "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
-            "relationship": "HAS_KEYWORD",
-            "target": "impact dynamics analysis"
-        },
-        {
-            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "source": "Pan Hui",
             "relationship": "OWNED_BY",
-            "source": "Wei Zeng"
+            "target": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
+        },
+        {
+            "target": "metaverse",
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "target": "space chi",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "relationship": "HAS_KEYWORD",
+            "target": "generative ai"
+        },
+        {
+            "target": "meditation",
+            "relationship": "HAS_KEYWORD",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
         },
         {
             "relationship": "HAS_KEYWORD",
-            "source": "Deep colormap extraction from visualizations",
-            "target": "information visualization"
+            "target": "literature review",
+            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "relationship": "HAS_KEYWORD",
+            "target": "ai-generated content (aigc)"
+        },
+        {
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "relationship": "HAS_KEYWORD",
+            "target": "metaverse"
+        },
+        {
+            "source": "Mingming Fan",
+            "relationship": "OWNED_BY",
+            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+        },
+        {
+            "source": "Pan Hui",
+            "relationship": "OWNED_BY",
+            "target": "Network Traffic in the Metaverse: The Case of Social VR"
+        },
+        {
+            "target": "social vr",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Mingming Fan",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        },
+        {
+            "target": "metaverse",
+            "source": "Network Traffic in the Metaverse: The Case of Social VR",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "social vr",
+            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "target": "augmented reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "digital twins",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+        },
+        {
+            "target": "space communications",
+            "relationship": "HAS_KEYWORD",
+            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
         }
     ]
 }

@@ -1193,9 +1193,14 @@
             'nodes': [],
             'links': [],
         }
-
+        
         updateGraph(clear)
         removeNode(entity_data)
+
+        updateDonut(d3.select('#donut') ,initDataChart['donut'])
+        updateChart(d3.select('#chart_d_y') ,initDataChart['chart_d_y'])
+        updateTreemap(d3.select('#treemap') ,initDataChart['heatmap'])
+        updateWordCloud(words)
     }
 
     function fitViewBox() {

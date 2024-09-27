@@ -2,7 +2,7 @@
     "donut": [
         {
             "department": "Dept.1",
-            "value": 0
+            "value": 1
         },
         {
             "department": "Dept.2",
@@ -10,43 +10,43 @@
         },
         {
             "department": "Dept.3",
-            "value": 1
+            "value": 0
         }
     ],
     "chart_d_y": [
         {
             "year": 2020,
-            "CMA": 3,
+            "CMA": 0,
             "AI": 0,
-            "DSA": 3,
+            "DSA": 0,
             "paper_count": 0
         },
         {
             "year": 2021,
-            "CMA": 5,
+            "CMA": 0,
             "AI": 0,
-            "DSA": 5,
+            "DSA": 0,
             "paper_count": 0
         },
         {
             "year": 2022,
-            "CMA": 2,
+            "CMA": 0,
             "AI": 0,
-            "DSA": 2,
+            "DSA": 0,
             "paper_count": 0
         },
         {
             "year": 2023,
-            "CMA": 1,
-            "AI": 0,
-            "DSA": 1,
+            "CMA": 21,
+            "AI": 2,
+            "DSA": 0,
             "paper_count": 0
         },
         {
             "year": 2024,
-            "CMA": 4,
+            "CMA": 0,
             "AI": 0,
-            "DSA": 4,
+            "DSA": 0,
             "paper_count": 0
         }
     ],
@@ -57,282 +57,346 @@
                 "name": "CMA",
                 "children": [
                     {
-                        "name": "Huamin Qu",
-                        "value": 16
-                    },
-                    {
-                        "name": "Wei Zeng",
-                        "value": 30
-                    },
-                    {
                         "name": "Kang Zhang",
-                        "value": 2
+                        "value": 9
+                    },
+                    {
+                        "name": "David Yip",
+                        "value": 10
+                    },
+                    {
+                        "name": "Huamin Qu",
+                        "value": 8
                     }
                 ]
             },
             {
                 "name": "DSA",
-                "children": [
-                    {
-                        "name": "Wei Zeng",
-                        "value": 30
-                    }
-                ]
+                "children": []
             },
             {
                 "name": "AI",
-                "children": []
+                "children": [
+                    {
+                        "name": "Zeyu Wang",
+                        "value": 2
+                    }
+                ]
             }
         ]
     },
     "wordcloud": [
         {
-            "text": "non-fungible tokens (nfts)",
-            "size": 5.242424242424242
-        },
-        {
-            "text": "multi-dimensional time series",
+            "text": "multiple-view visualization",
             "size": 3.0
         },
         {
-            "text": "floorplan design",
+            "text": "painting analysis",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "artificial intelligence",
+            "size": 12.652173913043478
+        },
+        {
+            "text": "extended reality",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "digital humanities",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "explainability",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "virtual reality",
+            "size": 17.47826086956522
+        },
+        {
+            "text": "massive open metaverse courses (momc)",
             "size": 3.0
         },
         {
-            "text": "movement modeling",
+            "text": "interview",
+            "size": 14.26086956521739
+        },
+        {
+            "text": "lab study",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "dream visualization",
             "size": 3.0
         },
         {
-            "text": "design recommendation",
+            "text": "mood board",
             "size": 3.0
         },
         {
-            "text": "network topology",
+            "text": "artistic practice",
             "size": 3.0
         },
         {
-            "text": "maup",
+            "text": "interactive art",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "ai art.",
             "size": 3.0
         },
         {
-            "text": "landscape rendering",
+            "text": "lab  study",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "data storytelling",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "fong tse ka",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "filmproduction",
             "size": 3.0
         },
         {
-            "text": "interaction paradigms",
-            "size": 5.242424242424242
+            "text": "vision-language model",
+            "size": 4.608695652173913
         },
         {
-            "text": "visual query",
-            "size": 3.0
-        },
-        {
-            "text": "recurrent neural networks",
-            "size": 3.0
-        },
-        {
-            "text": "data visualization",
-            "size": 11.969696969696969
-        },
-        {
-            "text": "visual saliency",
-            "size": 3.0
-        },
-        {
-            "text": "crowdsourced",
-            "size": 4.121212121212121
-        },
-        {
-            "text": "human-centric",
-            "size": 3.0
-        },
-        {
-            "text": "human-centered computing; virtual reality",
+            "text": "human-machine collaboration",
             "size": 3.0
         },
         {
             "text": "visual analytics",
-            "size": 40.0
+            "size": 12.652173913043478
         },
         {
-            "text": "visual design",
-            "size": 4.121212121212121
-        },
-        {
-            "text": "movement visualization",
+            "text": "composition",
             "size": 3.0
         },
         {
-            "text": "deep learning",
-            "size": 33.27272727272727
+            "text": "metaverse",
+            "size": 11.043478260869565
         },
         {
-            "text": "state sequence visualization",
+            "text": "artificial intelligence.",
             "size": 3.0
         },
         {
-            "text": "visualization survey",
+            "text": "metaphor",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "knowledge management",
             "size": 3.0
         },
         {
-            "text": "example-based design",
+            "text": "massive open online courses (mooc)",
             "size": 3.0
         },
         {
-            "text": "gan",
-            "size": 9.727272727272727
-        },
-        {
-            "text": "urban\nvisual analytics.",
+            "text": "human-centered computing\u2014visualization\u2014visualization techniques; human-centered computing\u2014collaborative and social computing\u2014empirical studies in collaborative and social computing",
             "size": 3.0
         },
         {
-            "text": "blockchain",
-            "size": 9.727272727272727
-        },
-        {
-            "text": "machine learning",
-            "size": 8.606060606060606
-        },
-        {
-            "text": "scene graph",
-            "size": 4.121212121212121
-        },
-        {
-            "text": "design pattern",
-            "size": 4.121212121212121
-        },
-        {
-            "text": "faceted\nmetadata",
+            "text": "arts and humanities",
             "size": 3.0
         },
         {
-            "text": "visual\nanalytics",
+            "text": "ai-art",
             "size": 3.0
         },
         {
-            "text": "model diagnostic",
+            "text": "storytelling",
+            "size": 14.26086956521739
+        },
+        {
+            "text": "collaborative art creation",
             "size": 3.0
         },
         {
-            "text": "air pollutant forecast",
+            "text": "digital gallery",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "artificial creativity",
             "size": 3.0
         },
         {
-            "text": "image quality assessment",
-            "size": 4.121212121212121
-        },
-        {
-            "text": "human-centered computing",
-            "size": 9.727272727272727
-        },
-        {
-            "text": "color histogram",
+            "text": "volumetric video",
             "size": 3.0
         },
         {
-            "text": "image visualization",
+            "text": "origin-destination data",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "expanded cinema",
             "size": 3.0
         },
         {
-            "text": "image browser",
+            "text": "aigc",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "natural language interface",
             "size": 3.0
         },
         {
-            "text": "density map",
+            "text": "visual data analysis",
             "size": 3.0
         },
         {
-            "text": "urban data",
-            "size": 4.121212121212121
-        },
-        {
-            "text": "substitutive systems",
-            "size": 4.121212121212121
-        },
-        {
-            "text": "virtual reality",
-            "size": 28.78787878787879
-        },
-        {
-            "text": "nft transaction data",
-            "size": 4.121212121212121
-        },
-        {
-            "text": "document visualization",
+            "text": "dashboards",
             "size": 3.0
         },
         {
-            "text": "information visualization",
+            "text": "image retrieval",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "bodily engagement",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "multimodality",
             "size": 3.0
         },
         {
-            "text": "large language model",
-            "size": 8.606060606060606
-        },
-        {
-            "text": "color extraction",
-            "size": 3.0
-        },
-        {
-            "text": "generative\nartificial intelligence",
-            "size": 3.0
-        },
-        {
-            "text": "traffic prediction",
-            "size": 3.0
-        },
-        {
-            "text": "image embedding",
-            "size": 3.0
-        },
-        {
-            "text": "multiple views",
-            "size": 3.0
-        },
-        {
-            "text": "interpretable machine learning",
-            "size": 3.0
-        },
-        {
-            "text": "generative artificial intelligence",
-            "size": 3.0
-        },
-        {
-            "text": "quantitative analysis",
-            "size": 3.0
-        },
-        {
-            "text": "urban visual analytics.",
+            "text": "immersive experience",
             "size": 3.0
         },
         {
             "text": "visualization",
-            "size": 20.939393939393938
+            "size": 40.0
         },
         {
-            "text": "outdoor signboard",
+            "text": "virtual and augmented reality",
             "size": 3.0
         },
         {
-            "text": "impact dynamics analysis",
-            "size": 4.121212121212121
+            "text": "guideline",
+            "size": 6.217391304347826
         },
         {
-            "text": "state\nsequence visualization",
+            "text": "design mining",
             "size": 3.0
         },
         {
-            "text": "visualization collection",
+            "text": "pre-visualization",
             "size": 3.0
         },
         {
-            "text": "color harmony",
-            "size": 4.121212121212121
+            "text": "visual balance",
+            "size": 3.0
         },
         {
-            "text": "room layout",
+            "text": "body embodiment",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "visualization recommendation",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "ai art",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "dockless bike-sharing",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "large language model",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "tacit knowledge",
             "size": 3.0
+        },
+        {
+            "text": "immersive learning",
+            "size": 3.0
+        },
+        {
+            "text": "human-ai collaboration",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "maker education",
+            "size": 3.0
+        },
+        {
+            "text": "interaction design",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "paintings",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "layout rules",
+            "size": 3.0
+        },
+        {
+            "text": "computational notebooks",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "video art",
+            "size": 3.0
+        },
+        {
+            "text": "naturality",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "chinese calligraphy",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "chinese comic painting",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "bodily movement",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "interview study",
+            "size": 3.0
+        },
+        {
+            "text": "interactive story",
+            "size": 3.0
+        },
+        {
+            "text": "film",
+            "size": 3.0
+        },
+        {
+            "text": "data visualization",
+            "size": 7.826086956521739
+        },
+        {
+            "text": "composed retrieval",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "traditional chinese painting",
+            "size": 4.608695652173913
+        },
+        {
+            "text": "ai",
+            "size": 6.217391304347826
+        },
+        {
+            "text": "data video",
+            "size": 7.826086956521739
         }
     ]
 }
