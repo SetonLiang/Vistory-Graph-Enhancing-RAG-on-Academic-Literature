@@ -2,137 +2,435 @@
     "nodes": [
         {
             "group": 2,
+            "name": "cultural heritage",
+            "citation": 1
+        },
+        {
+            "name": "traditional chinese painting",
+            "group": 2,
+            "citation": 2
+        },
+        {
+            "group": 2,
+            "name": "color deisgn",
+            "citation": 1
+        },
+        {
+            "name": "gaussian splatting",
+            "group": 2,
+            "citation": 2
+        },
+        {
+            "group": 2,
+            "name": "movement visualization",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "multi-view clustering",
+            "citation": 1
+        },
+        {
+            "released": "2024",
+            "citation": 10,
+            "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+            "group": 0,
+            "count": 0,
+            "id": "shao2024splattingavatar",
+            "name": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "authors": "Zhijing Shao, Zhaolong Wang, Zhuang Li, Duotun Wang, Xiangru Lin, Yu Zhang, Mingming Fan, Zeyu Wang"
+        },
+        {
+            "name": "human-centered computing",
+            "group": 2,
+            "citation": 7
+        },
+        {
+            "name": "virtual reality",
+            "group": 2,
+            "citation": 24
+        },
+        {
+            "released": "2024",
+            "citation": 0,
+            "name": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "group": 0,
+            "count": 0,
+            "authors": "Lin-Ping Yuan, Boyu Li, Jindong Wang, Huamin Qu, Wei Zeng",
+            "id": "yuan2024generating",
+            "venue": "2024 IEEE Conference Virtual Reality and 3D User Interfaces (VR)"
+        },
+        {
+            "group": 1,
+            "name": "DSA"
+        },
+        {
+            "name": "urban\nvisual analytics.",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "released": "2024",
+            "authors": "Yifan Cao, Qing Shi, Lue Shen, Kani Chen, Yang Wang, Wei Zeng, Huamin Qu",
+            "citation": 0,
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "id": "cao2024nftracer",
+            "group": 0,
+            "count": 0,
+            "name": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "urban visual analytics."
+        },
+        {
+            "citation": 3,
+            "name": "interaction paradigms",
+            "group": 2
+        },
+        {
             "name": "augmented reality",
-            "citation": 15
+            "citation": 15,
+            "group": 2
         },
         {
+            "name": "fps",
             "group": 2,
-            "citation": 2,
-            "name": "interaction"
+            "citation": 1
         },
         {
-            "group": 2,
-            "citation": 2,
-            "name": "literature review"
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "ai-generated content (aigc)"
-        },
-        {
-            "venue": "Proceedings of the Tenth International Symposium of Chinese CHI",
-            "citation": 11,
-            "count": 0,
-            "name": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality",
+            "released": "2024",
+            "authors": "Jin Tian, Yifan Cao, Lingyi Feng, Dongting Fu, Linping Yuan, Huamin Qu, Yang Wang, Mingming Fan",
+            "id": "tian2024poeticar",
+            "name": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
+            "venue": "International Journal of Human\u2013Computer Interaction",
             "group": 0,
-            "id": "wang2022reducing",
-            "authors": "Xian Wang, Xiaoyu Mo, Mingming Fan, Lik-Hang Lee, Bertram Shi, Pan Hui",
-            "released": "2022"
-        },
-        {
-            "group": 2,
-            "name": "social vr",
-            "citation": 3
-        },
-        {
-            "group": 2,
-            "citation": 2,
-            "name": "meditation"
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "space communications"
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "interplanetary cyberspace"
-        },
-        {
             "count": 0,
-            "id": "alhilal2023network",
-            "authors": "Ahmad Alhilal, Kirill Shatilov, Gareth Tyson, Tristan Braud, Pan Hui",
-            "venue": "2023 IEEE 43rd International Conference on Distributed Computing Systems?\u2026",
-            "name": "Network Traffic in the Metaverse: The Case of Social VR",
+            "citation": 5
+        },
+        {
+            "group": 2,
+            "name": "charts",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "digital humanities",
+            "citation": 4
+        },
+        {
+            "group": 2,
+            "name": "human avatar",
+            "citation": 1
+        },
+        {
+            "name": "financial data",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "personal data",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "visual\nanalytics",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "user experience",
+            "citation": 3,
+            "group": 2
+        },
+        {
+            "released": "2024",
+            "authors": "Zhan Wang, Linping Yuan, Liangwei Wang, Bingchuan Jiang, Wei Zeng",
+            "citation": 3,
+            "venue": "arXiv preprint arXiv:2401.11923",
+            "group": 0,
+            "count": 0,
+            "id": "wang2024virtuwander",
+            "name": "VirtuWander: Enhancing Multi-modal Interaction for Virtual Tour Guidance through Large Language Models"
+        },
+        {
+            "released": "2024",
+            "name": "C2Ideas: Supporting Creative Interior Color Design Ideation with a Large Language Model",
+            "authors": "Yihan Hou, Manling Yang, Hao Cui, Lei Wang, Jie Xu, Wei Zeng",
+            "id": "hou2024c2ideas",
+            "group": 0,
+            "count": 0,
+            "citation": 2,
+            "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems"
+        },
+        {
+            "group": 2,
+            "name": "data visualization",
+            "citation": 13
+        },
+        {
+            "citation": 14,
+            "group": 2,
+            "name": "gpu"
+        },
+        {
+            "name": "older adults",
+            "group": 2,
+            "citation": 6
+        },
+        {
+            "released": "2024",
+            "name": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "authors": "Emily Kuang, Minghao Li, Mingming Fan, Kristen Shinohara",
+            "group": 0,
+            "count": 0,
+            "id": "kuang2024enhancing",
+            "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
+            "citation": 1
+        },
+        {
+            "released": "2024",
+            "authors": "Rong Huang, Hai-Chuan Lin, Chuanzhang Chen, Kang Zhang, Wei Zeng",
+            "group": 0,
+            "count": 0,
+            "venue": "arXiv preprint arXiv:2401.17120",
+            "name": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
+            "citation": 1,
+            "id": "huang2024plantography"
+        },
+        {
+            "group": 2,
+            "name": "large language model",
+            "citation": 6
+        },
+        {
+            "group": 2,
+            "name": "short-form video",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "smartphone exploration",
+            "citation": 2
+        },
+        {
+            "group": 2,
+            "name": "impact dynamics analysis",
+            "citation": 2
+        },
+        {
+            "group": 2,
+            "citation": 7,
+            "name": "visual analytics"
+        },
+        {
+            "group": 2,
+            "name": "generative\nartificial intelligence",
+            "citation": 1
+        },
+        {
+            "name": "human-centered computing; virtual reality",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "name": "proactive conversational assistants",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "released": "2024",
             "citation": 6,
+            "name": "Scrolltimes: Tracing the provenance of paintings as a window into history",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
             "group": 0,
-            "released": "2023"
-        },
-        {
-            "authors": "Hua Xuan Qin, Pan Hui",
-            "id": "qin2023empowering",
-            "citation": 11,
             "count": 0,
-            "name": "Empowering the metaverse with generative ai: Survey and future directions",
-            "venue": "2023 IEEE 43rd International Conference on Distributed Computing Systems?\u2026",
-            "group": 0,
-            "released": "2023"
-        },
-        {
-            "group": 2,
-            "citation": 2,
-            "name": "co-creative ai"
-        },
-        {
-            "group": 2,
-            "name": "generative ai",
-            "citation": 3
-        },
-        {
-            "citation": 24,
-            "group": 2,
-            "name": "virtual reality"
-        },
-        {
-            "group": 2,
-            "citation": 1,
-            "name": "mindfulness"
-        },
-        {
-            "id": "shatilov2023players",
-            "citation": 2,
-            "name": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
-            "venue": "Proceedings of the First Workshop on Metaverse Systems and Applications",
-            "count": 0,
-            "authors": "Kirill Shatilov, Ahmad Alhilal, Tristan Braud, Lik-Hang Lee, Pengyuan Zhou, Pan Hui",
-            "group": 0,
-            "released": "2023"
+            "authors": "Wei Zhang, Wong Kam-Kwai, Yitian Chen, Ailing Jia, Luwei Wang, Jian-Wei Zhang, Lechao Cheng, Huamin Qu, Wei Chen",
+            "id": "zhang2024scrolltimes"
         },
         {
             "name": "CMA",
             "group": 1
         },
         {
-            "name": "digital twins",
             "group": 2,
-            "citation": 2
+            "name": "indepen\u0002dent learning",
+            "citation": 1
         },
         {
-            "venue": "Proceedings of the 2022 International Conference on Multimodal Interaction?\u2026",
-            "name": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse",
-            "count": 0,
+            "released": "2024",
             "group": 0,
-            "id": "lee2022beyond",
-            "citation": 3,
-            "authors": "Lik-Hang Lee, Carlos Bermejo Fernandez, Ahmad Alhilal, Tristan Braud, Simo Hosio, Esm\u00e9e Henrieke Anne De Haas, Pan Hui",
-            "released": "2022"
-        },
-        {
-            "group": 2,
-            "name": "space chi",
+            "count": 0,
+            "authors": "Xiaofu Jin, Wai Tong, Xiaoying Wei, Xian Wang, Emily Kuang, Xiaoyu Mo, Huamin Qu, Mingming Fan",
+            "venue": "arXiv preprint arXiv:2402.04991",
+            "id": "jin2024exploring",
+            "name": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
             "citation": 1
         },
         {
             "group": 2,
-            "name": "metaverse",
-            "citation": 18
+            "name": "mesh",
+            "citation": 1
         },
         {
-            "name": "Pan Hui",
+            "citation": 25,
+            "group": 2,
+            "name": "machine learning"
+        },
+        {
+            "name": "interactive clustering",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "multi-layer network",
+            "citation": 1
+        },
+        {
+            "name": "substitutive systems",
+            "group": 2,
+            "citation": 2
+        },
+        {
+            "released": "2024",
+            "venue": "arXiv preprint arXiv:2403.03822",
+            "citation": 0,
+            "group": 0,
+            "id": "feng2024holens",
+            "count": 0,
+            "name": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
+            "authors": "Zezheng Feng, Fang Zhu, Hongjun Wang, Jianing Hao, ShuangHua Yang, Wei Zeng, Huamin Qu"
+        },
+        {
+            "name": "state sequence visualization",
+            "group": 2,
+            "citation": 1
+        },
+        {
+            "released": "2024",
+            "authors": "LI Haotian, Min Xu, Huan Wei, Huamin Qu, Yong Wang",
+            "group": 0,
+            "count": 0,
+            "name": "Visual analytics tool for proctoring online exams",
+            "venue": "US Patent 11",
+            "id": "haotian2024visual",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "generative artificial intelligence"
+        },
+        {
+            "group": 2,
+            "name": "landscape rendering",
+            "citation": 1
+        },
+        {
+            "released": "2024",
+            "authors": "Wong Kam-Kwai, Yan Luo, Xuanwu Yue, Wei Chen, Huamin Qu",
+            "name": "Prismatic: Interactive Multi-View Cluster Analysis of Concept Stocks",
+            "group": 0,
+            "count": 0,
+            "citation": 2,
+            "id": "kam2024prismatic",
+            "venue": "arXiv preprint arXiv:2402.08978"
+        },
+        {
+            "group": 1,
+            "name": "AI"
+        },
+        {
+            "id": "wang2024headevolver",
+            "released": "2024",
+            "venue": "arXiv preprint arXiv:2403.09326",
+            "group": 0,
+            "count": 0,
+            "name": "HeadEvolver: Text to Head Avatars via Locally Learnable Mesh Deformation",
+            "authors": "Duotun Wang, Hengyu Meng, Zeyu Cai, Zhijing Shao, Qianxi Liu, Lin Wang, Mingming Fan, Ying Shan, Xiaohang Zhan, Zeyu Wang",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "nft transaction data",
+            "citation": 2
+        },
+        {
+            "citation": 3,
+            "group": 2,
+            "name": "usability testing"
+        },
+        {
+            "group": 2,
+            "name": "human-ai collaboration",
+            "citation": 2
+        },
+        {
+            "id": "tong2024vistellar",
+            "authors": "Wai Tong, Kento Shigyo, Lin-Ping Yuan, Mingming Fan, Ting-Chuen Pong, Huamin Qu, Meng Xia",
+            "released": "2024",
+            "citation": 0,
+            "name": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "group": 0,
+            "count": 0
+        },
+        {
+            "group": 2,
+            "name": "state\nsequence visualization",
+            "citation": 1
+        },
+        {
+            "group": 2,
+            "name": "scene graph",
+            "citation": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "automatic visualization"
+        },
+        {
+            "group": 2,
+            "name": "non-fungible tokens (nfts)",
+            "citation": 2
+        },
+        {
+            "group": 2,
+            "citation": 1,
+            "name": "movement modeling"
+        },
+        {
+            "group": 2,
+            "name": "storytelling",
+            "citation": 2
+        },
+        {
+            "name": "independent learning",
+            "group": 2,
+            "citation": 2
+        },
+        {
+            "group": 2,
+            "name": "painting analysis",
+            "citation": 2
+        },
+        {
+            "released": "2024",
+            "id": "ying2024reviving",
+            "venue": "IEEE Transactions on Visualization and Computer Graphics",
+            "group": 0,
+            "count": 0,
+            "authors": "Lu Ying, Yun Wang, Haotian Li, Shuguang Dou, Haidong Zhang, Xinyang Jiang, Huamin Qu, Yingcai Wu",
+            "name": "Reviving static charts into live charts",
+            "citation": 7
+        },
+        {
+            "name": "Zeyu Wang",
             "type": "Author",
-            "count": 250,
+            "count": 10,
             "group": 4
         },
         {
@@ -140,168 +438,466 @@
             "type": "Author",
             "count": 70,
             "group": 4
+        },
+        {
+            "name": "Huamin Qu",
+            "type": "Author",
+            "count": 126,
+            "group": 4
+        },
+        {
+            "name": "Wei Zeng",
+            "type": "Author",
+            "count": 45,
+            "group": 4
+        },
+        {
+            "name": "Kang Zhang",
+            "type": "Author",
+            "count": 39,
+            "group": 4
         }
     ],
     "links": [
         {
-            "source": "Pan Hui",
-            "relationship": "OWNED_BY",
-            "target": "Empowering the metaverse with generative ai: Survey and future directions"
-        },
-        {
-            "target": "mindfulness",
             "relationship": "HAS_KEYWORD",
-            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+            "target": "short-form video",
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
         },
         {
-            "target": "metaverse",
-            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
+            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
+            "target": "movement visualization",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "Pan Hui",
-            "relationship": "BELONGS_TO",
-            "target": "CMA"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "interaction",
-            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
-        },
-        {
-            "source": "Pan Hui",
             "relationship": "OWNED_BY",
-            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
-        },
-        {
-            "target": "interplanetary cyberspace",
-            "relationship": "HAS_KEYWORD",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
-        },
-        {
-            "target": "metaverse",
-            "relationship": "HAS_KEYWORD",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
-        },
-        {
-            "source": "Empowering the metaverse with generative ai: Survey and future directions",
-            "target": "virtual reality",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Empowering the metaverse with generative ai: Survey and future directions",
-            "relationship": "HAS_KEYWORD",
-            "target": "co-creative ai"
-        },
-        {
-            "target": "virtual reality",
-            "relationship": "HAS_KEYWORD",
-            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
-        },
-        {
-            "source": "Pan Hui",
-            "relationship": "OWNED_BY",
-            "target": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
-        },
-        {
-            "target": "virtual reality",
-            "source": "Network Traffic in the Metaverse: The Case of Social VR",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Pan Hui",
-            "relationship": "OWNED_BY",
-            "target": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse"
-        },
-        {
-            "target": "metaverse",
-            "relationship": "HAS_KEYWORD",
-            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
-        },
-        {
-            "target": "space chi",
-            "relationship": "HAS_KEYWORD",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
-        },
-        {
-            "source": "Empowering the metaverse with generative ai: Survey and future directions",
-            "relationship": "HAS_KEYWORD",
-            "target": "generative ai"
-        },
-        {
-            "target": "meditation",
-            "relationship": "HAS_KEYWORD",
-            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
-        },
-        {
-            "relationship": "HAS_KEYWORD",
-            "target": "literature review",
-            "source": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
-        },
-        {
-            "source": "Empowering the metaverse with generative ai: Survey and future directions",
-            "relationship": "HAS_KEYWORD",
-            "target": "ai-generated content (aigc)"
-        },
-        {
-            "source": "Empowering the metaverse with generative ai: Survey and future directions",
-            "relationship": "HAS_KEYWORD",
-            "target": "metaverse"
-        },
-        {
             "source": "Mingming Fan",
-            "relationship": "OWNED_BY",
-            "target": "Reducing stress and anxiety in the metaverse: A systematic review of meditation, mindfulness and virtual reality"
+            "target": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications"
         },
         {
-            "source": "Pan Hui",
-            "relationship": "OWNED_BY",
-            "target": "Network Traffic in the Metaverse: The Case of Social VR"
-        },
-        {
-            "target": "social vr",
-            "source": "Network Traffic in the Metaverse: The Case of Social VR",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "source": "Mingming Fan",
+            "target": "CMA",
             "relationship": "BELONGS_TO",
-            "target": "CMA"
-        },
-        {
-            "target": "metaverse",
-            "source": "Network Traffic in the Metaverse: The Case of Social VR",
-            "relationship": "HAS_KEYWORD"
-        },
-        {
-            "target": "social vr",
-            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
-            "relationship": "HAS_KEYWORD"
+            "source": "Kang Zhang"
         },
         {
             "target": "virtual reality",
-            "source": "Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse",
+            "relationship": "HAS_KEYWORD",
+            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "target": "gpu"
+        },
+        {
+            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
+            "target": "state sequence visualization",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "source": "Empowering the metaverse with generative ai: Survey and future directions",
+            "relationship": "HAS_KEYWORD",
+            "source": "Prismatic: Interactive Multi-View Cluster Analysis of Concept Stocks",
+            "target": "multi-layer network"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "target": "proactive conversational assistants"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu",
+            "target": "Prismatic: Interactive Multi-View Cluster Analysis of Concept Stocks"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "target": "usability testing"
+        },
+        {
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
+            "target": "smartphone exploration",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "target": "gaussian splatting"
+        },
+        {
+            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
+            "relationship": "HAS_KEYWORD",
+            "target": "urban visual analytics."
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "augmented reality",
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "HeadEvolver: Text to Head Avatars via Locally Learnable Mesh Deformation"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Reviving static charts into live charts",
+            "target": "automatic visualization"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "target": "human-ai collaboration"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "data visualization",
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Scrolltimes: Tracing the provenance of paintings as a window into history",
+            "target": "painting analysis"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "visual\nanalytics",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu",
+            "target": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "large language model",
+            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Scrolltimes: Tracing the provenance of paintings as a window into history",
+            "target": "digital humanities"
+        },
+        {
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
+            "target": "indepen\u0002dent learning",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Scrolltimes: Tracing the provenance of paintings as a window into history",
+            "target": "visual analytics"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "source": "Huamin Qu"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "source": "Huamin Qu"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
+            "target": "storytelling"
+        },
+        {
+            "target": "virtual reality",
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
+            "source": "Kang Zhang"
+        },
+        {
+            "target": "fps",
+            "relationship": "HAS_KEYWORD",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting"
+        },
+        {
+            "source": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
             "target": "augmented reality",
             "relationship": "HAS_KEYWORD"
         },
         {
-            "target": "virtual reality",
+            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
             "relationship": "HAS_KEYWORD",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+            "target": "urban\nvisual analytics."
         },
         {
             "relationship": "HAS_KEYWORD",
-            "target": "digital twins",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+            "target": "charts",
+            "source": "Reviving static charts into live charts"
         },
         {
-            "target": "space communications",
+            "source": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality",
+            "target": "cultural heritage",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
             "relationship": "HAS_KEYWORD",
-            "source": "Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse"
+            "target": "generative artificial intelligence",
+            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering"
+        },
+        {
+            "source": "Wei Zeng",
+            "target": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "Wei Zeng",
+            "target": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu",
+            "target": "Scrolltimes: Tracing the provenance of paintings as a window into history"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "substitutive systems",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "target": "human-centered computing",
+            "relationship": "HAS_KEYWORD",
+            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data"
+        },
+        {
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
+            "relationship": "HAS_KEYWORD",
+            "target": "older adults"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "generative\nartificial intelligence",
+            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering"
+        },
+        {
+            "source": "Wei Zeng",
+            "target": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
+            "relationship": "HAS_KEYWORD",
+            "target": "movement modeling"
+        },
+        {
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
+            "target": "augmented reality",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Wei Zeng",
+            "target": "C2Ideas: Supporting Creative Interior Color Design Ideation with a Large Language Model",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "financial data",
+            "source": "Prismatic: Interactive Multi-View Cluster Analysis of Concept Stocks"
+        },
+        {
+            "source": "Mingming Fan",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        },
+        {
+            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
+            "target": "state\nsequence visualization",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "Reviving static charts into live charts",
+            "source": "Huamin Qu"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "landscape rendering",
+            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Prismatic: Interactive Multi-View Cluster Analysis of Concept Stocks",
+            "target": "multi-view clustering"
+        },
+        {
+            "source": "Huamin Qu",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        },
+        {
+            "source": "C2Ideas: Supporting Creative Interior Color Design Ideation with a Large Language Model",
+            "target": "large language model",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Reviving static charts into live charts",
+            "target": "storytelling"
+        },
+        {
+            "source": "HoLens: A Visual Analytics Design for Higher-order Movement Modeling and Visualization",
+            "target": "data visualization",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "C2Ideas: Supporting Creative Interior Color Design Ideation with a Large Language Model",
+            "target": "color deisgn",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "source": "Wei Zeng",
+            "target": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering",
+            "relationship": "OWNED_BY"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu",
+            "target": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "human avatar",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "interaction paradigms",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "Reviving static charts into live charts",
+            "target": "machine learning"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "human-centered computing; virtual reality",
+            "source": "Generating Virtual Reality Stroke Gesture Data from Out-of-Distribution Desktop Stroke Gesture Data"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu",
+            "target": "Visual analytics tool for proctoring online exams"
+        },
+        {
+            "target": "personal data",
+            "relationship": "HAS_KEYWORD",
+            "source": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality"
+        },
+        {
+            "source": "Wei Zeng",
+            "relationship": "BELONGS_TO",
+            "target": "CMA"
+        },
+        {
+            "target": "user experience",
+            "source": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "target": "traditional chinese painting",
+            "source": "Scrolltimes: Tracing the provenance of paintings as a window into history",
+            "relationship": "HAS_KEYWORD"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Huamin Qu",
+            "target": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "impact dynamics analysis"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "mesh",
+            "source": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting"
+        },
+        {
+            "source": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications",
+            "relationship": "HAS_KEYWORD",
+            "target": "independent learning"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "PoeticAR: Reviving traditional poetry of the heritage site of jichang garden via augmented reality"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "scene graph",
+            "source": "PlantoGraphy: Incorporating Iterative Design Process into Generative Artificial Intelligence for Landscape Rendering"
+        },
+        {
+            "source": "Wei Zeng",
+            "relationship": "BELONGS_TO",
+            "target": "DSA"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "interactive clustering",
+            "source": "Prismatic: Interactive Multi-View Cluster Analysis of Concept Stocks"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "target": "nft transaction data",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "source": "Mingming Fan",
+            "target": "Enhancing UX Evaluation Through Collaboration with Conversational AI Assistants: Effects of Proactive Dialogue and Timing"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
+            "source": "Mingming Fan"
+        },
+        {
+            "target": "AI",
+            "relationship": "BELONGS_TO",
+            "source": "Zeyu Wang"
+        },
+        {
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics",
+            "target": "non-fungible tokens (nfts)"
+        },
+        {
+            "source": "Wei Zeng",
+            "relationship": "OWNED_BY",
+            "target": "VirtuWander: Enhancing Multi-modal Interaction for Virtual Tour Guidance through Large Language Models"
+        },
+        {
+            "target": "human-centered computing",
+            "relationship": "HAS_KEYWORD",
+            "source": "NFTracer: Tracing NFT Impact Dynamics in Transaction-flow Substitutive Systems with Visual Analytics"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "VisTellAR: Embedding Data Visualization to Short-form Videos Using Mobile Augmented Reality",
+            "source": "Huamin Qu"
+        },
+        {
+            "relationship": "OWNED_BY",
+            "target": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+            "source": "Zeyu Wang"
         }
     ]
 }

@@ -248,7 +248,7 @@ def format_department_year_response(responses):
         author_paper_count[author_name] += len(papers)
 
         # 只返回前8篇论文
-        limited_papers = papers[:8]
+        limited_papers = papers[:6]
         
         # 遍历每篇论文并将其添加到结果列表
         # for paper in papers:

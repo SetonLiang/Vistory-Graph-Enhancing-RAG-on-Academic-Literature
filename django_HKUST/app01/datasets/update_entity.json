@@ -2,15 +2,15 @@
     "donut": [
         {
             "department": "Dept.1",
-            "value": 0
+            "value": 1
         },
         {
             "department": "Dept.2",
-            "value": 2
+            "value": 4
         },
         {
             "department": "Dept.3",
-            "value": 0
+            "value": 1
         }
     ],
     "chart_d_y": [
@@ -30,23 +30,23 @@
         },
         {
             "year": 2022,
-            "CMA": 2,
+            "CMA": 0,
             "AI": 0,
             "DSA": 0,
             "paper_count": 0
         },
         {
             "year": 2023,
-            "CMA": 3,
+            "CMA": 0,
             "AI": 0,
             "DSA": 0,
             "paper_count": 0
         },
         {
             "year": 2024,
-            "CMA": 0,
-            "AI": 0,
-            "DSA": 0,
+            "CMA": 16,
+            "AI": 1,
+            "DSA": 6,
             "paper_count": 0
         }
     ],
@@ -57,85 +57,247 @@
                 "name": "CMA",
                 "children": [
                     {
-                        "name": "Pan Hui",
-                        "value": 5
+                        "name": "Mingming Fan",
+                        "value": 8
                     },
                     {
-                        "name": "Mingming Fan",
+                        "name": "Huamin Qu",
+                        "value": 12
+                    },
+                    {
+                        "name": "Wei Zeng",
+                        "value": 6
+                    },
+                    {
+                        "name": "Kang Zhang",
                         "value": 1
                     }
                 ]
             },
             {
                 "name": "DSA",
-                "children": []
+                "children": [
+                    {
+                        "name": "Wei Zeng",
+                        "value": 6
+                    }
+                ]
             },
             {
                 "name": "AI",
-                "children": []
+                "children": [
+                    {
+                        "name": "Zeyu Wang",
+                        "value": 1
+                    }
+                ]
             }
         ]
     },
     "wordcloud": [
         {
-            "text": "augmented reality",
-            "size": 25.52173913043478
-        },
-        {
-            "text": "interaction",
-            "size": 4.608695652173913
-        },
-        {
-            "text": "literature review",
-            "size": 4.608695652173913
-        },
-        {
-            "text": "ai-generated content (aigc)",
+            "text": "cultural heritage",
             "size": 3.0
         },
         {
-            "text": "social vr",
-            "size": 6.217391304347826
+            "text": "traditional chinese painting",
+            "size": 4.541666666666667
         },
         {
-            "text": "meditation",
-            "size": 4.608695652173913
-        },
-        {
-            "text": "space communications",
+            "text": "color deisgn",
             "size": 3.0
         },
         {
-            "text": "interplanetary cyberspace",
+            "text": "gaussian splatting",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "movement visualization",
             "size": 3.0
         },
         {
-            "text": "co-creative ai",
-            "size": 4.608695652173913
+            "text": "multi-view clustering",
+            "size": 3.0
         },
         {
-            "text": "generative ai",
-            "size": 6.217391304347826
+            "text": "human-centered computing",
+            "size": 12.25
         },
         {
             "text": "virtual reality",
+            "size": 38.458333333333336
+        },
+        {
+            "text": "urban\nvisual analytics.",
+            "size": 3.0
+        },
+        {
+            "text": "urban visual analytics.",
+            "size": 3.0
+        },
+        {
+            "text": "interaction paradigms",
+            "size": 6.083333333333334
+        },
+        {
+            "text": "augmented reality",
+            "size": 24.583333333333332
+        },
+        {
+            "text": "fps",
+            "size": 3.0
+        },
+        {
+            "text": "charts",
+            "size": 3.0
+        },
+        {
+            "text": "digital humanities",
+            "size": 7.625
+        },
+        {
+            "text": "human avatar",
+            "size": 3.0
+        },
+        {
+            "text": "financial data",
+            "size": 3.0
+        },
+        {
+            "text": "personal data",
+            "size": 3.0
+        },
+        {
+            "text": "visual\nanalytics",
+            "size": 3.0
+        },
+        {
+            "text": "user experience",
+            "size": 6.083333333333334
+        },
+        {
+            "text": "data visualization",
+            "size": 21.5
+        },
+        {
+            "text": "gpu",
+            "size": 23.041666666666668
+        },
+        {
+            "text": "older adults",
+            "size": 10.708333333333332
+        },
+        {
+            "text": "large language model",
+            "size": 10.708333333333332
+        },
+        {
+            "text": "short-form video",
+            "size": 3.0
+        },
+        {
+            "text": "smartphone exploration",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "impact dynamics analysis",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "visual analytics",
+            "size": 12.25
+        },
+        {
+            "text": "generative\nartificial intelligence",
+            "size": 3.0
+        },
+        {
+            "text": "human-centered computing; virtual reality",
+            "size": 3.0
+        },
+        {
+            "text": "proactive conversational assistants",
+            "size": 3.0
+        },
+        {
+            "text": "indepen\u0002dent learning",
+            "size": 3.0
+        },
+        {
+            "text": "mesh",
+            "size": 3.0
+        },
+        {
+            "text": "machine learning",
             "size": 40.0
         },
         {
-            "text": "mindfulness",
+            "text": "interactive clustering",
             "size": 3.0
         },
         {
-            "text": "digital twins",
-            "size": 4.608695652173913
-        },
-        {
-            "text": "space chi",
+            "text": "multi-layer network",
             "size": 3.0
         },
         {
-            "text": "metaverse",
-            "size": 30.347826086956523
+            "text": "substitutive systems",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "state sequence visualization",
+            "size": 3.0
+        },
+        {
+            "text": "generative artificial intelligence",
+            "size": 3.0
+        },
+        {
+            "text": "landscape rendering",
+            "size": 3.0
+        },
+        {
+            "text": "nft transaction data",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "usability testing",
+            "size": 6.083333333333334
+        },
+        {
+            "text": "human-ai collaboration",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "state\nsequence visualization",
+            "size": 3.0
+        },
+        {
+            "text": "scene graph",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "automatic visualization",
+            "size": 3.0
+        },
+        {
+            "text": "non-fungible tokens (nfts)",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "movement modeling",
+            "size": 3.0
+        },
+        {
+            "text": "storytelling",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "independent learning",
+            "size": 4.541666666666667
+        },
+        {
+            "text": "painting analysis",
+            "size": 4.541666666666667
         }
     ]
 }

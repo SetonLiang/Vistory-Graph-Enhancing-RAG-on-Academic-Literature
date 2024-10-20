@@ -1177,7 +1177,12 @@ def retriever(question: str):
             json.dump(paper_entity, f, indent=4)
         with open('app01/datasets/update_entity.json', 'w') as f:
             json.dump(update_entity, f, indent=4)
-    
+    # if structured_data != None:
+    #     final_data = f"Structured data: {structured_data}"
+    # else:
+    #     final_data = f"""Unstructured data:
+    #                     {"#Document ".join(unstructured_data)}
+    #                     """
     final_data = f"""Structured data: 
                     {structured_data}
                     Unstructured data:
