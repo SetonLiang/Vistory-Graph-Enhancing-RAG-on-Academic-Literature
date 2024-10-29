@@ -413,19 +413,29 @@ def find_notcrawl_pdf(folder,jsonfile):
     not_crawl_pdfs = [line for line in paper_name if line not in pdf]
 
     return not_crawl_pdfs
-file = 'src/huxuming.csv'
-# crawl_pdf(file)
-json_file = 'huxuming_pdf.json'
-# download_pdf(json_file)
 
 
-txtfile = 'G:\VIStory\project\src\Google_scholar\scholars.txt'
-# jsonfile = 'G:\VIStory\project\src/huxuming_pdf.json'
-jsonfile = "G:\VIStory\project\hkust_papers\CMA\\fanmingming\\fanmingming_pdf.json"
-# folder = "G://VIStory/project/src/huxuming.csv"
-folder = "G:\VIStory\project\hkust_papers\CMA\All\\fanmingming.csv"
-res = find_notcrawl_pdf(folder,jsonfile)
-print(res,len(res))
-"""
-以下是下载pdf
-"""
+if __name__ == '__main__':
+    # 根据作者名改路径
+    file = 'src/huxuming.csv'
+    # crawl_pdf(file)
+
+    # 作者名_pdf.json，每次只用改作者名；pdf的下载路径
+    json_file = 'huxuming_pdf.json'
+
+
+
+    # 1.下载pdf
+    # download_pdf(json_file)
+
+
+    jsonfile = "G:\VIStory\project\hkust_papers\CMA\\fanmingming\\fanmingming_pdf.json" # 作者名_pdf.json
+    folder = "G:\VIStory\project\hkust_papers\CMA\All\\fanmingming.csv" # 对应作者.csv
+
+
+    # 2. 如果有缺失的pdf，执行该函数帮你查找
+    # res = find_notcrawl_pdf(folder,jsonfile)
+    # print(res,len(res))
+    """
+    以下是下载pdf
+    """

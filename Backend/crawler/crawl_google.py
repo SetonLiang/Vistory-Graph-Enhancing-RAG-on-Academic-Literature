@@ -9,6 +9,7 @@ import pandas as pd
 def read_name(folder):
     df = pd.read_csv(folder,encoding='gbk')
     paper_name = df['Name'].values
+    #
     with open('G:\VIStory\project\src\Google_scholar\scholars.txt','w',encoding='utf-8') as file:
         for item in paper_name:
             file.write(str(item) + "\n")
@@ -119,18 +120,24 @@ def extract_href(input_file, output_file, chrome_driver,folder):
 
 
 
+# 记得改路径和文件名，对应每个老师
+# 每次执行整个py文件的时候要把bib和links文件删除
 
 if __name__ == '__main__':
     input_file = 'G:\VIStory\project\src\Google_scholar\scholars.txt'
     output_file = 'G:\VIStory\project\src\Google_scholar\links.txt'
     folder = "G://VIStory/project/src/xionghui2.csv"
-    # pdf_folder = 'G:\VIStory\project\hkust_papers\CMA\zengwei'
+    # pdf_folder =z 'G:\VIStory\project\hkust_papers\CMA\zengwei'
+
+    #1....
+    # read_name(folder)
+    
+    #2...
     # extract_href(input_file, output_file, None, folder)
 
-    # read_name(folder)
-
+    #3...
     file_path = 'G://VIStory/project/src/Google_scholar/bib.txt'
-    open_txtfile(folder, file_path)
+    # open_txtfile(folder, file_path)
 
     #测试用什么格式打开csv
     # df = pd.read_csv(folder, encoding='gbk')
