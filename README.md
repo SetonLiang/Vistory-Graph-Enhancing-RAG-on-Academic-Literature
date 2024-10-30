@@ -19,9 +19,9 @@
 
 1. Crawling the Literature data
 
-   1. crawl_google22.py: 输入老师的google scholar的个人主页url来下载csv文件:
+   1. crawl_google22.py: 输入老师的google scholar的个人主页url来下载csv文件
 
-   2. crawl_google.py: 扩充csv文件的ID和Citation列:
+   2. crawl_google.py: 扩充csv文件的ID和Citation列
       1. read_name(): 将csv文件的Name列导入到txt文件
       2. extract_href(): 遍历txt内容得到bib.txt和links.txt, 并在csv文件添加Citation列，同时得到作者名_pdf.json文件，记录论文的pdf链接
       3. open_txtfile(): 打开bib文件，将ID写入csv文件
@@ -34,7 +34,7 @@
          > 作者名_pdf.json，每次只用改作者名；对于IEEE的pdf需要手动点击下载，对于Arxiv等pdf，需要手动更改文件名
          > 文件名为论文题目
 
-   4. crawl_keywords.py: 得到论文的关键词:
+   4. crawl_keywords.py: 得到论文的关键词
       1. find_pdfs(): 将pdf的keywords存为json
       2. save_json(): 将json的keywords存入csv
 
