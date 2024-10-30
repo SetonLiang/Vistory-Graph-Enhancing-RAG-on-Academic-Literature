@@ -24,22 +24,19 @@
    2. crawl_google.py: 扩充csv文件的ID和Citation列:
 
       1. read_name(): 将csv文件的Name列导入到txt文件
-
       2. extract_href(): 遍历txt内容得到bib.txt和links.txt, 并在csv文件添加Citation列，同时得到作者名_pdf.json文件，记录论文的pdf链接
-
       3. open_txtfile(): 打开bib文件，将ID写入csv文件
 
-         > 记得改路径和文件名，对应每个老师；每次执行整个py文件的时候要把bib和links文件删除
+      > 记得改路径和文件名，对应每个老师；每次执行整个py文件的时候要把bib和links文件删除
 
    3.  crawl_pdf.py: 下载论文的pdf文件
 
       1. download_pdf(): 根据作者名_pdf.json文件下载对应pdf
-
       2. find_notcrawl_pdf(): 如果有缺失的pdf，执行该函数帮你查找
 
-         > 作者名_pdf.json，每次只用改作者名；对于IEEE的pdf需要手动点击下载，对于Arxiv等pdf，需要手动更改文件名
-         >
-         > 文件名为论文题目
+      > 作者名_pdf.json，每次只用改作者名；对于IEEE的pdf需要手动点击下载，对于Arxiv等pdf，需要手动更改文件名
+      >
+      > 文件名为论文题目
 
    4. crawl_keywords.py: 得到论文的关键词:
 
