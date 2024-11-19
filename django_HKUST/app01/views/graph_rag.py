@@ -36,7 +36,7 @@ os.environ["NEO4J_URI"] = "neo4j+s://d537b991.databases.neo4j.io"
 os.environ["NEO4J_USERNAME"] = "neo4j"
 os.environ["NEO4J_PASSWORD"] = "IXnft6DFgKXaIRnKdszXZDUkGW38tBTUSnJSE3LwSAc"
 
-graph = Neo4jGraph()
+graph = Neo4jGraph(url="neo4j://localhost:7687", username="neo4j", password="L312z312w",database="mysql",timeout=1000)
 # 连接到Neo4j数据库
 driver = GraphDatabase.driver(
     uri=os.environ["NEO4J_URI"],
@@ -419,10 +419,26 @@ def similarity_search(question, file_path, k=10):
 #     print(result)
 #     print(len(result))
 #     return {"results": result, "length": len(result), "is_year": year_entity}
-def infer_entity_type(entity_name):
-    with open("app01/datasets/final_entity_type_map.json", "r", encoding='utf-8') as f:
-        ENTITY_TYPE_MAP = json.load(f)
-    return ENTITY_TYPE_MAP.get(entity_name.lower(), "unknown")
+# def infer_entity_type(entity_name):
+#     with open("app01/datasets/final_entity_type_map.json", "r", encoding='utf-8') as f:
+#         ENTITY_TYPE_MAP = json.load(f)
+#     return ENTITY_TYPE_MAP.get(entity_name.lower(), "unknown")
+
+# 不需要实体map
+def infer_entity_type(name):
+    # 查询每个节点的类型（标签）
+    query = """
+    MATCH (n)
+    WHERE n.name = $name
+    RETURN labels(n) AS node_type
+    """
+    result = graph.query(query, {"name": name})
+    
+    # 提取类型
+    if result and len(result) > 0:
+        return result[0].get("node_type", [])[0]
+    else:
+        return []
 
 
 def structured_retriever(question: str) -> dict:
@@ -505,7 +521,7 @@ def query_author(author_name):
         RETURN a, p, collect(k) as keywords, d
         Limit 60
     """
-    return session.run(query, {"name": author_name})
+    return graph.query(query, {"name": author_name})
 
 
 # def query_paper(paper_title):
@@ -531,7 +547,7 @@ def query_paper(paper_title):
         OPTIONAL MATCH (p)-[:OWNED_BY]->(a:Author)
         RETURN p, collect(k) as keywords, a, top_related_papers
     """
-    return session.run(query, {"title": paper_title})
+    return graph.query(query, {"title": paper_title})
 
 
 def query_keyword(keyword_name):
@@ -558,7 +574,7 @@ def query_department(department_name):
         OPTIONAL MATCH (p:Papers)-[:OWNED_BY]->(a)
         RETURN a, d, collect(p) as papers
     """
-    return session.run(query, {"name": department_name})
+    return graph.query(query, {"name": department_name})
 
 
 def query_year(year):
@@ -569,7 +585,7 @@ def query_year(year):
         OPTIONAL MATCH (a)-[:BELONGS_TO]->(d:Department)
         RETURN a, y, d, collect(p) as papers
     """
-    return session.run(query, {"year": year})
+    return graph.query(query, {"year": year})
 
 
 def query_venue(venue):
@@ -585,7 +601,7 @@ def query_venue(venue):
         LIMIT 20
         RETURN a, v, d, collect(p) as papers
     """
-    return session.run(query, {"venue": venue})
+    return graph.query(query, {"venue": venue})
 
 
 def query_combined_entities(entities):
@@ -671,48 +687,48 @@ def query_combined_entities(entities):
     if "Author" in entities.values() and "Year" in entities.values():
         author_name = clean_entity_name(get_key(entities, 'Author')[0])
         year = get_key(entities, 'Year')
-        return session.run(query_author_year, {"author_name": author_name, "year": year})
+        return graph.query(query_author_year, {"author_name": author_name, "year": year})
 
     if "Author" in entities.values() and "Keyword" in entities.values():
         author_name = clean_entity_name(get_key(entities, 'Author')[0])
         keyword = clean_entity_name(get_key(entities, 'Keyword')[0])
-        return session.run(query_author_keyword, {"author_name": author_name, "keyword": keyword})
+        return graph.query(query_author_keyword, {"author_name": author_name, "keyword": keyword})
 
     if "Author" in entities.values() and "Venue" in entities.values():
         author_name = clean_entity_name(get_key(entities, 'Author')[0])
         venue = clean_entity_name(get_key(entities, 'Venue')[0])
-        return session.run(query_author_venue, {"author_name": author_name, "venue": venue})
+        return graph.query(query_author_venue, {"author_name": author_name, "venue": venue})
 
     # Example for combining Department and others
     # department can combine with mutiple year=> trend
     if "Department" in entities.values() and "Year" in entities.values():
         department_name = clean_entity_name(get_key(entities, 'Department')[0])
         year = get_key(entities, 'Year')
-        return session.run(query_department_year, {"department_name": department_name, "year": year})
+        return graph.query(query_department_year, {"department_name": department_name, "year": year})
     if "Department" in entities.values() and "Keyword" in entities.values():
         department_name = clean_entity_name(get_key(entities, 'Department')[0])
         keyword = clean_entity_name(get_key(entities, 'Keyword')[0])
-        return session.run(query_department_keyword, {"department_name": department_name, "keyword": keyword})
+        return graph.query(query_department_keyword, {"department_name": department_name, "keyword": keyword})
     if "Department" in entities.values() and "Venue" in entities.values():
         department_name = clean_entity_name(get_key(entities, 'Department')[0])
         venue = clean_entity_name(get_key(entities, 'Venue')[0])
-        return session.run(query_department_venue, {"department_name": department_name, "venue": venue})
+        return graph.query(query_department_venue, {"department_name": department_name, "venue": venue})
 
     # Example for combining keyword and others
     if "Keyword" in entities.values() and "Year" in entities.values():
         keyword = clean_entity_name(get_key(entities, 'Keyword')[0])
         year = get_key(entities, 'Year')[0]
-        return session.run(query_keyword_year, {"keyword": keyword, "year": year})
+        return graph.query(query_keyword_year, {"keyword": keyword, "year": year})
     if "Keyword" in entities.values() and "Venue" in entities.values():
         keyword = clean_entity_name(get_key(entities, 'Keyword')[0])
         venue = clean_entity_name(get_key(entities, 'Venue')[0])
-        return session.run(query_keyword_venue, {"keyword": keyword, "venue": venue})
+        return graph.query(query_keyword_venue, {"keyword": keyword, "venue": venue})
 
     # Example for combining year and venue
     if "Year" in entities.values() and "Venue" in entities.values():
         year = get_key(entities, 'Year')[0]
         venue = clean_entity_name(get_key(entities, 'Venue')[0])
-        return session.run(query_year_venue, {"year": year, "venue": venue})
+        return graph.query(query_year_venue, {"year": year, "venue": venue})
 
     if len(authors) > 1:
         # 动态构建MATCH查询部分，包含所有作者
@@ -740,7 +756,7 @@ def query_combined_entities(entities):
         parameters = {f"author{i}_name": clean_entity_name(author) for i, author in enumerate(authors)}
 
         # 执行查询并返回结果
-        return session.run(query_authors, parameters)
+        return graph.query(query_authors, parameters)
 
     if len(departments) > 1:
         # 动态构建MATCH查询部分，包含所有部门
@@ -770,7 +786,7 @@ def query_combined_entities(entities):
         parameters = {f"department{i}_name": clean_entity_name(department) for i, department in enumerate(departments)}
 
         # 执行查询并返回结果
-        return session.run(query_departments, parameters)
+        return graph.query(query_departments, parameters)
     if len(keywords) > 1:
         # Handling for multiple keywords
         match_clause = "OPTIONAL MATCH " + ", ".join(
@@ -1148,8 +1164,6 @@ def retriever(question: str):
     #     print(vector_index)
     # except Exception as e:
     #     print(f"Error creating vector index: {e}")
-    # 创建全文索引
-    graph.query("CREATE FULLTEXT INDEX entity IF NOT EXISTS FOR (e:__Entity__) ON EACH [e.id]")
 
     print(f"Search query: {question}")
     structured_data = structured_retriever(question)
@@ -1157,13 +1171,13 @@ def retriever(question: str):
     structured_results = structured_data.get('results', [])
     print(structured_results)
     # unstructured_data = [el.page_content for el in vector_index.similarity_search(question,k=10)] #返回了前五个最相似论文的abstract keyword和name
-    unstructured_data = similarity_search(question, file_path, k=3)
-    unstructured_data = format_unstructured_data(unstructured_data)
+    # unstructured_data = similarity_search(question, file_path, k=3)
+    # unstructured_data = format_unstructured_data(unstructured_data)
 
-    if structured_results != []:
-        relevant_paper = [record.get('paper') for record in structured_results]
-    else:
-        relevant_paper = extract_paper_names(unstructured_data)
+    # if structured_results != []:
+    relevant_paper = [record.get('paper') for record in structured_results]
+    # else:
+    #     relevant_paper = extract_paper_names(unstructured_data)
 
     if len(relevant_paper) > 30:
         relevant_paper = relevant_paper[:30]
@@ -1177,19 +1191,15 @@ def retriever(question: str):
             json.dump(paper_entity, f, indent=4)
         with open('app01/datasets/update_entity.json', 'w') as f:
             json.dump(update_entity, f, indent=4)
-    # if structured_data != None:
-    #     final_data = f"Structured data: {structured_data}"
-    # else:
-    #     final_data = f"""Unstructured data:
-    #                     {"#Document ".join(unstructured_data)}
-    #                     """
-    final_data = f"""Structured data: 
-                    {structured_data}
-                    Unstructured data:
-                    {"#Document ".join(unstructured_data)}
-                """
-    print(final_data)
-    return final_data
+
+    
+    # final_data = f"""Structured data: 
+    #                 {structured_data}
+    #                 Unstructured data:
+    #                 {"#Document ".join(unstructured_data)}
+    #             """
+    print(structured_data)
+    return structured_data
 
 
 CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template("""Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question, in its original language.
