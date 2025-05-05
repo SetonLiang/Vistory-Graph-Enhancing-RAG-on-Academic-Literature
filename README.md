@@ -3,9 +3,8 @@
 ## Install
 
 - Install Neo4j Database
-
 - Install Langchain
-
+- Install Django
 - Set Environment Variable
 
   ```
@@ -54,4 +53,7 @@
       2. save_map_to_json(): 获取每个节点的信息和embedding
 
 ## How to run this system
-
+Enter django_HKUST directory and excecute the following scrpits:
+```
+python manage.py runserver
+```
